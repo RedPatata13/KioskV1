@@ -23,131 +23,156 @@
         'Do not modify it using the code editor.
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
-            Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-            Me.SubmitButton = New Guna.UI2.WinForms.Guna2Button()
-            Me.PasswordField = New Guna.UI2.WinForms.Guna2TextBox()
-            Me.UIDField = New Guna.UI2.WinForms.Guna2TextBox()
-            Me.Guna2Panel1.SuspendLayout()
+            Me.Guna2TileButton1 = New Guna.UI2.WinForms.Guna2TileButton()
+            Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+            Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
+            Me.Guna2TextBox2 = New Guna.UI2.WinForms.Guna2TextBox()
+            Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me.Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.SuspendLayout()
             '
-            'Guna2Panel1
+            'Guna2TileButton1
             '
-            Me.Guna2Panel1.Controls.Add(Me.SubmitButton)
-            Me.Guna2Panel1.Controls.Add(Me.PasswordField)
-            Me.Guna2Panel1.Controls.Add(Me.UIDField)
-            Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Right
-            Me.Guna2Panel1.Location = New System.Drawing.Point(1224, 0)
-            Me.Guna2Panel1.Name = "Guna2Panel1"
-            Me.Guna2Panel1.ShadowDecoration.CustomizableEdges.BottomRight = False
-            Me.Guna2Panel1.ShadowDecoration.CustomizableEdges.TopLeft = False
-            Me.Guna2Panel1.Size = New System.Drawing.Size(696, 1080)
-            Me.Guna2Panel1.TabIndex = 4
+            Me.Guna2TileButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.Guna2TileButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.Guna2TileButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.Guna2TileButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.Guna2TileButton1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+            Me.Guna2TileButton1.ForeColor = System.Drawing.Color.White
+            Me.Guna2TileButton1.Location = New System.Drawing.Point(0, 0)
+            Me.Guna2TileButton1.Name = "Guna2TileButton1"
+            Me.Guna2TileButton1.Size = New System.Drawing.Size(0, 0)
+            Me.Guna2TileButton1.TabIndex = 0
+            Me.Guna2TileButton1.Text = "Guna2TileButton1"
             '
-            'SubmitButton
+            'Guna2Button1
             '
-            Me.SubmitButton.BackColor = System.Drawing.Color.Transparent
-            Me.SubmitButton.BorderColor = System.Drawing.Color.Transparent
-            Me.SubmitButton.BorderRadius = 18
-            Me.SubmitButton.BorderThickness = 1
-            Me.SubmitButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-            Me.SubmitButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-            Me.SubmitButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-            Me.SubmitButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-            Me.SubmitButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.SubmitButton.Font = New System.Drawing.Font("Meiryo UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.SubmitButton.ForeColor = System.Drawing.Color.White
-            Me.SubmitButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.SubmitButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(254, Byte), Integer))
-            Me.SubmitButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.SubmitButton.Location = New System.Drawing.Point(83, 648)
-            Me.SubmitButton.Name = "SubmitButton"
-            Me.SubmitButton.ShadowDecoration.BorderRadius = 28
-            Me.SubmitButton.ShadowDecoration.Color = System.Drawing.Color.Silver
-            Me.SubmitButton.ShadowDecoration.Depth = 40
-            Me.SubmitButton.ShadowDecoration.Enabled = True
-            Me.SubmitButton.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(0, 0, 13, 15)
-            Me.SubmitButton.Size = New System.Drawing.Size(460, 67)
-            Me.SubmitButton.TabIndex = 2
-            Me.SubmitButton.Text = "Log in"
+            Me.Guna2Button1.BorderRadius = 20
+            Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.Guna2Button1.FillColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI Historic", 9.75!, System.Drawing.FontStyle.Bold)
+            Me.Guna2Button1.ForeColor = System.Drawing.Color.White
+            Me.Guna2Button1.Location = New System.Drawing.Point(483, 250)
+            Me.Guna2Button1.Name = "Guna2Button1"
+            Me.Guna2Button1.Size = New System.Drawing.Size(223, 37)
+            Me.Guna2Button1.TabIndex = 1
+            Me.Guna2Button1.Text = "Log in"
             '
-            'PasswordField
+            'Guna2TextBox1
             '
-            Me.PasswordField.BackColor = System.Drawing.Color.Transparent
-            Me.PasswordField.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-            Me.PasswordField.BorderRadius = 18
-            Me.PasswordField.Cursor = System.Windows.Forms.Cursors.IBeam
-            Me.PasswordField.DefaultText = ""
-            Me.PasswordField.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-            Me.PasswordField.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-            Me.PasswordField.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-            Me.PasswordField.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-            Me.PasswordField.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(254, Byte), Integer))
-            Me.PasswordField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.PasswordField.Font = New System.Drawing.Font("Meiryo UI", 9.0!)
-            Me.PasswordField.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-            Me.PasswordField.Location = New System.Drawing.Point(83, 547)
-            Me.PasswordField.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-            Me.PasswordField.Name = "PasswordField"
-            Me.PasswordField.PlaceholderText = "Enter Password"
-            Me.PasswordField.SelectedText = ""
-            Me.PasswordField.ShadowDecoration.BorderRadius = 28
-            Me.PasswordField.ShadowDecoration.Color = System.Drawing.Color.Silver
-            Me.PasswordField.ShadowDecoration.Depth = 40
-            Me.PasswordField.ShadowDecoration.Enabled = True
-            Me.PasswordField.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(0, 0, 13, 15)
-            Me.PasswordField.Size = New System.Drawing.Size(460, 67)
-            Me.PasswordField.TabIndex = 1
+            Me.Guna2TextBox1.BorderRadius = 15
+            Me.Guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
+            Me.Guna2TextBox1.DefaultText = ""
+            Me.Guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+            Me.Guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+            Me.Guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+            Me.Guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+            Me.Guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+            Me.Guna2TextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+            Me.Guna2TextBox1.ForeColor = System.Drawing.Color.LightGray
+            Me.Guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+            Me.Guna2TextBox1.Location = New System.Drawing.Point(483, 210)
+            Me.Guna2TextBox1.Name = "Guna2TextBox1"
+            Me.Guna2TextBox1.PlaceholderText = ""
+            Me.Guna2TextBox1.SelectedText = ""
+            Me.Guna2TextBox1.Size = New System.Drawing.Size(223, 34)
+            Me.Guna2TextBox1.TabIndex = 2
             '
-            'UIDField
+            'Guna2TextBox2
             '
-            Me.UIDField.BackColor = System.Drawing.Color.Transparent
-            Me.UIDField.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-            Me.UIDField.BorderRadius = 18
-            Me.UIDField.Cursor = System.Windows.Forms.Cursors.IBeam
-            Me.UIDField.DefaultText = ""
-            Me.UIDField.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-            Me.UIDField.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-            Me.UIDField.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-            Me.UIDField.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-            Me.UIDField.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(254, Byte), Integer))
-            Me.UIDField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.UIDField.Font = New System.Drawing.Font("Meiryo UI", 9.0!)
-            Me.UIDField.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-            Me.UIDField.Location = New System.Drawing.Point(83, 454)
-            Me.UIDField.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-            Me.UIDField.Name = "UIDField"
-            Me.UIDField.PlaceholderText = "Enter Username"
-            Me.UIDField.SelectedText = ""
-            Me.UIDField.ShadowDecoration.BorderRadius = 28
-            Me.UIDField.ShadowDecoration.Color = System.Drawing.Color.Silver
-            Me.UIDField.ShadowDecoration.Depth = 40
-            Me.UIDField.ShadowDecoration.Enabled = True
-            Me.UIDField.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(0, 0, 13, 15)
-            Me.UIDField.Size = New System.Drawing.Size(460, 67)
-            Me.UIDField.TabIndex = 0
+            Me.Guna2TextBox2.BorderRadius = 15
+            Me.Guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam
+            Me.Guna2TextBox2.DefaultText = ""
+            Me.Guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+            Me.Guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+            Me.Guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+            Me.Guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+            Me.Guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+            Me.Guna2TextBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+            Me.Guna2TextBox2.ForeColor = System.Drawing.Color.LightGray
+            Me.Guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+            Me.Guna2TextBox2.Location = New System.Drawing.Point(483, 170)
+            Me.Guna2TextBox2.Name = "Guna2TextBox2"
+            Me.Guna2TextBox2.PlaceholderText = ""
+            Me.Guna2TextBox2.SelectedText = ""
+            Me.Guna2TextBox2.Size = New System.Drawing.Size(223, 34)
+            Me.Guna2TextBox2.TabIndex = 3
+            '
+            'Guna2HtmlLabel1
+            '
+            Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
+            Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(560, 125)
+            Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
+            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(67, 32)
+            Me.Guna2HtmlLabel1.TabIndex = 4
+            Me.Guna2HtmlLabel1.Text = "Log-in"
+            '
+            'Guna2HtmlLabel2
+            '
+            Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
+            Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(483, 134)
+            Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
+            Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(3, 2)
+            Me.Guna2HtmlLabel2.TabIndex = 5
+            '
+            'Guna2HtmlLabel3
+            '
+            Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
+            Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Guna2HtmlLabel3.ForeColor = System.Drawing.SystemColors.ControlLight
+            Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(499, 174)
+            Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
+            Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(76, 23)
+            Me.Guna2HtmlLabel3.TabIndex = 6
+            Me.Guna2HtmlLabel3.Text = "Username"
+            '
+            'Guna2HtmlLabel4
+            '
+            Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent
+            Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.ControlLight
+            Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(501, 214)
+            Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
+            Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(72, 23)
+            Me.Guna2HtmlLabel4.TabIndex = 7
+            Me.Guna2HtmlLabel4.Text = "Password"
             '
             'Login
             '
-            Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
-            Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.AutoSize = True
-            Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(254, Byte), Integer))
-            Me.ClientSize = New System.Drawing.Size(1920, 1080)
-            Me.Controls.Add(Me.Guna2Panel1)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-            Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+            Me.BackColor = System.Drawing.Color.White
+            Me.ClientSize = New System.Drawing.Size(800, 450)
+            Me.Controls.Add(Me.Guna2HtmlLabel4)
+            Me.Controls.Add(Me.Guna2HtmlLabel3)
+            Me.Controls.Add(Me.Guna2HtmlLabel2)
+            Me.Controls.Add(Me.Guna2HtmlLabel1)
+            Me.Controls.Add(Me.Guna2TextBox2)
+            Me.Controls.Add(Me.Guna2TextBox1)
+            Me.Controls.Add(Me.Guna2Button1)
+            Me.Controls.Add(Me.Guna2TileButton1)
             Me.Name = "Login"
-            Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-            Me.Text = "Login"
-            Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-            Me.Guna2Panel1.ResumeLayout(False)
             Me.ResumeLayout(False)
+            Me.PerformLayout()
 
         End Sub
         Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
         Friend WithEvents UIDField As Guna.UI2.WinForms.Guna2TextBox
         Friend WithEvents SubmitButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents PasswordField As Guna.UI2.WinForms.Guna2TextBox
+        Friend WithEvents Guna2TileButton1 As Guna.UI2.WinForms.Guna2TileButton
+        Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+        Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
+        Friend WithEvents Guna2TextBox2 As Guna.UI2.WinForms.Guna2TextBox
+        Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
+        Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
+        Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
+        Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
     End Class
 
 End Namespace
