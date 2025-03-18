@@ -20,9 +20,10 @@
             End Set
         End Property
 
-        Private Sub SubmitButton_Click(sender As Object, e As EventArgs) Handles SubmitButton.Click
+        Private Sub SubmitButton_Click(sender As Object, e As EventArgs)
             SubmitButtonClick?.Invoke()
         End Sub
+
 
     End Class
 End Namespace

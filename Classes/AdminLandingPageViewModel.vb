@@ -9,7 +9,7 @@
         End Sub
 
         Private Sub TestButtonClick()
-            _mediator.SwapPage(AdminKeys.AdminTestPage)
+            _mediator.SwapPage(AdminKeys.Sample)
         End Sub
     End Class
 

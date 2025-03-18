@@ -11,6 +11,13 @@
         AdminEntry
         AdminLandingPage
         AdminTestPage
+        Sample
+        AdminDashboard
+        AdminMenu
+        AdminInventory
+        AdminOrderHistory
+        AdminStaffTransactions
+        AdminAccountSettings
     End Enum
 
     Public Enum CustomerKeys
