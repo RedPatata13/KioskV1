@@ -81,12 +81,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\AdminAccountSettingsViewModel.vb" />
+    <Compile Include="Classes\AdminAddMenuViewModel.vb" />
+    <Compile Include="Classes\AdminAddUserViewModel.vb" />
     <Compile Include="Classes\AdminDashboardViewModel.vb" />
+    <Compile Include="Classes\AdminEditInventoryViewModel.vb" />
     <Compile Include="Classes\AdminInventoryViewModel.vb" />
     <Compile Include="Classes\AdminLandingPageViewModel.vb" />
     <Compile Include="Classes\AdminMenuViewModel.vb" />
     <Compile Include="Classes\AdminOrderHistoryViewModel.vb" />
     <Compile Include="Classes\AdminStaffTransactionsViewModel.vb" />
+    <Compile Include="Classes\AdminSupplyRequestViewModel.vb" />
     <Compile Include="Classes\AdminTestPageViewModel.vb" />
     <Compile Include="Classes\Initializer.vb" />
     <Compile Include="Classes\IProjectable.vb" />
@@ -94,6 +98,10 @@
     <Compile Include="Classes\PageDir.vb" />
     <Compile Include="Classes\Projector.vb" />
     <Compile Include="Classes\SampleViewModel.vb" />
+    <Compile Include="Classes\StaffCreditSalesViewModel.vb" />
+    <Compile Include="Classes\StaffLandingPageViewModel.vb" />
+    <Compile Include="Classes\StaffManagerAuthoViewModel.vb" />
+    <Compile Include="Classes\StaffPosViewModel.vb" />
     <Compile Include="Classes\ViewModel.vb" />
     <Compile Include="Forms\AdminAccountSettingsView.Designer.vb">
       <DependentUpon>AdminAccountSettingsView.vb</DependentUpon>
@@ -101,10 +109,28 @@
     <Compile Include="Forms\AdminAccountSettingsView.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\AdminAddMenuView.Designer.vb">
+      <DependentUpon>AdminAddMenuView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminAddMenuView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminAddUserView.Designer.vb">
+      <DependentUpon>AdminAddUserView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminAddUserView.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\AdminDashboardView.Designer.vb">
       <DependentUpon>AdminDashboardView.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\AdminDashboardView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminEditInventoryView.Designer.vb">
+      <DependentUpon>AdminEditInventoryView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminEditInventoryView.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\AdminInventoryView.Designer.vb">
@@ -147,6 +173,36 @@
       <DependentUpon>SampleForm.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\SampleForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StaffCreditSalesView.Designer.vb">
+      <DependentUpon>StaffCreditSalesView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffCreditSalesView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StaffLandingPageView.Designer.vb">
+      <DependentUpon>StaffLandingPageView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffLandingPageView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StaffManagerAuthorizationView.Designer.vb">
+      <DependentUpon>StaffManagerAuthorizationView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffManagerAuthorizationView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StaffPosView.Designer.vb">
+      <DependentUpon>StaffPosView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffPosView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminSupplyRequestView.Designer.vb">
+      <DependentUpon>AdminSupplyRequestView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminSupplyRequestView.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserTypeEnum.vb" />
