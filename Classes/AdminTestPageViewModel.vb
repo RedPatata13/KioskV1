@@ -1,5 +1,4 @@
-﻿Imports KiostV0.KioskV0.Forms
-
+﻿
 Namespace KioskV0.Classes
     Public Class AdminTestPageViewModel
         Inherits ViewModel(Of Forms.AdminTestPageView, AdminKeys)
@@ -11,8 +10,7 @@ Namespace KioskV0.Classes
 
         Private Sub TestButtonClick()
             _mediator.SwapPage(AdminKeys.AdminLandingPage)
+
         End Sub
     End Class
-
-
 End Namespace
