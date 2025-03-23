@@ -18,7 +18,7 @@
 
         Public Function GetStaffPages(mediator As Mediator(Of StaffKeys)) As Dictionary(Of StaffKeys, IProjectable)
             Return New Dictionary(Of StaffKeys, IProjectable) From {
-            {StaffKeys.StafflandingPage, New Classes.StaffLandingPageViewModel(New Forms.StaffLandingPageView(), mediator)},
+            {StaffKeys.StafflandingPage, New Classes.StaffLandingPageViewModel(New Forms.StaffLandingPageView(), mediator)}
             }
         End Function
         Public Function GetCustomerPages() As Dictionary(Of CustomerKeys, IProjectable)

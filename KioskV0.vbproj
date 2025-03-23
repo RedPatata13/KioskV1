@@ -169,6 +169,12 @@
     <Compile Include="Forms\AdminTestPageView.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\SampleForm.Designer.vb">
       <DependentUpon>SampleForm.vb</DependentUpon>
     </Compile>
@@ -207,12 +213,6 @@
     </Compile>
     <Compile Include="UserTypeEnum.vb" />
     <Compile Include="Classes\LoginViewModel.vb" />
-    <Compile Include="Forms\Login.Designer.vb">
-      <DependentUpon>Login.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Login.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Models\AuthModel.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -262,8 +262,18 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Assets\" />
+    <Content Include="Assets\icons8-equal-housing-opportunity-96 %281%29.png" />
+    <Content Include="Assets\icons8-equal-housing-opportunity-96.png" />
+    <Content Include="Assets\icons8-hamburger-100.png" />
+    <Content Include="Assets\icons8-hamburger-96.png" />
+    <Content Include="Assets\icons8-settings-100 %281%29.png" />
+    <Content Include="Assets\icons8-settings-100.png" />
+    <Content Include="Assets\icons8-test-100 %281%29.png" />
+    <Content Include="Assets\icons8-test-100.png" />
+    <Content Include="Assets\icons8-time-machine-100 %281%29.png" />
+    <Content Include="Assets\icons8-time-machine-100.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
