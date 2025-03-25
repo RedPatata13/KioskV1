@@ -81,6 +81,12 @@
     <Compile Include="Classes\Mediator.vb" />
     <Compile Include="Classes\PageDir.vb" />
     <Compile Include="Classes\Projector.vb" />
+    <Compile Include="Classes\ProjectorView.Designer.vb">
+      <DependentUpon>ProjectorView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ProjectorView.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Classes\ViewModel.vb" />
     <Compile Include="Forms\AdminLandingPageView.Designer.vb">
       <DependentUpon>AdminLandingPageView.vb</DependentUpon>
@@ -122,6 +128,9 @@
     <Compile Include="Program.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Classes\ProjectorView.resx">
+      <DependentUpon>ProjectorView.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminLandingPageView.resx">
       <DependentUpon>AdminLandingPageView.vb</DependentUpon>
     </EmbeddedResource>

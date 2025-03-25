@@ -27,7 +27,7 @@ Namespace KioskV0.Classes
             _view = New Forms.Login()
             _tempModelMap = TempAccountsWithUserType()
             SetEvents()
-            PrepareView(projector._projector)
+            PrepareView(projector.ProjectPanel)
             _projector = projector
         End Sub
 
@@ -55,6 +55,8 @@ Namespace KioskV0.Classes
                         Case Else
                             Throw New Exception("Invalid User Type")
                     End Select
+
+                    _projector.SpawnSideBar()
                 End If
             Else
                 MessageBox.Show("UID not found.")

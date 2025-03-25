@@ -10,6 +10,8 @@ Namespace KioskV0
 
             Dim projector = New Classes.Projector()
             projector.LoginProject()
+            'projector._projector.ShowDialog()
+            'Application.Run(New ProjectorView())
 
         End Sub
     End Module

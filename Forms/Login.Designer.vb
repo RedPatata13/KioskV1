@@ -78,6 +78,7 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+            Me.BackColor = System.Drawing.SystemColors.ActiveCaption
             Me.ClientSize = New System.Drawing.Size(800, 450)
             Me.Controls.Add(Me.TableLayoutPanel1)
             Me.Name = "Login"
