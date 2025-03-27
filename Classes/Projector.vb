@@ -6,7 +6,11 @@
                 Return _projector.ProjectPanel
             End Get
         End Property
-
+        Public ReadOnly Property SidebarPanel
+            Get
+                Return _projector.SidebarPanel
+            End Get
+        End Property
         Public Sub New()
             _projector = New ProjectorView()
             _projector.WindowState = FormWindowState.Maximized
@@ -18,7 +22,10 @@
             Clear()
             projectable.Project(_projector.ProjectPanel)
         End Sub
-
+        Public Sub ProjectSidebar(sidebar As IProjectable)
+            Clear()
+            sidebar.Project(_projector.SidebarPanel)
+        End Sub
         Public Sub LoginProject()
             Clear()
             Dim lvm = New LoginViewModel(Me)
