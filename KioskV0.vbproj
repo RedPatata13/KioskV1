@@ -242,6 +242,9 @@
     <EmbeddedResource Include="Forms\AdminAccountSettingsView.resx">
       <DependentUpon>AdminAccountSettingsView.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminAddMenuView.resx">
+      <DependentUpon>AdminAddMenuView.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminDashboardView.resx">
       <DependentUpon>AdminDashboardView.vb</DependentUpon>
     </EmbeddedResource>
@@ -265,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminStaffTransactionsView.resx">
       <DependentUpon>AdminStaffTransactionsView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminSupplyRequestView.resx">
+      <DependentUpon>AdminSupplyRequestView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminTestPageView.resx">
       <DependentUpon>AdminTestPageView.vb</DependentUpon>
