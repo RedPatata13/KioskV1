@@ -96,7 +96,7 @@
             Me.Guna2TextBox1.Location = New System.Drawing.Point(49, 281)
             Me.Guna2TextBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
             Me.Guna2TextBox1.Name = "Guna2TextBox1"
-            Me.Guna2TextBox1.PlaceholderText = "102PDR"
+            Me.Guna2TextBox1.PlaceholderText = "StaffName123"
             Me.Guna2TextBox1.SelectedText = ""
             Me.Guna2TextBox1.Size = New System.Drawing.Size(488, 48)
             Me.Guna2TextBox1.TabIndex = 12
@@ -116,7 +116,7 @@
             Me.Guna2TextBox2.Location = New System.Drawing.Point(49, 385)
             Me.Guna2TextBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
             Me.Guna2TextBox2.Name = "Guna2TextBox2"
-            Me.Guna2TextBox2.PlaceholderText = "102PDR"
+            Me.Guna2TextBox2.PlaceholderText = "********"
             Me.Guna2TextBox2.SelectedText = ""
             Me.Guna2TextBox2.Size = New System.Drawing.Size(488, 48)
             Me.Guna2TextBox2.TabIndex = 13
@@ -136,7 +136,7 @@
             Me.Guna2TextBox3.Location = New System.Drawing.Point(49, 503)
             Me.Guna2TextBox3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
             Me.Guna2TextBox3.Name = "Guna2TextBox3"
-            Me.Guna2TextBox3.PlaceholderText = "102PDR"
+            Me.Guna2TextBox3.PlaceholderText = "********"
             Me.Guna2TextBox3.SelectedText = ""
             Me.Guna2TextBox3.Size = New System.Drawing.Size(488, 48)
             Me.Guna2TextBox3.TabIndex = 14
@@ -156,7 +156,7 @@
             Me.Guna2TextBox4.Location = New System.Drawing.Point(615, 174)
             Me.Guna2TextBox4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
             Me.Guna2TextBox4.Name = "Guna2TextBox4"
-            Me.Guna2TextBox4.PlaceholderText = "102PDR"
+            Me.Guna2TextBox4.PlaceholderText = "Juan"
             Me.Guna2TextBox4.SelectedText = ""
             Me.Guna2TextBox4.Size = New System.Drawing.Size(488, 48)
             Me.Guna2TextBox4.TabIndex = 15
@@ -176,7 +176,7 @@
             Me.Guna2TextBox5.Location = New System.Drawing.Point(615, 385)
             Me.Guna2TextBox5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
             Me.Guna2TextBox5.Name = "Guna2TextBox5"
-            Me.Guna2TextBox5.PlaceholderText = "102PDR"
+            Me.Guna2TextBox5.PlaceholderText = "staffname@gmail.com"
             Me.Guna2TextBox5.SelectedText = ""
             Me.Guna2TextBox5.Size = New System.Drawing.Size(488, 48)
             Me.Guna2TextBox5.TabIndex = 16
@@ -196,7 +196,7 @@
             Me.Guna2TextBox6.Location = New System.Drawing.Point(615, 281)
             Me.Guna2TextBox6.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
             Me.Guna2TextBox6.Name = "Guna2TextBox6"
-            Me.Guna2TextBox6.PlaceholderText = "102PDR"
+            Me.Guna2TextBox6.PlaceholderText = "Dela Cruz"
             Me.Guna2TextBox6.SelectedText = ""
             Me.Guna2TextBox6.Size = New System.Drawing.Size(488, 48)
             Me.Guna2TextBox6.TabIndex = 17
@@ -216,7 +216,7 @@
             Me.Guna2TextBox7.Location = New System.Drawing.Point(615, 503)
             Me.Guna2TextBox7.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
             Me.Guna2TextBox7.Name = "Guna2TextBox7"
-            Me.Guna2TextBox7.PlaceholderText = "102PDR"
+            Me.Guna2TextBox7.PlaceholderText = "09*********"
             Me.Guna2TextBox7.SelectedText = ""
             Me.Guna2TextBox7.Size = New System.Drawing.Size(488, 48)
             Me.Guna2TextBox7.TabIndex = 18
