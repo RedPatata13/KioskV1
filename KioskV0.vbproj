@@ -60,6 +60,7 @@
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -205,6 +206,12 @@
     <Compile Include="Forms\StaffManagerAuthorizationView.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\StaffPaymentView.Designer.vb">
+      <DependentUpon>StaffPaymentView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffPaymentView.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\StaffPosView.Designer.vb">
       <DependentUpon>StaffPosView.vb</DependentUpon>
     </Compile>
@@ -215,6 +222,12 @@
       <DependentUpon>AdminSupplyRequestView.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\AdminSupplyRequestView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StaffSideBar.Designer.vb">
+      <DependentUpon>StaffSideBar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffSideBar.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserTypeEnum.vb" />
@@ -278,8 +291,20 @@
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Popup.resx">
-      <DependentUpon>Popup.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\StaffCreditSalesView.resx">
+      <DependentUpon>StaffCreditSalesView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffManagerAuthorizationView.resx">
+      <DependentUpon>StaffManagerAuthorizationView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffPaymentView.resx">
+      <DependentUpon>StaffPaymentView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffPosView.resx">
+      <DependentUpon>StaffPosView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffSideBar.resx">
+      <DependentUpon>StaffSideBar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

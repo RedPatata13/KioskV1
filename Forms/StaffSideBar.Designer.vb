@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class AdminSidebar
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class StaffSideBar
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,15 +20,14 @@ Partial Class AdminSidebar
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminSidebar))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(StaffSideBar))
         Me.DashboardButton = New Guna.UI2.WinForms.Guna2Button()
         Me.MenuListButton = New Guna.UI2.WinForms.Guna2Button()
-        Me.AccountsButton = New Guna.UI2.WinForms.Guna2Button()
-        Me.StaffTransacButton = New Guna.UI2.WinForms.Guna2Button()
-        Me.OrderHistoryButton = New Guna.UI2.WinForms.Guna2Button()
         Me.InventoryButton = New Guna.UI2.WinForms.Guna2Button()
+        Me.OrderHistoryButton = New Guna.UI2.WinForms.Guna2Button()
+        Me.AccountsButton = New Guna.UI2.WinForms.Guna2Button()
         Me.LogOutButton = New Guna.UI2.WinForms.Guna2Button()
         Me.SuspendLayout()
         '
@@ -50,10 +49,10 @@ Partial Class AdminSidebar
         Me.DashboardButton.Image = CType(resources.GetObject("DashboardButton.Image"), System.Drawing.Image)
         Me.DashboardButton.ImageSize = New System.Drawing.Size(70, 70)
         Me.DashboardButton.Location = New System.Drawing.Point(18, 92)
-        Me.DashboardButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DashboardButton.Margin = New System.Windows.Forms.Padding(2)
         Me.DashboardButton.Name = "DashboardButton"
         Me.DashboardButton.Size = New System.Drawing.Size(82, 81)
-        Me.DashboardButton.TabIndex = 1
+        Me.DashboardButton.TabIndex = 2
         '
         'MenuListButton
         '
@@ -73,79 +72,10 @@ Partial Class AdminSidebar
         Me.MenuListButton.Image = CType(resources.GetObject("MenuListButton.Image"), System.Drawing.Image)
         Me.MenuListButton.ImageSize = New System.Drawing.Size(70, 70)
         Me.MenuListButton.Location = New System.Drawing.Point(18, 178)
-        Me.MenuListButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MenuListButton.Margin = New System.Windows.Forms.Padding(2)
         Me.MenuListButton.Name = "MenuListButton"
         Me.MenuListButton.Size = New System.Drawing.Size(82, 81)
-        Me.MenuListButton.TabIndex = 2
-        '
-        'AccountsButton
-        '
-        Me.AccountsButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.AccountsButton.BorderRadius = 15
-        Me.AccountsButton.BorderThickness = 1
-        Me.AccountsButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.AccountsButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.AccountsButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.AccountsButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.AccountsButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.AccountsButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.AccountsButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.AccountsButton.HoverState.BorderColor = System.Drawing.Color.White
-        Me.AccountsButton.HoverState.FillColor = System.Drawing.Color.White
-        Me.AccountsButton.HoverState.Image = CType(resources.GetObject("resource.Image2"), System.Drawing.Image)
-        Me.AccountsButton.Image = CType(resources.GetObject("AccountsButton.Image"), System.Drawing.Image)
-        Me.AccountsButton.ImageSize = New System.Drawing.Size(70, 70)
-        Me.AccountsButton.Location = New System.Drawing.Point(18, 522)
-        Me.AccountsButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.AccountsButton.Name = "AccountsButton"
-        Me.AccountsButton.Size = New System.Drawing.Size(82, 81)
-        Me.AccountsButton.TabIndex = 9
-        '
-        'StaffTransacButton
-        '
-        Me.StaffTransacButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.StaffTransacButton.BorderRadius = 15
-        Me.StaffTransacButton.BorderThickness = 1
-        Me.StaffTransacButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.StaffTransacButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.StaffTransacButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.StaffTransacButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.StaffTransacButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.StaffTransacButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.StaffTransacButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.StaffTransacButton.HoverState.BorderColor = System.Drawing.Color.White
-        Me.StaffTransacButton.HoverState.FillColor = System.Drawing.Color.White
-        Me.StaffTransacButton.HoverState.Image = CType(resources.GetObject("resource.Image3"), System.Drawing.Image)
-        Me.StaffTransacButton.Image = CType(resources.GetObject("StaffTransacButton.Image"), System.Drawing.Image)
-        Me.StaffTransacButton.ImageSize = New System.Drawing.Size(70, 70)
-        Me.StaffTransacButton.Location = New System.Drawing.Point(18, 436)
-        Me.StaffTransacButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.StaffTransacButton.Name = "StaffTransacButton"
-        Me.StaffTransacButton.Size = New System.Drawing.Size(82, 81)
-        Me.StaffTransacButton.TabIndex = 8
-        '
-        'OrderHistoryButton
-        '
-        Me.OrderHistoryButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.OrderHistoryButton.BorderRadius = 15
-        Me.OrderHistoryButton.BorderThickness = 1
-        Me.OrderHistoryButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.OrderHistoryButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.OrderHistoryButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.OrderHistoryButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.OrderHistoryButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.OrderHistoryButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.OrderHistoryButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.OrderHistoryButton.HoverState.BorderColor = System.Drawing.Color.White
-        Me.OrderHistoryButton.HoverState.FillColor = System.Drawing.Color.White
-        Me.OrderHistoryButton.HoverState.Image = CType(resources.GetObject("resource.Image4"), System.Drawing.Image)
-        Me.OrderHistoryButton.Image = CType(resources.GetObject("OrderHistoryButton.Image"), System.Drawing.Image)
-        Me.OrderHistoryButton.ImageSize = New System.Drawing.Size(70, 70)
-        Me.OrderHistoryButton.Location = New System.Drawing.Point(18, 350)
-        Me.OrderHistoryButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.OrderHistoryButton.Name = "OrderHistoryButton"
-        Me.OrderHistoryButton.Size = New System.Drawing.Size(82, 81)
-        Me.OrderHistoryButton.TabIndex = 7
+        Me.MenuListButton.TabIndex = 3
         '
         'InventoryButton
         '
@@ -161,14 +91,60 @@ Partial Class AdminSidebar
         Me.InventoryButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.InventoryButton.HoverState.BorderColor = System.Drawing.Color.White
         Me.InventoryButton.HoverState.FillColor = System.Drawing.Color.White
-        Me.InventoryButton.HoverState.Image = CType(resources.GetObject("resource.Image5"), System.Drawing.Image)
+        Me.InventoryButton.HoverState.Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
         Me.InventoryButton.Image = CType(resources.GetObject("InventoryButton.Image"), System.Drawing.Image)
         Me.InventoryButton.ImageSize = New System.Drawing.Size(70, 70)
         Me.InventoryButton.Location = New System.Drawing.Point(18, 264)
-        Me.InventoryButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.InventoryButton.Margin = New System.Windows.Forms.Padding(2)
         Me.InventoryButton.Name = "InventoryButton"
         Me.InventoryButton.Size = New System.Drawing.Size(82, 81)
-        Me.InventoryButton.TabIndex = 6
+        Me.InventoryButton.TabIndex = 7
+        '
+        'OrderHistoryButton
+        '
+        Me.OrderHistoryButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.OrderHistoryButton.BorderRadius = 15
+        Me.OrderHistoryButton.BorderThickness = 1
+        Me.OrderHistoryButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.OrderHistoryButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.OrderHistoryButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.OrderHistoryButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.OrderHistoryButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.OrderHistoryButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.OrderHistoryButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.OrderHistoryButton.HoverState.BorderColor = System.Drawing.Color.White
+        Me.OrderHistoryButton.HoverState.FillColor = System.Drawing.Color.White
+        Me.OrderHistoryButton.HoverState.Image = CType(resources.GetObject("resource.Image3"), System.Drawing.Image)
+        Me.OrderHistoryButton.Image = CType(resources.GetObject("OrderHistoryButton.Image"), System.Drawing.Image)
+        Me.OrderHistoryButton.ImageSize = New System.Drawing.Size(70, 70)
+        Me.OrderHistoryButton.Location = New System.Drawing.Point(18, 350)
+        Me.OrderHistoryButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.OrderHistoryButton.Name = "OrderHistoryButton"
+        Me.OrderHistoryButton.Size = New System.Drawing.Size(82, 81)
+        Me.OrderHistoryButton.TabIndex = 8
+        '
+        'AccountsButton
+        '
+        Me.AccountsButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.AccountsButton.BorderRadius = 15
+        Me.AccountsButton.BorderThickness = 1
+        Me.AccountsButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.AccountsButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.AccountsButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.AccountsButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.AccountsButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.AccountsButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.AccountsButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.AccountsButton.HoverState.BorderColor = System.Drawing.Color.White
+        Me.AccountsButton.HoverState.FillColor = System.Drawing.Color.White
+        Me.AccountsButton.HoverState.Image = CType(resources.GetObject("resource.Image4"), System.Drawing.Image)
+        Me.AccountsButton.Image = CType(resources.GetObject("AccountsButton.Image"), System.Drawing.Image)
+        Me.AccountsButton.ImageSize = New System.Drawing.Size(70, 70)
+        Me.AccountsButton.Location = New System.Drawing.Point(18, 436)
+        Me.AccountsButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.AccountsButton.Name = "AccountsButton"
+        Me.AccountsButton.Size = New System.Drawing.Size(82, 81)
+        Me.AccountsButton.TabIndex = 10
         '
         'LogOutButton
         '
@@ -184,16 +160,16 @@ Partial Class AdminSidebar
         Me.LogOutButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.LogOutButton.HoverState.BorderColor = System.Drawing.Color.White
         Me.LogOutButton.HoverState.FillColor = System.Drawing.Color.White
-        Me.LogOutButton.HoverState.Image = CType(resources.GetObject("resource.Image6"), System.Drawing.Image)
+        Me.LogOutButton.HoverState.Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
         Me.LogOutButton.Image = CType(resources.GetObject("LogOutButton.Image"), System.Drawing.Image)
         Me.LogOutButton.ImageSize = New System.Drawing.Size(50, 50)
         Me.LogOutButton.Location = New System.Drawing.Point(18, 786)
-        Me.LogOutButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.LogOutButton.Margin = New System.Windows.Forms.Padding(2)
         Me.LogOutButton.Name = "LogOutButton"
         Me.LogOutButton.Size = New System.Drawing.Size(82, 81)
-        Me.LogOutButton.TabIndex = 10
+        Me.LogOutButton.TabIndex = 11
         '
-        'AdminSidebar
+        'StaffSideBar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -201,24 +177,21 @@ Partial Class AdminSidebar
         Me.ClientSize = New System.Drawing.Size(119, 878)
         Me.Controls.Add(Me.LogOutButton)
         Me.Controls.Add(Me.AccountsButton)
-        Me.Controls.Add(Me.StaffTransacButton)
         Me.Controls.Add(Me.OrderHistoryButton)
         Me.Controls.Add(Me.InventoryButton)
         Me.Controls.Add(Me.MenuListButton)
         Me.Controls.Add(Me.DashboardButton)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Name = "AdminSidebar"
-        Me.Text = "AdminSidebar"
+        Me.Name = "StaffSideBar"
+        Me.Text = "StaffSideBar"
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents DashboardButton As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents MenuListButton As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents AccountsButton As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents StaffTransacButton As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents OrderHistoryButton As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents InventoryButton As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents OrderHistoryButton As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents AccountsButton As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents LogOutButton As Guna.UI2.WinForms.Guna2Button
 End Class
