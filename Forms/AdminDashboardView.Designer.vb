@@ -23,43 +23,36 @@
         'Do not modify it using the code editor.
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
-            Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-            Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
-            Me.FlowLayoutPanel1.SuspendLayout()
+            Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.SuspendLayout()
             '
-            'FlowLayoutPanel1
+            'Guna2HtmlLabel1
             '
-            Me.FlowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.FlowLayoutPanel1.Controls.Add(Me.FlowLayoutPanel2)
-            Me.FlowLayoutPanel1.Location = New System.Drawing.Point(-1, 0)
-            Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-            Me.FlowLayoutPanel1.Size = New System.Drawing.Size(68, 451)
-            Me.FlowLayoutPanel1.TabIndex = 0
-            '
-            'FlowLayoutPanel2
-            '
-            Me.FlowLayoutPanel2.Location = New System.Drawing.Point(3, 3)
-            Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
-            Me.FlowLayoutPanel2.Size = New System.Drawing.Size(8, 8)
-            Me.FlowLayoutPanel2.TabIndex = 0
+            Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
+            Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(28, 35)
+            Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
+            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(234, 64)
+            Me.Guna2HtmlLabel1.TabIndex = 9
+            Me.Guna2HtmlLabel1.Text = "Dashboard"
             '
             'AdminDashboardView
             '
-            Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(800, 450)
-            Me.Controls.Add(Me.FlowLayoutPanel1)
+            Me.ClientSize = New System.Drawing.Size(1156, 749)
+            Me.Controls.Add(Me.Guna2HtmlLabel1)
+            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+            Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.Name = "AdminDashboardView"
             Me.Text = "AdminDashboard"
-            Me.FlowLayoutPanel1.ResumeLayout(False)
             Me.ResumeLayout(False)
+            Me.PerformLayout()
 
         End Sub
 
-        Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
-        Friend WithEvents FlowLayoutPanel2 As FlowLayoutPanel
+        Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
     End Class
 
 

@@ -23,10 +23,18 @@
         'Do not modify it using the code editor.
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
-            components = New System.ComponentModel.Container
+            Me.SuspendLayout()
+            '
+            'AdminEditInventoryView
+            '
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.ClientSize = New System.Drawing.Size(800, 450)
+            Me.ClientSize = New System.Drawing.Size(813, 480)
+            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+            Me.Name = "AdminEditInventoryView"
             Me.Text = "AdminEditInventoryView"
+            Me.ResumeLayout(False)
+
         End Sub
     End Class
 
