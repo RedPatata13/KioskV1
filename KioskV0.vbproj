@@ -245,6 +245,9 @@
     <EmbeddedResource Include="Forms\AdminAddMenuView.resx">
       <DependentUpon>AdminAddMenuView.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminAddUserView.resx">
+      <DependentUpon>AdminAddUserView.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminDashboardView.resx">
       <DependentUpon>AdminDashboardView.vb</DependentUpon>
     </EmbeddedResource>
