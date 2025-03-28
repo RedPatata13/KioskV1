@@ -99,7 +99,7 @@
             Me.Controls.Add(Me.ManagerPasswordTextBox)
             Me.Controls.Add(Me.Guna2HtmlLabel1)
             Me.Name = "StaffManagerAuthorizationView"
-            Me.Text = "StaffManagerAuthorizationView"
+            Me.Text = " "
             Me.ResumeLayout(False)
             Me.PerformLayout()
 

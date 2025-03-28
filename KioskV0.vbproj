@@ -102,6 +102,7 @@
     <Compile Include="Classes\StaffCreditSalesViewModel.vb" />
     <Compile Include="Classes\StaffLandingPageViewModel.vb" />
     <Compile Include="Classes\StaffManagerAuthoViewModel.vb" />
+    <Compile Include="Classes\StaffPaymentViewModel.vb" />
     <Compile Include="Classes\StaffPosViewModel.vb" />
     <Compile Include="Classes\ViewModel.vb" />
     <Compile Include="Forms\AdminAccountSettingsView.Designer.vb">

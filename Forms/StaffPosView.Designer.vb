@@ -96,6 +96,7 @@
             '
             'PayButton
             '
+            Me.PayButton.BackColor = System.Drawing.Color.Transparent
             Me.PayButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.PayButton.BorderRadius = 20
             Me.PayButton.BorderThickness = 1
@@ -108,6 +109,10 @@
             Me.PayButton.ForeColor = System.Drawing.Color.White
             Me.PayButton.Location = New System.Drawing.Point(370, 941)
             Me.PayButton.Name = "PayButton"
+            Me.PayButton.ShadowDecoration.BorderRadius = 20
+            Me.PayButton.ShadowDecoration.Depth = 50
+            Me.PayButton.ShadowDecoration.Enabled = True
+            Me.PayButton.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(4, 0, 4, 4)
             Me.PayButton.Size = New System.Drawing.Size(291, 48)
             Me.PayButton.TabIndex = 3
             Me.PayButton.Text = "Pay"

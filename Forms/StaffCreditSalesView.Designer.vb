@@ -28,9 +28,13 @@
             Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-            Me.ProductName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.SupplyID = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.TransactionsDataGrid = New Guna.UI2.WinForms.Guna2DataGridView()
+            Me.TransactionID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.StaffsName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.DateAndTime = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.Quantity = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.Amount = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.Change = New System.Windows.Forms.DataGridViewTextBoxColumn()
             CType(Me.TransactionsDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
@@ -45,18 +49,6 @@
             Me.Guna2HtmlLabel1.TabIndex = 12
             Me.Guna2HtmlLabel1.Text = "Transactions"
             '
-            'ProductName
-            '
-            Me.ProductName.HeaderText = "Product"
-            Me.ProductName.MinimumWidth = 6
-            Me.ProductName.Name = "ProductName"
-            '
-            'SupplyID
-            '
-            Me.SupplyID.HeaderText = "ID"
-            Me.SupplyID.MinimumWidth = 6
-            Me.SupplyID.Name = "SupplyID"
-            '
             'TransactionsDataGrid
             '
             Me.TransactionsDataGrid.AllowUserToResizeRows = False
@@ -68,15 +60,15 @@
             Me.TransactionsDataGrid.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
             DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Poppins SemiBold", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Poppins SemiBold", 14.0!, System.Drawing.FontStyle.Bold)
+            DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
             Me.TransactionsDataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-            Me.TransactionsDataGrid.ColumnHeadersHeight = 4
+            Me.TransactionsDataGrid.ColumnHeadersHeight = 50
             Me.TransactionsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-            Me.TransactionsDataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.SupplyID, Me.ProductName})
+            Me.TransactionsDataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.TransactionID, Me.StaffsName, Me.DateAndTime, Me.Quantity, Me.Amount, Me.Change})
             DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
             DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -98,7 +90,6 @@
             DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
             Me.TransactionsDataGrid.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
-            Me.TransactionsDataGrid.RowHeadersVisible = False
             Me.TransactionsDataGrid.RowHeadersWidth = 51
             Me.TransactionsDataGrid.RowTemplate.Height = 24
             Me.TransactionsDataGrid.Size = New System.Drawing.Size(1727, 693)
@@ -112,18 +103,48 @@
             Me.TransactionsDataGrid.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.TransactionsDataGrid.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.TransactionsDataGrid.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-            Me.TransactionsDataGrid.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.TransactionsDataGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+            Me.TransactionsDataGrid.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Poppins", 14.0!)
+            Me.TransactionsDataGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black
             Me.TransactionsDataGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-            Me.TransactionsDataGrid.ThemeStyle.HeaderStyle.Height = 4
+            Me.TransactionsDataGrid.ThemeStyle.HeaderStyle.Height = 50
             Me.TransactionsDataGrid.ThemeStyle.ReadOnly = False
             Me.TransactionsDataGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
             Me.TransactionsDataGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-            Me.TransactionsDataGrid.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TransactionsDataGrid.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Poppins", 14.0!)
             Me.TransactionsDataGrid.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
             Me.TransactionsDataGrid.ThemeStyle.RowsStyle.Height = 24
             Me.TransactionsDataGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.TransactionsDataGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+            '
+            'TransactionID
+            '
+            Me.TransactionID.HeaderText = "Transaction ID"
+            Me.TransactionID.Name = "TransactionID"
+            '
+            'StaffsName
+            '
+            Me.StaffsName.HeaderText = "Staffs Name"
+            Me.StaffsName.Name = "StaffsName"
+            '
+            'DateAndTime
+            '
+            Me.DateAndTime.HeaderText = "Date & Time"
+            Me.DateAndTime.Name = "DateAndTime"
+            '
+            'Quantity
+            '
+            Me.Quantity.HeaderText = "Quantity"
+            Me.Quantity.Name = "Quantity"
+            '
+            'Amount
+            '
+            Me.Amount.HeaderText = "Amount"
+            Me.Amount.Name = "Amount"
+            '
+            'Change
+            '
+            Me.Change.HeaderText = "Change"
+            Me.Change.Name = "Change"
             '
             'StaffCreditSalesView
             '
@@ -142,9 +163,13 @@
         End Sub
 
         Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
-        Friend WithEvents ProductName As DataGridViewTextBoxColumn
-        Friend WithEvents SupplyID As DataGridViewTextBoxColumn
         Friend WithEvents TransactionsDataGrid As Guna.UI2.WinForms.Guna2DataGridView
+        Friend WithEvents TransactionID As DataGridViewTextBoxColumn
+        Friend WithEvents StaffsName As DataGridViewTextBoxColumn
+        Friend WithEvents DateAndTime As DataGridViewTextBoxColumn
+        Friend WithEvents Quantity As DataGridViewTextBoxColumn
+        Friend WithEvents Amount As DataGridViewTextBoxColumn
+        Friend WithEvents Change As DataGridViewTextBoxColumn
     End Class
 
 End Namespace

@@ -1,3 +1,5 @@
-﻿Public Class StaffPaymentView
+﻿Namespace KioskV0.Forms
+    Public Class StaffPaymentView
 
-End Class
+    End Class
+End Namespace
