@@ -19,18 +19,18 @@
             projector.Controls.Add(_view)
         End Sub
 
-        Public Sub DisplayPopup(popup As Popup)
+        'Public Sub DisplayPopup(popup As Popup)
 
-            DisableControls(_view, True)
-            Dim closing_act As Action =
-                Sub()
-                    DisableControls(_view, False)
-                    popup.Dispose()
-                End Sub
+        ' DisableControls(_view, True)
+        'Dim closing_act As Action =
+        'Sub()
+        '           DisableControls(_view, False)
+        '          popup.Dispose()
+        'End Sub
+        '
+        'popup.Close(closing_act)
 
-            popup.Close(closing_act)
-
-        End Sub
+        'End Sub
 
         Private Sub DisableControls(parent As Control, current As Boolean)
             For Each ctrl As Control In parent.Controls

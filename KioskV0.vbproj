@@ -48,8 +48,14 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
-      <HintPath>packages\Guna.UI2.WinForms.2.0.4.7\lib\net48\Guna.UI2.dll</HintPath>
+    <Reference Include="CuoreUI, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\CuoreUI.Winforms.2025.3.3\lib\netstandard2.0\CuoreUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.Charts.WinForms, Version=1.1.0.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.Charts.WinForms.1.1.0\lib\net48\Guna.Charts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Ububox.G2Crack.2.0.4.6\lib\net48\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -102,6 +108,9 @@
     <Compile Include="Classes\StaffLandingPageViewModel.vb" />
     <Compile Include="Classes\StaffManagerAuthoViewModel.vb" />
     <Compile Include="Classes\StaffPosViewModel.vb" />
+    <Compile Include="Classes\SupplierAcceptRequestViewModel.vb" />
+    <Compile Include="Classes\SupplierPendingRequestViewModel.vb" />
+    <Compile Include="Classes\SupplierTransactionHistoryViewModel.vb" />
     <Compile Include="Classes\ViewModel.vb" />
     <Compile Include="Forms\AdminAccountSettingsView.Designer.vb">
       <DependentUpon>AdminAccountSettingsView.vb</DependentUpon>
@@ -175,6 +184,18 @@
     <Compile Include="Forms\AdminTestPageView.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\SupplierAcceptRequestView.Designer.vb">
+      <DependentUpon>SupplierAcceptRequestView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupplierAcceptRequestView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SupplierPendingRequestView.Designer.vb">
+      <DependentUpon>SupplierPendingRequestView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupplierPendingRequestView.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
@@ -217,6 +238,12 @@
     <Compile Include="Forms\AdminSupplyRequestView.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\SupplierTransactionHistoryView.Designer.vb">
+      <DependentUpon>SupplierTransactionHistoryView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupplierTransactionHistoryView.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UserTypeEnum.vb" />
     <Compile Include="Classes\LoginViewModel.vb" />
     <Compile Include="Models\AuthModel.vb" />
@@ -244,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminAddMenuView.resx">
       <DependentUpon>AdminAddMenuView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminAddUserView.resx">
+      <DependentUpon>AdminAddUserView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminDashboardView.resx">
       <DependentUpon>AdminDashboardView.vb</DependentUpon>
@@ -278,8 +308,14 @@
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Popup.resx">
-      <DependentUpon>Popup.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\SupplierAcceptRequestView.resx">
+      <DependentUpon>SupplierAcceptRequestView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SupplierPendingRequestView.resx">
+      <DependentUpon>SupplierPendingRequestView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SupplierTransactionHistoryView.resx">
+      <DependentUpon>SupplierTransactionHistoryView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -299,7 +335,6 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -313,6 +348,7 @@
     <Content Include="Assets\icons8-test-100.png" />
     <Content Include="Assets\icons8-time-machine-100 %281%29.png" />
     <Content Include="Assets\icons8-time-machine-100.png" />
+    <None Include="packages.config" />
     <None Include="Resources\icons8-supply-chain-100.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

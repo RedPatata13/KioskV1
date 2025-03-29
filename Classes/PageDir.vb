@@ -24,8 +24,13 @@
         Public Function GetCustomerPages() As Dictionary(Of CustomerKeys, IProjectable)
             Return New Dictionary(Of CustomerKeys, IProjectable)
         End Function
-        Public Function GetSupplierPages() As Dictionary(Of SupplierKeys, IProjectable)
-            Return New Dictionary(Of SupplierKeys, IProjectable)
+        Public Function GetSupplierPages(mediator As Mediator(Of SupplierKeys)) As Dictionary(Of SupplierKeys, IProjectable)
+            Return New Dictionary(Of SupplierKeys, IProjectable) From
+        {
+            {SupplierKeys.SupplierTransactionHistory, New Classes.SupplierTransactionHistoryViewModel(New Forms.SupplierTransactionHistoryView(), mediator)},
+            {SupplierKeys.SupplierPendingRequest, New Classes.SupplierPendingRequestViewModel(New Forms.SupplierPendingRequestView(), mediator)}
+        }
+
         End Function
     End Module
 
