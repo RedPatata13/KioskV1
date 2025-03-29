@@ -18,7 +18,7 @@ Public Class OrderConfiguration
         ' Foreign Key: Order has one User (Staff)
         Me.HasRequired(Function(o) o.User).
             WithMany().
-            HasForeignKey(Function(o) o.StaffId).
+            HasForeignKey(Function(o) o.UserId).
             WillCascadeOnDelete(False)
 
         ' Foreign Key: Order has many OrderItems

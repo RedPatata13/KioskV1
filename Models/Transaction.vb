@@ -5,7 +5,7 @@ Imports System.ComponentModel.DataAnnotations.Schema
 Public Class Transaction
     Public Property TransactionId As Integer
 
-    Public Property StaffId As Integer
+    Public Property UserId As Integer ' fk to staff woho handled the transac
 
     Public Property TotalAmount As Decimal
     Public Property Quantity As Integer
@@ -14,7 +14,6 @@ Public Class Transaction
 
     Public Property ProductId As Integer
     Public Property CreatedAt As DateTime
-
     Public Overridable Property User As User
     Public Overridable Property Product As Product
 End Class

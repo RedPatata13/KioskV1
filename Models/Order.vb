@@ -8,7 +8,7 @@ Public Class Order
 
     Public Property TotalAmount As Decimal
 
-    Public Property StaffId As Integer
+    Public Property UserId As Integer
 
     Public Property CreatedAt As DateTime
 

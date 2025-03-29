@@ -1,5 +1,5 @@
-﻿Public Class SuppliersRepository
-    Inherits BaseRepository(Of Supplier)
+﻿Public Class TransactionsRepository
+    Inherits BaseRepository(Of Transaction)
     Public Sub New(context As AppDbContext)
         MyBase.New(context)
     End Sub

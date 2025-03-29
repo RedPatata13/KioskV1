@@ -11,7 +11,7 @@ Public Class TransactionConfiguration
         ' Foreign Key: Transaction belongs to one User (Staff)
         Me.HasRequired(Function(t) t.User).
             WithMany().
-            HasForeignKey(Function(t) t.StaffId).
+            HasForeignKey(Function(t) t.UserId).
             WillCascadeOnDelete(False) ' Prevents user deletion from affecting transactions
 
         ' Foreign Key: Transaction is associated with one Product
