@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -48,11 +48,17 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.7\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -74,25 +80,93 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\AdminAccountSettingsViewModel.vb" />
+    <Compile Include="Classes\AdminAddMenuViewModel.vb" />
+    <Compile Include="Classes\AdminAddUserViewModel.vb" />
+    <Compile Include="Classes\AdminDashboardViewModel.vb" />
+    <Compile Include="Classes\AdminEditInventoryViewModel.vb" />
+    <Compile Include="Classes\AdminInventoryViewModel.vb" />
     <Compile Include="Classes\AdminLandingPageViewModel.vb" />
+    <Compile Include="Classes\AdminMenuViewModel.vb" />
+    <Compile Include="Classes\AdminOrderHistoryViewModel.vb" />
+    <Compile Include="Classes\AdminStaffTransactionsViewModel.vb" />
+    <Compile Include="Classes\AdminSupplyRequestViewModel.vb" />
     <Compile Include="Classes\AdminTestPageViewModel.vb" />
     <Compile Include="Classes\Initializer.vb" />
     <Compile Include="Classes\IProjectable.vb" />
     <Compile Include="Classes\Mediator.vb" />
     <Compile Include="Classes\PageDir.vb" />
     <Compile Include="Classes\Projector.vb" />
-    <Compile Include="Classes\ProjectorView.Designer.vb">
-      <DependentUpon>ProjectorView.vb</DependentUpon>
+    <Compile Include="Classes\SampleViewModel.vb" />
+    <Compile Include="Classes\StaffCreditSalesViewModel.vb" />
+    <Compile Include="Classes\StaffLandingPageViewModel.vb" />
+    <Compile Include="Classes\StaffManagerAuthoViewModel.vb" />
+    <Compile Include="Classes\StaffPosViewModel.vb" />
+    <Compile Include="Classes\ViewModel.vb" />
+    <Compile Include="Forms\AdminAccountSettingsView.Designer.vb">
+      <DependentUpon>AdminAccountSettingsView.vb</DependentUpon>
     </Compile>
-    <Compile Include="Classes\ProjectorView.vb">
+    <Compile Include="Forms\AdminAccountSettingsView.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Classes\SidebarTestViewModel.vb" />
-    <Compile Include="Classes\ViewModel.vb" />
+    <Compile Include="Forms\AdminAddMenuView.Designer.vb">
+      <DependentUpon>AdminAddMenuView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminAddMenuView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminAddUserView.Designer.vb">
+      <DependentUpon>AdminAddUserView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminAddUserView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminDashboardView.Designer.vb">
+      <DependentUpon>AdminDashboardView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminDashboardView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminEditInventoryView.Designer.vb">
+      <DependentUpon>AdminEditInventoryView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminEditInventoryView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminInventoryView.Designer.vb">
+      <DependentUpon>AdminInventoryView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminInventoryView.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\AdminLandingPageView.Designer.vb">
       <DependentUpon>AdminLandingPageView.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\AdminLandingPageView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminMenuView.Designer.vb">
+      <DependentUpon>AdminMenuView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminMenuView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminOrderHistoryView.Designer.vb">
+      <DependentUpon>AdminOrderHistoryView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminOrderHistoryView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminSidebar.Designer.vb">
+      <DependentUpon>AdminSidebar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminSidebar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminStaffTransactionsView.Designer.vb">
+      <DependentUpon>AdminStaffTransactionsView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminStaffTransactionsView.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\AdminTestPageView.Designer.vb">
@@ -101,26 +175,50 @@
     <Compile Include="Forms\AdminTestPageView.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\SidebarTest.Designer.vb">
-      <DependentUpon>SidebarTest.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\SidebarTest.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\SidebarTest2.Designer.vb">
-      <DependentUpon>SidebarTest2.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\SidebarTest2.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserTypeEnum.vb" />
-    <Compile Include="Classes\LoginViewModel.vb" />
     <Compile Include="Forms\Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\Login.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\SampleForm.Designer.vb">
+      <DependentUpon>SampleForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SampleForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StaffCreditSalesView.Designer.vb">
+      <DependentUpon>StaffCreditSalesView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffCreditSalesView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StaffLandingPageView.Designer.vb">
+      <DependentUpon>StaffLandingPageView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffLandingPageView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StaffManagerAuthorizationView.Designer.vb">
+      <DependentUpon>StaffManagerAuthorizationView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffManagerAuthorizationView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StaffPosView.Designer.vb">
+      <DependentUpon>StaffPosView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffPosView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminSupplyRequestView.Designer.vb">
+      <DependentUpon>AdminSupplyRequestView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminSupplyRequestView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserTypeEnum.vb" />
+    <Compile Include="Classes\LoginViewModel.vb" />
     <Compile Include="Models\AuthModel.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -141,11 +239,41 @@
     <Compile Include="Program.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Classes\ProjectorView.resx">
-      <DependentUpon>ProjectorView.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\AdminAccountSettingsView.resx">
+      <DependentUpon>AdminAccountSettingsView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminAddMenuView.resx">
+      <DependentUpon>AdminAddMenuView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminAddUserView.resx">
+      <DependentUpon>AdminAddUserView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminDashboardView.resx">
+      <DependentUpon>AdminDashboardView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminEditInventoryView.resx">
+      <DependentUpon>AdminEditInventoryView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminInventoryView.resx">
+      <DependentUpon>AdminInventoryView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminLandingPageView.resx">
       <DependentUpon>AdminLandingPageView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminMenuView.resx">
+      <DependentUpon>AdminMenuView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminOrderHistoryView.resx">
+      <DependentUpon>AdminOrderHistoryView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminSidebar.resx">
+      <DependentUpon>AdminSidebar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminStaffTransactionsView.resx">
+      <DependentUpon>AdminStaffTransactionsView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminSupplyRequestView.resx">
+      <DependentUpon>AdminSupplyRequestView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminTestPageView.resx">
       <DependentUpon>AdminTestPageView.vb</DependentUpon>
@@ -153,11 +281,8 @@
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SidebarTest.resx">
-      <DependentUpon>SidebarTest.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SidebarTest2.resx">
-      <DependentUpon>SidebarTest2.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\Popup.resx">
+      <DependentUpon>Popup.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -177,9 +302,21 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Assets\" />
+    <Content Include="Assets\icons8-equal-housing-opportunity-96 %281%29.png" />
+    <Content Include="Assets\icons8-equal-housing-opportunity-96.png" />
+    <Content Include="Assets\icons8-hamburger-100.png" />
+    <Content Include="Assets\icons8-hamburger-96.png" />
+    <Content Include="Assets\icons8-settings-100 %281%29.png" />
+    <Content Include="Assets\icons8-settings-100.png" />
+    <Content Include="Assets\icons8-test-100 %281%29.png" />
+    <Content Include="Assets\icons8-test-100.png" />
+    <Content Include="Assets\icons8-time-machine-100 %281%29.png" />
+    <Content Include="Assets\icons8-time-machine-100.png" />
+    <None Include="Resources\icons8-supply-chain-100.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -23,6 +23,5 @@
         Private Sub SubmitButton_Click(sender As Object, e As EventArgs) Handles SubmitButton.Click
             SubmitButtonClick?.Invoke()
         End Sub
-
     End Class
 End Namespace

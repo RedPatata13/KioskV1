@@ -23,75 +23,135 @@
         'Do not modify it using the code editor.
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
-            Me.UIDField = New System.Windows.Forms.RichTextBox()
-            Me.PasswordField = New System.Windows.Forms.RichTextBox()
-            Me.SubmitButton = New System.Windows.Forms.Button()
-            Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-            Me.TableLayoutPanel1.SuspendLayout()
+            Me.Panel1 = New System.Windows.Forms.Panel()
+            Me.SubmitButton = New Guna.UI2.WinForms.Guna2Button()
+            Me.PasswordField = New Guna.UI2.WinForms.Guna2TextBox()
+            Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me.UIDField = New Guna.UI2.WinForms.Guna2TextBox()
+            Me.Panel1.SuspendLayout()
             Me.SuspendLayout()
             '
-            'UIDField
+            'Panel1
             '
-            Me.UIDField.Location = New System.Drawing.Point(3, 3)
-            Me.UIDField.Multiline = False
-            Me.UIDField.Name = "UIDField"
-            Me.UIDField.Size = New System.Drawing.Size(248, 40)
-            Me.UIDField.TabIndex = 0
-            Me.UIDField.Text = ""
-            '
-            'PasswordField
-            '
-            Me.PasswordField.Location = New System.Drawing.Point(3, 59)
-            Me.PasswordField.Multiline = False
-            Me.PasswordField.Name = "PasswordField"
-            Me.PasswordField.Size = New System.Drawing.Size(248, 40)
-            Me.PasswordField.TabIndex = 1
-            Me.PasswordField.Text = ""
+            Me.Panel1.Controls.Add(Me.SubmitButton)
+            Me.Panel1.Controls.Add(Me.PasswordField)
+            Me.Panel1.Controls.Add(Me.Guna2HtmlLabel1)
+            Me.Panel1.Controls.Add(Me.UIDField)
+            Me.Panel1.Dock = System.Windows.Forms.DockStyle.Right
+            Me.Panel1.Location = New System.Drawing.Point(898, 0)
+            Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.Panel1.Name = "Panel1"
+            Me.Panel1.Size = New System.Drawing.Size(1044, 1102)
+            Me.Panel1.TabIndex = 0
             '
             'SubmitButton
             '
-            Me.SubmitButton.Location = New System.Drawing.Point(3, 115)
+            Me.SubmitButton.BackColor = System.Drawing.Color.Transparent
+            Me.SubmitButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.SubmitButton.BorderRadius = 15
+            Me.SubmitButton.BorderThickness = 1
+            Me.SubmitButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.SubmitButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.SubmitButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.SubmitButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.SubmitButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.SubmitButton.Font = New System.Drawing.Font("Poppins", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.SubmitButton.ForeColor = System.Drawing.Color.White
+            Me.SubmitButton.Location = New System.Drawing.Point(396, 821)
+            Me.SubmitButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.SubmitButton.Name = "SubmitButton"
-            Me.SubmitButton.Size = New System.Drawing.Size(248, 32)
-            Me.SubmitButton.TabIndex = 2
-            Me.SubmitButton.Text = "Button1"
-            Me.SubmitButton.UseVisualStyleBackColor = True
+            Me.SubmitButton.ShadowDecoration.BorderRadius = 25
+            Me.SubmitButton.ShadowDecoration.Depth = 25
+            Me.SubmitButton.ShadowDecoration.Enabled = True
+            Me.SubmitButton.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(0, 0, 10, 10)
+            Me.SubmitButton.Size = New System.Drawing.Size(288, 74)
+            Me.SubmitButton.TabIndex = 3
+            Me.SubmitButton.Text = "Submit"
             '
-            'TableLayoutPanel1
+            'PasswordField
             '
-            Me.TableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None
-            Me.TableLayoutPanel1.ColumnCount = 1
-            Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-            Me.TableLayoutPanel1.Controls.Add(Me.PasswordField, 0, 1)
-            Me.TableLayoutPanel1.Controls.Add(Me.UIDField, 0, 0)
-            Me.TableLayoutPanel1.Controls.Add(Me.SubmitButton, 0, 2)
-            Me.TableLayoutPanel1.Location = New System.Drawing.Point(264, 152)
-            Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-            Me.TableLayoutPanel1.RowCount = 3
-            Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-            Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-            Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-            Me.TableLayoutPanel1.Size = New System.Drawing.Size(256, 168)
-            Me.TableLayoutPanel1.TabIndex = 3
+            Me.PasswordField.BackColor = System.Drawing.Color.Transparent
+            Me.PasswordField.BorderRadius = 15
+            Me.PasswordField.Cursor = System.Windows.Forms.Cursors.IBeam
+            Me.PasswordField.DefaultText = ""
+            Me.PasswordField.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+            Me.PasswordField.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+            Me.PasswordField.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+            Me.PasswordField.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+            Me.PasswordField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+            Me.PasswordField.Font = New System.Drawing.Font("Poppins", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.PasswordField.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.PasswordField.Location = New System.Drawing.Point(240, 677)
+            Me.PasswordField.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+            Me.PasswordField.Name = "PasswordField"
+            Me.PasswordField.PlaceholderText = "Password"
+            Me.PasswordField.SelectedText = ""
+            Me.PasswordField.ShadowDecoration.BorderRadius = 25
+            Me.PasswordField.ShadowDecoration.Depth = 25
+            Me.PasswordField.ShadowDecoration.Enabled = True
+            Me.PasswordField.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(0, 0, 10, 10)
+            Me.PasswordField.Size = New System.Drawing.Size(628, 74)
+            Me.PasswordField.TabIndex = 2
+            '
+            'Guna2HtmlLabel1
+            '
+            Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
+            Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(395, 407)
+            Me.Guna2HtmlLabel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
+            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(269, 127)
+            Me.Guna2HtmlLabel1.TabIndex = 1
+            Me.Guna2HtmlLabel1.Text = "Log-in"
+            '
+            'UIDField
+            '
+            Me.UIDField.BackColor = System.Drawing.Color.Transparent
+            Me.UIDField.BorderRadius = 15
+            Me.UIDField.Cursor = System.Windows.Forms.Cursors.IBeam
+            Me.UIDField.DefaultText = ""
+            Me.UIDField.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+            Me.UIDField.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+            Me.UIDField.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+            Me.UIDField.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+            Me.UIDField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+            Me.UIDField.Font = New System.Drawing.Font("Poppins", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.UIDField.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.UIDField.Location = New System.Drawing.Point(240, 569)
+            Me.UIDField.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+            Me.UIDField.Name = "UIDField"
+            Me.UIDField.PlaceholderText = "Username"
+            Me.UIDField.SelectedText = ""
+            Me.UIDField.ShadowDecoration.BorderRadius = 25
+            Me.UIDField.ShadowDecoration.Depth = 25
+            Me.UIDField.ShadowDecoration.Enabled = True
+            Me.UIDField.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(0, 0, 10, 10)
+            Me.UIDField.Size = New System.Drawing.Size(628, 74)
+            Me.UIDField.TabIndex = 0
             '
             'Login
             '
-            Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-            Me.ClientSize = New System.Drawing.Size(800, 450)
-            Me.Controls.Add(Me.TableLayoutPanel1)
+            Me.BackColor = System.Drawing.Color.White
+            Me.ClientSize = New System.Drawing.Size(1942, 1102)
+            Me.Controls.Add(Me.Panel1)
+            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+            Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.Name = "Login"
             Me.Text = "Login"
-            Me.TableLayoutPanel1.ResumeLayout(False)
+            Me.Panel1.ResumeLayout(False)
+            Me.Panel1.PerformLayout()
             Me.ResumeLayout(False)
 
         End Sub
 
-        Friend WithEvents UIDField As RichTextBox
-        Friend WithEvents PasswordField As RichTextBox
-        Friend WithEvents SubmitButton As Button
-        Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+        Friend WithEvents Panel1 As Panel
+        Friend WithEvents UIDField As Guna.UI2.WinForms.Guna2TextBox
+        Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
+        Friend WithEvents PasswordField As Guna.UI2.WinForms.Guna2TextBox
+        Friend WithEvents SubmitButton As Guna.UI2.WinForms.Guna2Button
     End Class
 
 End Namespace

@@ -11,6 +11,17 @@
         AdminEntry
         AdminLandingPage
         AdminTestPage
+        Sample
+        AdminDashboard
+        AdminMenu
+        AdminInventory
+        AdminOrderHistory
+        AdminStaffTransactions
+        AdminAccountSettings
+        AdminAddMenu
+        AdminAddUser
+        AdminEditInventory
+        AdminSupplyRequest
     End Enum
 
     Public Enum CustomerKeys
@@ -23,6 +34,9 @@
         StaffEntry
         StafflandingPage
         SupplierTestPage
+        StaffPos
+        StaffCreditSales
+        StaffManagerAuthorization
     End Enum
 
     Public Enum SupplierKeys
