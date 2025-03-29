@@ -1,6 +1,4 @@
-﻿Imports System.Security.Cryptography.X509Certificates
-
-Public Class ProjectorView
+﻿Public Class ProjectorView
     Private Split = 1
     Public Property ProjectPanel = New Form()
     Public Property SidebarPanel = New Form()

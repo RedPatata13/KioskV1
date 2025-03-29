@@ -5,11 +5,11 @@
 
         End Sub
 
-        Private Sub Button1_Click(sender As Object, e As EventArgs)
-            TestButtonClick?.Invoke()
-        End Sub
+        'Private Sub Button1_Click(sender As Object, e As EventArgs)
+        '    TestButtonClick?.Invoke()
+        'End Sub
 
-        Private Sub AdminPanel_Paint(sender As Object, e As PaintEventArgs) Handles AdminPanel.Paint
+        Private Sub AdminPanel_Paint(sender As Object, e As PaintEventArgs)
 
         End Sub
     End Class

@@ -22,30 +22,9 @@ Partial Class ProjectorView
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
-        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.FileSystemWatcher1 = New System.IO.FileSystemWatcher()
-        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
-        '
-        'FileSystemWatcher1
-        '
-        Me.FileSystemWatcher1.EnableRaisingEvents = True
-        Me.FileSystemWatcher1.SynchronizingObject = Me
-        '
-        'ProjectorView
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        components = New System.ComponentModel.Container
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1187, 663)
-        Me.Name = "ProjectorView"
+        Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Text = "ProjectorView"
-        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-
     End Sub
-    Friend WithEvents BindingSource1 As BindingSource
-    Friend WithEvents FileSystemWatcher1 As IO.FileSystemWatcher
 End Class

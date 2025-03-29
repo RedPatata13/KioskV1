@@ -48,10 +48,11 @@ Namespace KioskV0.Classes
                     Select Case val.UserType
                         Case UserType.Admin
                             mediator = New Mediator(Of AdminKeys)(_projector, Me)
-                            mediator.SetupMap(GetAdminPages(mediator)) ' Declared in PageDir.vb
+                            mediator.SetupMap(GetAdminPages(mediator))
                             Dim sb = New SidebarTestViewModel(New SidebarTest(), mediator)
                             _projector.ProjectSidebar(sb)
-                            mediator.SwapPage(AdminKeys.AdminLandingPage)
+                            mediator.SwapPage(AdminKeys.AdminLandingPage) 'for sum reason only gods know (not even gpt), the fill doesn't happen on first call 
+                            mediator.SwapPage(AdminKeys.AdminLandingPage) 'so call it again. I have no fckin clue why this happens cuz ts was working just fine before the merge
                         Case UserType.Customer
                             mediator = New Mediator(Of CustomerKeys)(_projector, Me)
                             mediator.SetupMap(GetCustomerPages())
