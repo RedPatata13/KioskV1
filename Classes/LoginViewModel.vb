@@ -31,6 +31,11 @@ Namespace KioskV0.Classes
             _projector = projector
         End Sub
 
+        ''' <summary>
+        ''' Function that handles the actual user authentication
+        ''' </summary>
+        ''' <param name="key">User ID</param>
+        ''' <param name="password">User Password</param>
         Private Sub Authenticate(key As String, password As String)
             Dim val As Model.AuthModel = Nothing
             If (_tempModelMap.TryGetValue(key, val)) Then
@@ -93,7 +98,10 @@ Namespace KioskV0.Classes
 
             End Try
         End Sub
-        'Paki Remove this once DB is up and going
+        ''' <summary>
+        ''' Function for getting Temporary Account DEtails
+        ''' </summary>
+        ''' <returns>Dictionary that Returns the User Authentication Details</returns>
         Private Function TempAccountsWithUserType() As Dictionary(Of String, Model.AuthModel)
 
             Dim map = New Dictionary(Of String, Model.AuthModel) From
@@ -138,6 +146,10 @@ Namespace KioskV0.Classes
 
             Return map
         End Function
+
+        ''' <summary>
+        ''' Function for checking if User Input is Valid
+        ''' </summary>
         Private Sub ValidateLogin()
             If String.IsNullOrWhiteSpace(_uid) Then
                 Throw New ArgumentException("User ID is required")

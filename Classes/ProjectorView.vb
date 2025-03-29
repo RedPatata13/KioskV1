@@ -1,7 +1,7 @@
 ﻿Imports System.Security.Cryptography.X509Certificates
 
 Public Class ProjectorView
-    Private Split = 1 'width of 
+    Private Split = 1
     Public Property ProjectPanel = New Form()
     Public Property SidebarPanel = New Form()
 
@@ -22,6 +22,9 @@ Public Class ProjectorView
         Controls.Remove(SidebarPanel)
     End Sub
 
+    ''' <summary>
+    ''' Function to initialize the internal panels of the ProjectorView
+    ''' </summary>
     Private Sub SetupPanels()
         Dim proj_width = Me.Width * (10 - Split) / 10
         Dim sidebar_width = Me.Width * Split / 10
