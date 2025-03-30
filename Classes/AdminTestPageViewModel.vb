@@ -10,8 +10,7 @@ Namespace KioskV0.Classes
 
         Private Sub TestButtonClick()
             _mediator.SwapPage(AdminKeys.AdminLandingPage)
+
         End Sub
     End Class
-
-
 End Namespace
