@@ -5,7 +5,7 @@ Namespace KioskV0.Classes
     Public Class LoginViewModel
         Private Property _view As Forms.Login
         Private Property _model
-        Private Property _projector As Projector
+        Private Property _projector
         Private _tempModelMap As Dictionary(Of String, Model.AuthModel)
         Private _uid As String
         Private _password As String
@@ -27,7 +27,7 @@ Namespace KioskV0.Classes
             _view = New Forms.Login()
             _tempModelMap = TempAccountsWithUserType()
             SetEvents()
-            PrepareView(projector.ProjectPanel)
+            PrepareView(projector._projector)
             _projector = projector
         End Sub
 
@@ -44,13 +44,10 @@ Namespace KioskV0.Classes
                         Case UserType.Admin
                             mediator = New Mediator(Of AdminKeys)(_projector, Me)
                             mediator.SetupMap(GetAdminPages(mediator)) ' Declared in PageDir.vb
-                            Dim sb = New SidebarTestViewModel(New SidebarTest(), mediator)
-                            _projector.ProjectSidebar(sb)
                             mediator.SwapPage(AdminKeys.AdminLandingPage)
                         Case UserType.Customer
                             mediator = New Mediator(Of CustomerKeys)(_projector, Me)
                             mediator.SetupMap(GetCustomerPages())
-
                         Case UserType.Staff
                             mediator = New Mediator(Of StaffKeys)(_projector, Me)
                         Case UserType.Supplier
@@ -58,13 +55,12 @@ Namespace KioskV0.Classes
                         Case Else
                             Throw New Exception("Invalid User Type")
                     End Select
-
-                    _projector.SpawnSideBar()
                 End If
             Else
                 MessageBox.Show("UID not found.")
             End If
         End Sub
+
         Private Sub PrepareView(projector As Form)
             _view.TopLevel = False
             _view.FormBorderStyle = FormBorderStyle.None

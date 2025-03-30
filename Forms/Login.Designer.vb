@@ -134,13 +134,11 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-
             Me.BackColor = System.Drawing.Color.White
             Me.ClientSize = New System.Drawing.Size(1942, 1102)
             Me.Controls.Add(Me.Panel1)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
             Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-
             Me.Name = "Login"
             Me.Text = "Login"
             Me.Panel1.ResumeLayout(False)
