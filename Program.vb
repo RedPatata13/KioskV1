@@ -9,8 +9,11 @@ Namespace KioskV0
             Application.Run(New KioskV0.Forms.StaffPosView())
 
 
-            'Dim projector = New Classes.Projector()
-            'projector.LoginProject()
+            Dim projector = New Classes.Projector()
+            projector.LoginProject()
+            'projector._projector.ShowDialog()
+            'Application.Run(New ProjectorView())
+
 
         End Sub
     End Module
