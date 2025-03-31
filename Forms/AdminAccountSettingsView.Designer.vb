@@ -66,7 +66,7 @@
             DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.AccountsDataGridView.DefaultCellStyle = DataGridViewCellStyle3
             Me.AccountsDataGridView.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.AccountsDataGridView.Location = New System.Drawing.Point(28, 124)
+            Me.AccountsDataGridView.Location = New System.Drawing.Point(109, 147)
             Me.AccountsDataGridView.Name = "AccountsDataGridView"
             Me.AccountsDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -80,7 +80,7 @@
             Me.AccountsDataGridView.RowHeadersVisible = False
             Me.AccountsDataGridView.RowHeadersWidth = 51
             Me.AccountsDataGridView.RowTemplate.Height = 24
-            Me.AccountsDataGridView.Size = New System.Drawing.Size(1100, 564)
+            Me.AccountsDataGridView.Size = New System.Drawing.Size(1545, 839)
             Me.AccountsDataGridView.TabIndex = 6
             Me.AccountsDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
             Me.AccountsDataGridView.ThemeStyle.AlternatingRowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -133,18 +133,19 @@
             Me.AddAccountButton.HoverState.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
             Me.AddAccountButton.Image = CType(resources.GetObject("AddAccountButton.Image"), System.Drawing.Image)
             Me.AddAccountButton.ImageSize = New System.Drawing.Size(40, 40)
-            Me.AddAccountButton.Location = New System.Drawing.Point(1053, 44)
+            Me.AddAccountButton.Location = New System.Drawing.Point(1599, 53)
             Me.AddAccountButton.Name = "AddAccountButton"
             Me.AddAccountButton.Size = New System.Drawing.Size(55, 55)
             Me.AddAccountButton.TabIndex = 7
             '
             'Guna2HtmlLabel1
             '
+            Me.Guna2HtmlLabel1.AutoSize = False
             Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(28, 35)
+            Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 28.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(40, 44)
             Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(365, 64)
+            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(622, 64)
             Me.Guna2HtmlLabel1.TabIndex = 8
             Me.Guna2HtmlLabel1.Text = "Account Settings"
             '
@@ -153,7 +154,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1156, 749)
+            Me.ClientSize = New System.Drawing.Size(1761, 1080)
             Me.Controls.Add(Me.Guna2HtmlLabel1)
             Me.Controls.Add(Me.AddAccountButton)
             Me.Controls.Add(Me.AccountsDataGridView)
@@ -162,7 +163,6 @@
             Me.Text = "AdminAccountSettings"
             CType(Me.AccountsDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
-            Me.PerformLayout()
 
         End Sub
 

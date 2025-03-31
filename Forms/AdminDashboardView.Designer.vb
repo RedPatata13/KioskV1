@@ -41,10 +41,10 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1156, 749)
+            Me.ClientSize = New System.Drawing.Size(1761, 1080)
             Me.Controls.Add(Me.Guna2HtmlLabel1)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-            Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.Margin = New System.Windows.Forms.Padding(4)
             Me.Name = "AdminDashboardView"
             Me.Text = "AdminDashboard"
             Me.ResumeLayout(False)

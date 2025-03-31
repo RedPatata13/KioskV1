@@ -23,10 +23,10 @@
         'Do not modify it using the code editor.
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
-            Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Me.OrderHistoryDataGrid = New Guna.UI2.WinForms.Guna2DataGridView()
             Me.SupplyID = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.ProductName = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -37,47 +37,47 @@
             'OrderHistoryDataGrid
             '
             Me.OrderHistoryDataGrid.AllowUserToResizeRows = False
-            DataGridViewCellStyle13.BackColor = System.Drawing.Color.White
-            DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-            DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-            Me.OrderHistoryDataGrid.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
-            DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
-            DataGridViewCellStyle14.Font = New System.Drawing.Font("Poppins SemiBold", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle14.ForeColor = System.Drawing.Color.White
-            DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-            DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.OrderHistoryDataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
+            DataGridViewCellStyle5.BackColor = System.Drawing.Color.White
+            DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+            DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+            Me.OrderHistoryDataGrid.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+            DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
+            DataGridViewCellStyle6.Font = New System.Drawing.Font("Poppins SemiBold", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
+            DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+            DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.OrderHistoryDataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
             Me.OrderHistoryDataGrid.ColumnHeadersHeight = 4
             Me.OrderHistoryDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
             Me.OrderHistoryDataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.SupplyID, Me.ProductName})
-            DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle15.BackColor = System.Drawing.Color.White
-            DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-            DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-            DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-            DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.OrderHistoryDataGrid.DefaultCellStyle = DataGridViewCellStyle15
+            DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
+            DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+            DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+            DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+            DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.OrderHistoryDataGrid.DefaultCellStyle = DataGridViewCellStyle7
             Me.OrderHistoryDataGrid.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.OrderHistoryDataGrid.Location = New System.Drawing.Point(28, 158)
+            Me.OrderHistoryDataGrid.Location = New System.Drawing.Point(109, 147)
             Me.OrderHistoryDataGrid.Name = "OrderHistoryDataGrid"
             Me.OrderHistoryDataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-            DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle16.BackColor = System.Drawing.Color.White
-            DataGridViewCellStyle16.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.White
-            DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.OrderHistoryDataGrid.RowHeadersDefaultCellStyle = DataGridViewCellStyle16
+            DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle8.BackColor = System.Drawing.Color.White
+            DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White
+            DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.OrderHistoryDataGrid.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
             Me.OrderHistoryDataGrid.RowHeadersVisible = False
             Me.OrderHistoryDataGrid.RowHeadersWidth = 51
             Me.OrderHistoryDataGrid.RowTemplate.Height = 24
-            Me.OrderHistoryDataGrid.Size = New System.Drawing.Size(1100, 564)
+            Me.OrderHistoryDataGrid.Size = New System.Drawing.Size(1545, 839)
             Me.OrderHistoryDataGrid.TabIndex = 5
             Me.OrderHistoryDataGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
             Me.OrderHistoryDataGrid.ThemeStyle.AlternatingRowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -115,11 +115,12 @@
             '
             'Guna2HtmlLabel1
             '
+            Me.Guna2HtmlLabel1.AutoSize = False
             Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(28, 35)
+            Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 28.2!, System.Drawing.FontStyle.Bold)
+            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(40, 44)
             Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(284, 64)
+            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(693, 75)
             Me.Guna2HtmlLabel1.TabIndex = 9
             Me.Guna2HtmlLabel1.Text = "Order History"
             '
@@ -128,7 +129,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1156, 749)
+            Me.ClientSize = New System.Drawing.Size(1761, 1080)
             Me.Controls.Add(Me.Guna2HtmlLabel1)
             Me.Controls.Add(Me.OrderHistoryDataGrid)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -136,7 +137,6 @@
             Me.Text = "AdminOrderHistory"
             CType(Me.OrderHistoryDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
-            Me.PerformLayout()
 
         End Sub
 

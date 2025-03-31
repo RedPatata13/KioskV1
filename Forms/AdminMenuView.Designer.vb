@@ -25,10 +25,10 @@
         Private Sub InitializeComponent()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminMenuView))
             Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-            Me.MenuListFlowLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
+            Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.AddMenuButton = New Guna.UI2.WinForms.Guna2Button()
             Me.SearchMenu = New Guna.UI2.WinForms.Guna2TextBox()
-            Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me.MenuListFlowLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
             Me.Guna2Panel1.SuspendLayout()
             Me.SuspendLayout()
             '
@@ -40,16 +40,19 @@
             Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
             Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
             Me.Guna2Panel1.Name = "Guna2Panel1"
-            Me.Guna2Panel1.Size = New System.Drawing.Size(1156, 116)
+            Me.Guna2Panel1.Size = New System.Drawing.Size(1761, 116)
             Me.Guna2Panel1.TabIndex = 4
             '
-            'MenuListFlowLayoutPanel
+            'Guna2HtmlLabel1
             '
-            Me.MenuListFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.MenuListFlowLayoutPanel.Location = New System.Drawing.Point(0, 116)
-            Me.MenuListFlowLayoutPanel.Name = "MenuListFlowLayoutPanel"
-            Me.MenuListFlowLayoutPanel.Size = New System.Drawing.Size(1156, 633)
-            Me.MenuListFlowLayoutPanel.TabIndex = 5
+            Me.Guna2HtmlLabel1.AutoSize = False
+            Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
+            Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 28.2!, System.Drawing.FontStyle.Bold)
+            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(28, 35)
+            Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
+            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(516, 75)
+            Me.Guna2HtmlLabel1.TabIndex = 4
+            Me.Guna2HtmlLabel1.Text = "Menu List"
             '
             'AddMenuButton
             '
@@ -98,29 +101,26 @@
             Me.SearchMenu.Size = New System.Drawing.Size(401, 55)
             Me.SearchMenu.TabIndex = 3
             '
-            'Guna2HtmlLabel1
+            'MenuListFlowLayoutPanel
             '
-            Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(28, 35)
-            Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(206, 64)
-            Me.Guna2HtmlLabel1.TabIndex = 4
-            Me.Guna2HtmlLabel1.Text = "Menu List"
+            Me.MenuListFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.MenuListFlowLayoutPanel.Location = New System.Drawing.Point(0, 116)
+            Me.MenuListFlowLayoutPanel.Name = "MenuListFlowLayoutPanel"
+            Me.MenuListFlowLayoutPanel.Size = New System.Drawing.Size(1761, 964)
+            Me.MenuListFlowLayoutPanel.TabIndex = 5
             '
             'AdminMenuView
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1156, 749)
+            Me.ClientSize = New System.Drawing.Size(1761, 1080)
             Me.Controls.Add(Me.MenuListFlowLayoutPanel)
             Me.Controls.Add(Me.Guna2Panel1)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
             Me.Name = "AdminMenuView"
             Me.Text = "AdminMenu"
             Me.Guna2Panel1.ResumeLayout(False)
-            Me.Guna2Panel1.PerformLayout()
             Me.ResumeLayout(False)
 
         End Sub

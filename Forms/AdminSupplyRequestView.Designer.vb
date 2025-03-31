@@ -47,16 +47,17 @@
             Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
             Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
             Me.Guna2Panel1.Name = "Guna2Panel1"
-            Me.Guna2Panel1.Size = New System.Drawing.Size(1156, 100)
+            Me.Guna2Panel1.Size = New System.Drawing.Size(1761, 100)
             Me.Guna2Panel1.TabIndex = 0
             '
             'Guna2HtmlLabel1
             '
+            Me.Guna2HtmlLabel1.AutoSize = False
             Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 28.2!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(39, 22)
             Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(331, 64)
+            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(798, 75)
             Me.Guna2HtmlLabel1.TabIndex = 6
             Me.Guna2HtmlLabel1.Text = "Supply Request"
             '
@@ -272,7 +273,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1156, 749)
+            Me.ClientSize = New System.Drawing.Size(1761, 1080)
             Me.Controls.Add(Me.Guna2Button3)
             Me.Controls.Add(Me.Guna2Button2)
             Me.Controls.Add(Me.Guna2HtmlLabel6)
@@ -291,7 +292,6 @@
             Me.Name = "AdminSupplyRequestView"
             Me.Text = "StaffSupplyRequestView"
             Me.Guna2Panel1.ResumeLayout(False)
-            Me.Guna2Panel1.PerformLayout()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
