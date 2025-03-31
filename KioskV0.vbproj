@@ -89,6 +89,7 @@
     <Compile Include="Classes\AdminLandingPageViewModel.vb" />
     <Compile Include="Classes\AdminMenuViewModel.vb" />
     <Compile Include="Classes\AdminOrderHistoryViewModel.vb" />
+    <Compile Include="Classes\AdminSidebarViewModel.vb" />
     <Compile Include="Classes\AdminStaffTransactionsViewModel.vb" />
     <Compile Include="Classes\AdminSupplyRequestViewModel.vb" />
     <Compile Include="Classes\AdminTestPageViewModel.vb" />

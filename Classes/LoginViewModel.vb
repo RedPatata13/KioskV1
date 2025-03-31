@@ -1,6 +1,7 @@
 ﻿
 Imports System.ComponentModel
 Imports System.ComponentModel.DataAnnotations
+Imports KioskV0.KioskV0.Forms
 Namespace KioskV0.Classes
     Public Class LoginViewModel
         Private Property _view As Forms.Login
@@ -49,7 +50,7 @@ Namespace KioskV0.Classes
                         Case UserType.Admin
                             mediator = New Mediator(Of AdminKeys)(_projector, Me)
                             mediator.SetupMap(GetAdminPages(mediator))
-                            Dim sb = New SidebarTestViewModel(New SidebarTest(), mediator)
+                            Dim sb = New AdminSideBarViewModel(New Forms.AdminSidebar(), mediator)
                             _projector.ProjectSidebar(sb)
                             mediator.SwapPage(AdminKeys.AdminLandingPage) 'for sum reason only gods know, the fill doesn't happen on first call 
                             mediator.SwapPage(AdminKeys.AdminLandingPage) 'so call it again. I have no fckin clue why this happens cuz ts was working just fine before the merge
