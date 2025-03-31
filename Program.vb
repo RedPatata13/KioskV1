@@ -6,7 +6,7 @@ Namespace KioskV0
         Sub Main()
             Application.EnableVisualStyles()
             Application.SetCompatibleTextRenderingDefault(False)
-            Application.Run(New KioskV0.Forms.AdminAddUserView())
+            Application.Run(New KioskV0.Forms.AdminSupplyRequestView())
 
 
             'Dim projector = New Classes.Projector()

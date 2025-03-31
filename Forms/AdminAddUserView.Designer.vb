@@ -231,7 +231,7 @@
             Me.Guna2HtmlLabel3.ForeColor = System.Drawing.SystemColors.ControlText
             Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(87, 167)
             Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
-            Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(331, 60)
+            Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(331, 59)
             Me.Guna2HtmlLabel3.TabIndex = 19
             Me.Guna2HtmlLabel3.Text = "Select your role"
             '
@@ -244,7 +244,7 @@
             Me.Guna2HtmlLabel2.ForeColor = System.Drawing.SystemColors.ControlText
             Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(87, 319)
             Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-            Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(239, 60)
+            Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(239, 59)
             Me.Guna2HtmlLabel2.TabIndex = 20
             Me.Guna2HtmlLabel2.Text = "Username"
             '
@@ -257,7 +257,7 @@
             Me.Guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.ControlText
             Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(87, 471)
             Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
-            Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(311, 60)
+            Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(311, 59)
             Me.Guna2HtmlLabel4.TabIndex = 21
             Me.Guna2HtmlLabel4.Text = "Password"
             '
@@ -270,7 +270,7 @@
             Me.Guna2HtmlLabel5.ForeColor = System.Drawing.SystemColors.ControlText
             Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(87, 608)
             Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
-            Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(505, 60)
+            Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(505, 59)
             Me.Guna2HtmlLabel5.TabIndex = 22
             Me.Guna2HtmlLabel5.Text = "Confirm Password"
             '
@@ -283,7 +283,7 @@
             Me.Guna2HtmlLabel6.ForeColor = System.Drawing.SystemColors.ControlText
             Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(993, 165)
             Me.Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
-            Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(294, 60)
+            Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(294, 59)
             Me.Guna2HtmlLabel6.TabIndex = 23
             Me.Guna2HtmlLabel6.Text = "First name"
             '
@@ -296,7 +296,7 @@
             Me.Guna2HtmlLabel7.ForeColor = System.Drawing.SystemColors.ControlText
             Me.Guna2HtmlLabel7.Location = New System.Drawing.Point(996, 319)
             Me.Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
-            Me.Guna2HtmlLabel7.Size = New System.Drawing.Size(248, 60)
+            Me.Guna2HtmlLabel7.Size = New System.Drawing.Size(248, 59)
             Me.Guna2HtmlLabel7.TabIndex = 24
             Me.Guna2HtmlLabel7.Text = "Last name"
             '
@@ -309,7 +309,7 @@
             Me.Guna2HtmlLabel8.ForeColor = System.Drawing.SystemColors.ControlText
             Me.Guna2HtmlLabel8.Location = New System.Drawing.Point(996, 471)
             Me.Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
-            Me.Guna2HtmlLabel8.Size = New System.Drawing.Size(185, 60)
+            Me.Guna2HtmlLabel8.Size = New System.Drawing.Size(185, 59)
             Me.Guna2HtmlLabel8.TabIndex = 25
             Me.Guna2HtmlLabel8.Text = "Email"
             '
@@ -322,7 +322,7 @@
             Me.Guna2HtmlLabel9.ForeColor = System.Drawing.SystemColors.ControlText
             Me.Guna2HtmlLabel9.Location = New System.Drawing.Point(996, 608)
             Me.Guna2HtmlLabel9.Name = "Guna2HtmlLabel9"
-            Me.Guna2HtmlLabel9.Size = New System.Drawing.Size(371, 60)
+            Me.Guna2HtmlLabel9.Size = New System.Drawing.Size(371, 59)
             Me.Guna2HtmlLabel9.TabIndex = 26
             Me.Guna2HtmlLabel9.Text = "Contact number"
             '
