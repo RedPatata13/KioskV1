@@ -11,7 +11,9 @@
         Private Sub SetEvents()
             _view.AccountButtonClick = AddressOf AccountsButtonClick
         End Sub
-
+        Private Sub AdminHomeButtonClick()
+            _mediator.SwapPage(AdminKeys.AdminLandingPage)
+        End Sub
         Private Sub AccountsButtonClick()
             _mediator.SwapPage(AdminKeys.AdminAccountSettings)
         End Sub
