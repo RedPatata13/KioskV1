@@ -49,10 +49,10 @@
             '
             Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(21, 19)
-            Me.Guna2HtmlLabel1.Margin = New System.Windows.Forms.Padding(2)
+            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(28, 23)
+            Me.Guna2HtmlLabel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(176, 51)
+            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(219, 64)
             Me.Guna2HtmlLabel1.TabIndex = 5
             Me.Guna2HtmlLabel1.Text = "Add Menu"
             '
@@ -68,23 +68,24 @@
             Me.ProductNameTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.ProductNameTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.ProductNameTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.ProductNameTextBox.Location = New System.Drawing.Point(21, 140)
-            Me.ProductNameTextBox.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+            Me.ProductNameTextBox.Location = New System.Drawing.Point(79, 206)
+            Me.ProductNameTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
             Me.ProductNameTextBox.Name = "ProductNameTextBox"
             Me.ProductNameTextBox.PlaceholderText = "Ex.: ""Hamburger"""
             Me.ProductNameTextBox.SelectedText = ""
-            Me.ProductNameTextBox.Size = New System.Drawing.Size(366, 39)
+            Me.ProductNameTextBox.Size = New System.Drawing.Size(680, 60)
             Me.ProductNameTextBox.TabIndex = 6
             '
             'Guna2HtmlLabel2
             '
+            Me.Guna2HtmlLabel2.AutoSize = False
             Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Poppins Medium", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel2.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(21, 184)
-            Me.Guna2HtmlLabel2.Margin = New System.Windows.Forms.Padding(2)
+            Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(79, 279)
+            Me.Guna2HtmlLabel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-            Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(95, 33)
+            Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(262, 60)
             Me.Guna2HtmlLabel2.TabIndex = 8
             Me.Guna2HtmlLabel2.Text = "Category"
             '
@@ -100,21 +101,22 @@
             Me.CategoryComboBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
             Me.CategoryComboBox.ItemHeight = 30
             Me.CategoryComboBox.Items.AddRange(New Object() {"Category1", "Category2", "Category3", "Category4"})
-            Me.CategoryComboBox.Location = New System.Drawing.Point(21, 223)
-            Me.CategoryComboBox.Margin = New System.Windows.Forms.Padding(2)
+            Me.CategoryComboBox.Location = New System.Drawing.Point(79, 343)
+            Me.CategoryComboBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.CategoryComboBox.Name = "CategoryComboBox"
-            Me.CategoryComboBox.Size = New System.Drawing.Size(367, 36)
+            Me.CategoryComboBox.Size = New System.Drawing.Size(680, 36)
             Me.CategoryComboBox.TabIndex = 9
             '
             'Guna2HtmlLabel3
             '
+            Me.Guna2HtmlLabel3.AutoSize = False
             Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Poppins Medium", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel3.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(21, 100)
-            Me.Guna2HtmlLabel3.Margin = New System.Windows.Forms.Padding(2)
+            Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(79, 140)
+            Me.Guna2HtmlLabel3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
-            Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(146, 33)
+            Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(388, 60)
             Me.Guna2HtmlLabel3.TabIndex = 10
             Me.Guna2HtmlLabel3.Text = "Product Name"
             '
@@ -130,21 +132,22 @@
             Me.SupplierComboBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
             Me.SupplierComboBox.ItemHeight = 30
             Me.SupplierComboBox.Items.AddRange(New Object() {"Supplier1", "Supplier2", "Supplier3"})
-            Me.SupplierComboBox.Location = New System.Drawing.Point(21, 297)
-            Me.SupplierComboBox.Margin = New System.Windows.Forms.Padding(2)
+            Me.SupplierComboBox.Location = New System.Drawing.Point(79, 463)
+            Me.SupplierComboBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.SupplierComboBox.Name = "SupplierComboBox"
-            Me.SupplierComboBox.Size = New System.Drawing.Size(367, 36)
+            Me.SupplierComboBox.Size = New System.Drawing.Size(680, 36)
             Me.SupplierComboBox.TabIndex = 11
             '
             'Guna2HtmlLabel4
             '
+            Me.Guna2HtmlLabel4.AutoSize = False
             Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Poppins Medium", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(21, 258)
-            Me.Guna2HtmlLabel4.Margin = New System.Windows.Forms.Padding(2)
+            Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(79, 399)
+            Me.Guna2HtmlLabel4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
-            Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(86, 33)
+            Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(453, 60)
             Me.Guna2HtmlLabel4.TabIndex = 12
             Me.Guna2HtmlLabel4.Text = "Supplier"
             '
@@ -160,23 +163,24 @@
             Me.ProductDescriptionTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.ProductDescriptionTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.ProductDescriptionTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.ProductDescriptionTextBox.Location = New System.Drawing.Point(21, 370)
-            Me.ProductDescriptionTextBox.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+            Me.ProductDescriptionTextBox.Location = New System.Drawing.Point(79, 580)
+            Me.ProductDescriptionTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
             Me.ProductDescriptionTextBox.Name = "ProductDescriptionTextBox"
             Me.ProductDescriptionTextBox.PlaceholderText = """Premium ham with cheese, tomatoes...."""
             Me.ProductDescriptionTextBox.SelectedText = ""
-            Me.ProductDescriptionTextBox.Size = New System.Drawing.Size(366, 39)
+            Me.ProductDescriptionTextBox.Size = New System.Drawing.Size(680, 60)
             Me.ProductDescriptionTextBox.TabIndex = 13
             '
             'Guna2HtmlLabel5
             '
+            Me.Guna2HtmlLabel5.AutoSize = False
             Me.Guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel5.Font = New System.Drawing.Font("Poppins Medium", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Guna2HtmlLabel5.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel5.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(21, 331)
-            Me.Guna2HtmlLabel5.Margin = New System.Windows.Forms.Padding(2)
+            Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(79, 514)
+            Me.Guna2HtmlLabel5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
-            Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(202, 33)
+            Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(584, 60)
             Me.Guna2HtmlLabel5.TabIndex = 14
             Me.Guna2HtmlLabel5.Text = "Product Description"
             '
@@ -192,12 +196,12 @@
             Me.CostTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.CostTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.CostTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.CostTextBox.Location = New System.Drawing.Point(21, 474)
-            Me.CostTextBox.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+            Me.CostTextBox.Location = New System.Drawing.Point(79, 712)
+            Me.CostTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
             Me.CostTextBox.Name = "CostTextBox"
             Me.CostTextBox.PlaceholderText = "P0.00"
             Me.CostTextBox.SelectedText = ""
-            Me.CostTextBox.Size = New System.Drawing.Size(177, 39)
+            Me.CostTextBox.Size = New System.Drawing.Size(320, 60)
             Me.CostTextBox.TabIndex = 15
             '
             'SellingTextBox
@@ -212,37 +216,39 @@
             Me.SellingTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.SellingTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.SellingTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.SellingTextBox.Location = New System.Drawing.Point(210, 474)
-            Me.SellingTextBox.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+            Me.SellingTextBox.Location = New System.Drawing.Point(439, 712)
+            Me.SellingTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
             Me.SellingTextBox.Name = "SellingTextBox"
             Me.SellingTextBox.PlaceholderText = "P0.00"
             Me.SellingTextBox.SelectedText = ""
-            Me.SellingTextBox.Size = New System.Drawing.Size(177, 39)
+            Me.SellingTextBox.Size = New System.Drawing.Size(320, 60)
             Me.SellingTextBox.TabIndex = 16
             '
             'Guna2HtmlLabel6
             '
+            Me.Guna2HtmlLabel6.AutoSize = False
             Me.Guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel6.Font = New System.Drawing.Font("Poppins Medium", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Guna2HtmlLabel6.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel6.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(21, 435)
-            Me.Guna2HtmlLabel6.Margin = New System.Windows.Forms.Padding(2)
+            Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(79, 646)
+            Me.Guna2HtmlLabel6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
-            Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(49, 33)
+            Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(320, 60)
             Me.Guna2HtmlLabel6.TabIndex = 17
-            Me.Guna2HtmlLabel6.Text = "Cost"
+            Me.Guna2HtmlLabel6.Text = "Cost Price"
             '
             'Guna2HtmlLabel7
             '
+            Me.Guna2HtmlLabel7.AutoSize = False
             Me.Guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel7.Font = New System.Drawing.Font("Poppins Medium", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Guna2HtmlLabel7.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel7.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2HtmlLabel7.Location = New System.Drawing.Point(210, 435)
-            Me.Guna2HtmlLabel7.Margin = New System.Windows.Forms.Padding(2)
+            Me.Guna2HtmlLabel7.Location = New System.Drawing.Point(439, 646)
+            Me.Guna2HtmlLabel7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
-            Me.Guna2HtmlLabel7.Size = New System.Drawing.Size(71, 33)
+            Me.Guna2HtmlLabel7.Size = New System.Drawing.Size(320, 60)
             Me.Guna2HtmlLabel7.TabIndex = 18
-            Me.Guna2HtmlLabel7.Text = "Selling"
+            Me.Guna2HtmlLabel7.Text = "Selling Price"
             '
             'SelectImageButton
             '
@@ -260,10 +266,10 @@
             Me.SelectImageButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.SelectImageButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.SelectImageButton.HoverState.ForeColor = System.Drawing.Color.White
-            Me.SelectImageButton.Location = New System.Drawing.Point(583, 464)
-            Me.SelectImageButton.Margin = New System.Windows.Forms.Padding(2)
+            Me.SelectImageButton.Location = New System.Drawing.Point(1174, 785)
+            Me.SelectImageButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.SelectImageButton.Name = "SelectImageButton"
-            Me.SelectImageButton.Size = New System.Drawing.Size(135, 37)
+            Me.SelectImageButton.Size = New System.Drawing.Size(252, 63)
             Me.SelectImageButton.TabIndex = 19
             Me.SelectImageButton.Text = "Select image"
             '
@@ -282,10 +288,10 @@
             Me.SaveButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.SaveButton.HoverState.FillColor = System.Drawing.Color.White
             Me.SaveButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.SaveButton.Location = New System.Drawing.Point(709, 554)
-            Me.SaveButton.Margin = New System.Windows.Forms.Padding(2)
+            Me.SaveButton.Location = New System.Drawing.Point(1424, 938)
+            Me.SaveButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.SaveButton.Name = "SaveButton"
-            Me.SaveButton.Size = New System.Drawing.Size(135, 37)
+            Me.SaveButton.Size = New System.Drawing.Size(252, 63)
             Me.SaveButton.TabIndex = 20
             Me.SaveButton.Text = "Save"
             '
@@ -304,10 +310,10 @@
             Me.CancelButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
             Me.CancelButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer))
             Me.CancelButton.HoverState.ForeColor = System.Drawing.Color.White
-            Me.CancelButton.Location = New System.Drawing.Point(560, 554)
-            Me.CancelButton.Margin = New System.Windows.Forms.Padding(2)
+            Me.CancelButton.Location = New System.Drawing.Point(1137, 938)
+            Me.CancelButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.CancelButton.Name = "CancelButton"
-            Me.CancelButton.Size = New System.Drawing.Size(135, 37)
+            Me.CancelButton.Size = New System.Drawing.Size(252, 63)
             Me.CancelButton.TabIndex = 21
             Me.CancelButton.Text = "Cancel"
             '
@@ -316,9 +322,9 @@
             Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel1)
             Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
             Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
-            Me.Guna2Panel1.Margin = New System.Windows.Forms.Padding(2)
+            Me.Guna2Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.Guna2Panel1.Name = "Guna2Panel1"
-            Me.Guna2Panel1.Size = New System.Drawing.Size(867, 81)
+            Me.Guna2Panel1.Size = New System.Drawing.Size(1761, 100)
             Me.Guna2Panel1.TabIndex = 22
             '
             'Guna2PictureBox1
@@ -328,19 +334,19 @@
             Me.Guna2PictureBox1.BorderRadius = 15
             Me.Guna2PictureBox1.FillColor = System.Drawing.Color.WhiteSmoke
             Me.Guna2PictureBox1.ImageRotate = 0!
-            Me.Guna2PictureBox1.Location = New System.Drawing.Point(434, 100)
-            Me.Guna2PictureBox1.Margin = New System.Windows.Forms.Padding(2)
+            Me.Guna2PictureBox1.Location = New System.Drawing.Point(911, 153)
+            Me.Guna2PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-            Me.Guna2PictureBox1.Size = New System.Drawing.Size(410, 349)
+            Me.Guna2PictureBox1.Size = New System.Drawing.Size(765, 600)
             Me.Guna2PictureBox1.TabIndex = 7
             Me.Guna2PictureBox1.TabStop = False
             '
             'AdminAddMenuView
             '
-            Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(867, 609)
+            Me.ClientSize = New System.Drawing.Size(1761, 1080)
             Me.Controls.Add(Me.Guna2Panel1)
             Me.Controls.Add(Me.CancelButton)
             Me.Controls.Add(Me.SaveButton)
@@ -359,14 +365,13 @@
             Me.Controls.Add(Me.Guna2PictureBox1)
             Me.Controls.Add(Me.ProductNameTextBox)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-            Me.Margin = New System.Windows.Forms.Padding(2)
+            Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.Name = "AdminAddMenuView"
             Me.Text = "AdminAddMenuView"
             Me.Guna2Panel1.ResumeLayout(False)
             Me.Guna2Panel1.PerformLayout()
             CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
-            Me.PerformLayout()
 
         End Sub
 

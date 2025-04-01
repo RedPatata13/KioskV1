@@ -16,5 +16,9 @@
         Private Sub AddUser_Click(sender As Object, e As EventArgs) Handles AddUser.Click
             AddAccountClick?.Invoke()
         End Sub
+
+        Private Sub AddAccountButton_Click(sender As Object, e As EventArgs) Handles AddAccountButton.Click
+            AddAccountClick?.Invoke()
+        End Sub
     End Class
 End Namespace

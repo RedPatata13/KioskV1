@@ -24,10 +24,10 @@
         'Do not modify it using the code editor.
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
-            Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminAccountSettingsView))
             Me.AccountsDataGridView = New Guna.UI2.WinForms.Guna2DataGridView()
             Me.SupplyID = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -43,48 +43,48 @@
             'AccountsDataGridView
             '
             Me.AccountsDataGridView.AllowUserToResizeRows = False
-            DataGridViewCellStyle13.BackColor = System.Drawing.Color.White
-            DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-            DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-            Me.AccountsDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
-            DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
-            DataGridViewCellStyle14.Font = New System.Drawing.Font("Poppins SemiBold", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle14.ForeColor = System.Drawing.Color.White
-            DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-            DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.AccountsDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
+            DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+            DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+            DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+            Me.AccountsDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Poppins SemiBold", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.AccountsDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
             Me.AccountsDataGridView.ColumnHeadersHeight = 4
             Me.AccountsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
             Me.AccountsDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.SupplyID, Me.ProductName})
-            DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle15.BackColor = System.Drawing.Color.White
-            DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-            DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-            DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-            DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.AccountsDataGridView.DefaultCellStyle = DataGridViewCellStyle15
+            DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+            DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+            DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+            DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+            DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.AccountsDataGridView.DefaultCellStyle = DataGridViewCellStyle3
             Me.AccountsDataGridView.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.AccountsDataGridView.Location = New System.Drawing.Point(16, 96)
-            Me.AccountsDataGridView.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.AccountsDataGridView.Location = New System.Drawing.Point(109, 147)
+            Me.AccountsDataGridView.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.AccountsDataGridView.Name = "AccountsDataGridView"
             Me.AccountsDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-            DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle16.BackColor = System.Drawing.Color.White
-            DataGridViewCellStyle16.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.White
-            DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.AccountsDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle16
+            DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
+            DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White
+            DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.AccountsDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
             Me.AccountsDataGridView.RowHeadersVisible = False
             Me.AccountsDataGridView.RowHeadersWidth = 51
             Me.AccountsDataGridView.RowTemplate.Height = 24
-            Me.AccountsDataGridView.Size = New System.Drawing.Size(825, 488)
+            Me.AccountsDataGridView.Size = New System.Drawing.Size(1545, 839)
             Me.AccountsDataGridView.TabIndex = 6
             Me.AccountsDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
             Me.AccountsDataGridView.ThemeStyle.AlternatingRowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -137,56 +137,59 @@
             Me.AddAccountButton.HoverState.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
             Me.AddAccountButton.Image = CType(resources.GetObject("AddAccountButton.Image"), System.Drawing.Image)
             Me.AddAccountButton.ImageSize = New System.Drawing.Size(40, 40)
-            Me.AddAccountButton.Location = New System.Drawing.Point(790, 36)
-            Me.AddAccountButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.AddAccountButton.Location = New System.Drawing.Point(1599, 54)
+            Me.AddAccountButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.AddAccountButton.Name = "AddAccountButton"
-            Me.AddAccountButton.Size = New System.Drawing.Size(41, 45)
+            Me.AddAccountButton.Size = New System.Drawing.Size(55, 55)
             Me.AddAccountButton.TabIndex = 7
             '
             'Guna2HtmlLabel1
             '
             Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(21, 28)
-            Me.Guna2HtmlLabel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 28.2!, System.Drawing.FontStyle.Bold)
+            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(28, 34)
+            Me.Guna2HtmlLabel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(293, 51)
+            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(427, 75)
             Me.Guna2HtmlLabel1.TabIndex = 8
             Me.Guna2HtmlLabel1.Text = "Account Settings"
             '
             'AddItemButton
             '
-            Me.AddItemButton.Location = New System.Drawing.Point(936, 136)
+            Me.AddItemButton.Location = New System.Drawing.Point(825, 34)
+            Me.AddItemButton.Margin = New System.Windows.Forms.Padding(4)
             Me.AddItemButton.Name = "AddItemButton"
-            Me.AddItemButton.Size = New System.Drawing.Size(75, 23)
+            Me.AddItemButton.Size = New System.Drawing.Size(100, 28)
             Me.AddItemButton.TabIndex = 9
             Me.AddItemButton.Text = "AddItem"
             Me.AddItemButton.UseVisualStyleBackColor = True
             '
             'AddUser
             '
-            Me.AddUser.Location = New System.Drawing.Point(936, 160)
+            Me.AddUser.Location = New System.Drawing.Point(933, 34)
+            Me.AddUser.Margin = New System.Windows.Forms.Padding(4)
             Me.AddUser.Name = "AddUser"
-            Me.AddUser.Size = New System.Drawing.Size(75, 23)
+            Me.AddUser.Size = New System.Drawing.Size(100, 28)
             Me.AddUser.TabIndex = 10
             Me.AddUser.Text = "AddUser"
             Me.AddUser.UseVisualStyleBackColor = True
             '
             'EditInventory
             '
-            Me.EditInventory.Location = New System.Drawing.Point(936, 184)
+            Me.EditInventory.Location = New System.Drawing.Point(739, 34)
+            Me.EditInventory.Margin = New System.Windows.Forms.Padding(4)
             Me.EditInventory.Name = "EditInventory"
-            Me.EditInventory.Size = New System.Drawing.Size(75, 23)
+            Me.EditInventory.Size = New System.Drawing.Size(100, 28)
             Me.EditInventory.TabIndex = 11
             Me.EditInventory.Text = "EditInventory"
             Me.EditInventory.UseVisualStyleBackColor = True
             '
             'AdminAccountSettingsView
             '
-            Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1079, 609)
+            Me.ClientSize = New System.Drawing.Size(1761, 1080)
             Me.Controls.Add(Me.EditInventory)
             Me.Controls.Add(Me.AddUser)
             Me.Controls.Add(Me.AddItemButton)
@@ -194,7 +197,7 @@
             Me.Controls.Add(Me.AddAccountButton)
             Me.Controls.Add(Me.AccountsDataGridView)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-            Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.Name = "AdminAccountSettingsView"
             Me.Text = "AdminAccountSettings"
             CType(Me.AccountsDataGridView, System.ComponentModel.ISupportInitialize).EndInit()

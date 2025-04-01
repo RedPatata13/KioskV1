@@ -189,6 +189,12 @@
     <Compile Include="Forms\Login.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\MenuUserControl.Designer.vb">
+      <DependentUpon>MenuUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Forms\SampleForm.Designer.vb">
       <DependentUpon>SampleForm.vb</DependentUpon>
     </Compile>
