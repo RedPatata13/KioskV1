@@ -44,4 +44,10 @@
         SupplierLandingPage
         SupplierTestPage
     End Enum
+
+    Public Enum ItemStatus
+        Active
+        Inactive
+        OutOfStock
+    End Enum
 End Namespace

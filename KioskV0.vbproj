@@ -237,6 +237,9 @@
     <Compile Include="Forms\AdminSupplyRequestView.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Models\ItemModel.vb" />
+    <Compile Include="Models\MenuModel.vb" />
+    <Compile Include="Models\UserModel.vb" />
     <Compile Include="UserTypeEnum.vb" />
     <Compile Include="Classes\LoginViewModel.vb" />
     <Compile Include="Models\AuthModel.vb" />
