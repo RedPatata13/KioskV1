@@ -25,7 +25,9 @@ Namespace KioskV0.Classes
         End Sub
 
         Private Sub AddItemClick()
-            _mediator.SwapPage(AdminKeys.AdminEditInventoryDetails)
+            Dim vm = DirectCast(_mediator.GetVM(AdminKeys.AdminEditMenuDetails), AdminEditMenuDetailsViewModel)
+            vm.Previous = AdminKeys.AdminAccountSettings
+            _mediator.SwapPage(AdminKeys.AdminEditMenuDetails)
         End Sub
 
     End Class

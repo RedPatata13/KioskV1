@@ -18,7 +18,7 @@
         AdminOrderHistory
         AdminStaffTransactions
         AdminAccountSettings
-        AdminEditInventoryDetails
+        AdminEditMenuDetails
         AdminAddUser
         AdminEditInventory
         AdminSupplyRequest

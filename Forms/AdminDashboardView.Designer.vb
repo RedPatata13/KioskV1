@@ -118,7 +118,7 @@
             'Guna2PictureBox3
             '
             Me.Guna2PictureBox3.FillColor = System.Drawing.Color.Transparent
-            Me.Guna2PictureBox3.Image = Global.KioskV0.My.Resources.Resources.customer
+            'Me.Guna2PictureBox3.Image = Global.KioskV0.My.Resources.Resources.customer
             Me.Guna2PictureBox3.ImageRotate = 0!
             Me.Guna2PictureBox3.Location = New System.Drawing.Point(35, 36)
             Me.Guna2PictureBox3.Name = "Guna2PictureBox3"
@@ -159,7 +159,7 @@
             'Guna2PictureBox2
             '
             Me.Guna2PictureBox2.FillColor = System.Drawing.Color.Transparent
-            Me.Guna2PictureBox2.Image = Global.KioskV0.My.Resources.Resources.money_bag
+            'Me.Guna2PictureBox2.Image = Global.KioskV0.My.Resources.Resources.money_bag
             Me.Guna2PictureBox2.ImageRotate = 0!
             Me.Guna2PictureBox2.Location = New System.Drawing.Point(44, 36)
             Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
@@ -215,7 +215,7 @@
             'Guna2PictureBox1
             '
             Me.Guna2PictureBox1.FillColor = System.Drawing.Color.Transparent
-            Me.Guna2PictureBox1.Image = Global.KioskV0.My.Resources.Resources.increase
+            'Me.Guna2PictureBox1.Image = Global.KioskV0.My.Resources.Resources.increase
             Me.Guna2PictureBox1.ImageRotate = 0!
             Me.Guna2PictureBox1.Location = New System.Drawing.Point(39, 36)
             Me.Guna2PictureBox1.Name = "Guna2PictureBox1"

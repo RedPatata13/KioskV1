@@ -12,6 +12,7 @@ Namespace KioskV0.Classes
             SetEvents()
         End Sub
 
+
         Protected Friend Overrides Sub SetEvents()
             MyBase.SetEvents()
 

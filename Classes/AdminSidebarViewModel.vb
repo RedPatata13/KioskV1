@@ -25,7 +25,7 @@
             _mediator.SwapPage(AdminKeys.AdminMenu)
 
             Dim vm = DirectCast(_mediator.GetVM(AdminKeys.AdminMenu), AdminMenuViewModel)
-            vm.ExecuteAction("LoadItems")
+            vm.ExecuteInternalAction("LoadItems")
         End Sub
     End Class
 End Namespace
