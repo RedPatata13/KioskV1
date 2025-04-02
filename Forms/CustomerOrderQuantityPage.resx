@@ -117,11 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="Guna2AnimateWindow1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Guna2PictureBox11.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAX8AAAE1CAYAAAAPh+BtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAA/7JJREFUeF7svQVY1um69j1rTc84disiJS0N0p2SJqKCIgaNdHd3dyjSjYCKKHZ3
+        vAAADrwBlbxySQAA/7JJREFUeF7svQVY1um69j1rTc84disiJS0N0p2SJqKCIgaNdHd3dyjSjYCKKHZ3
         d43dHRNrzu+6b3T2rP3y7W+/77frnWGO4zz+z3M/CSO/87zu/Iz+w5CGNKQhDekvp0EbhzSkIQ1pSH9u
         Ddo4pCENaUhD+nNr0MYhDWlIQxrSn1uDNg5pSEMa0pD+3Bq0cUhDGtKQhvTn1qCNQxrSkIY0pD+3Bm0c
         0pCGNKQh/bk1aOOQhjSkIQ3pz61BG4c0pCENaUh/bg3aOKQhDWlIQ/pza9DGIQ1pSEMa0p9bgzYOaUhD
@@ -3922,7 +3925,18 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="Guna2AnimateWindow1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="Guna2ImageButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DwAACw8BkvkDpQAAAFJJREFUSEvt1MEJACAMQ9EO6mQu5joiVPCgoKjRw3+QU6G5xYAfBY9c9MhRLEOx
+        zJXiMgz18SjJ07u1WRqZZ8Uz6mM5imUolnlWXIbh+DgAm8wyBossvb1QwfIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="Guna2ImageButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DwAACw8BkvkDpQAAADNJREFUSEvtzbEJACAQBMEP/q3SyqxWBHMTQYQZuHQvAOAPVdVb5rix1drZs2fH
+        APBQxARRPRlNGkA/HQAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>

@@ -1005,7 +1005,7 @@ Partial Class CustomerMenuPage
         '
         'Guna2Panel1
         '
-        Me.Guna2Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Guna2Panel1.Controls.Add(Me.Guna2Button2)
         Me.Guna2Panel1.Controls.Add(Me.Guna2Button1)
         Me.Guna2Panel1.Controls.Add(Me.Label12)
@@ -1017,6 +1017,8 @@ Partial Class CustomerMenuPage
         '
         'Guna2Button2
         '
+        Me.Guna2Button2.BackColor = System.Drawing.Color.White
+        Me.Guna2Button2.BorderColor = System.Drawing.Color.DimGray
         Me.Guna2Button2.BorderRadius = 10
         Me.Guna2Button2.BorderThickness = 1
         Me.Guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
@@ -1025,7 +1027,7 @@ Partial Class CustomerMenuPage
         Me.Guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.Guna2Button2.FillColor = System.Drawing.Color.White
         Me.Guna2Button2.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2Button2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.Guna2Button2.ForeColor = System.Drawing.Color.Black
         Me.Guna2Button2.Location = New System.Drawing.Point(716, 74)
         Me.Guna2Button2.Name = "Guna2Button2"
         Me.Guna2Button2.Size = New System.Drawing.Size(354, 33)
@@ -1035,6 +1037,7 @@ Partial Class CustomerMenuPage
         '
         'Guna2Button1
         '
+        Me.Guna2Button1.BorderColor = System.Drawing.Color.Transparent
         Me.Guna2Button1.BorderRadius = 10
         Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
@@ -1042,7 +1045,7 @@ Partial Class CustomerMenuPage
         Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.Guna2Button1.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
         Me.Guna2Button1.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.Guna2Button1.ForeColor = System.Drawing.Color.Black
         Me.Guna2Button1.Location = New System.Drawing.Point(716, 28)
         Me.Guna2Button1.Name = "Guna2Button1"
         Me.Guna2Button1.Size = New System.Drawing.Size(354, 40)
