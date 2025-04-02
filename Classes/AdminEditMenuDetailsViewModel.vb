@@ -4,10 +4,10 @@ Imports KioskV0.KioskV0.Classes
 Imports KioskV0.KioskV0.Model
 
 Namespace KioskV0.Classes
-    Public Class AdminAddMenuViewModel
-        Inherits ViewModel(Of Forms.AdminAddMenuView, AdminKeys)
+    Public Class AdminEditMenuDetailsViewModel
+        Inherits ViewModel(Of Forms.AdminEditMenuDetailsView, AdminKeys)
 
-        Public Sub New(view As Forms.AdminAddMenuView, mediator As Mediator(Of AdminKeys))
+        Public Sub New(view As Forms.AdminEditMenuDetailsView, mediator As Mediator(Of AdminKeys))
             MyBase.New(view, mediator)
 
             SetEvents()
@@ -54,13 +54,7 @@ Namespace KioskV0.Classes
                 model.Cost = cost
                 model.Selling = selling
 
-                Dim validationResults As New List(Of ValidationResult)()
-                Dim validationContext As New ValidationContext(model, Nothing, Nothing)
-
-                If Not Validator.TryValidateObject(model, validationContext, validationResults, True) Then
-                    Dim errorMessages As String = String.Join(Environment.NewLine, validationResults.Select(Function(r) r.ErrorMessage))
-                    Throw New Exception(errorMessages)
-                End If
+                model.Validate()
 
                 Dim properties = model.GetType().GetProperties()
                 Dim str As String = ""

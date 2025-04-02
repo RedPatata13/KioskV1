@@ -8,14 +8,24 @@
             SetEvents()
         End Sub
 
-        Private Sub SetEvents()
+        Protected Friend Overrides Sub SetEvents()
             _view.AccountButtonClick = AddressOf AccountsButtonClick
+            _view.DashboardButtonClick = AddressOf AdminDashboardButtonClick
+            _view.MenuButtonClick = AddressOf MenuButtonClick
         End Sub
-        Private Sub AdminHomeButtonClick()
+        Private Sub AdminDashboardButtonClick()
             _mediator.SwapPage(AdminKeys.AdminLandingPage)
         End Sub
         Private Sub AccountsButtonClick()
             _mediator.SwapPage(AdminKeys.AdminAccountSettings)
+        End Sub
+
+        Private Sub MenuButtonClick()
+            _mediator.SwapPage(AdminKeys.AdminMenu)
+            _mediator.SwapPage(AdminKeys.AdminMenu)
+
+            Dim vm = DirectCast(_mediator.GetVM(AdminKeys.AdminMenu), AdminMenuViewModel)
+            vm.ExecuteAction("LoadItems")
         End Sub
     End Class
 End Namespace

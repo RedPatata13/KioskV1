@@ -25,7 +25,7 @@ Namespace KioskV0.Classes
         End Sub
 
         Private Sub AddItemClick()
-            _mediator.SwapPage(AdminKeys.AdminAddMenu)
+            _mediator.SwapPage(AdminKeys.AdminEditInventoryDetails)
         End Sub
 
     End Class

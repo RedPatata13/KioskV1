@@ -1,5 +1,5 @@
 ﻿Namespace KioskV0.Forms
-    Public Class AdminAddMenuView
+    Public Class AdminEditMenuDetailsView
         Public Property SaveButtonClick As Action
         Public Property CancelButtonClick As Action
         Public Property SelectImageClick As Action

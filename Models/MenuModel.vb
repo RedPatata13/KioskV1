@@ -2,6 +2,8 @@
 
 Namespace KioskV0.Model
     Public Class MenuModel
+        Inherits BaseModel
+        Public Property MenuID As String
         <Required(ErrorMessage:="Menu Name is required.")>
         <StringLength(25, MinimumLength:=3, ErrorMessage:="Menu Name must be between 3 and 25 characters.")>
         Public Property MenuName As String
@@ -24,5 +26,9 @@ Namespace KioskV0.Model
         <Required(ErrorMessage:="Selling price is required.")>
         <Range(0, Decimal.MaxValue, ErrorMessage:="Selling price must be a positive value.")>
         Public Property Selling As Decimal
+
+        Public Sub New()
+            MenuID = Guid.NewGuid().ToString()
+        End Sub
     End Class
 End Namespace

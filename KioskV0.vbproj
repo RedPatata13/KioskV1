@@ -81,7 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\AdminAccountSettingsViewModel.vb" />
-    <Compile Include="Classes\AdminAddMenuViewModel.vb" />
+    <Compile Include="Classes\AdminEditMenuDetailsViewModel.vb" />
     <Compile Include="Classes\AdminAddUserViewModel.vb" />
     <Compile Include="Classes\AdminDashboardViewModel.vb" />
     <Compile Include="Classes\AdminEditInventoryViewModel.vb" />
@@ -110,6 +110,7 @@
     <Compile Include="Classes\StaffLandingPageViewModel.vb" />
     <Compile Include="Classes\StaffManagerAuthoViewModel.vb" />
     <Compile Include="Classes\StaffPosViewModel.vb" />
+    <Compile Include="Classes\TempDB.vb" />
     <Compile Include="Classes\ViewModel.vb" />
     <Compile Include="Forms\AdminAccountSettingsView.Designer.vb">
       <DependentUpon>AdminAccountSettingsView.vb</DependentUpon>
@@ -245,6 +246,7 @@
     </Compile>
     <Compile Include="Models\ItemModel.vb" />
     <Compile Include="Models\MenuModel.vb" />
+    <Compile Include="Models\BaseModel.vb" />
     <Compile Include="Models\UserModel.vb" />
     <Compile Include="UserTypeEnum.vb" />
     <Compile Include="Classes\LoginViewModel.vb" />
