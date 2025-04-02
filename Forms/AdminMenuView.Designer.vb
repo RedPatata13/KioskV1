@@ -120,6 +120,7 @@
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
             Me.Name = "AdminMenuView"
             Me.Text = "AdminMenu"
+            Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
             Me.Guna2Panel1.ResumeLayout(False)
             Me.ResumeLayout(False)
 
