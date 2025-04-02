@@ -1,3 +1,6 @@
-﻿Public Class StaffSideBar
+﻿Namespace KioskV0.Forms
+    Public Class StaffSideBar
 
-End Class
+    End Class
+
+End Namespace

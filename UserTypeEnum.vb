@@ -38,6 +38,7 @@
         StaffCreditSales
         StaffManagerAuthorization
         StaffPayment
+        StaffSideBar
     End Enum
 
     Public Enum SupplierKeys
