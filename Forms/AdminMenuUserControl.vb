@@ -1,3 +1,6 @@
-﻿Public Class AdminMenuUserControl
+﻿Namespace KioskV0.Forms
+    Public Class AdminMenuUserControl
 
-End Class
+    End Class
+
+End Namespace
