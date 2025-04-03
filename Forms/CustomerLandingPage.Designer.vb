@@ -23,98 +23,98 @@ Partial Class CustomerLandingPage
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CustomerLandingPage))
-        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2Panel1.SuspendLayout()
-        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Guna2Panel2.SuspendLayout()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.DineinPanel = New Guna.UI2.WinForms.Guna2Panel()
+        Me.DineInPctrBx = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.DineInLbl = New System.Windows.Forms.Label()
+        Me.TakeOutPanel = New Guna.UI2.WinForms.Guna2Panel()
+        Me.TakeOutPtcrBx = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.TakeOutLblb = New System.Windows.Forms.Label()
+        Me.LandingPagePanel = New Guna.UI2.WinForms.Guna2Panel()
+        Me.DineinPanel.SuspendLayout()
+        CType(Me.DineInPctrBx, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TakeOutPanel.SuspendLayout()
+        CType(Me.TakeOutPtcrBx, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Guna2Panel1
+        'DineinPanel
         '
-        Me.Guna2Panel1.BackColor = System.Drawing.Color.White
-        Me.Guna2Panel1.BorderColor = System.Drawing.Color.Black
-        Me.Guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
-        Me.Guna2Panel1.BorderThickness = 1
-        Me.Guna2Panel1.Controls.Add(Me.Guna2PictureBox2)
-        Me.Guna2Panel1.Controls.Add(Me.Label1)
-        Me.Guna2Panel1.Location = New System.Drawing.Point(269, 176)
-        Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.Size = New System.Drawing.Size(318, 316)
-        Me.Guna2Panel1.TabIndex = 0
+        Me.DineinPanel.BackColor = System.Drawing.Color.White
+        Me.DineinPanel.BorderColor = System.Drawing.Color.Black
+        Me.DineinPanel.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
+        Me.DineinPanel.BorderThickness = 1
+        Me.DineinPanel.Controls.Add(Me.DineInPctrBx)
+        Me.DineinPanel.Controls.Add(Me.DineInLbl)
+        Me.DineinPanel.Location = New System.Drawing.Point(269, 176)
+        Me.DineinPanel.Name = "DineinPanel"
+        Me.DineinPanel.Size = New System.Drawing.Size(318, 316)
+        Me.DineinPanel.TabIndex = 0
         '
-        'Guna2PictureBox2
+        'DineInPctrBx
         '
-        Me.Guna2PictureBox2.Image = CType(resources.GetObject("Guna2PictureBox2.Image"), System.Drawing.Image)
-        Me.Guna2PictureBox2.ImageRotate = 0!
-        Me.Guna2PictureBox2.Location = New System.Drawing.Point(54, 8)
-        Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
-        Me.Guna2PictureBox2.Size = New System.Drawing.Size(199, 239)
-        Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.Guna2PictureBox2.TabIndex = 4
-        Me.Guna2PictureBox2.TabStop = False
+        Me.DineInPctrBx.Image = CType(resources.GetObject("DineInPctrBx.Image"), System.Drawing.Image)
+        Me.DineInPctrBx.ImageRotate = 0!
+        Me.DineInPctrBx.Location = New System.Drawing.Point(54, 8)
+        Me.DineInPctrBx.Name = "DineInPctrBx"
+        Me.DineInPctrBx.Size = New System.Drawing.Size(199, 239)
+        Me.DineInPctrBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.DineInPctrBx.TabIndex = 4
+        Me.DineInPctrBx.TabStop = False
         '
-        'Label1
+        'DineInLbl
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(98, 245)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(115, 40)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Dine In"
+        Me.DineInLbl.AutoSize = True
+        Me.DineInLbl.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DineInLbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.DineInLbl.Location = New System.Drawing.Point(98, 245)
+        Me.DineInLbl.Name = "DineInLbl"
+        Me.DineInLbl.Size = New System.Drawing.Size(115, 40)
+        Me.DineInLbl.TabIndex = 1
+        Me.DineInLbl.Text = "Dine In"
         '
-        'Guna2Panel2
+        'TakeOutPanel
         '
-        Me.Guna2Panel2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel2.BorderColor = System.Drawing.Color.Black
-        Me.Guna2Panel2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
-        Me.Guna2Panel2.BorderThickness = 1
-        Me.Guna2Panel2.Controls.Add(Me.Guna2PictureBox1)
-        Me.Guna2Panel2.Controls.Add(Me.Label2)
-        Me.Guna2Panel2.Location = New System.Drawing.Point(775, 176)
-        Me.Guna2Panel2.Name = "Guna2Panel2"
-        Me.Guna2Panel2.Size = New System.Drawing.Size(318, 316)
-        Me.Guna2Panel2.TabIndex = 1
+        Me.TakeOutPanel.BackColor = System.Drawing.Color.Transparent
+        Me.TakeOutPanel.BorderColor = System.Drawing.Color.Black
+        Me.TakeOutPanel.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
+        Me.TakeOutPanel.BorderThickness = 1
+        Me.TakeOutPanel.Controls.Add(Me.TakeOutPtcrBx)
+        Me.TakeOutPanel.Controls.Add(Me.TakeOutLblb)
+        Me.TakeOutPanel.Location = New System.Drawing.Point(775, 176)
+        Me.TakeOutPanel.Name = "TakeOutPanel"
+        Me.TakeOutPanel.Size = New System.Drawing.Size(318, 316)
+        Me.TakeOutPanel.TabIndex = 1
         '
-        'Guna2PictureBox1
+        'TakeOutPtcrBx
         '
-        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
-        Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(45, 51)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(237, 158)
-        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.Guna2PictureBox1.TabIndex = 5
-        Me.Guna2PictureBox1.TabStop = False
+        Me.TakeOutPtcrBx.Image = CType(resources.GetObject("TakeOutPtcrBx.Image"), System.Drawing.Image)
+        Me.TakeOutPtcrBx.ImageRotate = 0!
+        Me.TakeOutPtcrBx.Location = New System.Drawing.Point(45, 51)
+        Me.TakeOutPtcrBx.Name = "TakeOutPtcrBx"
+        Me.TakeOutPtcrBx.Size = New System.Drawing.Size(237, 158)
+        Me.TakeOutPtcrBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.TakeOutPtcrBx.TabIndex = 5
+        Me.TakeOutPtcrBx.TabStop = False
         '
-        'Label2
+        'TakeOutLblb
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(94, 245)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(139, 40)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Take Out"
+        Me.TakeOutLblb.AutoSize = True
+        Me.TakeOutLblb.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TakeOutLblb.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.TakeOutLblb.Location = New System.Drawing.Point(94, 245)
+        Me.TakeOutLblb.Name = "TakeOutLblb"
+        Me.TakeOutLblb.Size = New System.Drawing.Size(139, 40)
+        Me.TakeOutLblb.TabIndex = 2
+        Me.TakeOutLblb.Text = "Take Out"
         '
-        'Guna2Panel3
+        'LandingPagePanel
         '
-        Me.Guna2Panel3.BorderColor = System.Drawing.Color.White
-        Me.Guna2Panel3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
-        Me.Guna2Panel3.BorderThickness = 1
-        Me.Guna2Panel3.Location = New System.Drawing.Point(0, 0)
-        Me.Guna2Panel3.Name = "Guna2Panel3"
-        Me.Guna2Panel3.Size = New System.Drawing.Size(1920, 1080)
-        Me.Guna2Panel3.TabIndex = 2
+        Me.LandingPagePanel.BorderColor = System.Drawing.Color.White
+        Me.LandingPagePanel.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
+        Me.LandingPagePanel.BorderThickness = 1
+        Me.LandingPagePanel.Location = New System.Drawing.Point(0, 0)
+        Me.LandingPagePanel.Name = "LandingPagePanel"
+        Me.LandingPagePanel.Size = New System.Drawing.Size(1920, 1080)
+        Me.LandingPagePanel.TabIndex = 2
         '
         'CustomerLandingPage
         '
@@ -122,26 +122,26 @@ Partial Class CustomerLandingPage
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1370, 749)
-        Me.Controls.Add(Me.Guna2Panel2)
-        Me.Controls.Add(Me.Guna2Panel1)
-        Me.Controls.Add(Me.Guna2Panel3)
+        Me.Controls.Add(Me.TakeOutPanel)
+        Me.Controls.Add(Me.DineinPanel)
+        Me.Controls.Add(Me.LandingPagePanel)
         Me.Name = "CustomerLandingPage"
         Me.Text = "CustomerLandingPage"
-        Me.Guna2Panel1.ResumeLayout(False)
-        Me.Guna2Panel1.PerformLayout()
-        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Guna2Panel2.ResumeLayout(False)
-        Me.Guna2Panel2.PerformLayout()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.DineinPanel.ResumeLayout(False)
+        Me.DineinPanel.PerformLayout()
+        CType(Me.DineInPctrBx, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TakeOutPanel.ResumeLayout(False)
+        Me.TakeOutPanel.PerformLayout()
+        CType(Me.TakeOutPtcrBx, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents DineinPanel As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents TakeOutPanel As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents DineInLbl As Label
+    Friend WithEvents TakeOutLblb As Label
+    Friend WithEvents DineInPctrBx As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents TakeOutPtcrBx As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents LandingPagePanel As Guna.UI2.WinForms.Guna2Panel
 End Class

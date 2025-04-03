@@ -1,43 +1,43 @@
 ﻿Public Class CustomerLandingPage
-    Private Sub Guna2Panel1_MouseEnter(sender As Object, e As EventArgs) Handles Guna2Panel1.MouseEnter
-        Guna2Panel1.FillColor = Color.FromArgb(234, 234, 234)
+    Private Sub Guna2Panel1_MouseEnter(sender As Object, e As EventArgs) Handles DineinPanel.MouseEnter
+        DineinPanel.FillColor = Color.FromArgb(234, 234, 234)
     End Sub
 
-    Private Sub Guna2Panel1_MouseLeave(sender As Object, e As EventArgs) Handles Guna2Panel1.MouseLeave
-        If Not Guna2Panel1.Tag?.ToString() = "Selected" Then
-            Guna2Panel1.FillColor = Color.White
+    Private Sub Guna2Panel1_MouseLeave(sender As Object, e As EventArgs) Handles DineinPanel.MouseLeave
+        If Not DineinPanel.Tag?.ToString() = "Selected" Then
+            DineinPanel.FillColor = Color.White
         End If
     End Sub
 
-    Private Sub Guna2Panel1_Click(sender As Object, e As EventArgs) Handles Guna2Panel1.Click
-        Guna2Panel1.Tag = "Selected"
-        Guna2Panel1.FillColor = Color.FromArgb(234, 234, 234)
-        Guna2Panel2.Tag = Nothing
-        Guna2Panel2.FillColor = Color.Transparent
+    Private Sub Guna2Panel1_Click(sender As Object, e As EventArgs) Handles DineinPanel.Click
+        DineinPanel.Tag = "Selected"
+        DineinPanel.FillColor = Color.FromArgb(234, 234, 234)
+        TakeOutPanel.Tag = Nothing
+        TakeOutPanel.FillColor = Color.Transparent
     End Sub
 
-    Private Sub Guna2Panel2_MouseEnter(sender As Object, e As EventArgs) Handles Guna2Panel2.MouseEnter
-        Guna2Panel2.FillColor = Color.FromArgb(234, 234, 234)
+    Private Sub Guna2Panel2_MouseEnter(sender As Object, e As EventArgs) Handles TakeOutPanel.MouseEnter
+        TakeOutPanel.FillColor = Color.FromArgb(234, 234, 234)
     End Sub
 
-    Private Sub Guna2Panel2_MouseLeave(sender As Object, e As EventArgs) Handles Guna2Panel2.MouseLeave
-        If Not Guna2Panel2.Tag?.ToString() = "Selected" Then
-            Guna2Panel2.FillColor = Color.Transparent
+    Private Sub Guna2Panel2_MouseLeave(sender As Object, e As EventArgs) Handles TakeOutPanel.MouseLeave
+        If Not TakeOutPanel.Tag?.ToString() = "Selected" Then
+            TakeOutPanel.FillColor = Color.Transparent
         End If
     End Sub
 
-    Private Sub Guna2Panel2_Click(sender As Object, e As EventArgs) Handles Guna2Panel2.Click
-        Guna2Panel2.Tag = "Selected"
-        Guna2Panel2.FillColor = Color.FromArgb(234, 234, 234)
-        Guna2Panel1.Tag = Nothing
-        Guna2Panel1.FillColor = Color.White
+    Private Sub Guna2Panel2_Click(sender As Object, e As EventArgs) Handles TakeOutPanel.Click
+        TakeOutPanel.Tag = "Selected"
+        TakeOutPanel.FillColor = Color.FromArgb(234, 234, 234)
+        DineinPanel.Tag = Nothing
+        DineinPanel.FillColor = Color.White
     End Sub
 
     Private Sub CustomerLandingPage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 
-    Private Sub Guna2Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel3.Paint
+    Private Sub Guna2Panel3_Paint(sender As Object, e As PaintEventArgs) Handles LandingPagePanel.Paint
 
     End Sub
 End Class

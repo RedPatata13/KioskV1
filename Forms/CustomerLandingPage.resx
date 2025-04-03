@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Guna2PictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="DineInPctrBx.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAABABJREFUeF7tnEuoTXEUxpeBV5J3pCgzCRPKI4+E6fWc3AmSRMpIHhlQZCKkTAyu
+        DwAACw8BkvkDpQAABABJREFUeF7tnEuoTXEUxpeBV5J3pCgzCRPKI4+E6fWc3AmSRMpIHhlQZCKkTAyu
         W7opd+B95VEMkEhhKJFSytuAidf1bX3/3f+ulsM9Z++j+9/rV19ncL7W2t+39z13n31FHMdxHMdxHMdx
         HMdxHMdxHMdxHMdxHKcaXBCZd0lkh+vvyrpibb3nosheDOl2/V1ZV6yt93jR/y4vuknyopskL7pJ8qKb
         JC+6SWqo6D+BwVv1ogppEWsoH5y9Y8YBVEL4YrKJNZQPir5mHURFdIQ1lA+KfmEcQCWE7JdZQ7l0igzG
@@ -141,10 +141,10 @@
         OI7jOI7jOI7jOI7jOE4BiPwCtTMOMha/sWcAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="Guna2PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="TakeOutPtcrBx.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAABt1JREFUeF7tnWuoVUUUx8eeVhJERq8PQWRJT0gqM4UK0wqTsKQXFH3IvhRUEGUE
+        DwAACw8BkvkDpQAABt1JREFUeF7tnWuoVUUUx8eeVhJERq8PQWRJT0gqM4UK0wqTsKQXFH3IvhRUEGUE
         EUhEFEYvtKzAIETD17XUiCIqP5iBWUFFYPYQysSyd/not4b/Oe0zd86995xzZ8vezh/+nLNm1po1679n
         v89Vl5GRkZGRkdEDXnfurFXO3Q4fhfMrxOfecW6kyvBY6dxoeA99T/c5d/Ni5w5T174DE7mSCW2EeyvK
         JSrFA3scNW0v+mB/yOdRcikfTGAO3FOcVNXIyr1K5bi9zo2g7ZPQR3xSbuWCxLOCiVSRO95w7lCVZIeM
