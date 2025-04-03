@@ -255,7 +255,7 @@
             Me.Controls.Add(Me.ReceivedAmountTextBox)
             Me.Controls.Add(Me.Guna2HtmlLabel2)
             Me.Name = "StaffPaymentView"
-            Me.Text = "StaffPaymentView"
+            Me.Text = " "
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
