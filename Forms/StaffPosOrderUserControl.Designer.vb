@@ -35,7 +35,7 @@ Partial Class StaffPosOrderUserControl
         '
         Me.ProductNameLabel.BackColor = System.Drawing.Color.Transparent
         Me.ProductNameLabel.Font = New System.Drawing.Font("Poppins", 12.0!)
-        Me.ProductNameLabel.Location = New System.Drawing.Point(37, 45)
+        Me.ProductNameLabel.Location = New System.Drawing.Point(32, 31)
         Me.ProductNameLabel.Name = "ProductNameLabel"
         Me.ProductNameLabel.Size = New System.Drawing.Size(65, 30)
         Me.ProductNameLabel.TabIndex = 0
@@ -50,7 +50,7 @@ Partial Class StaffPosOrderUserControl
         Me.AddOrderButton.FillColor = System.Drawing.Color.White
         Me.AddOrderButton.Font = New System.Drawing.Font("Poppins", 12.0!)
         Me.AddOrderButton.ForeColor = System.Drawing.Color.Black
-        Me.AddOrderButton.Location = New System.Drawing.Point(528, 40)
+        Me.AddOrderButton.Location = New System.Drawing.Point(432, 31)
         Me.AddOrderButton.Name = "AddOrderButton"
         Me.AddOrderButton.Size = New System.Drawing.Size(34, 30)
         Me.AddOrderButton.TabIndex = 1
@@ -60,7 +60,7 @@ Partial Class StaffPosOrderUserControl
         '
         Me.ProductQuantityLabel.BackColor = System.Drawing.Color.Transparent
         Me.ProductQuantityLabel.Font = New System.Drawing.Font("Roboto", 12.0!)
-        Me.ProductQuantityLabel.Location = New System.Drawing.Point(487, 45)
+        Me.ProductQuantityLabel.Location = New System.Drawing.Point(391, 36)
         Me.ProductQuantityLabel.Name = "ProductQuantityLabel"
         Me.ProductQuantityLabel.Size = New System.Drawing.Size(21, 21)
         Me.ProductQuantityLabel.TabIndex = 3
@@ -75,7 +75,7 @@ Partial Class StaffPosOrderUserControl
         Me.RemoveButton.FillColor = System.Drawing.Color.White
         Me.RemoveButton.Font = New System.Drawing.Font("Poppins", 12.0!)
         Me.RemoveButton.ForeColor = System.Drawing.Color.Black
-        Me.RemoveButton.Location = New System.Drawing.Point(432, 40)
+        Me.RemoveButton.Location = New System.Drawing.Point(336, 31)
         Me.RemoveButton.Name = "RemoveButton"
         Me.RemoveButton.Size = New System.Drawing.Size(34, 30)
         Me.RemoveButton.TabIndex = 2
@@ -91,7 +91,7 @@ Partial Class StaffPosOrderUserControl
         Me.DeleteOrderButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.DeleteOrderButton.ForeColor = System.Drawing.Color.Black
         Me.DeleteOrderButton.Image = Global.KioskV0.My.Resources.Resources.Delete_itim
-        Me.DeleteOrderButton.Location = New System.Drawing.Point(570, 40)
+        Me.DeleteOrderButton.Location = New System.Drawing.Point(474, 31)
         Me.DeleteOrderButton.Name = "DeleteOrderButton"
         Me.DeleteOrderButton.Size = New System.Drawing.Size(34, 30)
         Me.DeleteOrderButton.TabIndex = 2
@@ -137,7 +137,7 @@ Partial Class StaffPosOrderUserControl
         Me.Controls.Add(Me.ProductNameLabel)
         Me.ForeColor = System.Drawing.Color.White
         Me.Name = "StaffPosOrderUserControl"
-        Me.Size = New System.Drawing.Size(619, 113)
+        Me.Size = New System.Drawing.Size(529, 90)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -41,29 +41,29 @@
             'Guna2HtmlLabel1
             '
             Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(73, 49)
+            Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 28.0!, System.Drawing.FontStyle.Bold)
+            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(32, 22)
             Me.Guna2HtmlLabel1.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(275, 51)
+            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(317, 60)
             Me.Guna2HtmlLabel1.TabIndex = 11
             Me.Guna2HtmlLabel1.Text = "Create Payment"
             '
             'Guna2HtmlLabel2
             '
             Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Poppins", 16.0!)
-            Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(73, 155)
+            Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Poppins", 19.0!)
+            Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(35, 107)
             Me.Guna2HtmlLabel2.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-            Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(188, 39)
+            Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(222, 46)
             Me.Guna2HtmlLabel2.TabIndex = 12
             Me.Guna2HtmlLabel2.Text = "Received Amount"
             '
             'ReceivedAmountTextBox
             '
             Me.ReceivedAmountTextBox.BorderColor = System.Drawing.Color.Black
-            Me.ReceivedAmountTextBox.BorderRadius = 20
+            Me.ReceivedAmountTextBox.BorderRadius = 18
             Me.ReceivedAmountTextBox.Cursor = System.Windows.Forms.Cursors.IBeam
             Me.ReceivedAmountTextBox.DefaultText = ""
             Me.ReceivedAmountTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -71,21 +71,22 @@
             Me.ReceivedAmountTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
             Me.ReceivedAmountTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
             Me.ReceivedAmountTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.ReceivedAmountTextBox.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+            Me.ReceivedAmountTextBox.Font = New System.Drawing.Font("Segoe UI", 12.0!)
             Me.ReceivedAmountTextBox.ForeColor = System.Drawing.Color.Black
             Me.ReceivedAmountTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.ReceivedAmountTextBox.Location = New System.Drawing.Point(73, 206)
+            Me.ReceivedAmountTextBox.Location = New System.Drawing.Point(35, 159)
             Me.ReceivedAmountTextBox.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
             Me.ReceivedAmountTextBox.Name = "ReceivedAmountTextBox"
             Me.ReceivedAmountTextBox.PlaceholderText = ""
             Me.ReceivedAmountTextBox.SelectedText = ""
-            Me.ReceivedAmountTextBox.Size = New System.Drawing.Size(602, 48)
+            Me.ReceivedAmountTextBox.Size = New System.Drawing.Size(478, 37)
             Me.ReceivedAmountTextBox.TabIndex = 13
+            Me.ReceivedAmountTextBox.TextOffset = New System.Drawing.Point(0, 2)
             '
             'PayingAmountTextBox
             '
             Me.PayingAmountTextBox.BorderColor = System.Drawing.Color.Black
-            Me.PayingAmountTextBox.BorderRadius = 20
+            Me.PayingAmountTextBox.BorderRadius = 18
             Me.PayingAmountTextBox.Cursor = System.Windows.Forms.Cursors.IBeam
             Me.PayingAmountTextBox.DefaultText = ""
             Me.PayingAmountTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -93,43 +94,44 @@
             Me.PayingAmountTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
             Me.PayingAmountTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
             Me.PayingAmountTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.PayingAmountTextBox.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+            Me.PayingAmountTextBox.Font = New System.Drawing.Font("Segoe UI", 12.0!)
             Me.PayingAmountTextBox.ForeColor = System.Drawing.Color.Black
             Me.PayingAmountTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.PayingAmountTextBox.Location = New System.Drawing.Point(73, 335)
+            Me.PayingAmountTextBox.Location = New System.Drawing.Point(35, 268)
             Me.PayingAmountTextBox.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
             Me.PayingAmountTextBox.Name = "PayingAmountTextBox"
             Me.PayingAmountTextBox.PlaceholderText = ""
             Me.PayingAmountTextBox.SelectedText = ""
-            Me.PayingAmountTextBox.Size = New System.Drawing.Size(602, 48)
+            Me.PayingAmountTextBox.Size = New System.Drawing.Size(478, 37)
             Me.PayingAmountTextBox.TabIndex = 14
+            Me.PayingAmountTextBox.TextOffset = New System.Drawing.Point(0, 2)
             '
             'Guna2HtmlLabel3
             '
             Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Poppins", 16.0!)
-            Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(73, 276)
+            Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Poppins", 19.0!)
+            Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(35, 216)
             Me.Guna2HtmlLabel3.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
-            Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(162, 39)
+            Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(194, 46)
             Me.Guna2HtmlLabel3.TabIndex = 15
             Me.Guna2HtmlLabel3.Text = "Paying Amount"
             '
             'Guna2HtmlLabel4
             '
             Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Poppins", 16.0!)
-            Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(73, 416)
+            Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Poppins", 19.0!)
+            Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(35, 328)
             Me.Guna2HtmlLabel4.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
-            Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(86, 39)
+            Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(103, 46)
             Me.Guna2HtmlLabel4.TabIndex = 16
             Me.Guna2HtmlLabel4.Text = "Change"
             '
             'Change
             '
             Me.Change.BorderColor = System.Drawing.Color.Black
-            Me.Change.BorderRadius = 20
+            Me.Change.BorderRadius = 18
             Me.Change.Cursor = System.Windows.Forms.Cursors.IBeam
             Me.Change.DefaultText = ""
             Me.Change.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -137,25 +139,26 @@
             Me.Change.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
             Me.Change.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
             Me.Change.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.Change.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+            Me.Change.Font = New System.Drawing.Font("Segoe UI", 12.0!)
             Me.Change.ForeColor = System.Drawing.Color.Black
             Me.Change.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.Change.Location = New System.Drawing.Point(73, 481)
+            Me.Change.Location = New System.Drawing.Point(35, 380)
             Me.Change.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
             Me.Change.Name = "Change"
             Me.Change.PlaceholderText = "00.0"
             Me.Change.SelectedText = ""
-            Me.Change.Size = New System.Drawing.Size(289, 48)
+            Me.Change.Size = New System.Drawing.Size(272, 37)
             Me.Change.TabIndex = 17
+            Me.Change.TextOffset = New System.Drawing.Point(0, 2)
             '
             'Guna2HtmlLabel5
             '
             Me.Guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel5.Font = New System.Drawing.Font("Poppins", 16.0!)
-            Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(73, 565)
+            Me.Guna2HtmlLabel5.Font = New System.Drawing.Font("Poppins", 19.0!)
+            Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(35, 444)
             Me.Guna2HtmlLabel5.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
-            Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(176, 39)
+            Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(208, 46)
             Me.Guna2HtmlLabel5.TabIndex = 18
             Me.Guna2HtmlLabel5.Text = "Payment Choice"
             '
@@ -168,27 +171,28 @@
             Me.PaymentChoiceCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.PaymentChoiceCombobox.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.PaymentChoiceCombobox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.PaymentChoiceCombobox.Font = New System.Drawing.Font("Poppins", 14.0!)
+            Me.PaymentChoiceCombobox.Font = New System.Drawing.Font("Poppins", 12.0!)
             Me.PaymentChoiceCombobox.ForeColor = System.Drawing.Color.Black
             Me.PaymentChoiceCombobox.ItemHeight = 30
-            Me.PaymentChoiceCombobox.Location = New System.Drawing.Point(73, 620)
+            Me.PaymentChoiceCombobox.Location = New System.Drawing.Point(35, 506)
             Me.PaymentChoiceCombobox.Name = "PaymentChoiceCombobox"
-            Me.PaymentChoiceCombobox.Size = New System.Drawing.Size(602, 36)
+            Me.PaymentChoiceCombobox.Size = New System.Drawing.Size(478, 36)
             Me.PaymentChoiceCombobox.TabIndex = 19
             '
             'Guna2HtmlLabel6
             '
             Me.Guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel6.Font = New System.Drawing.Font("Poppins", 16.0!)
-            Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(73, 696)
+            Me.Guna2HtmlLabel6.Font = New System.Drawing.Font("Poppins", 19.0!)
+            Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(35, 570)
             Me.Guna2HtmlLabel6.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
-            Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(52, 39)
+            Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(61, 46)
             Me.Guna2HtmlLabel6.TabIndex = 20
             Me.Guna2HtmlLabel6.Text = "Note"
             '
             'NoteTextBox
             '
+            Me.NoteTextBox.AutoSize = True
             Me.NoteTextBox.BorderColor = System.Drawing.Color.Black
             Me.NoteTextBox.BorderRadius = 10
             Me.NoteTextBox.Cursor = System.Windows.Forms.Cursors.IBeam
@@ -198,22 +202,22 @@
             Me.NoteTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
             Me.NoteTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
             Me.NoteTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.NoteTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+            Me.NoteTextBox.Font = New System.Drawing.Font("Segoe UI", 12.0!)
             Me.NoteTextBox.ForeColor = System.Drawing.Color.Black
             Me.NoteTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.NoteTextBox.Location = New System.Drawing.Point(73, 755)
+            Me.NoteTextBox.Location = New System.Drawing.Point(35, 621)
             Me.NoteTextBox.Name = "NoteTextBox"
             Me.NoteTextBox.PlaceholderText = ""
             Me.NoteTextBox.SelectedText = ""
-            Me.NoteTextBox.Size = New System.Drawing.Size(602, 133)
+            Me.NoteTextBox.Size = New System.Drawing.Size(478, 126)
             Me.NoteTextBox.TabIndex = 21
             '
             'FlowLayoutPanel1
             '
             Me.FlowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.FlowLayoutPanel1.Location = New System.Drawing.Point(873, 155)
+            Me.FlowLayoutPanel1.Location = New System.Drawing.Point(603, 107)
             Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-            Me.FlowLayoutPanel1.Size = New System.Drawing.Size(923, 467)
+            Me.FlowLayoutPanel1.Size = New System.Drawing.Size(655, 467)
             Me.FlowLayoutPanel1.TabIndex = 23
             '
             'SubmitPaymentButton
@@ -226,11 +230,11 @@
             Me.SubmitPaymentButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
             Me.SubmitPaymentButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
             Me.SubmitPaymentButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.SubmitPaymentButton.Font = New System.Drawing.Font("Poppins", 16.0!)
+            Me.SubmitPaymentButton.Font = New System.Drawing.Font("Poppins", 12.0!)
             Me.SubmitPaymentButton.ForeColor = System.Drawing.Color.White
-            Me.SubmitPaymentButton.Location = New System.Drawing.Point(71, 930)
+            Me.SubmitPaymentButton.Location = New System.Drawing.Point(35, 790)
             Me.SubmitPaymentButton.Name = "SubmitPaymentButton"
-            Me.SubmitPaymentButton.Size = New System.Drawing.Size(291, 64)
+            Me.SubmitPaymentButton.Size = New System.Drawing.Size(184, 46)
             Me.SubmitPaymentButton.TabIndex = 24
             Me.SubmitPaymentButton.Text = "Submit"
             Me.SubmitPaymentButton.TextOffset = New System.Drawing.Point(0, 2)
@@ -240,7 +244,8 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1904, 1041)
+            Me.ClientSize = New System.Drawing.Size(1321, 878)
+            Me.Controls.Add(Me.PayingAmountTextBox)
             Me.Controls.Add(Me.Guna2HtmlLabel1)
             Me.Controls.Add(Me.SubmitPaymentButton)
             Me.Controls.Add(Me.FlowLayoutPanel1)
@@ -251,10 +256,11 @@
             Me.Controls.Add(Me.Change)
             Me.Controls.Add(Me.Guna2HtmlLabel4)
             Me.Controls.Add(Me.Guna2HtmlLabel3)
-            Me.Controls.Add(Me.PayingAmountTextBox)
             Me.Controls.Add(Me.ReceivedAmountTextBox)
             Me.Controls.Add(Me.Guna2HtmlLabel2)
+            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
             Me.Name = "StaffPaymentView"
+            Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
             Me.Text = " "
             Me.ResumeLayout(False)
             Me.PerformLayout()

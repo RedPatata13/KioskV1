@@ -32,11 +32,11 @@
             'Guna2HtmlLabel1
             '
             Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(705, 312)
+            Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 28.0!, System.Drawing.FontStyle.Bold)
+            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(311, 232)
             Me.Guna2HtmlLabel1.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(556, 51)
+            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(638, 60)
             Me.Guna2HtmlLabel1.TabIndex = 10
             Me.Guna2HtmlLabel1.Text = "Manager Authorization Required"
             '
@@ -51,10 +51,10 @@
             Me.ManagerPasswordTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
             Me.ManagerPasswordTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
             Me.ManagerPasswordTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.ManagerPasswordTextBox.Font = New System.Drawing.Font("Poppins", 16.0!)
+            Me.ManagerPasswordTextBox.Font = New System.Drawing.Font("Poppins", 14.0!)
             Me.ManagerPasswordTextBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.ManagerPasswordTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.ManagerPasswordTextBox.Location = New System.Drawing.Point(518, 419)
+            Me.ManagerPasswordTextBox.Location = New System.Drawing.Point(193, 354)
             Me.ManagerPasswordTextBox.Margin = New System.Windows.Forms.Padding(5)
             Me.ManagerPasswordTextBox.Name = "ManagerPasswordTextBox"
             Me.ManagerPasswordTextBox.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -68,8 +68,8 @@
             '
             Me.CancelButton.FlatAppearance.BorderSize = 0
             Me.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.CancelButton.Font = New System.Drawing.Font("Poppins", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.CancelButton.Location = New System.Drawing.Point(518, 543)
+            Me.CancelButton.Font = New System.Drawing.Font("Poppins", 19.0!)
+            Me.CancelButton.Location = New System.Drawing.Point(193, 478)
             Me.CancelButton.Name = "CancelButton"
             Me.CancelButton.Size = New System.Drawing.Size(163, 48)
             Me.CancelButton.TabIndex = 18
@@ -80,8 +80,8 @@
             '
             Me.SubmitButton.FlatAppearance.BorderSize = 0
             Me.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.SubmitButton.Font = New System.Drawing.Font("Poppins", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.SubmitButton.Location = New System.Drawing.Point(1239, 543)
+            Me.SubmitButton.Font = New System.Drawing.Font("Poppins", 19.0!)
+            Me.SubmitButton.Location = New System.Drawing.Point(914, 478)
             Me.SubmitButton.Name = "SubmitButton"
             Me.SubmitButton.Size = New System.Drawing.Size(163, 48)
             Me.SubmitButton.TabIndex = 19
@@ -93,12 +93,14 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1904, 1041)
+            Me.ClientSize = New System.Drawing.Size(1305, 839)
             Me.Controls.Add(Me.SubmitButton)
             Me.Controls.Add(Me.CancelButton)
             Me.Controls.Add(Me.ManagerPasswordTextBox)
             Me.Controls.Add(Me.Guna2HtmlLabel1)
+            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
             Me.Name = "StaffManagerAuthorizationView"
+            Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
             Me.Text = " "
             Me.ResumeLayout(False)
             Me.PerformLayout()
