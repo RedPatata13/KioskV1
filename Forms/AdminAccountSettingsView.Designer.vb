@@ -34,6 +34,9 @@
             Me.ProductName = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.AddAccountButton = New Guna.UI2.WinForms.Guna2Button()
             Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me.AddItemButton = New System.Windows.Forms.Button()
+            Me.AddUser = New System.Windows.Forms.Button()
+            Me.EditInventory = New System.Windows.Forms.Button()
             CType(Me.AccountsDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
@@ -67,6 +70,7 @@
             Me.AccountsDataGridView.DefaultCellStyle = DataGridViewCellStyle3
             Me.AccountsDataGridView.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.AccountsDataGridView.Location = New System.Drawing.Point(109, 147)
+            Me.AccountsDataGridView.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.AccountsDataGridView.Name = "AccountsDataGridView"
             Me.AccountsDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -133,7 +137,8 @@
             Me.AddAccountButton.HoverState.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
             Me.AddAccountButton.Image = CType(resources.GetObject("AddAccountButton.Image"), System.Drawing.Image)
             Me.AddAccountButton.ImageSize = New System.Drawing.Size(40, 40)
-            Me.AddAccountButton.Location = New System.Drawing.Point(1599, 53)
+            Me.AddAccountButton.Location = New System.Drawing.Point(1599, 54)
+            Me.AddAccountButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.AddAccountButton.Name = "AddAccountButton"
             Me.AddAccountButton.Size = New System.Drawing.Size(55, 55)
             Me.AddAccountButton.TabIndex = 7
@@ -142,12 +147,43 @@
             '
             Me.Guna2HtmlLabel1.AutoSize = False
             Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 28.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(40, 44)
+            Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 28.2!, System.Drawing.FontStyle.Bold)
+            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(28, 34)
+            Me.Guna2HtmlLabel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(622, 64)
+            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(427, 75)
             Me.Guna2HtmlLabel1.TabIndex = 8
             Me.Guna2HtmlLabel1.Text = "Account Settings"
+            '
+            'AddItemButton
+            '
+            Me.AddItemButton.Location = New System.Drawing.Point(825, 34)
+            Me.AddItemButton.Margin = New System.Windows.Forms.Padding(4)
+            Me.AddItemButton.Name = "AddItemButton"
+            Me.AddItemButton.Size = New System.Drawing.Size(100, 28)
+            Me.AddItemButton.TabIndex = 9
+            Me.AddItemButton.Text = "AddItem"
+            Me.AddItemButton.UseVisualStyleBackColor = True
+            '
+            'AddUser
+            '
+            Me.AddUser.Location = New System.Drawing.Point(933, 34)
+            Me.AddUser.Margin = New System.Windows.Forms.Padding(4)
+            Me.AddUser.Name = "AddUser"
+            Me.AddUser.Size = New System.Drawing.Size(100, 28)
+            Me.AddUser.TabIndex = 10
+            Me.AddUser.Text = "AddUser"
+            Me.AddUser.UseVisualStyleBackColor = True
+            '
+            'EditInventory
+            '
+            Me.EditInventory.Location = New System.Drawing.Point(739, 34)
+            Me.EditInventory.Margin = New System.Windows.Forms.Padding(4)
+            Me.EditInventory.Name = "EditInventory"
+            Me.EditInventory.Size = New System.Drawing.Size(100, 28)
+            Me.EditInventory.TabIndex = 11
+            Me.EditInventory.Text = "EditInventory"
+            Me.EditInventory.UseVisualStyleBackColor = True
             '
             'AdminAccountSettingsView
             '
@@ -155,10 +191,14 @@
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
             Me.ClientSize = New System.Drawing.Size(1761, 1080)
+            Me.Controls.Add(Me.EditInventory)
+            Me.Controls.Add(Me.AddUser)
+            Me.Controls.Add(Me.AddItemButton)
             Me.Controls.Add(Me.Guna2HtmlLabel1)
             Me.Controls.Add(Me.AddAccountButton)
             Me.Controls.Add(Me.AccountsDataGridView)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+            Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.Name = "AdminAccountSettingsView"
             Me.Text = "AdminAccountSettings"
             CType(Me.AccountsDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
@@ -171,6 +211,9 @@
         Friend WithEvents ProductName As DataGridViewTextBoxColumn
         Friend WithEvents AddAccountButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
+        Friend WithEvents AddItemButton As Button
+        Friend WithEvents AddUser As Button
+        Friend WithEvents EditInventory As Button
     End Class
 
 End Namespace

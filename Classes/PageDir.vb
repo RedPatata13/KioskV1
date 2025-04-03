@@ -11,6 +11,9 @@
                 {AdminKeys.AdminOrderHistory, New Classes.AdminOrderHistoryViewModel(New Forms.AdminOrderHistoryView(), mediator)},
                 {AdminKeys.AdminStaffTransactions, New Classes.AdminStaffTransactionsViewModel(New Forms.AdminStaffTransactionsView(), mediator)},
                 {AdminKeys.AdminAccountSettings, New Classes.AdminAccountSettingsViewModel(New Forms.AdminAccountSettingsView(), mediator)},
+                {AdminKeys.AdminAddUser, New Classes.AdminAddUserViewModel(New Forms.AdminAddUserView(), mediator)},
+                {AdminKeys.AdminAddMenu, New Classes.AdminAddMenuViewModel(New Forms.AdminAddMenuView(), mediator)},
+                {AdminKeys.AdminEditInventory, New Classes.AdminEditInventoryViewModel(New Forms.AdminEditInventoryView(), mediator)},
                 {AdminKeys.Sample, New Classes.SampleViewModel(New Forms.SampleForm(), mediator)}
             }
         End Function

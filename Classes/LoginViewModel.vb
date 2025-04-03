@@ -1,11 +1,12 @@
 ﻿
 Imports System.ComponentModel
 Imports System.ComponentModel.DataAnnotations
+Imports KioskV0.KioskV0.Forms
 Namespace KioskV0.Classes
     Public Class LoginViewModel
         Private Property _view As Forms.Login
         Private Property _model
-        Private Property _projector
+        Private Property _projector As Projector
         Private _tempModelMap As Dictionary(Of String, Model.AuthModel)
         Private _uid As String
         Private _password As String
@@ -27,10 +28,15 @@ Namespace KioskV0.Classes
             _view = New Forms.Login()
             _tempModelMap = TempAccountsWithUserType()
             SetEvents()
-            PrepareView(projector._projector)
+            PrepareView(projector.ProjectPanel)
             _projector = projector
         End Sub
 
+        ''' <summary>
+        ''' Function that handles the actual user authentication
+        ''' </summary>
+        ''' <param name="key">User ID</param>
+        ''' <param name="password">User Password</param>
         Private Sub Authenticate(key As String, password As String)
             Dim val As Model.AuthModel = Nothing
             If (_tempModelMap.TryGetValue(key, val)) Then
@@ -43,11 +49,15 @@ Namespace KioskV0.Classes
                     Select Case val.UserType
                         Case UserType.Admin
                             mediator = New Mediator(Of AdminKeys)(_projector, Me)
-                            mediator.SetupMap(GetAdminPages(mediator)) ' Declared in PageDir.vb
-                            mediator.SwapPage(AdminKeys.AdminLandingPage)
+                            mediator.SetupMap(GetAdminPages(mediator))
+                            Dim sb = New AdminSideBarViewModel(New Forms.AdminSidebar(), mediator)
+                            _projector.ProjectSidebar(sb)
+                            mediator.SwapPage(AdminKeys.AdminLandingPage) 'for sum reason only gods know, the fill doesn't happen on first call 
+                            mediator.SwapPage(AdminKeys.AdminLandingPage) 'so call it again. I have no fckin clue why this happens cuz ts was working just fine before the merge
                         Case UserType.Customer
                             mediator = New Mediator(Of CustomerKeys)(_projector, Me)
                             mediator.SetupMap(GetCustomerPages())
+
                         Case UserType.Staff
                             mediator = New Mediator(Of StaffKeys)(_projector, Me)
                         Case UserType.Supplier
@@ -55,12 +65,13 @@ Namespace KioskV0.Classes
                         Case Else
                             Throw New Exception("Invalid User Type")
                     End Select
+
+                    _projector.SpawnSideBar()
                 End If
             Else
                 MessageBox.Show("UID not found.")
             End If
         End Sub
-
         Private Sub PrepareView(projector As Form)
             _view.TopLevel = False
             _view.FormBorderStyle = FormBorderStyle.None
@@ -89,7 +100,10 @@ Namespace KioskV0.Classes
 
             End Try
         End Sub
-        'Paki Remove this once DB is up and going
+        ''' <summary>
+        ''' Function for getting Temporary Account DEtails
+        ''' </summary>
+        ''' <returns>Dictionary that Returns the User Authentication Details</returns>
         Private Function TempAccountsWithUserType() As Dictionary(Of String, Model.AuthModel)
 
             Dim map = New Dictionary(Of String, Model.AuthModel) From
@@ -134,6 +148,10 @@ Namespace KioskV0.Classes
 
             Return map
         End Function
+
+        ''' <summary>
+        ''' Function for checking if User Input is Valid
+        ''' </summary>
         Private Sub ValidateLogin()
             If String.IsNullOrWhiteSpace(_uid) Then
                 Throw New ArgumentException("User ID is required")

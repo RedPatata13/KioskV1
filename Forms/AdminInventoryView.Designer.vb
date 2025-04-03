@@ -132,7 +132,7 @@
             Me.RequestSupplyButton.HoverState.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
             Me.RequestSupplyButton.Image = CType(resources.GetObject("RequestSupplyButton.Image"), System.Drawing.Image)
             Me.RequestSupplyButton.ImageSize = New System.Drawing.Size(40, 40)
-            Me.RequestSupplyButton.Location = New System.Drawing.Point(1599, 64)
+            Me.RequestSupplyButton.Location = New System.Drawing.Point(1599, 66)
             Me.RequestSupplyButton.Name = "RequestSupplyButton"
             Me.RequestSupplyButton.Size = New System.Drawing.Size(55, 55)
             Me.RequestSupplyButton.TabIndex = 3
@@ -142,9 +142,9 @@
             Me.Guna2HtmlLabel1.AutoSize = False
             Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 28.2!, System.Drawing.FontStyle.Bold)
-            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(40, 44)
+            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(28, 35)
             Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(560, 75)
+            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(622, 64)
             Me.Guna2HtmlLabel1.TabIndex = 9
             Me.Guna2HtmlLabel1.Text = "Inventory"
             '

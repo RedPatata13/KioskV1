@@ -47,7 +47,7 @@
             Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
             Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
             Me.Guna2Panel1.Name = "Guna2Panel1"
-            Me.Guna2Panel1.Size = New System.Drawing.Size(1761, 144)
+            Me.Guna2Panel1.Size = New System.Drawing.Size(1761, 100)
             Me.Guna2Panel1.TabIndex = 0
             '
             'Guna2HtmlLabel1
@@ -73,7 +73,7 @@
             Me.Guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.Guna2TextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.Guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.Guna2TextBox1.Location = New System.Drawing.Point(87, 333)
+            Me.Guna2TextBox1.Location = New System.Drawing.Point(79, 312)
             Me.Guna2TextBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
             Me.Guna2TextBox1.Name = "Guna2TextBox1"
             Me.Guna2TextBox1.PlaceholderText = "102PDR"
@@ -93,7 +93,7 @@
             Me.Guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.Guna2TextBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.Guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.Guna2TextBox2.Location = New System.Drawing.Point(87, 494)
+            Me.Guna2TextBox2.Location = New System.Drawing.Point(79, 471)
             Me.Guna2TextBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
             Me.Guna2TextBox2.Name = "Guna2TextBox2"
             Me.Guna2TextBox2.PlaceholderText = "Ex.: ""Hamburger"""
@@ -112,7 +112,7 @@
             Me.Guna2ComboBox1.Font = New System.Drawing.Font("Segoe UI", 10.0!)
             Me.Guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
             Me.Guna2ComboBox1.ItemHeight = 30
-            Me.Guna2ComboBox1.Location = New System.Drawing.Point(996, 333)
+            Me.Guna2ComboBox1.Location = New System.Drawing.Point(996, 312)
             Me.Guna2ComboBox1.Name = "Guna2ComboBox1"
             Me.Guna2ComboBox1.Size = New System.Drawing.Size(680, 36)
             Me.Guna2ComboBox1.TabIndex = 10
@@ -121,9 +121,9 @@
             '
             Me.Guna2DateTimePicker1.Checked = True
             Me.Guna2DateTimePicker1.FillColor = System.Drawing.Color.White
-            Me.Guna2DateTimePicker1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+            Me.Guna2DateTimePicker1.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
-            Me.Guna2DateTimePicker1.Location = New System.Drawing.Point(87, 167)
+            Me.Guna2DateTimePicker1.Location = New System.Drawing.Point(79, 140)
             Me.Guna2DateTimePicker1.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
             Me.Guna2DateTimePicker1.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
             Me.Guna2DateTimePicker1.Name = "Guna2DateTimePicker1"
@@ -143,7 +143,7 @@
             Me.Guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.Guna2TextBox3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.Guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.Guna2TextBox3.Location = New System.Drawing.Point(87, 677)
+            Me.Guna2TextBox3.Location = New System.Drawing.Point(79, 642)
             Me.Guna2TextBox3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
             Me.Guna2TextBox3.Name = "Guna2TextBox3"
             Me.Guna2TextBox3.PlaceholderText = "100"
@@ -163,12 +163,12 @@
             Me.Guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.Guna2TextBox4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.Guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.Guna2TextBox4.Location = New System.Drawing.Point(996, 494)
+            Me.Guna2TextBox4.Location = New System.Drawing.Point(996, 471)
             Me.Guna2TextBox4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
             Me.Guna2TextBox4.Name = "Guna2TextBox4"
             Me.Guna2TextBox4.PlaceholderText = """Please divide into two boxes..."""
             Me.Guna2TextBox4.SelectedText = ""
-            Me.Guna2TextBox4.Size = New System.Drawing.Size(680, 273)
+            Me.Guna2TextBox4.Size = New System.Drawing.Size(680, 161)
             Me.Guna2TextBox4.TabIndex = 13
             '
             'Guna2HtmlLabel3
@@ -177,9 +177,9 @@
             Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel3.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(87, 266)
+            Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(79, 231)
             Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
-            Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(410, 60)
+            Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(183, 60)
             Me.Guna2HtmlLabel3.TabIndex = 15
             Me.Guna2HtmlLabel3.Text = "Product ID"
             '
@@ -189,9 +189,9 @@
             Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel2.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(87, 427)
+            Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(79, 392)
             Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-            Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(532, 60)
+            Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(253, 60)
             Me.Guna2HtmlLabel2.TabIndex = 16
             Me.Guna2HtmlLabel2.Text = "Product Name"
             '
@@ -201,9 +201,9 @@
             Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(87, 592)
+            Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(79, 563)
             Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
-            Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(469, 60)
+            Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(153, 60)
             Me.Guna2HtmlLabel4.TabIndex = 17
             Me.Guna2HtmlLabel4.Text = "Quantity"
             '
@@ -213,9 +213,9 @@
             Me.Guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel5.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel5.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(996, 266)
+            Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(999, 231)
             Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
-            Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(271, 60)
+            Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(147, 60)
             Me.Guna2HtmlLabel5.TabIndex = 18
             Me.Guna2HtmlLabel5.Text = "Supplier"
             '
@@ -225,9 +225,9 @@
             Me.Guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel6.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel6.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(996, 427)
+            Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(999, 392)
             Me.Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
-            Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(304, 60)
+            Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(180, 60)
             Me.Guna2HtmlLabel6.TabIndex = 19
             Me.Guna2HtmlLabel6.Text = "Add notes"
             '
@@ -267,7 +267,7 @@
             Me.Guna2Button3.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
             Me.Guna2Button3.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer))
             Me.Guna2Button3.HoverState.ForeColor = System.Drawing.Color.White
-            Me.Guna2Button3.Location = New System.Drawing.Point(1152, 938)
+            Me.Guna2Button3.Location = New System.Drawing.Point(1146, 938)
             Me.Guna2Button3.Name = "Guna2Button3"
             Me.Guna2Button3.Size = New System.Drawing.Size(252, 63)
             Me.Guna2Button3.TabIndex = 22

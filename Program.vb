@@ -6,12 +6,10 @@ Namespace KioskV0
         Sub Main()
             Application.EnableVisualStyles()
             Application.SetCompatibleTextRenderingDefault(False)
-            Application.Run(New KioskV0.Forms.AdminSupplyRequestView())
+            'Application.Run(New KioskV0.Forms.AdminLandingPageView())
 
-
-            'Dim projector = New Classes.Projector()
-            'projector.LoginProject()
-
+            Dim projector = New Classes.Projector()
+            projector.LoginProject()
         End Sub
     End Module
 End Namespace
