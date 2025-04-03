@@ -175,64 +175,64 @@
     <Compile Include="Forms\AdminTestPageView.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CustomerAddNotePage.Designer.vb">
-      <DependentUpon>CustomerAddNotePage.vb</DependentUpon>
+    <Compile Include="Forms\CustomerAddNoteView.Designer.vb">
+      <DependentUpon>CustomerAddNoteView.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CustomerAddNotePage.vb">
+    <Compile Include="Forms\CustomerAddNoteView.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CustomerConfirmOrder.Designer.vb">
-      <DependentUpon>CustomerConfirmOrder.vb</DependentUpon>
+    <Compile Include="Forms\CustomerConfirmOrderView.Designer.vb">
+      <DependentUpon>CustomerConfirmOrderView.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CustomerConfirmOrder.vb">
+    <Compile Include="Forms\CustomerConfirmOrderView.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CustomerHomePage.Designer.vb">
-      <DependentUpon>CustomerHomePage.vb</DependentUpon>
+    <Compile Include="Forms\CustomerHomeView.Designer.vb">
+      <DependentUpon>CustomerHomeView.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CustomerHomePage.vb">
+    <Compile Include="Forms\CustomerHomeView.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CustomerLandingPage.Designer.vb">
-      <DependentUpon>CustomerLandingPage.vb</DependentUpon>
+    <Compile Include="Forms\CustomerLandingView.Designer.vb">
+      <DependentUpon>CustomerLandingView.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CustomerLandingPage.vb">
+    <Compile Include="Forms\CustomerLandingView.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CustomerMenuPage.Designer.vb">
-      <DependentUpon>CustomerMenuPage.vb</DependentUpon>
+    <Compile Include="Forms\CustomerMenuView.Designer.vb">
+      <DependentUpon>CustomerMenuView.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CustomerMenuPage.vb">
+    <Compile Include="Forms\CustomerMenuView.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CustomerOrderListPage.Designer.vb">
-      <DependentUpon>CustomerOrderListPage.vb</DependentUpon>
+    <Compile Include="Forms\CustomerOrderListView.Designer.vb">
+      <DependentUpon>CustomerOrderListView.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CustomerOrderListPage.vb">
+    <Compile Include="Forms\CustomerOrderListView.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CustomerOrderQuantityPage.Designer.vb">
-      <DependentUpon>CustomerOrderQuantityPage.vb</DependentUpon>
+    <Compile Include="Forms\CustomerOrderQuantityView.Designer.vb">
+      <DependentUpon>CustomerOrderQuantityView.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CustomerOrderQuantityPage.vb">
+    <Compile Include="Forms\CustomerOrderQuantityView.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CustomerPaymentPage.Designer.vb">
-      <DependentUpon>CustomerPaymentPage.vb</DependentUpon>
+    <Compile Include="Forms\CustomerPaymentView.Designer.vb">
+      <DependentUpon>CustomerPaymentView.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CustomerPaymentPage.vb">
+    <Compile Include="Forms\CustomerPaymentView.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CustomerReceiptPagevb.Designer.vb">
-      <DependentUpon>CustomerReceiptPagevb.vb</DependentUpon>
+    <Compile Include="Forms\CustomerReceiptView.Designer.vb">
+      <DependentUpon>CustomerReceiptView.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CustomerReceiptPagevb.vb">
+    <Compile Include="Forms\CustomerReceiptView.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CustomerThankzPage.Designer.vb">
-      <DependentUpon>CustomerThankzPage.vb</DependentUpon>
+    <Compile Include="Forms\CustomerThankYouView.Designer.vb">
+      <DependentUpon>CustomerThankYouView.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CustomerThankzPage.vb">
+    <Compile Include="Forms\CustomerThankYouView.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Login.Designer.vb">
@@ -308,35 +308,35 @@
     <EmbeddedResource Include="Forms\AdminTestPageView.resx">
       <DependentUpon>AdminTestPageView.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CustomerAddNotePage.resx">
-      <DependentUpon>CustomerAddNotePage.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\CustomerAddNoteView.resx">
+      <DependentUpon>CustomerAddNoteView.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CustomerConfirmOrder.resx">
-      <DependentUpon>CustomerConfirmOrder.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\CustomerConfirmOrderView.resx">
+      <DependentUpon>CustomerConfirmOrderView.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CustomerHomePage.resx">
-      <DependentUpon>CustomerHomePage.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\CustomerHomeView.resx">
+      <DependentUpon>CustomerHomeView.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CustomerLandingPage.resx">
-      <DependentUpon>CustomerLandingPage.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\CustomerLandingView.resx">
+      <DependentUpon>CustomerLandingView.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CustomerMenuPage.resx">
-      <DependentUpon>CustomerMenuPage.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\CustomerMenuView.resx">
+      <DependentUpon>CustomerMenuView.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CustomerOrderListPage.resx">
-      <DependentUpon>CustomerOrderListPage.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\CustomerOrderListView.resx">
+      <DependentUpon>CustomerOrderListView.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CustomerOrderQuantityPage.resx">
-      <DependentUpon>CustomerOrderQuantityPage.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\CustomerOrderQuantityView.resx">
+      <DependentUpon>CustomerOrderQuantityView.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CustomerPaymentPage.resx">
-      <DependentUpon>CustomerPaymentPage.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\CustomerPaymentView.resx">
+      <DependentUpon>CustomerPaymentView.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CustomerReceiptPagevb.resx">
-      <DependentUpon>CustomerReceiptPagevb.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\CustomerReceiptView.resx">
+      <DependentUpon>CustomerReceiptView.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CustomerThankzPage.resx">
-      <DependentUpon>CustomerThankzPage.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\CustomerThankYouView.resx">
+      <DependentUpon>CustomerThankYouView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
