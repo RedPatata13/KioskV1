@@ -14,17 +14,22 @@ Namespace KioskV0.Classes
         Public Sub LoadAsEdit(model As MenuModel)
             model.Validate()
             _view.Label = "Edit Menu"
+            _view.DeleteButton.Visible = True
             _mediator.LayoutAction(Sub()
                                        _mediator.AddAction(Sub() LoadWithDetails(model))
                                        _mediator.AddAction(Sub() _mediator.SwapPage(AdminKeys.AdminEditMenuDetails))
                                        _mediator.InvokeAllAction()
                                    End Sub)
-
+            _view.DeleteButtonClick = Sub() DeleteMenu(model)
             _view.SaveButtonClick = Sub() UpdateMenu(model)
         End Sub
-
+        'Public Sub LoadAsDelete(model As MenuModel)
+        '    model.ValidateOrGetErrors()
+        '    _view.Label = ""
+        'End Sub
         Private Sub RestoreView()
             _view.ResetFields()
+            _view.DeleteButton.Visible = False
             _view.Label = "Add Menu"
             _view.SaveButtonClick = AddressOf SaveButtonClick
         End Sub
@@ -35,14 +40,14 @@ Namespace KioskV0.Classes
             _view.SelectImageClick = AddressOf SelectImageClick
             _view.SaveButtonClick = AddressOf SaveButtonClick
         End Sub
-        Protected Sub AddActions()
-            ExternalActions.Add("LoadWithDetails", AddressOf LoadWithDetails)
+        Private Sub DeleteMenu(model As MenuModel)
+            '_mediator.DeleteMenu(model)
+            _mediator.AddAction(Sub() _mediator.SwapPage(Previous))
+            _mediator.AddAction(Sub() _mediator.DeleteMenu(model))
+            _mediator.AddAction(Sub() RestoreView())
+            '_mediator.AddAction(Sub() MessageBox.Show("Menu Deleted"))
+            _mediator.InvokeAllAction()
         End Sub
-        Protected Overrides Sub InitializeActions()
-            ExternalActions = New Dictionary(Of String, Action(Of Model.BaseModel))
-            'InternalActions = New Dictionary(Of String, Action(Of ViewModel(Of)
-        End Sub
-
         Private Sub CancelButtonClick()
             _mediator.AddAction(Sub() _mediator.SwapPage(Previous))
             _mediator.AddAction(Sub() RestoreView())
@@ -121,8 +126,6 @@ Namespace KioskV0.Classes
             _view.ProductDescription = model.ProductDescription
             _view.Cost = $"{model.Cost}"
             _view.Sell = $"{model.Selling}"
-
-            '_mediator.SwapPage(AdminKeys.AdminEditMenuDetails)
         End Sub
 
         Private Sub DefaultLoad()

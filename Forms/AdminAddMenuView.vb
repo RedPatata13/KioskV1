@@ -3,7 +3,7 @@
         Public Property SaveButtonClick As Action
         Public Property CancelButtonClick As Action
         Public Property SelectImageClick As Action
-
+        Public Property DeleteButtonClick As Action
         Public Property MenuName
             Get
                 Return ProductNameTextBox.Text
@@ -97,8 +97,8 @@
             SelectImageClick?.Invoke()
         End Sub
 
-        Private Sub AdminEditMenuDetailsView_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Private Sub DeleteButton_Click(sender As Object, e As EventArgs) Handles DeleteButton.Click
+            DeleteButtonClick?.Invoke()
         End Sub
     End Class
 End Namespace

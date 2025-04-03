@@ -14,6 +14,7 @@
                 {AdminKeys.AdminAddUser, New Classes.AdminAddUserViewModel(New Forms.AdminAddUserView(), mediator)},
                 {AdminKeys.AdminEditMenuDetails, New Classes.AdminEditMenuDetailsViewModel(New Forms.AdminEditMenuDetailsView(), mediator)},
                 {AdminKeys.AdminEditInventory, New Classes.AdminEditInventoryViewModel(New Forms.AdminEditInventoryView(), mediator)},
+                {AdminKeys.AdminSupplyRequest, New Classes.AdminSupplyRequestViewModel(New Forms.AdminSupplyRequestView(), mediator)},
                 {AdminKeys.Sample, New Classes.SampleViewModel(New Forms.SampleForm(), mediator)}
             }
         End Function

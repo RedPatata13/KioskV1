@@ -41,6 +41,7 @@
             Me.CancelButton = New Guna.UI2.WinForms.Guna2Button()
             Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
             Me.Thumbnail = New Guna.UI2.WinForms.Guna2PictureBox()
+            Me.DeleteButton = New Guna.UI2.WinForms.Guna2Button()
             Me.Guna2Panel1.SuspendLayout()
             CType(Me.Thumbnail, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
@@ -341,12 +342,37 @@
             Me.Thumbnail.TabIndex = 7
             Me.Thumbnail.TabStop = False
             '
+            'DeleteButton
+            '
+            Me.DeleteButton.BackColor = System.Drawing.Color.White
+            Me.DeleteButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.DeleteButton.BorderRadius = 15
+            Me.DeleteButton.BorderThickness = 1
+            Me.DeleteButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.DeleteButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.DeleteButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.DeleteButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.DeleteButton.FillColor = System.Drawing.Color.White
+            Me.DeleteButton.Font = New System.Drawing.Font("Poppins", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.DeleteButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.DeleteButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.DeleteButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.DeleteButton.HoverState.ForeColor = System.Drawing.Color.White
+            Me.DeleteButton.Location = New System.Drawing.Point(640, 760)
+            Me.DeleteButton.Margin = New System.Windows.Forms.Padding(2)
+            Me.DeleteButton.Name = "DeleteButton"
+            Me.DeleteButton.Size = New System.Drawing.Size(189, 51)
+            Me.DeleteButton.TabIndex = 23
+            Me.DeleteButton.Text = "Delete"
+            Me.DeleteButton.Visible = False
+            '
             'AdminEditMenuDetailsView
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
             Me.ClientSize = New System.Drawing.Size(1321, 878)
+            Me.Controls.Add(Me.DeleteButton)
             Me.Controls.Add(Me.Guna2Panel1)
             Me.Controls.Add(Me.CancelButton)
             Me.Controls.Add(Me.SaveButton)
@@ -393,6 +419,7 @@
         Friend WithEvents SaveButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents CancelButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
+        Friend WithEvents DeleteButton As Guna.UI2.WinForms.Guna2Button
     End Class
 
 End Namespace

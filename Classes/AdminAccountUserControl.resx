@@ -117,33 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="resource.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAATFJREFUeF7t20GKwkAQQFEP4g28y1zUQ9YQyCqIYbDFj/Me1C69SP9VAnW5AAAA
-        cGpmrjNzP5nr8RxvMjO3OXc7nuNNBIkRJEaQGEFiBIkRJEaQGEFiBIkRJEaQGEFiBIkRJEaQGEFiBIkR
-        JEaQGEFiBIkRJEaQGEFiBIkRJEaQGEFiBIkRJEaQGEFiBIkRJOZfB9kXLLcLKM3P8fYf2J45nvv0vL6I
-        um+0ssb9eL9/JshSgsQIEiNIjCAxgsQIErMkiA/DdfP6h2HR/nJnvvPXSZEgMYLECBIjSIwgMYLECBIj
-        SIwgMYLECBIjSIwgMYLECBIjSIwgMYLECBIjSIwgMYLECBIjSIwgMYLECBIjSIwgMYLECBIjSIwgMYLE
-        CBKzL6Ju28HP5jsXLAEAABb7BUJPlc7mi6sMAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="AddAccountButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAUJJREFUeF7t2zFKQ0EYRtF/Ie7AvbjRVGJwe8pAqpFE1Be86DnwdTPFy61SzAwA
-        AACfep15OM+cbm2d2e9xJ88zj+eZt1tbZ/Z73IkgMYLECBIjSIwgMYLECBIjSIwgMYLECBIjSIwgMYLE
-        CBIjSIwgMYLECBIjSIwgMYLECBIjSIwgMYLECBIjSIwgMYLECBIjSIwgMYLE/Osg6/Hk+rjSXmae9gD7
-        1pn93m/vkIeol1etHz7YvrXT/vt+mSCHTpDYBIlNkNgEiU2Q2ASJ7edB/DE8bof8MSxaH7cH2LfO7Pe4
-        E0FiBIkRJEaQGEFiBIkRJEaQGEFiBIkRJEaQGEFiBIkRJEaQGEFiBIkRJEaQGEFiBIkRJEaQGEFiBIkR
-        JEaQGEFiBIkRJEaQGEFiBIkRJGY9nry8Dr66P/vAEgAA4GDv6N93HPR7l7YAAAAASUVORK5CYII=
-</value>
-  </data>
-  <metadata name="ProductName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="SupplyID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
 </root>

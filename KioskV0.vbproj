@@ -82,6 +82,12 @@
   <ItemGroup>
     <Compile Include="Classes\ActionManager.vb" />
     <Compile Include="Classes\AdminAccountSettingsViewModel.vb" />
+    <Compile Include="Classes\AdminAccountUserControl.Designer.vb">
+      <DependentUpon>AdminAccountUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\AdminAccountUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Classes\AdminEditMenuDetailsViewModel.vb" />
     <Compile Include="Classes\AdminAddUserViewModel.vb" />
     <Compile Include="Classes\AdminDashboardViewModel.vb" />
@@ -248,6 +254,7 @@
     <Compile Include="Models\ItemModel.vb" />
     <Compile Include="Models\MenuModel.vb" />
     <Compile Include="Models\BaseModel.vb" />
+    <Compile Include="Models\OrderModel.vb" />
     <Compile Include="Models\UserModel.vb" />
     <Compile Include="UserTypeEnum.vb" />
     <Compile Include="Classes\LoginViewModel.vb" />
@@ -271,6 +278,9 @@
     <Compile Include="Program.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Classes\AdminAccountUserControl.resx">
+      <DependentUpon>AdminAccountUserControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminAccountSettingsView.resx">
       <DependentUpon>AdminAccountSettingsView.vb</DependentUpon>
     </EmbeddedResource>

@@ -1,4 +1,5 @@
-﻿Imports KioskV0.KioskV0.Model
+﻿Imports System.Web.Management
+Imports KioskV0.KioskV0.Model
 
 Namespace KioskV0.Classes
     Public Class Mediator(Of TKey)
@@ -60,6 +61,11 @@ Namespace KioskV0.Classes
             Throw New KeyNotFoundException($"Page {pageKey} not found in {GetType(TKey).Name} mediator.")
         End Sub
 
+        Public Function GetUserList() As List(Of UserModel)
+            Return _tempDB.GetUserList()
+        End Function
+
+
         Public Sub LayoutAction(action As Action)
             _Projector.LayoutAction(action)
         End Sub
@@ -67,5 +73,17 @@ Namespace KioskV0.Classes
         Public Function GetMenuList()
             Return _tempDB.GetMenuList()
         End Function
+
+        Public Function GetItemList()
+            Return _tempDB.GetItemList()
+        End Function
+
+        Public Function GetOrderList()
+            Return _tempDB.GetOrderList()
+        End Function
+
+        Public Sub DeleteMenu(model As MenuModel)
+            _tempDB.DeleteMenu(model)
+        End Sub
     End Class
 End Namespace

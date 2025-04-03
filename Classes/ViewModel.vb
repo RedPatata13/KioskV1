@@ -5,14 +5,6 @@
         Protected Friend _model
         Protected Friend _mediator As Mediator(Of TKey)
         Protected Friend Previous As TKey
-        ''' <summary>
-        ''' Actions that only require the VM itself but must rely on an external class to be invoked.
-        ''' </summary>
-        Protected Friend InternalActions As New Dictionary(Of String, Action(Of ViewModel(Of TView, TKey)))
-        ''' <summary>
-        ''' Actions that require a Model to function properly. Uses Basemodel just incase. Please cast to desired model to use properly
-        ''' </summary>
-        Protected Friend ExternalActions As New Dictionary(Of String, Action(Of Model.BaseModel))
         Public Sub New(view As TView, mediator As Mediator(Of TKey))
             _view = view
             _mediator = mediator
@@ -30,25 +22,6 @@
 
         End Sub
 
-        ''' <summary>
-        ''' Executes an action from the dictionary
-        ''' </summary>
-        ''' <param name="actionName">The key of the action</param>
-        Public Sub ExecuteInternalAction(actionName As String)
-            If InternalActions.ContainsKey(actionName) Then
-                InternalActions(actionName).Invoke(Me)
-            Else
-                MessageBox.Show($"Action '{actionName}' not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
-        End Sub
-
-        Public Sub ExecuteExternalAction(actionName As String, model As Model.BaseModel)
-            If ExternalActions.ContainsKey(actionName) Then
-                ExternalActions(actionName).Invoke(model)
-            Else
-                MessageBox.Show($"Action '{actionName}' not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
-        End Sub
 
         ''' <summary>
         ''' For popup behavios where current control must be the only interactable control

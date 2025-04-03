@@ -28,7 +28,7 @@ Namespace KioskV0.Model
         Public Property Selling As Decimal
 
         Public Sub New()
-            MenuID = Guid.NewGuid().ToString()
+            MenuID = Guid.NewGuid().ToString().Substring(0, 10)
         End Sub
     End Class
 End Namespace
