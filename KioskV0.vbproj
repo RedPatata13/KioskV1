@@ -80,6 +80,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\ActionManager.vb" />
     <Compile Include="Classes\AdminAccountSettingsViewModel.vb" />
     <Compile Include="Classes\AdminEditMenuDetailsViewModel.vb" />
     <Compile Include="Classes\AdminAddUserViewModel.vb" />

@@ -22,10 +22,6 @@
 
         Private Sub MenuButtonClick()
             _mediator.SwapPage(AdminKeys.AdminMenu)
-            _mediator.SwapPage(AdminKeys.AdminMenu)
-
-            Dim vm = DirectCast(_mediator.GetVM(AdminKeys.AdminMenu), AdminMenuViewModel)
-            vm.ExecuteInternalAction("LoadItems")
         End Sub
     End Class
 End Namespace

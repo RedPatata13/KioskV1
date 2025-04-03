@@ -6,15 +6,28 @@ Imports KioskV0.KioskV0.Model
 Namespace KioskV0.Classes
     Public Class AdminEditMenuDetailsViewModel
         Inherits ViewModel(Of Forms.AdminEditMenuDetailsView, AdminKeys)
-        'Public Property Previous As AdminKeys
-        Public Property PendingAction As Action(Of BaseModel)
+
         Public Sub New(view As Forms.AdminEditMenuDetailsView, mediator As Mediator(Of AdminKeys))
             MyBase.New(view, mediator)
-            InitializeActions()
-            AddActions()
             SetEvents()
         End Sub
+        Public Sub LoadAsEdit(model As MenuModel)
+            model.Validate()
+            _view.Label = "Edit Menu"
+            _mediator.LayoutAction(Sub()
+                                       _mediator.AddAction(Sub() LoadWithDetails(model))
+                                       _mediator.AddAction(Sub() _mediator.SwapPage(AdminKeys.AdminEditMenuDetails))
+                                       _mediator.InvokeAllAction()
+                                   End Sub)
 
+            _view.SaveButtonClick = Sub() UpdateMenu(model)
+        End Sub
+
+        Private Sub RestoreView()
+            _view.ResetFields()
+            _view.Label = "Add Menu"
+            _view.SaveButtonClick = AddressOf SaveButtonClick
+        End Sub
         Protected Friend Overrides Sub SetEvents()
             MyBase.SetEvents()
             Previous = AdminKeys.AdminLandingPage
@@ -31,12 +44,9 @@ Namespace KioskV0.Classes
         End Sub
 
         Private Sub CancelButtonClick()
-            _mediator.SwapPage(Previous)
-            _view.ResetFields()
-            'Dim temp = _view
-            '_view = New Forms.AdminAddMenuView()
-            'SetEvents()
-            'temp.Dispose()
+            _mediator.AddAction(Sub() _mediator.SwapPage(Previous))
+            _mediator.AddAction(Sub() RestoreView())
+            _mediator.InvokeAllAction()
         End Sub
 
         Private Sub SelectImageClick()
@@ -64,38 +74,55 @@ Namespace KioskV0.Classes
                 model.Selling = selling
 
                 model.Validate()
-
-                'Dim properties = model.GetType().GetProperties()
-                'Dim str As String = ""
-                'For Each prop As PropertyInfo In properties
-                '    Dim value = prop.GetValue(model)
-                '    str &= Convert.ToString(value) & vbCrLf
-                'Next
-
-                'MessageBox.Show(str)
-                PendingAction?.Invoke(model)
+                _mediator.CreateMenu(model)
                 _mediator.SwapPage(Previous)
+                RestoreView()
             Catch ex As Exception
                 MessageBox.Show("Error: " & ex.Message)
             End Try
         End Sub
+        Private Sub UpdateMenu(model As MenuModel)
+            Try
+                Dim newModel = New MenuModel()
+                newModel.MenuID = model.MenuID
+                newModel.MenuName = _view.MenuName
+                newModel.Category = _view.CategoryName
+                newModel.Supplier = _view.SupplierName
+                newModel.ProductDescription = _view.ProductDescription
+                Dim cost As Decimal
+                Dim selling As Decimal
 
-        Private Sub LoadWithDetails(model As BaseModel)
-            Dim menuModel As MenuModel = TryCast(model, MenuModel)
+                If Not Decimal.TryParse(_view.Cost, cost) Then
+                    Throw New FormatException("Invalid format for Cost.")
+                End If
+                If Not Decimal.TryParse(_view.Sell, selling) Then
+                    Throw New FormatException("Invalid format for Selling price.")
+                End If
 
-            If menuModel Is Nothing Then
-                Throw New InvalidCastException("The provided model is not of type MenuModel.")
-            End If
+                newModel.Cost = cost
+                newModel.Selling = selling
 
-            menuModel.Validate()
-            _view.MenuName = menuModel.MenuName
-            _view.CategoryName = menuModel.Category
-            _view.SupplierName = menuModel.Supplier
-            _view.ProductDescription = menuModel.ProductDescription
-            _view.Cost = $"{menuModel.Cost}"
-            _view.Sell = $"{menuModel.Selling}"
+                newModel.Validate()
 
-            _mediator.SwapPage(AdminKeys.AdminEditMenuDetails)
+                _mediator.UpdateMenu(newModel.MenuID, newModel)
+                _mediator.SwapPage(Previous)
+                RestoreView()
+            Catch ex As Exception
+                MessageBox.Show("Error: " & ex.Message)
+            End Try
+
+        End Sub
+
+        Private Sub LoadWithDetails(model As MenuModel)
+            model.Validate()
+            _view.MenuName = model.MenuName
+            _view.CategoryName = model.Category
+            _view.SupplierName = model.Supplier
+            _view.ProductDescription = model.ProductDescription
+            _view.Cost = $"{model.Cost}"
+            _view.Sell = $"{model.Selling}"
+
+            '_mediator.SwapPage(AdminKeys.AdminEditMenuDetails)
         End Sub
 
         Private Sub DefaultLoad()

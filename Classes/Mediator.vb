@@ -1,8 +1,11 @@
-﻿Namespace KioskV0.Classes
+﻿Imports KioskV0.KioskV0.Model
+
+Namespace KioskV0.Classes
     Public Class Mediator(Of TKey)
         Private Property _Login As LoginViewModel
         Private Property _Projector As Projector
         Private Property _tempDB As TempDB
+        Private Property _actionManager As New ActionManager
         Private Property VMMap As Dictionary(Of TKey, IProjectable)
         Private VMMap_Instantiated As Boolean = False
 
@@ -13,18 +16,33 @@
             _tempDB = tempDB
         End Sub
 
+        Public Sub AddAction(action As Action)
+            _actionManager.Enqueue(action)
+        End Sub
+
+        Public Sub AddPostAction(action As Action)
+            _actionManager.EnqueuePost(action)
+        End Sub
+        Public Sub InvokeNext()
+            _actionManager.ProcessNext()
+        End Sub
+        Public Sub InvokeAllAction()
+            _actionManager.ProcessAll()
+        End Sub
+
         Public Sub SetupMap(map As Dictionary(Of TKey, IProjectable))
             If VMMap_Instantiated Then Throw New Exception($"{GetType(TKey).Name} Mediator Instantiated Twice")
             VMMap = map
             VMMap_Instantiated = True
         End Sub
+        Public Sub UpdateMenu(id As String, model As Model.MenuModel)
+            _tempDB.UpdateMenu(id, model)
+        End Sub
 
+        Public Sub CreateMenu(model As MenuModel)
+            _tempDB.AddMenu(model)
+        End Sub
         Public Sub SwapPage(pageKey As TKey)
-            'If VMMap.ContainsKey(pageKey) Then
-            '    _Projector.Project(VMMap(pageKey))
-            'Else
-            '    Throw New KeyNotFoundException($"Page {pageKey} not found in {GetType(TKey).Name} mediator.")
-            'End If
             VerifyKey(pageKey)
             _Projector.Project(VMMap(pageKey))
         End Sub

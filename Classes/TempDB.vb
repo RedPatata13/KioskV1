@@ -26,6 +26,22 @@ Namespace KioskV0.Classes
 
             Return res
         End Function
+        Public Sub AddMenu(model As MenuModel)
+            TempMenu.Add(model.MenuID, model)
+        End Sub
+        Public Sub UpdateMenu(str As String, newModel As MenuModel)
+            Dim menu As MenuModel = Nothing
+            If Not TempMenu.TryGetValue(str, menu) Then
+                Throw New Exception("Menu ID does not Exist")
+            End If
+
+            If menu.MenuID <> newModel.MenuID Then
+                Throw New Exception("Menu ID found but does not match.")
+            End If
+
+            newModel.Validate()
+            TempMenu(menu.MenuID) = newModel
+        End Sub
 
         Public Function GetAccount(id As String) As AuthModel
             Dim val As AuthModel = Nothing

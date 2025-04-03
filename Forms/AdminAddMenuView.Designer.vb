@@ -23,7 +23,7 @@
         'Do not modify it using the code editor.
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
-            Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me.PageLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.ProductNameTextBox = New Guna.UI2.WinForms.Guna2TextBox()
             Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.CategoryComboBox = New Guna.UI2.WinForms.Guna2ComboBox()
@@ -45,16 +45,16 @@
             CType(Me.Thumbnail, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
-            'Guna2HtmlLabel1
+            'PageLabel
             '
-            Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(21, 19)
-            Me.Guna2HtmlLabel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-            Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(176, 51)
-            Me.Guna2HtmlLabel1.TabIndex = 5
-            Me.Guna2HtmlLabel1.Text = "Add Menu"
+            Me.PageLabel.BackColor = System.Drawing.Color.Transparent
+            Me.PageLabel.Font = New System.Drawing.Font("Montserrat", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.PageLabel.Location = New System.Drawing.Point(21, 19)
+            Me.PageLabel.Margin = New System.Windows.Forms.Padding(2)
+            Me.PageLabel.Name = "PageLabel"
+            Me.PageLabel.Size = New System.Drawing.Size(176, 51)
+            Me.PageLabel.TabIndex = 5
+            Me.PageLabel.Text = "Add Menu"
             '
             'ProductNameTextBox
             '
@@ -83,7 +83,7 @@
             Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel2.ForeColor = System.Drawing.SystemColors.ControlText
             Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(59, 227)
-            Me.Guna2HtmlLabel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.Guna2HtmlLabel2.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
             Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(196, 49)
             Me.Guna2HtmlLabel2.TabIndex = 8
@@ -102,7 +102,7 @@
             Me.CategoryComboBox.ItemHeight = 30
             Me.CategoryComboBox.Items.AddRange(New Object() {"Category1", "Category2", "Category3", "Category4"})
             Me.CategoryComboBox.Location = New System.Drawing.Point(59, 279)
-            Me.CategoryComboBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.CategoryComboBox.Margin = New System.Windows.Forms.Padding(2)
             Me.CategoryComboBox.Name = "CategoryComboBox"
             Me.CategoryComboBox.Size = New System.Drawing.Size(511, 36)
             Me.CategoryComboBox.TabIndex = 9
@@ -114,7 +114,7 @@
             Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel3.ForeColor = System.Drawing.SystemColors.ControlText
             Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(59, 114)
-            Me.Guna2HtmlLabel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.Guna2HtmlLabel3.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
             Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(291, 49)
             Me.Guna2HtmlLabel3.TabIndex = 10
@@ -133,7 +133,7 @@
             Me.SupplierComboBox.ItemHeight = 30
             Me.SupplierComboBox.Items.AddRange(New Object() {"Supplier1", "Supplier2", "Supplier3"})
             Me.SupplierComboBox.Location = New System.Drawing.Point(59, 376)
-            Me.SupplierComboBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.SupplierComboBox.Margin = New System.Windows.Forms.Padding(2)
             Me.SupplierComboBox.Name = "SupplierComboBox"
             Me.SupplierComboBox.Size = New System.Drawing.Size(511, 36)
             Me.SupplierComboBox.TabIndex = 11
@@ -145,7 +145,7 @@
             Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.ControlText
             Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(59, 324)
-            Me.Guna2HtmlLabel4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.Guna2HtmlLabel4.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
             Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(340, 49)
             Me.Guna2HtmlLabel4.TabIndex = 12
@@ -178,7 +178,7 @@
             Me.Guna2HtmlLabel5.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel5.ForeColor = System.Drawing.SystemColors.ControlText
             Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(59, 418)
-            Me.Guna2HtmlLabel5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.Guna2HtmlLabel5.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
             Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(438, 49)
             Me.Guna2HtmlLabel5.TabIndex = 14
@@ -231,7 +231,7 @@
             Me.Guna2HtmlLabel6.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel6.ForeColor = System.Drawing.SystemColors.ControlText
             Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(59, 525)
-            Me.Guna2HtmlLabel6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.Guna2HtmlLabel6.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
             Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(240, 49)
             Me.Guna2HtmlLabel6.TabIndex = 17
@@ -244,7 +244,7 @@
             Me.Guna2HtmlLabel7.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel7.ForeColor = System.Drawing.SystemColors.ControlText
             Me.Guna2HtmlLabel7.Location = New System.Drawing.Point(329, 525)
-            Me.Guna2HtmlLabel7.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.Guna2HtmlLabel7.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
             Me.Guna2HtmlLabel7.Size = New System.Drawing.Size(240, 49)
             Me.Guna2HtmlLabel7.TabIndex = 18
@@ -267,7 +267,7 @@
             Me.SelectImageButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.SelectImageButton.HoverState.ForeColor = System.Drawing.Color.White
             Me.SelectImageButton.Location = New System.Drawing.Point(880, 638)
-            Me.SelectImageButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.SelectImageButton.Margin = New System.Windows.Forms.Padding(2)
             Me.SelectImageButton.Name = "SelectImageButton"
             Me.SelectImageButton.Size = New System.Drawing.Size(189, 51)
             Me.SelectImageButton.TabIndex = 19
@@ -289,7 +289,7 @@
             Me.SaveButton.HoverState.FillColor = System.Drawing.Color.White
             Me.SaveButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.SaveButton.Location = New System.Drawing.Point(1068, 762)
-            Me.SaveButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.SaveButton.Margin = New System.Windows.Forms.Padding(2)
             Me.SaveButton.Name = "SaveButton"
             Me.SaveButton.Size = New System.Drawing.Size(189, 51)
             Me.SaveButton.TabIndex = 20
@@ -311,7 +311,7 @@
             Me.CancelButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer))
             Me.CancelButton.HoverState.ForeColor = System.Drawing.Color.White
             Me.CancelButton.Location = New System.Drawing.Point(853, 762)
-            Me.CancelButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.CancelButton.Margin = New System.Windows.Forms.Padding(2)
             Me.CancelButton.Name = "CancelButton"
             Me.CancelButton.Size = New System.Drawing.Size(189, 51)
             Me.CancelButton.TabIndex = 21
@@ -319,10 +319,10 @@
             '
             'Guna2Panel1
             '
-            Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel1)
+            Me.Guna2Panel1.Controls.Add(Me.PageLabel)
             Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
             Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
-            Me.Guna2Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.Guna2Panel1.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2Panel1.Name = "Guna2Panel1"
             Me.Guna2Panel1.Size = New System.Drawing.Size(1321, 81)
             Me.Guna2Panel1.TabIndex = 22
@@ -335,13 +335,13 @@
             Me.Thumbnail.FillColor = System.Drawing.Color.WhiteSmoke
             Me.Thumbnail.ImageRotate = 0!
             Me.Thumbnail.Location = New System.Drawing.Point(683, 124)
-            Me.Thumbnail.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.Thumbnail.Margin = New System.Windows.Forms.Padding(2)
             Me.Thumbnail.Name = "Thumbnail"
             Me.Thumbnail.Size = New System.Drawing.Size(574, 488)
             Me.Thumbnail.TabIndex = 7
             Me.Thumbnail.TabStop = False
             '
-            'AdminAddMenuView
+            'AdminEditMenuDetailsView
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -365,8 +365,8 @@
             Me.Controls.Add(Me.Thumbnail)
             Me.Controls.Add(Me.ProductNameTextBox)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-            Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-            Me.Name = "AdminAddMenuView"
+            Me.Margin = New System.Windows.Forms.Padding(2)
+            Me.Name = "AdminEditMenuDetailsView"
             Me.Text = "AdminAddMenuView"
             Me.Guna2Panel1.ResumeLayout(False)
             Me.Guna2Panel1.PerformLayout()
@@ -375,7 +375,7 @@
 
         End Sub
 
-        Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
+        Friend WithEvents PageLabel As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents ProductNameTextBox As Guna.UI2.WinForms.Guna2TextBox
         Friend WithEvents Thumbnail As Guna.UI2.WinForms.Guna2PictureBox
         Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel

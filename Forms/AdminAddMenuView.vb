@@ -70,6 +70,12 @@
                 ProductDescriptionTextBox.Text = value
             End Set
         End Property
+
+        Public WriteOnly Property Label As String
+            Set(value As String)
+                PageLabel.Text = value
+            End Set
+        End Property
         Public Sub ResetFields()
             ProductNameTextBox.Text = ""
             CategoryComboBox.SelectedIndex = -1
@@ -91,6 +97,8 @@
             SelectImageClick?.Invoke()
         End Sub
 
+        Private Sub AdminEditMenuDetailsView_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        End Sub
     End Class
 End Namespace
