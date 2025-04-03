@@ -14,7 +14,7 @@
             _view.MenuButtonClick = AddressOf MenuButtonClick
         End Sub
         Private Sub AdminDashboardButtonClick()
-            _mediator.SwapPage(AdminKeys.AdminLandingPage)
+            _mediator.SwapPage(AdminKeys.AdminDashboard)
         End Sub
         Private Sub AccountsButtonClick()
             _mediator.SwapPage(AdminKeys.AdminAccountSettings)
