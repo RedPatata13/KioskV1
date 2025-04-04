@@ -18,7 +18,7 @@
         AdminOrderHistory
         AdminStaffTransactions
         AdminAccountSettings
-        AdminAddMenu
+        AdminEditMenuDetails
         AdminAddUser
         AdminEditInventory
         AdminSupplyRequest
@@ -45,5 +45,11 @@
         SupplierEntry
         SupplierLandingPage
         SupplierTestPage
+    End Enum
+
+    Public Enum ItemStatus
+        Active
+        Inactive
+        OutOfStock
     End Enum
 End Namespace
