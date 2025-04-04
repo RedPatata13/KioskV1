@@ -12,4 +12,5 @@ Namespace KioskV0
             projector.LoginProject()
         End Sub
     End Module
+
 End Namespace

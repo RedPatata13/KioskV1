@@ -13,7 +13,7 @@
         End Property
 
         Public Sub New()
-            _projector = New ProjectorView()
+            _projector = New Form()
             _projector.WindowState = FormWindowState.Maximized
             _projector.Size = Screen.PrimaryScreen.WorkingArea.Size
             _projector.Text = "Kiosk"
@@ -31,6 +31,7 @@
             Clear()
             sidebar.Project(_projector.SidebarPanel)
         End Sub
+
         Public Sub LoginProject()
             Clear()
             Dim lvm = New LoginViewModel(Me)
@@ -46,7 +47,7 @@
             _projector.ProjectPanel.ResumeLayout()
         End Sub
         Private Sub Clear()
-            _projector.ProjectPanel.Controls.Clear()
+            _projector.Controls.Clear()
         End Sub
     End Class
 

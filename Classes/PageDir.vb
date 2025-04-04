@@ -21,8 +21,14 @@
 
 
         Public Function GetStaffPages(mediator As Mediator(Of StaffKeys)) As Dictionary(Of StaffKeys, IProjectable)
-            Return New Dictionary(Of StaffKeys, IProjectable) From {
-            {StaffKeys.StafflandingPage, New Classes.StaffLandingPageViewModel(New Forms.StaffLandingPageView(), mediator)}
+            Return New Dictionary(Of StaffKeys, IProjectable) From
+            {
+                {StaffKeys.StafflandingPage, New Classes.StaffLandingPageViewModel(New Forms.StaffLandingPageView(), mediator)},
+                {StaffKeys.StaffPayment, New Classes.StaffPaymentViewModel(New Forms.StaffPaymentView(), mediator)},
+                {StaffKeys.StaffSideBar, New Classes.StaffSideBarViewModel(New Forms.StaffSideBar(), mediator)},
+                {StaffKeys.StaffPos, New Classes.StaffPosViewModel(New Forms.StaffPosView(), mediator)},
+                {StaffKeys.StaffManagerAuthorization, New Classes.StaffManagerAuthorizationViewModel(New Forms.StaffManagerAuthorizationView(), mediator)},
+                {StaffKeys.StaffCreditSales, New Classes.StaffCreditSalesViewModel(New Forms.StaffCreditSalesView(), mediator)}
             }
         End Function
         Public Function GetCustomerPages() As Dictionary(Of CustomerKeys, IProjectable)

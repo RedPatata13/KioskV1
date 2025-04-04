@@ -30,7 +30,7 @@ Namespace KioskV0.Classes
             _db = New TempDB()
             _view = New Forms.Login()
             SetEvents()
-            PrepareView(projector.ProjectPanel)
+            PrepareView(projector._projector)
             _projector = projector
         End Sub
 
@@ -71,6 +71,7 @@ Namespace KioskV0.Classes
                 _projector.SpawnSideBar()
             End If
         End Sub
+
         Private Sub PrepareView(projector As Form)
             _view.TopLevel = False
             _view.FormBorderStyle = FormBorderStyle.None
