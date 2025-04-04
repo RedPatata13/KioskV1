@@ -18,9 +18,20 @@
             _view.Visible = True
             projector.Controls.Add(_view)
         End Sub
-        Protected Overridable Sub InitializeActions()
 
-        End Sub
+
+        'Public Sub DisplayPopup(popup As Popup)
+
+        '    DisableControls(_view, True)
+        '    Dim closing_act As Action =
+        '        Sub()
+        '            DisableControls(_view, False)
+        '            popup.Dispose()
+        '        End Sub
+
+        '    popup.Close(closing_act)
+
+        'End Sub
 
 
         ''' <summary>

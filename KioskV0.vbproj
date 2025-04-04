@@ -71,7 +71,11 @@
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
+
     <Reference Include="System.Xaml" />
+
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -129,9 +133,14 @@
     <Compile Include="Classes\SidebarTestViewModel.vb" />
     <Compile Include="Classes\StaffCreditSalesViewModel.vb" />
     <Compile Include="Classes\StaffLandingPageViewModel.vb" />
-    <Compile Include="Classes\StaffManagerAuthoViewModel.vb" />
+    <Compile Include="Classes\StaffManagerAuthorizationViewModel.vb" />
+    <Compile Include="Classes\StaffPaymentViewModel.vb" />
     <Compile Include="Classes\StaffPosViewModel.vb" />
+
     <Compile Include="Classes\TempDB.vb" />
+
+    <Compile Include="Classes\StaffSideBarViewModel.vb" />
+
     <Compile Include="Classes\ViewModel.vb" />
     <Compile Include="Forms\AdminAccountSettingsView.Designer.vb">
       <DependentUpon>AdminAccountSettingsView.vb</DependentUpon>
@@ -211,10 +220,29 @@
     <Compile Include="Forms\Login.vb">
       <SubType>Form</SubType>
     </Compile>
+
     <Compile Include="Forms\AdminMenuUserControl.Designer.vb">
       <DependentUpon>AdminMenuUserControl.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\AdminMenuUserControl.vb">
+
+    <Compile Include="Forms\StaffProductCategoryUserControl.Designer.vb">
+      <DependentUpon>StaffProductCategoryUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffProductCategoryUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\StaffProductUserControl.Designer.vb">
+      <DependentUpon>StaffProductUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffProductUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\StaffProductVariationUserControl.Designer.vb">
+      <DependentUpon>StaffProductVariationUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffProductVariationUserControl.vb">
+
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\SampleForm.Designer.vb">
@@ -253,6 +281,18 @@
     <Compile Include="Forms\StaffManagerAuthorizationView.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\StaffPaymentView.Designer.vb">
+      <DependentUpon>StaffPaymentView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffPaymentView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StaffPosOrderUserControl.Designer.vb">
+      <DependentUpon>StaffPosOrderUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffPosOrderUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Forms\StaffPosView.Designer.vb">
       <DependentUpon>StaffPosView.vb</DependentUpon>
     </Compile>
@@ -265,11 +305,26 @@
     <Compile Include="Forms\AdminSupplyRequestView.vb">
       <SubType>Form</SubType>
     </Compile>
+
     <Compile Include="Models\ItemModel.vb" />
     <Compile Include="Models\MenuModel.vb" />
     <Compile Include="Models\BaseModel.vb" />
     <Compile Include="Models\OrderModel.vb" />
     <Compile Include="Models\UserModel.vb" />
+
+    <Compile Include="Forms\StaffSideBar.Designer.vb">
+      <DependentUpon>StaffSideBar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffSideBar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StaffTotaProductsUserControl.Designer.vb">
+      <DependentUpon>StaffTotaProductsUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffTotaProductsUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+
     <Compile Include="UserTypeEnum.vb" />
     <Compile Include="Classes\LoginViewModel.vb" />
     <Compile Include="Models\AuthModel.vb" />
@@ -340,11 +395,43 @@
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="Forms\SidebarTest.resx">
       <DependentUpon>SidebarTest.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SidebarTest2.resx">
       <DependentUpon>SidebarTest2.vb</DependentUpon>
+
+    <EmbeddedResource Include="Forms\StaffProductCategoryUserControl.resx">
+      <DependentUpon>StaffProductCategoryUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffProductUserControl.resx">
+      <DependentUpon>StaffProductUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffProductVariationUserControl.resx">
+      <DependentUpon>StaffProductVariationUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffCreditSalesView.resx">
+      <DependentUpon>StaffCreditSalesView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffManagerAuthorizationView.resx">
+      <DependentUpon>StaffManagerAuthorizationView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffPaymentView.resx">
+      <DependentUpon>StaffPaymentView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffPosOrderUserControl.resx">
+      <DependentUpon>StaffPosOrderUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffPosView.resx">
+      <DependentUpon>StaffPosView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffSideBar.resx">
+      <DependentUpon>StaffSideBar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffTotaProductsUserControl.resx">
+      <DependentUpon>StaffTotaProductsUserControl.vb</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -367,8 +454,12 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+
     <Content Include="Assets\calendar %281%29.png" />
     <Content Include="Assets\customer.png" />
+
+    <None Include="Assets\Delete-itim.png" />
+
     <Content Include="Assets\icons8-equal-housing-opportunity-96 %281%29.png" />
     <Content Include="Assets\icons8-equal-housing-opportunity-96.png" />
     <Content Include="Assets\icons8-hamburger-100.png" />
