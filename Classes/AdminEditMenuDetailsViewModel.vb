@@ -23,6 +23,10 @@ Namespace KioskV0.Classes
             _view.DeleteButtonClick = Sub() DeleteMenu(model)
             _view.SaveButtonClick = Sub() UpdateMenu(model)
         End Sub
+        'Public Sub LoadAsDelete(model As MenuModel)
+        '    model.ValidateOrGetErrors()
+        '    _view.Label = ""
+        'End Sub
         Private Sub RestoreView()
             _view.ResetFields()
             _view.DeleteButton.Visible = False
