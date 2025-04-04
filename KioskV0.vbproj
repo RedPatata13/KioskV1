@@ -126,11 +126,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Classes\SampleViewModel.vb" />
-    <Compile Include="Classes\SidebarTestViewModel.vb" />
     <Compile Include="Classes\StaffCreditSalesViewModel.vb" />
     <Compile Include="Classes\StaffLandingPageViewModel.vb" />
-    <Compile Include="Classes\StaffManagerAuthoViewModel.vb" />
+    <Compile Include="Classes\StaffManagerAuthorizationViewModel.vb" />
+    <Compile Include="Classes\StaffPaymentViewModel.vb" />
     <Compile Include="Classes\StaffPosViewModel.vb" />
+    <Compile Include="Classes\StaffSideBarViewModel.vb" />
     <Compile Include="Classes\TempDB.vb" />
     <Compile Include="Classes\ViewModel.vb" />
     <Compile Include="Forms\AdminAccountSettingsView.Designer.vb">
@@ -223,18 +224,6 @@
     <Compile Include="Forms\SampleForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\SidebarTest.Designer.vb">
-      <DependentUpon>SidebarTest.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\SidebarTest.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\SidebarTest2.Designer.vb">
-      <DependentUpon>SidebarTest2.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\SidebarTest2.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Forms\StaffCreditSalesView.Designer.vb">
       <DependentUpon>StaffCreditSalesView.vb</DependentUpon>
     </Compile>
@@ -253,6 +242,18 @@
     <Compile Include="Forms\StaffManagerAuthorizationView.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\StaffPaymentView.Designer.vb">
+      <DependentUpon>StaffPaymentView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffPaymentView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StaffPosOrderUserControl.Designer.vb">
+      <DependentUpon>StaffPosOrderUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffPosOrderUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Forms\StaffPosView.Designer.vb">
       <DependentUpon>StaffPosView.vb</DependentUpon>
     </Compile>
@@ -264,6 +265,36 @@
     </Compile>
     <Compile Include="Forms\AdminSupplyRequestView.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StaffProductCategoryUserControl.Designer.vb">
+      <DependentUpon>StaffProductCategoryUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffProductCategoryUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\StaffProductUserControl.Designer.vb">
+      <DependentUpon>StaffProductUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffProductUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\StaffProductVariationUserControl.Designer.vb">
+      <DependentUpon>StaffProductVariationUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffProductVariationUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\StaffSideBar.Designer.vb">
+      <DependentUpon>StaffSideBar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffSideBar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StaffTotaProductsUserControl.Designer.vb">
+      <DependentUpon>StaffTotaProductsUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffTotaProductsUserControl.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Models\ItemModel.vb" />
     <Compile Include="Models\MenuModel.vb" />
@@ -340,11 +371,26 @@
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SidebarTest.resx">
-      <DependentUpon>SidebarTest.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\StaffPaymentView.resx">
+      <DependentUpon>StaffPaymentView.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SidebarTest2.resx">
-      <DependentUpon>SidebarTest2.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\StaffPosOrderUserControl.resx">
+      <DependentUpon>StaffPosOrderUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffProductCategoryUserControl.resx">
+      <DependentUpon>StaffProductCategoryUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffProductUserControl.resx">
+      <DependentUpon>StaffProductUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffProductVariationUserControl.resx">
+      <DependentUpon>StaffProductVariationUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffSideBar.resx">
+      <DependentUpon>StaffSideBar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffTotaProductsUserControl.resx">
+      <DependentUpon>StaffTotaProductsUserControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
