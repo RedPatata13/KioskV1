@@ -50,10 +50,10 @@
             Me.AccountsButton.HoverState.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
             Me.AccountsButton.Image = CType(resources.GetObject("AccountsButton.Image"), System.Drawing.Image)
             Me.AccountsButton.ImageSize = New System.Drawing.Size(70, 70)
-            Me.AccountsButton.Location = New System.Drawing.Point(18, 522)
-            Me.AccountsButton.Margin = New System.Windows.Forms.Padding(2)
+            Me.AccountsButton.Location = New System.Drawing.Point(24, 642)
+            Me.AccountsButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.AccountsButton.Name = "AccountsButton"
-            Me.AccountsButton.Size = New System.Drawing.Size(82, 81)
+            Me.AccountsButton.Size = New System.Drawing.Size(109, 100)
             Me.AccountsButton.TabIndex = 9
             '
             'StaffTransacButton
@@ -70,13 +70,13 @@
             Me.StaffTransacButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.StaffTransacButton.HoverState.BorderColor = System.Drawing.Color.White
             Me.StaffTransacButton.HoverState.FillColor = System.Drawing.Color.White
-            Me.StaffTransacButton.HoverState.Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
+            Me.StaffTransacButton.HoverState.Image = CType(resources.GetObject("resource.Image3"), System.Drawing.Image)
             Me.StaffTransacButton.Image = CType(resources.GetObject("StaffTransacButton.Image"), System.Drawing.Image)
             Me.StaffTransacButton.ImageSize = New System.Drawing.Size(70, 70)
-            Me.StaffTransacButton.Location = New System.Drawing.Point(18, 436)
-            Me.StaffTransacButton.Margin = New System.Windows.Forms.Padding(2)
+            Me.StaffTransacButton.Location = New System.Drawing.Point(24, 537)
+            Me.StaffTransacButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.StaffTransacButton.Name = "StaffTransacButton"
-            Me.StaffTransacButton.Size = New System.Drawing.Size(82, 81)
+            Me.StaffTransacButton.Size = New System.Drawing.Size(109, 100)
             Me.StaffTransacButton.TabIndex = 8
             '
             'OrderHistoryButton
@@ -93,13 +93,14 @@
             Me.OrderHistoryButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.OrderHistoryButton.HoverState.BorderColor = System.Drawing.Color.White
             Me.OrderHistoryButton.HoverState.FillColor = System.Drawing.Color.White
+            Me.OrderHistoryButton.HoverState.Image = CType(resources.GetObject("resource.Image4"), System.Drawing.Image)
             Me.OrderHistoryButton.HoverState.Image = CType(resources.GetObject("resource.Image2"), System.Drawing.Image)
             Me.OrderHistoryButton.Image = CType(resources.GetObject("OrderHistoryButton.Image"), System.Drawing.Image)
             Me.OrderHistoryButton.ImageSize = New System.Drawing.Size(70, 70)
-            Me.OrderHistoryButton.Location = New System.Drawing.Point(18, 350)
-            Me.OrderHistoryButton.Margin = New System.Windows.Forms.Padding(2)
+            Me.OrderHistoryButton.Location = New System.Drawing.Point(24, 431)
+            Me.OrderHistoryButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.OrderHistoryButton.Name = "OrderHistoryButton"
-            Me.OrderHistoryButton.Size = New System.Drawing.Size(82, 81)
+            Me.OrderHistoryButton.Size = New System.Drawing.Size(109, 100)
             Me.OrderHistoryButton.TabIndex = 7
             '
             'InventoryButton
@@ -119,10 +120,10 @@
             Me.InventoryButton.HoverState.Image = CType(resources.GetObject("resource.Image3"), System.Drawing.Image)
             Me.InventoryButton.Image = CType(resources.GetObject("InventoryButton.Image"), System.Drawing.Image)
             Me.InventoryButton.ImageSize = New System.Drawing.Size(70, 70)
-            Me.InventoryButton.Location = New System.Drawing.Point(18, 264)
-            Me.InventoryButton.Margin = New System.Windows.Forms.Padding(2)
+            Me.InventoryButton.Location = New System.Drawing.Point(24, 325)
+            Me.InventoryButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.InventoryButton.Name = "InventoryButton"
-            Me.InventoryButton.Size = New System.Drawing.Size(82, 81)
+            Me.InventoryButton.Size = New System.Drawing.Size(109, 100)
             Me.InventoryButton.TabIndex = 6
             '
             'LogOutButton
@@ -142,10 +143,12 @@
             Me.LogOutButton.HoverState.Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
             Me.LogOutButton.Image = CType(resources.GetObject("LogOutButton.Image"), System.Drawing.Image)
             Me.LogOutButton.ImageSize = New System.Drawing.Size(50, 50)
+            Me.LogOutButton.Location = New System.Drawing.Point(24, 967)
+            Me.LogOutButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.LogOutButton.Location = New System.Drawing.Point(16, 728)
             Me.LogOutButton.Margin = New System.Windows.Forms.Padding(2)
             Me.LogOutButton.Name = "LogOutButton"
-            Me.LogOutButton.Size = New System.Drawing.Size(82, 81)
+            Me.LogOutButton.Size = New System.Drawing.Size(109, 100)
             Me.LogOutButton.TabIndex = 10
             '
             'MenuListButton
@@ -196,10 +199,10 @@
             '
             'AdminSidebar
             '
-            Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.ClientSize = New System.Drawing.Size(119, 878)
+            Me.ClientSize = New System.Drawing.Size(159, 1081)
             Me.Controls.Add(Me.LogOutButton)
             Me.Controls.Add(Me.AccountsButton)
             Me.Controls.Add(Me.StaffTransacButton)
@@ -208,7 +211,7 @@
             Me.Controls.Add(Me.MenuListButton)
             Me.Controls.Add(Me.DashboardButton)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-            Me.Margin = New System.Windows.Forms.Padding(2)
+            Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.Name = "AdminSidebar"
             Me.Text = "AdminSidebar"
             Me.ResumeLayout(False)

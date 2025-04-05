@@ -24,128 +24,56 @@
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(StaffSideBar))
-            Me.DashboardButton = New Guna.UI2.WinForms.Guna2Button()
-            Me.MenuListButton = New Guna.UI2.WinForms.Guna2Button()
-            Me.InventoryButton = New Guna.UI2.WinForms.Guna2Button()
-            Me.OrderHistoryButton = New Guna.UI2.WinForms.Guna2Button()
-            Me.SettingsButton = New Guna.UI2.WinForms.Guna2Button()
+            Me.POSButton = New Guna.UI2.WinForms.Guna2Button()
+            Me.CreditSalesButton = New Guna.UI2.WinForms.Guna2Button()
             Me.LogOutButton = New Guna.UI2.WinForms.Guna2Button()
             Me.SuspendLayout()
             '
-            'DashboardButton
+            'POSButton
             '
-            Me.DashboardButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.DashboardButton.BorderRadius = 15
-            Me.DashboardButton.BorderThickness = 1
-            Me.DashboardButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-            Me.DashboardButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-            Me.DashboardButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-            Me.DashboardButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-            Me.DashboardButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.DashboardButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-            Me.DashboardButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.DashboardButton.HoverState.BorderColor = System.Drawing.Color.White
-            Me.DashboardButton.HoverState.FillColor = System.Drawing.Color.White
-            Me.DashboardButton.HoverState.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
-            Me.DashboardButton.Image = CType(resources.GetObject("DashboardButton.Image"), System.Drawing.Image)
-            Me.DashboardButton.ImageSize = New System.Drawing.Size(70, 70)
-            Me.DashboardButton.Location = New System.Drawing.Point(18, 92)
-            Me.DashboardButton.Margin = New System.Windows.Forms.Padding(2)
-            Me.DashboardButton.Name = "DashboardButton"
-            Me.DashboardButton.Size = New System.Drawing.Size(82, 81)
-            Me.DashboardButton.TabIndex = 2
+            Me.POSButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.POSButton.BorderRadius = 15
+            Me.POSButton.BorderThickness = 1
+            Me.POSButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.POSButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.POSButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.POSButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.POSButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.POSButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+            Me.POSButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.POSButton.HoverState.BorderColor = System.Drawing.Color.White
+            Me.POSButton.HoverState.FillColor = System.Drawing.Color.White
+            Me.POSButton.HoverState.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
+            Me.POSButton.Image = CType(resources.GetObject("POSButton.Image"), System.Drawing.Image)
+            Me.POSButton.ImageSize = New System.Drawing.Size(70, 70)
+            Me.POSButton.Location = New System.Drawing.Point(24, 113)
+            Me.POSButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+            Me.POSButton.Name = "POSButton"
+            Me.POSButton.Size = New System.Drawing.Size(109, 100)
+            Me.POSButton.TabIndex = 2
             '
-            'MenuListButton
+            'CreditSalesButton
             '
-            Me.MenuListButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.MenuListButton.BorderRadius = 15
-            Me.MenuListButton.BorderThickness = 1
-            Me.MenuListButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-            Me.MenuListButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-            Me.MenuListButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-            Me.MenuListButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-            Me.MenuListButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.MenuListButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-            Me.MenuListButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.MenuListButton.HoverState.BorderColor = System.Drawing.Color.White
-            Me.MenuListButton.HoverState.FillColor = System.Drawing.Color.White
-            Me.MenuListButton.HoverState.Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
-            Me.MenuListButton.Image = CType(resources.GetObject("MenuListButton.Image"), System.Drawing.Image)
-            Me.MenuListButton.ImageSize = New System.Drawing.Size(70, 70)
-            Me.MenuListButton.Location = New System.Drawing.Point(18, 178)
-            Me.MenuListButton.Margin = New System.Windows.Forms.Padding(2)
-            Me.MenuListButton.Name = "MenuListButton"
-            Me.MenuListButton.Size = New System.Drawing.Size(82, 81)
-            Me.MenuListButton.TabIndex = 3
-            '
-            'InventoryButton
-            '
-            Me.InventoryButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.InventoryButton.BorderRadius = 15
-            Me.InventoryButton.BorderThickness = 1
-            Me.InventoryButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-            Me.InventoryButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-            Me.InventoryButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-            Me.InventoryButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-            Me.InventoryButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.InventoryButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-            Me.InventoryButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.InventoryButton.HoverState.BorderColor = System.Drawing.Color.White
-            Me.InventoryButton.HoverState.FillColor = System.Drawing.Color.White
-            Me.InventoryButton.HoverState.Image = CType(resources.GetObject("resource.Image2"), System.Drawing.Image)
-            Me.InventoryButton.Image = CType(resources.GetObject("InventoryButton.Image"), System.Drawing.Image)
-            Me.InventoryButton.ImageSize = New System.Drawing.Size(70, 70)
-            Me.InventoryButton.Location = New System.Drawing.Point(18, 264)
-            Me.InventoryButton.Margin = New System.Windows.Forms.Padding(2)
-            Me.InventoryButton.Name = "InventoryButton"
-            Me.InventoryButton.Size = New System.Drawing.Size(82, 81)
-            Me.InventoryButton.TabIndex = 7
-            '
-            'OrderHistoryButton
-            '
-            Me.OrderHistoryButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.OrderHistoryButton.BorderRadius = 15
-            Me.OrderHistoryButton.BorderThickness = 1
-            Me.OrderHistoryButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-            Me.OrderHistoryButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-            Me.OrderHistoryButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-            Me.OrderHistoryButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-            Me.OrderHistoryButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.OrderHistoryButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-            Me.OrderHistoryButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.OrderHistoryButton.HoverState.BorderColor = System.Drawing.Color.White
-            Me.OrderHistoryButton.HoverState.FillColor = System.Drawing.Color.White
-            Me.OrderHistoryButton.HoverState.Image = CType(resources.GetObject("resource.Image3"), System.Drawing.Image)
-            Me.OrderHistoryButton.Image = CType(resources.GetObject("OrderHistoryButton.Image"), System.Drawing.Image)
-            Me.OrderHistoryButton.ImageSize = New System.Drawing.Size(70, 70)
-            Me.OrderHistoryButton.Location = New System.Drawing.Point(18, 350)
-            Me.OrderHistoryButton.Margin = New System.Windows.Forms.Padding(2)
-            Me.OrderHistoryButton.Name = "OrderHistoryButton"
-            Me.OrderHistoryButton.Size = New System.Drawing.Size(82, 81)
-            Me.OrderHistoryButton.TabIndex = 8
-            '
-            'SettingsButton
-            '
-            Me.SettingsButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.SettingsButton.BorderRadius = 15
-            Me.SettingsButton.BorderThickness = 1
-            Me.SettingsButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-            Me.SettingsButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-            Me.SettingsButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-            Me.SettingsButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-            Me.SettingsButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.SettingsButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-            Me.SettingsButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.SettingsButton.HoverState.BorderColor = System.Drawing.Color.White
-            Me.SettingsButton.HoverState.FillColor = System.Drawing.Color.White
-            Me.SettingsButton.HoverState.Image = CType(resources.GetObject("resource.Image4"), System.Drawing.Image)
-            Me.SettingsButton.Image = CType(resources.GetObject("SettingsButton.Image"), System.Drawing.Image)
-            Me.SettingsButton.ImageSize = New System.Drawing.Size(70, 70)
-            Me.SettingsButton.Location = New System.Drawing.Point(18, 436)
-            Me.SettingsButton.Margin = New System.Windows.Forms.Padding(2)
-            Me.SettingsButton.Name = "SettingsButton"
-            Me.SettingsButton.Size = New System.Drawing.Size(82, 81)
-            Me.SettingsButton.TabIndex = 10
+            Me.CreditSalesButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.CreditSalesButton.BorderRadius = 15
+            Me.CreditSalesButton.BorderThickness = 1
+            Me.CreditSalesButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.CreditSalesButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.CreditSalesButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.CreditSalesButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.CreditSalesButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.CreditSalesButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+            Me.CreditSalesButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.CreditSalesButton.HoverState.BorderColor = System.Drawing.Color.White
+            Me.CreditSalesButton.HoverState.FillColor = System.Drawing.Color.White
+            Me.CreditSalesButton.HoverState.Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
+            Me.CreditSalesButton.Image = CType(resources.GetObject("CreditSalesButton.Image"), System.Drawing.Image)
+            Me.CreditSalesButton.ImageSize = New System.Drawing.Size(70, 70)
+            Me.CreditSalesButton.Location = New System.Drawing.Point(24, 219)
+            Me.CreditSalesButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+            Me.CreditSalesButton.Name = "CreditSalesButton"
+            Me.CreditSalesButton.Size = New System.Drawing.Size(109, 100)
+            Me.CreditSalesButton.TabIndex = 3
             '
             'LogOutButton
             '
@@ -161,39 +89,34 @@
             Me.LogOutButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.LogOutButton.HoverState.BorderColor = System.Drawing.Color.White
             Me.LogOutButton.HoverState.FillColor = System.Drawing.Color.White
-            Me.LogOutButton.HoverState.Image = CType(resources.GetObject("resource.Image5"), System.Drawing.Image)
+            Me.LogOutButton.HoverState.Image = CType(resources.GetObject("resource.Image2"), System.Drawing.Image)
             Me.LogOutButton.Image = CType(resources.GetObject("LogOutButton.Image"), System.Drawing.Image)
             Me.LogOutButton.ImageSize = New System.Drawing.Size(50, 50)
-            Me.LogOutButton.Location = New System.Drawing.Point(18, 786)
-            Me.LogOutButton.Margin = New System.Windows.Forms.Padding(2)
+            Me.LogOutButton.Location = New System.Drawing.Point(24, 967)
+            Me.LogOutButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.LogOutButton.Name = "LogOutButton"
-            Me.LogOutButton.Size = New System.Drawing.Size(82, 81)
+            Me.LogOutButton.Size = New System.Drawing.Size(109, 100)
             Me.LogOutButton.TabIndex = 11
             '
             'StaffSideBar
             '
-            Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.ClientSize = New System.Drawing.Size(119, 878)
+            Me.ClientSize = New System.Drawing.Size(159, 1081)
             Me.Controls.Add(Me.LogOutButton)
-            Me.Controls.Add(Me.SettingsButton)
-            Me.Controls.Add(Me.OrderHistoryButton)
-            Me.Controls.Add(Me.InventoryButton)
-            Me.Controls.Add(Me.MenuListButton)
-            Me.Controls.Add(Me.DashboardButton)
+            Me.Controls.Add(Me.CreditSalesButton)
+            Me.Controls.Add(Me.POSButton)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+            Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.Name = "StaffSideBar"
             Me.Text = "StaffSideBar"
             Me.ResumeLayout(False)
 
         End Sub
 
-        Friend WithEvents DashboardButton As Guna.UI2.WinForms.Guna2Button
-        Friend WithEvents MenuListButton As Guna.UI2.WinForms.Guna2Button
-        Friend WithEvents InventoryButton As Guna.UI2.WinForms.Guna2Button
-        Friend WithEvents OrderHistoryButton As Guna.UI2.WinForms.Guna2Button
-        Friend WithEvents SettingsButton As Guna.UI2.WinForms.Guna2Button
+        Friend WithEvents POSButton As Guna.UI2.WinForms.Guna2Button
+        Friend WithEvents CreditSalesButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents LogOutButton As Guna.UI2.WinForms.Guna2Button
     End Class
 

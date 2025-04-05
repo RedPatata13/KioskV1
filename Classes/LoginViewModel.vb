@@ -65,8 +65,8 @@ Namespace KioskV0.Classes
                         mediator.SetupMap(GetStaffPages(mediator))
                         Dim staff_sb = New StaffSideBarViewModel(New Forms.StaffSideBar(), mediator)
                         _projector.ProjectSidebar(staff_sb)
-                        mediator.SwapPage(StaffKeys.StafflandingPage)
-                        mediator.SwapPage(StaffKeys.StafflandingPage)
+                        mediator.SwapPage(StaffKeys.StaffPos)
+                        mediator.SwapPage(StaffKeys.StaffPos)
 
                     Case UserType.Supplier
                         mediator = New Mediator(Of SupplierKeys)(_projector, Me, _db)
