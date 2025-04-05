@@ -85,5 +85,13 @@ Namespace KioskV0.Classes
         Public Sub DeleteMenu(model As MenuModel)
             _tempDB.DeleteMenu(model)
         End Sub
+
+        Public Function GetProjectorPanelSize() As Size
+            Return _Projector.GetWindowSize()
+        End Function
+
+        Public Function GetSidebarSize() As Size
+            Return _Projector.GetSidebarSize()
+        End Function
     End Class
 End Namespace

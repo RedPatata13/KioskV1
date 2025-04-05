@@ -1,5 +1,5 @@
 ﻿Public Class ProjectorView
-    Private Split = 1
+    Private Property Split As Int16 = 1
     Public Property ProjectPanel = New Form()
     Public Property SidebarPanel = New Form()
 
@@ -9,8 +9,8 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        SetupPanels()
-
+        'SetupPanels()
+        'Me.BackColor = Color.Red
     End Sub
     Public Sub AddSideBar()
         Controls.Add(SidebarPanel)
@@ -19,21 +19,28 @@
     Public Sub RemoveSideBar()
         Controls.Remove(SidebarPanel)
     End Sub
+    Public Function GetProjectPanelSize() As System.Drawing.Size
+        Return New System.Drawing.Size(Me.Width * (10 - Split) / 10, Me.Height)
+    End Function
 
+    Public Function GetSidebarPanelSize() As System.Drawing.Size
+        Return New Size(Me.Width * Split / 10, Me.Height)
+    End Function
     ''' <summary>
     ''' Function to initialize the internal panels of the ProjectorView
     ''' </summary>
-    Private Sub SetupPanels()
-        Dim proj_width = Me.Width * (10 - Split) / 10
-        Dim sidebar_width = Me.Width * Split / 10
+    Public Sub SetupPanels()
+        Dim proj_width = Me.ClientSize.Width * (10 - Split) / 10
+        Dim sidebar_width = Me.ClientSize.Width * Split / 10
 
-        SidebarPanel.Size = New Size(sidebar_width, Me.Height)
         SidebarPanel.Toplevel = False
         SidebarPanel.Dock = DockStyle.Left
         SidebarPanel.Location = New Point(0, 0)
         SidebarPanel.Visible = True
         SidebarPanel.FormBorderStyle = FormBorderStyle.None
         SidebarPanel.BackColor = Color.Red
+        SidebarPanel.Size = New Size(sidebar_width, Me.Height)
+        'SidebarPanel.BringToFront()
 
         ProjectPanel.TopLevel = False
         ProjectPanel.Dock = DockStyle.Fill

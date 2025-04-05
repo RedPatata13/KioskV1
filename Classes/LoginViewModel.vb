@@ -44,7 +44,7 @@ Namespace KioskV0.Classes
             If (password <> acc.Password) Then
                 Throw New UnauthorizedAccessException("Incorrect Password. Please check if UID or Password is correct")
             Else
-                MessageBox.Show($"Login Successful {vbCrLf}User type is: {acc.UserType}")
+                'MessageBox.Show($"Login Successful {vbCrLf}User type is: {acc.UserType}")
 
                 Dim mediator
 
