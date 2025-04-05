@@ -13,7 +13,7 @@
         End Property
 
         Public Sub New()
-            _projector = New Form()
+            _projector = New ProjectorView()
             _projector.WindowState = FormWindowState.Maximized
             _projector.Size = Screen.PrimaryScreen.WorkingArea.Size
             _projector.Text = "Kiosk"
@@ -47,7 +47,7 @@
             _projector.ProjectPanel.ResumeLayout()
         End Sub
         Private Sub Clear()
-            _projector.Controls.Clear()
+            _projector.ProjectPanel.Controls.Clear()
         End Sub
     End Class
 

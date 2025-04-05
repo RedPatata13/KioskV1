@@ -30,7 +30,7 @@ Namespace KioskV0.Classes
             _db = New TempDB()
             _view = New Forms.Login()
             SetEvents()
-            PrepareView(projector._projector)
+            PrepareView(projector.ProjectPanel)
             _projector = projector
         End Sub
 
@@ -62,6 +62,12 @@ Namespace KioskV0.Classes
 
                     Case UserType.Staff
                         mediator = New Mediator(Of StaffKeys)(_projector, Me, _db)
+                        mediator.SetupMap(GetStaffPages(mediator))
+                        Dim staff_sb = New StaffSideBarViewModel(New Forms.StaffSideBar(), mediator)
+                        _projector.ProjectSidebar(staff_sb)
+                        mediator.SwapPage(StaffKeys.StafflandingPage)
+                        mediator.SwapPage(StaffKeys.StafflandingPage)
+
                     Case UserType.Supplier
                         mediator = New Mediator(Of SupplierKeys)(_projector, Me, _db)
                     Case Else
