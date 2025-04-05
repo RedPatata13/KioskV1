@@ -63,7 +63,8 @@
             DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.OrderHistoryDataGrid.DefaultCellStyle = DataGridViewCellStyle3
             Me.OrderHistoryDataGrid.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.OrderHistoryDataGrid.Location = New System.Drawing.Point(109, 147)
+            Me.OrderHistoryDataGrid.Location = New System.Drawing.Point(82, 119)
+            Me.OrderHistoryDataGrid.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
             Me.OrderHistoryDataGrid.Name = "OrderHistoryDataGrid"
             Me.OrderHistoryDataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -77,7 +78,7 @@
             Me.OrderHistoryDataGrid.RowHeadersVisible = False
             Me.OrderHistoryDataGrid.RowHeadersWidth = 51
             Me.OrderHistoryDataGrid.RowTemplate.Height = 24
-            Me.OrderHistoryDataGrid.Size = New System.Drawing.Size(1545, 839)
+            Me.OrderHistoryDataGrid.Size = New System.Drawing.Size(1159, 682)
             Me.OrderHistoryDataGrid.TabIndex = 5
             Me.OrderHistoryDataGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
             Me.OrderHistoryDataGrid.ThemeStyle.AlternatingRowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -117,21 +118,23 @@
             '
             Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 28.2!, System.Drawing.FontStyle.Bold)
-            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(40, 44)
+            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(30, 36)
+            Me.Guna2HtmlLabel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
             Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(335, 75)
+            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(271, 61)
             Me.Guna2HtmlLabel1.TabIndex = 9
             Me.Guna2HtmlLabel1.Text = "Order History"
             '
             'AdminOrderHistoryView
             '
-            Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1761, 1080)
+            Me.ClientSize = New System.Drawing.Size(1321, 878)
             Me.Controls.Add(Me.Guna2HtmlLabel1)
             Me.Controls.Add(Me.OrderHistoryDataGrid)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+            Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
             Me.Name = "AdminOrderHistoryView"
             Me.Text = "AdminOrderHistory"
             CType(Me.OrderHistoryDataGrid, System.ComponentModel.ISupportInitialize).EndInit()

@@ -206,6 +206,12 @@
     <Compile Include="Forms\AdminTestPageView.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\AdminTransactionHistoryUserControl.Designer.vb">
+      <DependentUpon>AdminTransactionHistoryUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminTransactionHistoryUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Forms\Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
@@ -367,6 +373,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminTestPageView.resx">
       <DependentUpon>AdminTestPageView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminTransactionHistoryUserControl.resx">
+      <DependentUpon>AdminTransactionHistoryUserControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
