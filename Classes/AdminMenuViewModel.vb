@@ -36,7 +36,7 @@ Namespace KioskV0.Classes
         Private Sub MenuUserControlClick()
 
         End Sub
-        Private Sub PrepareEditMenu(model As MenuModel)
+        Private Sub PrepareEditMenu(model As Menu)
             Dim vm = DirectCast(_mediator.GetVM(AdminKeys.AdminEditMenuDetails), AdminEditMenuDetailsViewModel)
             vm.Previous = AdminKeys.AdminMenu
             vm.LoadAsEdit(model)

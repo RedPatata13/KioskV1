@@ -1,5 +1,6 @@
 ﻿Imports System.ComponentModel.DataAnnotations
 Imports System.Reflection
+Imports KioskV0.Classes
 Imports KioskV0.KioskV0.Classes
 Imports KioskV0.KioskV0.Model
 
@@ -11,7 +12,7 @@ Namespace KioskV0.Classes
             MyBase.New(view, mediator)
             SetEvents()
         End Sub
-        Public Sub LoadAsEdit(model As MenuModel)
+        Public Sub LoadAsEdit(model As Menu)
             model.Validate()
             _view.Label = "Edit Menu"
             _view.DeleteButton.Visible = True
@@ -40,7 +41,7 @@ Namespace KioskV0.Classes
             _view.SelectImageClick = AddressOf SelectImageClick
             _view.SaveButtonClick = AddressOf SaveButtonClick
         End Sub
-        Private Sub DeleteMenu(model As MenuModel)
+        Private Sub DeleteMenu(model As Menu)
             '_mediator.DeleteMenu(model)
             _mediator.AddAction(Sub() _mediator.SwapPage(Previous))
             _mediator.AddAction(Sub() _mediator.DeleteMenu(model))
@@ -60,7 +61,7 @@ Namespace KioskV0.Classes
 
         Private Sub SaveButtonClick()
             Try
-                Dim model = New MenuModel()
+                Dim model = New Menu()
                 model.MenuName = _view.MenuName
                 model.Category = _view.CategoryName
                 model.Supplier = _view.SupplierName
@@ -86,10 +87,10 @@ Namespace KioskV0.Classes
                 MessageBox.Show("Error: " & ex.Message)
             End Try
         End Sub
-        Private Sub UpdateMenu(model As MenuModel)
+        Private Sub UpdateMenu(model As Menu)
             Try
-                Dim newModel = New MenuModel()
-                newModel.MenuID = model.MenuID
+                Dim newModel = New Menu()
+                newModel.MenuId = model.MenuId
                 newModel.MenuName = _view.MenuName
                 newModel.Category = _view.CategoryName
                 newModel.Supplier = _view.SupplierName
@@ -109,7 +110,7 @@ Namespace KioskV0.Classes
 
                 newModel.Validate()
 
-                _mediator.UpdateMenu(newModel.MenuID, newModel)
+                _mediator.UpdateMenu(newModel.MenuId, newModel)
                 _mediator.SwapPage(Previous)
                 RestoreView()
             Catch ex As Exception
@@ -118,7 +119,7 @@ Namespace KioskV0.Classes
 
         End Sub
 
-        Private Sub LoadWithDetails(model As MenuModel)
+        Private Sub LoadWithDetails(model As Menu)
             model.Validate()
             _view.MenuName = model.MenuName
             _view.CategoryName = model.Category

@@ -1,6 +1,7 @@
 ﻿Namespace KioskV0.Classes
     Public Class Projector
         Public Property _projector As ProjectorView
+        Private ReadOnly _unitOfWork As IUnitOfWork
         Public ReadOnly Property ProjectPanel As Form
             Get
                 Return _projector.ProjectPanel
@@ -12,7 +13,8 @@
             End Get
         End Property
 
-        Public Sub New()
+        Public Sub New(unitOfWork As IUnitOfWork)
+            _unitOfWork = unitOfWork
             _projector = New ProjectorView()
             _projector.WindowState = FormWindowState.Maximized
             _projector.Size = Screen.PrimaryScreen.WorkingArea.Size
@@ -34,7 +36,7 @@
 
         Public Sub LoginProject()
             Clear()
-            Dim lvm = New LoginViewModel(Me)
+            Dim lvm = New LoginViewModel(Me, _unitOfWork)
             _projector.ShowDialog()
         End Sub
         Public Sub SpawnSideBar()
