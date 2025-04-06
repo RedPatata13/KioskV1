@@ -133,6 +133,7 @@
     <Compile Include="Classes\StaffPosViewModel.vb" />
     <Compile Include="Classes\StaffSideBarViewModel.vb" />
     <Compile Include="Classes\TempDB.vb" />
+    <Compile Include="Classes\UserControl.vb" />
     <Compile Include="Classes\ViewModel.vb" />
     <Compile Include="Forms\AdminAccountSettingsView.Designer.vb">
       <DependentUpon>AdminAccountSettingsView.vb</DependentUpon>
