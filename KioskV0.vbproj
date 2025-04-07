@@ -344,10 +344,10 @@
     <Compile Include="Forms\StaffTotaProductsUserControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Migrations\202504061231474_InitialCreate.Designer.vb">
-      <DependentUpon>202504061231474_InitialCreate.vb</DependentUpon>
+    <Compile Include="Migrations\202504070406116_InitialCreate.Designer.vb">
+      <DependentUpon>202504070406116_InitialCreate.vb</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202504061231474_InitialCreate.vb" />
+    <Compile Include="Migrations\202504070406116_InitialCreate.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\Customer.vb" />
     <Compile Include="Models\Inventory.vb" />
@@ -375,6 +375,8 @@
     <Compile Include="Repositories\TransactionsRepository.vb" />
     <Compile Include="Repositories\UnitOfWork.vb" />
     <Compile Include="Repositories\UsersRepository.vb" />
+    <Compile Include="Services\AdminService.vb" />
+    <Compile Include="Services\ValidationService.vb" />
     <Compile Include="UserTypeEnum.vb" />
     <Compile Include="Classes\LoginViewModel.vb" />
     <Compile Include="Models\AuthModel.vb" />
@@ -467,8 +469,8 @@
     <EmbeddedResource Include="Forms\StaffTotaProductsUserControl.resx">
       <DependentUpon>StaffTotaProductsUserControl.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504061231474_InitialCreate.resx">
-      <DependentUpon>202504061231474_InitialCreate.vb</DependentUpon>
+    <EmbeddedResource Include="Migrations\202504070406116_InitialCreate.resx">
+      <DependentUpon>202504070406116_InitialCreate.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -494,6 +496,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Assets\Burger.jpg" />
     <Content Include="Assets\calendar %281%29.png" />
     <Content Include="Assets\customer.png" />
     <Content Include="Assets\icons8-equal-housing-opportunity-96 %281%29.png" />

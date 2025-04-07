@@ -127,7 +127,7 @@ Namespace KioskV0.Classes
             Catch ex As Exception
                 ' Log and display unexpected errors
                 Dim innerExceptionMessage As String = GetInnerExceptionMessage(ex)
-                LogException(ex) ' Log the full error
+                Console.WriteLine(ex) ' Log the full error
                 MessageBox.Show("An unexpected error occurred. Please check the logs.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End Sub

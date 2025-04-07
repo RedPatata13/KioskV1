@@ -7,18 +7,17 @@ Namespace KioskV0.Model
         ''' I have no clue why I made this but just in case we'll need it
         ''' </summary>
         ''' <returns>List of errors as string</returns>
-        Public Function ValidateOrGetErrors() As List(Of String)
-            Dim errors As New List(Of String)()
-
+        Public Function ValidateOrGetErrors() As Boolean
             Dim validationResults As New List(Of ValidationResult)()
             Dim validationContext As New ValidationContext(Me, Nothing, Nothing)
 
             If Not Validator.TryValidateObject(Me, validationContext, validationResults, True) Then
                 Dim errorMessages As String = String.Join(Environment.NewLine, validationResults.Select(Function(r) r.ErrorMessage))
-                Throw New Exception(errorMessages)
+                MessageBox.Show(errorMessages, "Validation Errors", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return False
             End If
 
-            Return errors
+            Return True
         End Function
         ''' <summary>
         ''' Simpify verification for each Model type
@@ -29,7 +28,7 @@ Namespace KioskV0.Model
 
             If Not Validator.TryValidateObject(Me, validationContext, validationResults, True) Then
                 Dim errorMessages As String = String.Join(Environment.NewLine, validationResults.Select(Function(r) r.ErrorMessage))
-                Throw New Exception(errorMessages)
+                MessageBox.Show(errorMessages, "Validation Errors", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         End Sub
     End Class

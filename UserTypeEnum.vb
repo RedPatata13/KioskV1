@@ -1,10 +1,21 @@
-﻿Namespace KioskV0
+﻿Imports System.ComponentModel.DataAnnotations
+
+Namespace KioskV0
     Public Enum UserType
-        Admin
-        Staff
-        Supplier
-        Customer
-        Null
+        <Display(Name:="Admin")>
+        Admin = 0
+
+        <Display(Name:="Staff")>
+        Staff = 1
+
+        <Display(Name:="Supplier")>
+        Supplier = 2
+
+        <Display(Name:="Customer")>
+        Customer = 3
+
+        <Display(Name:="None")>
+        Null = 4
     End Enum
 
     Public Enum AdminKeys

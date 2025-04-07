@@ -1,7 +1,10 @@
-﻿Namespace KioskV0.Classes
+﻿Imports Autofac
+
+Namespace KioskV0.Classes
     Public Class Projector
         Public Property _projector As ProjectorView
         Private ReadOnly _unitOfWork As IUnitOfWork
+
         Public ReadOnly Property ProjectPanel As Form
             Get
                 Return _projector.ProjectPanel
@@ -20,7 +23,6 @@
             _projector.Size = Screen.PrimaryScreen.WorkingArea.Size
             _projector.Text = "Kiosk"
         End Sub
-
         Public Sub Project(projectable As IProjectable)
             _projector.ProjectPanel.SuspendLayout()
             projectable.Project(_projector.ProjectPanel)

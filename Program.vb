@@ -9,11 +9,16 @@ Namespace KioskV0
             Application.EnableVisualStyles()
             Application.SetCompatibleTextRenderingDefault(False)
 
+
+
             Dim container As IContainer = ContainerConfiguration.ConfigureContainer()
             Using scope As ILifetimeScope = container.BeginLifetimeScope()
                 Dim projector = scope.Resolve(Of Classes.Projector)()
                 projector.LoginProject()
             End Using
+
         End Sub
+
+
     End Module
 End Namespace

@@ -76,6 +76,22 @@
                 PageLabel.Text = value
             End Set
         End Property
+        Public Property SelectedImagePath As String
+            Get
+                Return _selectedImagePath
+            End Get
+            Set(value As String)
+                _selectedImagePath = value
+                If Not String.IsNullOrEmpty(value) AndAlso IO.File.Exists(value) Then
+                    Thumbnail.Image = Image.FromFile(value)
+                Else
+                    Thumbnail.Image = Nothing
+                End If
+            End Set
+        End Property
+
+        Private _selectedImagePath As String
+
         Public Sub ResetFields()
             ProductNameTextBox.Text = ""
             CategoryComboBox.SelectedIndex = -1

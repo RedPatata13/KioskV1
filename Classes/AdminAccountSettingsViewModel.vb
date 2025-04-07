@@ -1,4 +1,6 @@
-﻿Imports KioskV0.KioskV0.Forms
+﻿Imports Autofac
+Imports KioskV0.KioskV0.Forms
+Imports KioskV0.KioskV0.Services
 
 Namespace KioskV0.Classes
     Public Class AdminAccountSettingsViewModel
@@ -11,8 +13,6 @@ Namespace KioskV0.Classes
         End Sub
         Public Overrides Sub Project(projector As Form)
             MyBase.Project(projector)
-
-            'LoadAccounts()
             _mediator.LayoutAction(Sub() LoadAccounts())
         End Sub
         Public Sub LoadAccounts()
@@ -24,7 +24,11 @@ Namespace KioskV0.Classes
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect
             dgv.ColumnHeadersHeight = 40
             dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-            _view.DGV_Source = New BindingSource With {.DataSource = _mediator.GetUserList()}
+
+            Dim container As IContainer = ContainerConfiguration.ConfigureContainer()
+            Dim adminService = container.Resolve(Of AdminService)()
+
+            _view.DGV_Source = New BindingSource With {.DataSource = adminService.GetAllUsers()}
         End Sub
         Protected Friend Overrides Sub SetEvents()
             _view.AddAccountClick = AddressOf AddUserClick

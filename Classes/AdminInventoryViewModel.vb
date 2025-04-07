@@ -1,4 +1,6 @@
-﻿Imports KioskV0.KioskV0.Forms
+﻿Imports Autofac
+Imports KioskV0.KioskV0.Forms
+Imports KioskV0.KioskV0.Services
 
 Namespace KioskV0.Classes
     Public Class AdminInventoryViewModel
@@ -25,7 +27,11 @@ Namespace KioskV0.Classes
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect
             dgv.ColumnHeadersHeight = 40
             dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-            _view.DGV_Source = New BindingSource With {.DataSource = _mediator.GetItemList()}
+
+            Dim container As IContainer = ContainerConfiguration.ConfigureContainer()
+            Dim adminService = container.Resolve(Of AdminService)()
+
+            _view.DGV_Source = New BindingSource With {.DataSource = adminService.GetAllInventories()}
         End Sub
     End Class
 End Namespace

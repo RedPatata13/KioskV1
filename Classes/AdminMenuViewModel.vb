@@ -1,11 +1,15 @@
-﻿Imports KioskV0.KioskV0.Forms
+﻿Imports Autofac
+Imports KioskV0.KioskV0.Forms
 Imports KioskV0.KioskV0.Model
+Imports KioskV0.KioskV0.Services
 
 Namespace KioskV0.Classes
     Public Class AdminMenuViewModel
         Inherits ViewModel(Of Forms.AdminMenuView, AdminKeys)
+
         Private Property Loaded As Boolean = False
-        Public Sub New(view As AdminMenuView, mediator As Mediator(Of AdminKeys))
+        Public Sub New(view As AdminMenuView,
+                       mediator As Mediator(Of AdminKeys))
             MyBase.New(view, mediator)
             SetEvents()
         End Sub
@@ -44,7 +48,11 @@ Namespace KioskV0.Classes
 
         Private Sub LoadMenuItems()
             _view.ItemPanel.Controls.Clear()
-            Dim items = _mediator.GetMenuList()
+
+            Dim container As IContainer = ContainerConfiguration.ConfigureContainer()
+            Dim adminService = container.Resolve(Of AdminService)()
+
+            Dim items = adminService.GetAllMenus()
             For Each item In items
                 Dim uc = New AdminMenuUserControl(item)
                 uc.SelfClick = Sub() PrepareEditMenu(item)

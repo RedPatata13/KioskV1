@@ -6,7 +6,6 @@ Public Class UsersRepository
     Public Sub New(context As AppDbContext)
         MyBase.New(context)
     End Sub
-
     Public Function GetUserByUsername(username As String) As User Implements IUsersRepository.GetUserByUsername
         Return _dbSet.FirstOrDefault(Function(u) u.Username = username)
     End Function

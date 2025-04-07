@@ -91,14 +91,14 @@ Namespace Migrations
                 Function(c) New With
                     {
                         .UserId = c.Int(nullable := False, identity := True),
-                        .FirstName = c.String(),
-                        .LastName = c.String(),
-                        .Username = c.String(),
-                        .PasswordHash = c.String(),
-                        .ContactNumber = c.String(),
-                        .Email = c.String(),
-                        .Role = c.String(),
-                        .Address = c.String(),
+                        .FirstName = c.String(nullable := False, maxLength := 100),
+                        .LastName = c.String(nullable := False, maxLength := 100),
+                        .Username = c.String(nullable := False, maxLength := 50),
+                        .PasswordHash = c.String(nullable := False, maxLength := 255),
+                        .ContactNumber = c.String(maxLength := 15),
+                        .Email = c.String(maxLength := 100),
+                        .Role = c.String(nullable := False, maxLength := 50),
+                        .Address = c.String(maxLength := 200),
                         .CreatedAt = c.DateTime(nullable := False)
                     }) _
                 .PrimaryKey(Function(t) t.UserId)

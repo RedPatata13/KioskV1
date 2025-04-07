@@ -22,7 +22,7 @@ Public Class AppDbContext
         modelBuilder.Configurations.Add(New MenuConfiguration())
         modelBuilder.Configurations.Add(New SupplierConfiguration())
         modelBuilder.Configurations.Add(New TransactionConfiguration())
-
+        modelBuilder.Configurations.Add(New UserConfiguration())
         MyBase.OnModelCreating(modelBuilder)
     End Sub
 End Class
