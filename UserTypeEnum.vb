@@ -28,6 +28,14 @@
         CustomerEntry
         CustomerLandingPage
         CustomerTestPage
+        CustomerAddNote
+        CustomerOrderType
+        CustomerMenu
+        CustomerConfirmOrder
+        CustomerOrderList
+        CustomerOrderQuantity
+        CustomerInvoice
+        CustomerThankYou
     End Enum
 
     Public Enum StaffKeys

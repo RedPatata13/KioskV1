@@ -93,6 +93,10 @@
     <Compile Include="Classes\AdminStaffTransactionsViewModel.vb" />
     <Compile Include="Classes\AdminSupplyRequestViewModel.vb" />
     <Compile Include="Classes\AdminTestPageViewModel.vb" />
+    <Compile Include="Classes\CustomerConfirmOrderViewModel.vb" />
+    <Compile Include="Classes\CustomerMenuViewModel.vb" />
+    <Compile Include="Classes\CustomerOrderListViewModel.vb" />
+    <Compile Include="Classes\CustomerPaymentViewModel.vb" />
     <Compile Include="Classes\Initializer.vb" />
     <Compile Include="Classes\IProjectable.vb" />
     <Compile Include="Classes\Mediator.vb" />
@@ -182,6 +186,84 @@
     </Compile>
     <Compile Include="Forms\AdminTestPageView.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerAddNoteUserControl.Designer.vb">
+      <DependentUpon>CustomerAddNoteUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerAddNoteUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerConfirmOrderView.Designer.vb">
+      <DependentUpon>CustomerConfirmOrderView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerConfirmOrderView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerHomeView.Designer.vb">
+      <DependentUpon>CustomerHomeView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerHomeView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerInvoiceUserControl.Designer.vb">
+      <DependentUpon>CustomerInvoiceUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerInvoiceUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerMenuUserControl.Designer.vb">
+      <DependentUpon>CustomerMenuUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerMenuUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerMenuView.Designer.vb">
+      <DependentUpon>CustomerMenuView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerMenuView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerNoItemUserControl.Designer.vb">
+      <DependentUpon>CustomerNoItemUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerNoItemUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerOrderDetailsUserControl.Designer.vb">
+      <DependentUpon>CustomerOrderDetailsUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerOrderDetailsUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerOrderListView.Designer.vb">
+      <DependentUpon>CustomerOrderListView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerOrderListView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerOrderQuantityUserControl.Designer.vb">
+      <DependentUpon>CustomerOrderQuantityUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerOrderQuantityUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerOrderTypeUserControl.Designer.vb">
+      <DependentUpon>CustomerOrderTypeUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerOrderTypeUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerPaymentView.Designer.vb">
+      <DependentUpon>CustomerPaymentView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerPaymentView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerViewOrderUserControl.Designer.vb">
+      <DependentUpon>CustomerViewOrderUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerViewOrderUserControl.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
@@ -309,6 +391,45 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminTestPageView.resx">
       <DependentUpon>AdminTestPageView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerAddNoteUserControl.resx">
+      <DependentUpon>CustomerAddNoteUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerConfirmOrderView.resx">
+      <DependentUpon>CustomerConfirmOrderView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerHomeView.resx">
+      <DependentUpon>CustomerHomeView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerInvoiceUserControl.resx">
+      <DependentUpon>CustomerInvoiceUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerMenuUserControl.resx">
+      <DependentUpon>CustomerMenuUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerMenuView.resx">
+      <DependentUpon>CustomerMenuView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerNoItemUserControl.resx">
+      <DependentUpon>CustomerNoItemUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerOrderDetailsUserControl.resx">
+      <DependentUpon>CustomerOrderDetailsUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerOrderListView.resx">
+      <DependentUpon>CustomerOrderListView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerOrderQuantityUserControl.resx">
+      <DependentUpon>CustomerOrderQuantityUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerOrderTypeUserControl.resx">
+      <DependentUpon>CustomerOrderTypeUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerPaymentView.resx">
+      <DependentUpon>CustomerPaymentView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerViewOrderUserControl.resx">
+      <DependentUpon>CustomerViewOrderUserControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>

@@ -24,8 +24,11 @@
             {StaffKeys.StafflandingPage, New Classes.StaffLandingPageViewModel(New Forms.StaffLandingPageView(), mediator)}
             }
         End Function
-        Public Function GetCustomerPages() As Dictionary(Of CustomerKeys, IProjectable)
-            Return New Dictionary(Of CustomerKeys, IProjectable)
+        Public Function GetCustomerPages(mediator As Mediator(Of CustomerKeys)) As Dictionary(Of CustomerKeys, IProjectable)
+            Return New Dictionary(Of CustomerKeys, IProjectable) From
+            {
+                {CustomerKeys.CustomerAddNote, New Classes.CustomerAddNoteViewModel(New Forms.CustomerAddNoteView(), mediator)}
+            }
         End Function
         Public Function GetSupplierPages() As Dictionary(Of SupplierKeys, IProjectable)
             Return New Dictionary(Of SupplierKeys, IProjectable)

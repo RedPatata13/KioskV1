@@ -23,6 +23,7 @@
         'Do not modify it using the code editor.
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
             Me.Panel1 = New System.Windows.Forms.Panel()
             Me.SubmitButton = New Guna.UI2.WinForms.Guna2Button()
             Me.PasswordField = New Guna.UI2.WinForms.Guna2TextBox()
@@ -30,6 +31,8 @@
             Me.UIDField = New Guna.UI2.WinForms.Guna2TextBox()
             Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
             Me.Panel1.SuspendLayout()
+            CType(Me.Guna2PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.Guna2ContainerControl19.SuspendLayout()
             Me.SuspendLayout()
             '
             'Panel1
@@ -66,7 +69,7 @@
             Me.SubmitButton.ShadowDecoration.Depth = 25
             Me.SubmitButton.ShadowDecoration.Enabled = True
             Me.SubmitButton.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(0, 0, 10, 10)
-            Me.SubmitButton.Size = New System.Drawing.Size(288, 74)
+            Me.SubmitButton.Size = New System.Drawing.Size(216, 60)
             Me.SubmitButton.TabIndex = 3
             Me.SubmitButton.Text = "Submit"
             '
@@ -92,7 +95,7 @@
             Me.PasswordField.ShadowDecoration.Depth = 25
             Me.PasswordField.ShadowDecoration.Enabled = True
             Me.PasswordField.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(0, 0, 10, 10)
-            Me.PasswordField.Size = New System.Drawing.Size(628, 74)
+            Me.PasswordField.Size = New System.Drawing.Size(471, 60)
             Me.PasswordField.TabIndex = 2
             '
             'Guna2HtmlLabel1
@@ -131,7 +134,7 @@
             Me.UIDField.ShadowDecoration.Depth = 25
             Me.UIDField.ShadowDecoration.Enabled = True
             Me.UIDField.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(0, 0, 10, 10)
-            Me.UIDField.Size = New System.Drawing.Size(628, 74)
+            Me.UIDField.Size = New System.Drawing.Size(471, 60)
             Me.UIDField.TabIndex = 0
             '
             'Guna2Button1
@@ -151,7 +154,7 @@
             '
             'Login
             '
-            Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
             Me.ClientSize = New System.Drawing.Size(1920, 1080)
