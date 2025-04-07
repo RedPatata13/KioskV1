@@ -29,13 +29,14 @@
             Me.PayingAmountTextBox = New Guna.UI2.WinForms.Guna2TextBox()
             Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-            Me.Change = New Guna.UI2.WinForms.Guna2TextBox()
+            Me.ChangeTextBox = New Guna.UI2.WinForms.Guna2TextBox()
             Me.Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.PaymentChoiceCombobox = New Guna.UI2.WinForms.Guna2ComboBox()
             Me.Guna2HtmlLabel6 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.NoteTextBox = New Guna.UI2.WinForms.Guna2TextBox()
             Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
             Me.SubmitPaymentButton = New Guna.UI2.WinForms.Guna2Button()
+            Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
             Me.SuspendLayout()
             '
             'Guna2HtmlLabel1
@@ -128,28 +129,28 @@
             Me.Guna2HtmlLabel4.TabIndex = 16
             Me.Guna2HtmlLabel4.Text = "Change"
             '
-            'Change
+            'ChangeTextBox
             '
-            Me.Change.BorderColor = System.Drawing.Color.Black
-            Me.Change.BorderRadius = 18
-            Me.Change.Cursor = System.Windows.Forms.Cursors.IBeam
-            Me.Change.DefaultText = ""
-            Me.Change.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-            Me.Change.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-            Me.Change.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-            Me.Change.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-            Me.Change.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.Change.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-            Me.Change.ForeColor = System.Drawing.Color.Black
-            Me.Change.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.Change.Location = New System.Drawing.Point(35, 380)
-            Me.Change.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-            Me.Change.Name = "Change"
-            Me.Change.PlaceholderText = "00.0"
-            Me.Change.SelectedText = ""
-            Me.Change.Size = New System.Drawing.Size(272, 37)
-            Me.Change.TabIndex = 17
-            Me.Change.TextOffset = New System.Drawing.Point(0, 2)
+            Me.ChangeTextBox.BorderColor = System.Drawing.Color.Black
+            Me.ChangeTextBox.BorderRadius = 18
+            Me.ChangeTextBox.Cursor = System.Windows.Forms.Cursors.IBeam
+            Me.ChangeTextBox.DefaultText = ""
+            Me.ChangeTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+            Me.ChangeTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+            Me.ChangeTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+            Me.ChangeTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+            Me.ChangeTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.ChangeTextBox.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+            Me.ChangeTextBox.ForeColor = System.Drawing.Color.Black
+            Me.ChangeTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.ChangeTextBox.Location = New System.Drawing.Point(35, 380)
+            Me.ChangeTextBox.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
+            Me.ChangeTextBox.Name = "ChangeTextBox"
+            Me.ChangeTextBox.PlaceholderText = "00.0"
+            Me.ChangeTextBox.SelectedText = ""
+            Me.ChangeTextBox.Size = New System.Drawing.Size(272, 37)
+            Me.ChangeTextBox.TabIndex = 17
+            Me.ChangeTextBox.TextOffset = New System.Drawing.Point(0, 2)
             '
             'Guna2HtmlLabel5
             '
@@ -206,6 +207,7 @@
             Me.NoteTextBox.ForeColor = System.Drawing.Color.Black
             Me.NoteTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.NoteTextBox.Location = New System.Drawing.Point(35, 621)
+            Me.NoteTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.NoteTextBox.Name = "NoteTextBox"
             Me.NoteTextBox.PlaceholderText = ""
             Me.NoteTextBox.SelectedText = ""
@@ -253,7 +255,7 @@
             Me.Controls.Add(Me.Guna2HtmlLabel6)
             Me.Controls.Add(Me.PaymentChoiceCombobox)
             Me.Controls.Add(Me.Guna2HtmlLabel5)
-            Me.Controls.Add(Me.Change)
+            Me.Controls.Add(Me.ChangeTextBox)
             Me.Controls.Add(Me.Guna2HtmlLabel4)
             Me.Controls.Add(Me.Guna2HtmlLabel3)
             Me.Controls.Add(Me.ReceivedAmountTextBox)
@@ -273,13 +275,14 @@
         Friend WithEvents PayingAmountTextBox As Guna.UI2.WinForms.Guna2TextBox
         Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
-        Friend WithEvents Change As Guna.UI2.WinForms.Guna2TextBox
+        Friend WithEvents ChangeTextBox As Guna.UI2.WinForms.Guna2TextBox
         Friend WithEvents Guna2HtmlLabel5 As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents PaymentChoiceCombobox As Guna.UI2.WinForms.Guna2ComboBox
         Friend WithEvents Guna2HtmlLabel6 As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents NoteTextBox As Guna.UI2.WinForms.Guna2TextBox
         Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
         Friend WithEvents SubmitPaymentButton As Guna.UI2.WinForms.Guna2Button
+        Friend WithEvents PrintDocument1 As Printing.PrintDocument
     End Class
 
 End Namespace
