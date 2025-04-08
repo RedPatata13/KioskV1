@@ -8,6 +8,13 @@
             SetEvents()
         End Sub
 
+        Public Overrides Sub Project(projector As Form)
+            MyBase.Project(projector)
+
+            '_view.AutoScroll = True
+            ResizeComponents(_mediator.GetSidebarSize())
+        End Sub
+
         Protected Friend Overrides Sub SetEvents()
             _view.AccountButtonClick = AddressOf AccountsButtonClick
             _view.DashboardButtonClick = AddressOf AdminDashboardButtonClick

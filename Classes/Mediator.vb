@@ -155,5 +155,12 @@ Namespace KioskV0.Classes
             System.IO.File.AppendAllText(logFilePath, logMessage & Environment.NewLine & "----------------------------------" & Environment.NewLine)
         End Sub
 
+        Public Function GetProjectorPanelSize() As Size
+            Return _Projector.GetWindowSize()
+        End Function
+
+        Public Function GetSidebarSize() As Size
+            Return _Projector.GetSidebarSize()
+        End Function
     End Class
 End Namespace

@@ -19,6 +19,7 @@
             _projector.WindowState = FormWindowState.Maximized
             _projector.Size = Screen.PrimaryScreen.WorkingArea.Size
             _projector.Text = "Kiosk"
+            _projector.SetupPanels()
         End Sub
 
         Public Sub Project(projectable As IProjectable)
@@ -51,6 +52,14 @@
         Private Sub Clear()
             _projector.ProjectPanel.Controls.Clear()
         End Sub
+
+        Public Function GetWindowSize() As System.Drawing.Size
+            Return _projector.GetProjectPanelSize()
+        End Function
+
+        Public Function GetSidebarSize() As System.Drawing.Size
+            Return _projector.GetSidebarPanelSize()
+        End Function
     End Class
 
 End Namespace

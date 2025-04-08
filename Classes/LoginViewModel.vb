@@ -58,7 +58,7 @@ Namespace KioskV0.Classes
             If password <> acc.PasswordHash Then
                 Throw New UnauthorizedAccessException("Incorrect Password. Please check if UID or Password is correct")
             Else
-                MessageBox.Show($"Login Successful {vbCrLf}User type is: {acc.Role} , Users first name is: {acc.FirstName}")
+                'MessageBox.Show($"Login Successful {vbCrLf}User type is: {acc.UserType}")
 
                 Dim mediator
 
@@ -77,7 +77,9 @@ Namespace KioskV0.Classes
                         mediator.SetupMap(GetStaffPages(mediator))
                         Dim staff_sb = New StaffSideBarViewModel(New Forms.StaffSideBar(), mediator)
                         _projector.ProjectSidebar(staff_sb)
-                        mediator.SwapPage(StaffKeys.StafflandingPage)
+                        mediator.SwapPage(StaffKeys.StaffPos)
+                        mediator.SwapPage(StaffKeys.StaffPos)
+
                     Case UserType.Supplier
                         mediator = New Mediator(Of SupplierKeys)(_projector, Me, _unitOfWork)
                     Case Else

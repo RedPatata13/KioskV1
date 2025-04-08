@@ -118,7 +118,7 @@
             Me.Guna2HtmlLabel5.ForeColor = System.Drawing.SystemColors.ControlDarkDark
             Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(25, 19)
             Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
-            Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(109, 27)
+            Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(89, 22)
             Me.Guna2HtmlLabel5.TabIndex = 5
             Me.Guna2HtmlLabel5.Text = "+ ₱ 123,434"
             Me.Guna2HtmlLabel5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
@@ -136,11 +136,12 @@
             '
             'Guna2HtmlLabel1
             '
+            Me.Guna2HtmlLabel1.AutoSize = False
             Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Poppins", 24.0!)
             Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(128, 52)
             Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(203, 48)
+            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(394, 58)
             Me.Guna2HtmlLabel1.TabIndex = 1
             Me.Guna2HtmlLabel1.Text = "Total Sales"
             '
@@ -176,17 +177,18 @@
             Me.Guna2HtmlLabel15.Font = New System.Drawing.Font("Microsoft Sans Serif", 28.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Guna2HtmlLabel15.Location = New System.Drawing.Point(245, 131)
             Me.Guna2HtmlLabel15.Name = "Guna2HtmlLabel15"
-            Me.Guna2HtmlLabel15.Size = New System.Drawing.Size(111, 56)
+            Me.Guna2HtmlLabel15.Size = New System.Drawing.Size(91, 46)
             Me.Guna2HtmlLabel15.TabIndex = 6
             Me.Guna2HtmlLabel15.Text = "3455"
             '
             'Guna2HtmlLabel3
             '
+            Me.Guna2HtmlLabel3.AutoSize = False
             Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Poppins", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(120, 52)
             Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
-            Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(395, 48)
+            Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(535, 58)
             Me.Guna2HtmlLabel3.TabIndex = 3
             Me.Guna2HtmlLabel3.Text = "Total No. of Customer"
             '
@@ -222,17 +224,18 @@
             Me.Guna2HtmlLabel14.Font = New System.Drawing.Font("Microsoft Sans Serif", 28.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Guna2HtmlLabel14.Location = New System.Drawing.Point(63, 131)
             Me.Guna2HtmlLabel14.Name = "Guna2HtmlLabel14"
-            Me.Guna2HtmlLabel14.Size = New System.Drawing.Size(319, 56)
+            Me.Guna2HtmlLabel14.Size = New System.Drawing.Size(262, 46)
             Me.Guna2HtmlLabel14.TabIndex = 5
             Me.Guna2HtmlLabel14.Text = "₱ 123,456,789"
             '
             'Guna2HtmlLabel2
             '
+            Me.Guna2HtmlLabel2.AutoSize = False
             Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Poppins", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(133, 52)
             Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-            Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(170, 48)
+            Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(410, 58)
             Me.Guna2HtmlLabel2.TabIndex = 2
             Me.Guna2HtmlLabel2.Text = "Net Profit"
             '
@@ -281,7 +284,7 @@
             Me.Guna2HtmlLabel12.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Guna2HtmlLabel12.Location = New System.Drawing.Point(185, 54)
             Me.Guna2HtmlLabel12.Name = "Guna2HtmlLabel12"
-            Me.Guna2HtmlLabel12.Size = New System.Drawing.Size(119, 44)
+            Me.Guna2HtmlLabel12.Size = New System.Drawing.Size(97, 38)
             Me.Guna2HtmlLabel12.TabIndex = 9
             Me.Guna2HtmlLabel12.Text = "% 12.9"
             '
@@ -292,7 +295,7 @@
             Me.Guna2HtmlLabel9.ForeColor = System.Drawing.Color.DimGray
             Me.Guna2HtmlLabel9.Location = New System.Drawing.Point(157, 4)
             Me.Guna2HtmlLabel9.Name = "Guna2HtmlLabel9"
-            Me.Guna2HtmlLabel9.Size = New System.Drawing.Size(170, 27)
+            Me.Guna2HtmlLabel9.Size = New System.Drawing.Size(141, 22)
             Me.Guna2HtmlLabel9.TabIndex = 8
             Me.Guna2HtmlLabel9.Text = "Growth Percentage"
             Me.Guna2HtmlLabel9.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
@@ -315,7 +318,7 @@
             Me.Guna2HtmlLabel11.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Guna2HtmlLabel11.Location = New System.Drawing.Point(153, 53)
             Me.Guna2HtmlLabel11.Name = "Guna2HtmlLabel11"
-            Me.Guna2HtmlLabel11.Size = New System.Drawing.Size(174, 44)
+            Me.Guna2HtmlLabel11.Size = New System.Drawing.Size(141, 38)
             Me.Guna2HtmlLabel11.TabIndex = 8
             Me.Guna2HtmlLabel11.Text = "₱ 123,345"
             '
@@ -326,18 +329,19 @@
             Me.Guna2HtmlLabel8.ForeColor = System.Drawing.Color.DimGray
             Me.Guna2HtmlLabel8.Location = New System.Drawing.Point(209, 6)
             Me.Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
-            Me.Guna2HtmlLabel8.Size = New System.Drawing.Size(65, 27)
+            Me.Guna2HtmlLabel8.Size = New System.Drawing.Size(55, 22)
             Me.Guna2HtmlLabel8.TabIndex = 7
             Me.Guna2HtmlLabel8.Text = "Growth"
             Me.Guna2HtmlLabel8.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
             '
             'Guna2HtmlLabel6
             '
+            Me.Guna2HtmlLabel6.AutoSize = False
             Me.Guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel6.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Guna2HtmlLabel6.Font = New System.Drawing.Font("Poppins", 24.0!)
             Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(57, 56)
             Me.Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
-            Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(244, 48)
+            Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(489, 65)
             Me.Guna2HtmlLabel6.TabIndex = 5
             Me.Guna2HtmlLabel6.Text = "Report Graph"
             '
@@ -359,7 +363,7 @@
             Me.Guna2HtmlLabel10.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Guna2HtmlLabel10.Location = New System.Drawing.Point(156, 52)
             Me.Guna2HtmlLabel10.Name = "Guna2HtmlLabel10"
-            Me.Guna2HtmlLabel10.Size = New System.Drawing.Size(174, 44)
+            Me.Guna2HtmlLabel10.Size = New System.Drawing.Size(141, 38)
             Me.Guna2HtmlLabel10.TabIndex = 7
             Me.Guna2HtmlLabel10.Text = "₱ 123,345"
             '
@@ -370,7 +374,7 @@
             Me.Guna2HtmlLabel7.ForeColor = System.Drawing.Color.DimGray
             Me.Guna2HtmlLabel7.Location = New System.Drawing.Point(204, 8)
             Me.Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
-            Me.Guna2HtmlLabel7.Size = New System.Drawing.Size(71, 27)
+            Me.Guna2HtmlLabel7.Size = New System.Drawing.Size(59, 22)
             Me.Guna2HtmlLabel7.TabIndex = 6
             Me.Guna2HtmlLabel7.Text = "Amount"
             Me.Guna2HtmlLabel7.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
@@ -399,11 +403,12 @@
             '
             'Guna2HtmlLabel13
             '
+            Me.Guna2HtmlLabel13.AutoSize = False
             Me.Guna2HtmlLabel13.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel13.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Guna2HtmlLabel13.Font = New System.Drawing.Font("Poppins", 24.0!)
             Me.Guna2HtmlLabel13.Location = New System.Drawing.Point(485, 27)
             Me.Guna2HtmlLabel13.Name = "Guna2HtmlLabel13"
-            Me.Guna2HtmlLabel13.Size = New System.Drawing.Size(217, 48)
+            Me.Guna2HtmlLabel13.Size = New System.Drawing.Size(368, 65)
             Me.Guna2HtmlLabel13.TabIndex = 7
             Me.Guna2HtmlLabel13.Text = "Sales Trend"
             '
@@ -459,7 +464,7 @@
             Me.Guna2HtmlLabel17.ForeColor = System.Drawing.SystemColors.ControlDarkDark
             Me.Guna2HtmlLabel17.Location = New System.Drawing.Point(557, 23)
             Me.Guna2HtmlLabel17.Name = "Guna2HtmlLabel17"
-            Me.Guna2HtmlLabel17.Size = New System.Drawing.Size(33, 27)
+            Me.Guna2HtmlLabel17.Size = New System.Drawing.Size(25, 22)
             Me.Guna2HtmlLabel17.TabIndex = 6
             Me.Guna2HtmlLabel17.Text = "To:"
             Me.Guna2HtmlLabel17.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
@@ -569,7 +574,6 @@
             Me.Guna2ShadowPanel3.PerformLayout()
             CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
             Me.Guna2ShadowPanel4.ResumeLayout(False)
-            Me.Guna2ShadowPanel4.PerformLayout()
             Me.Guna2Panel5.ResumeLayout(False)
             Me.Guna2Panel5.PerformLayout()
             Me.Guna2Panel4.ResumeLayout(False)
@@ -577,7 +581,6 @@
             Me.Guna2Panel3.ResumeLayout(False)
             Me.Guna2Panel3.PerformLayout()
             Me.Guna2ShadowPanel5.ResumeLayout(False)
-            Me.Guna2ShadowPanel5.PerformLayout()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
