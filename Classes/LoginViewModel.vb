@@ -125,7 +125,6 @@ Namespace KioskV0.Classes
                 MessageBox.Show("SQL Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
             Catch ex As Exception
-                ' Log and display unexpected errors
                 Dim innerExceptionMessage As String = GetInnerExceptionMessage(ex)
                 LogException(ex) ' Log the full error
                 MessageBox.Show("An unexpected error occurred. Please check the logs.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -141,6 +140,7 @@ Namespace KioskV0.Classes
             Return message
         End Function
         Private Sub LogException(ex As Exception)
+            MessageBox.Show(ex.Message)
             Dim logFilePath As String = "error_log.txt"
             Dim logMessage As String = $"[{DateTime.Now}] ERROR: {ex.Message}{Environment.NewLine}STACK TRACE: {ex.StackTrace}"
 

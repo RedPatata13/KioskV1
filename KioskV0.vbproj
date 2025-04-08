@@ -6,12 +6,12 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{FFE6E57A-3C36-4385-8749-43D0452268BE}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <StartupObject>Sub Main</StartupObject>
     <RootNamespace>KioskV0</RootNamespace>
     <AssemblyName>KioskV0</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>Console</MyType>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -359,8 +359,9 @@
     <Compile Include="Models\OrderItem.vb" />
     <Compile Include="Models\OrderModel.vb" />
     <Compile Include="Models\Supplier.vb" />
+    <Compile Include="Models\SupplierProduct.vb" />
     <Compile Include="Models\Transaction.vb" />
-    <Compile Include="Models\User.vb" />
+    <Compile Include="Models\UserModel_1.vb" />
     <Compile Include="Models\UserModel.vb" />
     <Compile Include="Repositories\BaseRepository.vb" />
     <Compile Include="Repositories\Contracts\IBaseRepository.vb" />

@@ -89,7 +89,9 @@ Namespace KioskV0.Classes
         Public Sub DeleteMenu(model As Menu)
             _unitOfWork.Menus.Delete(model.MenuId)
         End Sub
-
+        Public Function GetUnitOfWork() As IUnitOfWork
+            Return _unitOfWork
+        End Function
         'test adding user
         Public Sub CreateUser(model As User)
             Try
