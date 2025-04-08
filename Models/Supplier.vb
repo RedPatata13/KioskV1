@@ -2,7 +2,7 @@
 Imports System.ComponentModel.DataAnnotations.Schema
 
 Public Class Supplier
-    Public Property SupplierId As Integer
+    Public Property SupplierId As String = Guid.NewGuid().ToString().Substring(0, 10)
     Public Property Name As String
     Public Property ContactNumber As String
 
@@ -11,7 +11,7 @@ Public Class Supplier
 
     Public Property Address As String
 
-    Public Property MenuId As Integer
+    Public Property MenuId As String
 
     Public Overridable Property Menu As Menu
 

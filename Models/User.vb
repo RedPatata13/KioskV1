@@ -5,7 +5,7 @@ Imports KioskV0.KioskV0.Model
 
 Public Class User
     Inherits BaseModel
-    Public Property UserId As Integer
+    Public Property UserId As String = Guid.NewGuid().ToString().Substring(0, 10)
 
     <Required(ErrorMessage:="First name is required.")>
     <StringLength(100, ErrorMessage:="First name cannot be longer than 100 characters.")>

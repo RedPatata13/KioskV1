@@ -6,7 +6,7 @@ Public Class Menu
     Inherits BaseModel
 
     <Key>
-    Public Property MenuId As Integer
+    Public Property MenuId As String = Guid.NewGuid().ToString().Substring(0, 10)
 
     <Required(ErrorMessage:="Menu name is required.")>
     <StringLength(100, ErrorMessage:="Menu name cannot exceed 100 characters.")>

@@ -2,10 +2,9 @@
 Imports System.ComponentModel.DataAnnotations.Schema
 
 Public Class OrderItem
-    Public Property OrderItemId As Integer
-
-    Public Property OrderId As Integer
-    Public Property MenuId As Integer
+    Public Property OrderItemId As String = Guid.NewGuid().ToString().Substring(0, 10)
+    Public Property OrderId As String
+    Public Property MenuId As String
 
     Public Property TotalAmount As Decimal
 

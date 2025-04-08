@@ -11,12 +11,12 @@ Namespace Migrations
                 "dbo.Customers",
                 Function(c) New With
                     {
-                        .CustomerId = c.Int(nullable := False, identity := True),
+                        .CustomerId = c.String(nullable := False, maxLength := 128),
                         .Name = c.String(maxLength := 100),
                         .Email = c.String(maxLength := 255),
                         .ContactNumber = c.String(maxLength := 15),
                         .CreatedAt = c.DateTime(nullable := False),
-                        .OrderId = c.Int(nullable := False)
+                        .OrderId = c.String(nullable := False, maxLength := 128)
                     }) _
                 .PrimaryKey(Function(t) t.CustomerId) _
                 .ForeignKey("dbo.Orders", Function(t) t.OrderId, cascadeDelete := True) _
@@ -26,10 +26,10 @@ Namespace Migrations
                 "dbo.Orders",
                 Function(c) New With
                     {
-                        .OrderId = c.Int(nullable := False, identity := True),
+                        .OrderId = c.String(nullable := False, maxLength := 128),
                         .OrderDate = c.DateTime(nullable := False),
                         .TotalAmount = c.Decimal(nullable := False, precision := 18, scale := 2),
-                        .UserId = c.Int(nullable := False),
+                        .UserId = c.String(nullable := False, maxLength := 128),
                         .CreatedAt = c.DateTime(nullable := False)
                     }) _
                 .PrimaryKey(Function(t) t.OrderId) _
@@ -40,13 +40,13 @@ Namespace Migrations
                 "dbo.OrderItems",
                 Function(c) New With
                     {
-                        .OrderItemId = c.Int(nullable := False, identity := True),
-                        .OrderId = c.Int(nullable := False),
-                        .MenuId = c.Int(nullable := False),
+                        .OrderItemId = c.String(nullable := False, maxLength := 128),
+                        .OrderId = c.String(nullable := False, maxLength := 128),
+                        .MenuId = c.String(nullable := False, maxLength := 128),
                         .TotalAmount = c.Decimal(nullable := False, precision := 18, scale := 2),
                         .Quantity = c.Int(nullable := False),
                         .Price = c.Decimal(nullable := False, precision := 18, scale := 2),
-                        .Menu_MenuId = c.Int()
+                        .Menu_MenuId = c.String(maxLength := 128)
                     }) _
                 .PrimaryKey(Function(t) t.OrderItemId) _
                 .ForeignKey("dbo.Menus", Function(t) t.Menu_MenuId) _
@@ -60,7 +60,7 @@ Namespace Migrations
                 "dbo.Menus",
                 Function(c) New With
                     {
-                        .MenuId = c.Int(nullable := False, identity := True),
+                        .MenuId = c.String(nullable := False, maxLength := 128),
                         .MenuName = c.String(nullable := False, maxLength := 100),
                         .Cost = c.Decimal(nullable := False, precision := 18, scale := 2),
                         .Selling = c.Decimal(nullable := False, precision := 18, scale := 2),
@@ -75,8 +75,8 @@ Namespace Migrations
                 "dbo.Inventories",
                 Function(c) New With
                     {
-                        .InventoryId = c.Int(nullable := False, identity := True),
-                        .MenuId = c.Int(nullable := False),
+                        .InventoryId = c.String(nullable := False, maxLength := 128),
+                        .MenuId = c.String(nullable := False, maxLength := 128),
                         .DeliveryDateAndTime = c.DateTime(nullable := False),
                         .Supplier = c.String(nullable := False, maxLength := 100),
                         .Quantity = c.Int(nullable := False),
@@ -90,7 +90,7 @@ Namespace Migrations
                 "dbo.Users",
                 Function(c) New With
                     {
-                        .UserId = c.Int(nullable := False, identity := True),
+                        .UserId = c.String(nullable := False, maxLength := 128),
                         .FirstName = c.String(nullable := False, maxLength := 100),
                         .LastName = c.String(nullable := False, maxLength := 100),
                         .Username = c.String(nullable := False, maxLength := 50),
@@ -107,13 +107,13 @@ Namespace Migrations
                 "dbo.Suppliers",
                 Function(c) New With
                     {
-                        .SupplierId = c.Int(nullable := False, identity := True),
+                        .SupplierId = c.String(nullable := False, maxLength := 128),
                         .Name = c.String(nullable := False, maxLength := 100),
                         .ContactNumber = c.String(maxLength := 15),
                         .Email = c.String(maxLength := 100),
                         .CreatedAt = c.DateTime(nullable := False),
                         .Address = c.String(maxLength := 200),
-                        .MenuId = c.Int(nullable := False)
+                        .MenuId = c.String(nullable := False, maxLength := 128)
                     }) _
                 .PrimaryKey(Function(t) t.SupplierId) _
                 .ForeignKey("dbo.Menus", Function(t) t.MenuId) _
@@ -123,12 +123,12 @@ Namespace Migrations
                 "dbo.Transactions",
                 Function(c) New With
                     {
-                        .TransactionId = c.Int(nullable := False, identity := True),
-                        .UserId = c.Int(nullable := False),
+                        .TransactionId = c.String(nullable := False, maxLength := 128),
+                        .UserId = c.String(nullable := False, maxLength := 128),
                         .TotalAmount = c.Decimal(nullable := False, precision := 18, scale := 2),
                         .Quantity = c.Int(nullable := False),
                         .Price = c.Decimal(nullable := False, precision := 18, scale := 2),
-                        .MenuId = c.Int(nullable := False),
+                        .MenuId = c.String(nullable := False, maxLength := 128),
                         .CreatedAt = c.DateTime(nullable := False)
                     }) _
                 .PrimaryKey(Function(t) t.TransactionId) _

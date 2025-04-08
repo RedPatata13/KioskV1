@@ -2,13 +2,12 @@
 Imports System.ComponentModel.DataAnnotations.Schema
 
 Public Class Order
-    Public Property OrderId As Integer
-
+    Public Property OrderId As String = Guid.NewGuid().ToString().Substring(0, 10)
     Public Property OrderDate As DateTime
 
     Public Property TotalAmount As Decimal
 
-    Public Property UserId As Integer
+    Public Property UserId As String
 
     Public Property CreatedAt As DateTime
 
