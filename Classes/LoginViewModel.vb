@@ -63,7 +63,7 @@ Namespace KioskV0.Classes
                 Dim mediator
 
                 Select Case acc.Role
-                    Case UserType.Admin
+                    Case "Admin"
                         mediator = New Mediator(Of AdminKeys)(_projector, Me, _unitOfWork)
                         mediator.SetupMap(GetAdminPages(mediator))
                         Dim sb = New AdminSideBarViewModel(New Forms.AdminSidebar(), mediator)
@@ -81,7 +81,7 @@ Namespace KioskV0.Classes
                     Case UserType.Supplier
                         mediator = New Mediator(Of SupplierKeys)(_projector, Me, _unitOfWork)
                     Case Else
-                        Throw New Exception("Invalid User Type")
+                        MessageBox.Show("User type not null")
                 End Select
 
                 _projector.SpawnSideBar()

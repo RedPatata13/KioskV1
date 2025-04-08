@@ -344,10 +344,10 @@
     <Compile Include="Forms\StaffTotaProductsUserControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Migrations\202504061231474_InitialCreate.Designer.vb">
-      <DependentUpon>202504061231474_InitialCreate.vb</DependentUpon>
+    <Compile Include="Migrations\202504070649049_InitialCreate.Designer.vb">
+      <DependentUpon>202504070649049_InitialCreate.vb</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202504061231474_InitialCreate.vb" />
+    <Compile Include="Migrations\202504070649049_InitialCreate.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\Customer.vb" />
     <Compile Include="Models\Inventory.vb" />
@@ -467,8 +467,8 @@
     <EmbeddedResource Include="Forms\StaffTotaProductsUserControl.resx">
       <DependentUpon>StaffTotaProductsUserControl.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504061231474_InitialCreate.resx">
-      <DependentUpon>202504061231474_InitialCreate.vb</DependentUpon>
+    <EmbeddedResource Include="Migrations\202504070649049_InitialCreate.resx">
+      <DependentUpon>202504070649049_InitialCreate.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
