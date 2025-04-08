@@ -24,7 +24,7 @@ Namespace KioskV0.Classes
                                        _mediator.AddAction(Sub() MyBase.Project(projector))
                                        If Not Loaded Then
                                            _mediator.AddAction(Sub() MyBase.Project(projector)) ' Required for sizing fix
-                                           _mediator.AddAction(Sub() ResizeComponents())
+                                           '_mediator.AddAction(Sub() ResizeComponents(_mediator.Get))
                                        End If
                                        _mediator.AddAction(Sub() LoadMenuItems())
                                        _mediator.InvokeAllAction()
