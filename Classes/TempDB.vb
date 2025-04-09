@@ -6,7 +6,7 @@ Namespace KioskV0.Classes
         Public Property TempMenu As Dictionary(Of String, MenuModel)
         Public Property TempAccounts As Dictionary(Of String, AuthModel)
         Public Property TempItems As Dictionary(Of String, ItemModel)
-        Public Property TempUsers As Dictionary(Of String, UserModel)
+        Public Property TempUsers As Dictionary(Of String, Model.UserModel)
         Public Property TempOrders As Dictionary(Of String, OrderModel)
         Public Sub New()
 
@@ -82,8 +82,8 @@ Namespace KioskV0.Classes
             Return res
         End Function
 
-        Public Function GetUserList() As List(Of UserModel)
-            Dim res = New List(Of UserModel)
+        Public Function GetUserList() As List(Of Model.UserModel)
+            Dim res = New List(Of Model.UserModel)
             For Each KVP In TempUsers
                 res.Add(KVP.Value)
             Next
@@ -91,7 +91,7 @@ Namespace KioskV0.Classes
             Return res
         End Function
         Public Function GetAccount(id As String) As AuthModel
-            Dim val As UserModel = Nothing
+            Dim val As Model.UserModel = Nothing
             If Not TempUsers.TryGetValue(id, val) Then
                 Throw New Exception("Account ID does not exist")
             End If

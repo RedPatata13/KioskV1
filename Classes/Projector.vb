@@ -1,6 +1,7 @@
 ﻿Namespace KioskV0.Classes
     Public Class Projector
         Public Property _projector As ProjectorView
+        Private ReadOnly _unitOfWork As IUnitOfWork
         Public ReadOnly Property ProjectPanel As Form
             Get
                 Return _projector.ProjectPanel
@@ -12,11 +13,13 @@
             End Get
         End Property
 
-        Public Sub New()
+        Public Sub New(unitOfWork As IUnitOfWork)
+            _unitOfWork = unitOfWork
             _projector = New ProjectorView()
             _projector.WindowState = FormWindowState.Maximized
             _projector.Size = Screen.PrimaryScreen.WorkingArea.Size
             _projector.Text = "Kiosk"
+            _projector.SetupPanels()
         End Sub
 
         Public Sub Project(projectable As IProjectable)
@@ -34,7 +37,7 @@
 
         Public Sub LoginProject()
             Clear()
-            Dim lvm = New LoginViewModel(Me)
+            Dim lvm = New LoginViewModel(Me, _unitOfWork)
             _projector.ShowDialog()
         End Sub
         Public Sub SpawnSideBar()
@@ -49,6 +52,14 @@
         Private Sub Clear()
             _projector.ProjectPanel.Controls.Clear()
         End Sub
+
+        Public Function GetWindowSize() As System.Drawing.Size
+            Return _projector.GetProjectPanelSize()
+        End Function
+
+        Public Function GetSidebarSize() As System.Drawing.Size
+            Return _projector.GetSidebarPanelSize()
+        End Function
     End Class
 
 End Namespace

@@ -17,12 +17,12 @@ Namespace KioskV0.Forms
             End Set
         End Property
 
-        Private Property _model As UserModel
-        Public Property Model As UserModel
+        Private Property _model As Model.UserModel
+        Public Property Model As Model.UserModel
             Get
                 Return _model
             End Get
-            Set(value As UserModel)
+            Set(value As Model.UserModel)
                 _model = value
                 SetLabels()
             End Set

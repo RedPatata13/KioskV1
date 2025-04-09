@@ -47,6 +47,17 @@
                 NoteField.Text = value
             End Set
         End Property
+        Private _suppliers As List(Of Supplier)
+
+        Public Property Suppliers() As List(Of Supplier)
+            Get
+                Return _suppliers
+            End Get
+            Set(ByVal value As List(Of Supplier))
+                _suppliers = value
+                UpdateSupplierComboBox() ' Automatically update the ComboBox when suppliers change
+            End Set
+        End Property
 
         Private Sub ConfirmButton_Click(sender As Object, e As EventArgs) Handles ConfirmButton.Click
             ConfirmButtonClick?.Invoke()
@@ -56,6 +67,18 @@
             CancelButtonClick?.Invoke()
         End Sub
 
+        ' Function to update the Supplier ComboBox
+        Private Sub UpdateSupplierComboBox()
+            ' Clear the existing items in the ComboBox
+            SupplierField.Items.Clear()
+
+            ' If there are suppliers, add them to the ComboBox
+            If _suppliers IsNot Nothing AndAlso _suppliers.Count > 0 Then
+                For Each supplier As Supplier In _suppliers
+                    SupplierField.Items.Add(supplier.Name) ' Assuming 'Name' is a property of the Supplier model
+                Next
+            End If
+        End Sub
 
     End Class
 End Namespace

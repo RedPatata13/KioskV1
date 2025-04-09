@@ -1,14 +1,16 @@
-﻿
-Imports System.ComponentModel
+﻿Imports System.ComponentModel
 Imports System.ComponentModel.DataAnnotations
+Imports System.Data.Entity.Infrastructure
+Imports System.Data.Entity.Validation
+Imports System.Data.SqlClient
 Imports KioskV0.KioskV0.Forms
 Imports KioskV0.KioskV0.Model
+
 Namespace KioskV0.Classes
     Public Class LoginViewModel
         Private Property _view As Forms.Login
-        Private Property _model
         Private Property _projector As Projector
-        Private Property _db As TempDB
+        Private ReadOnly _unitOfWork As IUnitOfWork ' access to repositories
         Private _tempModelMap As Dictionary(Of String, Model.AuthModel)
         Private _uid As String
         Private _password As String
@@ -26,12 +28,18 @@ Namespace KioskV0.Classes
                 _password = value
             End Set
         End Property
-        Public Sub New(projector As Projector)
-            _db = New TempDB()
+
+        ''' <summary>
+        ''' Constructor to initialize dependencies and prepare the view
+        ''' </summary>
+        ''' <param name="projector">Projector object to control view navigation</param>
+        ''' <param name="unitOfWork">UnitOfWork for accessing repositories</param>
+        Public Sub New(projector As Projector, unitOfWork As IUnitOfWork)
+            _unitOfWork = unitOfWork
             _view = New Forms.Login()
+            _projector = projector
             SetEvents()
             PrepareView(projector.ProjectPanel)
-            _projector = projector
         End Sub
 
         ''' <summary>
@@ -40,39 +48,42 @@ Namespace KioskV0.Classes
         ''' <param name="key">User ID</param>
         ''' <param name="password">User Password</param>
         Private Sub Authenticate(key As String, password As String)
-            Dim acc As AuthModel = _db.GetAccount(key)
-            If (password <> acc.Password) Then
+            ' Use UnitOfWork to access the UsersRepository
+            Dim acc As User = _unitOfWork.Users.GetUserByUsername(key)
+
+            If acc Is Nothing Then
+                Throw New UnauthorizedAccessException("User not found.")
+            End If
+
+            If password <> acc.PasswordHash Then
                 Throw New UnauthorizedAccessException("Incorrect Password. Please check if UID or Password is correct")
             Else
-                MessageBox.Show($"Login Successful {vbCrLf}User type is: {acc.UserType}")
+                'MessageBox.Show($"Login Successful {vbCrLf}User type is: {acc.UserType}")
 
                 Dim mediator
 
-                Select Case acc.UserType
-                    Case UserType.Admin
-                        mediator = New Mediator(Of AdminKeys)(_projector, Me, _db)
+                Select Case acc.Role
+                    Case "0"
+                        mediator = New Mediator(Of AdminKeys)(_projector, Me, _unitOfWork)
                         mediator.SetupMap(GetAdminPages(mediator))
                         Dim sb = New AdminSideBarViewModel(New Forms.AdminSidebar(), mediator)
                         _projector.ProjectSidebar(sb)
-                        mediator.SwapPage(AdminKeys.AdminDashboard) 'for sum reason only gods know, the fill doesn't happen on first call 
-                        mediator.SwapPage(AdminKeys.AdminDashboard) 'so call it again. I have no fckin clue why this happens cuz ts was working just fine before the merge
-                    Case UserType.Customer
-                        mediator = New Mediator(Of CustomerKeys)(_projector, Me, _db)
-                        mediator.SetupMap(GetCustomerPages(mediator))
-                        mediator.SwapPage(CustomerKeys.CustomerMenu)
-
-                    Case UserType.Staff
-                        mediator = New Mediator(Of StaffKeys)(_projector, Me, _db)
+                        mediator.SwapPage(AdminKeys.AdminDashboard)
+                    Case "3"
+                        mediator = New Mediator(Of CustomerKeys)(_projector, Me, _unitOfWork)
+                        mediator.SetupMap(GetCustomerPages())
+                    Case "1"
+                        mediator = New Mediator(Of StaffKeys)(_projector, Me, _unitOfWork)
                         mediator.SetupMap(GetStaffPages(mediator))
                         Dim staff_sb = New StaffSideBarViewModel(New Forms.StaffSideBar(), mediator)
                         _projector.ProjectSidebar(staff_sb)
-                        mediator.SwapPage(StaffKeys.StafflandingPage)
-                        mediator.SwapPage(StaffKeys.StafflandingPage)
+                        mediator.SwapPage(StaffKeys.StaffPos)
+                        mediator.SwapPage(StaffKeys.StaffPos)
 
-                    Case UserType.Supplier
-                        mediator = New Mediator(Of SupplierKeys)(_projector, Me, _db)
+                    Case "2"
+                        mediator = New Mediator(Of SupplierKeys)(_projector, Me, _unitOfWork)
                     Case Else
-                        Throw New Exception("Invalid User Type")
+                        MessageBox.Show("User type not null")
                 End Select
 
                 _projector.SpawnSideBar()
@@ -99,15 +110,48 @@ Namespace KioskV0.Classes
                 Password = _view.Password
                 ValidateLogin()
 
-            Catch ex As ArgumentException
-                MessageBox.Show(ex.Message)
-            Catch ex As UnauthorizedAccessException
-                MessageBox.Show(ex.Message)
-            Catch ex As Exception
-                MessageBox.Show("An unexpected Error has occured")
+            Catch ex As ValidationException
+                MessageBox.Show("Validation Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
 
+            Catch ex As DbEntityValidationException
+                ' Entity Framework validation errors
+                Dim errors = String.Join(Environment.NewLine, ex.EntityValidationErrors.SelectMany(Function(e) e.ValidationErrors).Select(Function(e) e.ErrorMessage))
+                MessageBox.Show("Database Validation Error: " & errors, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+            Catch ex As DbUpdateException
+                ' Handles EF database update errors (like duplicate keys, foreign key violations)
+                Dim innerExceptionMessage As String = GetInnerExceptionMessage(ex)
+                MessageBox.Show("Database Update Error: " & innerExceptionMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+            Catch ex As SqlException
+                ' Handles SQL-related errors
+                MessageBox.Show("SQL Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+            Catch ex As Exception
+                Dim innerExceptionMessage As String = GetInnerExceptionMessage(ex)
+                LogException(ex) ' Log the full error
+                MessageBox.Show("An unexpected error occurred. Please check the logs.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End Sub
+        Private Function GetInnerExceptionMessage(ex As Exception) As String
+            Dim message As String = ex.Message
+            Dim innerEx As Exception = ex.InnerException
+            While innerEx IsNot Nothing
+                message &= Environment.NewLine & "Inner: " & innerEx.Message
+                innerEx = innerEx.InnerException
+            End While
+            Return message
+        End Function
+        Private Sub LogException(ex As Exception)
+            MessageBox.Show(ex.Message)
+            Dim logFilePath As String = "error_log.txt"
+            Dim logMessage As String = $"[{DateTime.Now}] ERROR: {ex.Message}{Environment.NewLine}STACK TRACE: {ex.StackTrace}"
+
+            Dim innerEx As Exception = ex.InnerException
+            While innerEx IsNot Nothing
+                logMessage &= Environment.NewLine & $"INNER EXCEPTION: {innerEx.Message}{Environment.NewLine}STACK TRACE: {innerEx.StackTrace}"
+                innerEx = innerEx.InnerException
+            End While
         Private Sub CustomerButtonClick()
             Dim mediator
             mediator = New Mediator(Of CustomerKeys)(_projector, Me, _db)
@@ -115,6 +159,8 @@ Namespace KioskV0.Classes
             mediator.SwapPage(CustomerKeys.CustomerMenu)
         End Sub
 
+            System.IO.File.AppendAllText(logFilePath, logMessage & Environment.NewLine & "----------------------------------" & Environment.NewLine)
+        End Sub
         ''' <summary>
         ''' Function for checking if User Input is Valid
         ''' </summary>
@@ -130,5 +176,4 @@ Namespace KioskV0.Classes
             Authenticate(_uid, _password)
         End Sub
     End Class
-
 End Namespace

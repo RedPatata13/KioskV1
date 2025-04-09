@@ -13,19 +13,19 @@ Namespace KioskV0.Forms
                 ApplyClickEvent(Me)
             End Set
         End Property
-        Private Property _model As MenuModel
-        Public Property Model As MenuModel
+        Private Property _model As Menu
+        Public Property Model As Menu
             Get
                 Return _model
             End Get
-            Set(value As MenuModel)
+            Set(value As Menu)
                 _model = value
                 SetLabels()
             End Set
         End Property
 
 
-        Public Sub New(model As MenuModel)
+        Public Sub New(model As Menu)
 
             ' This call is required by the designer.
             InitializeComponent()

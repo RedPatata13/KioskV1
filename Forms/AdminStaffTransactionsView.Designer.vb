@@ -66,7 +66,8 @@
             DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.StaffTransacDataGrid.DefaultCellStyle = DataGridViewCellStyle3
             Me.StaffTransacDataGrid.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.StaffTransacDataGrid.Location = New System.Drawing.Point(103, 190)
+            Me.StaffTransacDataGrid.Location = New System.Drawing.Point(77, 154)
+            Me.StaffTransacDataGrid.Margin = New System.Windows.Forms.Padding(2)
             Me.StaffTransacDataGrid.Name = "StaffTransacDataGrid"
             Me.StaffTransacDataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -80,7 +81,7 @@
             Me.StaffTransacDataGrid.RowHeadersVisible = False
             Me.StaffTransacDataGrid.RowHeadersWidth = 51
             Me.StaffTransacDataGrid.RowTemplate.Height = 24
-            Me.StaffTransacDataGrid.Size = New System.Drawing.Size(1545, 839)
+            Me.StaffTransacDataGrid.Size = New System.Drawing.Size(1159, 682)
             Me.StaffTransacDataGrid.TabIndex = 6
             Me.StaffTransacDataGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
             Me.StaffTransacDataGrid.ThemeStyle.AlternatingRowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -126,9 +127,10 @@
             Me.StaffNameComboBox.Font = New System.Drawing.Font("Poppins", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.StaffNameComboBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
             Me.StaffNameComboBox.ItemHeight = 30
-            Me.StaffNameComboBox.Location = New System.Drawing.Point(103, 136)
+            Me.StaffNameComboBox.Location = New System.Drawing.Point(77, 110)
+            Me.StaffNameComboBox.Margin = New System.Windows.Forms.Padding(2)
             Me.StaffNameComboBox.Name = "StaffNameComboBox"
-            Me.StaffNameComboBox.Size = New System.Drawing.Size(221, 36)
+            Me.StaffNameComboBox.Size = New System.Drawing.Size(144, 36)
             Me.StaffNameComboBox.TabIndex = 7
             Me.StaffNameComboBox.Tag = ""
             '
@@ -148,13 +150,13 @@
             Me.SearchItem.IconLeft = CType(resources.GetObject("SearchItem.IconLeft"), System.Drawing.Image)
             Me.SearchItem.IconLeftOffset = New System.Drawing.Point(10, 0)
             Me.SearchItem.IconLeftSize = New System.Drawing.Size(25, 25)
-            Me.SearchItem.Location = New System.Drawing.Point(1247, 117)
-            Me.SearchItem.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+            Me.SearchItem.Location = New System.Drawing.Point(936, 96)
+            Me.SearchItem.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
             Me.SearchItem.Name = "SearchItem"
             Me.SearchItem.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(198, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer))
             Me.SearchItem.PlaceholderText = "Search item"
             Me.SearchItem.SelectedText = ""
-            Me.SearchItem.Size = New System.Drawing.Size(401, 55)
+            Me.SearchItem.Size = New System.Drawing.Size(301, 45)
             Me.SearchItem.TabIndex = 4
             '
             'Guna2HtmlLabel1
@@ -162,23 +164,25 @@
             Me.Guna2HtmlLabel1.AutoSize = False
             Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 28.2!, System.Drawing.FontStyle.Bold)
-            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(40, 44)
+            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(30, 36)
+            Me.Guna2HtmlLabel1.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(445, 75)
+            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(360, 61)
             Me.Guna2HtmlLabel1.TabIndex = 9
             Me.Guna2HtmlLabel1.Text = "Staff Transactions"
             '
             'AdminStaffTransactionsView
             '
-            Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1761, 1080)
+            Me.ClientSize = New System.Drawing.Size(1321, 878)
             Me.Controls.Add(Me.Guna2HtmlLabel1)
             Me.Controls.Add(Me.StaffNameComboBox)
             Me.Controls.Add(Me.StaffTransacDataGrid)
             Me.Controls.Add(Me.SearchItem)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+            Me.Margin = New System.Windows.Forms.Padding(2)
             Me.Name = "AdminStaffTransactionsView"
             Me.Text = "AdminStaffTransactions"
             CType(Me.StaffTransacDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
