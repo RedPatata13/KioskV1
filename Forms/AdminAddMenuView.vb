@@ -101,5 +101,6 @@
         Private Sub DeleteButton_Click(sender As Object, e As EventArgs) Handles DeleteButton.Click
             DeleteButtonClick?.Invoke()
         End Sub
+
     End Class
 End Namespace

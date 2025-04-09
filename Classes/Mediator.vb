@@ -42,9 +42,6 @@ Namespace KioskV0.Classes
             VMMap = map
             VMMap_Instantiated = True
         End Sub
-        Public Sub UpdateMenu(id As String, model As Menu)
-            _unitOfWork.Menus.Update(model)
-        End Sub
 
         Public Sub CreateMenu(model As Menu)
             _unitOfWork.Menus.Add(model)
@@ -236,6 +233,57 @@ Namespace KioskV0.Classes
                 If Not _userCache.ContainsKey(user.UserId) Then _userCache.Add(user.UserId, user)
                 _userCache(user.UserId) = user
             Next
+        End Sub
+        Public Sub UpdateMenu(model As Menu)
+            Try
+                ' Validate model
+                Dim validationResults As New List(Of ValidationResult)()
+                Dim validationContext As New ValidationContext(model, Nothing, Nothing)
+
+                If Not Validator.TryValidateObject(model, validationContext, validationResults, True) Then
+                    Dim errorMessages As String = String.Join(Environment.NewLine, validationResults.Select(Function(r) r.ErrorMessage))
+                    Throw New Exception(errorMessages)
+                End If
+
+                ' Update user in the database
+                Dim existing = _unitOfWork.Menus.GetMenuByID(model.MenuId)
+                existing.MenuName = model.MenuName
+                existing.Category = model.Category
+                existing.Supplier = model.Supplier
+                existing.Cost = model.Cost
+                existing.Selling = model.Cost
+                existing.ProductDescription = model.ProductDescription
+                existing.ProductImagePath = model.ProductImagePath
+                _unitOfWork.Menus.Update(existing)
+                _unitOfWork.SaveChanges()
+
+                'MessageBox.Show("User updated successfully!")
+
+            Catch ex As ValidationException
+                MessageBox.Show("Validation Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+
+            Catch ex As DbEntityValidationException
+                ' Handle Entity Framework validation errors
+                Dim errors = String.Join(Environment.NewLine, ex.EntityValidationErrors.SelectMany(Function(e) e.ValidationErrors).Select(Function(e) e.ErrorMessage))
+                MessageBox.Show("Database Validation Error: " & errors, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+            Catch ex As DbUpdateException
+                ' Handles EF database update errors (like duplicate keys, foreign key violations)
+                Dim innerExceptionMessage As String = GetInnerExceptionMessage(ex)
+                MessageBox.Show("Database Update Error: " & innerExceptionMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+            Catch ex As SqlException
+                ' Handles SQL-related errors
+                MessageBox.Show("SQL Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+            Catch ex As Exception
+                ' Log and display unexpected errors
+                Dim innerExceptionMessage As String = GetInnerExceptionMessage(ex)
+                LogException(ex) ' Log the full error
+                MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+
+
         End Sub
 
     End Class

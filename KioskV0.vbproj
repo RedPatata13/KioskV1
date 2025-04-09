@@ -131,6 +131,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\CloneHelper.vb" />
     <Compile Include="ContainerConfiguration.vb" />
     <Compile Include="Classes\ActionManager.vb" />
     <Compile Include="Classes\AdminAccountSettingsViewModel.vb" />
@@ -365,6 +366,7 @@
     <Compile Include="Models\UserModel.vb" />
     <Compile Include="Repositories\BaseRepository.vb" />
     <Compile Include="Repositories\Contracts\IBaseRepository.vb" />
+    <Compile Include="Repositories\Contracts\IMenuRepository.vb" />
     <Compile Include="Repositories\Contracts\IUnitOfWork.vb" />
     <Compile Include="Repositories\Contracts\IUsersRepository.vb" />
     <Compile Include="Repositories\CustomersRepository.vb" />

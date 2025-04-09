@@ -1,12 +1,13 @@
 ﻿Imports System.ComponentModel.DataAnnotations
 Imports System.Reflection
+Imports System.Web.ModelBinding
 Imports KioskV0.KioskV0.Classes
 Imports KioskV0.KioskV0.Model
 
 Namespace KioskV0.Classes
     Public Class AdminEditMenuDetailsViewModel
         Inherits ViewModel(Of Forms.AdminEditMenuDetailsView, AdminKeys)
-
+        Private Property Loaded As Boolean = False
         Public Sub New(view As Forms.AdminEditMenuDetailsView, mediator As Mediator(Of AdminKeys))
             MyBase.New(view, mediator)
             SetEvents()
@@ -23,7 +24,13 @@ Namespace KioskV0.Classes
             _view.DeleteButtonClick = Sub() DeleteMenu(model)
             _view.SaveButtonClick = Sub() UpdateMenu(model)
         End Sub
-
+        Public Overrides Sub Project(projector As Form)
+            If Not Loaded Then
+                ResizeComponents(_mediator.GetProjectorPanelSize())
+            End If
+            Loaded = True
+            MyBase.Project(projector)
+        End Sub
         Private Sub RestoreView()
             _view.ResetFields()
             _view.DeleteButton.Visible = False
@@ -51,10 +58,6 @@ Namespace KioskV0.Classes
             _mediator.AddAction(Sub() _mediator.SwapPage(Previous))
             _mediator.AddAction(Sub() RestoreView())
             _mediator.InvokeAllAction()
-        End Sub
-
-        Private Sub SelectImageClick()
-            MessageBox.Show("Works")
         End Sub
 
         Private Sub SaveButtonClick()
@@ -95,6 +98,7 @@ Namespace KioskV0.Classes
                 newModel.Category = _view.CategoryName
                 newModel.Supplier = _view.SupplierName
                 newModel.ProductDescription = _view.ProductDescription
+                newModel.ProductImagePath = ""
                 Dim cost As Decimal
                 Dim selling As Decimal
 
@@ -108,9 +112,9 @@ Namespace KioskV0.Classes
                 newModel.Cost = cost
                 newModel.Selling = selling
 
-                newModel.Validate()
-
-                _mediator.UpdateMenu(newModel.MenuId, newModel)
+                'newModel.Validate()
+                Dim res = _mediator.GetUnitOfWork.Menus.GetById(newModel.MenuId)
+                _mediator.UpdateMenu(newModel)
                 _mediator.SwapPage(Previous)
 
                 Dim vm = DirectCast(_mediator.GetVM(AdminKeys.AdminMenu), AdminMenuViewModel)
@@ -118,12 +122,14 @@ Namespace KioskV0.Classes
                 RestoreView()
             Catch ex As Exception
                 MessageBox.Show("Error: " & ex.Message)
+                'Throw New Exception("Yep here")
             End Try
 
         End Sub
 
         Private Sub LoadWithDetails(model As Menu)
             model.Validate()
+            'MessageBox.Show($"{model.MenuId}")
             _view.MenuName = model.MenuName
             _view.CategoryName = model.Category
             _view.SupplierName = model.Supplier
@@ -134,6 +140,28 @@ Namespace KioskV0.Classes
 
         Private Sub DefaultLoad()
             _view.ResetFields()
+        End Sub
+
+        Private Sub SelectImageClick()
+            Dim openFileDialog As New OpenFileDialog()
+
+            ' Set filter to show only supported image file types (jpg, png, bmp, gif)
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif|All Files|*.*"
+            openFileDialog.Title = "Select an Image File"
+
+            ' Show the dialog and check if the user selected a file
+            If openFileDialog.ShowDialog() = DialogResult.OK Then
+                ' Get the file path
+                Dim selectedFilePath As String = openFileDialog.FileName
+
+                ' Optionally, set the selected image to a PictureBox (if you want to preview it)
+                _view.Thumbnail.SizeMode = PictureBoxSizeMode.Zoom
+
+                _view.Thumbnail.Image = Image.FromFile(selectedFilePath)
+
+                ' Display the selected file path (for example, in a TextBox or MessageBox)
+                MessageBox.Show("Selected file: " & selectedFilePath)
+            End If
         End Sub
     End Class
 End Namespace

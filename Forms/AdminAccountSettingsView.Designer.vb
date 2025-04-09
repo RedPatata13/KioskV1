@@ -31,8 +31,6 @@
             Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.AddAccountButton = New Guna.UI2.WinForms.Guna2Button()
-            Me.ProductName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.SupplyID = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.AccountsDataGridView = New Guna.UI2.WinForms.Guna2DataGridView()
             Me._editUser = New Guna.UI2.WinForms.Guna2Button()
             CType(Me.AccountsDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -72,18 +70,6 @@
             Me.AddAccountButton.Size = New System.Drawing.Size(41, 45)
             Me.AddAccountButton.TabIndex = 7
             '
-            'ProductName
-            '
-            Me.ProductName.HeaderText = "Product"
-            Me.ProductName.MinimumWidth = 6
-            Me.ProductName.Name = "ProductName"
-            '
-            'SupplyID
-            '
-            Me.SupplyID.HeaderText = "ID"
-            Me.SupplyID.MinimumWidth = 6
-            Me.SupplyID.Name = "SupplyID"
-            '
             'AccountsDataGridView
             '
             Me.AccountsDataGridView.AllowUserToResizeRows = False
@@ -103,7 +89,6 @@
             Me.AccountsDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
             Me.AccountsDataGridView.ColumnHeadersHeight = 4
             Me.AccountsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-            Me.AccountsDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.SupplyID, Me.ProductName})
             DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
             DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -188,8 +173,6 @@
         End Sub
         Friend WithEvents AddAccountButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
-        Friend WithEvents ProductName As DataGridViewTextBoxColumn
-        Friend WithEvents SupplyID As DataGridViewTextBoxColumn
         Friend WithEvents AccountsDataGridView As Guna.UI2.WinForms.Guna2DataGridView
         Friend WithEvents _editUser As Guna.UI2.WinForms.Guna2Button
     End Class

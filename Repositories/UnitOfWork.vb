@@ -2,7 +2,7 @@
     Implements IUnitOfWork, IDisposable
 
     Public ReadOnly _context As AppDbContext
-    Public ReadOnly Property Menus As IBaseRepository(Of Menu) Implements IUnitOfWork.Menus
+    Public ReadOnly Property Menus As MenuRepository Implements IUnitOfWork.Menus
     Public ReadOnly Property Customers As IBaseRepository(Of Customer) Implements IUnitOfWork.Customers
     Public ReadOnly Property Orders As IBaseRepository(Of Order) Implements IUnitOfWork.Orders
     Public ReadOnly Property OrderItems As IBaseRepository(Of OrderItem) Implements IUnitOfWork.OrderItems
