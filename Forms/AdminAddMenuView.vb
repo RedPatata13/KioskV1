@@ -1,40 +1,81 @@
 ﻿Namespace KioskV0.Forms
-    Public Class AdminAddMenuView
+    Public Class AdminEditMenuDetailsView
         Public Property SaveButtonClick As Action
         Public Property CancelButtonClick As Action
         Public Property SelectImageClick As Action
-
-        Public ReadOnly Property MenuName
+        Public Property DeleteButtonClick As Action
+        Public Property MenuName
             Get
                 Return ProductNameTextBox.Text
             End Get
+            Set(value)
+                ProductNameTextBox.Text = value
+            End Set
         End Property
 
-        Public ReadOnly Property CategoryName
+        Public Property CategoryName As String
             Get
                 Return CategoryComboBox.Text
             End Get
+            Set(value As String)
+                Dim index As Integer = CategoryComboBox.FindStringExact(value)
+
+                If index <> -1 Then
+                    CategoryComboBox.SelectedIndex = index
+                Else
+                    Throw New ArgumentException($"'{value}' is not a valid category.")
+                End If
+            End Set
         End Property
 
-        Public ReadOnly Property SupplierName
+
+        Public Property SupplierName As String
             Get
                 Return SupplierComboBox.Text
             End Get
+            Set(value As String)
+                Dim index As Integer = SupplierComboBox.FindStringExact(value)
+
+                If index <> -1 Then
+                    SupplierComboBox.SelectedIndex = index
+                Else
+                    Throw New ArgumentException($"'{value}' is not a valid category.")
+                End If
+            End Set
         End Property
 
-        Public ReadOnly Property Cost
 
+        Public Property Cost As String
             Get
                 Return CostTextBox.Text
             End Get
+            Set(value As String)
+                CostTextBox.Text = value
+            End Set
         End Property
 
-        Public ReadOnly Property Sell
+        Public Property Sell As String
             Get
                 Return SellingTextBox.Text
             End Get
+            Set(value As String)
+                SellingTextBox.Text = value
+            End Set
+        End Property
+        Public Property ProductDescription As String
+            Get
+                Return ProductDescriptionTextBox.Text
+            End Get
+            Set(value As String)
+                ProductDescriptionTextBox.Text = value
+            End Set
         End Property
 
+        Public WriteOnly Property Label As String
+            Set(value As String)
+                PageLabel.Text = value
+            End Set
+        End Property
         Public Sub ResetFields()
             ProductNameTextBox.Text = ""
             CategoryComboBox.SelectedIndex = -1
@@ -56,11 +97,8 @@
             SelectImageClick?.Invoke()
         End Sub
 
-
-
-
-        Private Sub Guna2HtmlLabel5_Click(sender As Object, e As EventArgs) Handles Guna2HtmlLabel5.Click
-
+        Private Sub DeleteButton_Click(sender As Object, e As EventArgs) Handles DeleteButton.Click
+            DeleteButtonClick?.Invoke()
         End Sub
     End Class
 End Namespace

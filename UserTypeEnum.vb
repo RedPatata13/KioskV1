@@ -18,7 +18,7 @@
         AdminOrderHistory
         AdminStaffTransactions
         AdminAccountSettings
-        AdminAddMenu
+        AdminEditMenuDetails
         AdminAddUser
         AdminEditInventory
         AdminSupplyRequest
@@ -45,6 +45,8 @@
         StaffPos
         StaffCreditSales
         StaffManagerAuthorization
+        StaffPayment
+        StaffSideBar
     End Enum
 
     Public Enum SupplierKeys

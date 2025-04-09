@@ -1,7 +1,8 @@
 ﻿Imports System.ComponentModel.DataAnnotations
 
-Namespace KioskV0.Classes
+Namespace KioskV0.Model
     Public Class ItemModel
+        Inherits BaseModel
         <Required(ErrorMessage:="Product ID is required.")>
         <StringLength(50, ErrorMessage:="Product ID cannot exceed 50 characters.")>
         Public Property ProductId As String

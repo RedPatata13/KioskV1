@@ -3,6 +3,7 @@ Imports System.Text.RegularExpressions
 
 Namespace KioskV0.Model
     Public Class UserModel
+        Inherits BaseModel
         <Required(ErrorMessage:="Role is required.")>
         Public Property Role As UserType
 
