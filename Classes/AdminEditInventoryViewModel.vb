@@ -12,6 +12,7 @@ Namespace KioskV0.Classes
             SetEvents()
         End Sub
 
+
         Protected Friend Overrides Sub SetEvents()
             MyBase.SetEvents()
 
@@ -38,7 +39,7 @@ Namespace KioskV0.Classes
                                         End Select
                                     End Function
             Try
-                Dim model = New ItemModel With {
+                Dim model = New Model.ItemModel With {
                     .ProductId = _view.ProductID,
                     .ProductName = _view.ProductFormalName,
                     .Quantity = Convert.ToInt32(_view.Quantity),
@@ -46,13 +47,7 @@ Namespace KioskV0.Classes
                     .Supplier = _view.Supplier
                 }
 
-                Dim validationResults As New List(Of ValidationResult)()
-                Dim validationContext As New ValidationContext(model, Nothing, Nothing)
-
-                If Not Validator.TryValidateObject(model, validationContext, validationResults, True) Then
-                    Dim errorMessages As String = String.Join(Environment.NewLine, validationResults.Select(Function(r) r.ErrorMessage))
-                    Throw New Exception(errorMessages)
-                End If
+                model.Validate()
 
                 Dim properties = model.GetType().GetProperties()
                 Dim str As String = ""

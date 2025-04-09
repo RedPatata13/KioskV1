@@ -12,22 +12,32 @@
                 {AdminKeys.AdminStaffTransactions, New Classes.AdminStaffTransactionsViewModel(New Forms.AdminStaffTransactionsView(), mediator)},
                 {AdminKeys.AdminAccountSettings, New Classes.AdminAccountSettingsViewModel(New Forms.AdminAccountSettingsView(), mediator)},
                 {AdminKeys.AdminAddUser, New Classes.AdminAddUserViewModel(New Forms.AdminAddUserView(), mediator)},
-                {AdminKeys.AdminAddMenu, New Classes.AdminAddMenuViewModel(New Forms.AdminAddMenuView(), mediator)},
+                {AdminKeys.AdminEditMenuDetails, New Classes.AdminEditMenuDetailsViewModel(New Forms.AdminEditMenuDetailsView(), mediator)},
                 {AdminKeys.AdminEditInventory, New Classes.AdminEditInventoryViewModel(New Forms.AdminEditInventoryView(), mediator)},
+                {AdminKeys.AdminSupplyRequest, New Classes.AdminSupplyRequestViewModel(New Forms.AdminSupplyRequestView(), mediator)},
                 {AdminKeys.Sample, New Classes.SampleViewModel(New Forms.SampleForm(), mediator)}
             }
         End Function
 
 
         Public Function GetStaffPages(mediator As Mediator(Of StaffKeys)) As Dictionary(Of StaffKeys, IProjectable)
-            Return New Dictionary(Of StaffKeys, IProjectable) From {
-            {StaffKeys.StafflandingPage, New Classes.StaffLandingPageViewModel(New Forms.StaffLandingPageView(), mediator)}
+            Return New Dictionary(Of StaffKeys, IProjectable) From
+            {
+                {StaffKeys.StafflandingPage, New Classes.StaffLandingPageViewModel(New Forms.StaffLandingPageView(), mediator)},
+                {StaffKeys.StaffPayment, New Classes.StaffPaymentViewModel(New Forms.StaffPaymentView(), mediator)},
+                {StaffKeys.StaffSideBar, New Classes.StaffSideBarViewModel(New Forms.StaffSideBar(), mediator)},
+                {StaffKeys.StaffPos, New Classes.StaffPosViewModel(New Forms.StaffPosView(), mediator)},
+                {StaffKeys.StaffManagerAuthorization, New Classes.StaffManagerAuthorizationViewModel(New Forms.StaffManagerAuthorizationView(), mediator)},
+                {StaffKeys.StaffCreditSales, New Classes.StaffCreditSalesViewModel(New Forms.StaffCreditSalesView(), mediator)}
             }
         End Function
         Public Function GetCustomerPages(mediator As Mediator(Of CustomerKeys)) As Dictionary(Of CustomerKeys, IProjectable)
             Return New Dictionary(Of CustomerKeys, IProjectable) From
             {
-                {CustomerKeys.CustomerAddNote, New Classes.CustomerAddNoteViewModel(New Forms.CustomerAddNoteView(), mediator)}
+               {CustomerKeys.CustomerConfirmOrder, New Classes.CustomerConfirmOrderViewModel(New Forms.CustomerConfirmOrderView(), mediator)},
+               {CustomerKeys.CustomerMenu, New Classes.CustomerMenuViewModel(New Forms.CustomerMenuView(), mediator)},
+               {CustomerKeys.CustomerOrderList, New Classes.CustomerOrderListViewModel(New Forms.CustomerOrderListView(), mediator)},
+               {CustomerKeys.CustomerPayment, New Classes.CustomerPaymentViewModel(New Forms.CustomerPaymentView(), mediator)}
             }
         End Function
         Public Function GetSupplierPages() As Dictionary(Of SupplierKeys, IProjectable)

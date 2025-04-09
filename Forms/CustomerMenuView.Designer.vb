@@ -28,13 +28,19 @@
             Me.Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
             Me.CustomerMainPanel = New Guna.UI2.WinForms.Guna2Panel()
             Me.ViewOrderPanel = New Guna.UI2.WinForms.Guna2Panel()
-            Me.CategoryPanel = New Guna.UI2.WinForms.Guna2Panel()
+            Me.ItemCountLabel = New System.Windows.Forms.Label()
+            Me.TotalPriceLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me.StartOverButton = New Guna.UI2.WinForms.Guna2Button()
+            Me.ViewOrderButton = New Guna.UI2.WinForms.Guna2Button()
             Me.MenuFlowLayout = New System.Windows.Forms.FlowLayoutPanel()
-            Me.Guna2Button4 = New Guna.UI2.WinForms.Guna2Button()
-            Me.Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
-            Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
-            Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
+            Me.CategoryPanel = New Guna.UI2.WinForms.Guna2Panel()
+            Me.Cat3Button = New Guna.UI2.WinForms.Guna2Button()
+            Me.Cat2Button = New Guna.UI2.WinForms.Guna2Button()
+            Me.Cat1Button = New Guna.UI2.WinForms.Guna2Button()
+            Me.AllCategButton = New Guna.UI2.WinForms.Guna2Button()
+            Me.CustomerMainPanelView = New Guna.UI2.WinForms.Guna2Panel()
             Me.CustomerMainPanel.SuspendLayout()
+            Me.ViewOrderPanel.SuspendLayout()
             Me.CategoryPanel.SuspendLayout()
             Me.SuspendLayout()
             '
@@ -51,24 +57,82 @@
             '
             'ViewOrderPanel
             '
-            Me.ViewOrderPanel.BackColor = System.Drawing.Color.DimGray
+            Me.ViewOrderPanel.BackColor = System.Drawing.Color.White
+            Me.ViewOrderPanel.Controls.Add(Me.ItemCountLabel)
+            Me.ViewOrderPanel.Controls.Add(Me.TotalPriceLabel)
+            Me.ViewOrderPanel.Controls.Add(Me.StartOverButton)
+            Me.ViewOrderPanel.Controls.Add(Me.ViewOrderButton)
             Me.ViewOrderPanel.Dock = System.Windows.Forms.DockStyle.Bottom
-            Me.ViewOrderPanel.Location = New System.Drawing.Point(177, 642)
+            Me.ViewOrderPanel.Location = New System.Drawing.Point(177, 636)
             Me.ViewOrderPanel.Name = "ViewOrderPanel"
-            Me.ViewOrderPanel.Size = New System.Drawing.Size(1249, 175)
+            Me.ViewOrderPanel.Size = New System.Drawing.Size(1249, 181)
             Me.ViewOrderPanel.TabIndex = 2
             '
-            'CategoryPanel
+            'ItemCountLabel
             '
-            Me.CategoryPanel.Controls.Add(Me.Guna2Button4)
-            Me.CategoryPanel.Controls.Add(Me.Guna2Button3)
-            Me.CategoryPanel.Controls.Add(Me.Guna2Button1)
-            Me.CategoryPanel.Controls.Add(Me.Guna2Button2)
-            Me.CategoryPanel.Dock = System.Windows.Forms.DockStyle.Left
-            Me.CategoryPanel.Location = New System.Drawing.Point(0, 0)
-            Me.CategoryPanel.Name = "CategoryPanel"
-            Me.CategoryPanel.Size = New System.Drawing.Size(177, 817)
-            Me.CategoryPanel.TabIndex = 0
+            Me.ItemCountLabel.AutoSize = True
+            Me.ItemCountLabel.Font = New System.Drawing.Font("Poppins", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.ItemCountLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+            Me.ItemCountLabel.Location = New System.Drawing.Point(25, 101)
+            Me.ItemCountLabel.Name = "ItemCountLabel"
+            Me.ItemCountLabel.Size = New System.Drawing.Size(211, 48)
+            Me.ItemCountLabel.TabIndex = 29
+            Me.ItemCountLabel.Text = "3 items in cart"
+            '
+            'TotalPriceLabel
+            '
+            Me.TotalPriceLabel.AutoSize = False
+            Me.TotalPriceLabel.BackColor = System.Drawing.Color.Transparent
+            Me.TotalPriceLabel.Font = New System.Drawing.Font("Poppins Medium", 45.0!, System.Drawing.FontStyle.Bold)
+            Me.TotalPriceLabel.Location = New System.Drawing.Point(21, 16)
+            Me.TotalPriceLabel.Name = "TotalPriceLabel"
+            Me.TotalPriceLabel.Size = New System.Drawing.Size(429, 98)
+            Me.TotalPriceLabel.TabIndex = 28
+            Me.TotalPriceLabel.Text = "P100.00"
+            '
+            'StartOverButton
+            '
+            Me.StartOverButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer))
+            Me.StartOverButton.BorderRadius = 15
+            Me.StartOverButton.BorderThickness = 1
+            Me.StartOverButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.StartOverButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.StartOverButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.StartOverButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.StartOverButton.FillColor = System.Drawing.Color.White
+            Me.StartOverButton.Font = New System.Drawing.Font("Poppins SemiBold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.StartOverButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+            Me.StartOverButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+            Me.StartOverButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer))
+            Me.StartOverButton.HoverState.ForeColor = System.Drawing.Color.White
+            Me.StartOverButton.Location = New System.Drawing.Point(893, 90)
+            Me.StartOverButton.Margin = New System.Windows.Forms.Padding(2)
+            Me.StartOverButton.Name = "StartOverButton"
+            Me.StartOverButton.Size = New System.Drawing.Size(318, 50)
+            Me.StartOverButton.TabIndex = 26
+            Me.StartOverButton.Text = "Start over"
+            '
+            'ViewOrderButton
+            '
+            Me.ViewOrderButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
+            Me.ViewOrderButton.BorderRadius = 15
+            Me.ViewOrderButton.BorderThickness = 1
+            Me.ViewOrderButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.ViewOrderButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.ViewOrderButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.ViewOrderButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.ViewOrderButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
+            Me.ViewOrderButton.Font = New System.Drawing.Font("Poppins SemiBold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.ViewOrderButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+            Me.ViewOrderButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
+            Me.ViewOrderButton.HoverState.FillColor = System.Drawing.Color.White
+            Me.ViewOrderButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
+            Me.ViewOrderButton.Location = New System.Drawing.Point(893, 25)
+            Me.ViewOrderButton.Margin = New System.Windows.Forms.Padding(2)
+            Me.ViewOrderButton.Name = "ViewOrderButton"
+            Me.ViewOrderButton.Size = New System.Drawing.Size(318, 50)
+            Me.ViewOrderButton.TabIndex = 27
+            Me.ViewOrderButton.Text = "View Order"
             '
             'MenuFlowLayout
             '
@@ -79,105 +143,127 @@
             Me.MenuFlowLayout.Size = New System.Drawing.Size(1249, 817)
             Me.MenuFlowLayout.TabIndex = 1
             '
-            'Guna2Button4
+            'CategoryPanel
             '
-            Me.Guna2Button4.BorderColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2Button4.BorderRadius = 15
-            Me.Guna2Button4.BorderThickness = 1
-            Me.Guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-            Me.Guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-            Me.Guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-            Me.Guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-            Me.Guna2Button4.FillColor = System.Drawing.Color.White
-            Me.Guna2Button4.Font = New System.Drawing.Font("Poppins Medium", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2Button4.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2Button4.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.Guna2Button4.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.Guna2Button4.HoverState.ForeColor = System.Drawing.Color.White
-            Me.Guna2Button4.HoverState.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
-            Me.Guna2Button4.Image = CType(resources.GetObject("Guna2Button4.Image"), System.Drawing.Image)
-            Me.Guna2Button4.ImageSize = New System.Drawing.Size(60, 60)
-            Me.Guna2Button4.Location = New System.Drawing.Point(12, 246)
-            Me.Guna2Button4.Name = "Guna2Button4"
-            Me.Guna2Button4.Size = New System.Drawing.Size(153, 72)
-            Me.Guna2Button4.TabIndex = 5
-            Me.Guna2Button4.Text = "Burger"
-            Me.Guna2Button4.TextOffset = New System.Drawing.Point(0, 5)
+            Me.CategoryPanel.Controls.Add(Me.Cat3Button)
+            Me.CategoryPanel.Controls.Add(Me.Cat2Button)
+            Me.CategoryPanel.Controls.Add(Me.Cat1Button)
+            Me.CategoryPanel.Controls.Add(Me.AllCategButton)
+            Me.CategoryPanel.Dock = System.Windows.Forms.DockStyle.Left
+            Me.CategoryPanel.Location = New System.Drawing.Point(0, 0)
+            Me.CategoryPanel.Name = "CategoryPanel"
+            Me.CategoryPanel.Size = New System.Drawing.Size(177, 817)
+            Me.CategoryPanel.TabIndex = 0
             '
-            'Guna2Button3
+            'Cat3Button
             '
-            Me.Guna2Button3.BorderColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2Button3.BorderRadius = 15
-            Me.Guna2Button3.BorderThickness = 1
-            Me.Guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-            Me.Guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-            Me.Guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-            Me.Guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-            Me.Guna2Button3.FillColor = System.Drawing.Color.White
-            Me.Guna2Button3.Font = New System.Drawing.Font("Poppins Medium", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2Button3.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2Button3.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.Guna2Button3.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.Guna2Button3.HoverState.ForeColor = System.Drawing.Color.White
-            Me.Guna2Button3.HoverState.Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
-            Me.Guna2Button3.Image = CType(resources.GetObject("Guna2Button3.Image"), System.Drawing.Image)
-            Me.Guna2Button3.ImageSize = New System.Drawing.Size(60, 60)
-            Me.Guna2Button3.Location = New System.Drawing.Point(12, 168)
-            Me.Guna2Button3.Name = "Guna2Button3"
-            Me.Guna2Button3.Size = New System.Drawing.Size(153, 72)
-            Me.Guna2Button3.TabIndex = 4
-            Me.Guna2Button3.Text = "Burger"
-            Me.Guna2Button3.TextOffset = New System.Drawing.Point(0, 5)
+            Me.Cat3Button.BorderColor = System.Drawing.SystemColors.ControlText
+            Me.Cat3Button.BorderRadius = 15
+            Me.Cat3Button.BorderThickness = 1
+            Me.Cat3Button.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.Cat3Button.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.Cat3Button.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.Cat3Button.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.Cat3Button.FillColor = System.Drawing.Color.White
+            Me.Cat3Button.Font = New System.Drawing.Font("Poppins Medium", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Cat3Button.ForeColor = System.Drawing.SystemColors.ControlText
+            Me.Cat3Button.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.Cat3Button.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.Cat3Button.HoverState.ForeColor = System.Drawing.Color.White
+            Me.Cat3Button.HoverState.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
+            Me.Cat3Button.Image = CType(resources.GetObject("Cat3Button.Image"), System.Drawing.Image)
+            Me.Cat3Button.ImageSize = New System.Drawing.Size(60, 60)
+            Me.Cat3Button.Location = New System.Drawing.Point(12, 246)
+            Me.Cat3Button.Name = "Cat3Button"
+            Me.Cat3Button.Size = New System.Drawing.Size(153, 72)
+            Me.Cat3Button.TabIndex = 5
+            Me.Cat3Button.Text = "Categ 3"
+            Me.Cat3Button.TextOffset = New System.Drawing.Point(0, 5)
             '
-            'Guna2Button1
+            'Cat2Button
             '
-            Me.Guna2Button1.BorderColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2Button1.BorderRadius = 15
-            Me.Guna2Button1.BorderThickness = 1
-            Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-            Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-            Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-            Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-            Me.Guna2Button1.FillColor = System.Drawing.Color.White
-            Me.Guna2Button1.Font = New System.Drawing.Font("Poppins Medium", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2Button1.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2Button1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.Guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.Guna2Button1.HoverState.ForeColor = System.Drawing.Color.White
-            Me.Guna2Button1.HoverState.Image = CType(resources.GetObject("resource.Image2"), System.Drawing.Image)
-            Me.Guna2Button1.Image = CType(resources.GetObject("Guna2Button1.Image"), System.Drawing.Image)
-            Me.Guna2Button1.ImageSize = New System.Drawing.Size(60, 60)
-            Me.Guna2Button1.Location = New System.Drawing.Point(12, 90)
-            Me.Guna2Button1.Name = "Guna2Button1"
-            Me.Guna2Button1.Size = New System.Drawing.Size(153, 72)
-            Me.Guna2Button1.TabIndex = 3
-            Me.Guna2Button1.Text = "Burger"
-            Me.Guna2Button1.TextOffset = New System.Drawing.Point(0, 5)
+            Me.Cat2Button.BorderColor = System.Drawing.SystemColors.ControlText
+            Me.Cat2Button.BorderRadius = 15
+            Me.Cat2Button.BorderThickness = 1
+            Me.Cat2Button.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.Cat2Button.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.Cat2Button.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.Cat2Button.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.Cat2Button.FillColor = System.Drawing.Color.White
+            Me.Cat2Button.Font = New System.Drawing.Font("Poppins Medium", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Cat2Button.ForeColor = System.Drawing.SystemColors.ControlText
+            Me.Cat2Button.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.Cat2Button.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.Cat2Button.HoverState.ForeColor = System.Drawing.Color.White
+            Me.Cat2Button.HoverState.Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
+            Me.Cat2Button.Image = CType(resources.GetObject("Cat2Button.Image"), System.Drawing.Image)
+            Me.Cat2Button.ImageSize = New System.Drawing.Size(60, 60)
+            Me.Cat2Button.Location = New System.Drawing.Point(12, 168)
+            Me.Cat2Button.Name = "Cat2Button"
+            Me.Cat2Button.Size = New System.Drawing.Size(153, 72)
+            Me.Cat2Button.TabIndex = 4
+            Me.Cat2Button.Text = "Categ 2"
+            Me.Cat2Button.TextOffset = New System.Drawing.Point(0, 5)
             '
-            'Guna2Button2
+            'Cat1Button
             '
-            Me.Guna2Button2.BorderColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2Button2.BorderRadius = 15
-            Me.Guna2Button2.BorderThickness = 1
-            Me.Guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-            Me.Guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-            Me.Guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-            Me.Guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-            Me.Guna2Button2.FillColor = System.Drawing.Color.White
-            Me.Guna2Button2.Font = New System.Drawing.Font("Poppins Medium", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2Button2.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2Button2.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.Guna2Button2.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.Guna2Button2.HoverState.ForeColor = System.Drawing.Color.White
-            Me.Guna2Button2.HoverState.Image = CType(resources.GetObject("resource.Image3"), System.Drawing.Image)
-            Me.Guna2Button2.Image = CType(resources.GetObject("Guna2Button2.Image"), System.Drawing.Image)
-            Me.Guna2Button2.ImageSize = New System.Drawing.Size(60, 60)
-            Me.Guna2Button2.Location = New System.Drawing.Point(12, 12)
-            Me.Guna2Button2.Name = "Guna2Button2"
-            Me.Guna2Button2.Size = New System.Drawing.Size(153, 72)
-            Me.Guna2Button2.TabIndex = 2
-            Me.Guna2Button2.Text = "Burger"
-            Me.Guna2Button2.TextOffset = New System.Drawing.Point(0, 5)
+            Me.Cat1Button.BorderColor = System.Drawing.SystemColors.ControlText
+            Me.Cat1Button.BorderRadius = 15
+            Me.Cat1Button.BorderThickness = 1
+            Me.Cat1Button.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.Cat1Button.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.Cat1Button.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.Cat1Button.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.Cat1Button.FillColor = System.Drawing.Color.White
+            Me.Cat1Button.Font = New System.Drawing.Font("Poppins Medium", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Cat1Button.ForeColor = System.Drawing.SystemColors.ControlText
+            Me.Cat1Button.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.Cat1Button.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.Cat1Button.HoverState.ForeColor = System.Drawing.Color.White
+            Me.Cat1Button.HoverState.Image = CType(resources.GetObject("resource.Image2"), System.Drawing.Image)
+            Me.Cat1Button.Image = CType(resources.GetObject("Cat1Button.Image"), System.Drawing.Image)
+            Me.Cat1Button.ImageSize = New System.Drawing.Size(60, 60)
+            Me.Cat1Button.Location = New System.Drawing.Point(12, 90)
+            Me.Cat1Button.Name = "Cat1Button"
+            Me.Cat1Button.Size = New System.Drawing.Size(153, 72)
+            Me.Cat1Button.TabIndex = 3
+            Me.Cat1Button.Text = "Categ 1"
+            Me.Cat1Button.TextOffset = New System.Drawing.Point(0, 5)
+            '
+            'AllCategButton
+            '
+            Me.AllCategButton.BorderColor = System.Drawing.SystemColors.ControlText
+            Me.AllCategButton.BorderRadius = 15
+            Me.AllCategButton.BorderThickness = 1
+            Me.AllCategButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.AllCategButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.AllCategButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.AllCategButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.AllCategButton.FillColor = System.Drawing.Color.White
+            Me.AllCategButton.Font = New System.Drawing.Font("Poppins Medium", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.AllCategButton.ForeColor = System.Drawing.SystemColors.ControlText
+            Me.AllCategButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.AllCategButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.AllCategButton.HoverState.ForeColor = System.Drawing.Color.White
+            Me.AllCategButton.HoverState.Image = CType(resources.GetObject("resource.Image3"), System.Drawing.Image)
+            Me.AllCategButton.Image = CType(resources.GetObject("AllCategButton.Image"), System.Drawing.Image)
+            Me.AllCategButton.ImageSize = New System.Drawing.Size(60, 60)
+            Me.AllCategButton.Location = New System.Drawing.Point(12, 12)
+            Me.AllCategButton.Name = "AllCategButton"
+            Me.AllCategButton.Size = New System.Drawing.Size(153, 72)
+            Me.AllCategButton.TabIndex = 2
+            Me.AllCategButton.Text = "All"
+            Me.AllCategButton.TextOffset = New System.Drawing.Point(0, 5)
+            '
+            'CustomerMainPanelView
+            '
+            Me.CustomerMainPanelView.BackColor = System.Drawing.Color.Transparent
+            Me.CustomerMainPanelView.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.CustomerMainPanelView.Location = New System.Drawing.Point(0, 0)
+            Me.CustomerMainPanelView.Name = "CustomerMainPanelView"
+            Me.CustomerMainPanelView.Size = New System.Drawing.Size(1426, 817)
+            Me.CustomerMainPanelView.TabIndex = 22
+            Me.CustomerMainPanelView.Visible = False
             '
             'CustomerMenuView
             '
@@ -185,11 +271,14 @@
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
             Me.ClientSize = New System.Drawing.Size(1426, 817)
+            Me.Controls.Add(Me.CustomerMainPanelView)
             Me.Controls.Add(Me.CustomerMainPanel)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
             Me.Name = "CustomerMenuView"
             Me.Text = "CustomerMenuPage"
             Me.CustomerMainPanel.ResumeLayout(False)
+            Me.ViewOrderPanel.ResumeLayout(False)
+            Me.ViewOrderPanel.PerformLayout()
             Me.CategoryPanel.ResumeLayout(False)
             Me.ResumeLayout(False)
 
@@ -198,11 +287,16 @@
         Friend WithEvents CustomerMainPanel As Guna.UI2.WinForms.Guna2Panel
         Friend WithEvents ViewOrderPanel As Guna.UI2.WinForms.Guna2Panel
         Friend WithEvents CategoryPanel As Guna.UI2.WinForms.Guna2Panel
-        Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
-        Friend WithEvents Guna2Button4 As Guna.UI2.WinForms.Guna2Button
-        Friend WithEvents Guna2Button3 As Guna.UI2.WinForms.Guna2Button
-        Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+        Friend WithEvents AllCategButton As Guna.UI2.WinForms.Guna2Button
+        Friend WithEvents Cat3Button As Guna.UI2.WinForms.Guna2Button
+        Friend WithEvents Cat2Button As Guna.UI2.WinForms.Guna2Button
+        Friend WithEvents Cat1Button As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents MenuFlowLayout As FlowLayoutPanel
+        Friend WithEvents CustomerMainPanelView As Guna.UI2.WinForms.Guna2Panel
+        Friend WithEvents ItemCountLabel As Label
+        Friend WithEvents TotalPriceLabel As Guna.UI2.WinForms.Guna2HtmlLabel
+        Friend WithEvents StartOverButton As Guna.UI2.WinForms.Guna2Button
+        Friend WithEvents ViewOrderButton As Guna.UI2.WinForms.Guna2Button
     End Class
 
 End Namespace

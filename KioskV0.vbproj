@@ -51,6 +51,17 @@
     <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>packages\Guna.UI2.WinForms.2.0.4.7\lib\net48\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
@@ -60,11 +71,14 @@
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -80,8 +94,15 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\ActionManager.vb" />
     <Compile Include="Classes\AdminAccountSettingsViewModel.vb" />
-    <Compile Include="Classes\AdminAddMenuViewModel.vb" />
+    <Compile Include="Classes\AdminAccountUserControl.Designer.vb">
+      <DependentUpon>AdminAccountUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\AdminAccountUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classes\AdminEditMenuDetailsViewModel.vb" />
     <Compile Include="Classes\AdminAddUserViewModel.vb" />
     <Compile Include="Classes\AdminDashboardViewModel.vb" />
     <Compile Include="Classes\AdminEditInventoryViewModel.vb" />
@@ -109,11 +130,13 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Classes\SampleViewModel.vb" />
-    <Compile Include="Classes\SidebarTestViewModel.vb" />
     <Compile Include="Classes\StaffCreditSalesViewModel.vb" />
     <Compile Include="Classes\StaffLandingPageViewModel.vb" />
-    <Compile Include="Classes\StaffManagerAuthoViewModel.vb" />
+    <Compile Include="Classes\StaffManagerAuthorizationViewModel.vb" />
+    <Compile Include="Classes\StaffPaymentViewModel.vb" />
     <Compile Include="Classes\StaffPosViewModel.vb" />
+    <Compile Include="Classes\StaffSideBarViewModel.vb" />
+    <Compile Include="Classes\TempDB.vb" />
     <Compile Include="Classes\ViewModel.vb" />
     <Compile Include="Forms\AdminAccountSettingsView.Designer.vb">
       <DependentUpon>AdminAccountSettingsView.vb</DependentUpon>
@@ -283,18 +306,6 @@
     <Compile Include="Forms\SampleForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\SidebarTest.Designer.vb">
-      <DependentUpon>SidebarTest.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\SidebarTest.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\SidebarTest2.Designer.vb">
-      <DependentUpon>SidebarTest2.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\SidebarTest2.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Forms\StaffCreditSalesView.Designer.vb">
       <DependentUpon>StaffCreditSalesView.vb</DependentUpon>
     </Compile>
@@ -313,6 +324,18 @@
     <Compile Include="Forms\StaffManagerAuthorizationView.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\StaffPaymentView.Designer.vb">
+      <DependentUpon>StaffPaymentView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffPaymentView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StaffPosOrderUserControl.Designer.vb">
+      <DependentUpon>StaffPosOrderUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffPosOrderUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Forms\StaffPosView.Designer.vb">
       <DependentUpon>StaffPosView.vb</DependentUpon>
     </Compile>
@@ -325,8 +348,40 @@
     <Compile Include="Forms\AdminSupplyRequestView.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\StaffProductCategoryUserControl.Designer.vb">
+      <DependentUpon>StaffProductCategoryUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffProductCategoryUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\StaffProductUserControl.Designer.vb">
+      <DependentUpon>StaffProductUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffProductUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\StaffProductVariationUserControl.Designer.vb">
+      <DependentUpon>StaffProductVariationUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffProductVariationUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\StaffSideBar.Designer.vb">
+      <DependentUpon>StaffSideBar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffSideBar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StaffTotaProductsUserControl.Designer.vb">
+      <DependentUpon>StaffTotaProductsUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffTotaProductsUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Models\ItemModel.vb" />
     <Compile Include="Models\MenuModel.vb" />
+    <Compile Include="Models\BaseModel.vb" />
+    <Compile Include="Models\OrderModel.vb" />
     <Compile Include="Models\UserModel.vb" />
     <Compile Include="UserTypeEnum.vb" />
     <Compile Include="Classes\LoginViewModel.vb" />
@@ -350,6 +405,9 @@
     <Compile Include="Program.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Classes\AdminAccountUserControl.resx">
+      <DependentUpon>AdminAccountUserControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminAccountSettingsView.resx">
       <DependentUpon>AdminAccountSettingsView.vb</DependentUpon>
     </EmbeddedResource>
@@ -434,11 +492,26 @@
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SidebarTest.resx">
-      <DependentUpon>SidebarTest.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\StaffPaymentView.resx">
+      <DependentUpon>StaffPaymentView.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SidebarTest2.resx">
-      <DependentUpon>SidebarTest2.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\StaffPosOrderUserControl.resx">
+      <DependentUpon>StaffPosOrderUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffProductCategoryUserControl.resx">
+      <DependentUpon>StaffProductCategoryUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffProductUserControl.resx">
+      <DependentUpon>StaffProductUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffProductVariationUserControl.resx">
+      <DependentUpon>StaffProductVariationUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffSideBar.resx">
+      <DependentUpon>StaffSideBar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffTotaProductsUserControl.resx">
+      <DependentUpon>StaffTotaProductsUserControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -458,10 +531,11 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Assets\calendar %281%29.png" />
+    <Content Include="Assets\customer.png" />
     <Content Include="Assets\icons8-equal-housing-opportunity-96 %281%29.png" />
     <Content Include="Assets\icons8-equal-housing-opportunity-96.png" />
     <Content Include="Assets\icons8-hamburger-100.png" />
@@ -472,6 +546,11 @@
     <Content Include="Assets\icons8-test-100.png" />
     <Content Include="Assets\icons8-time-machine-100 %281%29.png" />
     <Content Include="Assets\icons8-time-machine-100.png" />
+    <Content Include="Assets\increase.png" />
+    <Content Include="Assets\money-bag.png" />
+    <None Include="Resources\magnifying-glass %281%29.png" />
+    <None Include="Resources\calendar %281%29.png" />
+    <None Include="packages.config" />
     <None Include="Resources\icons8-supply-chain-100.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

@@ -9,7 +9,23 @@ Namespace KioskV0.Classes
 
             SetEvents()
         End Sub
+        Public Overrides Sub Project(projector As Form)
+            MyBase.Project(projector)
 
+            'LoadAccounts()
+            _mediator.LayoutAction(Sub() LoadAccounts())
+        End Sub
+        Public Sub LoadAccounts()
+            Dim dgv = _view.AccountsDataGridView
+            dgv.DataSource = Nothing
+            dgv.Columns.Clear()
+            dgv.AutoGenerateColumns = True
+            dgv.ReadOnly = True
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+            dgv.ColumnHeadersHeight = 40
+            dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+            _view.DGV_Source = New BindingSource With {.DataSource = _mediator.GetUserList()}
+        End Sub
         Protected Friend Overrides Sub SetEvents()
             _view.AddAccountClick = AddressOf AddUserClick
             _view.EditInventoryClick = AddressOf EditInventoryClick
@@ -25,7 +41,9 @@ Namespace KioskV0.Classes
         End Sub
 
         Private Sub AddItemClick()
-            _mediator.SwapPage(AdminKeys.AdminAddMenu)
+            Dim vm = DirectCast(_mediator.GetVM(AdminKeys.AdminEditMenuDetails), AdminEditMenuDetailsViewModel)
+            vm.Previous = AdminKeys.AdminAccountSettings
+            _mediator.SwapPage(AdminKeys.AdminEditMenuDetails)
         End Sub
 
     End Class

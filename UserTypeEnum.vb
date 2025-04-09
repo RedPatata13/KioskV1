@@ -18,7 +18,7 @@
         AdminOrderHistory
         AdminStaffTransactions
         AdminAccountSettings
-        AdminAddMenu
+        AdminEditMenuDetails
         AdminAddUser
         AdminEditInventory
         AdminSupplyRequest
@@ -28,14 +28,11 @@
         CustomerEntry
         CustomerLandingPage
         CustomerTestPage
-        CustomerAddNote
-        CustomerOrderType
         CustomerMenu
         CustomerConfirmOrder
         CustomerOrderList
-        CustomerOrderQuantity
-        CustomerInvoice
-        CustomerThankYou
+        CustomerPayment
+
     End Enum
 
     Public Enum StaffKeys
@@ -45,6 +42,8 @@
         StaffPos
         StaffCreditSales
         StaffManagerAuthorization
+        StaffPayment
+        StaffSideBar
     End Enum
 
     Public Enum SupplierKeys

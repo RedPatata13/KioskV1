@@ -23,21 +23,18 @@
         'Do not modify it using the code editor.
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
-            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
             Me.Panel1 = New System.Windows.Forms.Panel()
+            Me.CustomerLogInButton = New Guna.UI2.WinForms.Guna2Button()
             Me.SubmitButton = New Guna.UI2.WinForms.Guna2Button()
             Me.PasswordField = New Guna.UI2.WinForms.Guna2TextBox()
             Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.UIDField = New Guna.UI2.WinForms.Guna2TextBox()
-            Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
             Me.Panel1.SuspendLayout()
-            CType(Me.Guna2PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.Guna2ContainerControl19.SuspendLayout()
             Me.SuspendLayout()
             '
             'Panel1
             '
-            Me.Panel1.Controls.Add(Me.Guna2Button1)
+            Me.Panel1.Controls.Add(Me.CustomerLogInButton)
             Me.Panel1.Controls.Add(Me.SubmitButton)
             Me.Panel1.Controls.Add(Me.PasswordField)
             Me.Panel1.Controls.Add(Me.Guna2HtmlLabel1)
@@ -48,6 +45,21 @@
             Me.Panel1.Name = "Panel1"
             Me.Panel1.Size = New System.Drawing.Size(1044, 1080)
             Me.Panel1.TabIndex = 0
+            '
+            'CustomerLogInButton
+            '
+            Me.CustomerLogInButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.CustomerLogInButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.CustomerLogInButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.CustomerLogInButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.CustomerLogInButton.FillColor = System.Drawing.Color.Transparent
+            Me.CustomerLogInButton.Font = New System.Drawing.Font("Poppins", 13.8!)
+            Me.CustomerLogInButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.CustomerLogInButton.Location = New System.Drawing.Point(251, 717)
+            Me.CustomerLogInButton.Name = "CustomerLogInButton"
+            Me.CustomerLogInButton.Size = New System.Drawing.Size(449, 45)
+            Me.CustomerLogInButton.TabIndex = 4
+            Me.CustomerLogInButton.Text = "Log in as Customer"
             '
             'SubmitButton
             '
@@ -62,7 +74,7 @@
             Me.SubmitButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.SubmitButton.Font = New System.Drawing.Font("Poppins", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.SubmitButton.ForeColor = System.Drawing.Color.White
-            Me.SubmitButton.Location = New System.Drawing.Point(418, 626)
+            Me.SubmitButton.Location = New System.Drawing.Point(377, 625)
             Me.SubmitButton.Margin = New System.Windows.Forms.Padding(4)
             Me.SubmitButton.Name = "SubmitButton"
             Me.SubmitButton.ShadowDecoration.BorderRadius = 25
@@ -104,7 +116,7 @@
             Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(228, 179)
+            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(136, 187)
             Me.Guna2HtmlLabel1.Margin = New System.Windows.Forms.Padding(4)
             Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
             Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(640, 127)
@@ -137,21 +149,6 @@
             Me.UIDField.Size = New System.Drawing.Size(471, 60)
             Me.UIDField.TabIndex = 0
             '
-            'Guna2Button1
-            '
-            Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-            Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-            Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-            Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-            Me.Guna2Button1.FillColor = System.Drawing.Color.Transparent
-            Me.Guna2Button1.Font = New System.Drawing.Font("Poppins", 13.8!)
-            Me.Guna2Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.Guna2Button1.Location = New System.Drawing.Point(327, 723)
-            Me.Guna2Button1.Name = "Guna2Button1"
-            Me.Guna2Button1.Size = New System.Drawing.Size(449, 45)
-            Me.Guna2Button1.TabIndex = 4
-            Me.Guna2Button1.Text = "Log in as Customer"
-            '
             'Login
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -173,7 +170,7 @@
         Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents PasswordField As Guna.UI2.WinForms.Guna2TextBox
         Friend WithEvents SubmitButton As Guna.UI2.WinForms.Guna2Button
-        Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+        Friend WithEvents CustomerLogInButton As Guna.UI2.WinForms.Guna2Button
     End Class
 
 End Namespace

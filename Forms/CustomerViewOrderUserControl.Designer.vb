@@ -24,10 +24,10 @@
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
             Me.Panel = New Guna.UI2.WinForms.Guna2Panel()
-            Me.ViewOrderButton = New Guna.UI2.WinForms.Guna2Button()
-            Me.StartOverButton = New Guna.UI2.WinForms.Guna2Button()
-            Me.TotalPriceButton = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.ItemCountLabel = New System.Windows.Forms.Label()
+            Me.TotalPriceLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me.StartOverButton = New Guna.UI2.WinForms.Guna2Button()
+            Me.ViewOrderButton = New Guna.UI2.WinForms.Guna2Button()
             Me.Panel.SuspendLayout()
             Me.SuspendLayout()
             '
@@ -37,7 +37,7 @@
             Me.Panel.BorderColor = System.Drawing.SystemColors.ControlText
             Me.Panel.BorderRadius = 15
             Me.Panel.Controls.Add(Me.ItemCountLabel)
-            Me.Panel.Controls.Add(Me.TotalPriceButton)
+            Me.Panel.Controls.Add(Me.TotalPriceLabel)
             Me.Panel.Controls.Add(Me.StartOverButton)
             Me.Panel.Controls.Add(Me.ViewOrderButton)
             Me.Panel.Dock = System.Windows.Forms.DockStyle.Fill
@@ -47,27 +47,27 @@
             Me.Panel.Size = New System.Drawing.Size(1249, 175)
             Me.Panel.TabIndex = 0
             '
-            'ViewOrderButton
+            'ItemCountLabel
             '
-            Me.ViewOrderButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.ViewOrderButton.BorderRadius = 15
-            Me.ViewOrderButton.BorderThickness = 1
-            Me.ViewOrderButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-            Me.ViewOrderButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-            Me.ViewOrderButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-            Me.ViewOrderButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-            Me.ViewOrderButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.ViewOrderButton.Font = New System.Drawing.Font("Poppins SemiBold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ViewOrderButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
-            Me.ViewOrderButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.ViewOrderButton.HoverState.FillColor = System.Drawing.Color.White
-            Me.ViewOrderButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.ViewOrderButton.Location = New System.Drawing.Point(864, 24)
-            Me.ViewOrderButton.Margin = New System.Windows.Forms.Padding(2)
-            Me.ViewOrderButton.Name = "ViewOrderButton"
-            Me.ViewOrderButton.Size = New System.Drawing.Size(318, 50)
-            Me.ViewOrderButton.TabIndex = 21
-            Me.ViewOrderButton.Text = "View Order"
+            Me.ItemCountLabel.AutoSize = True
+            Me.ItemCountLabel.Font = New System.Drawing.Font("Poppins", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.ItemCountLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+            Me.ItemCountLabel.Location = New System.Drawing.Point(53, 109)
+            Me.ItemCountLabel.Name = "ItemCountLabel"
+            Me.ItemCountLabel.Size = New System.Drawing.Size(198, 48)
+            Me.ItemCountLabel.TabIndex = 25
+            Me.ItemCountLabel.Text = "0 item in cart"
+            '
+            'TotalPriceLabel
+            '
+            Me.TotalPriceLabel.AutoSize = False
+            Me.TotalPriceLabel.BackColor = System.Drawing.Color.Transparent
+            Me.TotalPriceLabel.Font = New System.Drawing.Font("Poppins Medium", 45.0!, System.Drawing.FontStyle.Bold)
+            Me.TotalPriceLabel.Location = New System.Drawing.Point(47, 8)
+            Me.TotalPriceLabel.Name = "TotalPriceLabel"
+            Me.TotalPriceLabel.Size = New System.Drawing.Size(429, 98)
+            Me.TotalPriceLabel.TabIndex = 23
+            Me.TotalPriceLabel.Text = "P00.00"
             '
             'StartOverButton
             '
@@ -91,27 +91,27 @@
             Me.StartOverButton.TabIndex = 21
             Me.StartOverButton.Text = "Start over"
             '
-            'TotalPriceButton
+            'ViewOrderButton
             '
-            Me.TotalPriceButton.AutoSize = False
-            Me.TotalPriceButton.BackColor = System.Drawing.Color.Transparent
-            Me.TotalPriceButton.Font = New System.Drawing.Font("Poppins Medium", 45.0!, System.Drawing.FontStyle.Bold)
-            Me.TotalPriceButton.Location = New System.Drawing.Point(47, 8)
-            Me.TotalPriceButton.Name = "TotalPriceButton"
-            Me.TotalPriceButton.Size = New System.Drawing.Size(429, 98)
-            Me.TotalPriceButton.TabIndex = 23
-            Me.TotalPriceButton.Text = "P100.00"
-            '
-            'ItemCountLabel
-            '
-            Me.ItemCountLabel.AutoSize = True
-            Me.ItemCountLabel.Font = New System.Drawing.Font("Poppins", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ItemCountLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
-            Me.ItemCountLabel.Location = New System.Drawing.Point(53, 109)
-            Me.ItemCountLabel.Name = "ItemCountLabel"
-            Me.ItemCountLabel.Size = New System.Drawing.Size(211, 48)
-            Me.ItemCountLabel.TabIndex = 25
-            Me.ItemCountLabel.Text = "3 items in cart"
+            Me.ViewOrderButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
+            Me.ViewOrderButton.BorderRadius = 15
+            Me.ViewOrderButton.BorderThickness = 1
+            Me.ViewOrderButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.ViewOrderButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.ViewOrderButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.ViewOrderButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.ViewOrderButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
+            Me.ViewOrderButton.Font = New System.Drawing.Font("Poppins SemiBold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.ViewOrderButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+            Me.ViewOrderButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
+            Me.ViewOrderButton.HoverState.FillColor = System.Drawing.Color.White
+            Me.ViewOrderButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
+            Me.ViewOrderButton.Location = New System.Drawing.Point(864, 24)
+            Me.ViewOrderButton.Margin = New System.Windows.Forms.Padding(2)
+            Me.ViewOrderButton.Name = "ViewOrderButton"
+            Me.ViewOrderButton.Size = New System.Drawing.Size(318, 50)
+            Me.ViewOrderButton.TabIndex = 21
+            Me.ViewOrderButton.Text = "View Order"
             '
             'CustomerViewOrderUserControl
             '
@@ -130,7 +130,7 @@
         Friend WithEvents Panel As Guna.UI2.WinForms.Guna2Panel
         Friend WithEvents ViewOrderButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents StartOverButton As Guna.UI2.WinForms.Guna2Button
-        Friend WithEvents TotalPriceButton As Guna.UI2.WinForms.Guna2HtmlLabel
+        Friend WithEvents TotalPriceLabel As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents ItemCountLabel As Label
     End Class
 
