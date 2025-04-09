@@ -12,4 +12,7 @@ Public Class Menu
     Public Property ProductImagePath As String
     Public Overridable Property OrderItems As ICollection(Of OrderItem)
     Public Overridable Property Inventories As ICollection(Of Inventory)
+    Public Overrides Function ToString() As String
+        Return MenuName
+    End Function
 End Class

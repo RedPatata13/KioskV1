@@ -102,7 +102,7 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.BackColor = System.Drawing.Color.DimGray
+            Me.BackColor = System.Drawing.Color.White
             Me.ClientSize = New System.Drawing.Size(1321, 878)
             Me.Controls.Add(Me.Guna2HtmlLabel1)
             Me.Controls.Add(Me.MenuListFlowLayoutPanel)

@@ -24,7 +24,7 @@
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
             Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-            Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me._label = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me._roles = New Guna.UI2.WinForms.Guna2ComboBox()
             Me._userNameField = New Guna.UI2.WinForms.Guna2TextBox()
             Me._passwordField = New Guna.UI2.WinForms.Guna2TextBox()
@@ -48,25 +48,25 @@
             '
             'Guna2Panel1
             '
-            Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel1)
+            Me.Guna2Panel1.Controls.Add(Me._label)
             Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
             Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
-            Me.Guna2Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.Guna2Panel1.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2Panel1.Name = "Guna2Panel1"
             Me.Guna2Panel1.Size = New System.Drawing.Size(1321, 95)
             Me.Guna2Panel1.TabIndex = 1
             '
-            'Guna2HtmlLabel1
+            '_label
             '
-            Me.Guna2HtmlLabel1.AutoSize = False
-            Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 28.2!, System.Drawing.FontStyle.Bold)
-            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(28, 21)
-            Me.Guna2HtmlLabel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-            Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(453, 61)
-            Me.Guna2HtmlLabel1.TabIndex = 6
-            Me.Guna2HtmlLabel1.Text = "Add User"
+            Me._label.AutoSize = False
+            Me._label.BackColor = System.Drawing.Color.Transparent
+            Me._label.Font = New System.Drawing.Font("Montserrat", 28.2!, System.Drawing.FontStyle.Bold)
+            Me._label.Location = New System.Drawing.Point(28, 21)
+            Me._label.Margin = New System.Windows.Forms.Padding(2)
+            Me._label.Name = "_label"
+            Me._label.Size = New System.Drawing.Size(196, 61)
+            Me._label.TabIndex = 6
+            Me._label.Text = "Add User"
             '
             '_roles
             '
@@ -81,7 +81,7 @@
             Me._roles.ItemHeight = 30
             Me._roles.Items.AddRange(New Object() {"Admin", "Staff", "Supplier", "Customer"})
             Me._roles.Location = New System.Drawing.Point(59, 166)
-            Me._roles.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me._roles.Margin = New System.Windows.Forms.Padding(2)
             Me._roles.Name = "_roles"
             Me._roles.Size = New System.Drawing.Size(511, 36)
             Me._roles.TabIndex = 11
@@ -233,7 +233,7 @@
             Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel3.ForeColor = System.Drawing.SystemColors.ControlText
             Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(59, 114)
-            Me.Guna2HtmlLabel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.Guna2HtmlLabel3.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
             Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(406, 49)
             Me.Guna2HtmlLabel3.TabIndex = 19
@@ -246,7 +246,7 @@
             Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel2.ForeColor = System.Drawing.SystemColors.ControlText
             Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(59, 219)
-            Me.Guna2HtmlLabel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.Guna2HtmlLabel2.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
             Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(439, 49)
             Me.Guna2HtmlLabel2.TabIndex = 20
@@ -259,7 +259,7 @@
             Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.ControlText
             Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(59, 336)
-            Me.Guna2HtmlLabel4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.Guna2HtmlLabel4.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
             Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(286, 49)
             Me.Guna2HtmlLabel4.TabIndex = 21
@@ -272,7 +272,7 @@
             Me.Guna2HtmlLabel5.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel5.ForeColor = System.Drawing.SystemColors.ControlText
             Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(59, 458)
-            Me.Guna2HtmlLabel5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.Guna2HtmlLabel5.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
             Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(406, 49)
             Me.Guna2HtmlLabel5.TabIndex = 22
@@ -285,7 +285,7 @@
             Me.Guna2HtmlLabel6.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel6.ForeColor = System.Drawing.SystemColors.ControlText
             Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(740, 114)
-            Me.Guna2HtmlLabel6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.Guna2HtmlLabel6.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
             Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(376, 49)
             Me.Guna2HtmlLabel6.TabIndex = 23
@@ -298,7 +298,7 @@
             Me.Guna2HtmlLabel7.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel7.ForeColor = System.Drawing.SystemColors.ControlText
             Me.Guna2HtmlLabel7.Location = New System.Drawing.Point(740, 219)
-            Me.Guna2HtmlLabel7.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.Guna2HtmlLabel7.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
             Me.Guna2HtmlLabel7.Size = New System.Drawing.Size(416, 49)
             Me.Guna2HtmlLabel7.TabIndex = 24
@@ -311,7 +311,7 @@
             Me.Guna2HtmlLabel8.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel8.ForeColor = System.Drawing.SystemColors.ControlText
             Me.Guna2HtmlLabel8.Location = New System.Drawing.Point(740, 336)
-            Me.Guna2HtmlLabel8.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.Guna2HtmlLabel8.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
             Me.Guna2HtmlLabel8.Size = New System.Drawing.Size(285, 49)
             Me.Guna2HtmlLabel8.TabIndex = 25
@@ -324,7 +324,7 @@
             Me.Guna2HtmlLabel9.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel9.ForeColor = System.Drawing.SystemColors.ControlText
             Me.Guna2HtmlLabel9.Location = New System.Drawing.Point(740, 458)
-            Me.Guna2HtmlLabel9.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.Guna2HtmlLabel9.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel9.Name = "Guna2HtmlLabel9"
             Me.Guna2HtmlLabel9.Size = New System.Drawing.Size(450, 49)
             Me.Guna2HtmlLabel9.TabIndex = 26
@@ -346,7 +346,7 @@
             Me._cancelButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer))
             Me._cancelButton.HoverState.ForeColor = System.Drawing.Color.White
             Me._cancelButton.Location = New System.Drawing.Point(854, 762)
-            Me._cancelButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me._cancelButton.Margin = New System.Windows.Forms.Padding(2)
             Me._cancelButton.Name = "_cancelButton"
             Me._cancelButton.Size = New System.Drawing.Size(189, 51)
             Me._cancelButton.TabIndex = 28
@@ -368,7 +368,7 @@
             Me._saveButton.HoverState.FillColor = System.Drawing.Color.White
             Me._saveButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me._saveButton.Location = New System.Drawing.Point(1068, 762)
-            Me._saveButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me._saveButton.Margin = New System.Windows.Forms.Padding(2)
             Me._saveButton.Name = "_saveButton"
             Me._saveButton.Size = New System.Drawing.Size(189, 51)
             Me._saveButton.TabIndex = 27
@@ -401,7 +401,7 @@
             Me.Controls.Add(Me._roles)
             Me.Controls.Add(Me.Guna2Panel1)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-            Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.Margin = New System.Windows.Forms.Padding(2)
             Me.Name = "AdminAddUserView"
             Me.Text = "AdminAddUserView"
             Me.Guna2Panel1.ResumeLayout(False)
@@ -410,7 +410,7 @@
         End Sub
 
         Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
-        Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
+        Friend WithEvents _label As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents _roles As Guna.UI2.WinForms.Guna2ComboBox
         Friend WithEvents _userNameField As Guna.UI2.WinForms.Guna2TextBox
         Friend WithEvents _passwordField As Guna.UI2.WinForms.Guna2TextBox

@@ -141,7 +141,7 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Classes\AdminEditMenuDetailsViewModel.vb" />
-    <Compile Include="Classes\AdminAddUserViewModel.vb" />
+    <Compile Include="Classes\AdminEditUserViewModel.vb" />
     <Compile Include="Classes\AdminDashboardViewModel.vb" />
     <Compile Include="Classes\AdminEditInventoryViewModel.vb" />
     <Compile Include="Classes\AdminInventoryViewModel.vb" />

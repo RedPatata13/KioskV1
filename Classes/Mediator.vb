@@ -10,6 +10,7 @@ Namespace KioskV0.Classes
         Private Property _Login As LoginViewModel
         Private Property _Projector As Projector
         Private ReadOnly _unitOfWork As IUnitOfWork
+        Private Property _userCache As Dictionary(Of String, User)
         Private Property _actionManager As New ActionManager
         Private Property VMMap As Dictionary(Of TKey, IProjectable)
         Private VMMap_Instantiated As Boolean = False
@@ -19,6 +20,7 @@ Namespace KioskV0.Classes
             _Projector = projector
             _Login = login
             _unitOfWork = unitOfWork
+            InitializeUserCache()
         End Sub
 
         Public Sub AddAction(action As Action)
@@ -66,7 +68,24 @@ Namespace KioskV0.Classes
         End Sub
 
         Public Function GetUserList() As List(Of User)
-            Return _unitOfWork.Users.GetAll()
+            Dim list = _unitOfWork.Users.GetAll()
+            Dim userTypeFactory = Function(key As String) As String
+                                      Select Case key
+                                          Case "0"
+                                              Return "Admin"
+                                          Case "1"
+                                              Return "Staff"
+                                          Case "2"
+                                              Return "Supplier"
+                                          Case Else
+                                              MessageBox.Show(key)
+                                              Return key
+                                      End Select
+                                  End Function
+            For Each item In list
+                item.Role = userTypeFactory(item.Role)
+            Next
+            Return list
         End Function
 
 
@@ -83,7 +102,11 @@ Namespace KioskV0.Classes
         End Function
 
         Public Function GetOrderList()
-            Return _unitOfWork.Orders.GetAll()
+            Dim list = _unitOfWork.Orders.GetAll()
+            For Each item In list
+                item.User = _userCache(item.UserId)
+            Next
+            Return list
         End Function
 
         Public Sub DeleteMenu(model As Menu)
@@ -133,6 +156,50 @@ Namespace KioskV0.Classes
             End Try
 
         End Sub
+
+        Public Sub UpdateUser(model As User)
+            Try
+                ' Validate model
+                Dim validationResults As New List(Of ValidationResult)()
+                Dim validationContext As New ValidationContext(model, Nothing, Nothing)
+
+                If Not Validator.TryValidateObject(model, validationContext, validationResults, True) Then
+                    Dim errorMessages As String = String.Join(Environment.NewLine, validationResults.Select(Function(r) r.ErrorMessage))
+                    Throw New Exception(errorMessages)
+                End If
+
+                ' Update user in the database
+                _unitOfWork.Users.Update(model)
+                _unitOfWork.SaveChanges()
+
+                MessageBox.Show("User updated successfully!")
+
+            Catch ex As ValidationException
+                MessageBox.Show("Validation Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+
+            Catch ex As DbEntityValidationException
+                ' Handle Entity Framework validation errors
+                Dim errors = String.Join(Environment.NewLine, ex.EntityValidationErrors.SelectMany(Function(e) e.ValidationErrors).Select(Function(e) e.ErrorMessage))
+                MessageBox.Show("Database Validation Error: " & errors, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+            Catch ex As DbUpdateException
+                ' Handles EF database update errors (like duplicate keys, foreign key violations)
+                Dim innerExceptionMessage As String = GetInnerExceptionMessage(ex)
+                MessageBox.Show("Database Update Error: " & innerExceptionMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+            Catch ex As SqlException
+                ' Handles SQL-related errors
+                MessageBox.Show("SQL Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+            Catch ex As Exception
+                ' Log and display unexpected errors
+                Dim innerExceptionMessage As String = GetInnerExceptionMessage(ex)
+                LogException(ex) ' Log the full error
+                MessageBox.Show("An unexpected error occurred. Please check the logs.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+        End Sub
+
+
         Private Function GetInnerExceptionMessage(ex As Exception) As String
             Dim message As String = ex.Message
             Dim innerEx As Exception = ex.InnerException
@@ -162,5 +229,14 @@ Namespace KioskV0.Classes
         Public Function GetSidebarSize() As Size
             Return _Projector.GetSidebarSize()
         End Function
+
+        Private Sub InitializeUserCache()
+            _userCache = New Dictionary(Of String, User)
+            For Each user In GetUserList()
+                If Not _userCache.ContainsKey(user.UserId) Then _userCache.Add(user.UserId, user)
+                _userCache(user.UserId) = user
+            Next
+        End Sub
+
     End Class
 End Namespace

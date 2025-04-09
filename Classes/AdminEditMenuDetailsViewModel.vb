@@ -1,6 +1,5 @@
 ﻿Imports System.ComponentModel.DataAnnotations
 Imports System.Reflection
-Imports KioskV0.Classes
 Imports KioskV0.KioskV0.Classes
 Imports KioskV0.KioskV0.Model
 
@@ -24,10 +23,7 @@ Namespace KioskV0.Classes
             _view.DeleteButtonClick = Sub() DeleteMenu(model)
             _view.SaveButtonClick = Sub() UpdateMenu(model)
         End Sub
-        'Public Sub LoadAsDelete(model As MenuModel)
-        '    model.ValidateOrGetErrors()
-        '    _view.Label = ""
-        'End Sub
+
         Private Sub RestoreView()
             _view.ResetFields()
             _view.DeleteButton.Visible = False
@@ -47,6 +43,8 @@ Namespace KioskV0.Classes
             _mediator.AddAction(Sub() _mediator.DeleteMenu(model))
             _mediator.AddAction(Sub() RestoreView())
             '_mediator.AddAction(Sub() MessageBox.Show("Menu Deleted"))
+            Dim vm = DirectCast(_mediator.GetVM(AdminKeys.AdminMenu), AdminMenuViewModel)
+            _mediator.AddAction(Sub() vm.DeleteStaged())
             _mediator.InvokeAllAction()
         End Sub
         Private Sub CancelButtonClick()
@@ -80,6 +78,8 @@ Namespace KioskV0.Classes
                 model.Selling = selling
 
                 model.Validate()
+                Dim vm = DirectCast(_mediator.GetVM(AdminKeys.AdminMenu), AdminMenuViewModel)
+                vm.AddNewMenu(model)
                 _mediator.CreateMenu(model)
                 _mediator.SwapPage(Previous)
                 RestoreView()
@@ -112,6 +112,9 @@ Namespace KioskV0.Classes
 
                 _mediator.UpdateMenu(newModel.MenuId, newModel)
                 _mediator.SwapPage(Previous)
+
+                Dim vm = DirectCast(_mediator.GetVM(AdminKeys.AdminMenu), AdminMenuViewModel)
+                vm.UpdateStaged(newModel)
                 RestoreView()
             Catch ex As Exception
                 MessageBox.Show("Error: " & ex.Message)

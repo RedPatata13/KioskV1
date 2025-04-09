@@ -15,4 +15,8 @@ Public Class User
     Public Property Address As String
 
     Public Property CreatedAt As DateTime
+
+    Public Overrides Function ToString() As String
+        Return Username
+    End Function
 End Class
