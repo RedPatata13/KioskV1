@@ -14,6 +14,8 @@ Public Class AppDbContext
     Public Property Suppliers As DbSet(Of Supplier)
     Public Property Transactions As DbSet(Of Transaction)
     Public Property Users As DbSet(Of User)
+    Public Property SupplierTransactions As DbSet(Of SupplierTransactionModel)
+
     Protected Overrides Sub OnModelCreating(modelBuilder As DbModelBuilder)
         modelBuilder.Configurations.Add(New CustomerConfiguration())
         modelBuilder.Configurations.Add(New InventoryConfiguration())
@@ -23,6 +25,7 @@ Public Class AppDbContext
         modelBuilder.Configurations.Add(New SupplierConfiguration())
         modelBuilder.Configurations.Add(New TransactionConfiguration())
         modelBuilder.Configurations.Add(New UserConfiguration())
+        modelBuilder.Configurations.Add(New SupplierTransactionConfiguration())
         MyBase.OnModelCreating(modelBuilder)
     End Sub
 End Class

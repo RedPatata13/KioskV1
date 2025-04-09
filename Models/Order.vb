@@ -3,7 +3,6 @@ Imports System.ComponentModel.DataAnnotations.Schema
 
 Public Class Order
     Public Property OrderId As String = Guid.NewGuid().ToString().Substring(0, 10)
-    Public Property OrderDate As DateTime
 
     Public Property TotalAmount As Decimal
 

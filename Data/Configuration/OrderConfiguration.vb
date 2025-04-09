@@ -9,7 +9,6 @@ Public Class OrderConfiguration
         Me.HasKey(Function(o) o.OrderId)
 
         ' Required Fields
-        Me.Property(Function(o) o.OrderDate).IsRequired()
         Me.Property(Function(o) o.TotalAmount).IsRequired()
         Me.Property(Function(o) o.CreatedAt).
             IsRequired().
