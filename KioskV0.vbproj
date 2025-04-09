@@ -437,6 +437,8 @@
     <Content Include="Assets\icons8-time-machine-100.png" />
     <Content Include="Assets\increase.png" />
     <Content Include="Assets\money-bag.png" />
+    <None Include="Resources\LOGO traced.png" />
+    <None Include="Resources\Logo.bmp" />
     <None Include="Resources\magnifying-glass %281%29.png" />
     <None Include="Resources\calendar %281%29.png" />
     <None Include="packages.config" />
