@@ -18,12 +18,7 @@ Public Class SupplierTransactionModel
 
     Public Property DateRelease As Nullable(Of DateTime)
 
-    <NotMapped>
-    Public ReadOnly Property Cost As Decimal
-        Get
-            Return If(Menu IsNot Nothing, Menu.Cost, 0)
-        End Get
-    End Property
+    Public Property TotalCost As Decimal
 
     Public Property Returned As String
 
