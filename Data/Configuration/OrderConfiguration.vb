@@ -10,12 +10,9 @@ Public Class OrderConfiguration
 
         ' Required Fields
         Me.Property(Function(o) o.TotalAmount).IsRequired()
-        Me.Property(Function(o) o.CreatedAt).
-            IsRequired().
-            HasDatabaseGeneratedOption(DatabaseGeneratedOption.Computed)
+        Me.Property(Function(o) o.CreatedAt).IsRequired()
 
-        ' Foreign Key: Order has one User (Staff)
-        Me.HasRequired(Function(o) o.User).
+        Me.HasOptional(Function(o) o.User). ' ✅ UserId nullable, ✅ Foreign Key to Users table AKA staff
             WithMany().
             HasForeignKey(Function(o) o.UserId).
             WillCascadeOnDelete(False)
