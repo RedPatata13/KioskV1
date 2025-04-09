@@ -38,6 +38,7 @@
             Me.OrderNoteTextBox = New System.Windows.Forms.TextBox()
             Me.ChangeLabelText = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.Guna2HtmlLabel7 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me.CloseCreatePaymentView = New Guna.UI2.WinForms.Guna2Button()
             Me.SuspendLayout()
             '
             'Guna2HtmlLabel1
@@ -230,12 +231,28 @@
             Me.Guna2HtmlLabel7.TabIndex = 27
             Me.Guna2HtmlLabel7.Text = ":"
             '
+            'CloseCreatePaymentView
+            '
+            Me.CloseCreatePaymentView.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.CloseCreatePaymentView.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.CloseCreatePaymentView.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.CloseCreatePaymentView.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.CloseCreatePaymentView.FillColor = System.Drawing.Color.White
+            Me.CloseCreatePaymentView.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+            Me.CloseCreatePaymentView.ForeColor = System.Drawing.Color.Black
+            Me.CloseCreatePaymentView.Location = New System.Drawing.Point(1265, 22)
+            Me.CloseCreatePaymentView.Name = "CloseCreatePaymentView"
+            Me.CloseCreatePaymentView.Size = New System.Drawing.Size(34, 30)
+            Me.CloseCreatePaymentView.TabIndex = 28
+            Me.CloseCreatePaymentView.Text = "X"
+            '
             'StaffPaymentView
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
             Me.ClientSize = New System.Drawing.Size(1321, 878)
+            Me.Controls.Add(Me.CloseCreatePaymentView)
             Me.Controls.Add(Me.Guna2HtmlLabel7)
             Me.Controls.Add(Me.ChangeLabelText)
             Me.Controls.Add(Me.OrderNoteTextBox)
@@ -274,6 +291,7 @@
         Friend WithEvents OrderNoteTextBox As TextBox
         Friend WithEvents ChangeLabelText As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents Guna2HtmlLabel7 As Guna.UI2.WinForms.Guna2HtmlLabel
+        Friend WithEvents CloseCreatePaymentView As Guna.UI2.WinForms.Guna2Button
     End Class
 
 End Namespace

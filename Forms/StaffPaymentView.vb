@@ -152,5 +152,11 @@ Namespace KioskV0.Forms
         Private Sub ReceivedAmountTextBox_TextChanged(sender As Object, e As EventArgs) Handles ReceivedAmountTextBox.TextChanged
             CalculateChange()
         End Sub
+
+        Private Sub CloseCreatePaymentView_Click(sender As Object, e As EventArgs) Handles CloseCreatePaymentView.Click
+            Dim StaffPosView As New StaffPosView
+            StaffPosView.Show()
+            Me.Close()
+        End Sub
     End Class
 End Namespace

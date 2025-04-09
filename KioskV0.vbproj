@@ -387,6 +387,9 @@
     <EmbeddedResource Include="Forms\StaffPosOrderUserControl.resx">
       <DependentUpon>StaffPosOrderUserControl.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffPosView.resx">
+      <DependentUpon>StaffPosView.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\StaffProductCategoryUserControl.resx">
       <DependentUpon>StaffProductCategoryUserControl.vb</DependentUpon>
     </EmbeddedResource>
@@ -425,6 +428,7 @@
   <ItemGroup>
     <Content Include="Assets\calendar %281%29.png" />
     <Content Include="Assets\customer.png" />
+    <None Include="Assets\Icon Delete.png" />
     <Content Include="Assets\icons8-equal-housing-opportunity-96 %281%29.png" />
     <Content Include="Assets\icons8-equal-housing-opportunity-96.png" />
     <Content Include="Assets\icons8-hamburger-100.png" />

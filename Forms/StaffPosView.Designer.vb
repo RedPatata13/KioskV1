@@ -27,8 +27,12 @@
             Me.SearchProductTextBox = New Guna.UI2.WinForms.Guna2TextBox()
             Me.DeleteAllButton = New Guna.UI2.WinForms.Guna2Button()
             Me.PayButton = New Guna.UI2.WinForms.Guna2Button()
-            Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-            Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
+            Me.OrderListFlowLayout = New System.Windows.Forms.FlowLayoutPanel()
+            Me.ProductOrderFlowLayout = New System.Windows.Forms.FlowLayoutPanel()
+            Me.CategoryButtonFlowLayout = New System.Windows.Forms.FlowLayoutPanel()
+            Me.ProductButtonFlowLayout = New System.Windows.Forms.FlowLayoutPanel()
+            Me.VariationButtonFlowLayout = New System.Windows.Forms.FlowLayoutPanel()
+            Me.ProductOrderFlowLayout.SuspendLayout()
             Me.SuspendLayout()
             '
             'SearchOrderTextbox
@@ -117,21 +121,46 @@
             Me.PayButton.Text = "Pay"
             Me.PayButton.TextOffset = New System.Drawing.Point(0, 2)
             '
-            'FlowLayoutPanel1
+            'OrderListFlowLayout
             '
-            Me.FlowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.FlowLayoutPanel1.Location = New System.Drawing.Point(42, 101)
-            Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-            Me.FlowLayoutPanel1.Size = New System.Drawing.Size(529, 663)
-            Me.FlowLayoutPanel1.TabIndex = 4
+            Me.OrderListFlowLayout.AutoScroll = True
+            Me.OrderListFlowLayout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.OrderListFlowLayout.Location = New System.Drawing.Point(42, 101)
+            Me.OrderListFlowLayout.Name = "OrderListFlowLayout"
+            Me.OrderListFlowLayout.Size = New System.Drawing.Size(529, 663)
+            Me.OrderListFlowLayout.TabIndex = 4
             '
-            'FlowLayoutPanel2
+            'ProductOrderFlowLayout
             '
-            Me.FlowLayoutPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.FlowLayoutPanel2.Location = New System.Drawing.Point(591, 45)
-            Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
-            Me.FlowLayoutPanel2.Size = New System.Drawing.Size(687, 763)
-            Me.FlowLayoutPanel2.TabIndex = 5
+            Me.ProductOrderFlowLayout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.ProductOrderFlowLayout.Controls.Add(Me.CategoryButtonFlowLayout)
+            Me.ProductOrderFlowLayout.Controls.Add(Me.ProductButtonFlowLayout)
+            Me.ProductOrderFlowLayout.Controls.Add(Me.VariationButtonFlowLayout)
+            Me.ProductOrderFlowLayout.Location = New System.Drawing.Point(591, 45)
+            Me.ProductOrderFlowLayout.Name = "ProductOrderFlowLayout"
+            Me.ProductOrderFlowLayout.Size = New System.Drawing.Size(687, 763)
+            Me.ProductOrderFlowLayout.TabIndex = 5
+            '
+            'CategoryButtonFlowLayout
+            '
+            Me.CategoryButtonFlowLayout.Location = New System.Drawing.Point(3, 3)
+            Me.CategoryButtonFlowLayout.Name = "CategoryButtonFlowLayout"
+            Me.CategoryButtonFlowLayout.Size = New System.Drawing.Size(674, 49)
+            Me.CategoryButtonFlowLayout.TabIndex = 0
+            '
+            'ProductButtonFlowLayout
+            '
+            Me.ProductButtonFlowLayout.Location = New System.Drawing.Point(3, 58)
+            Me.ProductButtonFlowLayout.Name = "ProductButtonFlowLayout"
+            Me.ProductButtonFlowLayout.Size = New System.Drawing.Size(674, 612)
+            Me.ProductButtonFlowLayout.TabIndex = 1
+            '
+            'VariationButtonFlowLayout
+            '
+            Me.VariationButtonFlowLayout.Location = New System.Drawing.Point(3, 676)
+            Me.VariationButtonFlowLayout.Name = "VariationButtonFlowLayout"
+            Me.VariationButtonFlowLayout.Size = New System.Drawing.Size(674, 79)
+            Me.VariationButtonFlowLayout.TabIndex = 2
             '
             'StaffPosView
             '
@@ -139,8 +168,8 @@
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
             Me.ClientSize = New System.Drawing.Size(1305, 839)
-            Me.Controls.Add(Me.FlowLayoutPanel2)
-            Me.Controls.Add(Me.FlowLayoutPanel1)
+            Me.Controls.Add(Me.ProductOrderFlowLayout)
+            Me.Controls.Add(Me.OrderListFlowLayout)
             Me.Controls.Add(Me.PayButton)
             Me.Controls.Add(Me.DeleteAllButton)
             Me.Controls.Add(Me.SearchProductTextBox)
@@ -149,6 +178,7 @@
             Me.Name = "StaffPosView"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
             Me.Text = "StaffPosView"
+            Me.ProductOrderFlowLayout.ResumeLayout(False)
             Me.ResumeLayout(False)
 
         End Sub
@@ -157,8 +187,11 @@
         Friend WithEvents SearchProductTextBox As Guna.UI2.WinForms.Guna2TextBox
         Friend WithEvents DeleteAllButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents PayButton As Guna.UI2.WinForms.Guna2Button
-        Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
-        Friend WithEvents FlowLayoutPanel2 As FlowLayoutPanel
+        Friend WithEvents OrderListFlowLayout As FlowLayoutPanel
+        Friend WithEvents ProductOrderFlowLayout As FlowLayoutPanel
+        Friend WithEvents CategoryButtonFlowLayout As FlowLayoutPanel
+        Friend WithEvents ProductButtonFlowLayout As FlowLayoutPanel
+        Friend WithEvents VariationButtonFlowLayout As FlowLayoutPanel
     End Class
 
 End Namespace
