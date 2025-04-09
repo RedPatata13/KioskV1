@@ -9,9 +9,7 @@
     Public ReadOnly Property Suppliers As IBaseRepository(Of Supplier) Implements IUnitOfWork.Suppliers
     Public ReadOnly Property Transactions As IBaseRepository(Of Transaction) Implements IUnitOfWork.Transactions
     Public ReadOnly Property Inventories As IBaseRepository(Of Inventory) Implements IUnitOfWork.Inventories
-
     Public ReadOnly Property Users As UsersRepository Implements IUnitOfWork.Users
-
     Public ReadOnly Property SupplierTransactions As IBaseRepository(Of SupplierTransactionModel) Implements IUnitOfWork.SupplierTransactions
 
     Public Sub New(context As AppDbContext)
@@ -24,7 +22,7 @@
         Suppliers = New SuppliersRepository(_context)
         Transactions = New TransactionsRepository(_context)
         Inventories = New InventoriesRepository(_context)
-
+        SupplierTransactions = New SupplierTransactionsRepository(_context)
     End Sub
 
     Public Sub SaveChanges() Implements IUnitOfWork.SaveChanges
