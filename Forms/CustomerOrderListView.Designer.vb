@@ -23,20 +23,21 @@
         'Do not modify it using the code editor.
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
-            Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Me.YourOrderListLbl = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+            Me.OrderListLogo = New Guna.UI2.WinForms.Guna2PictureBox()
             Me.OrdersPanel = New Guna.UI2.WinForms.Guna2Panel()
             Me.Buttons = New Guna.UI2.WinForms.Guna2Panel()
-            Me.SelectImageButton = New Guna.UI2.WinForms.Guna2Button()
-            Me.SaveButton = New Guna.UI2.WinForms.Guna2Button()
+            Me.StartOverButton = New Guna.UI2.WinForms.Guna2Button()
+            Me.OrderMoreButton = New Guna.UI2.WinForms.Guna2Button()
             Me.OrderListFlowLayout = New System.Windows.Forms.FlowLayoutPanel()
             Me.OrderListPanel = New Guna.UI2.WinForms.Guna2Panel()
-            Me.Guna2DataGridView1 = New Guna.UI2.WinForms.Guna2DataGridView()
+            Me.OrderDetailsDGV = New Guna.UI2.WinForms.Guna2DataGridView()
             Me.ProductName = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.ProductQuantity = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.ProductPrice = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -49,16 +50,15 @@
             Me.Label6 = New System.Windows.Forms.Label()
             Me.Label5 = New System.Windows.Forms.Label()
             Me.Label4 = New System.Windows.Forms.Label()
-            Me.ViewOrderButton = New Guna.UI2.WinForms.Guna2Button()
-            Me.OrderListLogo = New Guna.UI2.WinForms.Guna2PictureBox()
+            Me.CheckOutButton = New Guna.UI2.WinForms.Guna2Button()
             Me.Guna2Panel1.SuspendLayout()
+            CType(Me.OrderListLogo, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.OrdersPanel.SuspendLayout()
             Me.Buttons.SuspendLayout()
             Me.OrderListPanel.SuspendLayout()
-            CType(Me.Guna2DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.OrderDetailsDGV, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.Guna2Panel3.SuspendLayout()
             Me.Guna2Panel2.SuspendLayout()
-            CType(Me.OrderListLogo, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'YourOrderListLbl
@@ -82,6 +82,18 @@
             Me.Guna2Panel1.Size = New System.Drawing.Size(1370, 97)
             Me.Guna2Panel1.TabIndex = 41
             '
+            'OrderListLogo
+            '
+            Me.OrderListLogo.BackColor = System.Drawing.Color.Transparent
+            Me.OrderListLogo.ImageRotate = 0!
+            Me.OrderListLogo.Location = New System.Drawing.Point(3, 3)
+            Me.OrderListLogo.Name = "OrderListLogo"
+            Me.OrderListLogo.Size = New System.Drawing.Size(106, 93)
+            Me.OrderListLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+            Me.OrderListLogo.TabIndex = 40
+            Me.OrderListLogo.TabStop = False
+            Me.OrderListLogo.UseTransparentBackground = True
+            '
             'OrdersPanel
             '
             Me.OrdersPanel.Controls.Add(Me.Buttons)
@@ -96,58 +108,57 @@
             'Buttons
             '
             Me.Buttons.BackColor = System.Drawing.Color.White
-            Me.Buttons.Controls.Add(Me.SelectImageButton)
-            Me.Buttons.Controls.Add(Me.SaveButton)
+            Me.Buttons.Controls.Add(Me.StartOverButton)
+            Me.Buttons.Controls.Add(Me.OrderMoreButton)
             Me.Buttons.Dock = System.Windows.Forms.DockStyle.Bottom
             Me.Buttons.Location = New System.Drawing.Point(0, 557)
             Me.Buttons.Name = "Buttons"
             Me.Buttons.Size = New System.Drawing.Size(1007, 95)
             Me.Buttons.TabIndex = 2
             '
-            'SelectImageButton
+            'StartOverButton
             '
-            Me.SelectImageButton.BackColor = System.Drawing.Color.Transparent
-            Me.SelectImageButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.SelectImageButton.BorderRadius = 15
-            Me.SelectImageButton.BorderThickness = 1
-            Me.SelectImageButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-            Me.SelectImageButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-            Me.SelectImageButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-            Me.SelectImageButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-            Me.SelectImageButton.FillColor = System.Drawing.Color.White
-            Me.SelectImageButton.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.SelectImageButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.SelectImageButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.SelectImageButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.SelectImageButton.HoverState.ForeColor = System.Drawing.Color.White
-            Me.SelectImageButton.Location = New System.Drawing.Point(23, 24)
-            Me.SelectImageButton.Margin = New System.Windows.Forms.Padding(2)
-            Me.SelectImageButton.Name = "SelectImageButton"
-            Me.SelectImageButton.Size = New System.Drawing.Size(318, 50)
-            Me.SelectImageButton.TabIndex = 22
-            Me.SelectImageButton.Text = "Start Over"
+            Me.StartOverButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer))
+            Me.StartOverButton.BorderRadius = 15
+            Me.StartOverButton.BorderThickness = 1
+            Me.StartOverButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.StartOverButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.StartOverButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.StartOverButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.StartOverButton.FillColor = System.Drawing.Color.White
+            Me.StartOverButton.Font = New System.Drawing.Font("Poppins SemiBold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.StartOverButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+            Me.StartOverButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+            Me.StartOverButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer))
+            Me.StartOverButton.HoverState.ForeColor = System.Drawing.Color.White
+            Me.StartOverButton.Location = New System.Drawing.Point(24, 24)
+            Me.StartOverButton.Margin = New System.Windows.Forms.Padding(2)
+            Me.StartOverButton.Name = "StartOverButton"
+            Me.StartOverButton.Size = New System.Drawing.Size(318, 50)
+            Me.StartOverButton.TabIndex = 27
+            Me.StartOverButton.Text = "Start over"
             '
-            'SaveButton
+            'OrderMoreButton
             '
-            Me.SaveButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.SaveButton.BorderRadius = 15
-            Me.SaveButton.BorderThickness = 1
-            Me.SaveButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-            Me.SaveButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-            Me.SaveButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-            Me.SaveButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-            Me.SaveButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.SaveButton.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.SaveButton.ForeColor = System.Drawing.Color.White
-            Me.SaveButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.SaveButton.HoverState.FillColor = System.Drawing.Color.White
-            Me.SaveButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.SaveButton.Location = New System.Drawing.Point(357, 24)
-            Me.SaveButton.Margin = New System.Windows.Forms.Padding(2)
-            Me.SaveButton.Name = "SaveButton"
-            Me.SaveButton.Size = New System.Drawing.Size(318, 50)
-            Me.SaveButton.TabIndex = 21
-            Me.SaveButton.Text = "Order more"
+            Me.OrderMoreButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.OrderMoreButton.BorderRadius = 15
+            Me.OrderMoreButton.BorderThickness = 1
+            Me.OrderMoreButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.OrderMoreButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.OrderMoreButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.OrderMoreButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.OrderMoreButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.OrderMoreButton.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.OrderMoreButton.ForeColor = System.Drawing.Color.White
+            Me.OrderMoreButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.OrderMoreButton.HoverState.FillColor = System.Drawing.Color.White
+            Me.OrderMoreButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.OrderMoreButton.Location = New System.Drawing.Point(357, 24)
+            Me.OrderMoreButton.Margin = New System.Windows.Forms.Padding(2)
+            Me.OrderMoreButton.Name = "OrderMoreButton"
+            Me.OrderMoreButton.Size = New System.Drawing.Size(318, 50)
+            Me.OrderMoreButton.TabIndex = 21
+            Me.OrderMoreButton.Text = "Order more"
             '
             'OrderListFlowLayout
             '
@@ -163,7 +174,7 @@
             Me.OrderListPanel.BorderColor = System.Drawing.Color.Black
             Me.OrderListPanel.BorderRadius = 15
             Me.OrderListPanel.BorderThickness = 2
-            Me.OrderListPanel.Controls.Add(Me.Guna2DataGridView1)
+            Me.OrderListPanel.Controls.Add(Me.OrderDetailsDGV)
             Me.OrderListPanel.Controls.Add(Me.Guna2Panel3)
             Me.OrderListPanel.Controls.Add(Me.Guna2Panel2)
             Me.OrderListPanel.Dock = System.Windows.Forms.DockStyle.Right
@@ -173,73 +184,73 @@
             Me.OrderListPanel.Size = New System.Drawing.Size(363, 652)
             Me.OrderListPanel.TabIndex = 0
             '
-            'Guna2DataGridView1
+            'OrderDetailsDGV
             '
-            DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-            Me.Guna2DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle6
-            DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-            DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
-            DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.Guna2DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
-            Me.Guna2DataGridView1.ColumnHeadersHeight = 4
-            Me.Guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-            Me.Guna2DataGridView1.ColumnHeadersVisible = False
-            Me.Guna2DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductName, Me.ProductQuantity, Me.ProductPrice})
-            DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle8.BackColor = System.Drawing.Color.White
-            DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-            DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-            DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-            DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.Guna2DataGridView1.DefaultCellStyle = DataGridViewCellStyle8
-            Me.Guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.Guna2DataGridView1.Location = New System.Drawing.Point(3, 88)
-            Me.Guna2DataGridView1.Name = "Guna2DataGridView1"
-            DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
-            DataGridViewCellStyle9.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.LightGray
-            DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.Guna2DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
-            Me.Guna2DataGridView1.RowHeadersVisible = False
-            Me.Guna2DataGridView1.RowHeadersWidth = 45
-            Me.Guna2DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-            DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
-            DataGridViewCellStyle10.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.LightGray
-            DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle10
-            Me.Guna2DataGridView1.Size = New System.Drawing.Size(357, 413)
-            Me.Guna2DataGridView1.TabIndex = 23
-            Me.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
-            Me.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-            Me.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
-            Me.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
-            Me.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-            Me.Guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White
-            Me.Guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-            Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-            Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-            Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4
-            Me.Guna2DataGridView1.ThemeStyle.ReadOnly = False
-            Me.Guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
-            Me.Guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-            Me.Guna2DataGridView1.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-            Me.Guna2DataGridView1.ThemeStyle.RowsStyle.Height = 22
-            Me.Guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.Guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+            DataGridViewCellStyle11.BackColor = System.Drawing.Color.White
+            Me.OrderDetailsDGV.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle11
+            DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+            DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle12.ForeColor = System.Drawing.Color.White
+            DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.OrderDetailsDGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
+            Me.OrderDetailsDGV.ColumnHeadersHeight = 4
+            Me.OrderDetailsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+            Me.OrderDetailsDGV.ColumnHeadersVisible = False
+            Me.OrderDetailsDGV.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductName, Me.ProductQuantity, Me.ProductPrice})
+            DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle13.BackColor = System.Drawing.Color.White
+            DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+            DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+            DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+            DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.OrderDetailsDGV.DefaultCellStyle = DataGridViewCellStyle13
+            Me.OrderDetailsDGV.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+            Me.OrderDetailsDGV.Location = New System.Drawing.Point(3, 88)
+            Me.OrderDetailsDGV.Name = "OrderDetailsDGV"
+            DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle14.BackColor = System.Drawing.Color.White
+            DataGridViewCellStyle14.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.LightGray
+            DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.OrderDetailsDGV.RowHeadersDefaultCellStyle = DataGridViewCellStyle14
+            Me.OrderDetailsDGV.RowHeadersVisible = False
+            Me.OrderDetailsDGV.RowHeadersWidth = 45
+            Me.OrderDetailsDGV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+            DataGridViewCellStyle15.BackColor = System.Drawing.Color.White
+            DataGridViewCellStyle15.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.LightGray
+            DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.ControlText
+            Me.OrderDetailsDGV.RowsDefaultCellStyle = DataGridViewCellStyle15
+            Me.OrderDetailsDGV.Size = New System.Drawing.Size(357, 413)
+            Me.OrderDetailsDGV.TabIndex = 23
+            Me.OrderDetailsDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+            Me.OrderDetailsDGV.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+            Me.OrderDetailsDGV.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+            Me.OrderDetailsDGV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+            Me.OrderDetailsDGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+            Me.OrderDetailsDGV.ThemeStyle.BackColor = System.Drawing.Color.White
+            Me.OrderDetailsDGV.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+            Me.OrderDetailsDGV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+            Me.OrderDetailsDGV.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+            Me.OrderDetailsDGV.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.OrderDetailsDGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+            Me.OrderDetailsDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+            Me.OrderDetailsDGV.ThemeStyle.HeaderStyle.Height = 4
+            Me.OrderDetailsDGV.ThemeStyle.ReadOnly = False
+            Me.OrderDetailsDGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
+            Me.OrderDetailsDGV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+            Me.OrderDetailsDGV.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.OrderDetailsDGV.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+            Me.OrderDetailsDGV.ThemeStyle.RowsStyle.Height = 22
+            Me.OrderDetailsDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+            Me.OrderDetailsDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
             '
             'ProductName
             '
@@ -317,7 +328,7 @@
             Me.Guna2Panel2.Controls.Add(Me.Label6)
             Me.Guna2Panel2.Controls.Add(Me.Label5)
             Me.Guna2Panel2.Controls.Add(Me.Label4)
-            Me.Guna2Panel2.Controls.Add(Me.ViewOrderButton)
+            Me.Guna2Panel2.Controls.Add(Me.CheckOutButton)
             Me.Guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
             Me.Guna2Panel2.Location = New System.Drawing.Point(0, 506)
             Me.Guna2Panel2.Name = "Guna2Panel2"
@@ -364,39 +375,27 @@
             Me.Label4.TabIndex = 3
             Me.Label4.Text = "Items"
             '
-            'ViewOrderButton
+            'CheckOutButton
             '
-            Me.ViewOrderButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.ViewOrderButton.BorderRadius = 15
-            Me.ViewOrderButton.BorderThickness = 1
-            Me.ViewOrderButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-            Me.ViewOrderButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-            Me.ViewOrderButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-            Me.ViewOrderButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-            Me.ViewOrderButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.ViewOrderButton.Font = New System.Drawing.Font("Poppins SemiBold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ViewOrderButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
-            Me.ViewOrderButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.ViewOrderButton.HoverState.FillColor = System.Drawing.Color.White
-            Me.ViewOrderButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.ViewOrderButton.Location = New System.Drawing.Point(23, 75)
-            Me.ViewOrderButton.Margin = New System.Windows.Forms.Padding(2)
-            Me.ViewOrderButton.Name = "ViewOrderButton"
-            Me.ViewOrderButton.Size = New System.Drawing.Size(318, 50)
-            Me.ViewOrderButton.TabIndex = 22
-            Me.ViewOrderButton.Text = "Complete Order"
-            '
-            'OrderListLogo
-            '
-            Me.OrderListLogo.BackColor = System.Drawing.Color.Transparent
-            Me.OrderListLogo.ImageRotate = 0!
-            Me.OrderListLogo.Location = New System.Drawing.Point(3, 3)
-            Me.OrderListLogo.Name = "OrderListLogo"
-            Me.OrderListLogo.Size = New System.Drawing.Size(106, 93)
-            Me.OrderListLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-            Me.OrderListLogo.TabIndex = 40
-            Me.OrderListLogo.TabStop = False
-            Me.OrderListLogo.UseTransparentBackground = True
+            Me.CheckOutButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
+            Me.CheckOutButton.BorderRadius = 15
+            Me.CheckOutButton.BorderThickness = 1
+            Me.CheckOutButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.CheckOutButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.CheckOutButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.CheckOutButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.CheckOutButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
+            Me.CheckOutButton.Font = New System.Drawing.Font("Poppins SemiBold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.CheckOutButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+            Me.CheckOutButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
+            Me.CheckOutButton.HoverState.FillColor = System.Drawing.Color.White
+            Me.CheckOutButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
+            Me.CheckOutButton.Location = New System.Drawing.Point(23, 75)
+            Me.CheckOutButton.Margin = New System.Windows.Forms.Padding(2)
+            Me.CheckOutButton.Name = "CheckOutButton"
+            Me.CheckOutButton.Size = New System.Drawing.Size(318, 50)
+            Me.CheckOutButton.TabIndex = 22
+            Me.CheckOutButton.Text = "Complete Order"
             '
             'CustomerOrderListView
             '
@@ -410,15 +409,15 @@
             Me.Name = "CustomerOrderListView"
             Me.Text = "CustomerOrderListPage"
             Me.Guna2Panel1.ResumeLayout(False)
+            CType(Me.OrderListLogo, System.ComponentModel.ISupportInitialize).EndInit()
             Me.OrdersPanel.ResumeLayout(False)
             Me.Buttons.ResumeLayout(False)
             Me.OrderListPanel.ResumeLayout(False)
-            CType(Me.Guna2DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.OrderDetailsDGV, System.ComponentModel.ISupportInitialize).EndInit()
             Me.Guna2Panel3.ResumeLayout(False)
             Me.Guna2Panel3.PerformLayout()
             Me.Guna2Panel2.ResumeLayout(False)
             Me.Guna2Panel2.PerformLayout()
-            CType(Me.OrderListLogo, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
 
         End Sub
@@ -429,10 +428,9 @@
         Friend WithEvents Buttons As Guna.UI2.WinForms.Guna2Panel
         Friend WithEvents OrderListFlowLayout As FlowLayoutPanel
         Friend WithEvents OrderListPanel As Guna.UI2.WinForms.Guna2Panel
-        Friend WithEvents SaveButton As Guna.UI2.WinForms.Guna2Button
-        Friend WithEvents SelectImageButton As Guna.UI2.WinForms.Guna2Button
-        Friend WithEvents ViewOrderButton As Guna.UI2.WinForms.Guna2Button
-        Friend WithEvents Guna2DataGridView1 As Guna.UI2.WinForms.Guna2DataGridView
+        Friend WithEvents OrderMoreButton As Guna.UI2.WinForms.Guna2Button
+        Friend WithEvents CheckOutButton As Guna.UI2.WinForms.Guna2Button
+        Friend WithEvents OrderDetailsDGV As Guna.UI2.WinForms.Guna2DataGridView
         Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
         Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
         Friend WithEvents Label3 As Label
@@ -445,6 +443,7 @@
         Friend WithEvents Label7 As Label
         Friend WithEvents Label6 As Label
         Friend WithEvents Label5 As Label
+        Friend WithEvents StartOverButton As Guna.UI2.WinForms.Guna2Button
     End Class
 
 

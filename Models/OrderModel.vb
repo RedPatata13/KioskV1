@@ -4,6 +4,8 @@ Namespace KioskV0.Model
     Public Class OrderModel
         Inherits BaseModel
 
+        Friend Property MenuItem As Object
+
         ' Order ID (unique identifier for the order)
         <Required(ErrorMessage:="Order ID is required.")>
         <StringLength(50, ErrorMessage:="Order ID cannot exceed 50 characters.")>

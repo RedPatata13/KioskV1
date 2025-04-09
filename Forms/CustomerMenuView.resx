@@ -154,7 +154,7 @@
         VH2uKaidAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="Guna2Button4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Cat3Button.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAABZ5JREFUeF7tnTtvHGUUhg8XAeISCcSdAgIFUECKEAg/gKsAiwJBgyXExQEiGYkC
@@ -217,7 +217,7 @@
         VH2uKaidAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="Guna2Button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Cat2Button.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAABZ5JREFUeF7tnTtvHGUUhg8XAeISCcSdAgIFUECKEAg/gKsAiwJBgyXExQEiGYkC
@@ -280,7 +280,7 @@
         VH2uKaidAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="Guna2Button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Cat1Button.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAABZ5JREFUeF7tnTtvHGUUhg8XAeISCcSdAgIFUECKEAg/gKsAiwJBgyXExQEiGYkC
@@ -343,7 +343,7 @@
         VH2uKaidAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="Guna2Button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="AllCategButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAABZ5JREFUeF7tnTtvHGUUhg8XAeISCcSdAgIFUECKEAg/gKsAiwJBgyXExQEiGYkC

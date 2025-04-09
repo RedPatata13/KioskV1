@@ -30,5 +30,17 @@ Namespace KioskV0.Model
         Public Sub New()
             MenuID = Guid.NewGuid().ToString().Substring(0, 10)
         End Sub
+        Public Overrides Function Equals(obj As Object) As Boolean
+            If obj Is Nothing Then Return False
+            If TypeOf obj Is MenuModel Then
+                Dim other As MenuModel = DirectCast(obj, MenuModel)
+                Return Me.MenuID = other.MenuID
+            End If
+            Return False
+        End Function
+
+        Public Overrides Function GetHashCode() As Integer
+            Return MenuID.GetHashCode()
+        End Function
     End Class
 End Namespace

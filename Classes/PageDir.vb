@@ -34,7 +34,10 @@
         Public Function GetCustomerPages(mediator As Mediator(Of CustomerKeys)) As Dictionary(Of CustomerKeys, IProjectable)
             Return New Dictionary(Of CustomerKeys, IProjectable) From
             {
-                {CustomerKeys.CustomerAddNote, New Classes.CustomerAddNoteViewModel(New Forms.CustomerAddNoteView(), mediator)}
+               {CustomerKeys.CustomerConfirmOrder, New Classes.CustomerConfirmOrderViewModel(New Forms.CustomerConfirmOrderView(), mediator)},
+               {CustomerKeys.CustomerMenu, New Classes.CustomerMenuViewModel(New Forms.CustomerMenuView(), mediator)},
+               {CustomerKeys.CustomerOrderList, New Classes.CustomerOrderListViewModel(New Forms.CustomerOrderListView(), mediator)},
+               {CustomerKeys.CustomerPayment, New Classes.CustomerPaymentViewModel(New Forms.CustomerPaymentView(), mediator)}
             }
         End Function
         Public Function GetSupplierPages() As Dictionary(Of SupplierKeys, IProjectable)

@@ -58,7 +58,8 @@ Namespace KioskV0.Classes
                         mediator.SwapPage(AdminKeys.AdminDashboard) 'so call it again. I have no fckin clue why this happens cuz ts was working just fine before the merge
                     Case UserType.Customer
                         mediator = New Mediator(Of CustomerKeys)(_projector, Me, _db)
-                        mediator.SetupMap(GetCustomerPages())
+                        mediator.SetupMap(GetCustomerPages(mediator))
+                        mediator.SwapPage(CustomerKeys.CustomerMenu)
 
                     Case UserType.Staff
                         mediator = New Mediator(Of StaffKeys)(_projector, Me, _db)
@@ -89,6 +90,7 @@ Namespace KioskV0.Classes
 
         Private Sub SetEvents()
             _view.SubmitButtonClick = AddressOf SubmitButtonClick
+            _view.CustomerButtonClick = AddressOf CustomerButtonClick
         End Sub
 
         Private Sub SubmitButtonClick()
@@ -105,6 +107,12 @@ Namespace KioskV0.Classes
                 MessageBox.Show("An unexpected Error has occured")
 
             End Try
+        End Sub
+        Private Sub CustomerButtonClick()
+            Dim mediator
+            mediator = New Mediator(Of CustomerKeys)(_projector, Me, _db)
+            mediator.SetupMap(GetCustomerPages(mediator))
+            mediator.SwapPage(CustomerKeys.CustomerMenu)
         End Sub
 
         ''' <summary>
