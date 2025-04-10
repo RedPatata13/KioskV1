@@ -22,6 +22,8 @@ Namespace KioskV0.Classes
             _mediator.LayoutAction(Sub()
                                        _mediator.AddAction(Sub() MyBase.Project(projector))
                                        If Not Loaded Then
+                                           _mediator.AddAction(Sub() MyBase.Project(projector))
+                                           _mediator.AddAction(Sub() ResizeComponents(_mediator.GetProjectorPanelSize()))
                                            _mediator.AddAction(Sub() LoadMenuData())
                                        End If
                                        _mediator.AddAction(Sub() LoadMenuItems("All"))
@@ -31,7 +33,7 @@ Namespace KioskV0.Classes
         End Sub
 
         Private Sub LoadMenuData()
-            AllMenuItems = _mediator.GetMenuList()
+            AllMenuItems = New List(Of MenuModel)
         End Sub
 
         Private Sub LoadMenuItems(category As String)
@@ -92,14 +94,14 @@ Namespace KioskV0.Classes
         End Sub
         Private Sub OnViewOrderClicked()
             If _cart.Count = 0 Then
-                Dim noItemUC As New CustomerNoItemUserControl() With {
-                .BackClick = Sub()
-                                 _view.CustomerMainPanelView.Controls.Clear()
-                                 _view.CustomerMainPanelView.Visible = False
-                                 _mediator.SwapPage(CustomerKeys.CustomerMenu)
-                             End Sub}
+                'Dim noItemUC As New CustomerNoItemUserControl() With {
+                '.BackClick = Sub()
+                '                 _view.CustomerMainPanelView.Controls.Clear()
+                '                 _view.CustomerMainPanelView.Visible = False
+                '                 _mediator.SwapPage(CustomerKeys.CustomerMenu)
+                '             End Sub}
                 _view.CustomerMainPanelView.Controls.Clear()
-                _view.CustomerMainPanelView.Controls.Add(noItemUC)
+                '_view.CustomerMainPanelView.Controls.Add(noItemUC)
                 _view.CustomerMainPanelView.Visible = True
             Else
                 _mediator.SwapPage(CustomerKeys.CustomerOrderList)

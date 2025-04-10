@@ -26,3 +26,12 @@ Public Class AppDbContext
         MyBase.OnModelCreating(modelBuilder)
     End Sub
 End Class
+
+Public Class KioskDbContext
+    Inherits DbContext
+    Public Sub New()
+        MyBase.New(JsonConfigReader.GetConnectionString())
+    End Sub
+
+    'Public Property Inventories As DbSet(Of
+End Class

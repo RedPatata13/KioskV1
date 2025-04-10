@@ -11,6 +11,8 @@ Namespace KioskV0.Classes
     Public Class CustomerOrderListViewModel
         Inherits ViewModel(Of Forms.CustomerOrderListView, CustomerKeys)
         Private Property Loaded As Boolean = False
+        Private Property TestBool As Boolean = False
+        Private Property NoItemsPanel As Panel = New Panel
         Private _cart As List(Of OrderModel)
         Public Sub New(view As CustomerOrderListView, mediator As Mediator(Of CustomerKeys))
             MyBase.New(view, mediator)
@@ -29,20 +31,43 @@ Namespace KioskV0.Classes
             _mediator.LayoutAction(Sub()
                                        _mediator.AddAction(Sub() MyBase.Project(projector))
                                        If Not Loaded Then
+                                           _mediator.AddAction(Sub() MyBase.Project(projector))
+                                           _mediator.AddAction(Sub() ResizeComponents(_mediator.GetProjectorPanelSize()))
+                                           _mediator.AddAction(Sub() SetupPanel())
                                            _mediator.AddAction(Sub() LoadOrderDetails())
                                        End If
                                        _mediator.InvokeAllAction()
+                                       'MessageBox.Show($"{_view.Size.Width}")
                                    End Sub)
             Loaded = True
         End Sub
 
         Private Sub GetCart()
-            _cart = _mediator.GetOrderList() ' Ensure this method is returning a valid list
+            _cart = Nothing
             If _cart Is Nothing Then
                 _cart = New List(Of OrderModel)() ' Initialize if it's Nothing
             End If
         End Sub
+        Private Sub SetupPanel()
+            NoItemsPanel.Location = New Point(_view.PanelLocation.X, _view.PanelLocation.Y + _view.TopBar.Height)
+            NoItemsPanel.Size = _mediator.GetScreenSize()
+            NoItemsPanel.BackColor = Color.Wheat
+            _view.Controls.Add(NoItemsPanel)
+            NoItemsPanel.BringToFront()
 
+            Dim uc = New CustomerNoItemUserControl()
+            Dim x = NoItemsPanel.Width / 2 - uc.Width / 2
+            Dim y = NoItemsPanel.Height / 2 - uc.Height / 1.5
+            uc.Location = New Point(x, y)
+            uc.BackClick = Sub() ShowNoItemsPanel()
+            NoItemsPanel.Controls.Add(uc)
+        End Sub
+        Private Sub ShowNoItemsPanel()
+            If Not TestBool Then
+                NoItemsPanel.Visible = Not NoItemsPanel.Visible
+                TestBool = Not TestBool
+            End If
+        End Sub
         Private Sub LoadOrderDetails()
             If _view IsNot Nothing Then
                 _view.OrderListFlowLayout.Controls.Clear()

@@ -60,6 +60,10 @@
         Public Function GetSidebarSize() As System.Drawing.Size
             Return _projector.GetSidebarPanelSize()
         End Function
+
+        Friend Function GetScreenSize() As Size
+            Return _projector.GetTotalScreenSize()
+        End Function
     End Class
 
 End Namespace

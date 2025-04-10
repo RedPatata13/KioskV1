@@ -227,6 +227,9 @@ Namespace KioskV0.Classes
             Return _Projector.GetSidebarSize()
         End Function
 
+        Public Function GetScreenSize() As Size
+            Return _Projector.GetScreenSize()
+        End Function
         Private Sub InitializeUserCache()
             _userCache = New Dictionary(Of String, User)
             For Each user In GetUserList()

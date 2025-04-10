@@ -432,7 +432,9 @@
     </Compile>
     <Compile Include="Migrations\202504070649049_InitialCreate.vb" />
     <Compile Include="Migrations\Configuration.vb" />
+    <Compile Include="Models\AdminItem.vb" />
     <Compile Include="Models\Customer.vb" />
+    <Compile Include="Models\CustomerItem.vb" />
     <Compile Include="Models\Inventory.vb" />
     <Compile Include="Models\ItemModel.vb" />
     <Compile Include="Models\Menu.vb" />
@@ -442,6 +444,7 @@
     <Compile Include="Models\OrderItem.vb" />
     <Compile Include="Models\OrderModel.vb" />
     <Compile Include="Models\Supplier.vb" />
+    <Compile Include="Models\InventoryItem.vb" />
     <Compile Include="Models\SupplierProduct.vb" />
     <Compile Include="Models\Transaction.vb" />
     <Compile Include="Models\UserModel_1.vb" />

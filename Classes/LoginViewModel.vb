@@ -71,7 +71,7 @@ Namespace KioskV0.Classes
                         mediator.SwapPage(AdminKeys.AdminDashboard)
                     Case "3"
                         mediator = New Mediator(Of CustomerKeys)(_projector, Me, _unitOfWork)
-                        mediator.SetupMap(GetCustomerPages())
+                        mediator.SetupMap(GetCustomerPages(mediator))
                     Case "1"
                         mediator = New Mediator(Of StaffKeys)(_projector, Me, _unitOfWork)
                         mediator.SetupMap(GetStaffPages(mediator))
@@ -142,6 +142,12 @@ Namespace KioskV0.Classes
             End While
             Return message
         End Function
+        Private Sub CustomerButtonClick()
+            Dim mediator
+            mediator = New Mediator(Of CustomerKeys)(_projector, Me, _unitOfWork)
+            mediator.SetupMap(GetCustomerPages(mediator))
+            mediator.SwapPage(CustomerKeys.CustomerOrderList)
+        End Sub
         Private Sub LogException(ex As Exception)
             MessageBox.Show(ex.Message)
             Dim logFilePath As String = "error_log.txt"
@@ -152,12 +158,7 @@ Namespace KioskV0.Classes
                 logMessage &= Environment.NewLine & $"INNER EXCEPTION: {innerEx.Message}{Environment.NewLine}STACK TRACE: {innerEx.StackTrace}"
                 innerEx = innerEx.InnerException
             End While
-        Private Sub CustomerButtonClick()
-            Dim mediator
-            mediator = New Mediator(Of CustomerKeys)(_projector, Me, _db)
-            mediator.SetupMap(GetCustomerPages(mediator))
-            mediator.SwapPage(CustomerKeys.CustomerMenu)
-        End Sub
+
 
             System.IO.File.AppendAllText(logFilePath, logMessage & Environment.NewLine & "----------------------------------" & Environment.NewLine)
         End Sub

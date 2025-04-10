@@ -57,4 +57,8 @@
     Private Sub ProjectorView_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Friend Function GetTotalScreenSize() As Size
+        Return New Size(Me.Width, Me.Height)
+    End Function
 End Class

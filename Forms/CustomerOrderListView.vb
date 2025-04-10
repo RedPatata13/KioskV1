@@ -6,6 +6,23 @@ Namespace KioskV0.Forms
         Public Property StartOverClick As Action
         Public Property CheckOutClick As Action
 
+        Public Property PanelLocation As Point
+            Get
+                Return OrderListFlowLayout.Location
+            End Get
+            Set(value As Point)
+                OrderListFlowLayout.Location = value
+            End Set
+        End Property
+        Public Sub New()
+
+            ' This call is required by the designer.
+            InitializeComponent()
+
+            ' Add any initialization after the InitializeComponent() call.
+            'Controls.Add(StartOverButton)
+            'Controls.Add(OrderMoreButton)
+        End Sub
         Public ReadOnly Property OrderPanel As FlowLayoutPanel
             Get
                 Return OrderListFlowLayout
@@ -32,6 +49,10 @@ Namespace KioskV0.Forms
 
         Private Sub CheckOutButton_Click(sender As Object, e As EventArgs) Handles CheckOutButton.Click
             CheckOutClick?.Invoke()
+        End Sub
+
+        Private Sub CustomerNoItemUserControl1_Load(sender As Object, e As EventArgs)
+
         End Sub
     End Class
 End Namespace

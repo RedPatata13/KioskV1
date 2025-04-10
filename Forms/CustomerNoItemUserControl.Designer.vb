@@ -31,7 +31,7 @@
             '
             Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Poppins SemiBold", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(411, 238)
+            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(232, 160)
             Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
             Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(504, 58)
             Me.Guna2HtmlLabel1.TabIndex = 0
@@ -52,7 +52,7 @@
             Me.OrderMoreButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.OrderMoreButton.HoverState.FillColor = System.Drawing.Color.White
             Me.OrderMoreButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.OrderMoreButton.Location = New System.Drawing.Point(512, 346)
+            Me.OrderMoreButton.Location = New System.Drawing.Point(333, 268)
             Me.OrderMoreButton.Margin = New System.Windows.Forms.Padding(2)
             Me.OrderMoreButton.Name = "OrderMoreButton"
             Me.OrderMoreButton.Size = New System.Drawing.Size(318, 50)
@@ -67,7 +67,7 @@
             Me.Controls.Add(Me.OrderMoreButton)
             Me.Controls.Add(Me.Guna2HtmlLabel1)
             Me.Name = "CustomerNoItemUserControl"
-            Me.Size = New System.Drawing.Size(1370, 652)
+            Me.Size = New System.Drawing.Size(963, 462)
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
