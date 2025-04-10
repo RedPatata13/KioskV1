@@ -19,7 +19,12 @@ Namespace KioskV0.Classes
             GetCart()
             SetEvents()
 
-
+            _view.OrderListPanel.BringToFront()
+            RecordChildAspectRatio(_view.OrderListFlowLayout)
+            RecordChildAspectRatio(_view.OrderListPanel)
+            RecordChildAspectRatio(_view.Buttons)
+            RecordChildAspectRatio(_view.OrderMoreButton)
+            RecordChildAspectRatio(_view.StartOverButton)
         End Sub
 
         Protected Friend Overrides Sub SetEvents()

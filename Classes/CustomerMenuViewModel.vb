@@ -5,10 +5,16 @@ Namespace KioskV0.Classes
     Public Class CustomerMenuViewModel
         Inherits ViewModel(Of Forms.CustomerMenuView, CustomerKeys)
         Private Property Loaded As Boolean = False
-        Private Property AllMenuItems As List(Of MenuModel)
+        Private Property AllMenuItems As List(Of CustomerItem)
+        Private Property CategoryList As New Dictionary(Of String, Category)
         Private _cart As New List(Of OrderModel)
         Public Sub New(view As CustomerMenuView, mediator As Mediator(Of CustomerKeys))
             MyBase.New(view, mediator)
+
+            RecordChildAspectRatio(_view.ViewOrderButton)
+            RecordChildAspectRatio(_view.StartOverButton)
+            '_view.ViewOrderButton.Location = New Point(_view.ViewOrderButton.Location.X + 400, _view.ViewOrderButton.Location.Y)
+            '_view.ViewOrderButton.Location = New Point(_view.StartOverButton.Location.X + 400, _view.StartOverButton.Location.Y)
             SetEvents()
         End Sub
         Protected Friend Overrides Sub SetEvents()
@@ -25,22 +31,53 @@ Namespace KioskV0.Classes
                                            _mediator.AddAction(Sub() MyBase.Project(projector))
                                            _mediator.AddAction(Sub() ResizeComponents(_mediator.GetProjectorPanelSize()))
                                            _mediator.AddAction(Sub() LoadMenuData())
+                                           _mediator.AddAction(Sub() LoadCategories())
                                        End If
                                        _mediator.AddAction(Sub() LoadMenuItems("All"))
                                        _mediator.InvokeAllAction()
                                    End Sub)
             Loaded = True
         End Sub
+        Private Sub LoadCategories()
+            _view.CategoryPanel.Controls.Clear()
+
+            'Dim categoryList = _mediator.GetUnitOfWork().Categories.GetAll()
+            Dim locationY = 0
+            Dim allButton = New Guna.UI2.WinForms.Guna2Button
+            allButton.Text = "All"
+            allButton.Location = New Point(0, locationY)
+            locationY += allButton.Height
+            AddHandler allButton.Click, Sub() LoadMenuItems(allButton.Text)
+            _view.CategoryPanel.Controls.Add(allButton)
+            For Each ctgr In CategoryList
+                Dim button As New Guna.UI2.WinForms.Guna2Button
+                button.Text = ctgr.Value.CategoryName
+                'button.Click = Sub() LoadMenuItems(button.Text)
+                button.Location = New Point(0, locationY)
+                locationY += button.Height
+                AddHandler button.Click, Sub() LoadMenuItems(button.Text)
+                _view.CategoryPanel.Controls.Add(button)
+            Next
+
+        End Sub
 
         Private Sub LoadMenuData()
-            AllMenuItems = New List(Of MenuModel)
+            AllMenuItems = _mediator.GetCustomerItemList()
+            For Each ami In AllMenuItems
+                If Not CategoryList.ContainsKey(ami.AdminItem.Category.CategoryId) Then
+                    CategoryList.Add(ami.AdminItem.Category.CategoryId, ami.AdminItem.Category)
+
+                End If
+            Next
         End Sub
 
         Private Sub LoadMenuItems(category As String)
             _view.ItemPanel.Controls.Clear()
 
             Dim filtered = If(category = "All", AllMenuItems,
-                              AllMenuItems.Where(Function(x) x.Category = category).ToList())
+                AllMenuItems.Where(Function(x) x.AdminItem.Category.CategoryName.Contains(category)).ToList())
+
+            'Dim filtered As List(Of CustomerItem) = AllMenuItems
             For Each item In filtered
                 Dim uc As New CustomerMenuUserControl(item)
                 uc.SelfClick = Sub() MenuUserControlClick(item)
@@ -51,11 +88,11 @@ Namespace KioskV0.Classes
         Private Sub OnCategoryClicked(category As String)
             LoadMenuItems(category)
         End Sub
-        Private Sub MenuUserControlClick(item As MenuModel)
+        Private Sub MenuUserControlClick(item As CustomerItem)
             ShowQuantityUC(item)
         End Sub
 
-        Private Sub ShowQuantityUC(item As MenuModel)
+        Private Sub ShowQuantityUC(item As CustomerItem)
             Dim quantityUC As New CustomerOrderQuantityUserControl(item) With {
             .AddOrderClick = Sub(model, qty)
                                  AddToCart(model, qty)
@@ -69,7 +106,7 @@ Namespace KioskV0.Classes
             _view.DisplayOrderQuantity(quantityUC)
         End Sub
 
-        Private Sub AddToCart(menu As MenuModel, quantity As Integer)
+        Private Sub AddToCart(menu As CustomerItem, quantity As Integer)
             Dim existingOrder = _cart.FirstOrDefault(Function(o) o.MenuItem.Equals(menu))
             If existingOrder IsNot Nothing Then
                 existingOrder.Quantity += quantity

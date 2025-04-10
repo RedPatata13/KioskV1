@@ -43,6 +43,7 @@ Public Class KioskDbContext
         MyBase.New(JsonConfigReader.GetConnectionString())
     End Sub
     Protected Overrides Sub OnModelCreating(modelBuilder As DbModelBuilder)
+        modelBuilder.Configurations.Add(New CategoryConfiguration())
         modelBuilder.Configurations.Add(New MenuConfiguration())
         modelBuilder.Configurations.Add(New SupplierConfiguration())
         modelBuilder.Configurations.Add(New SupplierItemConfiguration())
@@ -52,7 +53,7 @@ Public Class KioskDbContext
             .HasOptional(Function(c) c.AdminItem) _
             .WithMany() _
             .HasForeignKey(Function(c) c.AdminItemId) _
-            .WillCascadeOnDelete(False) ' Prevent cascading delete for AdminItem
+            .WillCascadeOnDelete(False) ' Prevent cascading delete for AdminItem    
         MyBase.OnModelCreating(modelBuilder)
     End Sub
 End Class

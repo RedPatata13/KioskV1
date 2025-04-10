@@ -13,6 +13,7 @@
     Public ReadOnly Property Inventories As IBaseRepository(Of Inventory) Implements IUnitOfWork.Inventories
     Public ReadOnly Property Users As UsersRepository Implements IUnitOfWork.Users
     Public ReadOnly Property CustomerItems As IBaseRepository(Of CustomerItem) Implements IUnitOfWork.CustomerItems
+    Public ReadOnly Property Categories As IBaseRepository(Of Category) Implements IUnitOfWork.Categories
 
     Public Sub New(context As KioskDbContext)
         _context = context
@@ -27,6 +28,7 @@
         Inventories = New InventoriesRepository(_context)
         AdminItems = New AdminItemsRepository(_context)
         CustomerItems = New CustomerItemsRepository(_context)
+        Categories = New CategoryRepository(_context)
     End Sub
 
     Public Sub SaveChanges() Implements IUnitOfWork.SaveChanges

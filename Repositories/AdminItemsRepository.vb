@@ -6,4 +6,14 @@ Public Class AdminItemsRepository
     Public Sub New(context As KioskDbContext)
         MyBase.New(context)
     End Sub
+
+    Public Overrides Function GetAll() As IEnumerable(Of AdminItem)
+        Return _dbSet.Include(Function(c) c.Category) _
+                     .Include(Function(c) c.SupplierItem) _
+                     .Include(Function(c) c.SupplierItem.Supplier) _
+                     .AsNoTracking() _
+                     .ToList()
+    End Function
+
+
 End Class

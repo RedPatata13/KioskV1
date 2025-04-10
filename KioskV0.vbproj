@@ -180,6 +180,7 @@
     <Compile Include="Classes\ViewModel.vb" />
     <Compile Include="Data\AppDbContext.vb" />
     <Compile Include="Data\Configuration\AdminItemConfiguration.vb" />
+    <Compile Include="Data\Configuration\CategoryConfiguration.vb" />
     <Compile Include="Data\Configuration\CustomerConfiguration.vb" />
     <Compile Include="Data\Configuration\InventoryConfiguration.vb" />
     <Compile Include="Data\Configuration\JsonConfigReader.vb" />
@@ -438,8 +439,17 @@
       <DependentUpon>202504101302384_ItemAdjustments.vb</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202504101302384_ItemAdjustments.vb" />
+    <Compile Include="Migrations\202504101425484_UpdateAdminItemDef.Designer.vb">
+      <DependentUpon>202504101425484_UpdateAdminItemDef.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504101425484_UpdateAdminItemDef.vb" />
+    <Compile Include="Migrations\202504101455132_AddFK.Designer.vb">
+      <DependentUpon>202504101455132_AddFK.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504101455132_AddFK.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\AdminItem.vb" />
+    <Compile Include="Models\Category.vb" />
     <Compile Include="Models\Customer.vb" />
     <Compile Include="Models\CustomerItem.vb" />
     <Compile Include="Models\Inventory.vb" />
@@ -458,8 +468,10 @@
     <Compile Include="Models\UserModel.vb" />
     <Compile Include="Repositories\AdminItemsRepository.vb" />
     <Compile Include="Repositories\BaseRepository.vb" />
+    <Compile Include="Repositories\CategoryRepository.vb" />
     <Compile Include="Repositories\Contracts\IAdminItemsRepository.vb" />
     <Compile Include="Repositories\Contracts\IBaseRepository.vb" />
+    <Compile Include="Repositories\Contracts\ICategoryRepository.vb" />
     <Compile Include="Repositories\Contracts\ICustomerItemRepository.vb" />
     <Compile Include="Repositories\Contracts\IMenuRepository.vb" />
     <Compile Include="Repositories\Contracts\ISupplierItemsRepository.vb" />
@@ -612,6 +624,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504101302384_ItemAdjustments.resx">
       <DependentUpon>202504101302384_ItemAdjustments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504101425484_UpdateAdminItemDef.resx">
+      <DependentUpon>202504101425484_UpdateAdminItemDef.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504101455132_AddFK.resx">
+      <DependentUpon>202504101455132_AddFK.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

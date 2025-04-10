@@ -2,6 +2,8 @@
     Public Property Id As String
     Public Property Name As String
     Public Property Description As String
+    Public Property CategoryId As String
+    Public Property Category As Category
     Public Property SupplierItemId As String ' FK
     Public Property SupplierItem As SupplierItem
     Public Property SellingCost As Decimal

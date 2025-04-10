@@ -1,10 +1,12 @@
 ﻿Imports System.Data.Entity.ModelConfiguration
+Imports System.Net
 
 Public Class SupplierItemConfiguration
     Inherits EntityTypeConfiguration(Of SupplierItem)
 
     Public Sub New()
         ' Define the primary key
+        'Me.Map(Function(s) s.ToTable("Suppliers"))
         Me.HasKey(Function(s) s.Id)
 
         ' Define properties and constraints
@@ -22,11 +24,9 @@ Public Class SupplierItemConfiguration
 
         Me.Property(Function(s) s.StockCount).
             IsRequired()
-
-        ' Define the relationship between SupplierItem and Supplier
         Me.HasRequired(Function(s) s.Supplier) _
             .WithMany() _
             .HasForeignKey(Function(s) s.SupplierId) _
-            .WillCascadeOnDelete(False) ' Prevent cascade delete
+            .WillCascadeOnDelete(False)
     End Sub
 End Class

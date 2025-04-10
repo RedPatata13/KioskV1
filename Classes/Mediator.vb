@@ -95,6 +95,10 @@ Namespace KioskV0.Classes
         Public Function GetUnitOfWork() As IUnitOfWork
             Return _unitOfWork
         End Function
+
+        Public Function GetCustomerItemList()
+            Return _unitOfWork.CustomerItems.GetAll()
+        End Function
         'test adding user
         Public Sub CreateUser(model As User)
             Try

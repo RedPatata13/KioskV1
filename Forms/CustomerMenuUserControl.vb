@@ -13,9 +13,9 @@ Namespace KioskV0.Forms
                 ApplyClickEvent(Me)
             End Set
         End Property
-        Private Property _model As MenuModel
+        Private Property _model As CustomerItem
 
-        Public Sub New(model As MenuModel)
+        Public Sub New(model As CustomerItem)
             InitializeComponent()
             _model = model
             SetLabels()
@@ -25,8 +25,8 @@ Namespace KioskV0.Forms
         End Sub
 
         Private Sub SetLabels()
-            ProductName.Text = _model.MenuName
-            PriceLabel.Text = $"P{_model.Selling}"
+            ProductName.Text = _model.Name
+            PriceLabel.Text = $"P{_model.AdminItem.SellingCost}"
         End Sub
         Private Sub ApplyClickEvent(ctrl As Control)
             AddHandler ctrl.Click, Sub(sender, e)

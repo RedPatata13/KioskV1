@@ -12,5 +12,6 @@
     ReadOnly Property SupplierItems As IBaseRepository(Of SupplierItem)
     ReadOnly Property AdminItems As IBaseRepository(Of AdminItem)
     ReadOnly Property CustomerItems As IBaseRepository(Of CustomerItem)
+    ReadOnly Property Categories As IBaseRepository(Of Category)
     Sub SaveChanges()
 End Interface

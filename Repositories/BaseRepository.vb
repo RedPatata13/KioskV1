@@ -38,7 +38,7 @@ Public Class BaseRepository(Of T As Class)
     End Sub
 
     ' Get all entities
-    Public Function GetAll() As IEnumerable(Of T) Implements IBaseRepository(Of T).GetAll
+    Public Overridable Function GetAll() As IEnumerable(Of T) Implements IBaseRepository(Of T).GetAll
         Return _dbSet.AsNoTracking().ToList()
     End Function
 

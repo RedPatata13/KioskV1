@@ -5,6 +5,7 @@ Public Class AdminItemConfiguration
 
     Public Sub New()
         ' Define the primary key
+        'Me.Map(Function(s) s.ToTable("SupplierItems"))
         Me.HasKey(Function(a) a.Id)
 
         ' Define properties and constraints
@@ -24,6 +25,7 @@ Public Class AdminItemConfiguration
             IsRequired().
             HasPrecision(18, 2) ' Define decimal precision
 
+
         Me.Property(Function(a) a.ImageFilePath).
             HasMaxLength(255).
             IsOptional()
@@ -36,5 +38,10 @@ Public Class AdminItemConfiguration
             .WithMany() _
             .HasForeignKey(Function(a) a.SupplierItemId) _
             .WillCascadeOnDelete(False) ' Prevent cascading delete
+
+        Me.HasRequired(Function(a) a.Category) _
+            .WithMany() _
+            .HasForeignKey(Function(a) a.CategoryId) _
+            .WillCascadeOnDelete(False)
     End Sub
 End Class

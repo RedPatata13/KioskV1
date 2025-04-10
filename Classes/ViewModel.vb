@@ -68,6 +68,13 @@ Namespace KioskV0.Classes
                 _aspectRatios(ctrl) = (sizeRatio, locationRatio, fontSize)
             Next
         End Sub
+        Protected Friend Sub RecordChildAspectRatio(ctrl As Control)
+            Dim parentSize = _view.Size
+            Dim sizeRatio As New SizeF(ctrl.Width / parentSize.Width, ctrl.Height / parentSize.Height)
+            Dim locationRatio As New PointF(ctrl.Location.X / parentSize.Width, ctrl.Location.Y / parentSize.Height)
+            Dim fontSize As Single? = If(TypeOf ctrl Is Label, CType(ctrl, Label).Font.Size, Nothing)
+            _aspectRatios(ctrl) = (sizeRatio, locationRatio, fontSize)
+        End Sub
 
         Public Sub ResizeComponents(newSize As Size)
             For Each kvp In _aspectRatios
