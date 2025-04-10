@@ -107,6 +107,7 @@
             Me.RemoveButton.Size = New System.Drawing.Size(169, 35)
             Me.RemoveButton.TabIndex = 47
             Me.RemoveButton.Text = "Remove"
+            Me.RemoveButton.TextOffset = New System.Drawing.Point(0, 1)
             '
             'DecreaseItemButton
             '
@@ -154,7 +155,7 @@
             '
             Me.QuantityTextBox.AutoSize = True
             Me.QuantityTextBox.Font = New System.Drawing.Font("Poppins SemiBold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.QuantityTextBox.Location = New System.Drawing.Point(68, 11)
+            Me.QuantityTextBox.Location = New System.Drawing.Point(68, 17)
             Me.QuantityTextBox.Name = "QuantityTextBox"
             Me.QuantityTextBox.Size = New System.Drawing.Size(39, 34)
             Me.QuantityTextBox.TabIndex = 45
@@ -175,7 +176,7 @@
             Me.MenuPictureBox.BorderRadius = 15
             Me.MenuPictureBox.FillColor = System.Drawing.Color.Gainsboro
             Me.MenuPictureBox.ImageRotate = 0!
-            Me.MenuPictureBox.Location = New System.Drawing.Point(27, 15)
+            Me.MenuPictureBox.Location = New System.Drawing.Point(19, 15)
             Me.MenuPictureBox.Name = "MenuPictureBox"
             Me.MenuPictureBox.Size = New System.Drawing.Size(150, 127)
             Me.MenuPictureBox.TabIndex = 0

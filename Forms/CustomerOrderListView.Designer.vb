@@ -23,6 +23,7 @@
         'Do not modify it using the code editor.
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CustomerOrderListView))
             Me.YourOrderListLbl = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.TopBar = New Guna.UI2.WinForms.Guna2Panel()
             Me.OrdersPanel = New Guna.UI2.WinForms.Guna2Panel()
@@ -31,11 +32,12 @@
             Me.OrderMoreButton = New Guna.UI2.WinForms.Guna2Button()
             Me.OrderListFlowLayout = New System.Windows.Forms.FlowLayoutPanel()
             Me.OrderListPanel = New Guna.UI2.WinForms.Guna2Panel()
-            Me.OrderListLogo = New Guna.UI2.WinForms.Guna2PictureBox()
+            Me.LogoIcon = New Guna.UI2.WinForms.Guna2ImageButton()
+            Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
             Me.TopBar.SuspendLayout()
             Me.OrdersPanel.SuspendLayout()
             Me.Buttons.SuspendLayout()
-            CType(Me.OrderListLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.Guna2Panel1.SuspendLayout()
             Me.SuspendLayout()
             '
             'YourOrderListLbl
@@ -43,7 +45,7 @@
             Me.YourOrderListLbl.AutoSize = False
             Me.YourOrderListLbl.BackColor = System.Drawing.Color.Transparent
             Me.YourOrderListLbl.Font = New System.Drawing.Font("Montserrat", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.YourOrderListLbl.Location = New System.Drawing.Point(120, 24)
+            Me.YourOrderListLbl.Location = New System.Drawing.Point(104, 25)
             Me.YourOrderListLbl.Name = "YourOrderListLbl"
             Me.YourOrderListLbl.Size = New System.Drawing.Size(197, 51)
             Me.YourOrderListLbl.TabIndex = 39
@@ -51,34 +53,33 @@
             '
             'TopBar
             '
-            Me.TopBar.Controls.Add(Me.OrderListLogo)
+            Me.TopBar.Controls.Add(Me.LogoIcon)
             Me.TopBar.Controls.Add(Me.YourOrderListLbl)
+            Me.TopBar.Controls.Add(Me.Guna2Panel1)
             Me.TopBar.Dock = System.Windows.Forms.DockStyle.Top
             Me.TopBar.Location = New System.Drawing.Point(0, 0)
             Me.TopBar.Name = "TopBar"
-            Me.TopBar.Size = New System.Drawing.Size(1370, 97)
+            Me.TopBar.Size = New System.Drawing.Size(1370, 1080)
             Me.TopBar.TabIndex = 41
             '
             'OrdersPanel
             '
             Me.OrdersPanel.Controls.Add(Me.Buttons)
             Me.OrdersPanel.Controls.Add(Me.OrderListFlowLayout)
-            Me.OrdersPanel.Controls.Add(Me.OrderListPanel)
             Me.OrdersPanel.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.OrdersPanel.Location = New System.Drawing.Point(0, 97)
+            Me.OrdersPanel.Location = New System.Drawing.Point(0, 1080)
             Me.OrdersPanel.Name = "OrdersPanel"
-            Me.OrdersPanel.Size = New System.Drawing.Size(1370, 652)
+            Me.OrdersPanel.Size = New System.Drawing.Size(1370, 0)
             Me.OrdersPanel.TabIndex = 42
             '
             'Buttons
             '
             Me.Buttons.BackColor = System.Drawing.Color.White
-            Me.Buttons.Controls.Add(Me.StartOverButton)
-            Me.Buttons.Controls.Add(Me.OrderMoreButton)
+            Me.Buttons.Controls.Add(Me.OrderListPanel)
             Me.Buttons.Dock = System.Windows.Forms.DockStyle.Bottom
-            Me.Buttons.Location = New System.Drawing.Point(0, 512)
+            Me.Buttons.Location = New System.Drawing.Point(0, -140)
             Me.Buttons.Name = "Buttons"
-            Me.Buttons.Size = New System.Drawing.Size(1007, 140)
+            Me.Buttons.Size = New System.Drawing.Size(1370, 140)
             Me.Buttons.TabIndex = 2
             '
             'StartOverButton
@@ -91,17 +92,18 @@
             Me.StartOverButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
             Me.StartOverButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
             Me.StartOverButton.FillColor = System.Drawing.Color.White
-            Me.StartOverButton.Font = New System.Drawing.Font("Poppins SemiBold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.StartOverButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+            Me.StartOverButton.Font = New System.Drawing.Font("Poppins", 14.0!)
+            Me.StartOverButton.ForeColor = System.Drawing.Color.DimGray
             Me.StartOverButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
             Me.StartOverButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer))
             Me.StartOverButton.HoverState.ForeColor = System.Drawing.Color.White
-            Me.StartOverButton.Location = New System.Drawing.Point(208, 32)
+            Me.StartOverButton.Location = New System.Drawing.Point(42, 691)
             Me.StartOverButton.Margin = New System.Windows.Forms.Padding(2)
             Me.StartOverButton.Name = "StartOverButton"
-            Me.StartOverButton.Size = New System.Drawing.Size(318, 50)
+            Me.StartOverButton.Size = New System.Drawing.Size(318, 38)
             Me.StartOverButton.TabIndex = 27
             Me.StartOverButton.Text = "Start over"
+            Me.StartOverButton.TextOffset = New System.Drawing.Point(0, 2)
             '
             'OrderMoreButton
             '
@@ -113,24 +115,25 @@
             Me.OrderMoreButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
             Me.OrderMoreButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
             Me.OrderMoreButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.OrderMoreButton.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.OrderMoreButton.Font = New System.Drawing.Font("Poppins Medium", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.OrderMoreButton.ForeColor = System.Drawing.Color.White
             Me.OrderMoreButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.OrderMoreButton.HoverState.FillColor = System.Drawing.Color.White
             Me.OrderMoreButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.OrderMoreButton.Location = New System.Drawing.Point(544, 32)
+            Me.OrderMoreButton.Location = New System.Drawing.Point(42, 632)
             Me.OrderMoreButton.Margin = New System.Windows.Forms.Padding(2)
             Me.OrderMoreButton.Name = "OrderMoreButton"
             Me.OrderMoreButton.Size = New System.Drawing.Size(318, 50)
             Me.OrderMoreButton.TabIndex = 21
             Me.OrderMoreButton.Text = "Order more"
+            Me.OrderMoreButton.TextOffset = New System.Drawing.Point(0, 2)
             '
             'OrderListFlowLayout
             '
             Me.OrderListFlowLayout.Dock = System.Windows.Forms.DockStyle.Fill
             Me.OrderListFlowLayout.Location = New System.Drawing.Point(0, 0)
             Me.OrderListFlowLayout.Name = "OrderListFlowLayout"
-            Me.OrderListFlowLayout.Size = New System.Drawing.Size(1007, 652)
+            Me.OrderListFlowLayout.Size = New System.Drawing.Size(1370, 0)
             Me.OrderListFlowLayout.TabIndex = 1
             '
             'OrderListPanel
@@ -139,22 +142,35 @@
             Me.OrderListPanel.BorderColor = System.Drawing.Color.Transparent
             Me.OrderListPanel.Dock = System.Windows.Forms.DockStyle.Right
             Me.OrderListPanel.FillColor = System.Drawing.Color.Transparent
-            Me.OrderListPanel.Location = New System.Drawing.Point(1007, 0)
+            Me.OrderListPanel.Location = New System.Drawing.Point(-550, 0)
             Me.OrderListPanel.Name = "OrderListPanel"
-            Me.OrderListPanel.Size = New System.Drawing.Size(363, 652)
+            Me.OrderListPanel.Size = New System.Drawing.Size(1920, 140)
             Me.OrderListPanel.TabIndex = 0
             '
-            'OrderListLogo
+            'LogoIcon
             '
-            Me.OrderListLogo.BackColor = System.Drawing.Color.Transparent
-            Me.OrderListLogo.ImageRotate = 0!
-            Me.OrderListLogo.Location = New System.Drawing.Point(3, 3)
-            Me.OrderListLogo.Name = "OrderListLogo"
-            Me.OrderListLogo.Size = New System.Drawing.Size(106, 93)
-            Me.OrderListLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-            Me.OrderListLogo.TabIndex = 40
-            Me.OrderListLogo.TabStop = False
-            Me.OrderListLogo.UseTransparentBackground = True
+            Me.LogoIcon.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
+            Me.LogoIcon.Cursor = System.Windows.Forms.Cursors.No
+            Me.LogoIcon.Enabled = False
+            Me.LogoIcon.HoverState.ImageSize = New System.Drawing.Size(64, 64)
+            Me.LogoIcon.Image = CType(resources.GetObject("LogoIcon.Image"), System.Drawing.Image)
+            Me.LogoIcon.ImageOffset = New System.Drawing.Point(0, 0)
+            Me.LogoIcon.ImageRotate = 0!
+            Me.LogoIcon.ImageSize = New System.Drawing.Size(100, 94)
+            Me.LogoIcon.Location = New System.Drawing.Point(0, 0)
+            Me.LogoIcon.Name = "LogoIcon"
+            Me.LogoIcon.PressedState.ImageSize = New System.Drawing.Size(64, 64)
+            Me.LogoIcon.Size = New System.Drawing.Size(98, 94)
+            Me.LogoIcon.TabIndex = 40
+            '
+            'Guna2Panel1
+            '
+            Me.Guna2Panel1.Controls.Add(Me.OrderMoreButton)
+            Me.Guna2Panel1.Controls.Add(Me.StartOverButton)
+            Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
+            Me.Guna2Panel1.Name = "Guna2Panel1"
+            Me.Guna2Panel1.Size = New System.Drawing.Size(1920, 1080)
+            Me.Guna2Panel1.TabIndex = 41
             '
             'CustomerOrderListView
             '
@@ -170,12 +186,11 @@
             Me.TopBar.ResumeLayout(False)
             Me.OrdersPanel.ResumeLayout(False)
             Me.Buttons.ResumeLayout(False)
-            CType(Me.OrderListLogo, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.Guna2Panel1.ResumeLayout(False)
             Me.ResumeLayout(False)
 
         End Sub
         Friend WithEvents YourOrderListLbl As Guna.UI2.WinForms.Guna2HtmlLabel
-        Friend WithEvents OrderListLogo As Guna.UI2.WinForms.Guna2PictureBox
         Friend WithEvents TopBar As Guna.UI2.WinForms.Guna2Panel
         Friend WithEvents OrdersPanel As Guna.UI2.WinForms.Guna2Panel
         Friend WithEvents Buttons As Guna.UI2.WinForms.Guna2Panel
@@ -183,6 +198,8 @@
         Friend WithEvents OrderListPanel As Guna.UI2.WinForms.Guna2Panel
         Friend WithEvents OrderMoreButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents StartOverButton As Guna.UI2.WinForms.Guna2Button
+        Friend WithEvents LogoIcon As Guna.UI2.WinForms.Guna2ImageButton
+        Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     End Class
 
 

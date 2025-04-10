@@ -127,17 +127,18 @@
             Me.CheckOutButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
             Me.CheckOutButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
             Me.CheckOutButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.CheckOutButton.Font = New System.Drawing.Font("Poppins SemiBold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.CheckOutButton.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.CheckOutButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
             Me.CheckOutButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
             Me.CheckOutButton.HoverState.FillColor = System.Drawing.Color.White
             Me.CheckOutButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.CheckOutButton.Location = New System.Drawing.Point(23, 75)
+            Me.CheckOutButton.Location = New System.Drawing.Point(0, 76)
             Me.CheckOutButton.Margin = New System.Windows.Forms.Padding(2)
             Me.CheckOutButton.Name = "CheckOutButton"
-            Me.CheckOutButton.Size = New System.Drawing.Size(318, 50)
+            Me.CheckOutButton.Size = New System.Drawing.Size(363, 69)
             Me.CheckOutButton.TabIndex = 22
             Me.CheckOutButton.Text = "Complete Order"
+            Me.CheckOutButton.TextOffset = New System.Drawing.Point(0, 2)
             '
             'OrderListDGV
             '
@@ -270,10 +271,10 @@
             'Label1
             '
             Me.Label1.AutoSize = True
-            Me.Label1.Font = New System.Drawing.Font("Poppins Medium", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Label1.Font = New System.Drawing.Font("Poppins", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Label1.Location = New System.Drawing.Point(143, 7)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(74, 34)
+            Me.Label1.Size = New System.Drawing.Size(72, 34)
             Me.Label1.TabIndex = 0
             Me.Label1.Text = "Items"
             '

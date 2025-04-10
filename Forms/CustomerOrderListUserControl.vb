@@ -18,8 +18,9 @@
             End Set
         End Property
 
+        Private Sub CheckOutButton_Click(sender As Object, e As EventArgs) Handles CheckOutButton.Click
 
-
+        End Sub
     End Class
 
 End Namespace

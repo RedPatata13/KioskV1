@@ -52,7 +52,7 @@
             Me.CustomerMainPanel.Dock = System.Windows.Forms.DockStyle.Fill
             Me.CustomerMainPanel.Location = New System.Drawing.Point(0, 0)
             Me.CustomerMainPanel.Name = "CustomerMainPanel"
-            Me.CustomerMainPanel.Size = New System.Drawing.Size(1426, 817)
+            Me.CustomerMainPanel.Size = New System.Drawing.Size(1386, 788)
             Me.CustomerMainPanel.TabIndex = 21
             '
             'ViewOrderPanel
@@ -63,9 +63,9 @@
             Me.ViewOrderPanel.Controls.Add(Me.StartOverButton)
             Me.ViewOrderPanel.Controls.Add(Me.ViewOrderButton)
             Me.ViewOrderPanel.Dock = System.Windows.Forms.DockStyle.Bottom
-            Me.ViewOrderPanel.Location = New System.Drawing.Point(177, 636)
+            Me.ViewOrderPanel.Location = New System.Drawing.Point(177, 607)
             Me.ViewOrderPanel.Name = "ViewOrderPanel"
-            Me.ViewOrderPanel.Size = New System.Drawing.Size(1249, 181)
+            Me.ViewOrderPanel.Size = New System.Drawing.Size(1209, 181)
             Me.ViewOrderPanel.TabIndex = 2
             '
             'ItemCountLabel
@@ -140,7 +140,7 @@
             Me.MenuFlowLayout.Dock = System.Windows.Forms.DockStyle.Fill
             Me.MenuFlowLayout.Location = New System.Drawing.Point(177, 0)
             Me.MenuFlowLayout.Name = "MenuFlowLayout"
-            Me.MenuFlowLayout.Size = New System.Drawing.Size(1249, 817)
+            Me.MenuFlowLayout.Size = New System.Drawing.Size(1209, 788)
             Me.MenuFlowLayout.TabIndex = 1
             '
             'CategoryPanel
@@ -152,7 +152,7 @@
             Me.CategoryPanel.Dock = System.Windows.Forms.DockStyle.Left
             Me.CategoryPanel.Location = New System.Drawing.Point(0, 0)
             Me.CategoryPanel.Name = "CategoryPanel"
-            Me.CategoryPanel.Size = New System.Drawing.Size(177, 817)
+            Me.CategoryPanel.Size = New System.Drawing.Size(177, 788)
             Me.CategoryPanel.TabIndex = 0
             '
             'Cat3Button
@@ -261,7 +261,7 @@
             Me.CustomerMainPanelView.Dock = System.Windows.Forms.DockStyle.Fill
             Me.CustomerMainPanelView.Location = New System.Drawing.Point(0, 0)
             Me.CustomerMainPanelView.Name = "CustomerMainPanelView"
-            Me.CustomerMainPanelView.Size = New System.Drawing.Size(1426, 817)
+            Me.CustomerMainPanelView.Size = New System.Drawing.Size(1386, 788)
             Me.CustomerMainPanelView.TabIndex = 22
             Me.CustomerMainPanelView.Visible = False
             '
@@ -270,7 +270,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1426, 817)
+            Me.ClientSize = New System.Drawing.Size(1386, 788)
             Me.Controls.Add(Me.CustomerMainPanelView)
             Me.Controls.Add(Me.CustomerMainPanel)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None

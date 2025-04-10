@@ -66,8 +66,8 @@
             '
             'CancelButton
             '
-            Me.CancelButton.BackColor = System.Drawing.Color.White
-            Me.CancelButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+            Me.CancelButton.BackColor = System.Drawing.Color.Transparent
+            Me.CancelButton.BorderColor = System.Drawing.Color.Gray
             Me.CancelButton.BorderRadius = 10
             Me.CancelButton.BorderThickness = 1
             Me.CancelButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
@@ -75,11 +75,11 @@
             Me.CancelButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
             Me.CancelButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
             Me.CancelButton.FillColor = System.Drawing.Color.White
-            Me.CancelButton.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.CancelButton.Font = New System.Drawing.Font("Poppins", 11.0!)
             Me.CancelButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
-            Me.CancelButton.Location = New System.Drawing.Point(509, 102)
+            Me.CancelButton.Location = New System.Drawing.Point(508, 104)
             Me.CancelButton.Name = "CancelButton"
-            Me.CancelButton.Size = New System.Drawing.Size(201, 37)
+            Me.CancelButton.Size = New System.Drawing.Size(204, 34)
             Me.CancelButton.TabIndex = 42
             Me.CancelButton.Text = "Cancel"
             Me.CancelButton.TextOffset = New System.Drawing.Point(2, 2)

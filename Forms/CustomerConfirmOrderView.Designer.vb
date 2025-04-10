@@ -32,6 +32,7 @@
             Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
             Me.ViewOrderButton = New Guna.UI2.WinForms.Guna2Button()
             Me.OrdersFlowlayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
+            Me.LogoIcon = New Guna.UI2.WinForms.Guna2ImageButton()
             Me.Guna2Panel1.SuspendLayout()
             CType(Me.OrderListLogo, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.OrdersPanel.SuspendLayout()
@@ -43,21 +44,22 @@
             Me.YourOrderListLbl.AutoSize = False
             Me.YourOrderListLbl.BackColor = System.Drawing.Color.Transparent
             Me.YourOrderListLbl.Font = New System.Drawing.Font("Montserrat", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.YourOrderListLbl.Location = New System.Drawing.Point(135, 24)
+            Me.YourOrderListLbl.Location = New System.Drawing.Point(104, 24)
             Me.YourOrderListLbl.Name = "YourOrderListLbl"
-            Me.YourOrderListLbl.Size = New System.Drawing.Size(478, 51)
+            Me.YourOrderListLbl.Size = New System.Drawing.Size(206, 51)
             Me.YourOrderListLbl.TabIndex = 39
             Me.YourOrderListLbl.Text = "Your Order"
             '
             'Guna2Panel1
             '
+            Me.Guna2Panel1.Controls.Add(Me.LogoIcon)
             Me.Guna2Panel1.Controls.Add(Me.AddNoteButton)
             Me.Guna2Panel1.Controls.Add(Me.OrderListLogo)
             Me.Guna2Panel1.Controls.Add(Me.YourOrderListLbl)
             Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
             Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
             Me.Guna2Panel1.Name = "Guna2Panel1"
-            Me.Guna2Panel1.Size = New System.Drawing.Size(1370, 97)
+            Me.Guna2Panel1.Size = New System.Drawing.Size(1370, 1080)
             Me.Guna2Panel1.TabIndex = 41
             '
             'AddNoteButton
@@ -125,17 +127,18 @@
             Me.ViewOrderButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
             Me.ViewOrderButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
             Me.ViewOrderButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.ViewOrderButton.Font = New System.Drawing.Font("Poppins SemiBold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ViewOrderButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+            Me.ViewOrderButton.Font = New System.Drawing.Font("Poppins Medium", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.ViewOrderButton.ForeColor = System.Drawing.Color.White
             Me.ViewOrderButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
             Me.ViewOrderButton.HoverState.FillColor = System.Drawing.Color.White
             Me.ViewOrderButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.ViewOrderButton.Location = New System.Drawing.Point(1023, 21)
+            Me.ViewOrderButton.Location = New System.Drawing.Point(1016, 24)
             Me.ViewOrderButton.Margin = New System.Windows.Forms.Padding(2)
             Me.ViewOrderButton.Name = "ViewOrderButton"
-            Me.ViewOrderButton.Size = New System.Drawing.Size(318, 50)
+            Me.ViewOrderButton.Size = New System.Drawing.Size(293, 46)
             Me.ViewOrderButton.TabIndex = 23
             Me.ViewOrderButton.Text = "Confirm Order"
+            Me.ViewOrderButton.TextOffset = New System.Drawing.Point(0, 1)
             '
             'OrdersFlowlayoutPanel
             '
@@ -145,6 +148,22 @@
             Me.OrdersFlowlayoutPanel.Name = "OrdersFlowlayoutPanel"
             Me.OrdersFlowlayoutPanel.Size = New System.Drawing.Size(1370, 749)
             Me.OrdersFlowlayoutPanel.TabIndex = 1
+            '
+            'LogoIcon
+            '
+            Me.LogoIcon.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
+            Me.LogoIcon.Cursor = System.Windows.Forms.Cursors.No
+            Me.LogoIcon.Enabled = False
+            Me.LogoIcon.HoverState.ImageSize = New System.Drawing.Size(64, 64)
+            Me.LogoIcon.Image = CType(resources.GetObject("LogoIcon.Image"), System.Drawing.Image)
+            Me.LogoIcon.ImageOffset = New System.Drawing.Point(0, 0)
+            Me.LogoIcon.ImageRotate = 0!
+            Me.LogoIcon.ImageSize = New System.Drawing.Size(100, 94)
+            Me.LogoIcon.Location = New System.Drawing.Point(0, 1)
+            Me.LogoIcon.Name = "LogoIcon"
+            Me.LogoIcon.PressedState.ImageSize = New System.Drawing.Size(64, 64)
+            Me.LogoIcon.Size = New System.Drawing.Size(98, 94)
+            Me.LogoIcon.TabIndex = 42
             '
             'CustomerConfirmOrderView
             '
@@ -171,6 +190,7 @@
         Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
         Friend WithEvents ViewOrderButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents AddNoteButton As Guna.UI2.WinForms.Guna2Button
+        Friend WithEvents LogoIcon As Guna.UI2.WinForms.Guna2ImageButton
     End Class
 
 End Namespace

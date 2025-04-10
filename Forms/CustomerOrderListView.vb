@@ -50,5 +50,9 @@ Namespace KioskV0.Forms
         Private Sub CustomerNoItemUserControl1_Load(sender As Object, e As EventArgs)
 
         End Sub
+
+        Private Sub TopBar_Paint(sender As Object, e As PaintEventArgs) Handles TopBar.Paint
+
+        End Sub
     End Class
 End Namespace

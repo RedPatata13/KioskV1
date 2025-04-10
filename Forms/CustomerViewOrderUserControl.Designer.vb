@@ -52,7 +52,7 @@
             Me.ItemCountLabel.AutoSize = True
             Me.ItemCountLabel.Font = New System.Drawing.Font("Poppins", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.ItemCountLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
-            Me.ItemCountLabel.Location = New System.Drawing.Point(53, 109)
+            Me.ItemCountLabel.Location = New System.Drawing.Point(52, 109)
             Me.ItemCountLabel.Name = "ItemCountLabel"
             Me.ItemCountLabel.Size = New System.Drawing.Size(198, 48)
             Me.ItemCountLabel.TabIndex = 25
@@ -79,12 +79,12 @@
             Me.StartOverButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
             Me.StartOverButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
             Me.StartOverButton.FillColor = System.Drawing.Color.White
-            Me.StartOverButton.Font = New System.Drawing.Font("Poppins SemiBold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.StartOverButton.Font = New System.Drawing.Font("Poppins", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.StartOverButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
             Me.StartOverButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
             Me.StartOverButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer))
             Me.StartOverButton.HoverState.ForeColor = System.Drawing.Color.White
-            Me.StartOverButton.Location = New System.Drawing.Point(864, 91)
+            Me.StartOverButton.Location = New System.Drawing.Point(864, 93)
             Me.StartOverButton.Margin = New System.Windows.Forms.Padding(2)
             Me.StartOverButton.Name = "StartOverButton"
             Me.StartOverButton.Size = New System.Drawing.Size(318, 50)
@@ -109,9 +109,10 @@
             Me.ViewOrderButton.Location = New System.Drawing.Point(864, 24)
             Me.ViewOrderButton.Margin = New System.Windows.Forms.Padding(2)
             Me.ViewOrderButton.Name = "ViewOrderButton"
-            Me.ViewOrderButton.Size = New System.Drawing.Size(318, 50)
+            Me.ViewOrderButton.Size = New System.Drawing.Size(318, 63)
             Me.ViewOrderButton.TabIndex = 21
             Me.ViewOrderButton.Text = "View Order"
+            Me.ViewOrderButton.TextOffset = New System.Drawing.Point(0, 3)
             '
             'CustomerViewOrderUserControl
             '
