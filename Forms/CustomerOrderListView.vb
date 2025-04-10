@@ -35,10 +35,6 @@ Namespace KioskV0.Forms
         Public Sub ClearOrderDetailControls()
             OrderListFlowLayout.Controls.Clear()
         End Sub
-        Public Sub PopulateDataGrid(dataSource As Object)
-            OrderDetailsDGV.DataSource = dataSource
-        End Sub
-
         Private Sub OrderMoreButton_Click(sender As Object, e As EventArgs) Handles OrderMoreButton.Click
             OrderMoreClick?.Invoke()
         End Sub
@@ -47,7 +43,7 @@ Namespace KioskV0.Forms
             StartOverClick?.Invoke()
         End Sub
 
-        Private Sub CheckOutButton_Click(sender As Object, e As EventArgs) Handles CheckOutButton.Click
+        Private Sub CheckOutButton_Click(sender As Object, e As EventArgs)
             CheckOutClick?.Invoke()
         End Sub
 

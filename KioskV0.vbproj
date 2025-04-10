@@ -307,6 +307,12 @@
     <Compile Include="Forms\CustomerOrderDetailsUserControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Forms\CustomerOrderListUserControl.Designer.vb">
+      <DependentUpon>CustomerOrderListUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerOrderListUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Forms\CustomerOrderListView.Designer.vb">
       <DependentUpon>CustomerOrderListView.vb</DependentUpon>
     </Compile>
@@ -554,6 +560,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CustomerOrderDetailsUserControl.resx">
       <DependentUpon>CustomerOrderDetailsUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerOrderListUserControl.resx">
+      <DependentUpon>CustomerOrderListUserControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CustomerOrderListView.resx">
       <DependentUpon>CustomerOrderListView.vb</DependentUpon>

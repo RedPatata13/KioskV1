@@ -102,18 +102,6 @@ Namespace KioskV0.Classes
 
         End Sub
 
-        Private Sub PopulateDGV()
-            If _view IsNot Nothing Then
-                _view.OrderDetailsDGV.Rows.Clear()
-                For Each order In _cart
-                    Dim totalPrice As Decimal = order.MenuItem.Selling * order.Quantity
-                    _view.OrderDetailsDGV.Rows.Add(order.MenuItem.Name, order.Quantity, totalPrice.ToString("C"))
-                Next
-            Else
-                'handle when view is nothing
-            End If
-        End Sub
-
         Private Sub OnOrderMoreClicked()
             _mediator.SwapPage(CustomerKeys.CustomerMenu)
         End Sub
