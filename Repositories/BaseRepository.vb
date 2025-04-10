@@ -17,6 +17,8 @@ Public Class BaseRepository(Of T As Class)
             Throw New ArgumentNullException(NameOf(entity), $"{GetType(T).Name} cannot be null.")
         End If
         _dbSet.Add(entity)
+
+
     End Sub
 
     ' Update an entity
@@ -44,4 +46,8 @@ Public Class BaseRepository(Of T As Class)
     Public Function GetById(id As Integer) As T Implements IBaseRepository(Of T).GetById
         Return _dbSet.Find(id)
     End Function
+    ' Add entities by a range
+    Public Sub AddRange(list As IEnumerable(Of T)) Implements IBaseRepository(Of T).AddRange
+        _dbSet.AddRange(list)
+    End Sub
 End Class

@@ -8,5 +8,9 @@
     ReadOnly Property OrderItems As IBaseRepository(Of OrderItem)
     ReadOnly Property Transactions As IBaseRepository(Of Transaction)
     ReadOnly Property Orders As IBaseRepository(Of Order)
+    'ReadOnly Property SupplierItem As IBaseRepository(Of SupplierItem)
+    ReadOnly Property SupplierItems As IBaseRepository(Of SupplierItem)
+    ReadOnly Property AdminItems As IBaseRepository(Of AdminItem)
+    ReadOnly Property CustomerItems As IBaseRepository(Of CustomerItem)
     Sub SaveChanges()
 End Interface

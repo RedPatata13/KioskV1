@@ -7,9 +7,12 @@
     Public ReadOnly Property Orders As IBaseRepository(Of Order) Implements IUnitOfWork.Orders
     Public ReadOnly Property OrderItems As IBaseRepository(Of OrderItem) Implements IUnitOfWork.OrderItems
     Public ReadOnly Property Suppliers As IBaseRepository(Of Supplier) Implements IUnitOfWork.Suppliers
+    Public ReadOnly Property SupplierItems As IBaseRepository(Of SupplierItem) Implements IUnitOfWork.SupplierItems
+    Public ReadOnly Property AdminItems As IBaseRepository(Of AdminItem) Implements IUnitOfWork.AdminItems
     Public ReadOnly Property Transactions As IBaseRepository(Of Transaction) Implements IUnitOfWork.Transactions
     Public ReadOnly Property Inventories As IBaseRepository(Of Inventory) Implements IUnitOfWork.Inventories
     Public ReadOnly Property Users As UsersRepository Implements IUnitOfWork.Users
+    Public ReadOnly Property CustomerItems As IBaseRepository(Of CustomerItem) Implements IUnitOfWork.CustomerItems
 
     Public Sub New(context As KioskDbContext)
         _context = context
@@ -19,9 +22,11 @@
         Orders = New OrdersRepository(_context)
         OrderItems = New OrderItemsRepository(_context)
         Suppliers = New SuppliersRepository(_context)
+        SupplierItems = New SupplierItemsRepository(_context)
         Transactions = New TransactionsRepository(_context)
         Inventories = New InventoriesRepository(_context)
-
+        AdminItems = New AdminItemsRepository(_context)
+        CustomerItems = New CustomerItemsRepository(_context)
     End Sub
 
     Public Sub SaveChanges() Implements IUnitOfWork.SaveChanges

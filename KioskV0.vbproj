@@ -132,6 +132,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\CloneHelper.vb" />
+    <Compile Include="Classes\InitialDBSetup.vb" />
     <Compile Include="ContainerConfiguration.vb" />
     <Compile Include="Classes\ActionManager.vb" />
     <Compile Include="Classes\AdminAccountSettingsViewModel.vb" />
@@ -428,14 +429,10 @@
     <Compile Include="Forms\StaffTotaProductsUserControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Migrations\202504100251096_InitialCreate.Designer.vb">
-      <DependentUpon>202504100251096_InitialCreate.vb</DependentUpon>
+    <Compile Include="Migrations\202504100356394_InitialCreate.Designer.vb">
+      <DependentUpon>202504100356394_InitialCreate.vb</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202504100251096_InitialCreate.vb" />
-    <Compile Include="Migrations\202504100329088_Try2.Designer.vb">
-      <DependentUpon>202504100329088_Try2.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202504100329088_Try2.vb" />
+    <Compile Include="Migrations\202504100356394_InitialCreate.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\AdminItem.vb" />
     <Compile Include="Models\Customer.vb" />
@@ -454,16 +451,22 @@
     <Compile Include="Models\Transaction.vb" />
     <Compile Include="Models\UserModel_1.vb" />
     <Compile Include="Models\UserModel.vb" />
+    <Compile Include="Repositories\AdminItemsRepository.vb" />
     <Compile Include="Repositories\BaseRepository.vb" />
+    <Compile Include="Repositories\Contracts\IAdminItemsRepository.vb" />
     <Compile Include="Repositories\Contracts\IBaseRepository.vb" />
+    <Compile Include="Repositories\Contracts\ICustomerItemRepository.vb" />
     <Compile Include="Repositories\Contracts\IMenuRepository.vb" />
+    <Compile Include="Repositories\Contracts\ISupplierItemsRepository.vb" />
     <Compile Include="Repositories\Contracts\IUnitOfWork.vb" />
     <Compile Include="Repositories\Contracts\IUsersRepository.vb" />
+    <Compile Include="Repositories\CustomerItemsRepository.vb" />
     <Compile Include="Repositories\CustomersRepository.vb" />
     <Compile Include="Repositories\InventoriesRepository.vb" />
     <Compile Include="Repositories\OrderItemsRepository.vb" />
     <Compile Include="Repositories\OrdersRepository.vb" />
     <Compile Include="Repositories\MenuRepository.vb" />
+    <Compile Include="Repositories\SupplierItemsRepository.vb" />
     <Compile Include="Repositories\SuppliersRepository.vb" />
     <Compile Include="Repositories\TransactionsRepository.vb" />
     <Compile Include="Repositories\UnitOfWork.vb" />
@@ -599,11 +602,8 @@
     <EmbeddedResource Include="Forms\StaffTotaProductsUserControl.resx">
       <DependentUpon>StaffTotaProductsUserControl.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504100251096_InitialCreate.resx">
-      <DependentUpon>202504100251096_InitialCreate.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504100329088_Try2.resx">
-      <DependentUpon>202504100329088_Try2.vb</DependentUpon>
+    <EmbeddedResource Include="Migrations\202504100356394_InitialCreate.resx">
+      <DependentUpon>202504100356394_InitialCreate.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
