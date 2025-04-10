@@ -179,6 +179,7 @@
     <Compile Include="Classes\TempDB.vb" />
     <Compile Include="Classes\ViewModel.vb" />
     <Compile Include="Data\AppDbContext.vb" />
+    <Compile Include="Data\Configuration\AdminItemConfiguration.vb" />
     <Compile Include="Data\Configuration\CustomerConfiguration.vb" />
     <Compile Include="Data\Configuration\InventoryConfiguration.vb" />
     <Compile Include="Data\Configuration\JsonConfigReader.vb" />
@@ -433,6 +434,10 @@
       <DependentUpon>202504100356394_InitialCreate.vb</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202504100356394_InitialCreate.vb" />
+    <Compile Include="Migrations\202504101302384_ItemAdjustments.Designer.vb">
+      <DependentUpon>202504101302384_ItemAdjustments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504101302384_ItemAdjustments.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\AdminItem.vb" />
     <Compile Include="Models\Customer.vb" />
@@ -604,6 +609,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504100356394_InitialCreate.resx">
       <DependentUpon>202504100356394_InitialCreate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504101302384_ItemAdjustments.resx">
+      <DependentUpon>202504101302384_ItemAdjustments.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

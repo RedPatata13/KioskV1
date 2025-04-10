@@ -46,13 +46,8 @@ Public Class KioskDbContext
         modelBuilder.Configurations.Add(New MenuConfiguration())
         modelBuilder.Configurations.Add(New SupplierConfiguration())
         modelBuilder.Configurations.Add(New SupplierItemConfiguration())
-        ' Setup relationships
-        modelBuilder.Entity(Of AdminItem)() _
-            .HasRequired(Function(a) a.SupplierItem) _
-            .WithMany() _
-            .HasForeignKey(Function(a) a.SupplierItemId) _
-            .WillCascadeOnDelete(False) ' Prevent cascading delete for SupplierItem
-
+        modelBuilder.Configurations.Add(New AdminItemConfiguration())
+        'modelBuilder.Configurations.Add(New )
         modelBuilder.Entity(Of CustomerItem)() _
             .HasOptional(Function(c) c.AdminItem) _
             .WithMany() _

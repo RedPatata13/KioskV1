@@ -8,19 +8,25 @@ Public Class SupplierItemConfiguration
         Me.HasKey(Function(s) s.Id)
 
         ' Define properties and constraints
+        Me.Property(Function(s) s.Id).
+            IsRequired().
+            HasMaxLength(50) ' Assuming GUID or short unique string ID
+
         Me.Property(Function(s) s.Name).
-            HasMaxLength(100). ' Limit the length of Name to 100 characters
-            IsRequired() ' Make sure Name is required
+            IsRequired().
+            HasMaxLength(100)
 
         Me.Property(Function(s) s.Description).
-            HasMaxLength(255). ' Limit the length of Description to 255 characters
-            IsOptional() ' Description is optional
+            IsOptional().
+            HasMaxLength(255)
+
+        Me.Property(Function(s) s.StockCount).
+            IsRequired()
 
         ' Define the relationship between SupplierItem and Supplier
         Me.HasRequired(Function(s) s.Supplier) _
-            .WithMany() _  ' Supplier can have many SupplierItems (one-to-many)
-            .HasForeignKey(Function(s) s.SupplierId) _  ' SupplierItem has SupplierId as the foreign key
-            .WillCascadeOnDelete(False) ' Prevent cascade delete for SupplierItem
-
+            .WithMany() _
+            .HasForeignKey(Function(s) s.SupplierId) _
+            .WillCascadeOnDelete(False) ' Prevent cascade delete
     End Sub
 End Class

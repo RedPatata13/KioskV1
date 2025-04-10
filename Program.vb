@@ -1,6 +1,4 @@
-﻿
-
-Imports Autofac
+﻿Imports Autofac
 
 Namespace KioskV0
     Module Program

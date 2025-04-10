@@ -4,4 +4,5 @@
     Public Property Description As String
     Public Property SupplierId As String
     Public Property Supplier As Supplier
+    Public Property StockCount As Integer
 End Class
