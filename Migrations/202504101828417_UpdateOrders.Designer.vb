@@ -6,14 +6,14 @@ Imports System.Resources
 
 Namespace Migrations
     <GeneratedCode("EntityFramework.Migrations", "6.5.1")>
-    Public NotInheritable Partial Class AddFK
+    Public NotInheritable Partial Class UpdateOrders
         Implements IMigrationMetadata
     
-        Private ReadOnly Resources As New ResourceManager(GetType(AddFK))
+        Private ReadOnly Resources As New ResourceManager(GetType(UpdateOrders))
         
         Private ReadOnly Property IMigrationMetadata_Id() As String Implements IMigrationMetadata.Id
             Get
-                Return "202504101455132_AddFK"
+                Return "202504101828417_UpdateOrders"
             End Get
         End Property
         

@@ -12,8 +12,8 @@ Namespace KioskV0.Classes
             MyBase.New(view, mediator)
             SetEvents()
         End Sub
-        Public Sub LoadAsEdit(model As Menu)
-            model.Validate()
+        Public Sub LoadAsEdit(model As AdminItem)
+            'model.Validate()
             _view.Label = "Edit Menu"
             _view.DeleteButton.Visible = True
             _mediator.LayoutAction(Sub()
@@ -44,7 +44,7 @@ Namespace KioskV0.Classes
             _view.SelectImageClick = AddressOf SelectImageClick
             _view.SaveButtonClick = AddressOf SaveButtonClick
         End Sub
-        Private Sub DeleteMenu(model As Menu)
+        Private Sub DeleteMenu(model As AdminItem)
             '_mediator.DeleteMenu(model)
             _mediator.AddAction(Sub() _mediator.SwapPage(Previous))
             _mediator.AddAction(Sub() _mediator.DeleteMenu(model))
@@ -62,11 +62,11 @@ Namespace KioskV0.Classes
 
         Private Sub SaveButtonClick()
             Try
-                Dim model = New Menu()
-                model.MenuName = _view.MenuName
-                model.Category = _view.CategoryName
-                model.Supplier = _view.SupplierName
-                model.ProductDescription = _view.ProductDescription
+                Dim model = New AdminItem()
+                model.Name = _view.MenuName
+                'model.Category.CategoryName = _view.Category.
+                model.SupplierItem.Supplier.Username = _view.SupplierName
+                model.Description = _view.ProductDescription
                 Dim cost As Decimal
                 Dim selling As Decimal
 
@@ -77,10 +77,10 @@ Namespace KioskV0.Classes
                     Throw New FormatException("Invalid format for Selling price.")
                 End If
 
-                model.Cost = cost
-                model.Selling = selling
+                'model.Cost = cost
+                model.SellingCost = selling
 
-                model.Validate()
+                'model.Validate()
                 Dim vm = DirectCast(_mediator.GetVM(AdminKeys.AdminMenu), AdminMenuViewModel)
                 vm.AddNewMenu(model)
                 _mediator.CreateMenu(model)
@@ -90,15 +90,15 @@ Namespace KioskV0.Classes
                 MessageBox.Show("Error: " & ex.Message)
             End Try
         End Sub
-        Private Sub UpdateMenu(model As Menu)
+        Private Sub UpdateMenu(model As AdminItem)
             Try
-                Dim newModel = New Menu()
-                newModel.MenuId = model.MenuId
-                newModel.MenuName = _view.MenuName
-                newModel.Category = _view.CategoryName
-                newModel.Supplier = _view.SupplierName
-                newModel.ProductDescription = _view.ProductDescription
-                newModel.ProductImagePath = ""
+                Dim newModel = New AdminItem
+                newModel.Id = model.Id
+                newModel.Name = _view.MenuName
+                'newModel.Category = "Pizza"
+                'newModel.Supplier = _view.SupplierName
+                newModel.Description = _view.ProductDescription
+                newModel.ImageFilePath = ""
                 Dim cost As Decimal
                 Dim selling As Decimal
 
@@ -109,16 +109,20 @@ Namespace KioskV0.Classes
                     Throw New FormatException("Invalid format for Selling price.")
                 End If
 
-                newModel.Cost = cost
-                newModel.Selling = selling
+                'newModel.Cost = cost
+                newModel.SellingCost = selling
 
                 'newModel.Validate()
-                Dim res = _mediator.GetUnitOfWork.Menus.GetById(newModel.MenuId)
-                _mediator.UpdateMenu(newModel)
+                Dim res = _mediator.GetUnitOfWork.AdminItems.GetById(newModel.Id)
+                '_mediator.UpdateMenu(newModel)
+                res.Name = newModel.Name
+                res.Description = newModel.Name
+
+                _mediator.GetUnitOfWork().AdminItems.Update(res)
                 _mediator.SwapPage(Previous)
 
                 Dim vm = DirectCast(_mediator.GetVM(AdminKeys.AdminMenu), AdminMenuViewModel)
-                vm.UpdateStaged(newModel)
+                'vm.UpdateStaged(newModel)
                 RestoreView()
             Catch ex As Exception
                 MessageBox.Show("Error: " & ex.Message)
@@ -127,15 +131,15 @@ Namespace KioskV0.Classes
 
         End Sub
 
-        Private Sub LoadWithDetails(model As Menu)
-            model.Validate()
+        Private Sub LoadWithDetails(model As AdminItem)
+            'model.Validate()
             'MessageBox.Show($"{model.MenuId}")
-            _view.MenuName = model.MenuName
-            _view.CategoryName = model.Category
-            _view.SupplierName = model.Supplier
-            _view.ProductDescription = model.ProductDescription
-            _view.Cost = $"{model.Cost}"
-            _view.Sell = $"{model.Selling}"
+            _view.MenuName = model.Name
+            '_view.CategoryName = model.Category.CategoryName
+            _view.SupplierName = model.SupplierItem.Supplier.Username
+            _view.ProductDescription = model.Description
+            '_view.Cost = $"{model.Cost}"
+            _view.Sell = $"{model.SellingCost}"
         End Sub
 
         Private Sub DefaultLoad()

@@ -12,5 +12,5 @@ Public Class OrderItem
     Public Property Quantity As Integer
     Public Property Price As Decimal
     Public Overridable Property Menu As Menu
-    Public Overridable Property Order As Order
+    Public Overridable Property Order As OrderPrimal
 End Class

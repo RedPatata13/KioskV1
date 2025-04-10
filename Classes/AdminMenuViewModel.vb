@@ -6,8 +6,8 @@ Namespace KioskV0.Classes
         Inherits ViewModel(Of Forms.AdminMenuView, AdminKeys)
         Private Property Loaded As Boolean = False
         Private Property _ucCache As Dictionary(Of String, UserControl)
-        Private Property _modelCache As Dictionary(Of String, Menu)
-        Private Property _staged As Menu = Nothing
+        Private Property _modelCache As Dictionary(Of String, AdminItem)
+        Private Property _staged As AdminItem = Nothing
         Public Sub New(view As AdminMenuView, mediator As Mediator(Of AdminKeys))
             MyBase.New(view, mediator)
             SetEvents()
@@ -34,31 +34,31 @@ Namespace KioskV0.Classes
             Loaded = True
         End Sub
         Public Sub DeleteStaged()
-            _view.ItemPanel.Controls.Remove(_ucCache(_staged.MenuId))
-            _ucCache.Remove(_staged.MenuId)
-            _modelCache.Remove(_staged.MenuId)
+            _view.ItemPanel.Controls.Remove(_ucCache(_staged.Id))
+            _ucCache.Remove(_staged.Id)
+            _modelCache.Remove(_staged.Id)
             _staged = Nothing
         End Sub
 
-        Public Sub UpdateStaged(model As Menu)
-            Dim val = _ucCache(_staged.MenuId)
+        Public Sub UpdateStaged(model As AdminItem)
+            Dim val = _ucCache(_staged.Id)
             Dim uc1 As AdminMenuUserControl = DirectCast(val, AdminMenuUserControl)
             uc1.Model = model
-            _staged.MenuName = model.MenuName
-            _staged.Supplier = _staged.Supplier
-            _staged.ProductDescription = model.ProductDescription
-            _staged.Cost = model.Cost
+            _staged.Name = model.Name
+            _staged.SupplierItem.Supplier.Username = _staged.SupplierItem.Supplier.Username
+            _staged.Description = model.Description
+            '_staged.Cost = model.Cost
             _staged.Category = model.Category
-            _modelCache(_staged.MenuId) = model
-            _ucCache(_staged.MenuId) = uc1
+            _modelCache(_staged.Id) = model
+            _ucCache(_staged.Id) = uc1
             uc1.SelfClick = Sub() PrepareEditMenu(uc1.Model)
         End Sub
 
-        Public Sub AddNewMenu(Model As Menu)
+        Public Sub AddNewMenu(Model As AdminItem)
             Dim amuc = New AdminMenuUserControl(Model)
             amuc.SelfClick = Sub() PrepareEditMenu(Model)
-            _ucCache.Add(Model.MenuId, amuc)
-            _modelCache.Add(Model.MenuId, Model)
+            _ucCache.Add(Model.Id, amuc)
+            _modelCache.Add(Model.Id, Model)
             _view.ItemPanel.Controls.Add(amuc)
         End Sub
         Private Sub AddMenuButtonClick()
@@ -70,13 +70,13 @@ Namespace KioskV0.Classes
 
         Private Sub InitializeCache()
             _ucCache = New Dictionary(Of String, UserControl)
-            _modelCache = New Dictionary(Of String, Menu)
+            _modelCache = New Dictionary(Of String, AdminItem)
             Dim items = _mediator.GetMenuList()
             For Each item In items
                 Dim uc = New AdminMenuUserControl(item)
                 uc.SelfClick = Sub() PrepareEditMenu(item)
-                _ucCache.Add(item.MenuId, uc)
-                _modelCache.Add(item.MenuId, item)
+                _ucCache.Add(item.Id, uc)
+                _modelCache.Add(item.Id, item)
             Next
         End Sub
 
@@ -91,7 +91,7 @@ Namespace KioskV0.Classes
         Private Sub MenuUserControlClick()
 
         End Sub
-        Private Sub PrepareEditMenu(model As Menu)
+        Private Sub PrepareEditMenu(model As AdminItem)
             _staged = model
             Dim vm = DirectCast(_mediator.GetVM(AdminKeys.AdminEditMenuDetails), AdminEditMenuDetailsViewModel)
             vm.Previous = AdminKeys.AdminMenu
@@ -107,7 +107,7 @@ Namespace KioskV0.Classes
             'MessageBox.Show($"{_ucCache.Count}")
             _view.ItemPanel.Controls.Clear()
             For Each item In _ucCache
-                If _modelCache(item.Key).MenuName.ToLower().StartsWith(str.ToLower()) Then
+                If _modelCache(item.Key).Name.ToLower().StartsWith(str.ToLower()) Then
                     _view.ItemPanel.Controls.Add(item.Value)
                 End If
             Next

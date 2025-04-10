@@ -31,6 +31,7 @@
             Me.LogOutButton = New Guna.UI2.WinForms.Guna2Button()
             Me.MenuListButton = New Guna.UI2.WinForms.Guna2Button()
             Me.DashboardButton = New Guna.UI2.WinForms.Guna2Button()
+            Me.Guna2HtmlToolTip1 = New Guna.UI2.WinForms.Guna2HtmlToolTip()
             Me.SuspendLayout()
             '
             'AccountsButton
@@ -51,10 +52,11 @@
             Me.AccountsButton.Image = CType(resources.GetObject("AccountsButton.Image"), System.Drawing.Image)
             Me.AccountsButton.ImageSize = New System.Drawing.Size(70, 70)
             Me.AccountsButton.Location = New System.Drawing.Point(16, 496)
-            Me.AccountsButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.AccountsButton.Margin = New System.Windows.Forms.Padding(2)
             Me.AccountsButton.Name = "AccountsButton"
             Me.AccountsButton.Size = New System.Drawing.Size(88, 81)
             Me.AccountsButton.TabIndex = 9
+            Me.Guna2HtmlToolTip1.SetToolTip(Me.AccountsButton, "Accounts Management")
             '
             'StaffTransacButton
             '
@@ -74,10 +76,11 @@
             Me.StaffTransacButton.Image = CType(resources.GetObject("StaffTransacButton.Image"), System.Drawing.Image)
             Me.StaffTransacButton.ImageSize = New System.Drawing.Size(70, 70)
             Me.StaffTransacButton.Location = New System.Drawing.Point(16, 424)
-            Me.StaffTransacButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.StaffTransacButton.Margin = New System.Windows.Forms.Padding(2)
             Me.StaffTransacButton.Name = "StaffTransacButton"
             Me.StaffTransacButton.Size = New System.Drawing.Size(88, 81)
             Me.StaffTransacButton.TabIndex = 8
+            Me.Guna2HtmlToolTip1.SetToolTip(Me.StaffTransacButton, "Staff Transaction Records")
             '
             'OrderHistoryButton
             '
@@ -97,10 +100,11 @@
             Me.OrderHistoryButton.Image = CType(resources.GetObject("OrderHistoryButton.Image"), System.Drawing.Image)
             Me.OrderHistoryButton.ImageSize = New System.Drawing.Size(70, 70)
             Me.OrderHistoryButton.Location = New System.Drawing.Point(16, 344)
-            Me.OrderHistoryButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.OrderHistoryButton.Margin = New System.Windows.Forms.Padding(2)
             Me.OrderHistoryButton.Name = "OrderHistoryButton"
             Me.OrderHistoryButton.Size = New System.Drawing.Size(88, 81)
             Me.OrderHistoryButton.TabIndex = 7
+            Me.Guna2HtmlToolTip1.SetToolTip(Me.OrderHistoryButton, "Order History")
             '
             'InventoryButton
             '
@@ -120,10 +124,11 @@
             Me.InventoryButton.Image = CType(resources.GetObject("InventoryButton.Image"), System.Drawing.Image)
             Me.InventoryButton.ImageSize = New System.Drawing.Size(70, 70)
             Me.InventoryButton.Location = New System.Drawing.Point(16, 256)
-            Me.InventoryButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.InventoryButton.Margin = New System.Windows.Forms.Padding(2)
             Me.InventoryButton.Name = "InventoryButton"
             Me.InventoryButton.Size = New System.Drawing.Size(88, 81)
             Me.InventoryButton.TabIndex = 6
+            Me.Guna2HtmlToolTip1.SetToolTip(Me.InventoryButton, "Inventory")
             '
             'LogOutButton
             '
@@ -139,7 +144,7 @@
             Me.LogOutButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.LogOutButton.HoverState.BorderColor = System.Drawing.Color.White
             Me.LogOutButton.HoverState.FillColor = System.Drawing.Color.White
-            Me.LogOutButton.HoverState.Image = CType(resources.GetObject("resource.Image4"), System.Drawing.Image)
+            Me.LogOutButton.HoverState.Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
             Me.LogOutButton.Image = CType(resources.GetObject("LogOutButton.Image"), System.Drawing.Image)
             Me.LogOutButton.ImageSize = New System.Drawing.Size(50, 50)
             Me.LogOutButton.Location = New System.Drawing.Point(16, 768)
@@ -147,6 +152,7 @@
             Me.LogOutButton.Name = "LogOutButton"
             Me.LogOutButton.Size = New System.Drawing.Size(82, 81)
             Me.LogOutButton.TabIndex = 10
+            Me.Guna2HtmlToolTip1.SetToolTip(Me.LogOutButton, "Logout")
             '
             'MenuListButton
             '
@@ -170,6 +176,7 @@
             Me.MenuListButton.Name = "MenuListButton"
             Me.MenuListButton.Size = New System.Drawing.Size(88, 82)
             Me.MenuListButton.TabIndex = 2
+            Me.Guna2HtmlToolTip1.SetToolTip(Me.MenuListButton, "Edit Menu")
             '
             'DashboardButton
             '
@@ -193,6 +200,12 @@
             Me.DashboardButton.Name = "DashboardButton"
             Me.DashboardButton.Size = New System.Drawing.Size(88, 82)
             Me.DashboardButton.TabIndex = 1
+            Me.Guna2HtmlToolTip1.SetToolTip(Me.DashboardButton, "Dashboard")
+            '
+            'Guna2HtmlToolTip1
+            '
+            Me.Guna2HtmlToolTip1.AllowLinksHandling = True
+            Me.Guna2HtmlToolTip1.MaximumSize = New System.Drawing.Size(0, 0)
             '
             'AdminSidebar
             '
@@ -208,7 +221,7 @@
             Me.Controls.Add(Me.MenuListButton)
             Me.Controls.Add(Me.DashboardButton)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-            Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.Margin = New System.Windows.Forms.Padding(2)
             Me.Name = "AdminSidebar"
             Me.Text = "AdminSidebar"
             Me.ResumeLayout(False)
@@ -221,6 +234,7 @@
         Friend WithEvents LogOutButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents MenuListButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents DashboardButton As Guna.UI2.WinForms.Guna2Button
+        Friend WithEvents Guna2HtmlToolTip1 As Guna.UI2.WinForms.Guna2HtmlToolTip
     End Class
 
 End Namespace

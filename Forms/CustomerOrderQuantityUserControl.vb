@@ -4,6 +4,15 @@ Namespace KioskV0.Forms
     Public Class CustomerOrderQuantityUserControl
         Public Property AddOrderClick As Action(Of CustomerItem, Integer)
         Public Property CancelClick As Action
+        Public Property Quantity As Integer
+            Get
+                Return _quantity
+            End Get
+            Set(value As Integer)
+                _quantity = value
+                QuantityTextBox.Text = value.ToString()
+            End Set
+        End Property
 
         Private _menu As CustomerItem
         Private _quantity As Integer = 1

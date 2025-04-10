@@ -146,7 +146,7 @@ Namespace KioskV0.Classes
             Dim mediator
             mediator = New Mediator(Of CustomerKeys)(_projector, Me, _unitOfWork)
             mediator.SetupMap(GetCustomerPages(mediator))
-            mediator.SwapPage(CustomerKeys.CustomerOrderList)
+            mediator.SwapPage(CustomerKeys.CustomerMenu)
         End Sub
         Private Sub LogException(ex As Exception)
             MessageBox.Show(ex.Message)

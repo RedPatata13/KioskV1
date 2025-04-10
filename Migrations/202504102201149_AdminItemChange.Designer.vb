@@ -6,14 +6,14 @@ Imports System.Resources
 
 Namespace Migrations
     <GeneratedCode("EntityFramework.Migrations", "6.5.1")>
-    Public NotInheritable Partial Class UpdateAdminItemDef
+    Public NotInheritable Partial Class AdminItemChange
         Implements IMigrationMetadata
     
-        Private ReadOnly Resources As New ResourceManager(GetType(UpdateAdminItemDef))
+        Private ReadOnly Resources As New ResourceManager(GetType(AdminItemChange))
         
         Private ReadOnly Property IMigrationMetadata_Id() As String Implements IMigrationMetadata.Id
             Get
-                Return "202504101425484_UpdateAdminItemDef"
+                Return "202504102201149_AdminItemChange"
             End Get
         End Property
         

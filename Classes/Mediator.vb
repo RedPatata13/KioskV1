@@ -43,8 +43,8 @@ Namespace KioskV0.Classes
             VMMap_Instantiated = True
         End Sub
 
-        Public Sub CreateMenu(model As Menu)
-            _unitOfWork.Menus.Add(model)
+        Public Sub CreateMenu(model As AdminItem)
+            _unitOfWork.AdminItems.Add(model)
         End Sub
         Public Sub SwapPage(pageKey As TKey)
             VerifyKey(pageKey)
@@ -74,23 +74,23 @@ Namespace KioskV0.Classes
         End Sub
 
         Public Function GetMenuList()
-            Return _unitOfWork.Menus.GetAll()
+            Return _unitOfWork.AdminItems.GetAll()
         End Function
 
         Public Function GetItemList()
-            Return _unitOfWork.OrderItems.GetAll()
+            Return _unitOfWork.SupplierItems.GetAll()
         End Function
 
         Public Function GetOrderList()
             Dim list = _unitOfWork.Orders.GetAll()
             For Each item In list
-                item.User = _userCache(item.UserId)
+                'item.User = _userCache(item.UserId)
             Next
             Return list
         End Function
 
-        Public Sub DeleteMenu(model As Menu)
-            _unitOfWork.Menus.Delete(model.MenuId)
+        Public Sub DeleteMenu(model As AdminItem)
+            _unitOfWork.Menus.Delete(model.Id)
         End Sub
         Public Function GetUnitOfWork() As IUnitOfWork
             Return _unitOfWork

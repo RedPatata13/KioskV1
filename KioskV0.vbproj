@@ -185,6 +185,7 @@
     <Compile Include="Data\Configuration\InventoryConfiguration.vb" />
     <Compile Include="Data\Configuration\JsonConfigReader.vb" />
     <Compile Include="Data\Configuration\OrderConfiguration.vb" />
+    <Compile Include="Data\Configuration\OrderDetailsConfiguration.vb" />
     <Compile Include="Data\Configuration\OrderItemConfiguration.vb" />
     <Compile Include="Data\Configuration\MenuConfiguration.vb" />
     <Compile Include="Data\Configuration\SupplierConfiguration.vb" />
@@ -431,22 +432,22 @@
     <Compile Include="Forms\StaffTotaProductsUserControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Migrations\202504100356394_InitialCreate.Designer.vb">
-      <DependentUpon>202504100356394_InitialCreate.vb</DependentUpon>
+    <Compile Include="Migrations\202504101827107_InitialCreate.Designer.vb">
+      <DependentUpon>202504101827107_InitialCreate.vb</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202504100356394_InitialCreate.vb" />
-    <Compile Include="Migrations\202504101302384_ItemAdjustments.Designer.vb">
-      <DependentUpon>202504101302384_ItemAdjustments.vb</DependentUpon>
+    <Compile Include="Migrations\202504101827107_InitialCreate.vb" />
+    <Compile Include="Migrations\202504101828417_UpdateOrders.Designer.vb">
+      <DependentUpon>202504101828417_UpdateOrders.vb</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202504101302384_ItemAdjustments.vb" />
-    <Compile Include="Migrations\202504101425484_UpdateAdminItemDef.Designer.vb">
-      <DependentUpon>202504101425484_UpdateAdminItemDef.vb</DependentUpon>
+    <Compile Include="Migrations\202504101828417_UpdateOrders.vb" />
+    <Compile Include="Migrations\202504101834477_RemovedUserId.Designer.vb">
+      <DependentUpon>202504101834477_RemovedUserId.vb</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202504101425484_UpdateAdminItemDef.vb" />
-    <Compile Include="Migrations\202504101455132_AddFK.Designer.vb">
-      <DependentUpon>202504101455132_AddFK.vb</DependentUpon>
+    <Compile Include="Migrations\202504101834477_RemovedUserId.vb" />
+    <Compile Include="Migrations\202504102201149_AdminItemChange.Designer.vb">
+      <DependentUpon>202504102201149_AdminItemChange.vb</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202504101455132_AddFK.vb" />
+    <Compile Include="Migrations\202504102201149_AdminItemChange.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\AdminItem.vb" />
     <Compile Include="Models\Category.vb" />
@@ -457,7 +458,8 @@
     <Compile Include="Models\Menu.vb" />
     <Compile Include="Models\MenuModel.vb" />
     <Compile Include="Models\BaseModel.vb" />
-    <Compile Include="Models\Order.vb" />
+    <Compile Include="Models\OrderPrimal.vb" />
+    <Compile Include="Models\OrderDetail.vb" />
     <Compile Include="Models\OrderItem.vb" />
     <Compile Include="Models\OrderModel.vb" />
     <Compile Include="Models\Supplier.vb" />
@@ -474,12 +476,15 @@
     <Compile Include="Repositories\Contracts\ICategoryRepository.vb" />
     <Compile Include="Repositories\Contracts\ICustomerItemRepository.vb" />
     <Compile Include="Repositories\Contracts\IMenuRepository.vb" />
+    <Compile Include="Repositories\Contracts\IOrderDetailsRepository.vb" />
+    <Compile Include="Repositories\Contracts\IOrderRepository.vb" />
     <Compile Include="Repositories\Contracts\ISupplierItemsRepository.vb" />
     <Compile Include="Repositories\Contracts\IUnitOfWork.vb" />
     <Compile Include="Repositories\Contracts\IUsersRepository.vb" />
     <Compile Include="Repositories\CustomerItemsRepository.vb" />
     <Compile Include="Repositories\CustomersRepository.vb" />
     <Compile Include="Repositories\InventoriesRepository.vb" />
+    <Compile Include="Repositories\OrderDetailsRepository.vb" />
     <Compile Include="Repositories\OrderItemsRepository.vb" />
     <Compile Include="Repositories\OrdersRepository.vb" />
     <Compile Include="Repositories\MenuRepository.vb" />
@@ -619,17 +624,17 @@
     <EmbeddedResource Include="Forms\StaffTotaProductsUserControl.resx">
       <DependentUpon>StaffTotaProductsUserControl.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504100356394_InitialCreate.resx">
-      <DependentUpon>202504100356394_InitialCreate.vb</DependentUpon>
+    <EmbeddedResource Include="Migrations\202504101827107_InitialCreate.resx">
+      <DependentUpon>202504101827107_InitialCreate.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504101302384_ItemAdjustments.resx">
-      <DependentUpon>202504101302384_ItemAdjustments.vb</DependentUpon>
+    <EmbeddedResource Include="Migrations\202504101828417_UpdateOrders.resx">
+      <DependentUpon>202504101828417_UpdateOrders.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504101425484_UpdateAdminItemDef.resx">
-      <DependentUpon>202504101425484_UpdateAdminItemDef.vb</DependentUpon>
+    <EmbeddedResource Include="Migrations\202504101834477_RemovedUserId.resx">
+      <DependentUpon>202504101834477_RemovedUserId.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504101455132_AddFK.resx">
-      <DependentUpon>202504101455132_AddFK.vb</DependentUpon>
+    <EmbeddedResource Include="Migrations\202504102201149_AdminItemChange.resx">
+      <DependentUpon>202504102201149_AdminItemChange.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
