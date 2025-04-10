@@ -9,6 +9,7 @@
         End Sub
         Private Sub ProductButton_Click(sender As Object, e As EventArgs) Handles ProductButton.Click
             Dim orderControl As New StaffPosOrderUserControl()
+            orderControl.ItemProductName = "Product"
             StaffPosView.OrderListFlowLayout.Controls.Add(orderControl)
         End Sub
     End Class

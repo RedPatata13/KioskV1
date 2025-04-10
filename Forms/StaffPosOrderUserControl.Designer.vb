@@ -36,6 +36,7 @@
             '
             Me.ProductNameLabel.BackColor = System.Drawing.Color.Transparent
             Me.ProductNameLabel.Font = New System.Drawing.Font("Poppins", 12.0!)
+            Me.ProductNameLabel.ForeColor = System.Drawing.Color.Black
             Me.ProductNameLabel.Location = New System.Drawing.Point(32, 31)
             Me.ProductNameLabel.Name = "ProductNameLabel"
             Me.ProductNameLabel.Size = New System.Drawing.Size(65, 30)
@@ -61,11 +62,12 @@
             '
             Me.ProductQuantityLabel.BackColor = System.Drawing.Color.Transparent
             Me.ProductQuantityLabel.Font = New System.Drawing.Font("Roboto", 12.0!)
+            Me.ProductQuantityLabel.ForeColor = System.Drawing.Color.Black
             Me.ProductQuantityLabel.Location = New System.Drawing.Point(367, 36)
             Me.ProductQuantityLabel.Name = "ProductQuantityLabel"
-            Me.ProductQuantityLabel.Size = New System.Drawing.Size(21, 21)
+            Me.ProductQuantityLabel.Size = New System.Drawing.Size(12, 21)
             Me.ProductQuantityLabel.TabIndex = 3
-            Me.ProductQuantityLabel.Text = "00"
+            Me.ProductQuantityLabel.Text = "0"
             '
             'RemoveButton
             '

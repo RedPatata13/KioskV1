@@ -75,7 +75,7 @@ Partial Class StaffTotaProductsUserControl
         Me.GrandTotalTextBox.Font = New System.Drawing.Font("Roboto", 12.0!)
         Me.GrandTotalTextBox.ForeColor = System.Drawing.Color.Black
         Me.GrandTotalTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.GrandTotalTextBox.Location = New System.Drawing.Point(457, 397)
+        Me.GrandTotalTextBox.Location = New System.Drawing.Point(457, 385)
         Me.GrandTotalTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GrandTotalTextBox.Name = "GrandTotalTextBox"
         Me.GrandTotalTextBox.PlaceholderText = "P 00"

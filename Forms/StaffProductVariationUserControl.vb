@@ -9,6 +9,7 @@
         End Sub
         Private Sub ProductVariationButton_Click(sender As Object, e As EventArgs) Handles ProductVariationButton.Click
             Dim orderControl As New StaffPosOrderUserControl()
+            orderControl.ItemProductName = "Variation"
             StaffPosView.OrderListFlowLayout.Controls.Add(orderControl)
         End Sub
     End Class
