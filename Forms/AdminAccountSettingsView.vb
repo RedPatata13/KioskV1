@@ -47,5 +47,13 @@
         Private Sub _editUser_Click(sender As Object, e As EventArgs) Handles _editUser.Click
             EditUserClick?.Invoke()
         End Sub
+
+        Private Sub SaveFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles SaveFileDialog1.FileOk
+
+        End Sub
+
+        Private Sub AdminAccountSettingsView_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        End Sub
     End Class
 End Namespace

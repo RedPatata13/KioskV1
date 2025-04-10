@@ -24,6 +24,7 @@
         'Do not modify it using the code editor.
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
+            Me.components = New System.ComponentModel.Container()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminAccountSettingsView))
             Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -35,6 +36,10 @@
             Me.SupplyID = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.AccountsDataGridView = New Guna.UI2.WinForms.Guna2DataGridView()
             Me._editUser = New Guna.UI2.WinForms.Guna2Button()
+            Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+            Me.SaveFileDialog2 = New System.Windows.Forms.SaveFileDialog()
+            Me.Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
+            Me.Guna2AnimateWindow2 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
             CType(Me.AccountsDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
@@ -51,26 +56,27 @@
             '
             'AddAccountButton
             '
-            Me.AddAccountButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.AddAccountButton.BorderColor = System.Drawing.Color.Transparent
             Me.AddAccountButton.BorderRadius = 15
             Me.AddAccountButton.BorderThickness = 1
             Me.AddAccountButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
             Me.AddAccountButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
             Me.AddAccountButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
             Me.AddAccountButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-            Me.AddAccountButton.FillColor = System.Drawing.Color.White
-            Me.AddAccountButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-            Me.AddAccountButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.AddAccountButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
+            Me.AddAccountButton.Font = New System.Drawing.Font("Poppins Medium", 9.75!, System.Drawing.FontStyle.Bold)
+            Me.AddAccountButton.ForeColor = System.Drawing.Color.White
             Me.AddAccountButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.AddAccountButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.AddAccountButton.HoverState.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
             Me.AddAccountButton.Image = CType(resources.GetObject("AddAccountButton.Image"), System.Drawing.Image)
-            Me.AddAccountButton.ImageSize = New System.Drawing.Size(40, 40)
-            Me.AddAccountButton.Location = New System.Drawing.Point(1128, 120)
-            Me.AddAccountButton.Margin = New System.Windows.Forms.Padding(2)
+            Me.AddAccountButton.ImageOffset = New System.Drawing.Point(-4, 0)
+            Me.AddAccountButton.ImageSize = New System.Drawing.Size(28, 28)
+            Me.AddAccountButton.Location = New System.Drawing.Point(1117, 118)
             Me.AddAccountButton.Name = "AddAccountButton"
-            Me.AddAccountButton.Size = New System.Drawing.Size(41, 45)
+            Me.AddAccountButton.Size = New System.Drawing.Size(192, 32)
             Me.AddAccountButton.TabIndex = 7
+            Me.AddAccountButton.Text = "Add User"
             '
             'ProductName
             '
@@ -154,25 +160,33 @@
             '
             '_editUser
             '
+            Me._editUser.BackColor = System.Drawing.Color.White
+            Me._editUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+            Me._editUser.BorderRadius = 15
             Me._editUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray
             Me._editUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
             Me._editUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
             Me._editUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-            Me._editUser.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-            Me._editUser.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+            Me._editUser.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
+            Me._editUser.Font = New System.Drawing.Font("Poppins Medium", 9.75!, System.Drawing.FontStyle.Bold)
             Me._editUser.ForeColor = System.Drawing.Color.White
-            Me._editUser.Location = New System.Drawing.Point(1128, 184)
+            Me._editUser.Image = CType(resources.GetObject("_editUser.Image"), System.Drawing.Image)
+            Me._editUser.ImageOffset = New System.Drawing.Point(-4, 0)
+            Me._editUser.Location = New System.Drawing.Point(1117, 153)
             Me._editUser.Name = "_editUser"
-            Me._editUser.Size = New System.Drawing.Size(180, 32)
+            Me._editUser.Size = New System.Drawing.Size(192, 32)
             Me._editUser.TabIndex = 9
             Me._editUser.Text = "Edit User"
+            '
+            'SaveFileDialog1
+            '
             '
             'AdminAccountSettingsView
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1321, 878)
+            Me.ClientSize = New System.Drawing.Size(1321, 788)
             Me.Controls.Add(Me._editUser)
             Me.Controls.Add(Me.Guna2HtmlLabel1)
             Me.Controls.Add(Me.AddAccountButton)
@@ -180,7 +194,7 @@
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
             Me.Margin = New System.Windows.Forms.Padding(2)
             Me.Name = "AdminAccountSettingsView"
-            Me.Text = "AdminAccountSettings"
+            Me.Text = "gun"
             CType(Me.AccountsDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
@@ -192,6 +206,10 @@
         Friend WithEvents SupplyID As DataGridViewTextBoxColumn
         Friend WithEvents AccountsDataGridView As Guna.UI2.WinForms.Guna2DataGridView
         Friend WithEvents _editUser As Guna.UI2.WinForms.Guna2Button
+        Friend WithEvents SaveFileDialog1 As SaveFileDialog
+        Friend WithEvents SaveFileDialog2 As SaveFileDialog
+        Friend WithEvents Guna2AnimateWindow1 As Guna.UI2.WinForms.Guna2AnimateWindow
+        Friend WithEvents Guna2AnimateWindow2 As Guna.UI2.WinForms.Guna2AnimateWindow
     End Class
 
 End Namespace

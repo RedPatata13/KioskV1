@@ -23,6 +23,7 @@
         'Do not modify it using the code editor.
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminEditMenuDetailsView))
             Me.PageLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.ProductNameTextBox = New Guna.UI2.WinForms.Guna2TextBox()
             Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -40,8 +41,8 @@
             Me.SaveButton = New Guna.UI2.WinForms.Guna2Button()
             Me.CancelButton = New Guna.UI2.WinForms.Guna2Button()
             Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-            Me.Thumbnail = New Guna.UI2.WinForms.Guna2PictureBox()
             Me.DeleteButton = New Guna.UI2.WinForms.Guna2Button()
+            Me.Thumbnail = New Guna.UI2.WinForms.Guna2PictureBox()
             Me.Guna2Panel1.SuspendLayout()
             CType(Me.Thumbnail, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
@@ -67,14 +68,14 @@
             Me.ProductNameTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
             Me.ProductNameTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
             Me.ProductNameTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.ProductNameTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+            Me.ProductNameTextBox.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.ProductNameTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.ProductNameTextBox.Location = New System.Drawing.Point(59, 167)
             Me.ProductNameTextBox.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
             Me.ProductNameTextBox.Name = "ProductNameTextBox"
             Me.ProductNameTextBox.PlaceholderText = "Ex.: ""Hamburger"""
             Me.ProductNameTextBox.SelectedText = ""
-            Me.ProductNameTextBox.Size = New System.Drawing.Size(510, 49)
+            Me.ProductNameTextBox.Size = New System.Drawing.Size(511, 36)
             Me.ProductNameTextBox.TabIndex = 6
             '
             'Guna2HtmlLabel2
@@ -83,7 +84,7 @@
             Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel2.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(59, 227)
+            Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(59, 212)
             Me.Guna2HtmlLabel2.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
             Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(196, 49)
@@ -102,7 +103,7 @@
             Me.CategoryComboBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
             Me.CategoryComboBox.ItemHeight = 30
             Me.CategoryComboBox.Items.AddRange(New Object() {"Category1", "Category2", "Category3", "Category4"})
-            Me.CategoryComboBox.Location = New System.Drawing.Point(59, 279)
+            Me.CategoryComboBox.Location = New System.Drawing.Point(59, 265)
             Me.CategoryComboBox.Margin = New System.Windows.Forms.Padding(2)
             Me.CategoryComboBox.Name = "CategoryComboBox"
             Me.CategoryComboBox.Size = New System.Drawing.Size(511, 36)
@@ -133,7 +134,7 @@
             Me.SupplierComboBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
             Me.SupplierComboBox.ItemHeight = 30
             Me.SupplierComboBox.Items.AddRange(New Object() {"Supplier1", "Supplier2", "Supplier3"})
-            Me.SupplierComboBox.Location = New System.Drawing.Point(59, 376)
+            Me.SupplierComboBox.Location = New System.Drawing.Point(59, 358)
             Me.SupplierComboBox.Margin = New System.Windows.Forms.Padding(2)
             Me.SupplierComboBox.Name = "SupplierComboBox"
             Me.SupplierComboBox.Size = New System.Drawing.Size(511, 36)
@@ -145,7 +146,7 @@
             Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(59, 324)
+            Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(59, 305)
             Me.Guna2HtmlLabel4.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
             Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(340, 49)
@@ -162,14 +163,14 @@
             Me.ProductDescriptionTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
             Me.ProductDescriptionTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
             Me.ProductDescriptionTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.ProductDescriptionTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+            Me.ProductDescriptionTextBox.Font = New System.Drawing.Font("Poppins", 11.25!)
             Me.ProductDescriptionTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.ProductDescriptionTextBox.Location = New System.Drawing.Point(59, 471)
+            Me.ProductDescriptionTextBox.Location = New System.Drawing.Point(59, 449)
             Me.ProductDescriptionTextBox.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
             Me.ProductDescriptionTextBox.Name = "ProductDescriptionTextBox"
             Me.ProductDescriptionTextBox.PlaceholderText = """Premium ham with cheese, tomatoes...."""
             Me.ProductDescriptionTextBox.SelectedText = ""
-            Me.ProductDescriptionTextBox.Size = New System.Drawing.Size(510, 49)
+            Me.ProductDescriptionTextBox.Size = New System.Drawing.Size(511, 36)
             Me.ProductDescriptionTextBox.TabIndex = 13
             '
             'Guna2HtmlLabel5
@@ -178,7 +179,7 @@
             Me.Guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel5.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel5.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(59, 418)
+            Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(59, 398)
             Me.Guna2HtmlLabel5.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
             Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(438, 49)
@@ -195,9 +196,9 @@
             Me.CostTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
             Me.CostTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
             Me.CostTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.CostTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+            Me.CostTextBox.Font = New System.Drawing.Font("Poppins", 11.25!)
             Me.CostTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.CostTextBox.Location = New System.Drawing.Point(59, 578)
+            Me.CostTextBox.Location = New System.Drawing.Point(59, 549)
             Me.CostTextBox.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
             Me.CostTextBox.Name = "CostTextBox"
             Me.CostTextBox.PlaceholderText = "P0.00"
@@ -215,9 +216,9 @@
             Me.SellingTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
             Me.SellingTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
             Me.SellingTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.SellingTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+            Me.SellingTextBox.Font = New System.Drawing.Font("Poppins", 11.25!)
             Me.SellingTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.SellingTextBox.Location = New System.Drawing.Point(329, 578)
+            Me.SellingTextBox.Location = New System.Drawing.Point(329, 549)
             Me.SellingTextBox.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
             Me.SellingTextBox.Name = "SellingTextBox"
             Me.SellingTextBox.PlaceholderText = "P0.00"
@@ -231,7 +232,7 @@
             Me.Guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel6.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel6.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(59, 525)
+            Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(59, 496)
             Me.Guna2HtmlLabel6.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
             Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(240, 49)
@@ -244,7 +245,7 @@
             Me.Guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel7.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel7.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2HtmlLabel7.Location = New System.Drawing.Point(329, 525)
+            Me.Guna2HtmlLabel7.Location = New System.Drawing.Point(329, 496)
             Me.Guna2HtmlLabel7.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
             Me.Guna2HtmlLabel7.Size = New System.Drawing.Size(240, 49)
@@ -254,7 +255,7 @@
             'SelectImageButton
             '
             Me.SelectImageButton.BackColor = System.Drawing.Color.White
-            Me.SelectImageButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.SelectImageButton.BorderColor = System.Drawing.Color.Silver
             Me.SelectImageButton.BorderRadius = 15
             Me.SelectImageButton.BorderThickness = 1
             Me.SelectImageButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
@@ -263,14 +264,14 @@
             Me.SelectImageButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
             Me.SelectImageButton.FillColor = System.Drawing.Color.White
             Me.SelectImageButton.Font = New System.Drawing.Font("Poppins", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.SelectImageButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.SelectImageButton.ForeColor = System.Drawing.Color.DimGray
             Me.SelectImageButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.SelectImageButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.SelectImageButton.HoverState.ForeColor = System.Drawing.Color.White
-            Me.SelectImageButton.Location = New System.Drawing.Point(880, 638)
+            Me.SelectImageButton.Location = New System.Drawing.Point(804, 615)
             Me.SelectImageButton.Margin = New System.Windows.Forms.Padding(2)
             Me.SelectImageButton.Name = "SelectImageButton"
-            Me.SelectImageButton.Size = New System.Drawing.Size(189, 51)
+            Me.SelectImageButton.Size = New System.Drawing.Size(346, 51)
             Me.SelectImageButton.TabIndex = 19
             Me.SelectImageButton.Text = "Select image"
             '
@@ -289,16 +290,16 @@
             Me.SaveButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.SaveButton.HoverState.FillColor = System.Drawing.Color.White
             Me.SaveButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.SaveButton.Location = New System.Drawing.Point(1068, 762)
+            Me.SaveButton.Location = New System.Drawing.Point(804, 677)
             Me.SaveButton.Margin = New System.Windows.Forms.Padding(2)
             Me.SaveButton.Name = "SaveButton"
-            Me.SaveButton.Size = New System.Drawing.Size(189, 51)
+            Me.SaveButton.Size = New System.Drawing.Size(346, 36)
             Me.SaveButton.TabIndex = 20
             Me.SaveButton.Text = "Save"
             '
             'CancelButton
             '
-            Me.CancelButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer))
+            Me.CancelButton.BorderColor = System.Drawing.Color.Transparent
             Me.CancelButton.BorderRadius = 15
             Me.CancelButton.BorderThickness = 1
             Me.CancelButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
@@ -306,15 +307,15 @@
             Me.CancelButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
             Me.CancelButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
             Me.CancelButton.FillColor = System.Drawing.Color.White
-            Me.CancelButton.Font = New System.Drawing.Font("Poppins", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.CancelButton.Font = New System.Drawing.Font("Poppins", 10.8!)
             Me.CancelButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
             Me.CancelButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
             Me.CancelButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer))
             Me.CancelButton.HoverState.ForeColor = System.Drawing.Color.White
-            Me.CancelButton.Location = New System.Drawing.Point(853, 762)
+            Me.CancelButton.Location = New System.Drawing.Point(930, 715)
             Me.CancelButton.Margin = New System.Windows.Forms.Padding(2)
             Me.CancelButton.Name = "CancelButton"
-            Me.CancelButton.Size = New System.Drawing.Size(189, 51)
+            Me.CancelButton.Size = New System.Drawing.Size(99, 25)
             Me.CancelButton.TabIndex = 21
             Me.CancelButton.Text = "Cancel"
             '
@@ -328,24 +329,10 @@
             Me.Guna2Panel1.Size = New System.Drawing.Size(1321, 81)
             Me.Guna2Panel1.TabIndex = 22
             '
-            'Thumbnail
-            '
-            Me.Thumbnail.BackColor = System.Drawing.Color.Transparent
-            Me.Thumbnail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-            Me.Thumbnail.BorderRadius = 15
-            Me.Thumbnail.FillColor = System.Drawing.Color.WhiteSmoke
-            Me.Thumbnail.ImageRotate = 0!
-            Me.Thumbnail.Location = New System.Drawing.Point(683, 124)
-            Me.Thumbnail.Margin = New System.Windows.Forms.Padding(2)
-            Me.Thumbnail.Name = "Thumbnail"
-            Me.Thumbnail.Size = New System.Drawing.Size(574, 488)
-            Me.Thumbnail.TabIndex = 7
-            Me.Thumbnail.TabStop = False
-            '
             'DeleteButton
             '
             Me.DeleteButton.BackColor = System.Drawing.Color.White
-            Me.DeleteButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.DeleteButton.BorderColor = System.Drawing.Color.White
             Me.DeleteButton.BorderRadius = 15
             Me.DeleteButton.BorderThickness = 1
             Me.DeleteButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
@@ -353,25 +340,40 @@
             Me.DeleteButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
             Me.DeleteButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
             Me.DeleteButton.FillColor = System.Drawing.Color.White
-            Me.DeleteButton.Font = New System.Drawing.Font("Poppins", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.DeleteButton.Font = New System.Drawing.Font("Poppins", 10.8!)
             Me.DeleteButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.DeleteButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.DeleteButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.DeleteButton.HoverState.ForeColor = System.Drawing.Color.White
-            Me.DeleteButton.Location = New System.Drawing.Point(640, 760)
+            Me.DeleteButton.Image = CType(resources.GetObject("DeleteButton.Image"), System.Drawing.Image)
+            Me.DeleteButton.ImageSize = New System.Drawing.Size(30, 30)
+            Me.DeleteButton.Location = New System.Drawing.Point(676, 615)
             Me.DeleteButton.Margin = New System.Windows.Forms.Padding(2)
             Me.DeleteButton.Name = "DeleteButton"
-            Me.DeleteButton.Size = New System.Drawing.Size(189, 51)
+            Me.DeleteButton.Size = New System.Drawing.Size(52, 40)
             Me.DeleteButton.TabIndex = 23
-            Me.DeleteButton.Text = "Delete"
             Me.DeleteButton.Visible = False
+            '
+            'Thumbnail
+            '
+            Me.Thumbnail.BackColor = System.Drawing.Color.Transparent
+            Me.Thumbnail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+            Me.Thumbnail.BorderRadius = 15
+            Me.Thumbnail.FillColor = System.Drawing.Color.WhiteSmoke
+            Me.Thumbnail.ImageRotate = 0!
+            Me.Thumbnail.Location = New System.Drawing.Point(683, 114)
+            Me.Thumbnail.Margin = New System.Windows.Forms.Padding(2)
+            Me.Thumbnail.Name = "Thumbnail"
+            Me.Thumbnail.Size = New System.Drawing.Size(574, 484)
+            Me.Thumbnail.TabIndex = 7
+            Me.Thumbnail.TabStop = False
             '
             'AdminEditMenuDetailsView
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1321, 878)
+            Me.ClientSize = New System.Drawing.Size(1321, 788)
             Me.Controls.Add(Me.DeleteButton)
             Me.Controls.Add(Me.Guna2Panel1)
             Me.Controls.Add(Me.CancelButton)
@@ -403,7 +405,6 @@
 
         Friend WithEvents PageLabel As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents ProductNameTextBox As Guna.UI2.WinForms.Guna2TextBox
-        Friend WithEvents Thumbnail As Guna.UI2.WinForms.Guna2PictureBox
         Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents CategoryComboBox As Guna.UI2.WinForms.Guna2ComboBox
         Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
@@ -420,6 +421,7 @@
         Friend WithEvents CancelButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
         Friend WithEvents DeleteButton As Guna.UI2.WinForms.Guna2Button
+        Friend WithEvents Thumbnail As Guna.UI2.WinForms.Guna2PictureBox
     End Class
 
 End Namespace

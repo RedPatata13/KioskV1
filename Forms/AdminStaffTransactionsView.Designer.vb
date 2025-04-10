@@ -145,7 +145,7 @@
             Me.SearchItem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
             Me.SearchItem.FillColor = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(238, Byte), Integer))
             Me.SearchItem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.SearchItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+            Me.SearchItem.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.SearchItem.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.SearchItem.IconLeft = CType(resources.GetObject("SearchItem.IconLeft"), System.Drawing.Image)
             Me.SearchItem.IconLeftOffset = New System.Drawing.Point(10, 0)
@@ -175,7 +175,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1321, 878)
+            Me.ClientSize = New System.Drawing.Size(1321, 788)
             Me.Controls.Add(Me.Guna2HtmlLabel1)
             Me.Controls.Add(Me.StaffNameComboBox)
             Me.Controls.Add(Me.StaffTransacDataGrid)

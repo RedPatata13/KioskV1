@@ -92,14 +92,72 @@
 
         Private Sub CancelButton_Click(sender As Object, e As EventArgs) Handles CancelButton.Click
             CancelButtonClick?.Invoke()
+
+            CancelButton.FillColor = Color.Transparent
+            CancelButton.ForeColor = Color.Gray
+            CancelButton.BorderColor = Color.Gray
+            CancelButton.BorderThickness = 2
+            CancelButton.HoverState.FillColor = Color.Gainsboro
+            CancelButton.BorderRadius = 20
+
         End Sub
 
         Private Sub SelectImageButton_Click(sender As Object, e As EventArgs) Handles SelectImageButton.Click
             SelectImageClick?.Invoke()
+
+            SelectImageButton.FillColor = Color.Transparent
+            SelectImageButton.ForeColor = Color.FromArgb(250, 128, 114) ' Salmon
+            SelectImageButton.BorderColor = Color.FromArgb(250, 128, 114)
+            SelectImageButton.BorderThickness = 2
+            SelectImageButton.HoverState.FillColor = Color.FromArgb(255, 160, 122)
+            SelectImageButton.HoverState.ForeColor = Color.White
+            SelectImageButton.BorderRadius = 20
+
         End Sub
 
         Private Sub DeleteButton_Click(sender As Object, e As EventArgs) Handles DeleteButton.Click
             DeleteButtonClick?.Invoke()
+
+        End Sub
+
+        Private Sub ProductNameTextBox_TextChanged(sender As Object, e As EventArgs) Handles ProductNameTextBox.TextChanged
+            ProductNameTextBox.ShadowDecoration.Enabled = True
+            ProductNameTextBox.ShadowDecoration.Color = Color.Gray
+            ProductNameTextBox.ShadowDecoration.BorderRadius = 10
+            ProductNameTextBox.ShadowDecoration.Depth = 5
+            ProductNameTextBox.ShadowDecoration.Shadow = New Padding(2)
+
+        End Sub
+
+        Private Sub CategoryComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CategoryComboBox.SelectedIndexChanged
+            CategoryComboBox.ShadowDecoration.Enabled = True
+            CategoryComboBox.ShadowDecoration.Color = Color.Gray
+            CategoryComboBox.ShadowDecoration.BorderRadius = 10
+            CategoryComboBox.ShadowDecoration.Depth = 5
+            CategoryComboBox.ShadowDecoration.Shadow = New Padding(2)
+
+        End Sub
+
+        Private Sub SupplierComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles SupplierComboBox.SelectedIndexChanged
+            SupplierComboBox.ShadowDecoration.Enabled = True
+            SupplierComboBox.ShadowDecoration.Color = Color.Gray
+            SupplierComboBox.ShadowDecoration.BorderRadius = 10
+            SupplierComboBox.ShadowDecoration.Depth = 5
+            SupplierComboBox.ShadowDecoration.Shadow = New Padding(2)
+
+        End Sub
+
+        Private Sub ProductDescriptionTextBox_TextChanged(sender As Object, e As EventArgs) Handles ProductDescriptionTextBox.TextChanged
+            ProductDescriptionTextBox.ShadowDecoration.Enabled = True
+            ProductDescriptionTextBox.ShadowDecoration.Color = Color.Gray
+            ProductDescriptionTextBox.ShadowDecoration.BorderRadius = 10
+            ProductDescriptionTextBox.ShadowDecoration.Depth = 5
+            ProductDescriptionTextBox.ShadowDecoration.Shadow = New Padding(2)
+
+        End Sub
+
+        Private Sub AdminEditMenuDetailsView_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         End Sub
     End Class
 End Namespace

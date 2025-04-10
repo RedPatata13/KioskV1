@@ -90,7 +90,6 @@ Partial Class StaffPosOrderUserControl
         Me.DeleteOrderButton.FillColor = System.Drawing.Color.White
         Me.DeleteOrderButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.DeleteOrderButton.ForeColor = System.Drawing.Color.Black
-        'Me.DeleteOrderButton.Image = Global.KioskV0.My.Resources.Resources.Delete_item
         Me.DeleteOrderButton.Location = New System.Drawing.Point(474, 31)
         Me.DeleteOrderButton.Name = "DeleteOrderButton"
         Me.DeleteOrderButton.Size = New System.Drawing.Size(34, 30)

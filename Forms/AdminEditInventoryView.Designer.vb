@@ -56,10 +56,10 @@
             Me._cancelButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
             Me._cancelButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer))
             Me._cancelButton.HoverState.ForeColor = System.Drawing.Color.White
-            Me._cancelButton.Location = New System.Drawing.Point(1146, 938)
-            Me._cancelButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+            Me._cancelButton.Location = New System.Drawing.Point(860, 762)
+            Me._cancelButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
             Me._cancelButton.Name = "_cancelButton"
-            Me._cancelButton.Size = New System.Drawing.Size(252, 63)
+            Me._cancelButton.Size = New System.Drawing.Size(189, 51)
             Me._cancelButton.TabIndex = 33
             Me._cancelButton.Text = "Cancel"
             '
@@ -78,10 +78,10 @@
             Me._saveButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me._saveButton.HoverState.FillColor = System.Drawing.Color.White
             Me._saveButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me._saveButton.Location = New System.Drawing.Point(1424, 938)
-            Me._saveButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+            Me._saveButton.Location = New System.Drawing.Point(1068, 762)
+            Me._saveButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
             Me._saveButton.Name = "_saveButton"
-            Me._saveButton.Size = New System.Drawing.Size(252, 63)
+            Me._saveButton.Size = New System.Drawing.Size(189, 51)
             Me._saveButton.TabIndex = 32
             Me._saveButton.Text = "Save"
             '
@@ -91,10 +91,10 @@
             Me.Guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel5.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel5.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(907, 220)
-            Me.Guna2HtmlLabel5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+            Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(680, 179)
+            Me.Guna2HtmlLabel5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
             Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
-            Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(243, 60)
+            Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(182, 49)
             Me.Guna2HtmlLabel5.TabIndex = 31
             Me.Guna2HtmlLabel5.Text = "Supplier"
             '
@@ -104,10 +104,10 @@
             Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(79, 503)
-            Me.Guna2HtmlLabel4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+            Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(59, 409)
+            Me.Guna2HtmlLabel4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
             Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
-            Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(480, 60)
+            Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(360, 49)
             Me.Guna2HtmlLabel4.TabIndex = 30
             Me.Guna2HtmlLabel4.Text = "Quantity"
             '
@@ -117,10 +117,10 @@
             Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel2.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(79, 352)
-            Me.Guna2HtmlLabel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+            Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(59, 286)
+            Me.Guna2HtmlLabel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
             Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-            Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(509, 60)
+            Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(382, 49)
             Me.Guna2HtmlLabel2.TabIndex = 29
             Me.Guna2HtmlLabel2.Text = "Product Name"
             '
@@ -130,10 +130,10 @@
             Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel3.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(79, 220)
-            Me.Guna2HtmlLabel3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+            Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(59, 179)
+            Me.Guna2HtmlLabel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
             Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
-            Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(509, 60)
+            Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(382, 49)
             Me.Guna2HtmlLabel3.TabIndex = 28
             Me.Guna2HtmlLabel3.Text = "Product ID"
             '
@@ -149,12 +149,12 @@
             Me._quantityField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
             Me._quantityField.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me._quantityField.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me._quantityField.Location = New System.Drawing.Point(79, 569)
-            Me._quantityField.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+            Me._quantityField.Location = New System.Drawing.Point(59, 462)
+            Me._quantityField.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
             Me._quantityField.Name = "_quantityField"
             Me._quantityField.PlaceholderText = "100"
             Me._quantityField.SelectedText = ""
-            Me._quantityField.Size = New System.Drawing.Size(680, 60)
+            Me._quantityField.Size = New System.Drawing.Size(510, 49)
             Me._quantityField.TabIndex = 27
             '
             'Guna2DateTimePicker1
@@ -163,12 +163,12 @@
             Me.Guna2DateTimePicker1.FillColor = System.Drawing.Color.White
             Me.Guna2DateTimePicker1.Font = New System.Drawing.Font("Poppins", 12.0!)
             Me.Guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
-            Me.Guna2DateTimePicker1.Location = New System.Drawing.Point(79, 140)
-            Me.Guna2DateTimePicker1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+            Me.Guna2DateTimePicker1.Location = New System.Drawing.Point(59, 114)
+            Me.Guna2DateTimePicker1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
             Me.Guna2DateTimePicker1.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
             Me.Guna2DateTimePicker1.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
             Me.Guna2DateTimePicker1.Name = "Guna2DateTimePicker1"
-            Me.Guna2DateTimePicker1.Size = New System.Drawing.Size(320, 54)
+            Me.Guna2DateTimePicker1.Size = New System.Drawing.Size(240, 44)
             Me.Guna2DateTimePicker1.TabIndex = 26
             Me.Guna2DateTimePicker1.Value = New Date(2025, 3, 27, 20, 51, 23, 297)
             '
@@ -184,10 +184,10 @@
             Me._suppliers.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
             Me._suppliers.ItemHeight = 30
             Me._suppliers.Items.AddRange(New Object() {"Gentle House", "NEPS", "Belobog Constructions", "Victoria Housekeeping", "Sons of Calydon"})
-            Me._suppliers.Location = New System.Drawing.Point(907, 286)
-            Me._suppliers.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+            Me._suppliers.Location = New System.Drawing.Point(680, 232)
+            Me._suppliers.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
             Me._suppliers.Name = "_suppliers"
-            Me._suppliers.Size = New System.Drawing.Size(680, 36)
+            Me._suppliers.Size = New System.Drawing.Size(511, 36)
             Me._suppliers.TabIndex = 25
             '
             '_prodNameField
@@ -202,12 +202,12 @@
             Me._prodNameField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
             Me._prodNameField.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me._prodNameField.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me._prodNameField.Location = New System.Drawing.Point(79, 427)
-            Me._prodNameField.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+            Me._prodNameField.Location = New System.Drawing.Point(59, 347)
+            Me._prodNameField.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
             Me._prodNameField.Name = "_prodNameField"
             Me._prodNameField.PlaceholderText = "Ex.: ""Hamburger"""
             Me._prodNameField.SelectedText = ""
-            Me._prodNameField.Size = New System.Drawing.Size(680, 60)
+            Me._prodNameField.Size = New System.Drawing.Size(510, 49)
             Me._prodNameField.TabIndex = 24
             '
             '_productID
@@ -222,12 +222,12 @@
             Me._productID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
             Me._productID.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me._productID.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me._productID.Location = New System.Drawing.Point(79, 286)
-            Me._productID.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+            Me._productID.Location = New System.Drawing.Point(59, 232)
+            Me._productID.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
             Me._productID.Name = "_productID"
             Me._productID.PlaceholderText = "102PDR"
             Me._productID.SelectedText = ""
-            Me._productID.Size = New System.Drawing.Size(680, 60)
+            Me._productID.Size = New System.Drawing.Size(510, 49)
             Me._productID.TabIndex = 23
             '
             'Guna2Panel1
@@ -235,9 +235,9 @@
             Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel1)
             Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
             Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
-            Me.Guna2Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+            Me.Guna2Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
             Me.Guna2Panel1.Name = "Guna2Panel1"
-            Me.Guna2Panel1.Size = New System.Drawing.Size(1761, 117)
+            Me.Guna2Panel1.Size = New System.Drawing.Size(1040, 95)
             Me.Guna2Panel1.TabIndex = 34
             '
             'Guna2HtmlLabel1
@@ -245,10 +245,10 @@
             Me.Guna2HtmlLabel1.AutoSize = False
             Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 28.2!, System.Drawing.FontStyle.Bold)
-            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(39, 30)
-            Me.Guna2HtmlLabel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(29, 24)
+            Me.Guna2HtmlLabel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
             Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(572, 75)
+            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(429, 61)
             Me.Guna2HtmlLabel1.TabIndex = 6
             Me.Guna2HtmlLabel1.Text = "Edit Inventory"
             '
@@ -264,10 +264,10 @@
             Me._statuses.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
             Me._statuses.ItemHeight = 30
             Me._statuses.Items.AddRange(New Object() {"Active", "Inactive", "Out of Stock"})
-            Me._statuses.Location = New System.Drawing.Point(907, 427)
-            Me._statuses.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+            Me._statuses.Location = New System.Drawing.Point(680, 347)
+            Me._statuses.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
             Me._statuses.Name = "_statuses"
-            Me._statuses.Size = New System.Drawing.Size(680, 36)
+            Me._statuses.Size = New System.Drawing.Size(511, 36)
             Me._statuses.TabIndex = 35
             '
             'Guna2HtmlLabel6
@@ -276,19 +276,19 @@
             Me.Guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel6.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel6.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(907, 352)
-            Me.Guna2HtmlLabel6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+            Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(680, 286)
+            Me.Guna2HtmlLabel6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
             Me.Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
-            Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(255, 60)
+            Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(191, 49)
             Me.Guna2HtmlLabel6.TabIndex = 36
             Me.Guna2HtmlLabel6.Text = "Status"
             '
             'AdminEditInventoryView
             '
-            Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1761, 1080)
+            Me.ClientSize = New System.Drawing.Size(1040, 640)
             Me.Controls.Add(Me.Guna2HtmlLabel6)
             Me.Controls.Add(Me._statuses)
             Me.Controls.Add(Me.Guna2Panel1)
@@ -304,7 +304,7 @@
             Me.Controls.Add(Me._prodNameField)
             Me.Controls.Add(Me._productID)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-            Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+            Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
             Me.Name = "AdminEditInventoryView"
             Me.Text = "AdminEditInventoryView"
             Me.Guna2Panel1.ResumeLayout(False)

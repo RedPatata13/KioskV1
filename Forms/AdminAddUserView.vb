@@ -105,5 +105,17 @@
         Private Sub _cancelButton_Click(sender As Object, e As EventArgs) Handles _cancelButton.Click
             CancelButtonClick?.Invoke()
         End Sub
+
+        Private Sub AdminAddUserView_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        End Sub
+
+        Private Sub _roles_SelectedIndexChanged(sender As Object, e As EventArgs) Handles _roles.SelectedIndexChanged
+            _roles.ShadowDecoration.Enabled = True
+            _roles.ShadowDecoration.Color = Color.Gray
+            _roles.ShadowDecoration.BorderRadius = 10
+            _roles.ShadowDecoration.Depth = 5
+            _roles.ShadowDecoration.Shadow = New Padding(2)
+        End Sub
     End Class
 End Namespace
