@@ -37,6 +37,10 @@
             Me.OrderMoreButton = New Guna.UI2.WinForms.Guna2Button()
             Me.OrderListFlowLayout = New System.Windows.Forms.FlowLayoutPanel()
             Me.OrderListPanel = New Guna.UI2.WinForms.Guna2Panel()
+            Me.OrderDetailsDGV = New Guna.UI2.WinForms.Guna2DataGridView()
+            Me.ProductName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.ProductQuantity = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.ProductPrice = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
             Me.Label3 = New System.Windows.Forms.Label()
             Me.Label2 = New System.Windows.Forms.Label()
@@ -47,18 +51,14 @@
             Me.Label5 = New System.Windows.Forms.Label()
             Me.Label4 = New System.Windows.Forms.Label()
             Me.CheckOutButton = New Guna.UI2.WinForms.Guna2Button()
-            Me.OrderDetailsDGV = New Guna.UI2.WinForms.Guna2DataGridView()
-            Me.ProductName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.ProductQuantity = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.ProductPrice = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.TopBar.SuspendLayout()
             CType(Me.OrderListLogo, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.OrdersPanel.SuspendLayout()
             Me.Buttons.SuspendLayout()
             Me.OrderListPanel.SuspendLayout()
+            CType(Me.OrderDetailsDGV, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.Guna2Panel3.SuspendLayout()
             Me.Guna2Panel2.SuspendLayout()
-            CType(Me.OrderDetailsDGV, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'YourOrderListLbl
@@ -110,10 +110,9 @@
             Me.Buttons.BackColor = System.Drawing.Color.White
             Me.Buttons.Controls.Add(Me.StartOverButton)
             Me.Buttons.Controls.Add(Me.OrderMoreButton)
-            Me.Buttons.Dock = System.Windows.Forms.DockStyle.Bottom
-            Me.Buttons.Location = New System.Drawing.Point(0, 506)
+            Me.Buttons.Location = New System.Drawing.Point(0, 512)
             Me.Buttons.Name = "Buttons"
-            Me.Buttons.Size = New System.Drawing.Size(1007, 146)
+            Me.Buttons.Size = New System.Drawing.Size(1376, 140)
             Me.Buttons.TabIndex = 2
             '
             'StartOverButton
@@ -131,7 +130,7 @@
             Me.StartOverButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
             Me.StartOverButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer))
             Me.StartOverButton.HoverState.ForeColor = System.Drawing.Color.White
-            Me.StartOverButton.Location = New System.Drawing.Point(208, 48)
+            Me.StartOverButton.Location = New System.Drawing.Point(208, 32)
             Me.StartOverButton.Margin = New System.Windows.Forms.Padding(2)
             Me.StartOverButton.Name = "StartOverButton"
             Me.StartOverButton.Size = New System.Drawing.Size(318, 50)
@@ -153,7 +152,7 @@
             Me.OrderMoreButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.OrderMoreButton.HoverState.FillColor = System.Drawing.Color.White
             Me.OrderMoreButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.OrderMoreButton.Location = New System.Drawing.Point(544, 48)
+            Me.OrderMoreButton.Location = New System.Drawing.Point(544, 32)
             Me.OrderMoreButton.Margin = New System.Windows.Forms.Padding(2)
             Me.OrderMoreButton.Name = "OrderMoreButton"
             Me.OrderMoreButton.Size = New System.Drawing.Size(318, 50)
@@ -170,13 +169,13 @@
             '
             'OrderListPanel
             '
-            Me.OrderListPanel.BackColor = System.Drawing.Color.Transparent
+            Me.OrderListPanel.BackColor = System.Drawing.Color.White
             Me.OrderListPanel.BorderColor = System.Drawing.Color.Black
             Me.OrderListPanel.BorderRadius = 15
             Me.OrderListPanel.BorderThickness = 2
+            Me.OrderListPanel.Controls.Add(Me.OrderDetailsDGV)
             Me.OrderListPanel.Controls.Add(Me.Guna2Panel3)
             Me.OrderListPanel.Controls.Add(Me.Guna2Panel2)
-            Me.OrderListPanel.Controls.Add(Me.OrderDetailsDGV)
             Me.OrderListPanel.Dock = System.Windows.Forms.DockStyle.Right
             Me.OrderListPanel.FillColor = System.Drawing.Color.Transparent
             Me.OrderListPanel.Location = New System.Drawing.Point(1007, 0)
@@ -184,12 +183,109 @@
             Me.OrderListPanel.Size = New System.Drawing.Size(363, 652)
             Me.OrderListPanel.TabIndex = 0
             '
+            'OrderDetailsDGV
+            '
+            DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+            Me.OrderDetailsDGV.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+            DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.OrderDetailsDGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+            Me.OrderDetailsDGV.ColumnHeadersHeight = 4
+            Me.OrderDetailsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+            Me.OrderDetailsDGV.ColumnHeadersVisible = False
+            Me.OrderDetailsDGV.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductName, Me.ProductQuantity, Me.ProductPrice})
+            DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+            DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+            DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+            DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+            DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.OrderDetailsDGV.DefaultCellStyle = DataGridViewCellStyle3
+            Me.OrderDetailsDGV.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.OrderDetailsDGV.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+            Me.OrderDetailsDGV.Location = New System.Drawing.Point(0, 82)
+            Me.OrderDetailsDGV.Name = "OrderDetailsDGV"
+            DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
+            DataGridViewCellStyle4.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightGray
+            DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.OrderDetailsDGV.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+            Me.OrderDetailsDGV.RowHeadersVisible = False
+            Me.OrderDetailsDGV.RowHeadersWidth = 45
+            Me.OrderDetailsDGV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+            DataGridViewCellStyle5.BackColor = System.Drawing.Color.White
+            DataGridViewCellStyle5.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightGray
+            DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText
+            Me.OrderDetailsDGV.RowsDefaultCellStyle = DataGridViewCellStyle5
+            Me.OrderDetailsDGV.Size = New System.Drawing.Size(363, 424)
+            Me.OrderDetailsDGV.TabIndex = 23
+            Me.OrderDetailsDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+            Me.OrderDetailsDGV.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+            Me.OrderDetailsDGV.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+            Me.OrderDetailsDGV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+            Me.OrderDetailsDGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+            Me.OrderDetailsDGV.ThemeStyle.BackColor = System.Drawing.Color.White
+            Me.OrderDetailsDGV.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+            Me.OrderDetailsDGV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+            Me.OrderDetailsDGV.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+            Me.OrderDetailsDGV.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.OrderDetailsDGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+            Me.OrderDetailsDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+            Me.OrderDetailsDGV.ThemeStyle.HeaderStyle.Height = 4
+            Me.OrderDetailsDGV.ThemeStyle.ReadOnly = False
+            Me.OrderDetailsDGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
+            Me.OrderDetailsDGV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+            Me.OrderDetailsDGV.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.OrderDetailsDGV.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+            Me.OrderDetailsDGV.ThemeStyle.RowsStyle.Height = 22
+            Me.OrderDetailsDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+            Me.OrderDetailsDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+            '
+            'ProductName
+            '
+            Me.ProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+            Me.ProductName.FillWeight = 108.3917!
+            Me.ProductName.HeaderText = ""
+            Me.ProductName.Name = "ProductName"
+            Me.ProductName.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.ProductName.Width = 71
+            '
+            'ProductQuantity
+            '
+            Me.ProductQuantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+            Me.ProductQuantity.FillWeight = 69.78087!
+            Me.ProductQuantity.HeaderText = ""
+            Me.ProductQuantity.Name = "ProductQuantity"
+            Me.ProductQuantity.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.ProductQuantity.Width = 46
+            '
+            'ProductPrice
+            '
+            Me.ProductPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+            Me.ProductPrice.FillWeight = 121.8274!
+            Me.ProductPrice.HeaderText = ""
+            Me.ProductPrice.Name = "ProductPrice"
+            Me.ProductPrice.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.ProductPrice.Width = 80
+            '
             'Guna2Panel3
             '
             Me.Guna2Panel3.BackColor = System.Drawing.Color.Transparent
             Me.Guna2Panel3.Controls.Add(Me.Label3)
             Me.Guna2Panel3.Controls.Add(Me.Label2)
             Me.Guna2Panel3.Controls.Add(Me.Label1)
+            Me.Guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top
             Me.Guna2Panel3.Location = New System.Drawing.Point(0, 0)
             Me.Guna2Panel3.Name = "Guna2Panel3"
             Me.Guna2Panel3.Size = New System.Drawing.Size(363, 82)
@@ -301,101 +397,6 @@
             Me.CheckOutButton.TabIndex = 22
             Me.CheckOutButton.Text = "Complete Order"
             '
-            'OrderDetailsDGV
-            '
-            DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-            Me.OrderDetailsDGV.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.OrderDetailsDGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-            Me.OrderDetailsDGV.ColumnHeadersHeight = 4
-            Me.OrderDetailsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-            Me.OrderDetailsDGV.ColumnHeadersVisible = False
-            Me.OrderDetailsDGV.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductName, Me.ProductQuantity, Me.ProductPrice})
-            DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-            DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-            DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-            DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-            DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.OrderDetailsDGV.DefaultCellStyle = DataGridViewCellStyle3
-            Me.OrderDetailsDGV.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.OrderDetailsDGV.Location = New System.Drawing.Point(3, 88)
-            Me.OrderDetailsDGV.Name = "OrderDetailsDGV"
-            DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-            DataGridViewCellStyle4.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightGray
-            DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.OrderDetailsDGV.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
-            Me.OrderDetailsDGV.RowHeadersVisible = False
-            Me.OrderDetailsDGV.RowHeadersWidth = 45
-            Me.OrderDetailsDGV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-            DataGridViewCellStyle5.BackColor = System.Drawing.Color.White
-            DataGridViewCellStyle5.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightGray
-            DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText
-            Me.OrderDetailsDGV.RowsDefaultCellStyle = DataGridViewCellStyle5
-            Me.OrderDetailsDGV.Size = New System.Drawing.Size(357, 413)
-            Me.OrderDetailsDGV.TabIndex = 23
-            Me.OrderDetailsDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
-            Me.OrderDetailsDGV.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-            Me.OrderDetailsDGV.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
-            Me.OrderDetailsDGV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
-            Me.OrderDetailsDGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-            Me.OrderDetailsDGV.ThemeStyle.BackColor = System.Drawing.Color.White
-            Me.OrderDetailsDGV.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.OrderDetailsDGV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.OrderDetailsDGV.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-            Me.OrderDetailsDGV.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.OrderDetailsDGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-            Me.OrderDetailsDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-            Me.OrderDetailsDGV.ThemeStyle.HeaderStyle.Height = 4
-            Me.OrderDetailsDGV.ThemeStyle.ReadOnly = False
-            Me.OrderDetailsDGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
-            Me.OrderDetailsDGV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-            Me.OrderDetailsDGV.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.OrderDetailsDGV.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-            Me.OrderDetailsDGV.ThemeStyle.RowsStyle.Height = 22
-            Me.OrderDetailsDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.OrderDetailsDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-            '
-            'ProductName
-            '
-            Me.ProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-            Me.ProductName.FillWeight = 108.3917!
-            Me.ProductName.HeaderText = ""
-            Me.ProductName.Name = "ProductName"
-            Me.ProductName.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.ProductName.Width = 71
-            '
-            'ProductQuantity
-            '
-            Me.ProductQuantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-            Me.ProductQuantity.FillWeight = 69.78087!
-            Me.ProductQuantity.HeaderText = ""
-            Me.ProductQuantity.Name = "ProductQuantity"
-            Me.ProductQuantity.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.ProductQuantity.Width = 46
-            '
-            'ProductPrice
-            '
-            Me.ProductPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-            Me.ProductPrice.FillWeight = 121.8274!
-            Me.ProductPrice.HeaderText = ""
-            Me.ProductPrice.Name = "ProductPrice"
-            Me.ProductPrice.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.ProductPrice.Width = 80
-            '
             'CustomerOrderListView
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -412,11 +413,11 @@
             Me.OrdersPanel.ResumeLayout(False)
             Me.Buttons.ResumeLayout(False)
             Me.OrderListPanel.ResumeLayout(False)
+            CType(Me.OrderDetailsDGV, System.ComponentModel.ISupportInitialize).EndInit()
             Me.Guna2Panel3.ResumeLayout(False)
             Me.Guna2Panel3.PerformLayout()
             Me.Guna2Panel2.ResumeLayout(False)
             Me.Guna2Panel2.PerformLayout()
-            CType(Me.OrderDetailsDGV, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
 
         End Sub
