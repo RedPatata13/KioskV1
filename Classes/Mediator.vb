@@ -65,24 +65,7 @@ Namespace KioskV0.Classes
         End Sub
 
         Public Function GetUserList() As List(Of User)
-            Dim list = _unitOfWork.Users.GetAll()
-            Dim userTypeFactory = Function(key As String) As String
-                                      Select Case key
-                                          Case "0"
-                                              Return "Admin"
-                                          Case "1"
-                                              Return "Staff"
-                                          Case "2"
-                                              Return "Supplier"
-                                          Case Else
-                                              MessageBox.Show(key)
-                                              Return key
-                                      End Select
-                                  End Function
-            For Each item In list
-                item.Role = userTypeFactory(item.Role)
-            Next
-            Return list
+            Return _unitOfWork.Users.GetAll()
         End Function
 
 

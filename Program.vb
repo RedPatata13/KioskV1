@@ -6,12 +6,18 @@ Namespace KioskV0
         Sub Main()
             Application.EnableVisualStyles()
             Application.SetCompatibleTextRenderingDefault(False)
+            'Dim container As IContainer = ContainerConfiguration.ConfigureContainer()
+            'Using scope As ILifetimeScope = container.BeginLifetimeScope()
+            'AddMockUsers()
+            'AddMockSupplierItems()
+            'AddMockAdminItems()
+            'AddMockCustomerItems()
+            'End Using
             Dim container As IContainer = ContainerConfiguration.ConfigureContainer()
             Using scope As ILifetimeScope = container.BeginLifetimeScope()
-                'AddMockUsers()
-                'AddMockSupplierItems()
-                'AddMockAdminItems()
-                AddMockCustomerItems()
+                'AddSupplier(supplierModel)
+                Dim projector = scope.Resolve(Of Classes.Projector)()
+                projector.LoginProject()
             End Using
         End Sub
     End Module

@@ -18,6 +18,8 @@ Namespace KioskV0.Classes
             MyBase.New(view, mediator)
             GetCart()
             SetEvents()
+
+
         End Sub
 
         Protected Friend Overrides Sub SetEvents()
