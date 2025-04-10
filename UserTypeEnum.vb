@@ -50,6 +50,7 @@
         SupplierEntry
         SupplierLandingPage
         SupplierTestPage
+        SupplierItems
     End Enum
 
     Public Enum ItemStatus

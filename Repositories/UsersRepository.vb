@@ -3,7 +3,7 @@
 Public Class UsersRepository
     Inherits BaseRepository(Of User)
     Implements IUsersRepository
-    Public Sub New(context As AppDbContext)
+    Public Sub New(context As KioskDbContext)
         MyBase.New(context)
     End Sub
 

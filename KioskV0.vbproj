@@ -185,6 +185,7 @@
     <Compile Include="Data\Configuration\OrderItemConfiguration.vb" />
     <Compile Include="Data\Configuration\MenuConfiguration.vb" />
     <Compile Include="Data\Configuration\SupplierConfiguration.vb" />
+    <Compile Include="Data\Configuration\SupplierItemConfiguration.vb" />
     <Compile Include="Data\Configuration\TransactionConfiguration.vb" />
     <Compile Include="Data\Configuration\UserConfiguration.vb" />
     <Compile Include="Forms\AdminAccountSettingsView.Designer.vb">
@@ -427,10 +428,14 @@
     <Compile Include="Forms\StaffTotaProductsUserControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Migrations\202504070649049_InitialCreate.Designer.vb">
-      <DependentUpon>202504070649049_InitialCreate.vb</DependentUpon>
+    <Compile Include="Migrations\202504100251096_InitialCreate.Designer.vb">
+      <DependentUpon>202504100251096_InitialCreate.vb</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202504070649049_InitialCreate.vb" />
+    <Compile Include="Migrations\202504100251096_InitialCreate.vb" />
+    <Compile Include="Migrations\202504100329088_Try2.Designer.vb">
+      <DependentUpon>202504100329088_Try2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504100329088_Try2.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\AdminItem.vb" />
     <Compile Include="Models\Customer.vb" />
@@ -444,7 +449,7 @@
     <Compile Include="Models\OrderItem.vb" />
     <Compile Include="Models\OrderModel.vb" />
     <Compile Include="Models\Supplier.vb" />
-    <Compile Include="Models\InventoryItem.vb" />
+    <Compile Include="Models\SupplierItem.vb" />
     <Compile Include="Models\SupplierProduct.vb" />
     <Compile Include="Models\Transaction.vb" />
     <Compile Include="Models\UserModel_1.vb" />
@@ -594,8 +599,11 @@
     <EmbeddedResource Include="Forms\StaffTotaProductsUserControl.resx">
       <DependentUpon>StaffTotaProductsUserControl.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504070649049_InitialCreate.resx">
-      <DependentUpon>202504070649049_InitialCreate.vb</DependentUpon>
+    <EmbeddedResource Include="Migrations\202504100251096_InitialCreate.resx">
+      <DependentUpon>202504100251096_InitialCreate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504100329088_Try2.resx">
+      <DependentUpon>202504100329088_Try2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

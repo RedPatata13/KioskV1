@@ -1,4 +1,7 @@
 ﻿Imports System.Data.Entity
+Imports System.Reflection.Emit
+
+
 Public Class AppDbContext
     Inherits DbContext
 
@@ -27,11 +30,33 @@ Public Class AppDbContext
     End Sub
 End Class
 
+
 Public Class KioskDbContext
     Inherits DbContext
-    Public Sub New()
-        MyBase.New(JsonConfigReader.GetConnectionString())
-    End Sub
 
-    'Public Property Inventories As DbSet(Of
+    Public Property CustomerItems As DbSet(Of CustomerItem)
+    Public Property AdminItems As DbSet(Of AdminItem)
+    Public Property SupplierItems As DbSet(Of SupplierItem)
+    Public Property Users As DbSet(Of User)
+
+    Protected Overrides Sub OnModelCreating(modelBuilder As DbModelBuilder)
+        modelBuilder.Configurations.Add(New MenuConfiguration())
+        modelBuilder.Configurations.Add(New SupplierConfiguration())
+        modelBuilder.Configurations.Add(New SupplierItemConfiguration())
+        ' Setup relationships
+        modelBuilder.Entity(Of AdminItem)() _
+            .HasRequired(Function(a) a.SupplierItem) _
+            .WithMany() _
+            .HasForeignKey(Function(a) a.SupplierItemId) _
+            .WillCascadeOnDelete(False) ' Prevent cascading delete for SupplierItem
+
+        modelBuilder.Entity(Of CustomerItem)() _
+            .HasOptional(Function(c) c.AdminItem) _
+            .WithMany() _
+            .HasForeignKey(Function(c) c.AdminItemId) _
+            .WillCascadeOnDelete(False) ' Prevent cascading delete for AdminItem
+        MyBase.OnModelCreating(modelBuilder)
+    End Sub
 End Class
+
+

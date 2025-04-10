@@ -1,7 +1,7 @@
 ﻿Public Class UnitOfWork
     Implements IUnitOfWork, IDisposable
 
-    Public ReadOnly _context As AppDbContext
+    Public ReadOnly _context As KioskDbContext
     Public ReadOnly Property Menus As MenuRepository Implements IUnitOfWork.Menus
     Public ReadOnly Property Customers As IBaseRepository(Of Customer) Implements IUnitOfWork.Customers
     Public ReadOnly Property Orders As IBaseRepository(Of Order) Implements IUnitOfWork.Orders
@@ -11,7 +11,7 @@
     Public ReadOnly Property Inventories As IBaseRepository(Of Inventory) Implements IUnitOfWork.Inventories
     Public ReadOnly Property Users As UsersRepository Implements IUnitOfWork.Users
 
-    Public Sub New(context As AppDbContext)
+    Public Sub New(context As KioskDbContext)
         _context = context
         Users = New UsersRepository(_context)
         Menus = New MenuRepository(_context)

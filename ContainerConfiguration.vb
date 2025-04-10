@@ -10,7 +10,7 @@ Public Class ContainerConfiguration
         If _container Is Nothing Then
             Dim builder As New ContainerBuilder()
             builder.RegisterType(Of Projector)().AsSelf().InstancePerDependency()
-            builder.RegisterType(Of AppDbContext)().AsSelf().SingleInstance()
+            builder.RegisterType(Of KioskDbContext)().AsSelf().SingleInstance()
             builder.RegisterType(Of UsersRepository)().As(Of IUsersRepository)().InstancePerDependency()
             builder.RegisterType(Of UnitOfWork)().As(Of IUnitOfWork)().InstancePerDependency()
             _container = builder.Build()

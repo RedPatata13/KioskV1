@@ -3,10 +3,10 @@
 Public Class BaseRepository(Of T As Class)
     Implements IBaseRepository(Of T)
 
-    Private ReadOnly _context As AppDbContext
+    Private ReadOnly _context As KioskDbContext
     Public ReadOnly _dbSet As DbSet(Of T)
 
-    Public Sub New(context As AppDbContext)
+    Public Sub New(context As KioskDbContext)
         _context = context
         _dbSet = _context.Set(Of T)()
     End Sub

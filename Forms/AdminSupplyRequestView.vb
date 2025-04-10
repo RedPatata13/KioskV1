@@ -75,7 +75,7 @@
             ' If there are suppliers, add them to the ComboBox
             If _suppliers IsNot Nothing AndAlso _suppliers.Count > 0 Then
                 For Each supplier As Supplier In _suppliers
-                    SupplierField.Items.Add(supplier.Name) ' Assuming 'Name' is a property of the Supplier model
+                    SupplierField.Items.Add(supplier.Username) ' Assuming 'Name' is a property of the Supplier model
                 Next
             End If
         End Sub

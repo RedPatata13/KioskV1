@@ -1,7 +1,7 @@
 ﻿Imports System.ComponentModel.DataAnnotations
 
 Public Class User
-    Public Property UserId As Integer
+    Public Property UserId As String
     Public Property FirstName As String
     Public Property LastName As String
     Public Property Username As String

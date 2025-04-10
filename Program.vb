@@ -8,16 +8,6 @@ Namespace KioskV0
         Sub Main()
             Application.EnableVisualStyles()
             Application.SetCompatibleTextRenderingDefault(False)
-            Dim supplierModel As Supplier = New Supplier() With {
-                .Name = "Skibidi Rizzler",
-                .Address = "Gmod Toilet",
-                .ContactNumber = "+099090",
-                .CreatedAt = DateTime.Now,
-                .Email = "skibidi_rizzler@gmail.com",
-                .MenuId = "9090990",
-                .SupplierId = 909090
-            }
-
             Dim container As IContainer = ContainerConfiguration.ConfigureContainer()
             Using scope As ILifetimeScope = container.BeginLifetimeScope()
                 'AddSupplier(supplierModel)
@@ -26,7 +16,7 @@ Namespace KioskV0
             End Using
         End Sub
         Sub AddSupplier(model As Supplier)
-            Using context As New AppDbContext()
+            Using context As New KioskDbContext()
                 Using UnitOfWork As New UnitOfWork(context)
                     UnitOfWork.Suppliers.Add(model)
                     UnitOfWork.SaveChanges()
@@ -37,7 +27,7 @@ Namespace KioskV0
 contactNumber As String, email As String, role As String,
 address As String, createdAt As DateTime)
 
-            Using context As New AppDbContext()
+            Using context As New KioskDbContext()
                 Using unitOfWork As New UnitOfWork(context)
 
                     Dim newUser As New User With {
