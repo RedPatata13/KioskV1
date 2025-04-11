@@ -28,7 +28,8 @@
             Return New Dictionary(Of SupplierKeys, IProjectable) From
         {
             {SupplierKeys.SupplierTransactionHistory, New Classes.SupplierTransactionHistoryViewModel(New Forms.SupplierTransactionHistoryView(), mediator)},
-            {SupplierKeys.SupplierPendingRequest, New Classes.SupplierPendingRequestViewModel(New Forms.SupplierPendingRequestView(), mediator)}
+            {SupplierKeys.SupplierPendingRequest, New Classes.SupplierPendingRequestViewModel(New Forms.SupplierPendingRequestView(), mediator)},
+            {SupplierKeys.SupplierAcceptRequest, New Classes.SupplierAcceptRequestViewModel(New Forms.SupplierAcceptRequestView(), mediator)}
         }
 
         End Function

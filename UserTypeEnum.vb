@@ -45,5 +45,6 @@
         SupplierTestPage
         SupplierTransactionHistory
         SupplierPendingRequest
+        SupplierAcceptRequest
     End Enum
 End Namespace
