@@ -23,19 +23,19 @@
         'Do not modify it using the code editor.
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
-            Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Me.PendingRequestLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.Guna2DataGridView1 = New Guna.UI2.WinForms.Guna2DataGridView()
-            Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
-            Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
+            Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
             Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
@@ -55,51 +55,52 @@
             'PendingRequestLabel
             '
             Me.PendingRequestLabel.BackColor = System.Drawing.Color.Transparent
-            Me.PendingRequestLabel.Font = New System.Drawing.Font("Montserrat", 24.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.PendingRequestLabel.Location = New System.Drawing.Point(15, 11)
+            Me.PendingRequestLabel.Font = New System.Drawing.Font("Montserrat", 28.2!, System.Drawing.FontStyle.Bold)
+            Me.PendingRequestLabel.Location = New System.Drawing.Point(21, 28)
             Me.PendingRequestLabel.Margin = New System.Windows.Forms.Padding(2)
             Me.PendingRequestLabel.Name = "PendingRequestLabel"
-            Me.PendingRequestLabel.Size = New System.Drawing.Size(341, 54)
+            Me.PendingRequestLabel.Size = New System.Drawing.Size(389, 61)
             Me.PendingRequestLabel.TabIndex = 9
             Me.PendingRequestLabel.Text = "Transaction History"
             '
             'Guna2DataGridView1
             '
-            DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-            Me.Guna2DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-            DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Poppins", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
-            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.Guna2DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+            DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
+            Me.Guna2DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle9
+            DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+            DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
+            DataGridViewCellStyle10.Font = New System.Drawing.Font("Poppins", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black
+            DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.Guna2DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
             Me.Guna2DataGridView1.ColumnHeadersHeight = 40
             Me.Guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+            Me.Guna2DataGridView1.ColumnHeadersVisible = False
             Me.Guna2DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
-            DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-            DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-            DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-            DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-            DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.Guna2DataGridView1.DefaultCellStyle = DataGridViewCellStyle3
+            DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle11.BackColor = System.Drawing.Color.White
+            DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+            DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+            DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+            DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.Guna2DataGridView1.DefaultCellStyle = DataGridViewCellStyle11
             Me.Guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.Guna2DataGridView1.Location = New System.Drawing.Point(15, 70)
+            Me.Guna2DataGridView1.Location = New System.Drawing.Point(82, 119)
             Me.Guna2DataGridView1.Name = "Guna2DataGridView1"
-            DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-            DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.Guna2DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+            DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
+            DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.Guna2DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
             Me.Guna2DataGridView1.RowHeadersVisible = False
             Me.Guna2DataGridView1.ShowCellToolTips = False
-            Me.Guna2DataGridView1.Size = New System.Drawing.Size(825, 458)
+            Me.Guna2DataGridView1.Size = New System.Drawing.Size(1159, 682)
             Me.Guna2DataGridView1.TabIndex = 10
             Me.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
             Me.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -122,30 +123,6 @@
             Me.Guna2DataGridView1.ThemeStyle.RowsStyle.Height = 22
             Me.Guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.Guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-            '
-            'Guna2Panel5
-            '
-            Me.Guna2Panel5.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-            Me.Guna2Panel5.BorderRadius = 20
-            Me.Guna2Panel5.BorderThickness = 1
-            Me.Guna2Panel5.Controls.Add(Me.Guna2HtmlLabel2)
-            Me.Guna2Panel5.FillColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.Guna2Panel5.Location = New System.Drawing.Point(15, 70)
-            Me.Guna2Panel5.Margin = New System.Windows.Forms.Padding(2)
-            Me.Guna2Panel5.Name = "Guna2Panel5"
-            Me.Guna2Panel5.Size = New System.Drawing.Size(148, 40)
-            Me.Guna2Panel5.TabIndex = 16
-            '
-            'Guna2HtmlLabel2
-            '
-            Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(36, 5)
-            Me.Guna2HtmlLabel2.Margin = New System.Windows.Forms.Padding(2)
-            Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-            Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(69, 30)
-            Me.Guna2HtmlLabel2.TabIndex = 11
-            Me.Guna2HtmlLabel2.Text = "Batch ID"
             '
             'Column1
             '
@@ -177,6 +154,30 @@
             Me.Column5.Name = "Column5"
             Me.Column5.ReadOnly = True
             '
+            'Guna2Panel5
+            '
+            Me.Guna2Panel5.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+            Me.Guna2Panel5.BorderRadius = 20
+            Me.Guna2Panel5.BorderThickness = 1
+            Me.Guna2Panel5.Controls.Add(Me.Guna2HtmlLabel2)
+            Me.Guna2Panel5.FillColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(44, Byte), Integer))
+            Me.Guna2Panel5.Location = New System.Drawing.Point(82, 119)
+            Me.Guna2Panel5.Margin = New System.Windows.Forms.Padding(2)
+            Me.Guna2Panel5.Name = "Guna2Panel5"
+            Me.Guna2Panel5.Size = New System.Drawing.Size(148, 40)
+            Me.Guna2Panel5.TabIndex = 16
+            '
+            'Guna2HtmlLabel2
+            '
+            Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
+            Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(36, 5)
+            Me.Guna2HtmlLabel2.Margin = New System.Windows.Forms.Padding(2)
+            Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
+            Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(69, 30)
+            Me.Guna2HtmlLabel2.TabIndex = 11
+            Me.Guna2HtmlLabel2.Text = "Batch ID"
+            '
             'Guna2Panel1
             '
             Me.Guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -184,17 +185,17 @@
             Me.Guna2Panel1.BorderThickness = 1
             Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel1)
             Me.Guna2Panel1.FillColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.Guna2Panel1.Location = New System.Drawing.Point(167, 69)
+            Me.Guna2Panel1.Location = New System.Drawing.Point(234, 118)
             Me.Guna2Panel1.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2Panel1.Name = "Guna2Panel1"
-            Me.Guna2Panel1.Size = New System.Drawing.Size(172, 40)
+            Me.Guna2Panel1.Size = New System.Drawing.Size(505, 40)
             Me.Guna2Panel1.TabIndex = 17
             '
             'Guna2HtmlLabel1
             '
             Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(33, 5)
+            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(202, 5)
             Me.Guna2HtmlLabel1.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
             Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(107, 30)
@@ -208,7 +209,7 @@
             Me.Guna2Panel2.BorderThickness = 1
             Me.Guna2Panel2.Controls.Add(Me.Guna2HtmlLabel3)
             Me.Guna2Panel2.FillColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.Guna2Panel2.Location = New System.Drawing.Point(343, 70)
+            Me.Guna2Panel2.Location = New System.Drawing.Point(743, 119)
             Me.Guna2Panel2.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2Panel2.Name = "Guna2Panel2"
             Me.Guna2Panel2.Size = New System.Drawing.Size(148, 40)
@@ -232,7 +233,7 @@
             Me.Guna2Panel3.BorderThickness = 1
             Me.Guna2Panel3.Controls.Add(Me.Guna2HtmlLabel4)
             Me.Guna2Panel3.FillColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.Guna2Panel3.Location = New System.Drawing.Point(495, 70)
+            Me.Guna2Panel3.Location = New System.Drawing.Point(895, 118)
             Me.Guna2Panel3.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2Panel3.Name = "Guna2Panel3"
             Me.Guna2Panel3.Size = New System.Drawing.Size(171, 40)
@@ -256,7 +257,7 @@
             Me.Guna2Panel4.BorderThickness = 1
             Me.Guna2Panel4.Controls.Add(Me.Guna2HtmlLabel5)
             Me.Guna2Panel4.FillColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.Guna2Panel4.Location = New System.Drawing.Point(669, 70)
+            Me.Guna2Panel4.Location = New System.Drawing.Point(1070, 119)
             Me.Guna2Panel4.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2Panel4.Name = "Guna2Panel4"
             Me.Guna2Panel4.Size = New System.Drawing.Size(171, 40)
@@ -279,7 +280,7 @@
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
             Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-            Me.ClientSize = New System.Drawing.Size(851, 570)
+            Me.ClientSize = New System.Drawing.Size(1321, 878)
             Me.Controls.Add(Me.Guna2Panel4)
             Me.Controls.Add(Me.Guna2Panel3)
             Me.Controls.Add(Me.Guna2Panel2)
