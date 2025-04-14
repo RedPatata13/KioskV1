@@ -37,8 +37,7 @@ Namespace KioskV0.Forms
 
         Private Sub SetLabels()
             ProductName.Text = _model.Name
-            CategoryLabel.Text = _model.CategoryId
-
+            CategoryLabel.Text = _model.Category?.CategoryName
             PriceLabel.Text = $"P{_model.SellingCost}"
         End Sub
 
@@ -54,6 +53,10 @@ Namespace KioskV0.Forms
             For Each child As Control In ctrl.Controls
                 ApplyClickEvent(child)
             Next
+        End Sub
+
+        Private Sub AdminMenuUserControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         End Sub
     End Class
 

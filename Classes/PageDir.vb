@@ -40,8 +40,11 @@
                {CustomerKeys.CustomerPayment, New Classes.CustomerPaymentViewModel(New Forms.CustomerPaymentView(), mediator)}
             }
         End Function
-        Public Function GetSupplierPages() As Dictionary(Of SupplierKeys, IProjectable)
-            Return New Dictionary(Of SupplierKeys, IProjectable)
+        Public Function GetSupplierPages(mediator As Mediator(Of SupplierKeys)) As Dictionary(Of SupplierKeys, IProjectable)
+            Return New Dictionary(Of SupplierKeys, IProjectable) From
+            {
+                {SupplierKeys.SupplierLandingPage, New SupplierLandingPageViewModel(New SupplierLandingPageView(), mediator)}
+            }
         End Function
     End Module
 

@@ -48,7 +48,7 @@
             Me.POSButton.Image = CType(resources.GetObject("POSButton.Image"), System.Drawing.Image)
             Me.POSButton.ImageSize = New System.Drawing.Size(70, 70)
             Me.POSButton.Location = New System.Drawing.Point(18, 92)
-            Me.POSButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.POSButton.Margin = New System.Windows.Forms.Padding(2)
             Me.POSButton.Name = "POSButton"
             Me.POSButton.Size = New System.Drawing.Size(82, 81)
             Me.POSButton.TabIndex = 2
@@ -72,7 +72,7 @@
             Me.CreditSalesButton.Image = CType(resources.GetObject("CreditSalesButton.Image"), System.Drawing.Image)
             Me.CreditSalesButton.ImageSize = New System.Drawing.Size(70, 70)
             Me.CreditSalesButton.Location = New System.Drawing.Point(18, 178)
-            Me.CreditSalesButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.CreditSalesButton.Margin = New System.Windows.Forms.Padding(2)
             Me.CreditSalesButton.Name = "CreditSalesButton"
             Me.CreditSalesButton.Size = New System.Drawing.Size(82, 81)
             Me.CreditSalesButton.TabIndex = 3
@@ -96,7 +96,7 @@
             Me.LogOutButton.Image = CType(resources.GetObject("LogOutButton.Image"), System.Drawing.Image)
             Me.LogOutButton.ImageSize = New System.Drawing.Size(50, 50)
             Me.LogOutButton.Location = New System.Drawing.Point(18, 786)
-            Me.LogOutButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.LogOutButton.Margin = New System.Windows.Forms.Padding(2)
             Me.LogOutButton.Name = "LogOutButton"
             Me.LogOutButton.Size = New System.Drawing.Size(82, 81)
             Me.LogOutButton.TabIndex = 11

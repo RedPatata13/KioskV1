@@ -144,7 +144,7 @@
             Me.LogOutButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.LogOutButton.HoverState.BorderColor = System.Drawing.Color.White
             Me.LogOutButton.HoverState.FillColor = System.Drawing.Color.White
-            Me.LogOutButton.HoverState.Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
+            Me.LogOutButton.HoverState.Image = CType(resources.GetObject("resource.Image4"), System.Drawing.Image)
             Me.LogOutButton.Image = CType(resources.GetObject("LogOutButton.Image"), System.Drawing.Image)
             Me.LogOutButton.ImageSize = New System.Drawing.Size(50, 50)
             Me.LogOutButton.Location = New System.Drawing.Point(16, 768)

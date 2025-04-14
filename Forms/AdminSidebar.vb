@@ -6,6 +6,7 @@
         Public Property OrderHistoryButtonClick As Action
         Public Property StaffTransactionButtonClick As Action
         Public Property MenuButtonClick As Action
+        Public Property LogoutButtonClick As Action
 
 
         Public Sub AccountButton_Click(sender As Object, e As EventArgs) Handles AccountsButton.Click
@@ -30,6 +31,10 @@
 
         Private Sub OrderHistoryButton_Click(sender As Object, e As EventArgs) Handles OrderHistoryButton.Click
             OrderHistoryButtonClick?.Invoke()
+        End Sub
+
+        Private Sub LogOutButton_Click(sender As Object, e As EventArgs) Handles LogOutButton.Click
+            LogoutButtonClick?.Invoke()
         End Sub
     End Class
 

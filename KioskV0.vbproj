@@ -133,6 +133,7 @@
   <ItemGroup>
     <Compile Include="Classes\CloneHelper.vb" />
     <Compile Include="Classes\InitialDBSetup.vb" />
+    <Compile Include="Classes\SupplierLandingPageViewModel.vb" />
     <Compile Include="ContainerConfiguration.vb" />
     <Compile Include="Classes\ActionManager.vb" />
     <Compile Include="Classes\AdminAccountSettingsViewModel.vb" />
@@ -432,6 +433,12 @@
     <Compile Include="Forms\StaffTotaProductsUserControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Forms\SupplierLandingPageView.Designer.vb">
+      <DependentUpon>SupplierLandingPageView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupplierLandingPageView.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Migrations\202504101827107_InitialCreate.Designer.vb">
       <DependentUpon>202504101827107_InitialCreate.vb</DependentUpon>
     </Compile>
@@ -623,6 +630,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StaffTotaProductsUserControl.resx">
       <DependentUpon>StaffTotaProductsUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SupplierLandingPageView.resx">
+      <DependentUpon>SupplierLandingPageView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504101827107_InitialCreate.resx">
       <DependentUpon>202504101827107_InitialCreate.vb</DependentUpon>

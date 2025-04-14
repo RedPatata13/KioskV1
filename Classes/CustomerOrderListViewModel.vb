@@ -140,7 +140,7 @@ Namespace KioskV0.Classes
         'End Sub
 
         Private Sub OnOrderMoreClicked()
-            MessageBox.Show($"{Cart.Count}")
+            'MessageBox.Show($"{Cart.Count}")
             Dim vm = DirectCast(_mediator.GetVM(CustomerKeys.CustomerMenu), CustomerMenuViewModel)
             vm.UpdatedCart = Cart
             _mediator.SwapPage(CustomerKeys.CustomerMenu)

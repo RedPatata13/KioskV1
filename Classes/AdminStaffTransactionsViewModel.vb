@@ -12,7 +12,7 @@ Namespace KioskV0.Classes
             SetEvents()
             _ordercache = _mediator.GetOrderList()
         End Sub
-        Private Property _ordercache As List(Of OrderPrimal)
+        Private Property _ordercache As List(Of OrderDetail)
         Private Property _staffCache As List(Of User)
         Public Property Staffs As List(Of User)
             Get

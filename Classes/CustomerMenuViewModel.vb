@@ -36,6 +36,7 @@ Namespace KioskV0.Classes
             RecordChildAspectRatio(_view.ViewOrderButton)
             RecordChildAspectRatio(_view.StartOverButton)
 
+            OnStartOverClicked()
             SetEvents()
         End Sub
         Protected Friend Overrides Sub SetEvents()

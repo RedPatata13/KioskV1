@@ -34,9 +34,9 @@ Namespace KioskV0.Classes
             Loaded = True
         End Sub
         Public Sub DeleteStaged()
-            _view.ItemPanel.Controls.Remove(_ucCache(_staged.Id))
-            _ucCache.Remove(_staged.Id)
-            _modelCache.Remove(_staged.Id)
+            '_view.ItemPanel.Controls.Remove(_ucCache(_staged.MenuId))
+            '_ucCache.Remove(_staged.MenuId)
+            '_modelCache.Remove(_staged.MenuId)
             _staged = Nothing
         End Sub
 
@@ -44,21 +44,22 @@ Namespace KioskV0.Classes
             Dim val = _ucCache(_staged.Id)
             Dim uc1 As AdminMenuUserControl = DirectCast(val, AdminMenuUserControl)
             uc1.Model = model
+            '_staged.MenuName = model.MenuName
             _staged.Name = model.Name
-            _staged.SupplierItem.Supplier.Username = _staged.SupplierItem.Supplier.Username
+            _staged.SupplierItem = model.SupplierItem
             _staged.Description = model.Description
-            '_staged.Cost = model.Cost
+            _staged.SellingCost = model.SellingCost
             _staged.Category = model.Category
             _modelCache(_staged.Id) = model
             _ucCache(_staged.Id) = uc1
             uc1.SelfClick = Sub() PrepareEditMenu(uc1.Model)
         End Sub
 
-        Public Sub AddNewMenu(Model As AdminItem)
-            Dim amuc = New AdminMenuUserControl(Model)
-            amuc.SelfClick = Sub() PrepareEditMenu(Model)
-            _ucCache.Add(Model.Id, amuc)
-            _modelCache.Add(Model.Id, Model)
+        Public Sub AddNewMenu(model As AdminItem)
+            Dim amuc = New AdminMenuUserControl(model)
+            amuc.SelfClick = Sub() PrepareEditMenu(model)
+            _ucCache.Add(model.Id, amuc)
+            _modelCache.Add(model.Id, model)
             _view.ItemPanel.Controls.Add(amuc)
         End Sub
         Private Sub AddMenuButtonClick()
@@ -71,8 +72,8 @@ Namespace KioskV0.Classes
         Private Sub InitializeCache()
             _ucCache = New Dictionary(Of String, UserControl)
             _modelCache = New Dictionary(Of String, AdminItem)
-            Dim items = _mediator.GetMenuList()
-            For Each item In items
+            Dim items = _mediator.GetItemList()
+            For Each item As AdminItem In items
                 Dim uc = New AdminMenuUserControl(item)
                 uc.SelfClick = Sub() PrepareEditMenu(item)
                 _ucCache.Add(item.Id, uc)
@@ -81,15 +82,9 @@ Namespace KioskV0.Classes
         End Sub
 
         Private Sub ReloadAllItems()
-            'MessageBox.Show($"{_ucCache.Count}")
-            '_view.ItemPanel.Controls.Clear()
             For Each item In _ucCache
                 _view.ItemPanel.Controls.Add(_ucCache(item.Key))
             Next
-        End Sub
-
-        Private Sub MenuUserControlClick()
-
         End Sub
         Private Sub PrepareEditMenu(model As AdminItem)
             _staged = model
@@ -99,7 +94,7 @@ Namespace KioskV0.Classes
         End Sub
 
         Private Sub LoadMenuItems()
-            _view.ItemPanel.Controls.Clear()
+            '_view.ItemPanel.Controls.Clear()
             ReloadAllItems()
         End Sub
 
@@ -107,7 +102,7 @@ Namespace KioskV0.Classes
             'MessageBox.Show($"{_ucCache.Count}")
             _view.ItemPanel.Controls.Clear()
             For Each item In _ucCache
-                If _modelCache(item.Key).Name.ToLower().StartsWith(str.ToLower()) Then
+                If _modelCache(item.Key).Name.ToLower().Contains(str.ToLower()) Then
                     _view.ItemPanel.Controls.Add(item.Value)
                 End If
             Next
