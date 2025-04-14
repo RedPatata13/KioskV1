@@ -158,10 +158,11 @@ Namespace KioskV0.Classes
 
             Try
                 Dim model = New User()
-                model.Role = UserTypeFactory(_view.Role)
+                model.Role = _view.Role
                 model.Username = _view.UserName
 
                 If _view.Password <> _view.ConfirmPassword Then Throw New Exception("Ensure that text in 'Password' and 'Confirm Password' is the same")
+                model.UserId = "UID_" & Guid.NewGuid().ToString().Substring(0, 10)
                 model.PasswordHash = _view.Password
                 model.FirstName = _view.FirstName
                 model.LastName = _view.LastName
