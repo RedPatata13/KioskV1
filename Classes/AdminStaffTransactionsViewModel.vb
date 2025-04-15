@@ -12,7 +12,7 @@ Namespace KioskV0.Classes
             SetEvents()
             _ordercache = _mediator.GetOrderList()
         End Sub
-        Private Property _ordercache As List(Of Order)
+        Private Property _ordercache As List(Of OrderDetail)
         Private Property _staffCache As List(Of User)
         Public Property Staffs As List(Of User)
             Get
@@ -62,12 +62,12 @@ Namespace KioskV0.Classes
                 Return
             End If
 
-            Dim list As New List(Of Order)
-            For Each order In all
-                If order.User.UserName.Contains(selectedValue) Then
-                    list.Add(order)
-                End If
-            Next
+            Dim list As New List(Of OrderPrimal)
+            'For Each order In all
+            '    If order.User.UserName.Contains(selectedValue) Then
+            '        list.Add(order)
+            '    End If
+            'Next
             _view.DGV_Source = New BindingSource With {.DataSource = list}
 
         End Sub
@@ -78,11 +78,11 @@ Namespace KioskV0.Classes
             If String.IsNullOrWhiteSpace(input) Then
                 _view.DGV_Source = New BindingSource With {.DataSource = all}
             Else
-                Dim list As New List(Of Order)
+                Dim list As New List(Of OrderPrimal)
                 For Each order In all
-                    If order.User.Username.StartsWith(input) Then
-                        list.Add(order)
-                    End If
+                    'If order.User.Username.StartsWith(input) Then
+                    '    list.Add(order)
+                    'End If
                 Next
                 _view.DGV_Source = New BindingSource With {.DataSource = list}
             End If

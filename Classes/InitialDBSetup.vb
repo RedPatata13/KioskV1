@@ -1,4 +1,6 @@
-﻿Module InitialDBSetup
+﻿Imports System.Windows.Controls.Primitives
+
+Module InitialDBSetup
     Public Sub AddMockCategories()
         Using context As New KioskDbContext()
             Using UnitOfWork As New UnitOfWork(context)
@@ -21,60 +23,53 @@
             End Using
         End Using
     End Sub
-    Public Sub AddMockCustomerItems()
-        Using context As New KioskDbContext()
-            Using UnitOfWork As New UnitOfWork(context)
-                Dim adminItemList = UnitOfWork.AdminItems.GetAll()
-
-                Dim customerItemList As New List(Of CustomerItem)
-                Dim cnt As Integer = 1
-                For Each ail In adminItemList
-                    context.AdminItems.Attach(ail)
-
-                    customerItemList.Add(New CustomerItem With {
-                                         .Id = Guid.NewGuid().ToString().Substring(0, 10),
-                                         .Name = "Customer Item" & cnt,
-                                         .Description = "Customer Item Description" & cnt,
-                                         .AdminItemId = ail.Id
-                                         })
-
-                    cnt += 1
-                Next
-
-                UnitOfWork.CustomerItems.AddRange(customerItemList)
-                UnitOfWork.SaveChanges()
-            End Using
-        End Using
-    End Sub
     Public Sub AddMockAdminItems()
         Using context As New KioskDbContext()
             Using UnitOfWork As New UnitOfWork(context)
-                ' Get all the SupplierItems and Categories
-                Dim inventoryItemList = UnitOfWork.SupplierItems.GetAll()
-                Dim categoryItemList = UnitOfWork.Categories.GetAll().ToList() ' Ensure it's a list for easier access by index
+                ' Get required references
+                Dim categories = UnitOfWork.Categories.GetAll().ToList()
+                Dim supplierItems = UnitOfWork.SupplierItems.GetAll().ToList()
+                Dim batches = UnitOfWork.InventoryBatches.GetAll().ToList()
 
-                Dim adminItemList As New List(Of AdminItem)
-                Dim cnt As Integer = 1
-                Dim rand As New Random()
+                Dim adminItems As New List(Of AdminItem)
+                Dim rnd As New Random()
 
-                For Each iil In inventoryItemList
-                    context.SupplierItems.Attach(iil)
+                ' Create 2-3 admin items per supplier item
+                For Each si In supplierItems
+                    Dim itemCount = rnd.Next(2, 4)
+                    Dim itemBatches = batches.Where(Function(b) b.SupplierItemId = si.Id).ToList()
+                    context.SupplierItems.Attach(si)
+                    For i = 1 To itemCount
+                        ' Select random category
+                        Dim category = categories(rnd.Next(0, categories.Count))
+                        context.Categories.Attach(category)
+                        ' Create admin item
+                        Dim adminItem = New AdminItem With {
+                        .Id = "ADMIN_" & Guid.NewGuid().ToString().Substring(0, 8),
+                        .Name = $"{si.Name} Product {i}",
+                        .Description = $"Customer-facing version of {si.Name} ({i})",
+                        .CategoryId = category.CategoryId,
+                        .Category = category,
+                        .SupplierItemId = si.Id,
+                        .SupplierItem = si,
+                        .IsDisplayedAsCustomerItem = (i = 1), ' First item per supplier shown to customers
+                        .SellingCost = Math.Round(si.Batches.Average(Function(b) b.UnitCost) * 1.5, 2) ' 50% markup
+                    }
 
-                    ' Select a random CategoryId from categoryItemList
-                    Dim randomCategory = categoryItemList(rand.Next(categoryItemList.Count)) ' Get a random Category
+                        ' Assign newest active batch
+                        Dim availableBatch = itemBatches.Where(Function(b) b.IsActive AndAlso Not b.IsDeprecated) _
+                        .OrderByDescending(Function(b) b.ReceivedDate) _
+                        .FirstOrDefault()
 
-                    adminItemList.Add(New AdminItem With {
-                    .Id = Guid.NewGuid().ToString().Substring(0, 10),
-                    .Name = "Admin Item" & cnt,
-                    .Description = "Description of Item " & cnt,
-                    .SupplierItemId = iil.Id,
-                    .CategoryId = randomCategory.CategoryId ' Assign a random CategoryId
-                })
+                        If availableBatch IsNot Nothing Then
+                            adminItem.BatchId = availableBatch.BatchId
+                        End If
 
-                    cnt += 1
+                        adminItems.Add(adminItem)
+                    Next
                 Next
 
-                UnitOfWork.AdminItems.AddRange(adminItemList)
+                UnitOfWork.AdminItems.AddRange(adminItems)
                 UnitOfWork.SaveChanges()
             End Using
         End Using
@@ -83,32 +78,74 @@
     Public Sub AddMockSupplierItems()
         Using context As New KioskDbContext()
             Using UnitOfWork As New UnitOfWork(context)
-                Dim supplierList = UnitOfWork.Suppliers.GetAll()
-
-                ' Assuming you are creating SupplierItems for these Suppliers:
+                Dim supplierList = UnitOfWork.Users.GetAll().Where(Function(s) s.Role = "Supplier")
                 Dim supplierItems As New List(Of SupplierItem)
 
-                For Each supplier In supplierList
-                    ' Attach existing Supplier to context if necessary
-                    context.Suppliers.Attach(supplier)  ' Ensure the Supplier is tracked by EF
+                ' Item name templates to create variety
+                Dim itemTemplates = {"Premium {0} Supplies", "Standard {0} Goods", "Budget {0} Materials"}
 
-                    ' Create SupplierItems and add them to the list
-                    supplierItems.Add(New SupplierItem With {
-                    .Id = Guid.NewGuid().ToString().Substring(0, 10),
-                    .Name = "Item for " & supplier.Username,
-                    .Description = "Description of Item",
-                    .SupplierId = supplier.UserId,
-                    .Supplier = supplier
-                })
+                For Each supplier In supplierList
+                    context.Suppliers.Attach(supplier)
+
+                    ' Create 3 items per supplier
+                    For i = 1 To 3
+                        supplierItems.Add(New SupplierItem With {
+                        .Id = "SI_" & Guid.NewGuid().ToString().Substring(0, 10),
+                        .Name = String.Format(itemTemplates(i - 1), supplier.FirstName),
+                        .Description = $"Sample {supplier.FirstName} product line #{i}",
+                        .SupplierId = supplier.UserId,
+                        .Supplier = supplier
+                    })
+                    Next
                 Next
 
-                ' Now, add the SupplierItems to the context
                 UnitOfWork.SupplierItems.AddRange(supplierItems)
                 UnitOfWork.SaveChanges()
             End Using
         End Using
     End Sub
+    Public Sub AddMockBatches()
+        Using context As New KioskDbContext()
+            Using UnitOfWork As New UnitOfWork(context)
+                ' Get all supplier items
+                Dim supplierItems = UnitOfWork.SupplierItems.GetAll().ToList()
+                Dim batches As New List(Of InventoryBatch)
+                Dim rnd As New Random()
 
+                For Each item In supplierItems
+                    ' Create 2-4 batches per item (random variation)
+                    context.SupplierItems.Attach(item)
+                    Dim batchCount = rnd.Next(2, 5)
+
+                    For i = 1 To batchCount
+
+                        Dim batchSize = If(i = 1, 100, If(i = 2, 75, 50)) ' Decreasing batch sizes
+                        Dim daysOld = (i - 1) * 30 ' Stagger receipt dates by 30 days
+                        Dim expiryDays = If(item.Name.Contains("Premium"), 365, 180) ' Premium items last longer
+
+                        batches.Add(New InventoryBatch With {
+                        .BatchId = "BATCH_" & Guid.NewGuid().ToString().Substring(0, 8),
+                        .SupplierId = item.SupplierId,
+                        .SupplierItemId = item.Id,
+                        .SupplierItem = item,
+                        .QuantityReceived = batchSize,
+                        .RemainingQuantity = batchSize, ' Start with full quantity
+                        .UnitCost = If(item.Name.Contains("Premium"), 9.99D,
+                                    If(item.Name.Contains("Standard"), 6.5D, 3.25D)),
+                        .ReceivedDate = DateTime.Now.AddDays(-daysOld),
+                        .ExpiryDate = DateTime.Now.AddDays(expiryDays - daysOld),
+                        .BatchNumber = $"B-{item.Name.Substring(0, 3)}-{DateTime.Now.Year}-{i}",
+                            .IsActive = True,
+                            .IsDeprecated = False
+                        })
+                    Next
+                Next
+
+                UnitOfWork.InventoryBatches.AddRange(batches)
+                UnitOfWork.SaveChanges()
+            End Using
+        End Using
+    End Sub
 
     Public Sub AddMockUsers()
         Using context As New KioskDbContext()

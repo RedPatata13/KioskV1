@@ -9,7 +9,7 @@ Public Class SupplierConfiguration
         Me.HasKey(Function(s) s.UserId)
         Me.HasMany(Function(s) s.SupplierItems).WithRequired().
             HasForeignKey(Function(si) si.SupplierId).
-            WillCascadeOnDelete(True)
+            WillCascadeOnDelete(False)
         ' Define any other properties or configurations needed for Supplier
     End Sub
 End Class

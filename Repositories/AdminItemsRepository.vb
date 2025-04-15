@@ -11,8 +11,7 @@ Public Class AdminItemsRepository
         Return _dbSet.Include(Function(c) c.Category) _
                      .Include(Function(c) c.SupplierItem) _
                      .Include(Function(c) c.SupplierItem.Supplier) _
-                     .AsNoTracking() _
-                     .ToList()
+                     .AsNoTracking().ToList()
     End Function
 
 

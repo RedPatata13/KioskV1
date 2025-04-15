@@ -40,8 +40,16 @@
             Dim lvm = New LoginViewModel(Me, _unitOfWork)
             _projector.ShowDialog()
         End Sub
+        Public Sub LogoutProject()
+            Clear()
+            Dim lvl = New LoginViewModel(Me, _unitOfWork)
+        End Sub
         Public Sub SpawnSideBar()
             _projector.AddSideBar()
+        End Sub
+
+        Public Sub RemoveSideBar()
+            _projector.RemoveSideBar()
         End Sub
 
         Public Sub LayoutAction(action As Action)

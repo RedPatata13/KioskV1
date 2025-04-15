@@ -13,19 +13,19 @@ Namespace KioskV0.Forms
                 ApplyClickEvent(Me)
             End Set
         End Property
-        Private Property _model As Menu
-        Public Property Model As Menu
+        Private Property _model As AdminItem
+        Public Property Model As AdminItem
             Get
                 Return _model
             End Get
-            Set(value As Menu)
+            Set(value As AdminItem)
                 _model = value
                 SetLabels()
             End Set
         End Property
 
 
-        Public Sub New(model As Menu)
+        Public Sub New(model As AdminItem)
 
             ' This call is required by the designer.
             InitializeComponent()
@@ -36,9 +36,9 @@ Namespace KioskV0.Forms
         End Sub
 
         Private Sub SetLabels()
-            ProductName.Text = _model.MenuName
-            CategoryLabel.Text = _model.Category
-            PriceLabel.Text = $"P{_model.Selling}"
+            ProductName.Text = _model.Name
+            CategoryLabel.Text = _model.Category?.CategoryName
+            PriceLabel.Text = $"P{_model.SellingCost}"
         End Sub
 
         Private Sub AdminMenuUserControl_Click(sender As Object, e As EventArgs) Handles Me.Click
@@ -53,6 +53,10 @@ Namespace KioskV0.Forms
             For Each child As Control In ctrl.Controls
                 ApplyClickEvent(child)
             Next
+        End Sub
+
+        Private Sub AdminMenuUserControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         End Sub
     End Class
 

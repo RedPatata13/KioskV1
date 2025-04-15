@@ -10,7 +10,8 @@ Namespace KioskV0
             'Using scope As ILifetimeScope = container.BeginLifetimeScope()
             '    'AddMockUsers()
             '    'AddMockSupplierItems()
-            '    'AddMockAdminItems()
+            '    'AddMockBatches()
+            '    AddMockAdminItems()
             '    'AddMockCustomerItems()
             '    'AddMockCategories()
             'End Using

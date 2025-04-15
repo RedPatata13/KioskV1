@@ -82,6 +82,10 @@ Namespace KioskV0.Classes
 
                     Case "supplier"
                         mediator = New Mediator(Of SupplierKeys)(_projector, Me, _unitOfWork)
+                        mediator.SetupMap(GetSupplierPages(mediator))
+                        'Dim supplier_sb = New SupplierSidebarViewModel(New Forms.SupplierSidebar(), mediator)
+                        mediator.SwapPage(SupplierKeys.SupplierLandingPage)
+                        mediator.SwapPage(SupplierKeys.SupplierLandingPage)
                     Case Else
                         MessageBox.Show("User type not null")
                 End Select
@@ -146,7 +150,7 @@ Namespace KioskV0.Classes
             Dim mediator
             mediator = New Mediator(Of CustomerKeys)(_projector, Me, _unitOfWork)
             mediator.SetupMap(GetCustomerPages(mediator))
-            mediator.SwapPage(CustomerKeys.CustomerOrderList)
+            mediator.SwapPage(CustomerKeys.CustomerMenu)
         End Sub
         Private Sub LogException(ex As Exception)
             MessageBox.Show(ex.Message)

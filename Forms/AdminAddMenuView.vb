@@ -23,7 +23,7 @@
                 If index <> -1 Then
                     CategoryComboBox.SelectedIndex = index
                 Else
-                    CategoryComboBox.Items.Add(value)
+                    Throw New ArgumentException($"'{value}' is not a valid category.")
                 End If
             End Set
         End Property
@@ -39,8 +39,9 @@
                 If index <> -1 Then
                     SupplierComboBox.SelectedIndex = index
                 Else
+                    SupplierComboBox.SelectedIndex = 0
                     'Throw New ArgumentException($"'{value}' is not a valid category.")
-                    SupplierComboBox.Items.Add(value)
+                    'SupplierComboBox.Items.Add("supplierNotFound")
                 End If
             End Set
         End Property

@@ -22,6 +22,7 @@
             _view.InventoryButtonClick = AddressOf InventoryButtonClick
             _view.StaffTransactionButtonClick = AddressOf StaffTransactions
             _view.OrderHistoryButtonClick = AddressOf OrderHistoryClick
+            _view.LogoutButtonClick = AddressOf LogOutButtonClick
         End Sub
         Private Sub AdminDashboardButtonClick()
             _mediator.SwapPage(AdminKeys.AdminDashboard)
@@ -44,6 +45,10 @@
 
         Private Sub MenuButtonClick()
             _mediator.SwapPage(AdminKeys.AdminMenu)
+        End Sub
+
+        Private Sub LogOutButtonClick()
+            _mediator.Logout()
         End Sub
     End Class
 End Namespace

@@ -8,5 +8,5 @@ Public Class Customer
     Public Property ContactNumber As String
     Public Property CreatedAt As DateTime
     Public Property OrderId As Integer
-    Public Overridable Property Order As Order
+    Public Overridable Property Order As OrderPrimal
 End Class

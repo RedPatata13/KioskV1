@@ -4,5 +4,6 @@
     Public Property Description As String
     Public Property SupplierId As String
     Public Property Supplier As Supplier
-    Public Property StockCount As Integer
+    'Public Property StockCount As Integer
+    Public Overridable Property Batches As ICollection(Of InventoryBatch)
 End Class

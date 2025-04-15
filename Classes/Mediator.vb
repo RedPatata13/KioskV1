@@ -36,6 +36,10 @@ Namespace KioskV0.Classes
         Public Sub InvokeAllAction()
             _actionManager.ProcessAll()
         End Sub
+        Public Sub Logout()
+            _Projector.RemoveSideBar()
+            _Projector.LogoutProject()
+        End Sub
 
         Public Sub SetupMap(map As Dictionary(Of TKey, IProjectable))
             If VMMap_Instantiated Then Throw New Exception($"{GetType(TKey).Name} Mediator Instantiated Twice")
@@ -43,8 +47,8 @@ Namespace KioskV0.Classes
             VMMap_Instantiated = True
         End Sub
 
-        Public Sub CreateMenu(model As Menu)
-            _unitOfWork.Menus.Add(model)
+        Public Sub CreateMenu(model As AdminItem)
+            _unitOfWork.AdminItems.Add(model)
         End Sub
         Public Sub SwapPage(pageKey As TKey)
             VerifyKey(pageKey)
@@ -78,13 +82,13 @@ Namespace KioskV0.Classes
         End Function
 
         Public Function GetItemList()
-            Return _unitOfWork.OrderItems.GetAll()
+            Return _unitOfWork.AdminItems.GetAll()
         End Function
 
         Public Function GetOrderList()
-            Dim list = _unitOfWork.Orders.GetAll()
+            Dim list = _unitOfWork.OrderDetails.GetAll()
             For Each item In list
-                item.User = _userCache(item.UserId)
+                'item.N = _userCache(item.UserId)
             Next
             Return list
         End Function

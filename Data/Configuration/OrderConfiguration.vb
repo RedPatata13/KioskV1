@@ -1,30 +1,36 @@
-﻿Imports System.ComponentModel.DataAnnotations.Schema
-Imports System.Data.Entity.ModelConfiguration
+﻿Imports System.Data.Entity.ModelConfiguration
 
 Public Class OrderConfiguration
-    Inherits EntityTypeConfiguration(Of Order)
+    Inherits EntityTypeConfiguration(Of OrderPrimal)
 
     Public Sub New()
-        ' Primary Key
+        ' Define the primary key
         Me.HasKey(Function(o) o.OrderId)
 
-        ' Required Fields
-        Me.Property(Function(o) o.OrderDate).IsRequired()
-        Me.Property(Function(o) o.TotalAmount).IsRequired()
-        Me.Property(Function(o) o.CreatedAt).
+        ' Define properties and constraints
+        Me.Property(Function(o) o.OrderId).
+            IsRequired()
+
+        Me.Property(Function(o) o.TotalPrice).
             IsRequired().
-            HasDatabaseGeneratedOption(DatabaseGeneratedOption.Computed)
+            HasPrecision(18, 2) ' Define decimal precision
 
-        ' Foreign Key: Order has one User (Staff)
-        Me.HasRequired(Function(o) o.User).
-            WithMany().
-            HasForeignKey(Function(o) o.UserId).
-            WillCascadeOnDelete(False)
+        'Me.Property(Function(o) o.UserId).
+        '    IsRequired()
 
-        ' Foreign Key: Order has many OrderItems
-        Me.HasMany(Function(o) o.OrderItems).
-            WithRequired(Function(oi) oi.Order).
-            HasForeignKey(Function(oi) oi.OrderId). ' ✅ Corrected Foreign Key
-            WillCascadeOnDelete(True)
+        Me.Property(Function(o) o.CreatedAt).
+            IsRequired()
+
+        '' Define the relationship between Order and User
+        'Me.HasRequired(Function(o) o.User) _
+        '    .WithMany() _
+        '    .HasForeignKey(Function(o) o.UserId) _
+        '    .WillCascadeOnDelete(False)
+
+        ' Define the relationship between Order and OrderItems
+        Me.HasMany(Function(o) o.OrderItems) _
+            .WithRequired() _
+            .HasForeignKey(Function(oi) oi.OrderId) _
+            .WillCascadeOnDelete(True)
     End Sub
 End Class

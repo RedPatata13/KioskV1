@@ -12,6 +12,7 @@ Namespace KioskV0.Classes
         Protected Friend Overrides Sub SetEvents()
             _view.POSButtonClick = AddressOf StaffPosButtonClick
             _view.CreditSalesButtonClick = AddressOf CreditSalesButtonClick
+            _view.LogoutButtonClick = AddressOf LogoutButton
         End Sub
 
         Private Sub StaffPosButtonClick()
@@ -21,6 +22,12 @@ Namespace KioskV0.Classes
         Private Sub CreditSalesButtonClick()
             _mediator.SwapPage(StaffKeys.StaffCreditSales)
         End Sub
+
+        Private Sub LogoutButton()
+            _mediator.Logout()
+        End Sub
     End Class
+
+
 
 End Namespace

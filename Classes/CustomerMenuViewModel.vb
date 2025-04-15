@@ -1,27 +1,49 @@
 ﻿Imports KioskV0.KioskV0.Forms
 Imports KioskV0.KioskV0.Model
+Imports LiveCharts.WinForms
 
 Namespace KioskV0.Classes
     Public Class CustomerMenuViewModel
         Inherits ViewModel(Of Forms.CustomerMenuView, CustomerKeys)
         Private Property Loaded As Boolean = False
-        Private Property AllMenuItems As List(Of CustomerItem)
+        Private Property AllMenuItems As List(Of AdminItem)
         Private Property CategoryList As New Dictionary(Of String, Category)
         Private _cart As New List(Of OrderModel)
+        Private Property UserCart As New Dictionary(Of String, OrderDetail)
+        'Private Property UserCart As New Dictionary(Of OrderItem,
+        Private Property TotalItems As Integer = 0
+        Private Property TotalCost As Decimal = 0
+        Public Property UpdatedCart As Dictionary(Of String, OrderDetail)
+            Get
+                Return UserCart
+            End Get
+            Set(value As Dictionary(Of String, OrderDetail))
+                'UserCart.Clear()
+                '_mediator.GetUnitOfWork.Attach
+                TotalItems = 0
+                TotalCost = 0
+                UserCart = value
+                For Each kv In value
+                    TotalItems += kv.Value.Quantity
+                    TotalCost += kv.Value.CustomerItem.SellingCost * kv.Value.Quantity
+                Next
+                UpdateCartSummary()
+            End Set
+        End Property
         Public Sub New(view As CustomerMenuView, mediator As Mediator(Of CustomerKeys))
             MyBase.New(view, mediator)
 
             RecordChildAspectRatio(_view.ViewOrderButton)
             RecordChildAspectRatio(_view.StartOverButton)
-            '_view.ViewOrderButton.Location = New Point(_view.ViewOrderButton.Location.X + 400, _view.ViewOrderButton.Location.Y)
-            '_view.ViewOrderButton.Location = New Point(_view.StartOverButton.Location.X + 400, _view.StartOverButton.Location.Y)
+
+            OnStartOverClicked()
             SetEvents()
         End Sub
         Protected Friend Overrides Sub SetEvents()
             MyBase.SetEvents()
             _view.CategoryClick = AddressOf OnCategoryClicked
             _view.ViewOrderClick = AddressOf OnViewOrderClicked
-            _view.StartOverClick = AddressOf OnStartOverClicked         
+            _view.StartOverClick = AddressOf OnStartOverClicked
         End Sub
 
         Public Overrides Sub Project(projector As Form)
@@ -40,8 +62,6 @@ Namespace KioskV0.Classes
         End Sub
         Private Sub LoadCategories()
             _view.CategoryPanel.Controls.Clear()
-
-            'Dim categoryList = _mediator.GetUnitOfWork().Categories.GetAll()
             Dim locationY = 0
             Dim allButton = New Guna.UI2.WinForms.Guna2Button
             allButton.Text = "All"
@@ -62,20 +82,29 @@ Namespace KioskV0.Classes
         End Sub
 
         Private Sub LoadMenuData()
-            AllMenuItems = _mediator.GetCustomerItemList()
-            For Each ami In AllMenuItems
-                If Not CategoryList.ContainsKey(ami.AdminItem.Category.CategoryId) Then
-                    CategoryList.Add(ami.AdminItem.Category.CategoryId, ami.AdminItem.Category)
+            ' Clear existing category list
+            CategoryList.Clear()
 
+            ' Get only AdminItems marked for customer display
+            Dim displayedItems = _mediator.GetUnitOfWork.AdminItems.GetAll() _
+            .Where(Function(ami) ami.IsDisplayedAsCustomerItem AndAlso ami.Category IsNot Nothing) _
+            .ToList()
+
+            ' Populate category dictionary
+            For Each ami In displayedItems
+                If Not CategoryList.ContainsKey(ami.Category.CategoryId) Then
+                    CategoryList.Add(ami.Category.CategoryId, ami.Category)
                 End If
             Next
+
+            AllMenuItems = displayedItems
         End Sub
 
         Private Sub LoadMenuItems(category As String)
             _view.ItemPanel.Controls.Clear()
 
             Dim filtered = If(category = "All", AllMenuItems,
-                AllMenuItems.Where(Function(x) x.AdminItem.Category.CategoryName.Contains(category)).ToList())
+                AllMenuItems.Where(Function(x) x.Category.CategoryName.Contains(category)).ToList())
 
             'Dim filtered As List(Of CustomerItem) = AllMenuItems
             For Each item In filtered
@@ -88,61 +117,78 @@ Namespace KioskV0.Classes
         Private Sub OnCategoryClicked(category As String)
             LoadMenuItems(category)
         End Sub
-        Private Sub MenuUserControlClick(item As CustomerItem)
+        Private Sub MenuUserControlClick(item As AdminItem)
             ShowQuantityUC(item)
         End Sub
 
-        Private Sub ShowQuantityUC(item As CustomerItem)
-            Dim quantityUC As New CustomerOrderQuantityUserControl(item) With {
-            .AddOrderClick = Sub(model, qty)
-                                 AddToCart(model, qty)
-                                 _view.HideQuantityPopup()
-                                 UpdateCartSummary()
-                             End Sub,
-            .CancelClick = Sub()
-                               _view.HideQuantityPopup()
-                           End Sub
-        }
+        Private Sub ShowQuantityUC(item As AdminItem)
+            ' Create the UserControl instance
+            Dim quantityUC As New CustomerOrderQuantityUserControl(item)
+            quantityUC.AddOrderClick = Sub()
+                                           ' Use quantityUC.Quantity to get the updated amount
+                                           Dim amount = quantityUC.Quantity
+                                           TotalItems += quantityUC.Quantity
+                                           TotalCost += amount * item.SellingCost
+                                           _view.UpdateCartSummary(TotalItems, TotalCost)
+                                           AddToCart(item, amount) ' Add to cart with the updated amount
+                                           _view.HideQuantityPopup() ' Hide the quantity popup
+                                       End Sub
+            quantityUC.CancelClick = Sub()
+                                         _view.HideQuantityPopup() ' Hide the quantity popup without adding to cart
+                                     End Sub
+
+
+            ' Display the UserControl to the view
             _view.DisplayOrderQuantity(quantityUC)
         End Sub
 
-        Private Sub AddToCart(menu As CustomerItem, quantity As Integer)
-            Dim existingOrder = _cart.FirstOrDefault(Function(o) o.MenuItem.Equals(menu))
-            If existingOrder IsNot Nothing Then
-                existingOrder.Quantity += quantity
-            Else
-                _cart.Add(New OrderModel With {
-              .MenuItem = menu,
-              .Quantity = quantity
-            })
+
+        Private Sub AddToCart(menu As AdminItem, quantity As Integer)
+            If Not UserCart.ContainsKey(menu.Id) Then
+                Dim id = Guid.NewGuid().ToString().Substring(0, 10)
+                Dim model = New OrderDetail With {
+                .OrderDetailsId = id,
+                .CustomerItem = menu,
+                .CustomerItemId = menu.Id,
+                .Quantity = 0
+                }
+                UserCart(menu.Id) = model
             End If
+
+            UserCart(menu.Id).Quantity += quantity
+            'MessageBox.Show($"{UserCart(menu.Id).Quantity}")
         End Sub
 
         Private Sub UpdateCartSummary()
-            Dim totalItems = _cart.Sum(Function(o) o.Quantity)
-            Dim totalPrice = _cart.Sum(Function(o) o.MenuItem.Selling * o.Quantity)
-
-            _view.UpdateCartSummary(totalItems, totalPrice)
+            'Dim totalItems = Cart.Sum(Function(o) o.Quantity)
+            'Dim totalPrice = _car.Sum(Function(o) o.MenuItem.Selling * o.Quantity)
+            'UserCart.Clear()
+            _view.UpdateCartSummary(TotalItems, TotalCost)
         End Sub
 
         Private Sub OnStartOverClicked()
-            _cart.Clear()
+            UserCart.Clear()
+            TotalItems = 0
+            TotalCost = 0
             UpdateCartSummary()
         End Sub
         Private Sub OnViewOrderClicked()
-            If _cart.Count = 0 Then
-                'Dim noItemUC As New CustomerNoItemUserControl() With {
-                '.BackClick = Sub()
-                '                 _view.CustomerMainPanelView.Controls.Clear()
-                '                 _view.CustomerMainPanelView.Visible = False
-                '                 _mediator.SwapPage(CustomerKeys.CustomerMenu)
-                '             End Sub}
-                _view.CustomerMainPanelView.Controls.Clear()
-                '_view.CustomerMainPanelView.Controls.Add(noItemUC)
-                _view.CustomerMainPanelView.Visible = True
-            Else
-                _mediator.SwapPage(CustomerKeys.CustomerOrderList)
-            End If
+            'If _cart.Count = 0 Then
+            '    Dim noItemUC As New CustomerNoItemUserControl() With {
+            '    .BackClick = Sub()
+            '                     _view.CustomerMainPanelView.Controls.Clear()
+            '                     _view.CustomerMainPanelView.Visible = False
+            '                     _mediator.SwapPage(CustomerKeys.CustomerMenu)
+            '                 End Sub}
+            '    _view.CustomerMainPanelView.Controls.Clear()
+            '    _view.CustomerMainPanelView.Controls.Add(noItemUC)
+            '    _view.CustomerMainPanelView.Visible = True
+            'Else
+            'MessageBox.Show($"{UserCart.Count}")
+            Dim vm = DirectCast(_mediator.GetVM(CustomerKeys.CustomerOrderList), CustomerOrderListViewModel)
+            vm.UpdatedCart = UserCart
+            _mediator.SwapPage(CustomerKeys.CustomerOrderList)
+            'End If
         End Sub
     End Class
 
