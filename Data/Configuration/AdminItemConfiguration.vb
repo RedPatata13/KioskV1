@@ -33,12 +33,6 @@ Public Class AdminItemConfiguration
         Me.Property(Function(a) a.IsDisplayedAsCustomerItem).
             IsRequired()
 
-        ' Define the relationship between AdminItem and SupplierItem
-        Me.HasRequired(Function(a) a.SupplierItem) _
-            .WithMany() _
-            .HasForeignKey(Function(a) a.SupplierItemId) _
-            .WillCascadeOnDelete(False) ' Prevent cascading delete
-
         Me.HasRequired(Function(a) a.Category) _
             .WithMany() _
             .HasForeignKey(Function(a) a.CategoryId) _

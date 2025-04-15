@@ -54,17 +54,7 @@ Public Class KioskDbContext
         'modelBuilder.Configurations.Add(New AdminItemConfiguration())
         modelBuilder.Configurations.Add(New OrderConfiguration())
         modelBuilder.Configurations.Add(New OrderDetailsConfiguration())
-        modelBuilder.Entity(Of AdminItem)() _
-        .HasRequired(Function(a) a.Category) _
-        .WithMany() _
-        .HasForeignKey(Function(a) a.CategoryId) _
-        .WillCascadeOnDelete(False)
 
-        modelBuilder.Entity(Of AdminItem)() _
-        .HasRequired(Function(a) a.SupplierItem) _
-        .WithMany() _
-        .HasForeignKey(Function(a) a.SupplierItemId) _
-        .WillCascadeOnDelete(False)
         'modelBuilder.Configurations.Add(New )
         modelBuilder.Entity(Of CustomerItem)() _
             .HasOptional(Function(c) c.AdminItem) _

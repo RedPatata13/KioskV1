@@ -1,9 +1,10 @@
-﻿Imports System.Runtime.InteropServices
+﻿Imports System.IO
+Imports System.Runtime.InteropServices
 Imports KioskV0.KioskV0.Model
 
 Namespace KioskV0.Forms
     Public Class CustomerOrderDetailsUserControl
-        Private Property _model As MenuModel
+        Private Property _model As AdminItem
         Private Property _order As OrderDetail
         Public Property AddItemClick As Action
         Public Property DecreaseItemClick As Action
@@ -22,6 +23,17 @@ Namespace KioskV0.Forms
             QuantityTextBox.Text = _order.Quantity.ToString()
             ItemPrice.Text = $"P{_order.CustomerItem.SellingCost:N2}"
             ItemTotalPrice.Text = $"P{_order.CustomerItem.SellingCost * _order.Quantity:N2}"
+            Dim defaultImagePath As String = "picture.png"
+
+            Dim imagePath As String = If(String.IsNullOrWhiteSpace(_model.ImageFilePath), defaultImagePath, _model.ImageFilePath)
+
+            If File.Exists(imagePath) Then
+                MenuPictureBox.Image = Image.FromFile(imagePath)
+            Else
+                MenuPictureBox.Image = Nothing
+            End If
+
+
         End Sub
 
         Private Sub AddItemButton_Click(sender As Object, e As EventArgs) Handles AddItemButton.Click

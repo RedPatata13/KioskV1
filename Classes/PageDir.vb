@@ -15,7 +15,8 @@
                 {AdminKeys.AdminEditMenuDetails, New Classes.AdminEditMenuDetailsViewModel(New Forms.AdminEditMenuDetailsView(), mediator)},
                 {AdminKeys.AdminEditInventory, New Classes.AdminEditInventoryViewModel(New Forms.AdminEditInventoryView(), mediator)},
                 {AdminKeys.AdminSupplyRequest, New Classes.AdminSupplyRequestViewModel(New Forms.AdminSupplyRequestView(), mediator)},
-                {AdminKeys.Sample, New Classes.SampleViewModel(New Forms.SampleForm(), mediator)}
+                {AdminKeys.Sample, New Classes.SampleViewModel(New Forms.SampleForm(), mediator)},
+                {AdminKeys.AdminMenuSelectSupplierItem, New Classes.AdminMenuSelectSupplierItemViewModel(New AdminMenuSelectSupplierItemView(), mediator)}
             }
         End Function
 

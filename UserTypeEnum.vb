@@ -22,6 +22,7 @@
         AdminAddUser
         AdminEditInventory
         AdminSupplyRequest
+        AdminMenuSelectSupplierItem
     End Enum
 
     Public Enum CustomerKeys

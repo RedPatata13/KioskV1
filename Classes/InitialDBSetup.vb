@@ -50,8 +50,6 @@ Module InitialDBSetup
                         .Description = $"Customer-facing version of {si.Name} ({i})",
                         .CategoryId = category.CategoryId,
                         .Category = category,
-                        .SupplierItemId = si.Id,
-                        .SupplierItem = si,
                         .IsDisplayedAsCustomerItem = (i = 1), ' First item per supplier shown to customers
                         .SellingCost = Math.Round(si.Batches.Average(Function(b) b.UnitCost) * 1.5, 2) ' 50% markup
                     }
