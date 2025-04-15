@@ -1,5 +1,4 @@
-﻿Imports System.IO
-Imports System.Runtime.InteropServices
+﻿Imports System.Runtime.InteropServices
 Imports KioskV0.KioskV0.Model
 
 Namespace KioskV0.Forms
@@ -28,16 +27,6 @@ Namespace KioskV0.Forms
         Private Sub SetLabels()
             ProductName.Text = _model.Name
             PriceLabel.Text = $"P{_model.SellingCost}"
-
-            Dim defaultImagePath As String = "picture.png"
-
-            Dim imagePath As String = If(String.IsNullOrWhiteSpace(_model.ImageFilePath), defaultImagePath, _model.ImageFilePath)
-
-            If File.Exists(imagePath) Then
-                ProductPictureBox.Image = Image.FromFile(imagePath)
-            Else
-                ProductPictureBox.Image = Nothing
-            End If
         End Sub
         Private Sub ApplyClickEvent(ctrl As Control)
             AddHandler ctrl.Click, Sub(sender, e)
