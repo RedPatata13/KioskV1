@@ -24,9 +24,9 @@
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
             Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-            Me.ProductPictureBox = New Guna.UI2.WinForms.Guna2CirclePictureBox()
-            Me.ProductName = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.PriceLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me.ProductName = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me.ProductPictureBox = New Guna.UI2.WinForms.Guna2CirclePictureBox()
             Me.Guna2Panel1.SuspendLayout()
             CType(Me.ProductPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
@@ -39,52 +39,56 @@
             Me.Guna2Panel1.Controls.Add(Me.ProductName)
             Me.Guna2Panel1.Controls.Add(Me.ProductPictureBox)
             Me.Guna2Panel1.FillColor = System.Drawing.Color.White
-            Me.Guna2Panel1.Location = New System.Drawing.Point(41, 19)
+            Me.Guna2Panel1.Location = New System.Drawing.Point(55, 23)
+            Me.Guna2Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.Guna2Panel1.Name = "Guna2Panel1"
-            Me.Guna2Panel1.Size = New System.Drawing.Size(198, 206)
+            Me.Guna2Panel1.Size = New System.Drawing.Size(264, 254)
             Me.Guna2Panel1.TabIndex = 0
+            '
+            'PriceLabel
+            '
+            Me.PriceLabel.BackColor = System.Drawing.Color.Transparent
+            Me.PriceLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.PriceLabel.Location = New System.Drawing.Point(88, 214)
+            Me.PriceLabel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+            Me.PriceLabel.Name = "PriceLabel"
+            Me.PriceLabel.Size = New System.Drawing.Size(54, 22)
+            Me.PriceLabel.TabIndex = 3
+            Me.PriceLabel.Text = "P00.00"
+            '
+            'ProductName
+            '
+            Me.ProductName.BackColor = System.Drawing.Color.Transparent
+            Me.ProductName.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.ProductName.Location = New System.Drawing.Point(39, 165)
+            Me.ProductName.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+            Me.ProductName.Name = "ProductName"
+            Me.ProductName.Size = New System.Drawing.Size(157, 31)
+            Me.ProductName.TabIndex = 2
+            Me.ProductName.Text = "Product Name"
             '
             'ProductPictureBox
             '
             Me.ProductPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.ProductPictureBox.ImageRotate = 0!
-            Me.ProductPictureBox.Location = New System.Drawing.Point(17, 18)
+            Me.ProductPictureBox.Location = New System.Drawing.Point(23, 22)
+            Me.ProductPictureBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.ProductPictureBox.Name = "ProductPictureBox"
             Me.ProductPictureBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-            Me.ProductPictureBox.Size = New System.Drawing.Size(165, 111)
+            Me.ProductPictureBox.Size = New System.Drawing.Size(219, 136)
+            Me.ProductPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
             Me.ProductPictureBox.TabIndex = 1
             Me.ProductPictureBox.TabStop = False
             '
-            'ProductName
-            '
-            Me.ProductName.BackColor = System.Drawing.Color.Transparent
-            Me.ProductName.Font = New System.Drawing.Font("Poppins", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ProductName.Location = New System.Drawing.Point(29, 134)
-            Me.ProductName.Margin = New System.Windows.Forms.Padding(2)
-            Me.ProductName.Name = "ProductName"
-            Me.ProductName.Size = New System.Drawing.Size(140, 36)
-            Me.ProductName.TabIndex = 2
-            Me.ProductName.Text = "Product Name"
-            '
-            'PriceLabel
-            '
-            Me.PriceLabel.BackColor = System.Drawing.Color.Transparent
-            Me.PriceLabel.Font = New System.Drawing.Font("Poppins Light", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.PriceLabel.Location = New System.Drawing.Point(66, 174)
-            Me.PriceLabel.Margin = New System.Windows.Forms.Padding(2)
-            Me.PriceLabel.Name = "PriceLabel"
-            Me.PriceLabel.Size = New System.Drawing.Size(50, 27)
-            Me.PriceLabel.TabIndex = 3
-            Me.PriceLabel.Text = "P00.00"
-            '
             'CustomerMenuUserControl
             '
-            Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.Transparent
             Me.Controls.Add(Me.Guna2Panel1)
+            Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.Name = "CustomerMenuUserControl"
-            Me.Size = New System.Drawing.Size(239, 225)
+            Me.Size = New System.Drawing.Size(319, 277)
             Me.Guna2Panel1.ResumeLayout(False)
             Me.Guna2Panel1.PerformLayout()
             CType(Me.ProductPictureBox, System.ComponentModel.ISupportInitialize).EndInit()

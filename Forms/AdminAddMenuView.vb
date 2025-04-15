@@ -1,4 +1,6 @@
-﻿Namespace KioskV0.Forms
+﻿Imports System.IO
+
+Namespace KioskV0.Forms
     Public Class AdminEditMenuDetailsView
         Public Property SaveButtonClick As Action
         Public Property CancelButtonClick As Action
@@ -78,6 +80,32 @@
                 PageLabel.Text = value
             End Set
         End Property
+        Private _imageFilePath As String
+        Private ReadOnly defaultImagePath As String = "picture.png"
+
+        Public Property ImageFilePath As String
+            Get
+                If String.IsNullOrWhiteSpace(_imageFilePath) Then
+                    Return defaultImagePath
+                End If
+                Return _imageFilePath
+            End Get
+            Set(value As String)
+                _imageFilePath = value
+
+                ' Set thumbnail image based on the file path
+                If File.Exists(value) Then
+                    Thumbnail.Image = Image.FromFile(value)
+                ElseIf File.Exists(defaultImagePath) Then
+                    Thumbnail.Image = Image.FromFile(defaultImagePath)
+                Else
+                    Thumbnail.Image = Nothing
+                End If
+            End Set
+        End Property
+
+
+
         Public Sub ResetFields()
             ProductNameTextBox.Text = ""
             CategoryComboBox.SelectedIndex = -1

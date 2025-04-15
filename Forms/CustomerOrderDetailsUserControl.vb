@@ -1,4 +1,5 @@
-﻿Imports System.Runtime.InteropServices
+﻿Imports System.IO
+Imports System.Runtime.InteropServices
 Imports KioskV0.KioskV0.Model
 
 Namespace KioskV0.Forms
@@ -22,6 +23,7 @@ Namespace KioskV0.Forms
             QuantityTextBox.Text = _order.Quantity.ToString()
             ItemPrice.Text = $"P{_order.CustomerItem.SellingCost:N2}"
             ItemTotalPrice.Text = $"P{_order.CustomerItem.SellingCost * _order.Quantity:N2}"
+
         End Sub
 
         Private Sub AddItemButton_Click(sender As Object, e As EventArgs) Handles AddItemButton.Click
