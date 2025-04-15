@@ -30,6 +30,8 @@ Namespace KioskV0.Classes
                                    End Sub)
             '_view.DeleteButtonClick = Sub() DeleteMenu(model)
             _view.SaveButtonClick = Sub() UpdateMenu(model)
+            _view.IsCustomerItem = model.IsDisplayedAsCustomerItem
+            _view.SetClick()
         End Sub
         Public Overrides Sub Project(projector As Form)
             If Not Loaded Then
@@ -60,6 +62,7 @@ Namespace KioskV0.Classes
             _view.SelectImageClick = AddressOf SelectImageClick
             _view.SaveButtonClick = AddressOf SaveButtonClick
             _view.SelectSupplierClick = AddressOf SelectSupplierClick
+            _view.SetAsMenuClick = AddressOf SetItemAsMenuClick
         End Sub
 
         Private Sub SelectSupplierClick()
@@ -83,12 +86,17 @@ Namespace KioskV0.Classes
 
             _view.CategoryComboBox.Items.Clear()
             _view.CategoryComboBox.Items.AddRange(catNameList.ToArray())
-
-            _view.SupplierComboBox.Items.Clear()
-            _view.SupplierComboBox.Items.AddRange(suppNameList.ToArray())
         End Sub
 
-
+        Private Sub SetItemAsMenuClick()
+            _view.IsCustomerItem = Not _view.IsCustomerItem
+            If _view.IsCustomerItem Then
+                MessageBox.Show("Item is now added to the menu")
+            Else
+                MessageBox.Show("Item is now removed from the menu. You may add it again anytime you want.")
+            End If
+            _view.SetClick()
+        End Sub
         Private Sub DeleteMenu(model As Menu)
             '_mediator.DeleteMenu(model)
             _mediator.AddAction(Sub() _mediator.SwapPage(Previous))
@@ -108,7 +116,7 @@ Namespace KioskV0.Classes
         Private Sub SaveButtonClick()
             Try
                 Dim category As Category = Nothing
-                Dim supplier As SupplierItem = Nothing
+                'Dim supplier As SupplierItem = Nothing
                 For Each kv In CategoryCache
                     If kv.Value.CategoryName = _view.CategoryName Then
                         category = kv.Value
@@ -116,12 +124,12 @@ Namespace KioskV0.Classes
                 Next
                 If category Is Nothing Then Throw New Exception("category not found")
 
-                For Each kv In SupplierCache
-                    If kv.Value.Name = _view.SupplierName Then
-                        supplier = kv.Value
-                    End If
-                Next
-                If supplier Is Nothing Then Throw New Exception("supplier item not found")
+                'For Each kv In SupplierCache
+                '    If kv.Value.Name = _view.SupplierName Then
+                '        supplier = kv.Value
+                '    End If
+                'Next
+                'If supplier Is Nothing Then Throw New Exception("supplier item not found")
 
                 Dim context = DirectCast(_mediator.GetUnitOfWork(), UnitOfWork)._context
                 If LoadedBatch Is Nothing Then
@@ -133,17 +141,11 @@ Namespace KioskV0.Classes
                     Throw New Exception("Context doot")
                 End If
                 Dim local_cat_cpy = context.Categories.Local.FirstOrDefault(Function(c) c.CategoryId = category.CategoryId)
-                Dim local_suppI_cpy = context.SupplierItems.Local.FirstOrDefault(Function(si) si.Id = supplier.Id)
+                'Dim local_suppI_cpy = context.SupplierItems.Local.FirstOrDefault(Function(si) si.Id = supplier.Id)
                 If local_cat_cpy Is Nothing Then
                     local_cat_cpy = context.Categories.Find(category.CategoryId)
                     If local_cat_cpy Is Nothing Then
                         Throw New Exception("Category not found in DB")
-                    End If
-                End If
-                If local_suppI_cpy Is Nothing Then
-                    local_suppI_cpy = context.SupplierItems.Find(supplier.Id)
-                    If local_cat_cpy Is Nothing Then
-                        Throw New Exception("Supplier not found in DB.")
                     End If
                 End If
 
@@ -151,9 +153,10 @@ Namespace KioskV0.Classes
                 model.Id = "AdminItem_" & Guid.NewGuid().ToString().Substring(0, 10)
                 model.Name = _view.MenuName
                 model.Category = local_cat_cpy
-                model.SupplierItem = local_suppI_cpy
+                'model.SupplierItem = local_suppI_cpy
                 model.Description = _view.ProductDescription
                 model.ImageFilePath = selectedFilePath
+                model.IsDisplayedAsCustomerItem = _view.IsCustomerItem
                 Dim cost As Decimal
                 Dim selling As Decimal
 
@@ -208,47 +211,37 @@ Namespace KioskV0.Classes
                 'Dim vm = DirectCast(_mediator.GetVM(AdminKeys.AdminMenu), AdminMenuViewModel)
                 'vm.UpdateStaged(model)
                 Dim category As Category = Nothing
-                Dim supplier As SupplierItem = Nothing
+                'Dim supplier As SupplierItem = Nothing
                 'Dim model As AdminItem = Nothing
                 For Each kv In CategoryCache
                     If kv.Value.CategoryName = _view.CategoryName Then
                         category = kv.Value
                     End If
                 Next
-                If category Is Nothing Then Throw New Exception("category not found")
+                'If category Is Nothing Then Throw New Exception("category not found")
 
-                For Each kv In SupplierCache
-                    If kv.Value.Name = _view.SupplierName Then
-                        supplier = kv.Value
-                    End If
-                Next
-                If supplier Is Nothing Then Throw New Exception("supplier item not found")
+                'If supplier Is Nothing Then Throw New Exception("supplier item not found")
 
                 Dim context = DirectCast(_mediator.GetUnitOfWork(), UnitOfWork)._context
                 If context Is Nothing Then
                     Throw New Exception("Context doot")
                 End If
                 Dim local_cat_cpy = context.Categories.Local.FirstOrDefault(Function(c) c.CategoryId = category.CategoryId)
-                Dim local_suppI_cpy = context.SupplierItems.Local.FirstOrDefault(Function(si) si.Id = supplier.Id)
+                'Dim local_suppI_cpy = context.SupplierItems.Local.FirstOrDefault(Function(si) si.Id = supplier.Id)
                 If local_cat_cpy Is Nothing Then
                     local_cat_cpy = context.Categories.Find(category.CategoryId)
                     If local_cat_cpy Is Nothing Then
                         Throw New Exception("Category not found in DB")
                     End If
                 End If
-                If local_suppI_cpy Is Nothing Then
-                    local_suppI_cpy = context.SupplierItems.Find(supplier.Id)
-                    If local_cat_cpy Is Nothing Then
-                        Throw New Exception("Supplier not found in DB.")
-                    End If
-                End If
+                'context.Attach(local_suppI_cpy)
 
                 model.Name = _view.MenuName
                 model.SellingCost = 0.00
-                model.SupplierItem = local_suppI_cpy
                 model.Category = local_cat_cpy
                 model.Description = _view.ProductDescription
                 model.ImageFilePath = selectedFilePath
+                model.IsDisplayedAsCustomerItem = _view.IsCustomerItem
                 Dim cost As Decimal
 
                 If Not Decimal.TryParse(_view.Cost, cost) Then
@@ -276,10 +269,11 @@ Namespace KioskV0.Classes
             'MessageBox.Show($"{model.MenuId}")
             _view.MenuName = model.Name
             _view.CategoryName = model.Category?.CategoryName
-            _view.SupplierName = model.SupplierItem?.Name
+            _view.BoundItem.Text = model.Batch.SupplierItem.Name
             _view.ProductDescription = model.Description
             _view.Cost = $"{model.SellingCost}"
             _view.ImageFilePath = model.ImageFilePath
+
             '_view.Sell = $"{model.Selling}"
         End Sub
 

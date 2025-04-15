@@ -495,6 +495,10 @@
       <DependentUpon>202504150236244_AddTemp.vb</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202504150236244_AddTemp.vb" />
+    <Compile Include="Migrations\202504151528224_RemovedSupplierItem.Designer.vb">
+      <DependentUpon>202504151528224_RemovedSupplierItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504151528224_RemovedSupplierItem.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\AdminItem.vb" />
     <Compile Include="Models\Category.vb" />
@@ -715,6 +719,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504150236244_AddTemp.resx">
       <DependentUpon>202504150236244_AddTemp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504151528224_RemovedSupplierItem.resx">
+      <DependentUpon>202504151528224_RemovedSupplierItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

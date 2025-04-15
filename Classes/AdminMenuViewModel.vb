@@ -46,7 +46,7 @@ Namespace KioskV0.Classes
             uc1.Model = model
             '_staged.MenuName = model.MenuName
             _staged.Name = model.Name
-            _staged.SupplierItem = model.SupplierItem
+            '_staged.SupplierItem = model.SupplierItem
             _staged.Description = model.Description
             _staged.SellingCost = model.SellingCost
             _staged.Category = model.Category

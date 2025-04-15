@@ -7,7 +7,8 @@ Namespace KioskV0.Forms
         Public Property SelectImageClick As Action
         Public Property DeleteButtonClick As Action
         Public Property SelectSupplierClick As Action
-
+        Public Property SetAsMenuClick As Action
+        Public Property IsCustomerItem As Boolean = False
         Public Property MenuName
             Get
                 Return ProductNameTextBox.Text
@@ -33,22 +34,22 @@ Namespace KioskV0.Forms
         End Property
 
 
-        Public Property SupplierName As String
-            Get
-                Return SupplierComboBox.Text
-            End Get
-            Set(value As String)
-                Dim index As Integer = SupplierComboBox.FindStringExact(value)
+        'Public Property SupplierName As String
+        '    Get
+        '        Return SupplierComboBox.Text
+        '    End Get
+        '    Set(value As String)
+        '        Dim index As Integer = SupplierComboBox.FindStringExact(value)
 
-                If index <> -1 Then
-                    SupplierComboBox.SelectedIndex = index
-                Else
-                    SupplierComboBox.SelectedIndex = 0
-                    'Throw New ArgumentException($"'{value}' is not a valid category.")
-                    'SupplierComboBox.Items.Add("supplierNotFound")
-                End If
-            End Set
-        End Property
+        '        If index <> -1 Then
+        '            SupplierComboBox.SelectedIndex = index
+        '        Else
+        '            SupplierComboBox.SelectedIndex = 0
+        '            'Throw New ArgumentException($"'{value}' is not a valid category.")
+        '            'SupplierComboBox.Items.Add("supplierNotFound")
+        '        End If
+        '    End Set
+        'End Property
 
 
         Public Property Cost As String
@@ -111,12 +112,20 @@ Namespace KioskV0.Forms
         Public Sub ResetFields()
             ProductNameTextBox.Text = ""
             CategoryComboBox.SelectedIndex = -1
-            SupplierComboBox.SelectedIndex = -1
+            BoundItem.Text = ""
             ProductDescriptionTextBox.Text = ""
             CostTextBox.Text = ""
             SellingTextBox.Text = ""
         End Sub
+        Public Sub SetClick()
+            If Not IsCustomerItem Then
+                SetAsCustomerItem.Text = "Set As Menu"
 
+            Else
+                SetAsCustomerItem.Text = "Remove from Menu"
+                'MessageBox.Show("Item is now included in the menu.")
+            End If
+        End Sub
         Private Sub SaveButton_Click(sender As Object, e As EventArgs) Handles SaveButton.Click
             SaveButtonClick?.Invoke()
         End Sub
@@ -135,6 +144,12 @@ Namespace KioskV0.Forms
 
         Private Sub SelectSupplierButton_Click(sender As Object, e As EventArgs) Handles SelectSupplierButton.Click
             SelectSupplierClick?.Invoke()
+        End Sub
+
+        Private Sub SetAsCustomerItem_Click(sender As Object, e As EventArgs) Handles SetAsCustomerItem.Click
+            SetAsMenuClick?.Invoke()
+            'SetClick()
+            'IsCustomerItem = Not IsCustomerItem
         End Sub
     End Class
 End Namespace
