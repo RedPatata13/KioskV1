@@ -1,4 +1,5 @@
-﻿Imports System.Web.ModelBinding
+﻿Imports System.IO
+Imports System.Web.ModelBinding
 Imports KioskV0.KioskV0.Model
 
 Namespace KioskV0.Forms
@@ -39,7 +40,18 @@ Namespace KioskV0.Forms
             ProductName.Text = _model.Name
             CategoryLabel.Text = _model.Category?.CategoryName
             PriceLabel.Text = $"P{_model.SellingCost}"
+
+            Dim defaultImagePath As String = "picture.png"
+
+            Dim imagePath As String = If(String.IsNullOrWhiteSpace(_model.ImageFilePath), defaultImagePath, _model.ImageFilePath)
+
+            If File.Exists(imagePath) Then
+                ProductPictureBox.Image = Image.FromFile(imagePath)
+            Else
+                ProductPictureBox.Image = Nothing
+            End If
         End Sub
+
 
         Private Sub AdminMenuUserControl_Click(sender As Object, e As EventArgs) Handles Me.Click
             SelfClick?.Invoke()

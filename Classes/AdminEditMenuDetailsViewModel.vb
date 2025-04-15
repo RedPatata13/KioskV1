@@ -11,6 +11,8 @@ Namespace KioskV0.Classes
         Private Property Loaded As Boolean = False
         Private Property CategoryCache As New Dictionary(Of String, Category)
         Private Property SupplierCache As New Dictionary(Of String, SupplierItem)
+        Private Property selectedFilePath As String
+
         Public Sub New(view As Forms.AdminEditMenuDetailsView, mediator As Mediator(Of AdminKeys))
             MyBase.New(view, mediator)
             SetEvents()
@@ -151,7 +153,7 @@ Namespace KioskV0.Classes
                 model.Category = local_cat_cpy
                 model.SupplierItem = local_suppI_cpy
                 model.Description = _view.ProductDescription
-                model.Batch = LoadedBatch
+                model.ImageFilePath = selectedFilePath
                 Dim cost As Decimal
                 Dim selling As Decimal
 
@@ -246,7 +248,7 @@ Namespace KioskV0.Classes
                 model.SupplierItem = local_suppI_cpy
                 model.Category = local_cat_cpy
                 model.Description = _view.ProductDescription
-
+                model.ImageFilePath = selectedFilePath
                 Dim cost As Decimal
 
                 If Not Decimal.TryParse(_view.Cost, cost) Then
@@ -277,6 +279,7 @@ Namespace KioskV0.Classes
             _view.SupplierName = model.SupplierItem?.Name
             _view.ProductDescription = model.Description
             _view.Cost = $"{model.SellingCost}"
+            _view.ImageFilePath = model.ImageFilePath
             '_view.Sell = $"{model.Selling}"
         End Sub
 
@@ -294,15 +297,13 @@ Namespace KioskV0.Classes
             ' Show the dialog and check if the user selected a file
             If openFileDialog.ShowDialog() = DialogResult.OK Then
                 ' Get the file path
-                Dim selectedFilePath As String = openFileDialog.FileName
+                selectedFilePath = openFileDialog.FileName
 
                 ' Optionally, set the selected image to a PictureBox (if you want to preview it)
                 _view.Thumbnail.SizeMode = PictureBoxSizeMode.Zoom
 
                 _view.Thumbnail.Image = Image.FromFile(selectedFilePath)
 
-                ' Display the selected file path (for example, in a TextBox or MessageBox)
-                MessageBox.Show("Selected file: " & selectedFilePath)
             End If
         End Sub
     End Class
