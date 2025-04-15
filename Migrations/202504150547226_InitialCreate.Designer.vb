@@ -6,14 +6,14 @@ Imports System.Resources
 
 Namespace Migrations
     <GeneratedCode("EntityFramework.Migrations", "6.5.1")>
-    Public NotInheritable Partial Class AddBatches
+    Public NotInheritable Partial Class InitialCreate
         Implements IMigrationMetadata
     
-        Private ReadOnly Resources As New ResourceManager(GetType(AddBatches))
+        Private ReadOnly Resources As New ResourceManager(GetType(InitialCreate))
         
         Private ReadOnly Property IMigrationMetadata_Id() As String Implements IMigrationMetadata.Id
             Get
-                Return "202504150006145_AddBatches"
+                Return "202504150547226_InitialCreate"
             End Get
         End Property
         
