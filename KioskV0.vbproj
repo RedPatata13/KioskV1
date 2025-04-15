@@ -440,10 +440,54 @@
     <Compile Include="Forms\SupplierLandingPageView.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Migrations\202504150547226_InitialCreate.Designer.vb">
-      <DependentUpon>202504150547226_InitialCreate.vb</DependentUpon>
+    <Compile Include="Migrations\202504101827107_InitialCreate.Designer.vb">
+      <DependentUpon>202504101827107_InitialCreate.vb</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202504150547226_InitialCreate.vb" />
+    <Compile Include="Migrations\202504101827107_InitialCreate.vb" />
+    <Compile Include="Migrations\202504101828417_UpdateOrders.Designer.vb">
+      <DependentUpon>202504101828417_UpdateOrders.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504101828417_UpdateOrders.vb" />
+    <Compile Include="Migrations\202504101834477_RemovedUserId.Designer.vb">
+      <DependentUpon>202504101834477_RemovedUserId.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504101834477_RemovedUserId.vb" />
+    <Compile Include="Migrations\202504102201149_AdminItemChange.Designer.vb">
+      <DependentUpon>202504102201149_AdminItemChange.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504102201149_AdminItemChange.vb" />
+    <Compile Include="Migrations\202504142327046_UngKayAteSharks.Designer.vb">
+      <DependentUpon>202504142327046_UngKayAteSharks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504142327046_UngKayAteSharks.vb" />
+    <Compile Include="Migrations\202504150006145_AddBatches.Designer.vb">
+      <DependentUpon>202504150006145_AddBatches.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504150006145_AddBatches.vb" />
+    <Compile Include="Migrations\202504150131132_RemoveSupplierItemStockCount.Designer.vb">
+      <DependentUpon>202504150131132_RemoveSupplierItemStockCount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504150131132_RemoveSupplierItemStockCount.vb" />
+    <Compile Include="Migrations\202504150148222_AddedQuantityPropertyToBatch.Designer.vb">
+      <DependentUpon>202504150148222_AddedQuantityPropertyToBatch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504150148222_AddedQuantityPropertyToBatch.vb" />
+    <Compile Include="Migrations\202504150220583_ChangedOrderDetails.Designer.vb">
+      <DependentUpon>202504150220583_ChangedOrderDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504150220583_ChangedOrderDetails.vb" />
+    <Compile Include="Migrations\202504150226275_RevertRename.Designer.vb">
+      <DependentUpon>202504150226275_RevertRename.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504150226275_RevertRename.vb" />
+    <Compile Include="Migrations\202504150231136_TempRemove.Designer.vb">
+      <DependentUpon>202504150231136_TempRemove.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504150231136_TempRemove.vb" />
+    <Compile Include="Migrations\202504150236244_AddTemp.Designer.vb">
+      <DependentUpon>202504150236244_AddTemp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504150236244_AddTemp.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\AdminItem.vb" />
     <Compile Include="Models\Category.vb" />
@@ -626,8 +670,41 @@
     <EmbeddedResource Include="Forms\SupplierLandingPageView.resx">
       <DependentUpon>SupplierLandingPageView.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504150547226_InitialCreate.resx">
-      <DependentUpon>202504150547226_InitialCreate.vb</DependentUpon>
+    <EmbeddedResource Include="Migrations\202504101827107_InitialCreate.resx">
+      <DependentUpon>202504101827107_InitialCreate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504101828417_UpdateOrders.resx">
+      <DependentUpon>202504101828417_UpdateOrders.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504101834477_RemovedUserId.resx">
+      <DependentUpon>202504101834477_RemovedUserId.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504102201149_AdminItemChange.resx">
+      <DependentUpon>202504102201149_AdminItemChange.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504142327046_UngKayAteSharks.resx">
+      <DependentUpon>202504142327046_UngKayAteSharks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504150006145_AddBatches.resx">
+      <DependentUpon>202504150006145_AddBatches.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504150131132_RemoveSupplierItemStockCount.resx">
+      <DependentUpon>202504150131132_RemoveSupplierItemStockCount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504150148222_AddedQuantityPropertyToBatch.resx">
+      <DependentUpon>202504150148222_AddedQuantityPropertyToBatch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504150220583_ChangedOrderDetails.resx">
+      <DependentUpon>202504150220583_ChangedOrderDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504150226275_RevertRename.resx">
+      <DependentUpon>202504150226275_RevertRename.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504150231136_TempRemove.resx">
+      <DependentUpon>202504150231136_TempRemove.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504150236244_AddTemp.resx">
+      <DependentUpon>202504150236244_AddTemp.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -667,7 +744,6 @@
     <Content Include="Assets\icons8-time-machine-100.png" />
     <Content Include="Assets\increase.png" />
     <Content Include="Assets\money-bag.png" />
-    <Content Include="Assets\picture.png" />
     <None Include="Resources\magnifying-glass %281%29.png" />
     <None Include="Resources\calendar %281%29.png" />
     <None Include="packages.config" />
