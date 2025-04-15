@@ -15,6 +15,7 @@
     Public ReadOnly Property CustomerItems As IBaseRepository(Of CustomerItem) Implements IUnitOfWork.CustomerItems
     Public ReadOnly Property Categories As IBaseRepository(Of Category) Implements IUnitOfWork.Categories
     Public ReadOnly Property OrderDetails As IBaseRepository(Of OrderDetail) Implements IUnitOfWork.OrderDetails
+    Public ReadOnly Property InventoryBatches As IBaseRepository(Of InventoryBatch) Implements IUnitOfWork.InventoryBatches
 
     Public Sub New(context As KioskDbContext)
         _context = context
@@ -31,6 +32,7 @@
         CustomerItems = New CustomerItemsRepository(_context)
         Categories = New CategoryRepository(_context)
         OrderDetails = New OrderDetailsRepository(_context)
+        InventoryBatches = New InventoryBatchRepository(_context)
     End Sub
 
     Public Sub SaveChanges() Implements IUnitOfWork.SaveChanges

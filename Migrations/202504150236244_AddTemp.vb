@@ -3,15 +3,15 @@ Imports System.Data.Entity.Migrations
 Imports Microsoft.VisualBasic
 
 Namespace Migrations
-    Public Partial Class RemovedUserId
+    Public Partial Class AddTemp
         Inherits DbMigration
-    
+
         Public Overrides Sub Up()
-            DropColumn("dbo.OrderPrimals", "CustomerItemId")
+            AddForeignKey("dbo.OrderDetails", "CustomerItemId", "dbo.AdminItems", "Id")
         End Sub
-        
+
         Public Overrides Sub Down()
-            AddColumn("dbo.OrderPrimals", "UserId", Function(c) c.String(nullable := False))
+            DropForeignKey("dbo.OrderDetails", "CustomerItemId", "dbo.AdminItems")
         End Sub
     End Class
 End Namespace

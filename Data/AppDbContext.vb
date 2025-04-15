@@ -42,6 +42,7 @@ Public Class KioskDbContext
     Public Property Categories As DbSet(Of Category)
     Public Property OrderItems As DbSet(Of OrderItem)
     Public Property OrderPrimals As DbSet(Of OrderPrimal)
+    Public Property InventoryBatches As DbSet(Of InventoryBatch)
     Public Sub New()
         MyBase.New(JsonConfigReader.GetConnectionString())
     End Sub
@@ -71,6 +72,7 @@ Public Class KioskDbContext
             .HasForeignKey(Function(c) c.AdminItemId) _
             .WillCascadeOnDelete(False) ' Prevent cascading delete for AdminItem    
         MyBase.OnModelCreating(modelBuilder)
+        modelBuilder.Configurations.Add(New InventoryBatchConfiguration())
     End Sub
 End Class
 

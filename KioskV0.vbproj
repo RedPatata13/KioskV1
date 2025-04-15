@@ -183,6 +183,7 @@
     <Compile Include="Data\Configuration\AdminItemConfiguration.vb" />
     <Compile Include="Data\Configuration\CategoryConfiguration.vb" />
     <Compile Include="Data\Configuration\CustomerConfiguration.vb" />
+    <Compile Include="Data\Configuration\InventoryBatchConfiguration.vb" />
     <Compile Include="Data\Configuration\InventoryConfiguration.vb" />
     <Compile Include="Data\Configuration\JsonConfigReader.vb" />
     <Compile Include="Data\Configuration\OrderConfiguration.vb" />
@@ -455,12 +456,45 @@
       <DependentUpon>202504102201149_AdminItemChange.vb</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202504102201149_AdminItemChange.vb" />
+    <Compile Include="Migrations\202504142327046_UngKayAteSharks.Designer.vb">
+      <DependentUpon>202504142327046_UngKayAteSharks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504142327046_UngKayAteSharks.vb" />
+    <Compile Include="Migrations\202504150006145_AddBatches.Designer.vb">
+      <DependentUpon>202504150006145_AddBatches.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504150006145_AddBatches.vb" />
+    <Compile Include="Migrations\202504150131132_RemoveSupplierItemStockCount.Designer.vb">
+      <DependentUpon>202504150131132_RemoveSupplierItemStockCount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504150131132_RemoveSupplierItemStockCount.vb" />
+    <Compile Include="Migrations\202504150148222_AddedQuantityPropertyToBatch.Designer.vb">
+      <DependentUpon>202504150148222_AddedQuantityPropertyToBatch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504150148222_AddedQuantityPropertyToBatch.vb" />
+    <Compile Include="Migrations\202504150220583_ChangedOrderDetails.Designer.vb">
+      <DependentUpon>202504150220583_ChangedOrderDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504150220583_ChangedOrderDetails.vb" />
+    <Compile Include="Migrations\202504150226275_RevertRename.Designer.vb">
+      <DependentUpon>202504150226275_RevertRename.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504150226275_RevertRename.vb" />
+    <Compile Include="Migrations\202504150231136_TempRemove.Designer.vb">
+      <DependentUpon>202504150231136_TempRemove.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504150231136_TempRemove.vb" />
+    <Compile Include="Migrations\202504150236244_AddTemp.Designer.vb">
+      <DependentUpon>202504150236244_AddTemp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504150236244_AddTemp.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\AdminItem.vb" />
     <Compile Include="Models\Category.vb" />
     <Compile Include="Models\Customer.vb" />
     <Compile Include="Models\CustomerItem.vb" />
     <Compile Include="Models\Inventory.vb" />
+    <Compile Include="Models\InventoryBatch.vb" />
     <Compile Include="Models\ItemModel.vb" />
     <Compile Include="Models\Menu.vb" />
     <Compile Include="Models\MenuModel.vb" />
@@ -480,6 +514,7 @@
     <Compile Include="Repositories\CategoryRepository.vb" />
     <Compile Include="Repositories\Contracts\IAdminItemsRepository.vb" />
     <Compile Include="Repositories\Contracts\IBaseRepository.vb" />
+    <Compile Include="Repositories\Contracts\IInventoryBatchRepository.vb" />
     <Compile Include="Repositories\Contracts\ICategoryRepository.vb" />
     <Compile Include="Repositories\Contracts\ICustomerItemRepository.vb" />
     <Compile Include="Repositories\Contracts\IMenuRepository.vb" />
@@ -491,6 +526,7 @@
     <Compile Include="Repositories\CustomerItemsRepository.vb" />
     <Compile Include="Repositories\CustomersRepository.vb" />
     <Compile Include="Repositories\InventoriesRepository.vb" />
+    <Compile Include="Repositories\InventoryBatchRepository.vb" />
     <Compile Include="Repositories\OrderDetailsRepository.vb" />
     <Compile Include="Repositories\OrderItemsRepository.vb" />
     <Compile Include="Repositories\OrdersRepository.vb" />
@@ -645,6 +681,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504102201149_AdminItemChange.resx">
       <DependentUpon>202504102201149_AdminItemChange.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504142327046_UngKayAteSharks.resx">
+      <DependentUpon>202504142327046_UngKayAteSharks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504150006145_AddBatches.resx">
+      <DependentUpon>202504150006145_AddBatches.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504150131132_RemoveSupplierItemStockCount.resx">
+      <DependentUpon>202504150131132_RemoveSupplierItemStockCount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504150148222_AddedQuantityPropertyToBatch.resx">
+      <DependentUpon>202504150148222_AddedQuantityPropertyToBatch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504150220583_ChangedOrderDetails.resx">
+      <DependentUpon>202504150220583_ChangedOrderDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504150226275_RevertRename.resx">
+      <DependentUpon>202504150226275_RevertRename.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504150231136_TempRemove.resx">
+      <DependentUpon>202504150231136_TempRemove.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504150236244_AddTemp.resx">
+      <DependentUpon>202504150236244_AddTemp.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

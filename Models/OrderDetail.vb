@@ -3,6 +3,6 @@
     Public Property OrderId As String
     Public Property Order As OrderPrimal
     Public Property CustomerItemId As String
-    Public Property CustomerItem As CustomerItem
+    Public Property CustomerItem As AdminItem
     Public Property Quantity As Integer
 End Class

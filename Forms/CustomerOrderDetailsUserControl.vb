@@ -20,8 +20,8 @@ Namespace KioskV0.Forms
 
             ItemName.Text = _order.CustomerItem.Name
             QuantityTextBox.Text = _order.Quantity.ToString()
-            ItemPrice.Text = $"P{_order.CustomerItem.AdminItem.SellingCost:N2}"
-            ItemTotalPrice.Text = $"P{_order.CustomerItem.AdminItem.SellingCost * _order.Quantity:N2}"
+            ItemPrice.Text = $"P{_order.CustomerItem.SellingCost:N2}"
+            ItemTotalPrice.Text = $"P{_order.CustomerItem.SellingCost * _order.Quantity:N2}"
         End Sub
 
         Private Sub AddItemButton_Click(sender As Object, e As EventArgs) Handles AddItemButton.Click

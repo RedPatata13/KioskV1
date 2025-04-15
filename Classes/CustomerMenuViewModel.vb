@@ -6,7 +6,7 @@ Namespace KioskV0.Classes
     Public Class CustomerMenuViewModel
         Inherits ViewModel(Of Forms.CustomerMenuView, CustomerKeys)
         Private Property Loaded As Boolean = False
-        Private Property AllMenuItems As List(Of CustomerItem)
+        Private Property AllMenuItems As List(Of AdminItem)
         Private Property CategoryList As New Dictionary(Of String, Category)
         Private _cart As New List(Of OrderModel)
         Private Property UserCart As New Dictionary(Of String, OrderDetail)
@@ -25,7 +25,7 @@ Namespace KioskV0.Classes
                 UserCart = value
                 For Each kv In value
                     TotalItems += kv.Value.Quantity
-                    TotalCost += kv.Value.CustomerItem.AdminItem.SellingCost * kv.Value.Quantity
+                    TotalCost += kv.Value.CustomerItem.SellingCost * kv.Value.Quantity
                 Next
                 UpdateCartSummary()
             End Set
@@ -82,20 +82,29 @@ Namespace KioskV0.Classes
         End Sub
 
         Private Sub LoadMenuData()
-            AllMenuItems = _mediator.GetCustomerItemList()
-            For Each ami In AllMenuItems
-                If Not CategoryList.ContainsKey(ami.AdminItem.Category.CategoryId) Then
-                    CategoryList.Add(ami.AdminItem.Category.CategoryId, ami.AdminItem.Category)
+            ' Clear existing category list
+            CategoryList.Clear()
 
+            ' Get only AdminItems marked for customer display
+            Dim displayedItems = _mediator.GetUnitOfWork.AdminItems.GetAll() _
+            .Where(Function(ami) ami.IsDisplayedAsCustomerItem AndAlso ami.Category IsNot Nothing) _
+            .ToList()
+
+            ' Populate category dictionary
+            For Each ami In displayedItems
+                If Not CategoryList.ContainsKey(ami.Category.CategoryId) Then
+                    CategoryList.Add(ami.Category.CategoryId, ami.Category)
                 End If
             Next
+
+            AllMenuItems = displayedItems
         End Sub
 
         Private Sub LoadMenuItems(category As String)
             _view.ItemPanel.Controls.Clear()
 
             Dim filtered = If(category = "All", AllMenuItems,
-                AllMenuItems.Where(Function(x) x.AdminItem.Category.CategoryName.Contains(category)).ToList())
+                AllMenuItems.Where(Function(x) x.Category.CategoryName.Contains(category)).ToList())
 
             'Dim filtered As List(Of CustomerItem) = AllMenuItems
             For Each item In filtered
@@ -108,18 +117,18 @@ Namespace KioskV0.Classes
         Private Sub OnCategoryClicked(category As String)
             LoadMenuItems(category)
         End Sub
-        Private Sub MenuUserControlClick(item As CustomerItem)
+        Private Sub MenuUserControlClick(item As AdminItem)
             ShowQuantityUC(item)
         End Sub
 
-        Private Sub ShowQuantityUC(item As CustomerItem)
+        Private Sub ShowQuantityUC(item As AdminItem)
             ' Create the UserControl instance
             Dim quantityUC As New CustomerOrderQuantityUserControl(item)
             quantityUC.AddOrderClick = Sub()
                                            ' Use quantityUC.Quantity to get the updated amount
                                            Dim amount = quantityUC.Quantity
                                            TotalItems += quantityUC.Quantity
-                                           TotalCost += amount * item.AdminItem.SellingCost
+                                           TotalCost += amount * item.SellingCost
                                            _view.UpdateCartSummary(TotalItems, TotalCost)
                                            AddToCart(item, amount) ' Add to cart with the updated amount
                                            _view.HideQuantityPopup() ' Hide the quantity popup
@@ -134,14 +143,14 @@ Namespace KioskV0.Classes
         End Sub
 
 
-        Private Sub AddToCart(menu As CustomerItem, quantity As Integer)
+        Private Sub AddToCart(menu As AdminItem, quantity As Integer)
             If Not UserCart.ContainsKey(menu.Id) Then
                 Dim id = Guid.NewGuid().ToString().Substring(0, 10)
                 Dim model = New OrderDetail With {
-                    .OrderDetailsId = id,
-                    .CustomerItem = menu,
-                    .CustomerItemId = menu.Id,
-                    .Quantity = 0
+                .OrderDetailsId = id,
+                .CustomerItem = menu,
+                .CustomerItemId = menu.Id,
+                .Quantity = 0
                 }
                 UserCart(menu.Id) = model
             End If

@@ -9,4 +9,7 @@
     Public Property SellingCost As Decimal
     Public Property ImageFilePath As String
     Public Property IsDisplayedAsCustomerItem As Boolean
+
+    Public Property BatchId As String
+    Public Overridable Property Batch As InventoryBatch
 End Class

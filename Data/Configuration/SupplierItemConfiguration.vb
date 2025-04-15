@@ -1,32 +1,55 @@
 ﻿Imports System.Data.Entity.ModelConfiguration
-Imports System.Net
+Imports System.ComponentModel.DataAnnotations.Schema
 
 Public Class SupplierItemConfiguration
     Inherits EntityTypeConfiguration(Of SupplierItem)
 
     Public Sub New()
-        ' Define the primary key
-        'Me.Map(Function(s) s.ToTable("Suppliers"))
-        Me.HasKey(Function(s) s.Id)
+        ' Primary Key
+        Me.HasKey(Function(si) si.Id)
 
-        ' Define properties and constraints
-        Me.Property(Function(s) s.Id).
-            IsRequired().
-            HasMaxLength(50) ' Assuming GUID or short unique string ID
+        ' Properties configuration
+        Me.Property(Function(si) si.Id) _
+        .HasMaxLength(50) _
+        .IsRequired()
 
-        Me.Property(Function(s) s.Name).
-            IsRequired().
-            HasMaxLength(100)
+        Me.Property(Function(si) si.Name) _
+        .HasMaxLength(100) _
+        .IsRequired()
 
-        Me.Property(Function(s) s.Description).
-            IsOptional().
-            HasMaxLength(255)
+        Me.Property(Function(si) si.Description) _
+        .HasMaxLength(500) _
+        .IsOptional()
 
-        Me.Property(Function(s) s.StockCount).
-            IsRequired()
-        Me.HasRequired(Function(s) s.Supplier) _
-            .WithMany() _
-            .HasForeignKey(Function(s) s.SupplierId) _
-            .WillCascadeOnDelete(False)
+        Me.Property(Function(si) si.SupplierId) _
+        .HasMaxLength(50) _
+        .IsRequired()
+
+        ' Relationships
+        ' SupplierItem to Supplier (Many-to-One)
+        Me.HasRequired(Function(si) si.Supplier) _
+        .WithMany(Function(s) s.SupplierItems) _ ' Assuming Supplier has collection
+        .HasForeignKey(Function(si) si.SupplierId) _
+        .WillCascadeOnDelete(False)
+
+        ' SupplierItem to InventoryBatches (One-to-Many)
+        Me.HasMany(Function(si) si.Batches) _
+        .WithRequired(Function(b) b.SupplierItem) _ ' Batch must have an InventoryItem
+        .HasForeignKey(Function(b) b.SupplierItemId) _
+        .WillCascadeOnDelete(False) ' Prevent cascade delete
+
+        ' Indexes for performance
+        'Me.HasIndex(Function(si) si.SupplierId) _
+        '.HasName("IX_SupplierItem_SupplierId")
+
+        'Me.HasIndex(Function(si) si.Name)
+        '.HasName("IX_SupplierItem_Name")
+
+        ' Table naming (if different from class name)
+        Me.ToTable("SupplierItems")
+
+        ' Optional: Add a computed column or complex type if needed
+        'Me.Property(Function(si) si.FullDescription)
+        '    .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Computed)
     End Sub
 End Class

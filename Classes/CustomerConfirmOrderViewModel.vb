@@ -30,7 +30,7 @@ Namespace KioskV0.Classes
                 .OrderId = Guid.NewGuid().ToString().Substring(0, 10),
                 .CreatedAt = DateTime.Now,
                 .OrderItems = Cart.Values.ToList(),
-                .TotalPrice = Cart.Values.Aggregate(0D, Function(t, x) t + (x.Quantity * x.CustomerItem.AdminItem.SellingCost))
+                .TotalPrice = Cart.Values.Aggregate(0D, Function(t, x) t + (x.Quantity * x.CustomerItem.SellingCost))
             }
 
             Dim context = DirectCast(_mediator.GetUnitOfWork(), UnitOfWork)._context
@@ -41,23 +41,24 @@ Namespace KioskV0.Classes
             ' Attach all categories and customer items first
             For Each o In op.OrderItems
                 ' Handle Category
-                Dim category = context.Categories.Local.FirstOrDefault(Function(c) c.CategoryId = o.CustomerItem.AdminItem.Category.CategoryId)
+                Dim category = context.Categories.Local.FirstOrDefault(Function(c) c.CategoryId = o.CustomerItem.Category.CategoryId)
                 If category Is Nothing Then
-                    category = context.Categories.Find(o.CustomerItem.AdminItem.Category.CategoryId)
+                    category = context.Categories.Find(o.CustomerItem.Category.CategoryId)
                     If category Is Nothing Then
                         Throw New Exception("Category not found in DB")
                     End If
                 End If
-                o.CustomerItem.AdminItem.Category = category
+                o.CustomerItem.Category = category
 
                 ' Handle CustomerItem
-                Dim customerItem = context.CustomerItems.Local.FirstOrDefault(Function(ci) ci.Id = o.CustomerItem.Id)
+                Dim customerItem = context.AdminItems.Local.FirstOrDefault(Function(c) c.Id = o.CustomerItem.Id)
                 If customerItem Is Nothing Then
-                    customerItem = context.CustomerItems.Find(o.CustomerItem.Id)
+                    customerItem = context.AdminItems.Find(o.CustomerItem.Id)
                     If customerItem Is Nothing Then
                         Throw New Exception("CustomerItem not found in DB")
                     End If
                 End If
+
                 o.CustomerItem = customerItem
             Next
 
