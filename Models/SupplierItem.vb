@@ -6,4 +6,8 @@
     Public Property Supplier As Supplier
     'Public Property StockCount As Integer
     Public Overridable Property Batches As ICollection(Of InventoryBatch)
+
+    Public Overrides Function ToString() As String
+        Return Name
+    End Function
 End Class

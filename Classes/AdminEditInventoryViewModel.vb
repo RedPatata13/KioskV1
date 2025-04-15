@@ -18,6 +18,7 @@ Namespace KioskV0.Classes
 
             _view.CancelButtonClick = AddressOf CancelButtonClick
             _view.SaveButtonClick = AddressOf SaveButtonClick
+
         End Sub
 
         Private Sub CancelButtonClick()

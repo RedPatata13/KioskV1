@@ -7,6 +7,7 @@ Imports KioskV0.KioskV0.Model
 Namespace KioskV0.Classes
     Public Class AdminEditMenuDetailsViewModel
         Inherits ViewModel(Of Forms.AdminEditMenuDetailsView, AdminKeys)
+        Public Property LoadedBatch As InventoryBatch = Nothing
         Private Property Loaded As Boolean = False
         Private Property CategoryCache As New Dictionary(Of String, Category)
         Private Property SupplierCache As New Dictionary(Of String, SupplierItem)
@@ -36,11 +37,19 @@ Namespace KioskV0.Classes
             Loaded = True
             MyBase.Project(projector)
         End Sub
+        Public Sub SetLoadedBatch()
+            If LoadedBatch IsNot Nothing Then
+                _view.BoundItem.Text = LoadedBatch.SupplierItem.Name
+            End If
+
+            _mediator.SwapPage(AdminKeys.AdminEditMenuDetails)
+        End Sub
         Private Sub RestoreView()
             _view.ResetFields()
             _view.DeleteButton.Visible = False
             _view.Label = "Add Menu"
             _view.SaveButtonClick = AddressOf SaveButtonClick
+            LoadedBatch = Nothing
         End Sub
         Protected Friend Overrides Sub SetEvents()
             MyBase.SetEvents()
@@ -48,6 +57,11 @@ Namespace KioskV0.Classes
             _view.CancelButtonClick = AddressOf CancelButtonClick
             _view.SelectImageClick = AddressOf SelectImageClick
             _view.SaveButtonClick = AddressOf SaveButtonClick
+            _view.SelectSupplierClick = AddressOf SelectSupplierClick
+        End Sub
+
+        Private Sub SelectSupplierClick()
+            _mediator.SwapPage(AdminKeys.AdminMenuSelectSupplierItem)
         End Sub
         Private Sub SetCache()
             Dim categoryList As List(Of Category) = _mediator.GetUnitOfWork.Categories.GetAll()
@@ -108,6 +122,11 @@ Namespace KioskV0.Classes
                 If supplier Is Nothing Then Throw New Exception("supplier item not found")
 
                 Dim context = DirectCast(_mediator.GetUnitOfWork(), UnitOfWork)._context
+                If LoadedBatch Is Nothing Then
+                    Throw New Exception("LoadedBatch Is null")
+                End If
+                context.InventoryBatches.Attach(LoadedBatch)
+
                 If context Is Nothing Then
                     Throw New Exception("Context doot")
                 End If
@@ -132,6 +151,7 @@ Namespace KioskV0.Classes
                 model.Category = local_cat_cpy
                 model.SupplierItem = local_suppI_cpy
                 model.Description = _view.ProductDescription
+                model.Batch = LoadedBatch
                 Dim cost As Decimal
                 Dim selling As Decimal
 

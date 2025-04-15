@@ -4,6 +4,8 @@
         Public Property CancelButtonClick As Action
         Public Property SelectImageClick As Action
         Public Property DeleteButtonClick As Action
+        Public Property SelectSupplierClick As Action
+
         Public Property MenuName
             Get
                 Return ProductNameTextBox.Text
@@ -103,5 +105,8 @@
             DeleteButtonClick?.Invoke()
         End Sub
 
+        Private Sub SelectSupplierButton_Click(sender As Object, e As EventArgs) Handles SelectSupplierButton.Click
+            SelectSupplierClick?.Invoke()
+        End Sub
     End Class
 End Namespace

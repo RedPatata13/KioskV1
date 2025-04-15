@@ -42,6 +42,8 @@
             Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
             Me.Thumbnail = New Guna.UI2.WinForms.Guna2PictureBox()
             Me.DeleteButton = New Guna.UI2.WinForms.Guna2Button()
+            Me.SelectSupplierButton = New Guna.UI2.WinForms.Guna2Button()
+            Me.BoundItem = New Guna.UI2.WinForms.Guna2TextBox()
             Me.Guna2Panel1.SuspendLayout()
             CType(Me.Thumbnail, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
@@ -133,10 +135,10 @@
             Me.SupplierComboBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
             Me.SupplierComboBox.ItemHeight = 30
             Me.SupplierComboBox.Items.AddRange(New Object() {"Supplier1", "Supplier2", "Supplier3"})
-            Me.SupplierComboBox.Location = New System.Drawing.Point(59, 376)
+            Me.SupplierComboBox.Location = New System.Drawing.Point(712, 88)
             Me.SupplierComboBox.Margin = New System.Windows.Forms.Padding(2)
             Me.SupplierComboBox.Name = "SupplierComboBox"
-            Me.SupplierComboBox.Size = New System.Drawing.Size(511, 36)
+            Me.SupplierComboBox.Size = New System.Drawing.Size(413, 36)
             Me.SupplierComboBox.TabIndex = 11
             '
             'Guna2HtmlLabel4
@@ -366,12 +368,48 @@
             Me.DeleteButton.Text = "Delete"
             Me.DeleteButton.Visible = False
             '
+            'SelectSupplierButton
+            '
+            Me.SelectSupplierButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.SelectSupplierButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.SelectSupplierButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.SelectSupplierButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.SelectSupplierButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+            Me.SelectSupplierButton.ForeColor = System.Drawing.Color.White
+            Me.SelectSupplierButton.Location = New System.Drawing.Point(480, 368)
+            Me.SelectSupplierButton.Name = "SelectSupplierButton"
+            Me.SelectSupplierButton.Size = New System.Drawing.Size(180, 45)
+            Me.SelectSupplierButton.TabIndex = 24
+            Me.SelectSupplierButton.Text = "SelectInventoryItem"
+            '
+            'BoundItem
+            '
+            Me.BoundItem.BorderRadius = 15
+            Me.BoundItem.Cursor = System.Windows.Forms.Cursors.IBeam
+            Me.BoundItem.DefaultText = ""
+            Me.BoundItem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+            Me.BoundItem.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+            Me.BoundItem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+            Me.BoundItem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+            Me.BoundItem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+            Me.BoundItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+            Me.BoundItem.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+            Me.BoundItem.Location = New System.Drawing.Point(56, 368)
+            Me.BoundItem.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+            Me.BoundItem.Name = "BoundItem"
+            Me.BoundItem.PlaceholderText = "Ex.: ""Hamburger"""
+            Me.BoundItem.SelectedText = ""
+            Me.BoundItem.Size = New System.Drawing.Size(416, 49)
+            Me.BoundItem.TabIndex = 25
+            '
             'AdminEditMenuDetailsView
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
             Me.ClientSize = New System.Drawing.Size(1321, 878)
+            Me.Controls.Add(Me.BoundItem)
+            Me.Controls.Add(Me.SelectSupplierButton)
             Me.Controls.Add(Me.DeleteButton)
             Me.Controls.Add(Me.Guna2Panel1)
             Me.Controls.Add(Me.CancelButton)
@@ -421,6 +459,8 @@
         Friend WithEvents CancelButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
         Friend WithEvents DeleteButton As Guna.UI2.WinForms.Guna2Button
+        Friend WithEvents SelectSupplierButton As Guna.UI2.WinForms.Guna2Button
+        Friend WithEvents BoundItem As Guna.UI2.WinForms.Guna2TextBox
     End Class
 
 End Namespace
