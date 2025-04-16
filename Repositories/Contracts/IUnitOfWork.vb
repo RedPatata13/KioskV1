@@ -15,5 +15,6 @@
     ReadOnly Property Categories As IBaseRepository(Of Category)
     ReadOnly Property OrderDetails As IBaseRepository(Of OrderDetail)
     ReadOnly Property InventoryBatches As IBaseRepository(Of InventoryBatch)
+    ReadOnly Property TransactedOrder As IBaseRepository(Of TransactedOrder)
     Sub SaveChanges()
 End Interface

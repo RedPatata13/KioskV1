@@ -7,6 +7,7 @@ Imports KioskV0.KioskV0.Model
 
 Namespace KioskV0.Classes
     Public Class Mediator(Of TKey)
+        Public Property CurrentUser As User
         Private Property _Login As LoginViewModel
         Private Property _Projector As Projector
         Private ReadOnly _unitOfWork As IUnitOfWork

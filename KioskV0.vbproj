@@ -193,6 +193,7 @@
     <Compile Include="Data\Configuration\MenuConfiguration.vb" />
     <Compile Include="Data\Configuration\SupplierConfiguration.vb" />
     <Compile Include="Data\Configuration\SupplierItemConfiguration.vb" />
+    <Compile Include="Data\Configuration\TransactedOrderConfiguration.vb" />
     <Compile Include="Data\Configuration\TransactionConfiguration.vb" />
     <Compile Include="Data\Configuration\UserConfiguration.vb" />
     <Compile Include="Forms\AdminAccountSettingsView.Designer.vb">
@@ -505,6 +506,10 @@
       <DependentUpon>202504151528224_RemovedSupplierItem.vb</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202504151528224_RemovedSupplierItem.vb" />
+    <Compile Include="Migrations\202504160947168_AddedTransactions.Designer.vb">
+      <DependentUpon>202504160947168_AddedTransactions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504160947168_AddedTransactions.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\AdminItem.vb" />
     <Compile Include="Models\Category.vb" />
@@ -523,6 +528,7 @@
     <Compile Include="Models\Supplier.vb" />
     <Compile Include="Models\SupplierItem.vb" />
     <Compile Include="Models\SupplierProduct.vb" />
+    <Compile Include="Models\TransactedOrder.vb" />
     <Compile Include="Models\Transaction.vb" />
     <Compile Include="Models\UserModel_1.vb" />
     <Compile Include="Models\UserModel.vb" />
@@ -538,6 +544,7 @@
     <Compile Include="Repositories\Contracts\IOrderDetailsRepository.vb" />
     <Compile Include="Repositories\Contracts\IOrderRepository.vb" />
     <Compile Include="Repositories\Contracts\ISupplierItemsRepository.vb" />
+    <Compile Include="Repositories\Contracts\ITransactedDetailsRepository.vb" />
     <Compile Include="Repositories\Contracts\IUnitOfWork.vb" />
     <Compile Include="Repositories\Contracts\IUsersRepository.vb" />
     <Compile Include="Repositories\CustomerItemsRepository.vb" />
@@ -550,6 +557,7 @@
     <Compile Include="Repositories\MenuRepository.vb" />
     <Compile Include="Repositories\SupplierItemsRepository.vb" />
     <Compile Include="Repositories\SuppliersRepository.vb" />
+    <Compile Include="Repositories\TransactedOrdersRepository.vb" />
     <Compile Include="Repositories\TransactionsRepository.vb" />
     <Compile Include="Repositories\UnitOfWork.vb" />
     <Compile Include="Repositories\UsersRepository.vb" />
@@ -734,6 +742,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504151528224_RemovedSupplierItem.resx">
       <DependentUpon>202504151528224_RemovedSupplierItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504160947168_AddedTransactions.resx">
+      <DependentUpon>202504160947168_AddedTransactions.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

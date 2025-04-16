@@ -4,5 +4,5 @@
     Sub Add(entity As T)
     Sub AddRange(list As IEnumerable(Of T))
     Sub Update(entity As T)
-    Sub Delete(id As Integer)
+    Sub Delete(id As String)
 End Interface

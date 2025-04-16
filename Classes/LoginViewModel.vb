@@ -69,6 +69,7 @@ Namespace KioskV0.Classes
                         Dim sb = New AdminSideBarViewModel(New Forms.AdminSidebar(), mediator)
                         _projector.ProjectSidebar(sb)
                         mediator.SwapPage(AdminKeys.AdminDashboard)
+                        mediator.CurrentUser = acc
                     Case "customer"
                         mediator = New Mediator(Of CustomerKeys)(_projector, Me, _unitOfWork)
                         mediator.SetupMap(GetCustomerPages(mediator))
@@ -79,13 +80,14 @@ Namespace KioskV0.Classes
                         _projector.ProjectSidebar(staff_sb)
                         mediator.SwapPage(StaffKeys.StaffPos)
                         mediator.SwapPage(StaffKeys.StaffPos)
-
+                        mediator.CurrentUser = acc
                     Case "supplier"
                         mediator = New Mediator(Of SupplierKeys)(_projector, Me, _unitOfWork)
                         mediator.SetupMap(GetSupplierPages(mediator))
                         'Dim supplier_sb = New SupplierSidebarViewModel(New Forms.SupplierSidebar(), mediator)
                         mediator.SwapPage(SupplierKeys.SupplierLandingPage)
                         mediator.SwapPage(SupplierKeys.SupplierLandingPage)
+                        mediator.CurrentUser = acc
                     Case Else
                         MessageBox.Show("User type not null")
                 End Select
