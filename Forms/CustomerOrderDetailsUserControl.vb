@@ -9,7 +9,16 @@ Namespace KioskV0.Forms
         Public Property AddItemClick As Action
         Public Property DecreaseItemClick As Action
         Public Property RemoveItemClick As Action
-
+        Public Property ShowButtons As Boolean
+            Get
+                Return _showButtons
+            End Get
+            Set(value As Boolean)
+                _showButtons = value
+                SetButtonVisibility()
+            End Set
+        End Property
+        Private _showButtons As Boolean = True
         Public Sub New(order As OrderDetail)
             InitializeComponent()
             _order = order
@@ -25,13 +34,13 @@ Namespace KioskV0.Forms
             ItemTotalPrice.Text = $"P{_order.CustomerItem.SellingCost * _order.Quantity:N2}"
             Dim defaultImagePath As String = "picture.png"
 
-            Dim imagePath As String = If(String.IsNullOrWhiteSpace(_model.ImageFilePath), defaultImagePath, _model.ImageFilePath)
+            'Dim imagePath As String = If(String.IsNullOrWhiteSpace(_model.ImageFilePath), defaultImagePath, _model.ImageFilePath)
 
-            If File.Exists(imagePath) Then
-                MenuPictureBox.Image = Image.FromFile(imagePath)
-            Else
-                MenuPictureBox.Image = Nothing
-            End If
+            'If File.Exists(imagePath) Then
+            '    MenuPictureBox.Image = Image.FromFile(imagePath)
+            'Else
+            '    MenuPictureBox.Image = Nothing
+            'End If
 
 
         End Sub
@@ -46,6 +55,11 @@ Namespace KioskV0.Forms
 
         Private Sub RemoveButton_Click(sender As Object, e As EventArgs) Handles RemoveButton.Click
             RemoveItemClick?.Invoke()
+        End Sub
+        Private Sub SetButtonVisibility()
+            AddItemButton.Visible = _showButtons
+            DecreaseItemButton.Visible = _showButtons
+            RemoveButton.Visible = _showButtons
         End Sub
     End Class
 

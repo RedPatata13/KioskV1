@@ -269,7 +269,7 @@ Namespace KioskV0.Classes
             'MessageBox.Show($"{model.MenuId}")
             _view.MenuName = model.Name
             _view.CategoryName = model.Category?.CategoryName
-            _view.BoundItem.Text = model.Batch.SupplierItem.Name
+            ' _view.BoundItem.Text = model.Batch.SupplierItem.Name
             _view.ProductDescription = model.Description
             _view.Cost = $"{model.SellingCost}"
             _view.ImageFilePath = model.ImageFilePath

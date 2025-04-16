@@ -10,4 +10,6 @@ Public Class OrderPrimal
 
     'Public Overridable Property User As User
     Public Overridable Property OrderItems As ICollection(Of OrderDetail) ' Order has many OrderItems
+
+    'Public Property OrderType As String
 End Class

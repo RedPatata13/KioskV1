@@ -283,7 +283,7 @@ Namespace KioskV0.Classes
 
         Public Sub SetCurrentUser(user As User)
             _currentUser = user
-            MessageBox.Show($"{user.Role}")
+            'MessageBox.Show($"{user.Role}")
         End Sub
         Public Function GetCurrentUser() As User
             Return _currentUser

@@ -25,91 +25,89 @@
         Private Sub InitializeComponent()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CustomerPaymentView))
             Me.CustomerPaymentViewLbl = New Guna.UI2.WinForms.Guna2Panel()
-            Me.PayMessageLbl = New Guna.UI2.WinForms.Guna2HtmlLabel()
-            Me.PaymentMethodLbl = New Guna.UI2.WinForms.Guna2HtmlLabel()
-            Me.PaymentPanel = New Guna.UI2.WinForms.Guna2ShadowPanel()
             Me.LogoPctrBx = New Guna.UI2.WinForms.Guna2PictureBox()
+            Me.PaymentMethodLbl = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me.PayButton = New Guna.UI2.WinForms.Guna2Button()
             Me.CustomerPaymentViewLbl.SuspendLayout()
-            Me.PaymentPanel.SuspendLayout()
             CType(Me.LogoPctrBx, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'CustomerPaymentViewLbl
             '
             Me.CustomerPaymentViewLbl.BackColor = System.Drawing.Color.White
+            Me.CustomerPaymentViewLbl.Controls.Add(Me.PaymentMethodLbl)
             Me.CustomerPaymentViewLbl.Controls.Add(Me.LogoPctrBx)
-            Me.CustomerPaymentViewLbl.Controls.Add(Me.PaymentPanel)
+            Me.CustomerPaymentViewLbl.Controls.Add(Me.PayButton)
             Me.CustomerPaymentViewLbl.Location = New System.Drawing.Point(2, 0)
             Me.CustomerPaymentViewLbl.Name = "CustomerPaymentViewLbl"
             Me.CustomerPaymentViewLbl.Size = New System.Drawing.Size(1920, 1080)
             Me.CustomerPaymentViewLbl.TabIndex = 0
             '
-            'PayMessageLbl
-            '
-            Me.PayMessageLbl.BackColor = System.Drawing.Color.White
-            Me.PayMessageLbl.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.PayMessageLbl.Location = New System.Drawing.Point(542, 9)
-            Me.PayMessageLbl.Name = "PayMessageLbl"
-            Me.PayMessageLbl.Size = New System.Drawing.Size(231, 44)
-            Me.PayMessageLbl.TabIndex = 7
-            Me.PayMessageLbl.Text = "Pay at the Counter"
-            '
-            'PaymentMethodLbl
-            '
-            Me.PaymentMethodLbl.BackColor = System.Drawing.Color.White
-            Me.PaymentMethodLbl.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.PaymentMethodLbl.Location = New System.Drawing.Point(629, 50)
-            Me.PaymentMethodLbl.Name = "PaymentMethodLbl"
-            Me.PaymentMethodLbl.Size = New System.Drawing.Size(41, 21)
-            Me.PaymentMethodLbl.TabIndex = 8
-            Me.PaymentMethodLbl.Text = "(Cash)"
-            '
-            'PaymentPanel
-            '
-            Me.PaymentPanel.BackColor = System.Drawing.Color.Transparent
-            Me.PaymentPanel.Controls.Add(Me.PayMessageLbl)
-            Me.PaymentPanel.Controls.Add(Me.PaymentMethodLbl)
-            Me.PaymentPanel.FillColor = System.Drawing.Color.White
-            Me.PaymentPanel.Location = New System.Drawing.Point(67, 327)
-            Me.PaymentPanel.Name = "PaymentPanel"
-            Me.PaymentPanel.ShadowColor = System.Drawing.Color.Black
-            Me.PaymentPanel.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped
-            Me.PaymentPanel.Size = New System.Drawing.Size(1235, 90)
-            Me.PaymentPanel.TabIndex = 9
-            '
             'LogoPctrBx
             '
             Me.LogoPctrBx.Image = CType(resources.GetObject("LogoPctrBx.Image"), System.Drawing.Image)
             Me.LogoPctrBx.ImageRotate = 0!
-            Me.LogoPctrBx.Location = New System.Drawing.Point(644, 12)
+            Me.LogoPctrBx.Location = New System.Drawing.Point(572, 45)
             Me.LogoPctrBx.Name = "LogoPctrBx"
             Me.LogoPctrBx.Size = New System.Drawing.Size(196, 166)
             Me.LogoPctrBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
             Me.LogoPctrBx.TabIndex = 10
             Me.LogoPctrBx.TabStop = False
             '
-            'CustomerPaymentPage
+            'PaymentMethodLbl
+            '
+            Me.PaymentMethodLbl.BackColor = System.Drawing.Color.White
+            Me.PaymentMethodLbl.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.PaymentMethodLbl.Location = New System.Drawing.Point(651, 385)
+            Me.PaymentMethodLbl.Name = "PaymentMethodLbl"
+            Me.PaymentMethodLbl.Size = New System.Drawing.Size(41, 21)
+            Me.PaymentMethodLbl.TabIndex = 8
+            Me.PaymentMethodLbl.Text = "(Cash)"
+            '
+            'PayButton
+            '
+            Me.PayButton.BackColor = System.Drawing.Color.Transparent
+            Me.PayButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
+            Me.PayButton.BorderRadius = 10
+            Me.PayButton.BorderThickness = 1
+            Me.PayButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.PayButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.PayButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.PayButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.PayButton.FillColor = System.Drawing.Color.White
+            Me.PayButton.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.PayButton.ForeColor = System.Drawing.Color.Black
+            Me.PayButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
+            Me.PayButton.Location = New System.Drawing.Point(67, 327)
+            Me.PayButton.Name = "PayButton"
+            Me.PayButton.PressedColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+            Me.PayButton.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+            Me.PayButton.ShadowDecoration.Enabled = True
+            Me.PayButton.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(0, 0, 10, 10)
+            Me.PayButton.Size = New System.Drawing.Size(1235, 90)
+            Me.PayButton.TabIndex = 11
+            Me.PayButton.Text = "Pay at the Counter"
+            '
+            'CustomerPaymentView
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.ClientSize = New System.Drawing.Size(1370, 749)
             Me.Controls.Add(Me.CustomerPaymentViewLbl)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-            Me.Name = "CustomerPaymentPage"
+            Me.Name = "CustomerPaymentView"
             Me.Text = "CustomerPaymentPage"
             Me.CustomerPaymentViewLbl.ResumeLayout(False)
-            Me.PaymentPanel.ResumeLayout(False)
-            Me.PaymentPanel.PerformLayout()
+            Me.CustomerPaymentViewLbl.PerformLayout()
             CType(Me.LogoPctrBx, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
 
         End Sub
 
         Friend WithEvents CustomerPaymentViewLbl As Guna.UI2.WinForms.Guna2Panel
-        Friend WithEvents PaymentPanel As Guna.UI2.WinForms.Guna2ShadowPanel
-        Friend WithEvents PayMessageLbl As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents PaymentMethodLbl As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents LogoPctrBx As Guna.UI2.WinForms.Guna2PictureBox
+        Friend WithEvents PayButton As Guna.UI2.WinForms.Guna2Button
     End Class
 
 End Namespace
