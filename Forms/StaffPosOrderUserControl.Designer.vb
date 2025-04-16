@@ -26,9 +26,9 @@ Partial Class StaffPosOrderUserControl
         Me.AddOrderButton = New Guna.UI2.WinForms.Guna2Button()
         Me.ProductQuantityLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.RemoveButton = New Guna.UI2.WinForms.Guna2Button()
-        Me.DeleteOrderButton = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        Me.DeleteOrderButton = New Guna.UI2.WinForms.Guna2Button()
         Me.SuspendLayout()
         '
         'ProductNameLabel
@@ -59,10 +59,10 @@ Partial Class StaffPosOrderUserControl
         'ProductQuantityLabel
         '
         Me.ProductQuantityLabel.BackColor = System.Drawing.Color.Transparent
-        Me.ProductQuantityLabel.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.ProductQuantityLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.ProductQuantityLabel.Location = New System.Drawing.Point(391, 36)
         Me.ProductQuantityLabel.Name = "ProductQuantityLabel"
-        Me.ProductQuantityLabel.Size = New System.Drawing.Size(21, 21)
+        Me.ProductQuantityLabel.Size = New System.Drawing.Size(21, 22)
         Me.ProductQuantityLabel.TabIndex = 3
         Me.ProductQuantityLabel.Text = "00"
         '
@@ -80,21 +80,6 @@ Partial Class StaffPosOrderUserControl
         Me.RemoveButton.Size = New System.Drawing.Size(34, 30)
         Me.RemoveButton.TabIndex = 2
         Me.RemoveButton.Text = "-"
-        '
-        'DeleteOrderButton
-        '
-        Me.DeleteOrderButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.DeleteOrderButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.DeleteOrderButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.DeleteOrderButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.DeleteOrderButton.FillColor = System.Drawing.Color.White
-        Me.DeleteOrderButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.DeleteOrderButton.ForeColor = System.Drawing.Color.Black
-        'Me.DeleteOrderButton.Image = Global.KioskV0.My.Resources.Resources.Delete_item
-        Me.DeleteOrderButton.Location = New System.Drawing.Point(474, 31)
-        Me.DeleteOrderButton.Name = "DeleteOrderButton"
-        Me.DeleteOrderButton.Size = New System.Drawing.Size(34, 30)
-        Me.DeleteOrderButton.TabIndex = 2
         '
         'Guna2Button2
         '
@@ -124,6 +109,23 @@ Partial Class StaffPosOrderUserControl
         Me.Guna2Button1.Size = New System.Drawing.Size(34, 30)
         Me.Guna2Button1.TabIndex = 1
         Me.Guna2Button1.Text = "+"
+        '
+        'DeleteOrderButton
+        '
+        Me.DeleteOrderButton.BackgroundImage = Global.KioskV0.My.Resources.Resources.icons8_delete_100__Black_
+        Me.DeleteOrderButton.BorderColor = System.Drawing.Color.Red
+        Me.DeleteOrderButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.DeleteOrderButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.DeleteOrderButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.DeleteOrderButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.DeleteOrderButton.FillColor = System.Drawing.Color.White
+        Me.DeleteOrderButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.DeleteOrderButton.ForeColor = System.Drawing.Color.Black
+        Me.DeleteOrderButton.Image = Global.KioskV0.My.Resources.Resources.Delete_itim
+        Me.DeleteOrderButton.Location = New System.Drawing.Point(474, 31)
+        Me.DeleteOrderButton.Name = "DeleteOrderButton"
+        Me.DeleteOrderButton.Size = New System.Drawing.Size(34, 30)
+        Me.DeleteOrderButton.TabIndex = 2
         '
         'StaffPosOrderUserControl
         '

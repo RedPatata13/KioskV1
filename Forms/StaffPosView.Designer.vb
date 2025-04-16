@@ -27,7 +27,7 @@
             Me.SearchProductTextBox = New Guna.UI2.WinForms.Guna2TextBox()
             Me.DeleteAllButton = New Guna.UI2.WinForms.Guna2Button()
             Me.PayButton = New Guna.UI2.WinForms.Guna2Button()
-            Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+            Me.CurrentItemsFlowPanel = New System.Windows.Forms.FlowLayoutPanel()
             Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
             Me.SuspendLayout()
             '
@@ -117,13 +117,13 @@
             Me.PayButton.Text = "Pay"
             Me.PayButton.TextOffset = New System.Drawing.Point(0, 2)
             '
-            'FlowLayoutPanel1
+            'CurrentItemsFlowPanel
             '
-            Me.FlowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.FlowLayoutPanel1.Location = New System.Drawing.Point(42, 101)
-            Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-            Me.FlowLayoutPanel1.Size = New System.Drawing.Size(529, 663)
-            Me.FlowLayoutPanel1.TabIndex = 4
+            Me.CurrentItemsFlowPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.CurrentItemsFlowPanel.Location = New System.Drawing.Point(42, 101)
+            Me.CurrentItemsFlowPanel.Name = "CurrentItemsFlowPanel"
+            Me.CurrentItemsFlowPanel.Size = New System.Drawing.Size(529, 663)
+            Me.CurrentItemsFlowPanel.TabIndex = 4
             '
             'FlowLayoutPanel2
             '
@@ -140,7 +140,7 @@
             Me.BackColor = System.Drawing.Color.White
             Me.ClientSize = New System.Drawing.Size(1305, 839)
             Me.Controls.Add(Me.FlowLayoutPanel2)
-            Me.Controls.Add(Me.FlowLayoutPanel1)
+            Me.Controls.Add(Me.CurrentItemsFlowPanel)
             Me.Controls.Add(Me.PayButton)
             Me.Controls.Add(Me.DeleteAllButton)
             Me.Controls.Add(Me.SearchProductTextBox)
@@ -157,7 +157,7 @@
         Friend WithEvents SearchProductTextBox As Guna.UI2.WinForms.Guna2TextBox
         Friend WithEvents DeleteAllButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents PayButton As Guna.UI2.WinForms.Guna2Button
-        Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
+        Friend WithEvents CurrentItemsFlowPanel As FlowLayoutPanel
         Friend WithEvents FlowLayoutPanel2 As FlowLayoutPanel
     End Class
 

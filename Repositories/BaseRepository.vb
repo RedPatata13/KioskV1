@@ -43,7 +43,7 @@ Public Class BaseRepository(Of T As Class)
     End Function
 
     ' Get an entity by ID
-    Public Function GetById(id As String) As T Implements IBaseRepository(Of T).GetById
+    Public Overridable Function GetById(id As String) As T Implements IBaseRepository(Of T).GetById
         Return _dbSet.Find(id)
     End Function
     ' Add entities by a range

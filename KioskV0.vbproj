@@ -393,6 +393,12 @@
     <Compile Include="Forms\StaffPaymentView.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\StaffPosConfirmationUserControl.Designer.vb">
+      <DependentUpon>StaffPosConfirmationUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffPosConfirmationUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Forms\StaffPosOrderUserControl.Designer.vb">
       <DependentUpon>StaffPosOrderUserControl.vb</DependentUpon>
     </Compile>
@@ -663,8 +669,14 @@
     <EmbeddedResource Include="Forms\StaffPaymentView.resx">
       <DependentUpon>StaffPaymentView.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffPosConfirmationUserControl.resx">
+      <DependentUpon>StaffPosConfirmationUserControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\StaffPosOrderUserControl.resx">
       <DependentUpon>StaffPosOrderUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffPosView.resx">
+      <DependentUpon>StaffPosView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StaffProductCategoryUserControl.resx">
       <DependentUpon>StaffProductCategoryUserControl.vb</DependentUpon>
@@ -749,6 +761,8 @@
   <ItemGroup>
     <Content Include="Assets\calendar %281%29.png" />
     <Content Include="Assets\customer.png" />
+    <None Include="Assets\icons8-delete-100 %28Black%29.png" />
+    <None Include="Assets\Delete-itim.png" />
     <Content Include="Assets\icons8-equal-housing-opportunity-96 %281%29.png" />
     <Content Include="Assets\icons8-equal-housing-opportunity-96.png" />
     <Content Include="Assets\icons8-hamburger-100.png" />
