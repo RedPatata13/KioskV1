@@ -24,11 +24,12 @@
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
             Me.SearchOrderTextbox = New Guna.UI2.WinForms.Guna2TextBox()
-            Me.SearchProductTextBox = New Guna.UI2.WinForms.Guna2TextBox()
             Me.DeleteAllButton = New Guna.UI2.WinForms.Guna2Button()
             Me.PayButton = New Guna.UI2.WinForms.Guna2Button()
             Me.CurrentItemsFlowPanel = New System.Windows.Forms.FlowLayoutPanel()
-            Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
+            Me.MenuItemsFlowLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
+            Me.AddMoreButton = New Guna.UI2.WinForms.Guna2Button()
+            Me.AddItemsToOrder = New Guna.UI2.WinForms.Guna2Button()
             Me.SuspendLayout()
             '
             'SearchOrderTextbox
@@ -53,28 +54,6 @@
             Me.SearchOrderTextbox.Size = New System.Drawing.Size(254, 34)
             Me.SearchOrderTextbox.TabIndex = 0
             '
-            'SearchProductTextBox
-            '
-            Me.SearchProductTextBox.BorderColor = System.Drawing.Color.Black
-            Me.SearchProductTextBox.BorderRadius = 17
-            Me.SearchProductTextBox.Cursor = System.Windows.Forms.Cursors.IBeam
-            Me.SearchProductTextBox.DefaultText = ""
-            Me.SearchProductTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-            Me.SearchProductTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-            Me.SearchProductTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-            Me.SearchProductTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-            Me.SearchProductTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.SearchProductTextBox.Font = New System.Drawing.Font("Poppins", 10.0!)
-            Me.SearchProductTextBox.ForeColor = System.Drawing.Color.Black
-            Me.SearchProductTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.SearchProductTextBox.Location = New System.Drawing.Point(317, 45)
-            Me.SearchProductTextBox.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
-            Me.SearchProductTextBox.Name = "SearchProductTextBox"
-            Me.SearchProductTextBox.PlaceholderText = "Product"
-            Me.SearchProductTextBox.SelectedText = ""
-            Me.SearchProductTextBox.Size = New System.Drawing.Size(254, 34)
-            Me.SearchProductTextBox.TabIndex = 1
-            '
             'DeleteAllButton
             '
             Me.DeleteAllButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -87,7 +66,7 @@
             Me.DeleteAllButton.FillColor = System.Drawing.Color.Transparent
             Me.DeleteAllButton.Font = New System.Drawing.Font("Poppins", 12.0!)
             Me.DeleteAllButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.DeleteAllButton.Location = New System.Drawing.Point(55, 779)
+            Me.DeleteAllButton.Location = New System.Drawing.Point(64, 744)
             Me.DeleteAllButton.Name = "DeleteAllButton"
             Me.DeleteAllButton.Size = New System.Drawing.Size(233, 39)
             Me.DeleteAllButton.TabIndex = 2
@@ -107,7 +86,7 @@
             Me.PayButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.PayButton.Font = New System.Drawing.Font("Poppins", 12.0!)
             Me.PayButton.ForeColor = System.Drawing.Color.White
-            Me.PayButton.Location = New System.Drawing.Point(317, 779)
+            Me.PayButton.Location = New System.Drawing.Point(304, 744)
             Me.PayButton.Name = "PayButton"
             Me.PayButton.ShadowDecoration.BorderRadius = 20
             Me.PayButton.ShadowDecoration.Depth = 50
@@ -120,18 +99,51 @@
             'CurrentItemsFlowPanel
             '
             Me.CurrentItemsFlowPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.CurrentItemsFlowPanel.Location = New System.Drawing.Point(42, 101)
+            Me.CurrentItemsFlowPanel.Location = New System.Drawing.Point(42, 88)
             Me.CurrentItemsFlowPanel.Name = "CurrentItemsFlowPanel"
-            Me.CurrentItemsFlowPanel.Size = New System.Drawing.Size(529, 663)
+            Me.CurrentItemsFlowPanel.Size = New System.Drawing.Size(529, 640)
             Me.CurrentItemsFlowPanel.TabIndex = 4
             '
-            'FlowLayoutPanel2
+            'MenuItemsFlowLayoutPanel
             '
-            Me.FlowLayoutPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.FlowLayoutPanel2.Location = New System.Drawing.Point(591, 45)
-            Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
-            Me.FlowLayoutPanel2.Size = New System.Drawing.Size(687, 763)
-            Me.FlowLayoutPanel2.TabIndex = 5
+            Me.MenuItemsFlowLayoutPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.MenuItemsFlowLayoutPanel.Location = New System.Drawing.Point(591, 88)
+            Me.MenuItemsFlowLayoutPanel.Name = "MenuItemsFlowLayoutPanel"
+            Me.MenuItemsFlowLayoutPanel.Size = New System.Drawing.Size(687, 640)
+            Me.MenuItemsFlowLayoutPanel.TabIndex = 5
+            '
+            'AddMoreButton
+            '
+            Me.AddMoreButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.AddMoreButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.AddMoreButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.AddMoreButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.AddMoreButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.AddMoreButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+            Me.AddMoreButton.ForeColor = System.Drawing.Color.White
+            Me.AddMoreButton.Location = New System.Drawing.Point(1096, 40)
+            Me.AddMoreButton.Name = "AddMoreButton"
+            Me.AddMoreButton.Size = New System.Drawing.Size(180, 45)
+            Me.AddMoreButton.TabIndex = 6
+            Me.AddMoreButton.Text = "Add more items"
+            '
+            'AddItemsToOrder
+            '
+            Me.AddItemsToOrder.BorderColor = System.Drawing.Color.Red
+            Me.AddItemsToOrder.BorderRadius = 1
+            Me.AddItemsToOrder.BorderThickness = 1
+            Me.AddItemsToOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.AddItemsToOrder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.AddItemsToOrder.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.AddItemsToOrder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.AddItemsToOrder.FillColor = System.Drawing.Color.White
+            Me.AddItemsToOrder.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+            Me.AddItemsToOrder.ForeColor = System.Drawing.Color.Black
+            Me.AddItemsToOrder.Location = New System.Drawing.Point(904, 40)
+            Me.AddItemsToOrder.Name = "AddItemsToOrder"
+            Me.AddItemsToOrder.Size = New System.Drawing.Size(180, 45)
+            Me.AddItemsToOrder.TabIndex = 7
+            Me.AddItemsToOrder.Text = "Add all items to order"
             '
             'StaffPosView
             '
@@ -139,11 +151,12 @@
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
             Me.ClientSize = New System.Drawing.Size(1305, 839)
-            Me.Controls.Add(Me.FlowLayoutPanel2)
+            Me.Controls.Add(Me.AddItemsToOrder)
+            Me.Controls.Add(Me.AddMoreButton)
+            Me.Controls.Add(Me.MenuItemsFlowLayoutPanel)
             Me.Controls.Add(Me.CurrentItemsFlowPanel)
             Me.Controls.Add(Me.PayButton)
             Me.Controls.Add(Me.DeleteAllButton)
-            Me.Controls.Add(Me.SearchProductTextBox)
             Me.Controls.Add(Me.SearchOrderTextbox)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
             Me.Name = "StaffPosView"
@@ -154,11 +167,12 @@
         End Sub
 
         Friend WithEvents SearchOrderTextbox As Guna.UI2.WinForms.Guna2TextBox
-        Friend WithEvents SearchProductTextBox As Guna.UI2.WinForms.Guna2TextBox
         Friend WithEvents DeleteAllButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents PayButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents CurrentItemsFlowPanel As FlowLayoutPanel
-        Friend WithEvents FlowLayoutPanel2 As FlowLayoutPanel
+        Friend WithEvents MenuItemsFlowLayoutPanel As FlowLayoutPanel
+        Friend WithEvents AddMoreButton As Guna.UI2.WinForms.Guna2Button
+        Friend WithEvents AddItemsToOrder As Guna.UI2.WinForms.Guna2Button
     End Class
 
 End Namespace

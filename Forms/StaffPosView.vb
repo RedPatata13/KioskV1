@@ -2,6 +2,8 @@
     Public Class StaffPosView
         Public Property PayButtonClick As Action
         Public Property OrderTextBoxTextchanged As Action
+        Public Property AddMoreClick As Action
+        Public Property AddAllItemsToOrder As Action
         Public Property Cart As Dictionary(Of String, AdminItem)
         Private Property Property1
 
@@ -13,6 +15,14 @@
             If e.KeyChar = ChrW(Keys.Enter) Then
                 OrderTextBoxTextchanged?.Invoke()
             End If
+        End Sub
+
+        Private Sub AddMoreButton_Click(sender As Object, e As EventArgs) Handles AddMoreButton.Click
+            AddMoreClick?.Invoke()
+        End Sub
+
+        Private Sub AddItemsToOrder_Click(sender As Object, e As EventArgs) Handles AddItemsToOrder.Click
+            AddAllItemsToOrder?.Invoke()
         End Sub
     End Class
 End Namespace

@@ -134,6 +134,7 @@
     <Compile Include="Classes\AdminMenuSelectSupplierItemViewModel.vb" />
     <Compile Include="Classes\CloneHelper.vb" />
     <Compile Include="Classes\InitialDBSetup.vb" />
+    <Compile Include="Classes\StaffOrderListViewModel.vb" />
     <Compile Include="Classes\SupplierLandingPageViewModel.vb" />
     <Compile Include="ContainerConfiguration.vb" />
     <Compile Include="Classes\ActionManager.vb" />
