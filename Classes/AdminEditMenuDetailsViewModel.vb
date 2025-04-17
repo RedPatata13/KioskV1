@@ -272,7 +272,7 @@ Namespace KioskV0.Classes
             _view.BoundItem.Text = model.Batch.SupplierItem.Name
             _view.ProductDescription = model.Description
             _view.Cost = $"{model.SellingCost}"
-            _view.ImageFilePath = model.ImageFilePath
+            _view.ProductImagePath = model.ImageFilePath
 
             '_view.Sell = $"{model.Selling}"
         End Sub
