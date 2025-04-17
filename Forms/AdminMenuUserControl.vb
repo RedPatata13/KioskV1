@@ -39,6 +39,11 @@ Namespace KioskV0.Forms
             ProductName.Text = _model.Name
             CategoryLabel.Text = _model.Category?.CategoryName
             PriceLabel.Text = $"P{_model.SellingCost}"
+            If Not String.IsNullOrEmpty(_model.ImageFilePath) AndAlso IO.File.Exists(_model.ImageFilePath) Then
+                ProductPictureBox.Image = Image.FromFile(_model.ImageFilePath)
+            Else
+                ProductPictureBox.Image = Nothing
+            End If
         End Sub
 
         Private Sub AdminMenuUserControl_Click(sender As Object, e As EventArgs) Handles Me.Click
