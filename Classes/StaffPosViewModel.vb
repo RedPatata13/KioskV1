@@ -102,43 +102,20 @@ Namespace KioskV0.Classes
 
                 'check if item already exists in the Cart
                 If _cartItemIDs.ContainsKey(val.CustomerItem.Id) Then
-                    '_cart(val.OrderDetailsId).Quantity += val.Quantity
                     Dim target As OrderDetail = _cartItemIDs(val.CustomerItem.Id)
                     target.Quantity += val.Quantity
-                    'check if Order Detail locally exists
-                    'Dim local_od_cpy = context.OrderDetails.Local.FirstOrDefault(Function(od) od.OrderDetailsId = target.OrderDetailsId)
-                    'If local_od_cpy Is Nothing Then
-
-                    '    'check if Order Detail exists in the DB
-                    '    local_od_cpy = context.OrderDetails.Find(target.OrderDetailsId)
-                    '    If local_od_cpy Is Nothing Then
-
-                    '        'order Details does not exist
-                    '        Throw New Exception($"Order Detail with id: {target.OrderDetailsId} does not exist in the Database")
-                    '    End If
-                    'End If
-
-                    'local_od_cpy.Quantity = target.Quantity
-                    'context.Categories.Attach(val.CustomerItem.Category)
-                    'context.AdminItems.Attach(val.CustomerItem)
-                    '_mediator.GetUnitOfWork.OrderDetails.Update(local_od_cpy)
-                    'MessageBox.Show("Item succesffuly updated")
                     Continue For
                 End If
 
-                'item does not exist in the cart
                 _cart.Add(val.OrderDetailsId, val)
                 _cartItemIDs.Add(val.CustomerItem.Id, val)
-                'context.Categories.Attach(val.CustomerItem.Category)
-                'context.AdminItems.Attach(val.CustomerItem)
+
                 Dim uc = New StaffPosOrderUserControl()
                 uc.Model = val
                 uc.DeleteClick = Sub() DeleteClick(uc)
                 _view.CurrentItemsFlowPanel.Controls.Add(uc)
                 val.OrderId = _currOrd.OrderId
 
-
-                '_mediator.GetUnitOfWork.OrderDetails.Add(val)
             Next
             MessageBox.Show("Order Updated")
             '_mediator.GetUnitOfWork.SaveChanges()

@@ -13,6 +13,7 @@ Namespace KioskV0.Classes
             MyBase.New(view, mediator)
 
             SetEvents()
+            _view._roles.SelectedIndex = 1
         End Sub
 
         Protected Friend Overrides Sub SetEvents()
@@ -33,22 +34,8 @@ Namespace KioskV0.Classes
         End Sub
 
         Public Sub LoadAsEdit(model As User)
-            Dim UserTypeFactory = Function(userType As String) As UserType
-                                      Select Case userType
-                                          Case "Admin"
-                                              Return KioskV0.UserType.Admin
-                                          Case "Staff"
-                                              Return KioskV0.UserType.Staff
-                                          Case "Supplier"
-                                              Return KioskV0.UserType.Supplier
-                                          Case "Customer"
-                                              Return KioskV0.UserType.Customer
-                                          Case Else
-                                              Throw New Exception("Invalid UserType")
-                                      End Select
-                                  End Function
-
             _mediator.LayoutAction(Sub()
+                                       MessageBox.Show("This does indeed happen")
                                        _mediator.AddAction(Sub() LoadWithDetails(model))
                                        _mediator.AddAction(Sub() _mediator.SwapPage(AdminKeys.AdminAddUser))
                                        _mediator.InvokeAllAction()
@@ -59,6 +46,7 @@ Namespace KioskV0.Classes
         End Sub
         Private Sub LoadWithDetails(model As User)
             'model.Validate()
+            _view._roles.Enabled = False
             _view.Role = model.Role
             _view.UserName = model.Username
             _view.Password = model.PasswordHash
@@ -67,12 +55,13 @@ Namespace KioskV0.Classes
             _view.ConfirmPassword = model.PasswordHash
             _view.FirstName = model.FirstName
             _view.LastName = model.LastName
+            _view.Address = model.Address
             '_view.Sell = $"{model.Selling}"
         End Sub
         Private Function GetInput() As User
             _view.Label = "Edit User"
             Dim newModel = New User()
-            newModel.Role = "Admin"
+            'newModel.Role = "Admin"
             newModel.Username = _view.UserName
             newModel.PasswordHash = _view.Password
             newModel.FirstName = _view.FirstName
@@ -97,25 +86,13 @@ Namespace KioskV0.Classes
                     Throw New Exception(errorMessages)
                 End If
                 If _view.Password <> _view.ConfirmPassword Then Throw New Exception("Please ensure that field: Password and field: Confirm Password have the same input.")
-                Dim UserTypeFactory = Function(str As String) As String
-                                          Select Case str
-                                              Case "Admin"
-                                                  Return "0"
-                                              Case "Staff"
-                                                  Return "1"
-                                              Case "Supplier"
-                                                  Return "2"
-                                              Case Else
-                                                  MessageBox.Show("InvalidUserType")
-                                                  Throw New Exception()
-                                          End Select
-                                      End Function
+
                 Dim user = _mediator.GetUnitOfWork().Users.GetUserByID(newModel.UserId)
                 If user Is Nothing Then
                     MessageBox.Show("User does not exist")
                 Else
                     user.Username = newModel.Username
-                    user.Role = UserTypeFactory(newModel.Role)
+                    user.Role = newModel.Role
                     user.PasswordHash = newModel.PasswordHash
                     user.Address = newModel.Address
                     user.Email = newModel.Email
@@ -133,54 +110,37 @@ Namespace KioskV0.Classes
             End Try
 
         End Sub
-        Private Sub UpdateViewFields(model As User)
-            _view.UserName = String.Empty
-        End Sub
         Private Sub CancelButtonClick()
             _mediator.SwapPage(AdminKeys.AdminAccountSettings)
             RevertView()
         End Sub
         Private Sub SaveButtonClick()
-            Dim UserTypeFactory = Function(userType As String) As UserType
-                                      Select Case userType
-                                          Case "Admin"
-                                              Return KioskV0.UserType.Admin
-                                          Case "Staff"
-                                              Return KioskV0.UserType.Staff
-                                          Case "Supplier"
-                                              Return KioskV0.UserType.Supplier
-                                          Case "Customer"
-                                              Return KioskV0.UserType.Customer
-                                          Case Else
-                                              Throw New Exception("Invalid UserType")
-                                      End Select
-                                  End Function
-
             Try
                 Dim model = New User()
-                model.Role = _view.Role
+                'model.Role = _view.Role
                 model.Username = _view.UserName
 
                 If _view.Password <> _view.ConfirmPassword Then Throw New Exception("Ensure that text in 'Password' and 'Confirm Password' is the same")
+                model.Role = _view.Role
                 model.UserId = "UID_" & Guid.NewGuid().ToString().Substring(0, 10)
                 model.PasswordHash = _view.Password
                 model.FirstName = _view.FirstName
                 model.LastName = _view.LastName
                 model.Email = _view.Email
                 model.ContactNumber = _view.ContactNo
-                model.Address = "Sa gitna ng kawalan street ng mga enkanto"
+                model.Address = _view.Address
                 model.CreatedAt = DateTime.Now
 
-                Dim validationResults As New List(Of ValidationResult)()
-                Dim validationContext As New ValidationContext(model, Nothing, Nothing)
+                'Dim validationResults As New List(Of ValidationResult)()
+                'Dim validationContext As New ValidationContext(model, Nothing, Nothing)
 
-                If Not Validator.TryValidateObject(model, validationContext, validationResults, True) Then
-                    Dim errorMessages As String = String.Join(Environment.NewLine, validationResults.Select(Function(r) r.ErrorMessage))
-                    Throw New Exception(errorMessages)
-                End If
-                Dim properties = model.GetType().GetProperties()
+                'If Not Validator.TryValidateObject(model, validationContext, validationResults, True) Then
+                '    Dim errorMessages As String = String.Join(Environment.NewLine, validationResults.Select(Function(r) r.ErrorMessage))
+                '    Throw New Exception(errorMessages)
+                'End If
+                'Dim properties = model.GetType().GetProperties()
 
-
+                model.Validate()
 
                 _mediator.CreateUser(model)
                 _mediator.SwapPage(AdminKeys.AdminAccountSettings)
@@ -194,6 +154,7 @@ Namespace KioskV0.Classes
             _view.Label = "Add User"
             _view.SaveButtonClick = AddressOf SaveButtonClick
             _view.ResetFields()
+            _view._roles.Enabled = True
         End Sub
     End Class
 End Namespace

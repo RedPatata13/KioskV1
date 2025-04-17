@@ -517,6 +517,14 @@
       <DependentUpon>202504160947168_AddedTransactions.vb</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202504160947168_AddedTransactions.vb" />
+    <Compile Include="Migrations\202504171023563_SomeShit.Designer.vb">
+      <DependentUpon>202504171023563_SomeShit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504171023563_SomeShit.vb" />
+    <Compile Include="Migrations\202504171028428_MinorCheck.Designer.vb">
+      <DependentUpon>202504171028428_MinorCheck.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504171028428_MinorCheck.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\AdminItem.vb" />
     <Compile Include="Models\Category.vb" />
@@ -755,6 +763,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504160947168_AddedTransactions.resx">
       <DependentUpon>202504160947168_AddedTransactions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504171023563_SomeShit.resx">
+      <DependentUpon>202504171023563_SomeShit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504171028428_MinorCheck.resx">
+      <DependentUpon>202504171028428_MinorCheck.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
