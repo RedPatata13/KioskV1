@@ -182,12 +182,19 @@ Namespace KioskV0.Services
         Public Function GetGrowthPercentage(startDate As DateTime, endDate As DateTime) As String
             Dim previousDate = PreviousDateRange(startDate, endDate)
 
-            Dim growth As Decimal = GetTotalSales(startDate, endDate) - GetTotalSales(previousDate.Item1, previousDate.Item2)
+            Dim currentSales As Decimal = GetTotalSales(startDate, endDate)
+            Dim previousSales As Decimal = GetTotalSales(previousDate.Item1, previousDate.Item2)
 
-            Dim result As Decimal = (growth / GetTotalSales(previousDate.Item1, previousDate.Item2)) * 100
+            If previousSales = 0D Then
+                Return "0.00%"
+            End If
+
+            Dim growth As Decimal = currentSales - previousSales
+            Dim result As Decimal = (growth / previousSales) * 100
 
             Return result.ToString("F2") & "%"
         End Function
+
 
 
     End Class
