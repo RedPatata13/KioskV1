@@ -8,6 +8,7 @@ Namespace KioskV0.Classes
         Public Property Cart As Dictionary(Of String, OrderDetail)
         Public Property SelectedOrderType As String
         Public Property OrderNumber As String
+        Public Property OrderNote As String
         Public Sub New(view As CustomerConfirmOrderView, mediator As Mediator(Of CustomerKeys))
             MyBase.New(view, mediator)
 
@@ -95,8 +96,16 @@ Namespace KioskV0.Classes
             Dim addNote As New CustomerAddNoteUserControl()
             addNote.Dock = DockStyle.Fill
 
-            'add note sa anik
-
+            addNote.NoteText = OrderNote
+            AddHandler addNote.SaveNoteClick, Sub(note As String)
+                                                  OrderNote = note
+                                                  _view.ConfirmOrderPanel.Visible = False
+                                                  LoadOrderDetails()
+                                              End Sub
+            AddHandler addNote.BackClick, Sub()
+                                              _view.ConfirmOrderPanel.Visible = False
+                                              LoadOrderDetails()
+                                          End Sub
             _view.ConfirmOrderPanel.Controls.Add(addNote)
             _view.ConfirmOrderPanel.BringToFront()
             _view.ConfirmOrderPanel.Visible = True

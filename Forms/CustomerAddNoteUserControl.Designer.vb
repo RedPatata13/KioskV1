@@ -24,7 +24,7 @@
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
             Me.MenuName = New Guna.UI2.WinForms.Guna2HtmlLabel()
-            Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
+            Me.NoteTextBox = New Guna.UI2.WinForms.Guna2TextBox()
             Me.SaveNoteButton = New Guna.UI2.WinForms.Guna2Button()
             Me.BackButton = New Guna.UI2.WinForms.Guna2Button()
             Me.SuspendLayout()
@@ -39,26 +39,26 @@
             Me.MenuName.TabIndex = 2
             Me.MenuName.Text = "Add note"
             '
-            'Guna2TextBox1
+            'NoteTextBox
             '
-            Me.Guna2TextBox1.BorderColor = System.Drawing.Color.Black
-            Me.Guna2TextBox1.BorderRadius = 20
-            Me.Guna2TextBox1.BorderThickness = 2
-            Me.Guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
-            Me.Guna2TextBox1.DefaultText = ""
-            Me.Guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-            Me.Guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-            Me.Guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-            Me.Guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-            Me.Guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.Guna2TextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-            Me.Guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.Guna2TextBox1.Location = New System.Drawing.Point(261, 132)
-            Me.Guna2TextBox1.Name = "Guna2TextBox1"
-            Me.Guna2TextBox1.PlaceholderText = ""
-            Me.Guna2TextBox1.SelectedText = ""
-            Me.Guna2TextBox1.Size = New System.Drawing.Size(843, 484)
-            Me.Guna2TextBox1.TabIndex = 3
+            Me.NoteTextBox.BorderColor = System.Drawing.Color.Black
+            Me.NoteTextBox.BorderRadius = 20
+            Me.NoteTextBox.BorderThickness = 2
+            Me.NoteTextBox.Cursor = System.Windows.Forms.Cursors.IBeam
+            Me.NoteTextBox.DefaultText = ""
+            Me.NoteTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+            Me.NoteTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+            Me.NoteTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+            Me.NoteTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+            Me.NoteTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+            Me.NoteTextBox.Font = New System.Drawing.Font("Poppins", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.NoteTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+            Me.NoteTextBox.Location = New System.Drawing.Point(261, 132)
+            Me.NoteTextBox.Name = "NoteTextBox"
+            Me.NoteTextBox.PlaceholderText = "Add note here"
+            Me.NoteTextBox.SelectedText = ""
+            Me.NoteTextBox.Size = New System.Drawing.Size(843, 484)
+            Me.NoteTextBox.TabIndex = 3
             '
             'SaveNoteButton
             '
@@ -111,7 +111,7 @@
             Me.BackColor = System.Drawing.Color.White
             Me.Controls.Add(Me.BackButton)
             Me.Controls.Add(Me.SaveNoteButton)
-            Me.Controls.Add(Me.Guna2TextBox1)
+            Me.Controls.Add(Me.NoteTextBox)
             Me.Controls.Add(Me.MenuName)
             Me.Name = "CustomerAddNoteUserControl"
             Me.Size = New System.Drawing.Size(1370, 749)
@@ -121,7 +121,7 @@
         End Sub
 
         Friend WithEvents MenuName As Guna.UI2.WinForms.Guna2HtmlLabel
-        Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
+        Friend WithEvents NoteTextBox As Guna.UI2.WinForms.Guna2TextBox
         Friend WithEvents SaveNoteButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents BackButton As Guna.UI2.WinForms.Guna2Button
     End Class

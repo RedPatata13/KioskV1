@@ -323,6 +323,7 @@
             Me.Thumbnail.Margin = New System.Windows.Forms.Padding(2)
             Me.Thumbnail.Name = "Thumbnail"
             Me.Thumbnail.Size = New System.Drawing.Size(574, 488)
+            Me.Thumbnail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
             Me.Thumbnail.TabIndex = 7
             Me.Thumbnail.TabStop = False
             '

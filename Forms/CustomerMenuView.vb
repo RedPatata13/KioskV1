@@ -50,6 +50,8 @@ Namespace KioskV0.Forms
             CategoryClick?.Invoke("Category3")
         End Sub
 
+        Private Sub MenuFlowLayout_Paint(sender As Object, e As PaintEventArgs) Handles MenuFlowLayout.Paint
 
+        End Sub
     End Class
 End Namespace

@@ -32,15 +32,16 @@ Namespace KioskV0.Forms
             QuantityTextBox.Text = _order.Quantity.ToString()
             ItemPrice.Text = $"P{_order.CustomerItem.SellingCost:N2}"
             ItemTotalPrice.Text = $"P{_order.CustomerItem.SellingCost * _order.Quantity:N2}"
+
             Dim defaultImagePath As String = "picture.png"
 
-            'Dim imagePath As String = If(String.IsNullOrWhiteSpace(_model.ImageFilePath), defaultImagePath, _model.ImageFilePath)
+            Dim imagePath As String = If(String.IsNullOrWhiteSpace(_order.CustomerItem.ImageFilePath), defaultImagePath, _order.CustomerItem.ImageFilePath)
 
-            'If File.Exists(imagePath) Then
-            '    MenuPictureBox.Image = Image.FromFile(imagePath)
-            'Else
-            '    MenuPictureBox.Image = Nothing
-            'End If
+            If File.Exists(imagePath) Then
+                MenuPictureBox.Image = Image.FromFile(imagePath)
+            Else
+                MenuPictureBox.Image = Nothing
+            End If
 
 
         End Sub
