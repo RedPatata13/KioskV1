@@ -34,6 +34,7 @@
             Me.StaffNameComboBox = New Guna.UI2.WinForms.Guna2ComboBox()
             Me.SearchItem = New Guna.UI2.WinForms.Guna2TextBox()
             Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me.DatePickerFilter = New Guna.UI2.WinForms.Guna2DateTimePicker()
             CType(Me.StaffTransacDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
@@ -66,7 +67,7 @@
             DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.StaffTransacDataGrid.DefaultCellStyle = DataGridViewCellStyle3
             Me.StaffTransacDataGrid.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.StaffTransacDataGrid.Location = New System.Drawing.Point(77, 154)
+            Me.StaffTransacDataGrid.Location = New System.Drawing.Point(77, 173)
             Me.StaffTransacDataGrid.Margin = New System.Windows.Forms.Padding(2)
             Me.StaffTransacDataGrid.Name = "StaffTransacDataGrid"
             Me.StaffTransacDataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -127,7 +128,7 @@
             Me.StaffNameComboBox.Font = New System.Drawing.Font("Poppins", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.StaffNameComboBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
             Me.StaffNameComboBox.ItemHeight = 30
-            Me.StaffNameComboBox.Location = New System.Drawing.Point(77, 110)
+            Me.StaffNameComboBox.Location = New System.Drawing.Point(77, 101)
             Me.StaffNameComboBox.Margin = New System.Windows.Forms.Padding(2)
             Me.StaffNameComboBox.Name = "StaffNameComboBox"
             Me.StaffNameComboBox.Size = New System.Drawing.Size(144, 36)
@@ -150,7 +151,7 @@
             Me.SearchItem.IconLeft = CType(resources.GetObject("SearchItem.IconLeft"), System.Drawing.Image)
             Me.SearchItem.IconLeftOffset = New System.Drawing.Point(10, 0)
             Me.SearchItem.IconLeftSize = New System.Drawing.Size(25, 25)
-            Me.SearchItem.Location = New System.Drawing.Point(936, 96)
+            Me.SearchItem.Location = New System.Drawing.Point(936, 87)
             Me.SearchItem.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
             Me.SearchItem.Name = "SearchItem"
             Me.SearchItem.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(198, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(191, Byte), Integer))
@@ -171,12 +172,27 @@
             Me.Guna2HtmlLabel1.TabIndex = 9
             Me.Guna2HtmlLabel1.Text = "Staff Transactions"
             '
+            'DatePickerFilter
+            '
+            Me.DatePickerFilter.Checked = True
+            Me.DatePickerFilter.FillColor = System.Drawing.Color.White
+            Me.DatePickerFilter.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+            Me.DatePickerFilter.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
+            Me.DatePickerFilter.Location = New System.Drawing.Point(77, 142)
+            Me.DatePickerFilter.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
+            Me.DatePickerFilter.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
+            Me.DatePickerFilter.Name = "DatePickerFilter"
+            Me.DatePickerFilter.Size = New System.Drawing.Size(189, 22)
+            Me.DatePickerFilter.TabIndex = 10
+            Me.DatePickerFilter.Value = New Date(2025, 4, 17, 22, 32, 11, 546)
+            '
             'AdminStaffTransactionsView
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
             Me.ClientSize = New System.Drawing.Size(1321, 878)
+            Me.Controls.Add(Me.DatePickerFilter)
             Me.Controls.Add(Me.Guna2HtmlLabel1)
             Me.Controls.Add(Me.StaffNameComboBox)
             Me.Controls.Add(Me.StaffTransacDataGrid)
@@ -196,6 +212,7 @@
         Friend WithEvents ProductName As DataGridViewTextBoxColumn
         Friend WithEvents StaffNameComboBox As Guna.UI2.WinForms.Guna2ComboBox
         Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
+        Friend WithEvents DatePickerFilter As Guna.UI2.WinForms.Guna2DateTimePicker
     End Class
 
 End Namespace

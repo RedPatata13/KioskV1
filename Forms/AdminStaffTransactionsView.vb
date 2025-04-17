@@ -51,5 +51,14 @@ Namespace KioskV0.Forms
         Private Sub SearchItem_TextChanged(sender As Object, e As EventArgs) Handles SearchItem.TextChanged
             SearchInput?.Invoke()
         End Sub
+
+        'here dinagdag q - dags
+        Public Property DateFilterChanged As Action
+
+        Private Sub DatePickerFilter_ValueChanged(sender As Object, e As EventArgs) Handles DatePickerFilter.ValueChanged
+            If DateFilterChanged IsNot Nothing Then DateFilterChanged.Invoke()
+        End Sub
+
+
     End Class
 End Namespace

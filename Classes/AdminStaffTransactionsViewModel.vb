@@ -32,6 +32,7 @@ Namespace KioskV0.Classes
         Protected Friend Overrides Sub SetEvents()
             _view.StaffNameCBChanged = AddressOf UpdateDGV
             _view.SearchInput = AddressOf Search
+            _view.DateFilterChanged = AddressOf FilterByDate 'then i2 - dags
         End Sub
         Public Overrides Sub Project(projector As Form)
             If Not Loaded Then
@@ -99,6 +100,18 @@ Namespace KioskV0.Classes
                 MessageBox.Show("An error occurred while searching: " & ex.Message, "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 _view.DGV_Source = New BindingSource With {.DataSource = _mediator.GetUnitOfWork.TransactedOrder.GetAll()}
             End Try
+        End Sub
+
+        'eto dinagdag ko - dags
+        Private Sub FilterByDate()
+            Dim selectedDate = _view.DatePickerFilter.Value.Date
+            Dim selectedStaff = _view.StaffNameComboBox.SelectedItem?.ToString()
+            Dim all = _ordercache
+
+            Dim filteredList = all.Where(Function(detail) detail.Order IsNot Nothing AndAlso detail.Order.CreatedAt.Date = selectedDate AndAlso (selectedStaff = "All" OrElse detail.Order.User?.Username = selectedStaff)).ToList()
+
+            _view.DGV_Source = New BindingSource With {.DataSource = filteredList}
+
         End Sub
 
     End Class

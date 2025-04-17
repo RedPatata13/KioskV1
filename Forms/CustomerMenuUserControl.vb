@@ -49,6 +49,7 @@ Namespace KioskV0.Forms
             Next
         End Sub
 
+        'i2 - dags 
         Private Property _outOfOrder As String
         Public Property OutOfOrder As String
             Get
@@ -59,8 +60,6 @@ Namespace KioskV0.Forms
                 OutofOrderLabel.ForeColor = Color.Gray
             End Set
         End Property
-
-
 
 
     End Class
