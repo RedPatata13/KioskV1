@@ -83,30 +83,22 @@ Namespace KioskV0.Forms
                 PageLabel.Text = value
             End Set
         End Property
-        Private _imageFilePath As String
-        Private ReadOnly defaultImagePath As String = "picture.png"
+        Private _productImagePath As String
 
-        Public Property ImageFilePath As String
+        Public Property ProductImagePath As String
             Get
-                If String.IsNullOrWhiteSpace(_imageFilePath) Then
-                    Return defaultImagePath
-                End If
-                Return _imageFilePath
+                Return _productImagePath
             End Get
             Set(value As String)
-                _imageFilePath = value
+                _productImagePath = value
 
-                ' Set thumbnail image based on the file path
-                If File.Exists(value) Then
-                    Thumbnail.Image = Image.FromFile(value)
-                ElseIf File.Exists(defaultImagePath) Then
-                    Thumbnail.Image = Image.FromFile(defaultImagePath)
+                If Not String.IsNullOrEmpty(_productImagePath) AndAlso IO.File.Exists(_productImagePath) Then
+                    Thumbnail.Image = Image.FromFile(_productImagePath)
                 Else
                     Thumbnail.Image = Nothing
                 End If
             End Set
         End Property
-
 
 
         Public Sub ResetFields()

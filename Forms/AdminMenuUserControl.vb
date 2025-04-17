@@ -41,12 +41,8 @@ Namespace KioskV0.Forms
             CategoryLabel.Text = _model.Category?.CategoryName
             PriceLabel.Text = $"P{_model.SellingCost}"
 
-            Dim defaultImagePath As String = "picture.png"
-
-            Dim imagePath As String = If(String.IsNullOrWhiteSpace(_model.ImageFilePath), defaultImagePath, _model.ImageFilePath)
-
-            If File.Exists(imagePath) Then
-                ProductPictureBox.Image = Image.FromFile(imagePath)
+            If Not String.IsNullOrEmpty(_model.ImageFilePath) AndAlso IO.File.Exists(_model.ImageFilePath) Then
+                ProductPictureBox.Image = Image.FromFile(_model.ImageFilePath)
             Else
                 ProductPictureBox.Image = Nothing
             End If
