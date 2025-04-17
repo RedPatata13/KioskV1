@@ -12,7 +12,7 @@ Namespace KioskV0.Classes
         Private Property _cartItemIDs As New Dictionary(Of String, OrderDetail)
         Private Property _deletedItemsQueue As New Queue(Of OrderDetail)
         Private Property _changeCartDeletedItems As New Queue(Of OrderDetail)
-        Private Property _pandingChanges As New Dictionary(Of String, OrderDetail)
+        'Private Property Pen
         Private Property DontAskAgain As Boolean = False
         Private Property Loaded As Boolean = False
 
@@ -276,8 +276,6 @@ Namespace KioskV0.Classes
             _deletedItemsQueue.Clear()
             _changeCartDeletedItems.Clear()
         End Sub
-
-
     End Class
 
 End Namespace
