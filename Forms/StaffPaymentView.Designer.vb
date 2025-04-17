@@ -34,7 +34,6 @@
             Me.PaymentChoiceCombobox = New Guna.UI2.WinForms.Guna2ComboBox()
             Me.Guna2HtmlLabel6 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.NoteTextBox = New Guna.UI2.WinForms.Guna2TextBox()
-            Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
             Me.SubmitPaymentButton = New Guna.UI2.WinForms.Guna2Button()
             Me.SuspendLayout()
             '
@@ -113,9 +112,9 @@
             Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(35, 216)
             Me.Guna2HtmlLabel3.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
-            Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(194, 46)
+            Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(108, 46)
             Me.Guna2HtmlLabel3.TabIndex = 15
-            Me.Guna2HtmlLabel3.Text = "Paying Amount"
+            Me.Guna2HtmlLabel3.Text = "Subtotal"
             '
             'Guna2HtmlLabel4
             '
@@ -206,19 +205,12 @@
             Me.NoteTextBox.ForeColor = System.Drawing.Color.Black
             Me.NoteTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.NoteTextBox.Location = New System.Drawing.Point(35, 621)
+            Me.NoteTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.NoteTextBox.Name = "NoteTextBox"
             Me.NoteTextBox.PlaceholderText = ""
             Me.NoteTextBox.SelectedText = ""
             Me.NoteTextBox.Size = New System.Drawing.Size(478, 126)
             Me.NoteTextBox.TabIndex = 21
-            '
-            'FlowLayoutPanel1
-            '
-            Me.FlowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.FlowLayoutPanel1.Location = New System.Drawing.Point(603, 107)
-            Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-            Me.FlowLayoutPanel1.Size = New System.Drawing.Size(655, 467)
-            Me.FlowLayoutPanel1.TabIndex = 23
             '
             'SubmitPaymentButton
             '
@@ -248,7 +240,6 @@
             Me.Controls.Add(Me.PayingAmountTextBox)
             Me.Controls.Add(Me.Guna2HtmlLabel1)
             Me.Controls.Add(Me.SubmitPaymentButton)
-            Me.Controls.Add(Me.FlowLayoutPanel1)
             Me.Controls.Add(Me.NoteTextBox)
             Me.Controls.Add(Me.Guna2HtmlLabel6)
             Me.Controls.Add(Me.PaymentChoiceCombobox)
@@ -278,7 +269,6 @@
         Friend WithEvents PaymentChoiceCombobox As Guna.UI2.WinForms.Guna2ComboBox
         Friend WithEvents Guna2HtmlLabel6 As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents NoteTextBox As Guna.UI2.WinForms.Guna2TextBox
-        Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
         Friend WithEvents SubmitPaymentButton As Guna.UI2.WinForms.Guna2Button
     End Class
 

@@ -23,7 +23,7 @@ Partial Class StaffPosConfirmationUserControl
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Confirm = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Message = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Checkbox = New Guna.UI2.WinForms.Guna2CheckBox()
         Me.ConfirmClick = New Guna.UI2.WinForms.Guna2Button()
         Me.CancelClick = New Guna.UI2.WinForms.Guna2Button()
@@ -39,15 +39,15 @@ Partial Class StaffPosConfirmationUserControl
         Me.Confirm.TabIndex = 0
         Me.Confirm.Text = "Confirm deletion of object?"
         '
-        'Guna2HtmlLabel1
+        'Message
         '
-        Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(8, 40)
-        Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(339, 21)
-        Me.Guna2HtmlLabel1.TabIndex = 1
-        Me.Guna2HtmlLabel1.Text = "Are you sure you wish to remove this item from the order list?"
+        Me.Message.BackColor = System.Drawing.Color.Transparent
+        Me.Message.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Message.Location = New System.Drawing.Point(8, 40)
+        Me.Message.Name = "Message"
+        Me.Message.Size = New System.Drawing.Size(339, 21)
+        Me.Message.TabIndex = 1
+        Me.Message.Text = "Are you sure you wish to remove this item from the order list?"
         '
         'Checkbox
         '
@@ -103,7 +103,7 @@ Partial Class StaffPosConfirmationUserControl
         Me.Controls.Add(Me.CancelClick)
         Me.Controls.Add(Me.ConfirmClick)
         Me.Controls.Add(Me.Checkbox)
-        Me.Controls.Add(Me.Guna2HtmlLabel1)
+        Me.Controls.Add(Me.Message)
         Me.Controls.Add(Me.Confirm)
         Me.Name = "StaffPosConfirmationUserControl"
         Me.Size = New System.Drawing.Size(428, 148)
@@ -113,7 +113,7 @@ Partial Class StaffPosConfirmationUserControl
     End Sub
 
     Friend WithEvents Confirm As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Message As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Checkbox As Guna.UI2.WinForms.Guna2CheckBox
     Friend WithEvents ConfirmClick As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents CancelClick As Guna.UI2.WinForms.Guna2Button

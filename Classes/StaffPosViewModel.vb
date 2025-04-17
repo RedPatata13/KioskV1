@@ -1,4 +1,6 @@
-﻿Imports System.Runtime.InteropServices
+﻿Imports System.Net.Security
+Imports System.Runtime.InteropServices
+Imports System.Runtime.InteropServices.ComTypes
 Imports KioskV0.KioskV0.Forms
 Imports LiveCharts
 
@@ -11,6 +13,7 @@ Namespace KioskV0.Classes
         Private Property _changeCart As New Dictionary(Of String, OrderDetail)
         Private Property _cartItemIDs As New Dictionary(Of String, OrderDetail)
         Private Property _deletedItemsQueue As New Queue(Of OrderDetail)
+        Private Property DeletedItems As HashSet(Of OrderDetail)
         Private Property _changeCartDeletedItems As New Queue(Of OrderDetail)
         'Private Property Pen
         Private Property DontAskAgain As Boolean = False
@@ -38,18 +41,17 @@ Namespace KioskV0.Classes
             Set(value As Dictionary(Of String, OrderDetail))
                 _changeCart = value
                 _view.MenuItemsFlowLayoutPanel.Controls.Clear()
-                Dim del_behaviour = Sub()
-                                        While _changeCartDeletedItems.Count > 0
-                                            _changeCart.Remove(_changeCartDeletedItems.Dequeue().OrderDetailsId)
-                                        End While
+                Dim del_behaviour = Sub(uc As StaffPosOrderUserControl)
+                                        _changeCart.Remove(uc.Model.OrderDetailsId)
                                     End Sub
                 For Each kv In _changeCart
                     Dim uc = New StaffPosOrderUserControl()
                     'Dim uc1 = New CustomerMenuUserControl(kv.Value.CustomerItem)
                     uc.Model = kv.Value
                     uc.DeleteClick = Sub()
-                                         del_behaviour.Invoke()
+                                         _changeCartDeletedItems.Enqueue(uc.Model)
                                          _view.MenuItemsFlowLayoutPanel.Controls.Remove(uc)
+                                         del_behaviour.Invoke(uc)
                                          uc.Dispose()
                                      End Sub
                     _view.MenuItemsFlowLayoutPanel.Controls.Add(uc)
@@ -84,10 +86,11 @@ Namespace KioskV0.Classes
         Protected Friend Overrides Sub SetEvents()
             MyBase.SetEvents()
 
-            _view.PayButtonClick = AddressOf PayButtonClick
+            _view.PayButtonClick = AddressOf Pay
             _view.AddMoreClick = AddressOf AddMoreClick
             _view.OrderTextBoxTextchanged = Sub() LoadOrder(_view.SearchOrderTextbox.Text)
             _view.AddAllItemsToOrder = Sub() AddAllItemsToOrder()
+            _view.DiscardButtonClick = AddressOf DiscardButtonClick
         End Sub
         Private Sub AddAllItemsToOrder()
             Dim context = DirectCast(_mediator.GetUnitOfWork, UnitOfWork)._context
@@ -103,31 +106,31 @@ Namespace KioskV0.Classes
                     Dim target As OrderDetail = _cartItemIDs(val.CustomerItem.Id)
                     target.Quantity += val.Quantity
                     'check if Order Detail locally exists
-                    Dim local_od_cpy = context.OrderDetails.Local.FirstOrDefault(Function(od) od.OrderDetailsId = target.OrderDetailsId)
-                    If local_od_cpy Is Nothing Then
+                    'Dim local_od_cpy = context.OrderDetails.Local.FirstOrDefault(Function(od) od.OrderDetailsId = target.OrderDetailsId)
+                    'If local_od_cpy Is Nothing Then
 
-                        'check if Order Detail exists in the DB
-                        local_od_cpy = context.OrderDetails.Find(target.OrderDetailsId)
-                        If local_od_cpy Is Nothing Then
+                    '    'check if Order Detail exists in the DB
+                    '    local_od_cpy = context.OrderDetails.Find(target.OrderDetailsId)
+                    '    If local_od_cpy Is Nothing Then
 
-                            'order Details does not exist
-                            Throw New Exception($"Order Detail with id: {target.OrderDetailsId} does not exist in the Database")
-                        End If
-                    End If
+                    '        'order Details does not exist
+                    '        Throw New Exception($"Order Detail with id: {target.OrderDetailsId} does not exist in the Database")
+                    '    End If
+                    'End If
 
-                    local_od_cpy.Quantity = target.Quantity
-                    context.Categories.Attach(val.CustomerItem.Category)
+                    'local_od_cpy.Quantity = target.Quantity
+                    'context.Categories.Attach(val.CustomerItem.Category)
                     'context.AdminItems.Attach(val.CustomerItem)
-                    _mediator.GetUnitOfWork.OrderDetails.Update(local_od_cpy)
-                    MessageBox.Show("Item succesffuly updated")
+                    '_mediator.GetUnitOfWork.OrderDetails.Update(local_od_cpy)
+                    'MessageBox.Show("Item succesffuly updated")
                     Continue For
                 End If
 
                 'item does not exist in the cart
                 _cart.Add(val.OrderDetailsId, val)
                 _cartItemIDs.Add(val.CustomerItem.Id, val)
-                context.Categories.Attach(val.CustomerItem.Category)
-                context.AdminItems.Attach(val.CustomerItem)
+                'context.Categories.Attach(val.CustomerItem.Category)
+                'context.AdminItems.Attach(val.CustomerItem)
                 Dim uc = New StaffPosOrderUserControl()
                 uc.Model = val
                 uc.DeleteClick = Sub() DeleteClick(uc)
@@ -135,10 +138,10 @@ Namespace KioskV0.Classes
                 val.OrderId = _currOrd.OrderId
 
 
-                _mediator.GetUnitOfWork.OrderDetails.Add(val)
+                '_mediator.GetUnitOfWork.OrderDetails.Add(val)
             Next
-
-            _mediator.GetUnitOfWork.SaveChanges()
+            MessageBox.Show("Order Updated")
+            '_mediator.GetUnitOfWork.SaveChanges()
             IncomingCartItems.Clear()
             _view.CurrentItemsFlowPanel.Controls.Clear()
             _view.MenuItemsFlowLayoutPanel.Controls.Clear()
@@ -186,7 +189,7 @@ Namespace KioskV0.Classes
                                         _view.CurrentItemsFlowPanel.Controls.Remove(uc)
                                         _view.Controls.Remove(confirmPanel)
                                         _view.Controls.Remove(backdrop)
-                                        _currOrd.OrderItems.Remove(uc.Model)
+                                        '_currOrd.OrderItems.Remove(uc.Model)
                                         _deletedItemsQueue.Enqueue(uc.Model)
                                         uc.Dispose()
                                         DontAskAgain = confirmPanel.Checkbox.Checked
@@ -224,47 +227,59 @@ Namespace KioskV0.Classes
                 DontAskAgain = True
             End If
         End Sub
-
-        Private Sub PayButtonClick()
+        Private Sub Pay()
             If _currOrd Is Nothing Then
                 MessageBox.Show("There's no order selected")
                 Return
             End If
-            Dim context = DirectCast(_mediator.GetUnitOfWork, UnitOfWork)._context
-            Dim total As Decimal = 0.0
-            For Each item In _currOrd.OrderItems
-                context.OrderDetails.Attach(item)
-                _mediator.GetUnitOfWork.OrderDetails.Update(item)
-                total += item.CustomerItem.SellingCost * item.Quantity
-            Next
-            If total > 0 Then
-                context.OrderPrimals.Attach(_currOrd)
-                Dim user = _mediator.CurrentUser
+            Dim vm = DirectCast(_mediator.GetVM(StaffKeys.StaffPayment), StaffPaymentViewModel)
+            Dim total = Cart.Values.
+                Where(Function(od) od?.CustomerItem IsNot Nothing).
+                Sum(Function(od) od.CustomerItem.SellingCost * od.Quantity)
+            Dim model = PayButtonClick(total)
+            Dim pending = Sub()
+                              ResolveChanges()
+                              _mediator.GetUnitOfWork.TransactedOrder.Add(model)
+                              _mediator.GetUnitOfWork.SaveChanges()
+                              ResetFields()
+                          End Sub
+            vm.LoadWithDetails(total, pending, model)
+        End Sub
 
-                context.Users.Attach(user)
-                Dim model = New TransactedOrder With {
+        Private Function PayButtonClick(total As Decimal) As TransactedOrder
+            'ResolveChanges()
+            Dim context = DirectCast(_mediator.GetUnitOfWork, UnitOfWork)._context
+            Dim order = context.OrderPrimals.Local.FirstOrDefault(Function(o) o.OrderId = _currOrd.OrderId)
+            If order Is Nothing Then
+                order = context.OrderPrimals.Find(_currOrd.OrderId)
+                If order Is Nothing Then
+                    Throw New Exception($"Order with Order ID: {_currOrd.OrderId} not found.")
+                End If
+            End If
+
+
+            context.OrderPrimals.Attach(order)
+            Dim user = _mediator.CurrentUser
+
+            context.Users.Attach(user)
+            Dim model = New TransactedOrder With {
                     .TransactedOrderId = "TRORD_" & Guid.NewGuid().ToString().Substring(0, 5),
-                    .OrderId = _currOrd.OrderId,
-                    .Order = _currOrd,
-                    .CashPaid = 10000,
+                    .OrderId = order.OrderId,
+                    .Order = order,
                     .SubTotal = total,
-                    .Change = 10000 - total,
                     .DateTransacted = DateTime.Now,
                     .IsFinalized = True,
                     .UserId = user.UserId,
                     .User = user
                 }
-                While _deletedItemsQueue.Count > 0
-                    _mediator.GetUnitOfWork.OrderDetails.Delete(_deletedItemsQueue.Dequeue().OrderDetailsId)
-                End While
-                _mediator.GetUnitOfWork.TransactedOrder.Add(model)
-                _mediator.GetUnitOfWork.SaveChanges()
-                MessageBox.Show("Transaction Successful!")
-                ResetFields()
-            Else
-                MessageBox.Show("There are no Items")
-            End If
-        End Sub
+
+
+
+            'MessageBox.Show("Transaction Successful!")
+
+            'ResetFields()
+            Return model
+        End Function
 
         Private Sub ResetFields()
             _view.CurrentItemsFlowPanel.Controls.Clear()
@@ -275,6 +290,122 @@ Namespace KioskV0.Classes
             _cartItemIDs.Clear()
             _deletedItemsQueue.Clear()
             _changeCartDeletedItems.Clear()
+        End Sub
+
+        Private Sub ResolveChanges()
+            ''Assumes that base and Cart uses the same Values
+            Dim context = DirectCast(_mediator.GetUnitOfWork, UnitOfWork)._context
+            Dim base As New Dictionary(Of String, OrderDetail)
+            For Each item In _currOrd.OrderItems
+                base.Add(item.OrderDetailsId, item)
+            Next
+
+            'Resolve quantity changes
+            For Each item In Cart
+                If base.ContainsKey(item.Value.OrderDetailsId) Then
+                    base(item.Key).Quantity = item.Value.Quantity ' item is present in the original order which means it's quantity is to be updated
+                    context.OrderDetails.Attach(item.Value)
+                Else
+                    base.Add(item.Key, item.Value) ' item was only added during the session
+                    context.Categories.Attach(item.Value.CustomerItem.Category)
+                    context.AdminItems.Attach(item.Value.CustomerItem)
+                    item.Value.OrderId = _currOrd.OrderId
+                    _mediator.GetUnitOfWork.OrderDetails.Add(item.Value)
+
+                End If
+            Next
+
+            Dim toBeDeleted As New Queue(Of OrderDetail)
+            Dim subtotal = 0
+            'Added new items
+            For Each item In base
+                If Not Cart.ContainsKey(item.Key) Then 'items that exist in the base and not in the cart implies that it got deleted
+                    toBeDeleted.Enqueue(item.Value)
+                Else
+                    subtotal += item.Value.CustomerItem.SellingCost * item.Value.Quantity
+                End If
+            Next
+
+            Dim local_op_cpy = context.OrderPrimals.Local.FirstOrDefault(Function(op) op.OrderId = _currOrd.OrderId)
+            If local_op_cpy Is Nothing Then
+                local_op_cpy = context.OrderPrimals.Find(_currOrd.OrderId)
+                If local_op_cpy Is Nothing Then
+                    Throw New Exception($"Order with Order ID: {_currOrd.OrderId} does not exist.")
+                End If
+            End If
+
+            local_op_cpy.TotalPrice = subtotal
+            _mediator.GetUnitOfWork.Orders.Update(local_op_cpy)
+
+            'delete excluded items
+            While toBeDeleted.Count > 0
+                Dim item = toBeDeleted.Dequeue()
+
+                Dim local_od_cpy = context.OrderDetails.Local.FirstOrDefault(Function(c) c.OrderDetailsId = item.OrderDetailsId)
+                If local_od_cpy Is Nothing Then
+                    local_od_cpy = context.OrderDetails.Find(item.OrderDetailsId)
+                    If local_od_cpy Is Nothing Then
+                        Throw New Exception($"Order Detail with ID: {item.OrderDetailsId} does not exist.")
+                    End If
+                End If
+
+                _mediator.GetUnitOfWork.OrderDetails.Delete(local_od_cpy.OrderDetailsId)
+            End While
+
+            _mediator.GetUnitOfWork.SaveChanges()
+
+            'ResetFields()
+        End Sub
+        Private Sub DiscardButtonClick()
+            If _currOrd IsNot Nothing Then
+                'ResetFields()
+                ChangeCartCheck()
+                Dim confirmPanel As StaffPosConfirmationUserControl = New StaffPosConfirmationUserControl()
+                confirmPanel.LabelMessage = "Are you sure you wish to discard this order? This action cannot be reversed."
+                Dim backdrop = New Panel()
+                Dim confirm As Action = Sub()
+                                            EnableControls()
+                                            ResetFields()
+                                            ChangeCartCheck()
+                                            DontAskAgain = confirmPanel.Checkbox.Checked
+                                            _view.Controls.Remove(backdrop)
+                                            _view.Controls.Remove(confirmPanel)
+                                        End Sub
+                Dim cancel As Action = Sub()
+                                           EnableControls()
+                                           'confirmPanel.Dispose()
+                                           _view.Controls.Remove(backdrop)
+                                           _view.Controls.Remove(confirmPanel)
+                                       End Sub
+                If Not DontAskAgain Then
+                    DisableControls()
+                    _view.Controls.Add(confirmPanel)
+                    confirmPanel.BringToFront()
+                    confirmPanel.CancelButtonClick = cancel
+                    confirmPanel.ConfirmButtonClick = confirm
+
+                    Dim size = _mediator.GetProjectorPanelSize()
+                    Dim x = size.Width / 2 - confirmPanel.Width / 2
+                    Dim y = size.Height / 2 - confirmPanel.Height / 2
+
+
+                    backdrop.Size = size
+                    backdrop.BackColor = Color.FromArgb(128, 0, 0, 0)
+                    backdrop.Parent = _view
+
+                    _view.Controls.Add(backdrop)
+                    backdrop.Location = New Point(0, 0)
+                    confirmPanel.Location = New Point(x, y)
+
+                    backdrop.BringToFront()
+                    confirmPanel.BringToFront()
+                Else
+                    confirm.Invoke()
+                    DontAskAgain = True
+                End If
+            Else
+                MessageBox.Show("No order is selected")
+            End If
         End Sub
     End Class
 

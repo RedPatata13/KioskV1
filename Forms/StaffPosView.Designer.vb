@@ -24,7 +24,7 @@
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
             Me.SearchOrderTextbox = New Guna.UI2.WinForms.Guna2TextBox()
-            Me.DeleteAllButton = New Guna.UI2.WinForms.Guna2Button()
+            Me.DiscardButton = New Guna.UI2.WinForms.Guna2Button()
             Me.PayButton = New Guna.UI2.WinForms.Guna2Button()
             Me.CurrentItemsFlowPanel = New System.Windows.Forms.FlowLayoutPanel()
             Me.MenuItemsFlowLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
@@ -54,24 +54,24 @@
             Me.SearchOrderTextbox.Size = New System.Drawing.Size(254, 34)
             Me.SearchOrderTextbox.TabIndex = 0
             '
-            'DeleteAllButton
+            'DiscardButton
             '
-            Me.DeleteAllButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.DeleteAllButton.BorderRadius = 17
-            Me.DeleteAllButton.BorderThickness = 1
-            Me.DeleteAllButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-            Me.DeleteAllButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-            Me.DeleteAllButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-            Me.DeleteAllButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-            Me.DeleteAllButton.FillColor = System.Drawing.Color.Transparent
-            Me.DeleteAllButton.Font = New System.Drawing.Font("Poppins", 12.0!)
-            Me.DeleteAllButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.DeleteAllButton.Location = New System.Drawing.Point(64, 744)
-            Me.DeleteAllButton.Name = "DeleteAllButton"
-            Me.DeleteAllButton.Size = New System.Drawing.Size(233, 39)
-            Me.DeleteAllButton.TabIndex = 2
-            Me.DeleteAllButton.Text = "Delete All"
-            Me.DeleteAllButton.TextOffset = New System.Drawing.Point(0, 2)
+            Me.DiscardButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.DiscardButton.BorderRadius = 17
+            Me.DiscardButton.BorderThickness = 1
+            Me.DiscardButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.DiscardButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.DiscardButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.DiscardButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.DiscardButton.FillColor = System.Drawing.Color.Transparent
+            Me.DiscardButton.Font = New System.Drawing.Font("Poppins", 12.0!)
+            Me.DiscardButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.DiscardButton.Location = New System.Drawing.Point(64, 744)
+            Me.DiscardButton.Name = "DiscardButton"
+            Me.DiscardButton.Size = New System.Drawing.Size(233, 39)
+            Me.DiscardButton.TabIndex = 2
+            Me.DiscardButton.Text = "Discard Order"
+            Me.DiscardButton.TextOffset = New System.Drawing.Point(0, 2)
             '
             'PayButton
             '
@@ -156,7 +156,7 @@
             Me.Controls.Add(Me.MenuItemsFlowLayoutPanel)
             Me.Controls.Add(Me.CurrentItemsFlowPanel)
             Me.Controls.Add(Me.PayButton)
-            Me.Controls.Add(Me.DeleteAllButton)
+            Me.Controls.Add(Me.DiscardButton)
             Me.Controls.Add(Me.SearchOrderTextbox)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
             Me.Name = "StaffPosView"
@@ -167,7 +167,7 @@
         End Sub
 
         Friend WithEvents SearchOrderTextbox As Guna.UI2.WinForms.Guna2TextBox
-        Friend WithEvents DeleteAllButton As Guna.UI2.WinForms.Guna2Button
+        Friend WithEvents DiscardButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents PayButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents CurrentItemsFlowPanel As FlowLayoutPanel
         Friend WithEvents MenuItemsFlowLayoutPanel As FlowLayoutPanel

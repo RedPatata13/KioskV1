@@ -4,6 +4,7 @@
         Public Property OrderTextBoxTextchanged As Action
         Public Property AddMoreClick As Action
         Public Property AddAllItemsToOrder As Action
+        Public Property DiscardButtonClick As Action
         Public Property Cart As Dictionary(Of String, AdminItem)
         Private Property Property1
 
@@ -23,6 +24,10 @@
 
         Private Sub AddItemsToOrder_Click(sender As Object, e As EventArgs) Handles AddItemsToOrder.Click
             AddAllItemsToOrder?.Invoke()
+        End Sub
+
+        Private Sub DiscardButton_Click(sender As Object, e As EventArgs) Handles DiscardButton.Click
+            DiscardButtonClick?.Invoke()
         End Sub
     End Class
 End Namespace
