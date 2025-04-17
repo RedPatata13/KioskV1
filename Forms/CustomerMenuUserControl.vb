@@ -48,6 +48,21 @@ Namespace KioskV0.Forms
                 ApplyClickEvent(child)
             Next
         End Sub
+
+        Private Property _outOfOrder As String
+        Public Property OutOfOrder As String
+            Get
+                Return OutofOrderLabel.Text
+            End Get
+            Set(value As String)
+                OutofOrderLabel.Text = value
+                OutofOrderLabel.ForeColor = Color.Gray
+            End Set
+        End Property
+
+
+
+
     End Class
 
 End Namespace

@@ -24,9 +24,10 @@
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
             Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-            Me.ProductPictureBox = New Guna.UI2.WinForms.Guna2CirclePictureBox()
-            Me.ProductName = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.PriceLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me.ProductName = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me.ProductPictureBox = New Guna.UI2.WinForms.Guna2CirclePictureBox()
+            Me.OutofOrderLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.Guna2Panel1.SuspendLayout()
             CType(Me.ProductPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
@@ -35,6 +36,7 @@
             '
             Me.Guna2Panel1.BorderRadius = 15
             Me.Guna2Panel1.BorderThickness = 1
+            Me.Guna2Panel1.Controls.Add(Me.OutofOrderLabel)
             Me.Guna2Panel1.Controls.Add(Me.PriceLabel)
             Me.Guna2Panel1.Controls.Add(Me.ProductName)
             Me.Guna2Panel1.Controls.Add(Me.ProductPictureBox)
@@ -44,16 +46,16 @@
             Me.Guna2Panel1.Size = New System.Drawing.Size(198, 206)
             Me.Guna2Panel1.TabIndex = 0
             '
-            'ProductPictureBox
+            'PriceLabel
             '
-            Me.ProductPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.ProductPictureBox.ImageRotate = 0!
-            Me.ProductPictureBox.Location = New System.Drawing.Point(17, 18)
-            Me.ProductPictureBox.Name = "ProductPictureBox"
-            Me.ProductPictureBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-            Me.ProductPictureBox.Size = New System.Drawing.Size(165, 111)
-            Me.ProductPictureBox.TabIndex = 1
-            Me.ProductPictureBox.TabStop = False
+            Me.PriceLabel.BackColor = System.Drawing.Color.Transparent
+            Me.PriceLabel.Font = New System.Drawing.Font("Poppins Light", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.PriceLabel.Location = New System.Drawing.Point(66, 174)
+            Me.PriceLabel.Margin = New System.Windows.Forms.Padding(2)
+            Me.PriceLabel.Name = "PriceLabel"
+            Me.PriceLabel.Size = New System.Drawing.Size(50, 27)
+            Me.PriceLabel.TabIndex = 3
+            Me.PriceLabel.Text = "P00.00"
             '
             'ProductName
             '
@@ -66,16 +68,27 @@
             Me.ProductName.TabIndex = 2
             Me.ProductName.Text = "Product Name"
             '
-            'PriceLabel
+            'ProductPictureBox
             '
-            Me.PriceLabel.BackColor = System.Drawing.Color.Transparent
-            Me.PriceLabel.Font = New System.Drawing.Font("Poppins Light", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.PriceLabel.Location = New System.Drawing.Point(66, 174)
-            Me.PriceLabel.Margin = New System.Windows.Forms.Padding(2)
-            Me.PriceLabel.Name = "PriceLabel"
-            Me.PriceLabel.Size = New System.Drawing.Size(50, 27)
-            Me.PriceLabel.TabIndex = 3
-            Me.PriceLabel.Text = "P00.00"
+            Me.ProductPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.ProductPictureBox.ImageRotate = 0!
+            Me.ProductPictureBox.Location = New System.Drawing.Point(17, 18)
+            Me.ProductPictureBox.Name = "ProductPictureBox"
+            Me.ProductPictureBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+            Me.ProductPictureBox.Size = New System.Drawing.Size(165, 111)
+            Me.ProductPictureBox.TabIndex = 1
+            Me.ProductPictureBox.TabStop = False
+            '
+            'OutofOrderLabel
+            '
+            Me.OutofOrderLabel.BackColor = System.Drawing.Color.Transparent
+            Me.OutofOrderLabel.Font = New System.Drawing.Font("Poppins", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.OutofOrderLabel.Location = New System.Drawing.Point(36, 102)
+            Me.OutofOrderLabel.Margin = New System.Windows.Forms.Padding(2)
+            Me.OutofOrderLabel.Name = "OutofOrderLabel"
+            Me.OutofOrderLabel.Size = New System.Drawing.Size(125, 36)
+            Me.OutofOrderLabel.TabIndex = 4
+            Me.OutofOrderLabel.Text = "Out Of Order"
             '
             'CustomerMenuUserControl
             '
@@ -96,6 +109,7 @@
         Friend WithEvents ProductPictureBox As Guna.UI2.WinForms.Guna2CirclePictureBox
         Friend WithEvents ProductName As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents PriceLabel As Guna.UI2.WinForms.Guna2HtmlLabel
+        Friend WithEvents OutofOrderLabel As Guna.UI2.WinForms.Guna2HtmlLabel
     End Class
 
 End Namespace
