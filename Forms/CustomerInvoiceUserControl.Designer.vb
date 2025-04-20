@@ -25,8 +25,8 @@
         Private Sub InitializeComponent()
             Me.OrderNumberLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.OrderPanel = New System.Windows.Forms.Panel()
-            Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.YourOrderLbl = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.CustomerReceiptLbl2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.CustomerReceiptLbl = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.PayButton = New Guna.UI2.WinForms.Guna2Button()
@@ -38,9 +38,9 @@
             Me.OrderNumberLabel.AutoSize = False
             Me.OrderNumberLabel.BackColor = System.Drawing.Color.Transparent
             Me.OrderNumberLabel.Font = New System.Drawing.Font("Poppins", 140.0!, System.Drawing.FontStyle.Bold)
-            Me.OrderNumberLabel.Location = New System.Drawing.Point(206, 62)
+            Me.OrderNumberLabel.Location = New System.Drawing.Point(220, 77)
             Me.OrderNumberLabel.Name = "OrderNumberLabel"
-            Me.OrderNumberLabel.Size = New System.Drawing.Size(367, 279)
+            Me.OrderNumberLabel.Size = New System.Drawing.Size(208, 252)
             Me.OrderNumberLabel.TabIndex = 2
             Me.OrderNumberLabel.Text = "31"
             Me.OrderNumberLabel.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft
@@ -56,16 +56,6 @@
             Me.OrderPanel.Size = New System.Drawing.Size(550, 336)
             Me.OrderPanel.TabIndex = 5
             '
-            'Guna2HtmlLabel1
-            '
-            Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Poppins", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(79, 209)
-            Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(84, 86)
-            Me.Guna2HtmlLabel1.TabIndex = 3
-            Me.Guna2HtmlLabel1.Text = "No."
-            '
             'YourOrderLbl
             '
             Me.YourOrderLbl.BackColor = System.Drawing.Color.Transparent
@@ -75,6 +65,16 @@
             Me.YourOrderLbl.Size = New System.Drawing.Size(272, 86)
             Me.YourOrderLbl.TabIndex = 0
             Me.YourOrderLbl.Text = "Your Order"
+            '
+            'Guna2HtmlLabel1
+            '
+            Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
+            Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Poppins", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(79, 209)
+            Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
+            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(84, 86)
+            Me.Guna2HtmlLabel1.TabIndex = 3
+            Me.Guna2HtmlLabel1.Text = "No."
             '
             'CustomerReceiptLbl2
             '
