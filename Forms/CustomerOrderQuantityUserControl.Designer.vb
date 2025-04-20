@@ -38,7 +38,7 @@
             '
             Me.QuantityTextBox.AutoSize = True
             Me.QuantityTextBox.Font = New System.Drawing.Font("Poppins SemiBold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.QuantityTextBox.Location = New System.Drawing.Point(698, 44)
+            Me.QuantityTextBox.Location = New System.Drawing.Point(881, 44)
             Me.QuantityTextBox.Name = "QuantityTextBox"
             Me.QuantityTextBox.Size = New System.Drawing.Size(39, 34)
             Me.QuantityTextBox.TabIndex = 44
@@ -57,7 +57,7 @@
             Me.AddOrderButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
             Me.AddOrderButton.Font = New System.Drawing.Font("Poppins Medium", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.AddOrderButton.ForeColor = System.Drawing.Color.Black
-            Me.AddOrderButton.Location = New System.Drawing.Point(716, 102)
+            Me.AddOrderButton.Location = New System.Drawing.Point(899, 102)
             Me.AddOrderButton.Name = "AddOrderButton"
             Me.AddOrderButton.Size = New System.Drawing.Size(204, 37)
             Me.AddOrderButton.TabIndex = 43
@@ -77,7 +77,7 @@
             Me.CancelButton.FillColor = System.Drawing.Color.White
             Me.CancelButton.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.CancelButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
-            Me.CancelButton.Location = New System.Drawing.Point(509, 102)
+            Me.CancelButton.Location = New System.Drawing.Point(692, 102)
             Me.CancelButton.Name = "CancelButton"
             Me.CancelButton.Size = New System.Drawing.Size(201, 37)
             Me.CancelButton.TabIndex = 42
@@ -98,7 +98,7 @@
             Me.DecButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.DecButton.ForeColor = System.Drawing.Color.White
             Me.DecButton.Image = CType(resources.GetObject("DecButton.Image"), System.Drawing.Image)
-            Me.DecButton.Location = New System.Drawing.Point(613, 41)
+            Me.DecButton.Location = New System.Drawing.Point(796, 41)
             Me.DecButton.Name = "DecButton"
             Me.DecButton.Size = New System.Drawing.Size(59, 35)
             Me.DecButton.TabIndex = 37
@@ -117,7 +117,7 @@
             Me.AddButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.AddButton.ForeColor = System.Drawing.Color.White
             Me.AddButton.Image = CType(resources.GetObject("AddButton.Image"), System.Drawing.Image)
-            Me.AddButton.Location = New System.Drawing.Point(765, 41)
+            Me.AddButton.Location = New System.Drawing.Point(948, 41)
             Me.AddButton.Name = "AddButton"
             Me.AddButton.Size = New System.Drawing.Size(59, 35)
             Me.AddButton.TabIndex = 36
@@ -130,14 +130,14 @@
             Me.Guna2Panel1.Controls.Add(Me.CancelButton)
             Me.Guna2Panel1.Controls.Add(Me.DecButton)
             Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-            Me.Guna2Panel1.Location = New System.Drawing.Point(0, 634)
+            Me.Guna2Panel1.Location = New System.Drawing.Point(0, 897)
             Me.Guna2Panel1.Name = "Guna2Panel1"
-            Me.Guna2Panel1.Size = New System.Drawing.Size(1426, 183)
+            Me.Guna2Panel1.Size = New System.Drawing.Size(1920, 183)
             Me.Guna2Panel1.TabIndex = 45
             '
             'productPanel
             '
-            Me.productPanel.Location = New System.Drawing.Point(613, 162)
+            Me.productPanel.Location = New System.Drawing.Point(796, 162)
             Me.productPanel.Name = "productPanel"
             Me.productPanel.Size = New System.Drawing.Size(239, 225)
             Me.productPanel.TabIndex = 46
@@ -150,7 +150,7 @@
             Me.Controls.Add(Me.productPanel)
             Me.Controls.Add(Me.Guna2Panel1)
             Me.Name = "CustomerOrderQuantityUserControl"
-            Me.Size = New System.Drawing.Size(1426, 817)
+            Me.Size = New System.Drawing.Size(1920, 1080)
             Me.Guna2Panel1.ResumeLayout(False)
             Me.Guna2Panel1.PerformLayout()
             Me.ResumeLayout(False)

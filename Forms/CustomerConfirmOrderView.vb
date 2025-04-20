@@ -4,5 +4,9 @@
         Private Sub BackButton_Click(sender As Object, e As EventArgs) Handles BackButton.Click
             BackButtonClick?.Invoke()           
         End Sub
+
+        Private Sub Guna2Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint
+
+        End Sub
     End Class
 End Namespace

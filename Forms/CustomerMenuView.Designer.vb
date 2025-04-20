@@ -39,9 +39,11 @@
             Me.Cat1Button = New Guna.UI2.WinForms.Guna2Button()
             Me.AllCategButton = New Guna.UI2.WinForms.Guna2Button()
             Me.CustomerMainPanelView = New Guna.UI2.WinForms.Guna2Panel()
+            Me.Panel1 = New System.Windows.Forms.Panel()
             Me.CustomerMainPanel.SuspendLayout()
             Me.ViewOrderPanel.SuspendLayout()
             Me.CategoryPanel.SuspendLayout()
+            Me.CustomerMainPanelView.SuspendLayout()
             Me.SuspendLayout()
             '
             'CustomerMainPanel
@@ -52,7 +54,7 @@
             Me.CustomerMainPanel.Dock = System.Windows.Forms.DockStyle.Fill
             Me.CustomerMainPanel.Location = New System.Drawing.Point(0, 0)
             Me.CustomerMainPanel.Name = "CustomerMainPanel"
-            Me.CustomerMainPanel.Size = New System.Drawing.Size(1426, 817)
+            Me.CustomerMainPanel.Size = New System.Drawing.Size(1386, 788)
             Me.CustomerMainPanel.TabIndex = 21
             '
             'ViewOrderPanel
@@ -63,9 +65,9 @@
             Me.ViewOrderPanel.Controls.Add(Me.StartOverButton)
             Me.ViewOrderPanel.Controls.Add(Me.ViewOrderButton)
             Me.ViewOrderPanel.Dock = System.Windows.Forms.DockStyle.Bottom
-            Me.ViewOrderPanel.Location = New System.Drawing.Point(219, 636)
+            Me.ViewOrderPanel.Location = New System.Drawing.Point(219, 607)
             Me.ViewOrderPanel.Name = "ViewOrderPanel"
-            Me.ViewOrderPanel.Size = New System.Drawing.Size(1207, 181)
+            Me.ViewOrderPanel.Size = New System.Drawing.Size(1167, 181)
             Me.ViewOrderPanel.TabIndex = 2
             '
             'ItemCountLabel
@@ -140,7 +142,7 @@
             Me.MenuFlowLayout.Dock = System.Windows.Forms.DockStyle.Fill
             Me.MenuFlowLayout.Location = New System.Drawing.Point(219, 0)
             Me.MenuFlowLayout.Name = "MenuFlowLayout"
-            Me.MenuFlowLayout.Size = New System.Drawing.Size(1207, 817)
+            Me.MenuFlowLayout.Size = New System.Drawing.Size(1167, 788)
             Me.MenuFlowLayout.TabIndex = 1
             '
             'CategoryPanel
@@ -152,7 +154,7 @@
             Me.CategoryPanel.Dock = System.Windows.Forms.DockStyle.Left
             Me.CategoryPanel.Location = New System.Drawing.Point(0, 0)
             Me.CategoryPanel.Name = "CategoryPanel"
-            Me.CategoryPanel.Size = New System.Drawing.Size(219, 817)
+            Me.CategoryPanel.Size = New System.Drawing.Size(219, 788)
             Me.CategoryPanel.TabIndex = 0
             '
             'Cat3Button
@@ -258,19 +260,27 @@
             'CustomerMainPanelView
             '
             Me.CustomerMainPanelView.BackColor = System.Drawing.Color.Transparent
+            Me.CustomerMainPanelView.Controls.Add(Me.Panel1)
             Me.CustomerMainPanelView.Dock = System.Windows.Forms.DockStyle.Fill
             Me.CustomerMainPanelView.Location = New System.Drawing.Point(0, 0)
             Me.CustomerMainPanelView.Name = "CustomerMainPanelView"
-            Me.CustomerMainPanelView.Size = New System.Drawing.Size(1426, 817)
+            Me.CustomerMainPanelView.Size = New System.Drawing.Size(1386, 788)
             Me.CustomerMainPanelView.TabIndex = 22
             Me.CustomerMainPanelView.Visible = False
+            '
+            'Panel1
+            '
+            Me.Panel1.Location = New System.Drawing.Point(2, 1)
+            Me.Panel1.Name = "Panel1"
+            Me.Panel1.Size = New System.Drawing.Size(1920, 1080)
+            Me.Panel1.TabIndex = 0
             '
             'CustomerMenuView
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1426, 817)
+            Me.ClientSize = New System.Drawing.Size(1386, 788)
             Me.Controls.Add(Me.CustomerMainPanelView)
             Me.Controls.Add(Me.CustomerMainPanel)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -280,6 +290,7 @@
             Me.ViewOrderPanel.ResumeLayout(False)
             Me.ViewOrderPanel.PerformLayout()
             Me.CategoryPanel.ResumeLayout(False)
+            Me.CustomerMainPanelView.ResumeLayout(False)
             Me.ResumeLayout(False)
 
         End Sub
@@ -297,6 +308,7 @@
         Friend WithEvents StartOverButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents ViewOrderButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents CustomerMainPanelView As Guna.UI2.WinForms.Guna2Panel
+        Friend WithEvents Panel1 As Panel
     End Class
 
 End Namespace

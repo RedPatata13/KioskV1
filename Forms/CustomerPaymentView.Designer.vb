@@ -25,8 +25,8 @@
         Private Sub InitializeComponent()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CustomerPaymentView))
             Me.CustomerPaymentViewLbl = New Guna.UI2.WinForms.Guna2Panel()
-            Me.LogoPctrBx = New Guna.UI2.WinForms.Guna2PictureBox()
             Me.PaymentMethodLbl = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me.LogoPctrBx = New Guna.UI2.WinForms.Guna2PictureBox()
             Me.PayButton = New Guna.UI2.WinForms.Guna2Button()
             Me.CustomerPaymentViewLbl.SuspendLayout()
             CType(Me.LogoPctrBx, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -43,17 +43,6 @@
             Me.CustomerPaymentViewLbl.Size = New System.Drawing.Size(1920, 1080)
             Me.CustomerPaymentViewLbl.TabIndex = 0
             '
-            'LogoPctrBx
-            '
-            Me.LogoPctrBx.Image = CType(resources.GetObject("LogoPctrBx.Image"), System.Drawing.Image)
-            Me.LogoPctrBx.ImageRotate = 0!
-            Me.LogoPctrBx.Location = New System.Drawing.Point(572, 45)
-            Me.LogoPctrBx.Name = "LogoPctrBx"
-            Me.LogoPctrBx.Size = New System.Drawing.Size(196, 166)
-            Me.LogoPctrBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-            Me.LogoPctrBx.TabIndex = 10
-            Me.LogoPctrBx.TabStop = False
-            '
             'PaymentMethodLbl
             '
             Me.PaymentMethodLbl.BackColor = System.Drawing.Color.White
@@ -64,10 +53,21 @@
             Me.PaymentMethodLbl.TabIndex = 8
             Me.PaymentMethodLbl.Text = "(Cash)"
             '
+            'LogoPctrBx
+            '
+            Me.LogoPctrBx.Image = CType(resources.GetObject("LogoPctrBx.Image"), System.Drawing.Image)
+            Me.LogoPctrBx.ImageRotate = 0!
+            Me.LogoPctrBx.Location = New System.Drawing.Point(-10, 0)
+            Me.LogoPctrBx.Name = "LogoPctrBx"
+            Me.LogoPctrBx.Size = New System.Drawing.Size(146, 109)
+            Me.LogoPctrBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+            Me.LogoPctrBx.TabIndex = 10
+            Me.LogoPctrBx.TabStop = False
+            '
             'PayButton
             '
             Me.PayButton.BackColor = System.Drawing.Color.Transparent
-            Me.PayButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
+            Me.PayButton.BorderColor = System.Drawing.Color.White
             Me.PayButton.BorderRadius = 10
             Me.PayButton.BorderThickness = 1
             Me.PayButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
@@ -96,6 +96,7 @@
             Me.Controls.Add(Me.CustomerPaymentViewLbl)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
             Me.Name = "CustomerPaymentView"
+            Me.ShowInTaskbar = False
             Me.Text = "CustomerPaymentPage"
             Me.CustomerPaymentViewLbl.ResumeLayout(False)
             Me.CustomerPaymentViewLbl.PerformLayout()

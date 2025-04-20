@@ -121,8 +121,8 @@
             Me.BackButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
             Me.BackButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
             Me.BackButton.FillColor = System.Drawing.Color.White
-            Me.BackButton.Font = New System.Drawing.Font("Poppins SemiBold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.BackButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+            Me.BackButton.Font = New System.Drawing.Font("Poppins", 15.0!)
+            Me.BackButton.ForeColor = System.Drawing.Color.Gray
             Me.BackButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
             Me.BackButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer))
             Me.BackButton.HoverState.ForeColor = System.Drawing.Color.White
@@ -132,6 +132,7 @@
             Me.BackButton.Size = New System.Drawing.Size(318, 50)
             Me.BackButton.TabIndex = 28
             Me.BackButton.Text = "Back"
+            Me.BackButton.TextOffset = New System.Drawing.Point(0, 2)
             '
             'ViewOrderButton
             '

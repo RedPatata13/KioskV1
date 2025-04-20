@@ -23,17 +23,20 @@
         'Do not modify it using the code editor.
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CustomerAddNoteUserControl))
             Me.MenuName = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.NoteTextBox = New Guna.UI2.WinForms.Guna2TextBox()
             Me.SaveNoteButton = New Guna.UI2.WinForms.Guna2Button()
             Me.BackButton = New Guna.UI2.WinForms.Guna2Button()
+            Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+            CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'MenuName
             '
             Me.MenuName.BackColor = System.Drawing.Color.Transparent
             Me.MenuName.Font = New System.Drawing.Font("Poppins", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.MenuName.Location = New System.Drawing.Point(573, 62)
+            Me.MenuName.Location = New System.Drawing.Point(990, 50)
             Me.MenuName.Name = "MenuName"
             Me.MenuName.Size = New System.Drawing.Size(166, 64)
             Me.MenuName.TabIndex = 2
@@ -53,12 +56,14 @@
             Me.NoteTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.NoteTextBox.Font = New System.Drawing.Font("Poppins", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.NoteTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.NoteTextBox.Location = New System.Drawing.Point(261, 132)
+            Me.NoteTextBox.Location = New System.Drawing.Point(434, 158)
+            Me.NoteTextBox.Margin = New System.Windows.Forms.Padding(5, 7, 5, 7)
             Me.NoteTextBox.Name = "NoteTextBox"
             Me.NoteTextBox.PlaceholderText = "Add note here"
             Me.NoteTextBox.SelectedText = ""
-            Me.NoteTextBox.Size = New System.Drawing.Size(843, 484)
+            Me.NoteTextBox.Size = New System.Drawing.Size(1125, 774)
             Me.NoteTextBox.TabIndex = 3
+            Me.NoteTextBox.TextOffset = New System.Drawing.Point(50, -340)
             '
             'SaveNoteButton
             '
@@ -70,21 +75,22 @@
             Me.SaveNoteButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
             Me.SaveNoteButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
             Me.SaveNoteButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.SaveNoteButton.Font = New System.Drawing.Font("Poppins SemiBold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.SaveNoteButton.Font = New System.Drawing.Font("Poppins SemiBold", 15.0!, System.Drawing.FontStyle.Bold)
             Me.SaveNoteButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
             Me.SaveNoteButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
             Me.SaveNoteButton.HoverState.FillColor = System.Drawing.Color.White
             Me.SaveNoteButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.SaveNoteButton.Location = New System.Drawing.Point(1016, 677)
+            Me.SaveNoteButton.Location = New System.Drawing.Point(1241, 978)
             Me.SaveNoteButton.Margin = New System.Windows.Forms.Padding(2)
             Me.SaveNoteButton.Name = "SaveNoteButton"
             Me.SaveNoteButton.Size = New System.Drawing.Size(318, 50)
             Me.SaveNoteButton.TabIndex = 24
             Me.SaveNoteButton.Text = "Save"
+            Me.SaveNoteButton.TextOffset = New System.Drawing.Point(0, 2)
             '
             'BackButton
             '
-            Me.BackButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer))
+            Me.BackButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
             Me.BackButton.BorderRadius = 15
             Me.BackButton.BorderThickness = 1
             Me.BackButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
@@ -92,29 +98,42 @@
             Me.BackButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
             Me.BackButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
             Me.BackButton.FillColor = System.Drawing.Color.White
-            Me.BackButton.Font = New System.Drawing.Font("Poppins SemiBold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.BackButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+            Me.BackButton.Font = New System.Drawing.Font("Poppins", 15.0!)
+            Me.BackButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
             Me.BackButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
             Me.BackButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer))
             Me.BackButton.HoverState.ForeColor = System.Drawing.Color.White
-            Me.BackButton.Location = New System.Drawing.Point(664, 677)
+            Me.BackButton.Location = New System.Drawing.Point(434, 980)
             Me.BackButton.Margin = New System.Windows.Forms.Padding(2)
             Me.BackButton.Name = "BackButton"
             Me.BackButton.Size = New System.Drawing.Size(318, 50)
             Me.BackButton.TabIndex = 29
             Me.BackButton.Text = "Back"
+            Me.BackButton.TextOffset = New System.Drawing.Point(0, 2)
+            '
+            'Guna2PictureBox1
+            '
+            Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
+            Me.Guna2PictureBox1.ImageRotate = 0!
+            Me.Guna2PictureBox1.Location = New System.Drawing.Point(913, 28)
+            Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+            Me.Guna2PictureBox1.Size = New System.Drawing.Size(73, 70)
+            Me.Guna2PictureBox1.TabIndex = 30
+            Me.Guna2PictureBox1.TabStop = False
             '
             'CustomerAddNoteUserControl
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
+            Me.Controls.Add(Me.Guna2PictureBox1)
             Me.Controls.Add(Me.BackButton)
             Me.Controls.Add(Me.SaveNoteButton)
             Me.Controls.Add(Me.NoteTextBox)
             Me.Controls.Add(Me.MenuName)
             Me.Name = "CustomerAddNoteUserControl"
-            Me.Size = New System.Drawing.Size(1370, 749)
+            Me.Size = New System.Drawing.Size(1920, 1080)
+            CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -124,6 +143,7 @@
         Friend WithEvents NoteTextBox As Guna.UI2.WinForms.Guna2TextBox
         Friend WithEvents SaveNoteButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents BackButton As Guna.UI2.WinForms.Guna2Button
+        Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     End Class
 
 End Namespace

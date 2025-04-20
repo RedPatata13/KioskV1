@@ -23,6 +23,7 @@
         'Do not modify it using the code editor.
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CustomerOrderTypeUserControl))
             Me.DineInButton = New Guna.UI2.WinForms.Guna2Button()
             Me.TakeOutButton = New Guna.UI2.WinForms.Guna2Button()
             Me.SuspendLayout()
@@ -30,7 +31,7 @@
             'DineInButton
             '
             Me.DineInButton.BackColor = System.Drawing.Color.White
-            Me.DineInButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.DineInButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
             Me.DineInButton.BorderRadius = 15
             Me.DineInButton.BorderThickness = 1
             Me.DineInButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
@@ -43,17 +44,21 @@
             Me.DineInButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.DineInButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.DineInButton.HoverState.ForeColor = System.Drawing.Color.White
-            Me.DineInButton.Location = New System.Drawing.Point(275, 179)
+            Me.DineInButton.Image = CType(resources.GetObject("DineInButton.Image"), System.Drawing.Image)
+            Me.DineInButton.ImageOffset = New System.Drawing.Point(40, -30)
+            Me.DineInButton.ImageSize = New System.Drawing.Size(250, 250)
+            Me.DineInButton.Location = New System.Drawing.Point(439, 248)
             Me.DineInButton.Margin = New System.Windows.Forms.Padding(2)
             Me.DineInButton.Name = "DineInButton"
-            Me.DineInButton.Size = New System.Drawing.Size(343, 333)
+            Me.DineInButton.Size = New System.Drawing.Size(450, 502)
             Me.DineInButton.TabIndex = 20
             Me.DineInButton.Text = "Dine-in"
+            Me.DineInButton.TextOffset = New System.Drawing.Point(-60, 190)
             '
             'TakeOutButton
             '
             Me.TakeOutButton.BackColor = System.Drawing.Color.White
-            Me.TakeOutButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.TakeOutButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
             Me.TakeOutButton.BorderRadius = 15
             Me.TakeOutButton.BorderThickness = 1
             Me.TakeOutButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
@@ -66,12 +71,16 @@
             Me.TakeOutButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.TakeOutButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.TakeOutButton.HoverState.ForeColor = System.Drawing.Color.White
-            Me.TakeOutButton.Location = New System.Drawing.Point(757, 179)
+            Me.TakeOutButton.Image = CType(resources.GetObject("TakeOutButton.Image"), System.Drawing.Image)
+            Me.TakeOutButton.ImageOffset = New System.Drawing.Point(40, -30)
+            Me.TakeOutButton.ImageSize = New System.Drawing.Size(250, 250)
+            Me.TakeOutButton.Location = New System.Drawing.Point(992, 248)
             Me.TakeOutButton.Margin = New System.Windows.Forms.Padding(2)
             Me.TakeOutButton.Name = "TakeOutButton"
-            Me.TakeOutButton.Size = New System.Drawing.Size(343, 333)
+            Me.TakeOutButton.Size = New System.Drawing.Size(450, 502)
             Me.TakeOutButton.TabIndex = 21
             Me.TakeOutButton.Text = "Take out"
+            Me.TakeOutButton.TextOffset = New System.Drawing.Point(-60, 190)
             '
             'CustomerOrderTypeUserControl
             '
@@ -81,7 +90,7 @@
             Me.Controls.Add(Me.TakeOutButton)
             Me.Controls.Add(Me.DineInButton)
             Me.Name = "CustomerOrderTypeUserControl"
-            Me.Size = New System.Drawing.Size(1370, 749)
+            Me.Size = New System.Drawing.Size(1920, 1138)
             Me.ResumeLayout(False)
 
         End Sub

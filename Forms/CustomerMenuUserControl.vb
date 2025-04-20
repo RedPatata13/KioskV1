@@ -48,6 +48,10 @@ Namespace KioskV0.Forms
                 ApplyClickEvent(child)
             Next
         End Sub
+
+        Private Sub ProductPictureBox_Click(sender As Object, e As EventArgs) Handles ProductPictureBox.Click
+
+        End Sub
     End Class
 
 End Namespace

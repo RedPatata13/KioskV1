@@ -37,8 +37,8 @@
             '
             Me.OrderNumberLabel.AutoSize = False
             Me.OrderNumberLabel.BackColor = System.Drawing.Color.Transparent
-            Me.OrderNumberLabel.Font = New System.Drawing.Font("Poppins", 120.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.OrderNumberLabel.Location = New System.Drawing.Point(181, 55)
+            Me.OrderNumberLabel.Font = New System.Drawing.Font("Poppins", 140.0!, System.Drawing.FontStyle.Bold)
+            Me.OrderNumberLabel.Location = New System.Drawing.Point(206, 62)
             Me.OrderNumberLabel.Name = "OrderNumberLabel"
             Me.OrderNumberLabel.Size = New System.Drawing.Size(367, 279)
             Me.OrderNumberLabel.TabIndex = 2
@@ -48,9 +48,9 @@
             'OrderPanel
             '
             Me.OrderPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+            Me.OrderPanel.Controls.Add(Me.YourOrderLbl)
             Me.OrderPanel.Controls.Add(Me.Guna2HtmlLabel1)
             Me.OrderPanel.Controls.Add(Me.OrderNumberLabel)
-            Me.OrderPanel.Controls.Add(Me.YourOrderLbl)
             Me.OrderPanel.Location = New System.Drawing.Point(416, 238)
             Me.OrderPanel.Name = "OrderPanel"
             Me.OrderPanel.Size = New System.Drawing.Size(550, 336)
@@ -60,7 +60,7 @@
             '
             Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Poppins", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(3, 170)
+            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(79, 209)
             Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
             Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(84, 86)
             Me.Guna2HtmlLabel1.TabIndex = 3
@@ -69,10 +69,10 @@
             'YourOrderLbl
             '
             Me.YourOrderLbl.BackColor = System.Drawing.Color.Transparent
-            Me.YourOrderLbl.Font = New System.Drawing.Font("Poppins", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.YourOrderLbl.Location = New System.Drawing.Point(181, 3)
+            Me.YourOrderLbl.Font = New System.Drawing.Font("Poppins", 36.0!, System.Drawing.FontStyle.Bold)
+            Me.YourOrderLbl.Location = New System.Drawing.Point(130, 3)
             Me.YourOrderLbl.Name = "YourOrderLbl"
-            Me.YourOrderLbl.Size = New System.Drawing.Size(163, 53)
+            Me.YourOrderLbl.Size = New System.Drawing.Size(272, 86)
             Me.YourOrderLbl.TabIndex = 0
             Me.YourOrderLbl.Text = "Your Order"
             '
@@ -106,7 +106,7 @@
             Me.PayButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
             Me.PayButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
             Me.PayButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-            Me.PayButton.FillColor = System.Drawing.Color.White
+            Me.PayButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
             Me.PayButton.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.PayButton.ForeColor = System.Drawing.Color.Black
             Me.PayButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
@@ -119,6 +119,7 @@
             Me.PayButton.Size = New System.Drawing.Size(545, 76)
             Me.PayButton.TabIndex = 12
             Me.PayButton.Text = "Done"
+            Me.PayButton.TextOffset = New System.Drawing.Point(0, 2)
             '
             'CustomerInvoiceUserControl
             '

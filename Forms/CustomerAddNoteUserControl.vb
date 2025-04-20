@@ -20,6 +20,10 @@
         Private Sub BackButton_Click(sender As Object, e As EventArgs) Handles BackButton.Click
             RaiseEvent BackClick()
         End Sub
+
+        Private Sub NoteTextBox_TextChanged(sender As Object, e As EventArgs) Handles NoteTextBox.TextChanged
+
+        End Sub
     End Class
 
 End Namespace

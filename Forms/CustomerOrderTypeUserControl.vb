@@ -10,6 +10,10 @@
         Private Sub TakeOutButton_Click(sender As Object, e As EventArgs) Handles TakeOutButton.Click
             RaiseEvent TakeOutClicked()
         End Sub
+
+        Private Sub CustomerOrderTypeUserControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        End Sub
     End Class
 
 End Namespace

@@ -28,9 +28,9 @@
             Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CustomerOrderListView))
             Me.YourOrderListLbl = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.TopBar = New Guna.UI2.WinForms.Guna2Panel()
-            Me.OrderListLogo = New Guna.UI2.WinForms.Guna2PictureBox()
             Me.OrdersPanel = New Guna.UI2.WinForms.Guna2Panel()
             Me.Buttons = New Guna.UI2.WinForms.Guna2Panel()
             Me.StartOverButton = New Guna.UI2.WinForms.Guna2Button()
@@ -46,14 +46,16 @@
             Me.Label4 = New System.Windows.Forms.Label()
             Me.CheckOutButton = New Guna.UI2.WinForms.Guna2Button()
             Me.OrderDetailsDGV = New Guna.UI2.WinForms.Guna2DataGridView()
+            Me.LogoPctrBx = New Guna.UI2.WinForms.Guna2PictureBox()
+            Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
             Me.TopBar.SuspendLayout()
-            CType(Me.OrderListLogo, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.OrdersPanel.SuspendLayout()
             Me.Buttons.SuspendLayout()
             Me.OrderListPanel.SuspendLayout()
             Me.Guna2Panel3.SuspendLayout()
             Me.Guna2Panel2.SuspendLayout()
             CType(Me.OrderDetailsDGV, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.LogoPctrBx, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'YourOrderListLbl
@@ -61,7 +63,7 @@
             Me.YourOrderListLbl.AutoSize = False
             Me.YourOrderListLbl.BackColor = System.Drawing.Color.Transparent
             Me.YourOrderListLbl.Font = New System.Drawing.Font("Montserrat", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.YourOrderListLbl.Location = New System.Drawing.Point(120, 24)
+            Me.YourOrderListLbl.Location = New System.Drawing.Point(120, 30)
             Me.YourOrderListLbl.Name = "YourOrderListLbl"
             Me.YourOrderListLbl.Size = New System.Drawing.Size(197, 51)
             Me.YourOrderListLbl.TabIndex = 39
@@ -69,31 +71,20 @@
             '
             'TopBar
             '
-            Me.TopBar.Controls.Add(Me.OrderListLogo)
+            Me.TopBar.Controls.Add(Me.LogoPctrBx)
             Me.TopBar.Controls.Add(Me.YourOrderListLbl)
+            Me.TopBar.Controls.Add(Me.Guna2Panel1)
             Me.TopBar.Dock = System.Windows.Forms.DockStyle.Top
             Me.TopBar.Location = New System.Drawing.Point(0, 0)
             Me.TopBar.Name = "TopBar"
             Me.TopBar.Size = New System.Drawing.Size(1370, 97)
             Me.TopBar.TabIndex = 41
             '
-            'OrderListLogo
-            '
-            Me.OrderListLogo.BackColor = System.Drawing.Color.Transparent
-            Me.OrderListLogo.ImageRotate = 0!
-            Me.OrderListLogo.Location = New System.Drawing.Point(3, 3)
-            Me.OrderListLogo.Name = "OrderListLogo"
-            Me.OrderListLogo.Size = New System.Drawing.Size(106, 93)
-            Me.OrderListLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-            Me.OrderListLogo.TabIndex = 40
-            Me.OrderListLogo.TabStop = False
-            Me.OrderListLogo.UseTransparentBackground = True
-            '
             'OrdersPanel
             '
             Me.OrdersPanel.Controls.Add(Me.Buttons)
-            Me.OrdersPanel.Controls.Add(Me.OrderListFlowLayout)
             Me.OrdersPanel.Controls.Add(Me.OrderListPanel)
+            Me.OrdersPanel.Controls.Add(Me.OrderListFlowLayout)
             Me.OrdersPanel.Dock = System.Windows.Forms.DockStyle.Fill
             Me.OrdersPanel.Location = New System.Drawing.Point(0, 97)
             Me.OrdersPanel.Name = "OrdersPanel"
@@ -106,9 +97,9 @@
             Me.Buttons.Controls.Add(Me.StartOverButton)
             Me.Buttons.Controls.Add(Me.OrderMoreButton)
             Me.Buttons.Dock = System.Windows.Forms.DockStyle.Bottom
-            Me.Buttons.Location = New System.Drawing.Point(0, 506)
+            Me.Buttons.Location = New System.Drawing.Point(0, 509)
             Me.Buttons.Name = "Buttons"
-            Me.Buttons.Size = New System.Drawing.Size(1007, 146)
+            Me.Buttons.Size = New System.Drawing.Size(1007, 143)
             Me.Buttons.TabIndex = 2
             '
             'StartOverButton
@@ -121,17 +112,18 @@
             Me.StartOverButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
             Me.StartOverButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
             Me.StartOverButton.FillColor = System.Drawing.Color.White
-            Me.StartOverButton.Font = New System.Drawing.Font("Poppins SemiBold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.StartOverButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+            Me.StartOverButton.Font = New System.Drawing.Font("Poppins", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.StartOverButton.ForeColor = System.Drawing.Color.Gray
             Me.StartOverButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
             Me.StartOverButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer))
             Me.StartOverButton.HoverState.ForeColor = System.Drawing.Color.White
-            Me.StartOverButton.Location = New System.Drawing.Point(208, 48)
+            Me.StartOverButton.Location = New System.Drawing.Point(41, 53)
             Me.StartOverButton.Margin = New System.Windows.Forms.Padding(2)
             Me.StartOverButton.Name = "StartOverButton"
-            Me.StartOverButton.Size = New System.Drawing.Size(318, 50)
+            Me.StartOverButton.Size = New System.Drawing.Size(415, 50)
             Me.StartOverButton.TabIndex = 27
             Me.StartOverButton.Text = "Start over"
+            Me.StartOverButton.TextOffset = New System.Drawing.Point(0, 2)
             '
             'OrderMoreButton
             '
@@ -143,24 +135,25 @@
             Me.OrderMoreButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
             Me.OrderMoreButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
             Me.OrderMoreButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.OrderMoreButton.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.OrderMoreButton.Font = New System.Drawing.Font("Poppins Medium", 14.0!, System.Drawing.FontStyle.Bold)
             Me.OrderMoreButton.ForeColor = System.Drawing.Color.White
             Me.OrderMoreButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.OrderMoreButton.HoverState.FillColor = System.Drawing.Color.White
             Me.OrderMoreButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.OrderMoreButton.Location = New System.Drawing.Point(544, 48)
+            Me.OrderMoreButton.Location = New System.Drawing.Point(484, 51)
             Me.OrderMoreButton.Margin = New System.Windows.Forms.Padding(2)
             Me.OrderMoreButton.Name = "OrderMoreButton"
-            Me.OrderMoreButton.Size = New System.Drawing.Size(318, 50)
+            Me.OrderMoreButton.Size = New System.Drawing.Size(461, 50)
             Me.OrderMoreButton.TabIndex = 21
             Me.OrderMoreButton.Text = "Order more"
+            Me.OrderMoreButton.TextOffset = New System.Drawing.Point(0, 2)
             '
             'OrderListFlowLayout
             '
             Me.OrderListFlowLayout.Dock = System.Windows.Forms.DockStyle.Fill
             Me.OrderListFlowLayout.Location = New System.Drawing.Point(0, 0)
             Me.OrderListFlowLayout.Name = "OrderListFlowLayout"
-            Me.OrderListFlowLayout.Size = New System.Drawing.Size(1007, 652)
+            Me.OrderListFlowLayout.Size = New System.Drawing.Size(1370, 652)
             Me.OrderListFlowLayout.TabIndex = 1
             '
             'OrderListPanel
@@ -246,7 +239,7 @@
             '
             Me.Label4.AutoSize = True
             Me.Label4.Font = New System.Drawing.Font("Poppins Medium", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label4.Location = New System.Drawing.Point(30, 9)
+            Me.Label4.Location = New System.Drawing.Point(18, 9)
             Me.Label4.Name = "Label4"
             Me.Label4.Size = New System.Drawing.Size(74, 34)
             Me.Label4.TabIndex = 3
@@ -262,17 +255,18 @@
             Me.CheckOutButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
             Me.CheckOutButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
             Me.CheckOutButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.CheckOutButton.Font = New System.Drawing.Font("Poppins SemiBold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.CheckOutButton.Font = New System.Drawing.Font("Poppins SemiBold", 15.0!, System.Drawing.FontStyle.Bold)
             Me.CheckOutButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
             Me.CheckOutButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
             Me.CheckOutButton.HoverState.FillColor = System.Drawing.Color.White
             Me.CheckOutButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.CheckOutButton.Location = New System.Drawing.Point(23, 45)
+            Me.CheckOutButton.Location = New System.Drawing.Point(21, 50)
             Me.CheckOutButton.Margin = New System.Windows.Forms.Padding(2)
             Me.CheckOutButton.Name = "CheckOutButton"
-            Me.CheckOutButton.Size = New System.Drawing.Size(318, 50)
+            Me.CheckOutButton.Size = New System.Drawing.Size(326, 50)
             Me.CheckOutButton.TabIndex = 22
             Me.CheckOutButton.Text = "Complete Order"
+            Me.CheckOutButton.TextOffset = New System.Drawing.Point(0, 2)
             '
             'OrderDetailsDGV
             '
@@ -347,6 +341,24 @@
             Me.OrderDetailsDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.OrderDetailsDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
             '
+            'LogoPctrBx
+            '
+            Me.LogoPctrBx.Image = CType(resources.GetObject("LogoPctrBx.Image"), System.Drawing.Image)
+            Me.LogoPctrBx.ImageRotate = 0!
+            Me.LogoPctrBx.Location = New System.Drawing.Point(0, 0)
+            Me.LogoPctrBx.Name = "LogoPctrBx"
+            Me.LogoPctrBx.Size = New System.Drawing.Size(114, 97)
+            Me.LogoPctrBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+            Me.LogoPctrBx.TabIndex = 41
+            Me.LogoPctrBx.TabStop = False
+            '
+            'Guna2Panel1
+            '
+            Me.Guna2Panel1.Location = New System.Drawing.Point(1, 0)
+            Me.Guna2Panel1.Name = "Guna2Panel1"
+            Me.Guna2Panel1.Size = New System.Drawing.Size(1920, 1080)
+            Me.Guna2Panel1.TabIndex = 42
+            '
             'CustomerOrderListView
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -359,7 +371,6 @@
             Me.Name = "CustomerOrderListView"
             Me.Text = "CustomerOrderListPage"
             Me.TopBar.ResumeLayout(False)
-            CType(Me.OrderListLogo, System.ComponentModel.ISupportInitialize).EndInit()
             Me.OrdersPanel.ResumeLayout(False)
             Me.Buttons.ResumeLayout(False)
             Me.OrderListPanel.ResumeLayout(False)
@@ -368,11 +379,11 @@
             Me.Guna2Panel2.ResumeLayout(False)
             Me.Guna2Panel2.PerformLayout()
             CType(Me.OrderDetailsDGV, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.LogoPctrBx, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
 
         End Sub
         Friend WithEvents YourOrderListLbl As Guna.UI2.WinForms.Guna2HtmlLabel
-        Friend WithEvents OrderListLogo As Guna.UI2.WinForms.Guna2PictureBox
         Friend WithEvents TopBar As Guna.UI2.WinForms.Guna2Panel
         Friend WithEvents OrdersPanel As Guna.UI2.WinForms.Guna2Panel
         Friend WithEvents Buttons As Guna.UI2.WinForms.Guna2Panel
@@ -389,6 +400,8 @@
         Friend WithEvents Label4 As Label
         Friend WithEvents TotalPriceLabel As Label
         Friend WithEvents StartOverButton As Guna.UI2.WinForms.Guna2Button
+        Friend WithEvents LogoPctrBx As Guna.UI2.WinForms.Guna2PictureBox
+        Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     End Class
 
 

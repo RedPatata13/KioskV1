@@ -107,6 +107,7 @@
             Me.RemoveButton.Size = New System.Drawing.Size(169, 35)
             Me.RemoveButton.TabIndex = 47
             Me.RemoveButton.Text = "Remove"
+            Me.RemoveButton.TextOffset = New System.Drawing.Point(0, 2)
             '
             'DecreaseItemButton
             '
@@ -125,7 +126,7 @@
             Me.DecreaseItemButton.ImageOffset = New System.Drawing.Point(0, 12)
             Me.DecreaseItemButton.Location = New System.Drawing.Point(3, 10)
             Me.DecreaseItemButton.Name = "DecreaseItemButton"
-            Me.DecreaseItemButton.Size = New System.Drawing.Size(59, 35)
+            Me.DecreaseItemButton.Size = New System.Drawing.Size(57, 30)
             Me.DecreaseItemButton.TabIndex = 46
             Me.DecreaseItemButton.Text = "Guna2Button2"
             '
@@ -146,7 +147,7 @@
             Me.AddItemButton.ImageOffset = New System.Drawing.Point(0, 12)
             Me.AddItemButton.Location = New System.Drawing.Point(113, 11)
             Me.AddItemButton.Name = "AddItemButton"
-            Me.AddItemButton.Size = New System.Drawing.Size(59, 35)
+            Me.AddItemButton.Size = New System.Drawing.Size(57, 30)
             Me.AddItemButton.TabIndex = 37
             Me.AddItemButton.Text = "Guna2Button1"
             '
@@ -154,7 +155,7 @@
             '
             Me.QuantityTextBox.AutoSize = True
             Me.QuantityTextBox.Font = New System.Drawing.Font("Poppins SemiBold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.QuantityTextBox.Location = New System.Drawing.Point(68, 11)
+            Me.QuantityTextBox.Location = New System.Drawing.Point(69, 13)
             Me.QuantityTextBox.Name = "QuantityTextBox"
             Me.QuantityTextBox.Size = New System.Drawing.Size(39, 34)
             Me.QuantityTextBox.TabIndex = 45

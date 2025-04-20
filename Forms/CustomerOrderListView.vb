@@ -62,5 +62,9 @@ Namespace KioskV0.Forms
         Private Sub OrderDetailsDGV_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles OrderDetailsDGV.CellContentClick
 
         End Sub
+
+        Private Sub OrderListFlowLayout_Paint(sender As Object, e As PaintEventArgs) Handles OrderListFlowLayout.Paint
+
+        End Sub
     End Class
 End Namespace
