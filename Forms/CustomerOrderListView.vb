@@ -54,5 +54,13 @@ Namespace KioskV0.Forms
         Private Sub CustomerNoItemUserControl1_Load(sender As Object, e As EventArgs)
 
         End Sub
+
+        Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+
+        End Sub
+
+        Private Sub OrderDetailsDGV_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles OrderDetailsDGV.CellContentClick
+
+        End Sub
     End Class
 End Namespace

@@ -10,10 +10,7 @@
                 Dim index As Integer = _roles.FindStringExact(value)
                 If index <> -1 Then
                     _roles.SelectedIndex = index
-                Else
-                    _roles.Items.Add(value)
                 End If
-
             End Set
         End Property
         Public Property Label As String
@@ -84,6 +81,15 @@
             End Get
             Set(value As String)
                 _contactNumField.Text = value
+            End Set
+        End Property
+
+        Public Property Address As String
+            Get
+                Return _addressField.Text
+            End Get
+            Set(value As String)
+                _addressField.Text = value
             End Set
         End Property
 

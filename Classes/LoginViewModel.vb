@@ -65,27 +65,34 @@ Namespace KioskV0.Classes
                 Select Case acc.Role.ToLower()
                     Case "admin"
                         mediator = New Mediator(Of AdminKeys)(_projector, Me, _unitOfWork)
+                        mediator.SetCurrentUser(acc)
                         mediator.SetupMap(GetAdminPages(mediator))
                         Dim sb = New AdminSideBarViewModel(New Forms.AdminSidebar(), mediator)
                         _projector.ProjectSidebar(sb)
                         mediator.SwapPage(AdminKeys.AdminDashboard)
+                        mediator.SetCurrentUser(acc)
                     Case "customer"
                         mediator = New Mediator(Of CustomerKeys)(_projector, Me, _unitOfWork)
+                        mediator.SetCurrentUser(acc)
                         mediator.SetupMap(GetCustomerPages(mediator))
                     Case "staff"
                         mediator = New Mediator(Of StaffKeys)(_projector, Me, _unitOfWork)
+                        mediator.SetCurrentUser(acc)
                         mediator.SetupMap(GetStaffPages(mediator))
                         Dim staff_sb = New StaffSideBarViewModel(New Forms.StaffSideBar(), mediator)
                         _projector.ProjectSidebar(staff_sb)
                         mediator.SwapPage(StaffKeys.StaffPos)
                         mediator.SwapPage(StaffKeys.StaffPos)
-
+                        mediator.SetCurrentUser(acc)
                     Case "supplier"
                         mediator = New Mediator(Of SupplierKeys)(_projector, Me, _unitOfWork)
+                        mediator.SetCurrentUser(acc)
                         mediator.SetupMap(GetSupplierPages(mediator))
-                        'Dim supplier_sb = New SupplierSidebarViewModel(New Forms.SupplierSidebar(), mediator)
+                        Dim supplier_sb = New SupplierSidebarViewModel(New SupplierSidebar(), mediator)
+                        _projector.ProjectSidebar(supplier_sb)
                         mediator.SwapPage(SupplierKeys.SupplierLandingPage)
                         mediator.SwapPage(SupplierKeys.SupplierLandingPage)
+                        mediator.SetCurrentUser(acc)
                     Case Else
                         MessageBox.Show("User type not null")
                 End Select
@@ -149,6 +156,15 @@ Namespace KioskV0.Classes
         Private Sub CustomerButtonClick()
             Dim mediator
             mediator = New Mediator(Of CustomerKeys)(_projector, Me, _unitOfWork)
+
+            Dim customerUser As New User With {
+            .UserId = 0,
+            .Username = "Customer",
+            .FirstName = "Guest",
+            .LastName = "",
+            .Role = "Customer"
+            }
+            mediator.SetCurrentUser(customerUser)
             mediator.SetupMap(GetCustomerPages(mediator))
             mediator.SwapPage(CustomerKeys.CustomerMenu)
         End Sub

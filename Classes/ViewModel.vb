@@ -10,6 +10,7 @@ Namespace KioskV0.Classes
         Protected Friend _mediator As Mediator(Of TKey)
         Private ReadOnly _aspectRatios As New Dictionary(Of Control, (SizeF, PointF, Single?))
         Protected Friend Previous As TKey
+        Protected Property IsDisabled As New HashSet(Of Control)
         Public Sub New(view As TView, mediator As Mediator(Of TKey))
             _view = view
             _mediator = mediator
@@ -95,6 +96,23 @@ Namespace KioskV0.Classes
 
         Protected Sub PrintViewSize()
             MessageBox.Show($"{_view.Width} x {_view.Height}")
+        End Sub
+
+        Protected Sub DisableControls()
+            For Each control In _aspectRatios.Keys.ToList()
+                If control.Enabled = False Then IsDisabled.Add(control)
+
+                control.Enabled = False
+            Next
+        End Sub
+
+        Protected Sub EnableControls()
+            For Each control In _aspectRatios.Keys.ToList()
+                If Not IsDisabled.Contains(control) Then
+                    control.Enabled = True
+                    IsDisabled.Remove(control)
+                End If
+            Next
         End Sub
     End Class
 

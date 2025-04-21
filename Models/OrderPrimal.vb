@@ -8,6 +8,7 @@ Public Class OrderPrimal
     'Public Property UserId As String
     Public Property CreatedAt As DateTime
 
-    'Public Overridable Property User As User
     Public Overridable Property OrderItems As ICollection(Of OrderDetail) ' Order has many OrderItems
+
+    Public Property OrderMode As String
 End Class

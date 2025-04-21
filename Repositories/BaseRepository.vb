@@ -30,7 +30,7 @@ Public Class BaseRepository(Of T As Class)
     End Sub
 
     ' Delete an entity by ID
-    Public Sub Delete(id As Integer) Implements IBaseRepository(Of T).Delete
+    Public Sub Delete(id As String) Implements IBaseRepository(Of T).Delete
         Dim entity = _dbSet.Find(id)
         If entity IsNot Nothing Then
             _dbSet.Remove(entity)
@@ -43,7 +43,7 @@ Public Class BaseRepository(Of T As Class)
     End Function
 
     ' Get an entity by ID
-    Public Function GetById(id As String) As T Implements IBaseRepository(Of T).GetById
+    Public Overridable Function GetById(id As String) As T Implements IBaseRepository(Of T).GetById
         Return _dbSet.Find(id)
     End Function
     ' Add entities by a range

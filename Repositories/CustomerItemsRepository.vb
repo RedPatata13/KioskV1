@@ -9,8 +9,6 @@ Public Class CustomerItemsRepository
     Public Overrides Function GetAll() As IEnumerable(Of CustomerItem)
         Return _dbSet.Include(Function(c) c.AdminItem) _
             .Include(Function(c) c.AdminItem.Category) _
-            .Include(Function(c) c.AdminItem.SupplierItem) _
-            .Include(Function(c) c.AdminItem.SupplierItem.Supplier) _
             .AsNoTracking().ToList()
     End Function
 

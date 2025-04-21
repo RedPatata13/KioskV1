@@ -10,9 +10,9 @@ Namespace KioskV0.Classes
 
             LoadAccounts()
             SetEvents()
-            _ordercache = _mediator.GetOrderList()
+            _ordercache = _mediator.GetUnitOfWork.TransactedOrder.GetAll()
         End Sub
-        Private Property _ordercache As List(Of OrderDetail)
+        Private Property _ordercache As List(Of TransactedOrder)
         Private Property _staffCache As List(Of User)
         Public Property Staffs As List(Of User)
             Get
@@ -20,7 +20,7 @@ Namespace KioskV0.Classes
             End Get
             Set(ByVal value As List(Of User))
                 _staffCache = value
-                UpdateSupplierComboBox() ' Automatically update the ComboBox when suppliers change
+                UpdateSupplierComboBox()
             End Set
         End Property
 
@@ -51,7 +51,7 @@ Namespace KioskV0.Classes
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect
             dgv.ColumnHeadersHeight = 40
             dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-            _view.DGV_Source = New BindingSource With {.DataSource = _mediator.GetOrderList()}
+            _view.DGV_Source = New BindingSource With {.DataSource = _mediator.GetUnitOfWork.TransactedOrder.GetAll()}
         End Sub
 
         Private Sub UpdateDGV()
@@ -62,30 +62,43 @@ Namespace KioskV0.Classes
                 Return
             End If
 
-            Dim list As New List(Of OrderPrimal)
-            'For Each order In all
-            '    If order.User.UserName.Contains(selectedValue) Then
-            '        list.Add(order)
-            '    End If
-            'Next
+            Dim list As New List(Of TransactedOrder)
+            For Each order In all
+                If order.User.Username.Contains(selectedValue) Then
+                    list.Add(order)
+                End If
+            Next
             _view.DGV_Source = New BindingSource With {.DataSource = list}
 
         End Sub
         Private Sub Search()
-            Dim input = _view.SearchItem.Text
-            Dim all = _ordercache
+            Try
+                Dim input = _view.SearchItem.Text
+                Dim userList = _ordercache
+                Dim searchTerm As String = If(input.Trim(), String.Empty)
 
-            If String.IsNullOrWhiteSpace(input) Then
-                _view.DGV_Source = New BindingSource With {.DataSource = all}
-            Else
-                Dim list As New List(Of OrderPrimal)
-                For Each order In all
-                    'If order.User.Username.StartsWith(input) Then
-                    '    list.Add(order)
-                    'End If
-                Next
-                _view.DGV_Source = New BindingSource With {.DataSource = list}
-            End If
+                'Dim userList = _mediator.GetUserList()
+
+                If String.IsNullOrEmpty(searchTerm) Then
+                    _view.DGV_Source = New BindingSource With {.DataSource = userList}
+                    Return
+                End If
+
+                Dim filteredUsers = userList.Where(
+            Function(u)
+                Return (u.OrderId IsNot Nothing AndAlso u.OrderId.IndexOf(searchTerm, StringComparison.OrdinalIgnoreCase) >= 0) Or
+                       (u.UserId IsNot Nothing AndAlso u.UserId.IndexOf(searchTerm, StringComparison.OrdinalIgnoreCase) >= 0) Or
+                       (u.TransactedOrderId IsNot Nothing AndAlso u.TransactedOrderId.IndexOf(searchTerm, StringComparison.OrdinalIgnoreCase) >= 0)
+            End Function)
+
+
+                _view.DGV_Source = New BindingSource With {.DataSource = filteredUsers.ToList()}
+
+            Catch ex As Exception
+
+                MessageBox.Show("An error occurred while searching: " & ex.Message, "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                _view.DGV_Source = New BindingSource With {.DataSource = _mediator.GetUnitOfWork.TransactedOrder.GetAll()}
+            End Try
         End Sub
 
     End Class

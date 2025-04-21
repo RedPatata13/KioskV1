@@ -28,7 +28,6 @@
             Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.CategoryComboBox = New Guna.UI2.WinForms.Guna2ComboBox()
             Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-            Me.SupplierComboBox = New Guna.UI2.WinForms.Guna2ComboBox()
             Me.Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.ProductDescriptionTextBox = New Guna.UI2.WinForms.Guna2TextBox()
             Me.Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -44,6 +43,7 @@
             Me.DeleteButton = New Guna.UI2.WinForms.Guna2Button()
             Me.SelectSupplierButton = New Guna.UI2.WinForms.Guna2Button()
             Me.BoundItem = New Guna.UI2.WinForms.Guna2TextBox()
+            Me.SetAsCustomerItem = New Guna.UI2.WinForms.Guna2Button()
             Me.Guna2Panel1.SuspendLayout()
             CType(Me.Thumbnail, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
@@ -122,24 +122,6 @@
             Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(291, 49)
             Me.Guna2HtmlLabel3.TabIndex = 10
             Me.Guna2HtmlLabel3.Text = "Product Name"
-            '
-            'SupplierComboBox
-            '
-            Me.SupplierComboBox.BackColor = System.Drawing.Color.Transparent
-            Me.SupplierComboBox.BorderRadius = 15
-            Me.SupplierComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-            Me.SupplierComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.SupplierComboBox.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.SupplierComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.SupplierComboBox.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-            Me.SupplierComboBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-            Me.SupplierComboBox.ItemHeight = 30
-            Me.SupplierComboBox.Items.AddRange(New Object() {"Supplier1", "Supplier2", "Supplier3"})
-            Me.SupplierComboBox.Location = New System.Drawing.Point(712, 88)
-            Me.SupplierComboBox.Margin = New System.Windows.Forms.Padding(2)
-            Me.SupplierComboBox.Name = "SupplierComboBox"
-            Me.SupplierComboBox.Size = New System.Drawing.Size(413, 36)
-            Me.SupplierComboBox.TabIndex = 11
             '
             'Guna2HtmlLabel4
             '
@@ -341,6 +323,7 @@
             Me.Thumbnail.Margin = New System.Windows.Forms.Padding(2)
             Me.Thumbnail.Name = "Thumbnail"
             Me.Thumbnail.Size = New System.Drawing.Size(574, 488)
+            Me.Thumbnail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
             Me.Thumbnail.TabIndex = 7
             Me.Thumbnail.TabStop = False
             '
@@ -360,7 +343,7 @@
             Me.DeleteButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.DeleteButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.DeleteButton.HoverState.ForeColor = System.Drawing.Color.White
-            Me.DeleteButton.Location = New System.Drawing.Point(640, 760)
+            Me.DeleteButton.Location = New System.Drawing.Point(424, 762)
             Me.DeleteButton.Margin = New System.Windows.Forms.Padding(2)
             Me.DeleteButton.Name = "DeleteButton"
             Me.DeleteButton.Size = New System.Drawing.Size(189, 51)
@@ -402,12 +385,36 @@
             Me.BoundItem.Size = New System.Drawing.Size(416, 49)
             Me.BoundItem.TabIndex = 25
             '
+            'SetAsCustomerItem
+            '
+            Me.SetAsCustomerItem.BackColor = System.Drawing.SystemColors.Window
+            Me.SetAsCustomerItem.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.SetAsCustomerItem.BorderRadius = 15
+            Me.SetAsCustomerItem.BorderThickness = 1
+            Me.SetAsCustomerItem.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.SetAsCustomerItem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.SetAsCustomerItem.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.SetAsCustomerItem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.SetAsCustomerItem.FillColor = System.Drawing.Color.Wheat
+            Me.SetAsCustomerItem.Font = New System.Drawing.Font("Poppins", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.SetAsCustomerItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.SetAsCustomerItem.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.SetAsCustomerItem.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.SetAsCustomerItem.HoverState.ForeColor = System.Drawing.Color.White
+            Me.SetAsCustomerItem.Location = New System.Drawing.Point(640, 762)
+            Me.SetAsCustomerItem.Margin = New System.Windows.Forms.Padding(2)
+            Me.SetAsCustomerItem.Name = "SetAsCustomerItem"
+            Me.SetAsCustomerItem.Size = New System.Drawing.Size(189, 51)
+            Me.SetAsCustomerItem.TabIndex = 26
+            Me.SetAsCustomerItem.Text = "Set As Menu"
+            '
             'AdminEditMenuDetailsView
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
             Me.ClientSize = New System.Drawing.Size(1321, 878)
+            Me.Controls.Add(Me.SetAsCustomerItem)
             Me.Controls.Add(Me.BoundItem)
             Me.Controls.Add(Me.SelectSupplierButton)
             Me.Controls.Add(Me.DeleteButton)
@@ -422,7 +429,6 @@
             Me.Controls.Add(Me.Guna2HtmlLabel5)
             Me.Controls.Add(Me.ProductDescriptionTextBox)
             Me.Controls.Add(Me.Guna2HtmlLabel4)
-            Me.Controls.Add(Me.SupplierComboBox)
             Me.Controls.Add(Me.Guna2HtmlLabel3)
             Me.Controls.Add(Me.CategoryComboBox)
             Me.Controls.Add(Me.Guna2HtmlLabel2)
@@ -446,7 +452,6 @@
         Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents CategoryComboBox As Guna.UI2.WinForms.Guna2ComboBox
         Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
-        Friend WithEvents SupplierComboBox As Guna.UI2.WinForms.Guna2ComboBox
         Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents ProductDescriptionTextBox As Guna.UI2.WinForms.Guna2TextBox
         Friend WithEvents Guna2HtmlLabel5 As Guna.UI2.WinForms.Guna2HtmlLabel
@@ -461,6 +466,7 @@
         Friend WithEvents DeleteButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents SelectSupplierButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents BoundItem As Guna.UI2.WinForms.Guna2TextBox
+        Friend WithEvents SetAsCustomerItem As Guna.UI2.WinForms.Guna2Button
     End Class
 
 End Namespace

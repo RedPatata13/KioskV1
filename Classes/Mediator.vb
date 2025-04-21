@@ -7,11 +7,13 @@ Imports KioskV0.KioskV0.Model
 
 Namespace KioskV0.Classes
     Public Class Mediator(Of TKey)
+        'Public Property CurrentUser As User
         Private Property _Login As LoginViewModel
         Private Property _Projector As Projector
         Private ReadOnly _unitOfWork As IUnitOfWork
         Private Property _userCache As Dictionary(Of String, User)
         Private Property _actionManager As New ActionManager
+        Private Property _currentUser As User
         Private Property VMMap As Dictionary(Of TKey, IProjectable)
         Private VMMap_Instantiated As Boolean = False
 
@@ -279,6 +281,14 @@ Namespace KioskV0.Classes
 
 
         End Sub
+
+        Public Sub SetCurrentUser(user As User)
+            _currentUser = user
+            'MessageBox.Show($"{user.Role}")
+        End Sub
+        Public Function GetCurrentUser() As User
+            Return _currentUser
+        End Function
 
     End Class
 End Namespace

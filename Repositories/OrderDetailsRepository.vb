@@ -11,7 +11,7 @@ Public Class OrderDetailsRepository
     Public Overrides Function GetAll() As IEnumerable(Of OrderDetail)
         'Return _dbSet.Include(Function(c) c.Or)
         Return _dbSet.Include(Function(od) od.Order) _
-            .Include(Function(od) od.CustomerItem) _
+            .Include(Function(od) od.ItemVersion) _
             .AsNoTracking() _
             .ToList()
     End Function

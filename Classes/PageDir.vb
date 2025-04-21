@@ -29,7 +29,8 @@
                 {StaffKeys.StaffSideBar, New Classes.StaffSideBarViewModel(New Forms.StaffSideBar(), mediator)},
                 {StaffKeys.StaffPos, New Classes.StaffPosViewModel(New Forms.StaffPosView(), mediator)},
                 {StaffKeys.StaffManagerAuthorization, New Classes.StaffManagerAuthorizationViewModel(New Forms.StaffManagerAuthorizationView(), mediator)},
-                {StaffKeys.StaffCreditSales, New Classes.StaffCreditSalesViewModel(New Forms.StaffCreditSalesView(), mediator)}
+                {StaffKeys.StaffCreditSales, New Classes.StaffCreditSalesViewModel(New Forms.StaffCreditSalesView(), mediator)},
+                {StaffKeys.StaffOrderList, New Classes.StaffOrderListViewModel(New Forms.CustomerMenuView(), mediator)}
             }
         End Function
         Public Function GetCustomerPages(mediator As Mediator(Of CustomerKeys)) As Dictionary(Of CustomerKeys, IProjectable)
@@ -44,7 +45,8 @@
         Public Function GetSupplierPages(mediator As Mediator(Of SupplierKeys)) As Dictionary(Of SupplierKeys, IProjectable)
             Return New Dictionary(Of SupplierKeys, IProjectable) From
             {
-                {SupplierKeys.SupplierLandingPage, New SupplierLandingPageViewModel(New SupplierLandingPageView(), mediator)}
+                {SupplierKeys.SupplierLandingPage, New SupplierLandingPageViewModel(New SupplierLandingPageView(), mediator)},
+                {SupplierKeys.SupplierItems, New SupplierItemsViewModel(New SupplierItemsView(), mediator)}
             }
         End Function
     End Module

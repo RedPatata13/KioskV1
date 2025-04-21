@@ -25,49 +25,52 @@
         Private Sub InitializeComponent()
             Me.OrderNumberLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.OrderPanel = New System.Windows.Forms.Panel()
-            Me.OrderNoLbl = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.YourOrderLbl = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.CustomerReceiptLbl2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.CustomerReceiptLbl = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me.PayButton = New Guna.UI2.WinForms.Guna2Button()
             Me.OrderPanel.SuspendLayout()
             Me.SuspendLayout()
             '
             'OrderNumberLabel
             '
+            Me.OrderNumberLabel.AutoSize = False
             Me.OrderNumberLabel.BackColor = System.Drawing.Color.Transparent
             Me.OrderNumberLabel.Font = New System.Drawing.Font("Poppins", 120.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.OrderNumberLabel.Location = New System.Drawing.Point(137, 60)
+            Me.OrderNumberLabel.Location = New System.Drawing.Point(181, 55)
             Me.OrderNumberLabel.Name = "OrderNumberLabel"
-            Me.OrderNumberLabel.Size = New System.Drawing.Size(160, 284)
+            Me.OrderNumberLabel.Size = New System.Drawing.Size(367, 279)
             Me.OrderNumberLabel.TabIndex = 2
             Me.OrderNumberLabel.Text = "31"
+            Me.OrderNumberLabel.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft
             '
             'OrderPanel
             '
             Me.OrderPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+            Me.OrderPanel.Controls.Add(Me.Guna2HtmlLabel1)
             Me.OrderPanel.Controls.Add(Me.OrderNumberLabel)
-            Me.OrderPanel.Controls.Add(Me.OrderNoLbl)
             Me.OrderPanel.Controls.Add(Me.YourOrderLbl)
-            Me.OrderPanel.Location = New System.Drawing.Point(499, 337)
+            Me.OrderPanel.Location = New System.Drawing.Point(416, 238)
             Me.OrderPanel.Name = "OrderPanel"
-            Me.OrderPanel.Size = New System.Drawing.Size(381, 288)
+            Me.OrderPanel.Size = New System.Drawing.Size(550, 336)
             Me.OrderPanel.TabIndex = 5
             '
-            'OrderNoLbl
+            'Guna2HtmlLabel1
             '
-            Me.OrderNoLbl.BackColor = System.Drawing.Color.Transparent
-            Me.OrderNoLbl.Font = New System.Drawing.Font("Poppins", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.OrderNoLbl.Location = New System.Drawing.Point(80, 207)
-            Me.OrderNoLbl.Name = "OrderNoLbl"
-            Me.OrderNoLbl.Size = New System.Drawing.Size(51, 53)
-            Me.OrderNoLbl.TabIndex = 1
-            Me.OrderNoLbl.Text = "No."
+            Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
+            Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Poppins", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(3, 170)
+            Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
+            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(84, 86)
+            Me.Guna2HtmlLabel1.TabIndex = 3
+            Me.Guna2HtmlLabel1.Text = "No."
             '
             'YourOrderLbl
             '
             Me.YourOrderLbl.BackColor = System.Drawing.Color.Transparent
             Me.YourOrderLbl.Font = New System.Drawing.Font("Poppins", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.YourOrderLbl.Location = New System.Drawing.Point(107, 26)
+            Me.YourOrderLbl.Location = New System.Drawing.Point(181, 3)
             Me.YourOrderLbl.Name = "YourOrderLbl"
             Me.YourOrderLbl.Size = New System.Drawing.Size(163, 53)
             Me.YourOrderLbl.TabIndex = 0
@@ -77,7 +80,7 @@
             '
             Me.CustomerReceiptLbl2.BackColor = System.Drawing.Color.Transparent
             Me.CustomerReceiptLbl2.Font = New System.Drawing.Font("Poppins SemiBold", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.CustomerReceiptLbl2.Location = New System.Drawing.Point(474, 153)
+            Me.CustomerReceiptLbl2.Location = New System.Drawing.Point(470, 129)
             Me.CustomerReceiptLbl2.Name = "CustomerReceiptLbl2"
             Me.CustomerReceiptLbl2.Size = New System.Drawing.Size(429, 86)
             Me.CustomerReceiptLbl2.TabIndex = 4
@@ -87,17 +90,42 @@
             '
             Me.CustomerReceiptLbl.BackColor = System.Drawing.Color.Transparent
             Me.CustomerReceiptLbl.Font = New System.Drawing.Font("Poppins SemiBold", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.CustomerReceiptLbl.Location = New System.Drawing.Point(56, 69)
+            Me.CustomerReceiptLbl.Location = New System.Drawing.Point(54, 37)
             Me.CustomerReceiptLbl.Name = "CustomerReceiptLbl"
             Me.CustomerReceiptLbl.Size = New System.Drawing.Size(1244, 86)
             Me.CustomerReceiptLbl.TabIndex = 3
             Me.CustomerReceiptLbl.Text = "Please get your receipt and proceed to the counter "
+            '
+            'PayButton
+            '
+            Me.PayButton.BackColor = System.Drawing.Color.Transparent
+            Me.PayButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
+            Me.PayButton.BorderRadius = 10
+            Me.PayButton.BorderThickness = 1
+            Me.PayButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.PayButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.PayButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.PayButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.PayButton.FillColor = System.Drawing.Color.White
+            Me.PayButton.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.PayButton.ForeColor = System.Drawing.Color.Black
+            Me.PayButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
+            Me.PayButton.Location = New System.Drawing.Point(416, 623)
+            Me.PayButton.Name = "PayButton"
+            Me.PayButton.PressedColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+            Me.PayButton.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+            Me.PayButton.ShadowDecoration.Enabled = True
+            Me.PayButton.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(0, 0, 10, 10)
+            Me.PayButton.Size = New System.Drawing.Size(545, 76)
+            Me.PayButton.TabIndex = 12
+            Me.PayButton.Text = "Done"
             '
             'CustomerInvoiceUserControl
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
+            Me.Controls.Add(Me.PayButton)
             Me.Controls.Add(Me.OrderPanel)
             Me.Controls.Add(Me.CustomerReceiptLbl2)
             Me.Controls.Add(Me.CustomerReceiptLbl)
@@ -112,10 +140,11 @@
 
         Friend WithEvents OrderNumberLabel As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents OrderPanel As Panel
-        Friend WithEvents OrderNoLbl As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents YourOrderLbl As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents CustomerReceiptLbl2 As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents CustomerReceiptLbl As Guna.UI2.WinForms.Guna2HtmlLabel
+        Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
+        Friend WithEvents PayButton As Guna.UI2.WinForms.Guna2Button
     End Class
 
 End Namespace

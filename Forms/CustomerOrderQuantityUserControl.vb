@@ -2,7 +2,7 @@
 
 Namespace KioskV0.Forms
     Public Class CustomerOrderQuantityUserControl
-        Public Property AddOrderClick As Action(Of AdminItem, Integer)
+        Public Property AddOrderClick As Action(Of AdminItemVersion, Integer)
         Public Property CancelClick As Action
         Public Property Quantity As Integer
             Get
@@ -14,10 +14,10 @@ Namespace KioskV0.Forms
             End Set
         End Property
 
-        Private _menu As AdminItem
+        Private _menu As AdminItemVersion
         Private _quantity As Integer = 1
 
-        Public Sub New(menu As AdminItem)
+        Public Sub New(menu As AdminItemVersion)
             InitializeComponent()
             _menu = menu
             SetUI()

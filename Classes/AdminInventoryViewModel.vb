@@ -25,7 +25,7 @@ Namespace KioskV0.Classes
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect
             dgv.ColumnHeadersHeight = 40
             dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-            _view.DGV_Source = New BindingSource With {.DataSource = _mediator.GetItemList()}
+            _view.DGV_Source = New BindingSource With {.DataSource = _mediator.GetUnitOfWork.SupplierItems.GetAll()}
         End Sub
     End Class
 End Namespace

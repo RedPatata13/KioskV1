@@ -41,8 +41,12 @@ Public Class KioskDbContext
     Public Property Suppliers As DbSet(Of Supplier)
     Public Property Categories As DbSet(Of Category)
     Public Property OrderItems As DbSet(Of OrderItem)
+
+    Public Property OrderDetails As DbSet(Of OrderDetail)
     Public Property OrderPrimals As DbSet(Of OrderPrimal)
     Public Property InventoryBatches As DbSet(Of InventoryBatch)
+    Public Property TransactedOrder As DbSet(Of TransactedOrder)
+    Public Property AdminItemVersions As DbSet(Of AdminItemVersion)
     Public Sub New()
         MyBase.New(JsonConfigReader.GetConnectionString())
     End Sub
@@ -51,20 +55,11 @@ Public Class KioskDbContext
         modelBuilder.Configurations.Add(New MenuConfiguration())
         modelBuilder.Configurations.Add(New SupplierConfiguration())
         modelBuilder.Configurations.Add(New SupplierItemConfiguration())
-        'modelBuilder.Configurations.Add(New AdminItemConfiguration())
+        modelBuilder.Configurations.Add(New AdminItemConfiguration())
         modelBuilder.Configurations.Add(New OrderConfiguration())
         modelBuilder.Configurations.Add(New OrderDetailsConfiguration())
-        modelBuilder.Entity(Of AdminItem)() _
-        .HasRequired(Function(a) a.Category) _
-        .WithMany() _
-        .HasForeignKey(Function(a) a.CategoryId) _
-        .WillCascadeOnDelete(False)
-
-        modelBuilder.Entity(Of AdminItem)() _
-        .HasRequired(Function(a) a.SupplierItem) _
-        .WithMany() _
-        .HasForeignKey(Function(a) a.SupplierItemId) _
-        .WillCascadeOnDelete(False)
+        modelBuilder.Configurations.Add(New TransactedOrderConfiguration())
+        modelBuilder.Configurations.Add(New AdminItemVersionConfiguration())
         'modelBuilder.Configurations.Add(New )
         modelBuilder.Entity(Of CustomerItem)() _
             .HasOptional(Function(c) c.AdminItem) _

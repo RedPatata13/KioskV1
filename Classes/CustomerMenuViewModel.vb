@@ -6,7 +6,7 @@ Namespace KioskV0.Classes
     Public Class CustomerMenuViewModel
         Inherits ViewModel(Of Forms.CustomerMenuView, CustomerKeys)
         Private Property Loaded As Boolean = False
-        Private Property AllMenuItems As List(Of AdminItem)
+        Private Property AllMenuItems As List(Of AdminItemVersion)
         Private Property CategoryList As New Dictionary(Of String, Category)
         Private _cart As New List(Of OrderModel)
         Private Property UserCart As New Dictionary(Of String, OrderDetail)
@@ -25,7 +25,7 @@ Namespace KioskV0.Classes
                 UserCart = value
                 For Each kv In value
                     TotalItems += kv.Value.Quantity
-                    TotalCost += kv.Value.CustomerItem.SellingCost * kv.Value.Quantity
+                    TotalCost += kv.Value.ItemVersion.SellingCost * kv.Value.Quantity
                 Next
                 UpdateCartSummary()
             End Set
@@ -60,25 +60,32 @@ Namespace KioskV0.Classes
                                    End Sub)
             Loaded = True
         End Sub
+
+        Public Sub ResetView()
+            OnStartOverClicked()
+        End Sub
         Private Sub LoadCategories()
             _view.CategoryPanel.Controls.Clear()
-            Dim locationY = 0
-            Dim allButton = New Guna.UI2.WinForms.Guna2Button
-            allButton.Text = "All"
-            allButton.Location = New Point(0, locationY)
-            locationY += allButton.Height
-            AddHandler allButton.Click, Sub() LoadMenuItems(allButton.Text)
+            Dim locationY = 12
+            Dim image As Image = _view.AllCategButton.Image
+
+            Dim allButton = CategoryButton("All", New Point(12, locationY), image)
+            'allButton.Text = "All"
+            'allButton.Location = New Point(0, locationY)
+            locationY += allButton.Height + 10
+            AddHandler allButton.Click, Sub() LoadMenuItems("All")
             _view.CategoryPanel.Controls.Add(allButton)
+
+
             For Each ctgr In CategoryList
-                Dim button As New Guna.UI2.WinForms.Guna2Button
-                button.Text = ctgr.Value.CategoryName
+                Dim button = CategoryButton(ctgr.Value.CategoryName, New Point(12, locationY), image)
+                'button.Text = ctgr.Value.CategoryName
                 'button.Click = Sub() LoadMenuItems(button.Text)
-                button.Location = New Point(0, locationY)
-                locationY += button.Height
+                'button.Location = New Point(0, locationY)
+                locationY += button.Height + 10
                 AddHandler button.Click, Sub() LoadMenuItems(button.Text)
                 _view.CategoryPanel.Controls.Add(button)
             Next
-
         End Sub
 
         Private Sub LoadMenuData()
@@ -86,8 +93,8 @@ Namespace KioskV0.Classes
             CategoryList.Clear()
 
             ' Get only AdminItems marked for customer display
-            Dim displayedItems = _mediator.GetUnitOfWork.AdminItems.GetAll() _
-            .Where(Function(ami) ami.IsDisplayedAsCustomerItem AndAlso ami.Category IsNot Nothing) _
+            Dim displayedItems = _mediator.GetUnitOfWork.AdminItemVersion.GetAll() _
+            .Where(Function(ami) ami.IsDisplayedAsACustomerItem AndAlso ami.Category IsNot Nothing AndAlso ami.IsCurrentVersion) _
             .ToList()
 
             ' Populate category dictionary
@@ -117,11 +124,11 @@ Namespace KioskV0.Classes
         Private Sub OnCategoryClicked(category As String)
             LoadMenuItems(category)
         End Sub
-        Private Sub MenuUserControlClick(item As AdminItem)
+        Private Sub MenuUserControlClick(item As AdminItemVersion)
             ShowQuantityUC(item)
         End Sub
 
-        Private Sub ShowQuantityUC(item As AdminItem)
+        Private Sub ShowQuantityUC(item As AdminItemVersion)
             ' Create the UserControl instance
             Dim quantityUC As New CustomerOrderQuantityUserControl(item)
             quantityUC.AddOrderClick = Sub()
@@ -143,19 +150,21 @@ Namespace KioskV0.Classes
         End Sub
 
 
-        Private Sub AddToCart(menu As AdminItem, quantity As Integer)
-            If Not UserCart.ContainsKey(menu.Id) Then
+        Private Sub AddToCart(menu As AdminItemVersion, quantity As Integer)
+            If Not UserCart.ContainsKey(menu.VersionId) Then
                 Dim id = Guid.NewGuid().ToString().Substring(0, 10)
                 Dim model = New OrderDetail With {
                 .OrderDetailsId = id,
-                .CustomerItem = menu,
-                .CustomerItemId = menu.Id,
+                .ItemVersion = menu,
+                .VersionId = menu.VersionId,
+                .Item = menu.BaseItem,
+                .ReferencedItemId = menu.BaseItemId,
                 .Quantity = 0
                 }
-                UserCart(menu.Id) = model
+                UserCart(menu.VersionId) = model
             End If
 
-            UserCart(menu.Id).Quantity += quantity
+            UserCart(menu.VersionId).Quantity += quantity
             'MessageBox.Show($"{UserCart(menu.Id).Quantity}")
         End Sub
 
@@ -190,6 +199,38 @@ Namespace KioskV0.Classes
             _mediator.SwapPage(CustomerKeys.CustomerOrderList)
             'End If
         End Sub
+        Public Function CategoryButton(text As String, location As Point, image As Image) As Guna.UI2.WinForms.Guna2Button
+            Dim btn As New Guna.UI2.WinForms.Guna2Button With {
+                .Text = text,
+                .Size = New Size(196, 72),
+                .Font = New Font("Poppins Medium", 12.0!, FontStyle.Bold),
+                .ForeColor = SystemColors.ControlText,
+                .FillColor = Color.White,
+                .BorderColor = SystemColors.ControlText,
+                .BorderRadius = 15,
+                .BorderThickness = 1,
+                .Image = image,
+                .ImageSize = New Size(60, 60),
+                .TextOffset = New Point(0, 5),
+                .Location = location,
+                .Name = $"CategoryButton_{text}"
+            }
+
+            With btn.HoverState
+                .BorderColor = Color.FromArgb(180, 0, 0)
+                .FillColor = Color.FromArgb(180, 0, 0)
+                .ForeColor = Color.White
+            End With
+
+            With btn.DisabledState
+                .BorderColor = Color.DarkGray
+                .CustomBorderColor = Color.DarkGray
+                .FillColor = Color.FromArgb(169, 169, 169)
+                .ForeColor = Color.FromArgb(141, 141, 141)
+            End With
+
+            Return btn
+        End Function
     End Class
 
 End Namespace

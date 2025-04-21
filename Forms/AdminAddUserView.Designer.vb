@@ -43,6 +43,8 @@
             Me.Guna2HtmlLabel9 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me._cancelButton = New Guna.UI2.WinForms.Guna2Button()
             Me._saveButton = New Guna.UI2.WinForms.Guna2Button()
+            Me.SomeLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me._addressField = New Guna.UI2.WinForms.Guna2TextBox()
             Me.Guna2Panel1.SuspendLayout()
             Me.SuspendLayout()
             '
@@ -178,7 +180,7 @@
             Me._emailField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
             Me._emailField.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me._emailField.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me._emailField.Location = New System.Drawing.Point(740, 398)
+            Me._emailField.Location = New System.Drawing.Point(736, 526)
             Me._emailField.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
             Me._emailField.Name = "_emailField"
             Me._emailField.PlaceholderText = "staffname@gmail.com"
@@ -218,7 +220,7 @@
             Me._contactNumField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
             Me._contactNumField.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me._contactNumField.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me._contactNumField.Location = New System.Drawing.Point(740, 512)
+            Me._contactNumField.Location = New System.Drawing.Point(736, 640)
             Me._contactNumField.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
             Me._contactNumField.Name = "_contactNumField"
             Me._contactNumField.PlaceholderText = "09*********"
@@ -310,7 +312,7 @@
             Me.Guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel8.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel8.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2HtmlLabel8.Location = New System.Drawing.Point(740, 336)
+            Me.Guna2HtmlLabel8.Location = New System.Drawing.Point(736, 464)
             Me.Guna2HtmlLabel8.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
             Me.Guna2HtmlLabel8.Size = New System.Drawing.Size(285, 49)
@@ -323,7 +325,7 @@
             Me.Guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel9.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel9.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2HtmlLabel9.Location = New System.Drawing.Point(740, 458)
+            Me.Guna2HtmlLabel9.Location = New System.Drawing.Point(736, 586)
             Me.Guna2HtmlLabel9.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel9.Name = "Guna2HtmlLabel9"
             Me.Guna2HtmlLabel9.Size = New System.Drawing.Size(450, 49)
@@ -374,6 +376,39 @@
             Me._saveButton.TabIndex = 27
             Me._saveButton.Text = "Save"
             '
+            'SomeLabel
+            '
+            Me.SomeLabel.AutoSize = False
+            Me.SomeLabel.BackColor = System.Drawing.Color.Transparent
+            Me.SomeLabel.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
+            Me.SomeLabel.ForeColor = System.Drawing.SystemColors.ControlText
+            Me.SomeLabel.Location = New System.Drawing.Point(736, 336)
+            Me.SomeLabel.Margin = New System.Windows.Forms.Padding(2)
+            Me.SomeLabel.Name = "SomeLabel"
+            Me.SomeLabel.Size = New System.Drawing.Size(285, 49)
+            Me.SomeLabel.TabIndex = 30
+            Me.SomeLabel.Text = "Address"
+            '
+            '_addressField
+            '
+            Me._addressField.BorderRadius = 15
+            Me._addressField.Cursor = System.Windows.Forms.Cursors.IBeam
+            Me._addressField.DefaultText = ""
+            Me._addressField.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+            Me._addressField.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+            Me._addressField.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+            Me._addressField.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+            Me._addressField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+            Me._addressField.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+            Me._addressField.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+            Me._addressField.Location = New System.Drawing.Point(736, 398)
+            Me._addressField.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+            Me._addressField.Name = "_addressField"
+            Me._addressField.PlaceholderText = "staffname@gmail.com"
+            Me._addressField.SelectedText = ""
+            Me._addressField.Size = New System.Drawing.Size(510, 49)
+            Me._addressField.TabIndex = 29
+            '
             'AdminAddUserView
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -381,6 +416,8 @@
             Me.AutoScroll = True
             Me.BackColor = System.Drawing.Color.White
             Me.ClientSize = New System.Drawing.Size(1321, 878)
+            Me.Controls.Add(Me.SomeLabel)
+            Me.Controls.Add(Me._addressField)
             Me.Controls.Add(Me._cancelButton)
             Me.Controls.Add(Me._saveButton)
             Me.Controls.Add(Me.Guna2HtmlLabel9)
@@ -431,6 +468,8 @@
         Friend WithEvents Guna2HtmlLabel9 As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents _cancelButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents _saveButton As Guna.UI2.WinForms.Guna2Button
+        Friend WithEvents SomeLabel As Guna.UI2.WinForms.Guna2HtmlLabel
+        Friend WithEvents _addressField As Guna.UI2.WinForms.Guna2TextBox
     End Class
 
 End Namespace

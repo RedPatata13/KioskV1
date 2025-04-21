@@ -44,7 +44,7 @@
             Me.Guna2Panel1.Controls.Add(Me.ProductPictureBox)
             Me.Guna2Panel1.FillColor = System.Drawing.Color.White
             Me.Guna2Panel1.Location = New System.Drawing.Point(14, 0)
-            Me.Guna2Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.Guna2Panel1.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2Panel1.Name = "Guna2Panel1"
             Me.Guna2Panel1.ShadowDecoration.BorderRadius = 25
             Me.Guna2Panel1.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(0, 0, 10, 10)
@@ -56,7 +56,7 @@
             Me.CategoryLabel.BackColor = System.Drawing.Color.Transparent
             Me.CategoryLabel.Font = New System.Drawing.Font("Poppins Light", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.CategoryLabel.Location = New System.Drawing.Point(14, 191)
-            Me.CategoryLabel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.CategoryLabel.Margin = New System.Windows.Forms.Padding(2)
             Me.CategoryLabel.Name = "CategoryLabel"
             Me.CategoryLabel.Size = New System.Drawing.Size(68, 27)
             Me.CategoryLabel.TabIndex = 3
@@ -67,7 +67,7 @@
             Me.PriceLabel.BackColor = System.Drawing.Color.Transparent
             Me.PriceLabel.Font = New System.Drawing.Font("Poppins Light", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.PriceLabel.Location = New System.Drawing.Point(14, 171)
-            Me.PriceLabel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.PriceLabel.Margin = New System.Windows.Forms.Padding(2)
             Me.PriceLabel.Name = "PriceLabel"
             Me.PriceLabel.Size = New System.Drawing.Size(50, 27)
             Me.PriceLabel.TabIndex = 2
@@ -78,7 +78,7 @@
             Me.ProductName.BackColor = System.Drawing.Color.Transparent
             Me.ProductName.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.ProductName.Location = New System.Drawing.Point(14, 146)
-            Me.ProductName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.ProductName.Margin = New System.Windows.Forms.Padding(2)
             Me.ProductName.Name = "ProductName"
             Me.ProductName.Size = New System.Drawing.Size(117, 30)
             Me.ProductName.TabIndex = 1
@@ -91,9 +91,10 @@
             Me.ProductPictureBox.FillColor = System.Drawing.Color.LightGray
             Me.ProductPictureBox.ImageRotate = 0!
             Me.ProductPictureBox.Location = New System.Drawing.Point(14, 15)
-            Me.ProductPictureBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.ProductPictureBox.Margin = New System.Windows.Forms.Padding(2)
             Me.ProductPictureBox.Name = "ProductPictureBox"
             Me.ProductPictureBox.Size = New System.Drawing.Size(142, 126)
+            Me.ProductPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
             Me.ProductPictureBox.TabIndex = 0
             Me.ProductPictureBox.TabStop = False
             '
@@ -103,7 +104,7 @@
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.Transparent
             Me.Controls.Add(Me.Guna2Panel1)
-            Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.Margin = New System.Windows.Forms.Padding(2)
             Me.Name = "AdminMenuUserControl"
             Me.Size = New System.Drawing.Size(185, 252)
             Me.Guna2Panel1.ResumeLayout(False)

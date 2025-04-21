@@ -63,9 +63,11 @@ Public Class InventoryBatchConfiguration
 
         ' InventoryBatch to AdminItems (One-to-Many)
         Me.HasMany(Function(b) b.AdminItems) _
-        .WithOptional(Function(a) a.Batch) _ ' AdminItem may or may not have a batch _
+        .WithRequired(Function(a) a.Batch) _ ' AdminItem may or may not have a batch _
         .HasForeignKey(Function(a) a.BatchId) _
         .WillCascadeOnDelete(False)
+
+
 
         ' Optional: Table naming convention
         Me.ToTable("InventoryBatches")

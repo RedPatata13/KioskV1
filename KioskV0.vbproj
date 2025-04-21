@@ -132,9 +132,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\AdminMenuSelectSupplierItemViewModel.vb" />
-    <Compile Include="Classes\CloneHelper.vb" />
+    <Compile Include="Classes\CustomerLandingPageViewModel.vb" />
     <Compile Include="Classes\InitialDBSetup.vb" />
+    <Compile Include="Classes\StaffOrderListViewModel.vb" />
+    <Compile Include="Classes\SupplierItemsViewModel.vb" />
     <Compile Include="Classes\SupplierLandingPageViewModel.vb" />
+    <Compile Include="Classes\SupplierSidebarViewModel.vb" />
     <Compile Include="ContainerConfiguration.vb" />
     <Compile Include="Classes\ActionManager.vb" />
     <Compile Include="Classes\AdminAccountSettingsViewModel.vb" />
@@ -182,6 +185,7 @@
     <Compile Include="Classes\ViewModel.vb" />
     <Compile Include="Data\AppDbContext.vb" />
     <Compile Include="Data\Configuration\AdminItemConfiguration.vb" />
+    <Compile Include="Data\Configuration\AdminItemVersionConfiguration.vb" />
     <Compile Include="Data\Configuration\CategoryConfiguration.vb" />
     <Compile Include="Data\Configuration\CustomerConfiguration.vb" />
     <Compile Include="Data\Configuration\InventoryBatchConfiguration.vb" />
@@ -193,6 +197,7 @@
     <Compile Include="Data\Configuration\MenuConfiguration.vb" />
     <Compile Include="Data\Configuration\SupplierConfiguration.vb" />
     <Compile Include="Data\Configuration\SupplierItemConfiguration.vb" />
+    <Compile Include="Data\Configuration\TransactedOrderConfiguration.vb" />
     <Compile Include="Data\Configuration\TransactionConfiguration.vb" />
     <Compile Include="Data\Configuration\UserConfiguration.vb" />
     <Compile Include="Forms\AdminAccountSettingsView.Designer.vb">
@@ -387,11 +392,23 @@
     <Compile Include="Forms\StaffManagerAuthorizationView.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\StaffPaymentUserControl.Designer.vb">
+      <DependentUpon>StaffPaymentUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffPaymentUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Forms\StaffPaymentView.Designer.vb">
       <DependentUpon>StaffPaymentView.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\StaffPaymentView.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StaffPosConfirmationUserControl.Designer.vb">
+      <DependentUpon>StaffPosConfirmationUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffPosConfirmationUserControl.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\StaffPosOrderUserControl.Designer.vb">
       <DependentUpon>StaffPosOrderUserControl.vb</DependentUpon>
@@ -441,18 +458,139 @@
     <Compile Include="Forms\StaffTotaProductsUserControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Forms\SupplierItemsView.Designer.vb">
+      <DependentUpon>SupplierItemsView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupplierItemsView.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\SupplierLandingPageView.Designer.vb">
       <DependentUpon>SupplierLandingPageView.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\SupplierLandingPageView.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Migrations\202504170343157_NewCreate.Designer.vb">
-      <DependentUpon>202504170343157_NewCreate.vb</DependentUpon>
+    <Compile Include="Forms\SupplierSidebar.Designer.vb">
+      <DependentUpon>SupplierSidebar.vb</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202504170343157_NewCreate.vb" />
+    <Compile Include="Forms\SupplierSidebar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Migrations\202504101827107_InitialCreate.Designer.vb">
+      <DependentUpon>202504101827107_InitialCreate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504101827107_InitialCreate.vb" />
+    <Compile Include="Migrations\202504101828417_UpdateOrders.Designer.vb">
+      <DependentUpon>202504101828417_UpdateOrders.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504101828417_UpdateOrders.vb" />
+    <Compile Include="Migrations\202504101834477_RemovedUserId.Designer.vb">
+      <DependentUpon>202504101834477_RemovedUserId.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504101834477_RemovedUserId.vb" />
+    <Compile Include="Migrations\202504102201149_AdminItemChange.Designer.vb">
+      <DependentUpon>202504102201149_AdminItemChange.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504102201149_AdminItemChange.vb" />
+    <Compile Include="Migrations\202504142327046_UngKayAteSharks.Designer.vb">
+      <DependentUpon>202504142327046_UngKayAteSharks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504142327046_UngKayAteSharks.vb" />
+    <Compile Include="Migrations\202504150006145_AddBatches.Designer.vb">
+      <DependentUpon>202504150006145_AddBatches.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504150006145_AddBatches.vb" />
+    <Compile Include="Migrations\202504150131132_RemoveSupplierItemStockCount.Designer.vb">
+      <DependentUpon>202504150131132_RemoveSupplierItemStockCount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504150131132_RemoveSupplierItemStockCount.vb" />
+    <Compile Include="Migrations\202504150148222_AddedQuantityPropertyToBatch.Designer.vb">
+      <DependentUpon>202504150148222_AddedQuantityPropertyToBatch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504150148222_AddedQuantityPropertyToBatch.vb" />
+    <Compile Include="Migrations\202504150220583_ChangedOrderDetails.Designer.vb">
+      <DependentUpon>202504150220583_ChangedOrderDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504150220583_ChangedOrderDetails.vb" />
+    <Compile Include="Migrations\202504150226275_RevertRename.Designer.vb">
+      <DependentUpon>202504150226275_RevertRename.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504150226275_RevertRename.vb" />
+    <Compile Include="Migrations\202504150231136_TempRemove.Designer.vb">
+      <DependentUpon>202504150231136_TempRemove.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504150231136_TempRemove.vb" />
+    <Compile Include="Migrations\202504150236244_AddTemp.Designer.vb">
+      <DependentUpon>202504150236244_AddTemp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504150236244_AddTemp.vb" />
+    <Compile Include="Migrations\202504151528224_RemovedSupplierItem.Designer.vb">
+      <DependentUpon>202504151528224_RemovedSupplierItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504151528224_RemovedSupplierItem.vb" />
+    <Compile Include="Migrations\202504160947168_AddedTransactions.Designer.vb">
+      <DependentUpon>202504160947168_AddedTransactions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504160947168_AddedTransactions.vb" />
+    <Compile Include="Migrations\202504171023563_SomeShit.Designer.vb">
+      <DependentUpon>202504171023563_SomeShit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504171023563_SomeShit.vb" />
+    <Compile Include="Migrations\202504171028428_MinorCheck.Designer.vb">
+      <DependentUpon>202504171028428_MinorCheck.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504171028428_MinorCheck.vb" />
+    <Compile Include="Migrations\202504190915152_BaseModel.Designer.vb">
+      <DependentUpon>202504190915152_BaseModel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504190915152_BaseModel.vb" />
+    <Compile Include="Migrations\202504191003245_Multiplicity.Designer.vb">
+      <DependentUpon>202504191003245_Multiplicity.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504191003245_Multiplicity.vb" />
+    <Compile Include="Migrations\202504211015577_AdminItemVersion.Designer.vb">
+      <DependentUpon>202504211015577_AdminItemVersion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504211015577_AdminItemVersion.vb" />
+    <Compile Include="Migrations\202504211032026_AdminItemVersionUpdateReason.Designer.vb">
+      <DependentUpon>202504211032026_AdminItemVersionUpdateReason.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504211032026_AdminItemVersionUpdateReason.vb" />
+    <Compile Include="Migrations\202504211302139_OrderDetailSwapAdminItemtoItsVersion.Designer.vb">
+      <DependentUpon>202504211302139_OrderDetailSwapAdminItemtoItsVersion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504211302139_OrderDetailSwapAdminItemtoItsVersion.vb" />
+    <Compile Include="Migrations\202504211314063_Rename.Designer.vb">
+      <DependentUpon>202504211314063_Rename.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504211314063_Rename.vb" />
+    <Compile Include="Migrations\202504211319402_FK.Designer.vb">
+      <DependentUpon>202504211319402_FK.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504211319402_FK.vb" />
+    <Compile Include="Migrations\202504211320269_FK1.Designer.vb">
+      <DependentUpon>202504211320269_FK1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504211320269_FK1.vb" />
+    <Compile Include="Migrations\202504211324525_FK2.Designer.vb">
+      <DependentUpon>202504211324525_FK2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504211324525_FK2.vb" />
+    <Compile Include="Migrations\202504211407181_VersionDatePlusOrderMode.Designer.vb">
+      <DependentUpon>202504211407181_VersionDatePlusOrderMode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504211407181_VersionDatePlusOrderMode.vb" />
+    <Compile Include="Migrations\202504212307573_AddEditor.Designer.vb">
+      <DependentUpon>202504212307573_AddEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504212307573_AddEditor.vb" />
+    <Compile Include="Migrations\202504212313320_AddEditorIdRequired.Designer.vb">
+      <DependentUpon>202504212313320_AddEditorIdRequired.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504212313320_AddEditorIdRequired.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\AdminItem.vb" />
+    <Compile Include="Models\AdminItemVersion.vb" />
     <Compile Include="Models\Category.vb" />
     <Compile Include="Models\Customer.vb" />
     <Compile Include="Models\CustomerItem.vb" />
@@ -469,12 +607,15 @@
     <Compile Include="Models\Supplier.vb" />
     <Compile Include="Models\SupplierItem.vb" />
     <Compile Include="Models\SupplierProduct.vb" />
+    <Compile Include="Models\TransactedOrder.vb" />
     <Compile Include="Models\Transaction.vb" />
     <Compile Include="Models\UserModel_1.vb" />
     <Compile Include="Models\UserModel.vb" />
     <Compile Include="Repositories\AdminItemsRepository.vb" />
+    <Compile Include="Repositories\AdminItemVersionRepository.vb" />
     <Compile Include="Repositories\BaseRepository.vb" />
     <Compile Include="Repositories\CategoryRepository.vb" />
+    <Compile Include="Repositories\Contracts\IAdminItemVersionRepository.vb" />
     <Compile Include="Repositories\Contracts\IAdminItemsRepository.vb" />
     <Compile Include="Repositories\Contracts\IBaseRepository.vb" />
     <Compile Include="Repositories\Contracts\IInventoryBatchRepository.vb" />
@@ -484,6 +625,7 @@
     <Compile Include="Repositories\Contracts\IOrderDetailsRepository.vb" />
     <Compile Include="Repositories\Contracts\IOrderRepository.vb" />
     <Compile Include="Repositories\Contracts\ISupplierItemsRepository.vb" />
+    <Compile Include="Repositories\Contracts\ITransactedDetailsRepository.vb" />
     <Compile Include="Repositories\Contracts\IUnitOfWork.vb" />
     <Compile Include="Repositories\Contracts\IUsersRepository.vb" />
     <Compile Include="Repositories\CustomerItemsRepository.vb" />
@@ -496,6 +638,7 @@
     <Compile Include="Repositories\MenuRepository.vb" />
     <Compile Include="Repositories\SupplierItemsRepository.vb" />
     <Compile Include="Repositories\SuppliersRepository.vb" />
+    <Compile Include="Repositories\TransactedOrdersRepository.vb" />
     <Compile Include="Repositories\TransactionsRepository.vb" />
     <Compile Include="Repositories\UnitOfWork.vb" />
     <Compile Include="Repositories\UsersRepository.vb" />
@@ -612,11 +755,20 @@
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffPaymentUserControl.resx">
+      <DependentUpon>StaffPaymentUserControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\StaffPaymentView.resx">
       <DependentUpon>StaffPaymentView.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffPosConfirmationUserControl.resx">
+      <DependentUpon>StaffPosConfirmationUserControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\StaffPosOrderUserControl.resx">
       <DependentUpon>StaffPosOrderUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffPosView.resx">
+      <DependentUpon>StaffPosView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StaffProductCategoryUserControl.resx">
       <DependentUpon>StaffProductCategoryUserControl.vb</DependentUpon>
@@ -633,11 +785,98 @@
     <EmbeddedResource Include="Forms\StaffTotaProductsUserControl.resx">
       <DependentUpon>StaffTotaProductsUserControl.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SupplierItemsView.resx">
+      <DependentUpon>SupplierItemsView.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SupplierLandingPageView.resx">
       <DependentUpon>SupplierLandingPageView.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504170343157_NewCreate.resx">
-      <DependentUpon>202504170343157_NewCreate.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\SupplierSidebar.resx">
+      <DependentUpon>SupplierSidebar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504101827107_InitialCreate.resx">
+      <DependentUpon>202504101827107_InitialCreate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504101828417_UpdateOrders.resx">
+      <DependentUpon>202504101828417_UpdateOrders.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504101834477_RemovedUserId.resx">
+      <DependentUpon>202504101834477_RemovedUserId.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504102201149_AdminItemChange.resx">
+      <DependentUpon>202504102201149_AdminItemChange.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504142327046_UngKayAteSharks.resx">
+      <DependentUpon>202504142327046_UngKayAteSharks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504150006145_AddBatches.resx">
+      <DependentUpon>202504150006145_AddBatches.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504150131132_RemoveSupplierItemStockCount.resx">
+      <DependentUpon>202504150131132_RemoveSupplierItemStockCount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504150148222_AddedQuantityPropertyToBatch.resx">
+      <DependentUpon>202504150148222_AddedQuantityPropertyToBatch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504150220583_ChangedOrderDetails.resx">
+      <DependentUpon>202504150220583_ChangedOrderDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504150226275_RevertRename.resx">
+      <DependentUpon>202504150226275_RevertRename.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504150231136_TempRemove.resx">
+      <DependentUpon>202504150231136_TempRemove.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504150236244_AddTemp.resx">
+      <DependentUpon>202504150236244_AddTemp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504151528224_RemovedSupplierItem.resx">
+      <DependentUpon>202504151528224_RemovedSupplierItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504160947168_AddedTransactions.resx">
+      <DependentUpon>202504160947168_AddedTransactions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504171023563_SomeShit.resx">
+      <DependentUpon>202504171023563_SomeShit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504171028428_MinorCheck.resx">
+      <DependentUpon>202504171028428_MinorCheck.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504190915152_BaseModel.resx">
+      <DependentUpon>202504190915152_BaseModel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504191003245_Multiplicity.resx">
+      <DependentUpon>202504191003245_Multiplicity.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504211015577_AdminItemVersion.resx">
+      <DependentUpon>202504211015577_AdminItemVersion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504211032026_AdminItemVersionUpdateReason.resx">
+      <DependentUpon>202504211032026_AdminItemVersionUpdateReason.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504211302139_OrderDetailSwapAdminItemtoItsVersion.resx">
+      <DependentUpon>202504211302139_OrderDetailSwapAdminItemtoItsVersion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504211314063_Rename.resx">
+      <DependentUpon>202504211314063_Rename.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504211319402_FK.resx">
+      <DependentUpon>202504211319402_FK.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504211320269_FK1.resx">
+      <DependentUpon>202504211320269_FK1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504211324525_FK2.resx">
+      <DependentUpon>202504211324525_FK2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504211407181_VersionDatePlusOrderMode.resx">
+      <DependentUpon>202504211407181_VersionDatePlusOrderMode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504212307573_AddEditor.resx">
+      <DependentUpon>202504212307573_AddEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504212313320_AddEditorIdRequired.resx">
+      <DependentUpon>202504212313320_AddEditorIdRequired.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -665,6 +904,8 @@
   <ItemGroup>
     <Content Include="Assets\calendar %281%29.png" />
     <Content Include="Assets\customer.png" />
+    <None Include="Assets\icons8-delete-100 %28Black%29.png" />
+    <None Include="Assets\Delete-itim.png" />
     <Content Include="Assets\icons8-equal-housing-opportunity-96 %281%29.png" />
     <Content Include="Assets\icons8-equal-housing-opportunity-96.png" />
     <Content Include="Assets\icons8-hamburger-100.png" />

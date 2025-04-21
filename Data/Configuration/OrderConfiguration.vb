@@ -21,6 +21,8 @@ Public Class OrderConfiguration
         Me.Property(Function(o) o.CreatedAt).
             IsRequired()
 
+        Me.Property(Function(o) o.OrderMode).IsOptional()
+
         '' Define the relationship between Order and User
         'Me.HasRequired(Function(o) o.User) _
         '    .WithMany() _
