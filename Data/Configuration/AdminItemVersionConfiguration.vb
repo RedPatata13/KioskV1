@@ -40,7 +40,7 @@ Public Class AdminItemVersionConfiguration
 
         Me.Property(Function(aivc) aivc.IsCurrentVersion).
             IsRequired()
-
+        Me.Property(Function(aivc) aivc.DateCreated).IsRequired()
         Me.HasRequired(Function(aivc) aivc.Category).
             WithMany().
             HasForeignKey(Function(aivc) aivc.CategoryId).

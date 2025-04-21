@@ -14,5 +14,6 @@
     Public Property CategoryId As String
     Public Property Category As Category
     Public Property BatchID As String
+    Public Property DateCreated As DateTime
     Public Overridable Property Batch As InventoryBatch
 End Class

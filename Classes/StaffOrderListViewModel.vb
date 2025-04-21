@@ -6,7 +6,7 @@ Namespace KioskV0.Classes
     Public Class StaffOrderListViewModel
         Inherits ViewModel(Of Forms.CustomerMenuView, StaffKeys)
         Private Property Loaded As Boolean = False
-        Private Property AllMenuItems As List(Of AdminItem)
+        Private Property AllMenuItems As List(Of AdminItemVersion)
         Private Property CategoryList As New Dictionary(Of String, Category)
         Private _cart As New List(Of OrderModel)
         Private Property UserCart As New Dictionary(Of String, OrderDetail)
@@ -24,7 +24,7 @@ Namespace KioskV0.Classes
                 UserCart = value
                 For Each kv In value
                     TotalItems += kv.Value.Quantity
-                    TotalCost += kv.Value.CustomerItem.SellingCost * kv.Value.Quantity
+                    TotalCost += kv.Value.ItemVersion.SellingCost * kv.Value.Quantity
                 Next
                 UpdateCartSummary()
             End Set
@@ -85,8 +85,8 @@ Namespace KioskV0.Classes
             CategoryList.Clear()
 
             ' Get only AdminItems marked for customer display
-            Dim displayedItems = _mediator.GetUnitOfWork.AdminItems.GetAll() _
-            .Where(Function(ami) ami.IsDisplayedAsCustomerItem AndAlso ami.Category IsNot Nothing) _
+            Dim displayedItems = _mediator.GetUnitOfWork.AdminItemVersion.GetAll() _
+            .Where(Function(ami) ami.IsDisplayedAsACustomerItem AndAlso ami.Category IsNot Nothing AndAlso ami.IsCurrentVersion) _
             .ToList()
 
             ' Populate category dictionary
@@ -116,11 +116,11 @@ Namespace KioskV0.Classes
         Private Sub OnCategoryClicked(category As String)
             LoadMenuItems(category)
         End Sub
-        Private Sub MenuUserControlClick(item As AdminItem)
+        Private Sub MenuUserControlClick(item As AdminItemVersion)
             ShowQuantityUC(item)
         End Sub
 
-        Private Sub ShowQuantityUC(item As AdminItem)
+        Private Sub ShowQuantityUC(item As AdminItemVersion)
             ' Create the UserControl instance
             Dim quantityUC As New CustomerOrderQuantityUserControl(item)
             quantityUC.AddOrderClick = Sub()
@@ -142,19 +142,19 @@ Namespace KioskV0.Classes
         End Sub
 
 
-        Private Sub AddToCart(menu As AdminItem, quantity As Integer)
-            If Not UserCart.ContainsKey(menu.Id) Then
+        Private Sub AddToCart(menu As AdminItemVersion, quantity As Integer)
+            If Not UserCart.ContainsKey(menu.VersionId) Then
                 Dim id = Guid.NewGuid().ToString().Substring(0, 10)
                 Dim model = New OrderDetail With {
                 .OrderDetailsId = id,
-                .CustomerItem = menu,
-                .CustomerItemId = menu.Id,
+                .ItemVersion = menu,
+                .VersionId = menu.VersionId,
                 .Quantity = 0
                 }
-                UserCart(menu.Id) = model
+                UserCart(menu.VersionId) = model
             End If
 
-            UserCart(menu.Id).Quantity += quantity
+            UserCart(menu.VersionId).Quantity += quantity
             'MessageBox.Show($"{UserCart(menu.Id).Quantity}")
         End Sub
 

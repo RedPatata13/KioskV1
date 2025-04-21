@@ -39,7 +39,7 @@
         Set(value As OrderDetail)
             _model = value
             TextCount = value.Quantity
-            ProductNameLabel.Text = TruncateText(value.CustomerItem.Name, 40)
+            ProductNameLabel.Text = TruncateText(value.ItemVersion.Name, 40)
         End Set
     End Property
     Public Sub New()

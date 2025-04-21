@@ -14,9 +14,9 @@ Namespace KioskV0.Forms
                 ApplyClickEvent(Me)
             End Set
         End Property
-        Private Property _model As AdminItem
+        Private Property _model As AdminItemVersion
 
-        Public Sub New(model As AdminItem)
+        Public Sub New(model As AdminItemVersion)
             InitializeComponent()
             _model = model
             SetLabels()

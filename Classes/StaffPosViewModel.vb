@@ -30,7 +30,7 @@ Namespace KioskV0.Classes
 
                 For Each kv In value
                     'MessageBox.Show(kv.Value.CustomerItem.Id)
-                    _cartItemIDs.Add(kv.Value.CustomerItem.Id, kv.Value)
+                    _cartItemIDs.Add(kv.Value.ItemVersion.VersionId, kv.Value)
                 Next
             End Set
         End Property
@@ -101,14 +101,14 @@ Namespace KioskV0.Classes
                 Dim val = kv.Value
 
                 'check if item already exists in the Cart
-                If _cartItemIDs.ContainsKey(val.CustomerItem.Id) Then
-                    Dim target As OrderDetail = _cartItemIDs(val.CustomerItem.Id)
+                If _cartItemIDs.ContainsKey(val.ItemVersion.VersionId) Then
+                    Dim target As OrderDetail = _cartItemIDs(val.ItemVersion.VersionId)
                     target.Quantity += val.Quantity
                     Continue For
                 End If
 
                 _cart.Add(val.OrderDetailsId, val)
-                _cartItemIDs.Add(val.CustomerItem.Id, val)
+                _cartItemIDs.Add(val.ItemVersion.VersionId, val)
 
                 Dim uc = New StaffPosOrderUserControl()
                 uc.Model = val
@@ -211,8 +211,8 @@ Namespace KioskV0.Classes
             End If
             Dim vm = DirectCast(_mediator.GetVM(StaffKeys.StaffPayment), StaffPaymentViewModel)
             Dim total = Cart.Values.
-                Where(Function(od) od?.CustomerItem IsNot Nothing).
-                Sum(Function(od) od.CustomerItem.SellingCost * od.Quantity)
+                Where(Function(od) od?.ItemVersion IsNot Nothing).
+                Sum(Function(od) od.ItemVersion.SellingCost * od.Quantity)
             Dim model = PayButtonClick(total)
             Dim pending = Sub()
                               ResolveChanges()
@@ -284,8 +284,8 @@ Namespace KioskV0.Classes
                     context.OrderDetails.Attach(item.Value)
                 Else
                     base.Add(item.Key, item.Value) ' item was only added during the session
-                    context.Categories.Attach(item.Value.CustomerItem.Category)
-                    context.AdminItems.Attach(item.Value.CustomerItem)
+                    context.Categories.Attach(item.Value.ItemVersion.Category)
+                    context.AdminItemVersions.Attach(item.Value.ItemVersion)
                     item.Value.OrderId = _currOrd.OrderId
                     _mediator.GetUnitOfWork.OrderDetails.Add(item.Value)
 
@@ -299,7 +299,7 @@ Namespace KioskV0.Classes
                 If Not Cart.ContainsKey(item.Key) Then 'items that exist in the base and not in the cart implies that it got deleted
                     toBeDeleted.Enqueue(item.Value)
                 Else
-                    subtotal += item.Value.CustomerItem.SellingCost * item.Value.Quantity
+                    subtotal += item.Value.ItemVersion.SellingCost * item.Value.Quantity
                 End If
             Next
 

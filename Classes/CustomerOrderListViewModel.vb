@@ -148,9 +148,9 @@ Namespace KioskV0.Classes
                 End If
 
                 For Each order In Cart.Values
-                    Dim itemName As String = order.CustomerItem.Name
+                    Dim itemName As String = order.ItemVersion.Name
                     Dim quantity As Integer = order.Quantity
-                    Dim unitPrice As Decimal = order.CustomerItem.SellingCost
+                    Dim unitPrice As Decimal = order.ItemVersion.SellingCost
                     Dim totalPrice As Decimal = unitPrice * quantity
 
                     .Rows.Add(itemName, quantity, totalPrice.ToString("C"))
@@ -159,7 +159,7 @@ Namespace KioskV0.Classes
         End Sub
 
         Private Sub UpdateTotalPrice()
-            Dim total As Decimal = Cart.Values.Sum(Function(order) order.Quantity * order.CustomerItem.SellingCost)
+            Dim total As Decimal = Cart.Values.Sum(Function(order) order.Quantity * order.ItemVersion.SellingCost)
             _view.TotalPriceLabel.Text = $"PHP{total:C}"
         End Sub
 

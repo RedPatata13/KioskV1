@@ -25,6 +25,7 @@ Namespace KioskV0.Classes
 
         Private Sub Confirm()
             If Cart Is Nothing Then Return
+            ShowOrderType()
             Dim order = GetOrder()
             'order.OrderType = SelectedOrderType
             OrderNumber = order.OrderId
@@ -34,7 +35,7 @@ Namespace KioskV0.Classes
             Dim paymentVM = DirectCast(_mediator.GetVM(CustomerKeys.CustomerPayment), CustomerPaymentViewModel)
             paymentVM.CurrentOrderNumber = OrderNumber
 
-            ShowOrderType()
+
             Cart = Nothing
         End Sub
 
@@ -43,7 +44,7 @@ Namespace KioskV0.Classes
                 .OrderId = Guid.NewGuid().ToString().Substring(0, 10),
                 .CreatedAt = DateTime.Now,
                 .OrderItems = Cart.Values.ToList(),
-                .TotalPrice = Cart.Values.Aggregate(0D, Function(t, x) t + (x.Quantity * x.CustomerItem.SellingCost))
+                .TotalPrice = Cart.Values.Aggregate(0D, Function(t, x) t + (x.Quantity * x.ItemVersion.SellingCost))
             }
 
             Dim context = DirectCast(_mediator.GetUnitOfWork(), UnitOfWork)._context
@@ -54,25 +55,35 @@ Namespace KioskV0.Classes
             ' Attach all categories and customer items first
             For Each o In op.OrderItems
                 ' Handle Category
-                Dim category = context.Categories.Local.FirstOrDefault(Function(c) c.CategoryId = o.CustomerItem.Category.CategoryId)
+                Dim category = context.Categories.Local.FirstOrDefault(Function(c) c.CategoryId = o.ItemVersion.Category.CategoryId)
                 If category Is Nothing Then
-                    category = context.Categories.Find(o.CustomerItem.Category.CategoryId)
+                    category = context.Categories.Find(o.ItemVersion.Category.CategoryId)
                     If category Is Nothing Then
                         Throw New Exception("Category not found in DB")
                     End If
                 End If
-                o.CustomerItem.Category = category
+                o.ItemVersion.Category = category
 
                 ' Handle CustomerItem
-                Dim customerItem = context.AdminItems.Local.FirstOrDefault(Function(c) c.Id = o.CustomerItem.Id)
-                If customerItem Is Nothing Then
-                    customerItem = context.AdminItems.Find(o.CustomerItem.Id)
-                    If customerItem Is Nothing Then
-                        Throw New Exception("CustomerItem not found in DB")
+                Dim item_ver = context.AdminItemVersions.Local.FirstOrDefault(Function(c) c.VersionId = o.ItemVersion.VersionId)
+                If item_ver Is Nothing Then
+                    item_ver = context.AdminItemVersions.Find(o.ItemVersion.VersionId)
+                    If item_ver Is Nothing Then
+                        Throw New Exception("Item version is not found in DB")
                     End If
                 End If
 
-                o.CustomerItem = customerItem
+                o.ItemVersion = item_ver
+
+                Dim item = context.AdminItems.Local.FirstOrDefault(Function(c) c.Id = o.ReferencedItemId)
+                If item Is Nothing Then
+                    item = context.AdminItems.Find(o.ReferencedItemId)
+                    If item Is Nothing Then
+                        Throw New Exception("Item is not found in DB")
+                    End If
+                End If
+
+                o.Item = item
             Next
 
             Return op

@@ -15,4 +15,14 @@ Public Class AdminItemVersionRepository
                      .AsNoTracking _
                      .ToList()
     End Function
+
+    Public Function GetCurrentVersion(itemId As String) As AdminItemVersion Implements IAdminItemVersionRepository.GetCurrentVersion
+        Dim version As AdminItemVersion = _dbSet.Local.FirstOrDefault(Function(v) v.BaseItemId = itemId AndAlso v.IsCurrentVersion)
+        If version Is Nothing Then
+            version = _dbSet.FirstOrDefault(Function(v) v.BaseItemId = itemId AndAlso v.IsCurrentVersion)
+        End If
+
+
+        Return version
+    End Function
 End Class

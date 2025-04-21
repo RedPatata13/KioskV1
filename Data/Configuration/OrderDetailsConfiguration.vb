@@ -16,7 +16,7 @@ Public Class OrderDetailsConfiguration
             IsRequired().
             HasMaxLength(50)
 
-        Me.Property(Function(od) od.CustomerItemId).
+        Me.Property(Function(od) od.VersionId).
             IsRequired().
             HasMaxLength(50)
 
@@ -26,9 +26,14 @@ Public Class OrderDetailsConfiguration
             .HasForeignKey(Function(od) od.OrderId) _
             .WillCascadeOnDelete(True)
 
-        Me.HasRequired(Function(od) od.CustomerItem) _
+        Me.HasRequired(Function(od) od.ItemVersion) _
             .WithMany() _
-            .HasForeignKey(Function(od) od.CustomerItemId) _
+            .HasForeignKey(Function(od) od.VersionId) _
+            .WillCascadeOnDelete(False)
+
+        Me.HasRequired(Function(od) od.Item) _
+            .WithMany() _
+            .HasForeignKey(Function(od) od.ReferencedItemId) _
             .WillCascadeOnDelete(False)
     End Sub
 End Class

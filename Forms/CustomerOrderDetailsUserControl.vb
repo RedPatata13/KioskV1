@@ -26,16 +26,16 @@ Namespace KioskV0.Forms
 
         End Sub
         Public Sub SetLabels()
-            If _order?.CustomerItem Is Nothing Then Exit Sub
+            If _order?.ItemVersion Is Nothing Then Exit Sub
 
-            ItemName.Text = _order.CustomerItem.Name
+            ItemName.Text = _order.ItemVersion.Name
             QuantityTextBox.Text = _order.Quantity.ToString()
-            ItemPrice.Text = $"P{_order.CustomerItem.SellingCost:N2}"
-            ItemTotalPrice.Text = $"P{_order.CustomerItem.SellingCost * _order.Quantity:N2}"
+            ItemPrice.Text = $"P{_order.ItemVersion.SellingCost:N2}"
+            ItemTotalPrice.Text = $"P{_order.ItemVersion.SellingCost * _order.Quantity:N2}"
 
             Dim defaultImagePath As String = "picture.png"
 
-            Dim imagePath As String = If(String.IsNullOrWhiteSpace(_order.CustomerItem.ImageFilePath), defaultImagePath, _order.CustomerItem.ImageFilePath)
+            Dim imagePath As String = If(String.IsNullOrWhiteSpace(_order.ItemVersion.ImageFilePath), defaultImagePath, _order.ItemVersion.ImageFilePath)
 
             If File.Exists(imagePath) Then
                 MenuPictureBox.Image = Image.FromFile(imagePath)

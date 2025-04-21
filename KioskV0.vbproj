@@ -132,7 +132,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\AdminMenuSelectSupplierItemViewModel.vb" />
-    <Compile Include="Classes\CloneHelper.vb" />
+    <Compile Include="Classes\CustomerLandingPageViewModel.vb" />
     <Compile Include="Classes\InitialDBSetup.vb" />
     <Compile Include="Classes\StaffOrderListViewModel.vb" />
     <Compile Include="Classes\SupplierItemsViewModel.vb" />
@@ -556,6 +556,34 @@
       <DependentUpon>202504211032026_AdminItemVersionUpdateReason.vb</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202504211032026_AdminItemVersionUpdateReason.vb" />
+    <Compile Include="Migrations\202504211302139_OrderDetailSwapAdminItemtoItsVersion.Designer.vb">
+      <DependentUpon>202504211302139_OrderDetailSwapAdminItemtoItsVersion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504211302139_OrderDetailSwapAdminItemtoItsVersion.vb" />
+    <Compile Include="Migrations\202504211314063_Rename.Designer.vb">
+      <DependentUpon>202504211314063_Rename.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504211314063_Rename.vb" />
+    <Compile Include="Migrations\202504211319402_FK.Designer.vb">
+      <DependentUpon>202504211319402_FK.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504211319402_FK.vb" />
+    <Compile Include="Migrations\202504211320269_FK1.Designer.vb">
+      <DependentUpon>202504211320269_FK1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504211320269_FK1.vb" />
+    <Compile Include="Migrations\202504211324525_FK2.Designer.vb">
+      <DependentUpon>202504211324525_FK2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504211324525_FK2.vb" />
+    <Compile Include="Migrations\202504211407181_VersionDatePlusOrderMode.Designer.vb">
+      <DependentUpon>202504211407181_VersionDatePlusOrderMode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504211407181_VersionDatePlusOrderMode.vb" />
+    <Compile Include="Migrations\202504211655395_RemoveAdminItemsFromBatch.Designer.vb">
+      <DependentUpon>202504211655395_RemoveAdminItemsFromBatch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504211655395_RemoveAdminItemsFromBatch.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\AdminItem.vb" />
     <Compile Include="Models\AdminItemVersion.vb" />
@@ -821,6 +849,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504211032026_AdminItemVersionUpdateReason.resx">
       <DependentUpon>202504211032026_AdminItemVersionUpdateReason.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504211302139_OrderDetailSwapAdminItemtoItsVersion.resx">
+      <DependentUpon>202504211302139_OrderDetailSwapAdminItemtoItsVersion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504211314063_Rename.resx">
+      <DependentUpon>202504211314063_Rename.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504211319402_FK.resx">
+      <DependentUpon>202504211319402_FK.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504211320269_FK1.resx">
+      <DependentUpon>202504211320269_FK1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504211324525_FK2.resx">
+      <DependentUpon>202504211324525_FK2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504211407181_VersionDatePlusOrderMode.resx">
+      <DependentUpon>202504211407181_VersionDatePlusOrderMode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504211655395_RemoveAdminItemsFromBatch.resx">
+      <DependentUpon>202504211655395_RemoveAdminItemsFromBatch.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
