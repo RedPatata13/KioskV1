@@ -580,10 +580,14 @@
       <DependentUpon>202504211407181_VersionDatePlusOrderMode.vb</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202504211407181_VersionDatePlusOrderMode.vb" />
-    <Compile Include="Migrations\202504211655395_RemoveAdminItemsFromBatch.Designer.vb">
-      <DependentUpon>202504211655395_RemoveAdminItemsFromBatch.vb</DependentUpon>
+    <Compile Include="Migrations\202504212307573_AddEditor.Designer.vb">
+      <DependentUpon>202504212307573_AddEditor.vb</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202504211655395_RemoveAdminItemsFromBatch.vb" />
+    <Compile Include="Migrations\202504212307573_AddEditor.vb" />
+    <Compile Include="Migrations\202504212313320_AddEditorIdRequired.Designer.vb">
+      <DependentUpon>202504212313320_AddEditorIdRequired.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504212313320_AddEditorIdRequired.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\AdminItem.vb" />
     <Compile Include="Models\AdminItemVersion.vb" />
@@ -868,8 +872,11 @@
     <EmbeddedResource Include="Migrations\202504211407181_VersionDatePlusOrderMode.resx">
       <DependentUpon>202504211407181_VersionDatePlusOrderMode.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504211655395_RemoveAdminItemsFromBatch.resx">
-      <DependentUpon>202504211655395_RemoveAdminItemsFromBatch.vb</DependentUpon>
+    <EmbeddedResource Include="Migrations\202504212307573_AddEditor.resx">
+      <DependentUpon>202504212307573_AddEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504212313320_AddEditorIdRequired.resx">
+      <DependentUpon>202504212313320_AddEditorIdRequired.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

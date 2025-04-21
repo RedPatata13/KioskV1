@@ -6,14 +6,14 @@ Imports System.Resources
 
 Namespace Migrations
     <GeneratedCode("EntityFramework.Migrations", "6.5.1")>
-    Public NotInheritable Partial Class RemoveAdminItemsFromBatch
+    Public NotInheritable Partial Class AddEditor
         Implements IMigrationMetadata
     
-        Private ReadOnly Resources As New ResourceManager(GetType(RemoveAdminItemsFromBatch))
+        Private ReadOnly Resources As New ResourceManager(GetType(AddEditor))
         
         Private ReadOnly Property IMigrationMetadata_Id() As String Implements IMigrationMetadata.Id
             Get
-                Return "202504211655395_RemoveAdminItemsFromBatch"
+                Return "202504212307573_AddEditor"
             End Get
         End Property
         

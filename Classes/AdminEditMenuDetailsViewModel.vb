@@ -83,17 +83,6 @@ Namespace KioskV0.Classes
                 CategoryCache.Add(cl.CategoryId, cl)
                 context.Categories.Attach(cl)
             Next
-
-            For Each sp In suppliers
-                FoundSupplier.Add(sp.UserId, sp)
-                'context.Users.Attach(sp)
-            Next
-
-            For Each sl In supplierList
-                'FoundSupplierIte
-            Next
-
-
         End Sub
         Private Sub SetComboBoxes()
             Dim catNameList As List(Of String) = CategoryCache.Select(Function(cl) cl.Value.CategoryName).ToList()
@@ -197,7 +186,8 @@ Namespace KioskV0.Classes
                     .UnitCost = model.Batch.UnitCost,
                     .Name = model.Name,
                     .VersionUpdateReason = "Base Item with name: [" & model.Name & "] and with ID: {" & model.Id & "} created.",
-                    .DateCreated = DateTime.Now()
+                    .DateCreated = DateTime.Now(),
+                    .EditorId = _mediator.GetCurrentUser().UserId
                 }
 
                 Dim vm = DirectCast(_mediator.GetVM(AdminKeys.AdminMenu), AdminMenuViewModel)
@@ -305,21 +295,25 @@ Namespace KioskV0.Classes
 
                 If needsNewVersion Then
                     ' Create new version based on original values
+                    Dim current_ver = _mediator.GetUnitOfWork.AdminItemVersion.GetCurrentVersion(model.Id)
+                    current_ver.IsCurrentVersion = False
                     Dim newVersion = New AdminItemVersion With {
-                .VersionId = "VER_" & Guid.NewGuid().ToString("N").Substring(0, 8),
-                .BaseItemId = model.Id,
-                .Name = model.Name,
-                .SellingCost = originalSellingCost,
-                .BatchID = originalBatchId,
-                .CategoryId = originalCategoryId,
-                .ImageFilePath = model.ImageFilePath,
-                .IsDisplayedAsACustomerItem = model.IsDisplayedAsCustomerItem,
-                .IsCurrentVersion = False,
-                .VersionUpdateReason = "Auto-versioned due to significant changes",
-                .DateCreated = DateTime.Now
+                    .VersionId = "VER_" & Guid.NewGuid().ToString("N").Substring(0, 8),
+                    .BaseItemId = model.Id,
+                    .Name = model.Name,
+                    .SellingCost = model.SellingCost,
+                    .BatchID = model.BatchId,
+                    .CategoryId = model.CategoryId,
+                    .ImageFilePath = model.ImageFilePath,
+                    .IsDisplayedAsACustomerItem = model.IsDisplayedAsCustomerItem,
+                    .IsCurrentVersion = True,
+                    .VersionUpdateReason = "Auto-versioned due to significant changes",
+                    .DateCreated = DateTime.Now,
+                    .EditorId = _mediator.GetCurrentUser().UserId
             }
 
                     ' Add the new version
+                    _mediator.GetUnitOfWork.AdminItemVersion.Update(current_ver)
                     _mediator.GetUnitOfWork.AdminItemVersion.Add(newVersion)
                 End If
 
@@ -348,8 +342,6 @@ Namespace KioskV0.Classes
             _view.ProductDescription = model.Description
             _view.Cost = $"{model.SellingCost}"
             _view.ProductImagePath = model.ImageFilePath
-
-            '_view.Sell = $"{model.Selling}"
         End Sub
 
         Private Sub DefaultLoad()

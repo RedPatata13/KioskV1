@@ -50,5 +50,10 @@ Public Class AdminItemVersionConfiguration
             .WithMany() _
             .HasForeignKey(Function(aivc) aivc.BatchID) _
             .WillCascadeOnDelete(False)
+
+        Me.HasRequired(Function(aivc) aivc.EditedBy) _
+            .WithMany() _
+            .HasForeignKey(Function(aivc) aivc.EditorId) _
+            .WillCascadeOnDelete(False)
     End Sub
 End Class
