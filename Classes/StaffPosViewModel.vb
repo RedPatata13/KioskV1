@@ -236,7 +236,7 @@ Namespace KioskV0.Classes
 
 
             context.OrderPrimals.Attach(order)
-            Dim user = _mediator.CurrentUser
+            Dim user = _mediator.GetCurrentUser
 
             context.Users.Attach(user)
             Dim model = New TransactedOrder With {

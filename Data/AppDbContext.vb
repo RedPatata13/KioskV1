@@ -46,6 +46,7 @@ Public Class KioskDbContext
     Public Property OrderPrimals As DbSet(Of OrderPrimal)
     Public Property InventoryBatches As DbSet(Of InventoryBatch)
     Public Property TransactedOrder As DbSet(Of TransactedOrder)
+    Public Property AdminItemVersions As DbSet(Of AdminItemVersion)
     Public Sub New()
         MyBase.New(JsonConfigReader.GetConnectionString())
     End Sub
@@ -58,6 +59,7 @@ Public Class KioskDbContext
         modelBuilder.Configurations.Add(New OrderConfiguration())
         modelBuilder.Configurations.Add(New OrderDetailsConfiguration())
         modelBuilder.Configurations.Add(New TransactedOrderConfiguration())
+        modelBuilder.Configurations.Add(New AdminItemVersionConfiguration())
         'modelBuilder.Configurations.Add(New )
         modelBuilder.Entity(Of CustomerItem)() _
             .HasOptional(Function(c) c.AdminItem) _

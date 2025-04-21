@@ -185,6 +185,7 @@
     <Compile Include="Classes\ViewModel.vb" />
     <Compile Include="Data\AppDbContext.vb" />
     <Compile Include="Data\Configuration\AdminItemConfiguration.vb" />
+    <Compile Include="Data\Configuration\AdminItemVersionConfiguration.vb" />
     <Compile Include="Data\Configuration\CategoryConfiguration.vb" />
     <Compile Include="Data\Configuration\CustomerConfiguration.vb" />
     <Compile Include="Data\Configuration\InventoryBatchConfiguration.vb" />
@@ -547,8 +548,17 @@
       <DependentUpon>202504191003245_Multiplicity.vb</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202504191003245_Multiplicity.vb" />
+    <Compile Include="Migrations\202504211015577_AdminItemVersion.Designer.vb">
+      <DependentUpon>202504211015577_AdminItemVersion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504211015577_AdminItemVersion.vb" />
+    <Compile Include="Migrations\202504211032026_AdminItemVersionUpdateReason.Designer.vb">
+      <DependentUpon>202504211032026_AdminItemVersionUpdateReason.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504211032026_AdminItemVersionUpdateReason.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\AdminItem.vb" />
+    <Compile Include="Models\AdminItemVersion.vb" />
     <Compile Include="Models\Category.vb" />
     <Compile Include="Models\Customer.vb" />
     <Compile Include="Models\CustomerItem.vb" />
@@ -570,8 +580,10 @@
     <Compile Include="Models\UserModel_1.vb" />
     <Compile Include="Models\UserModel.vb" />
     <Compile Include="Repositories\AdminItemsRepository.vb" />
+    <Compile Include="Repositories\AdminItemVersionRepository.vb" />
     <Compile Include="Repositories\BaseRepository.vb" />
     <Compile Include="Repositories\CategoryRepository.vb" />
+    <Compile Include="Repositories\Contracts\IAdminItemVersionRepository.vb" />
     <Compile Include="Repositories\Contracts\IAdminItemsRepository.vb" />
     <Compile Include="Repositories\Contracts\IBaseRepository.vb" />
     <Compile Include="Repositories\Contracts\IInventoryBatchRepository.vb" />
@@ -803,6 +815,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504191003245_Multiplicity.resx">
       <DependentUpon>202504191003245_Multiplicity.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504211015577_AdminItemVersion.resx">
+      <DependentUpon>202504211015577_AdminItemVersion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504211032026_AdminItemVersionUpdateReason.resx">
+      <DependentUpon>202504211032026_AdminItemVersionUpdateReason.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

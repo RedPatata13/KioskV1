@@ -17,6 +17,7 @@
     Public ReadOnly Property OrderDetails As IBaseRepository(Of OrderDetail) Implements IUnitOfWork.OrderDetails
     Public ReadOnly Property InventoryBatches As IBaseRepository(Of InventoryBatch) Implements IUnitOfWork.InventoryBatches
     Public ReadOnly Property TransactedOrders As IBaseRepository(Of TransactedOrder) Implements IUnitOfWork.TransactedOrder
+    Public ReadOnly Property AdminItemVersions As IBaseRepository(Of AdminItemVersion) Implements IUnitOfWork.AdminItemVersion
 
     Public Sub New(context As KioskDbContext)
         _context = context
@@ -35,6 +36,7 @@
         OrderDetails = New OrderDetailsRepository(_context)
         InventoryBatches = New InventoryBatchRepository(_context)
         TransactedOrders = New TransactedOrdersRepository(_context)
+        AdminItemVersions = New AdminItemVersionRepository(_context)
     End Sub
 
     Public Sub SaveChanges() Implements IUnitOfWork.SaveChanges

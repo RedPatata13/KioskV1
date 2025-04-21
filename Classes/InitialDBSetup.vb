@@ -1,6 +1,88 @@
 ﻿Imports System.Windows.Controls.Primitives
-
+Imports System.Data.Entity
 Module InitialDBSetup
+    Public Sub AddMockItemVersions()
+        Using context As New KioskDbContext()
+            ' Disable auto-detect changes for better performance
+            context.Configuration.AutoDetectChangesEnabled = False
+
+            Using UnitOfWork As New UnitOfWork(context)
+                ' Get all admin items with their relationships
+                Dim adminItems = UnitOfWork.AdminItems.GetAll()
+
+                ' Create dictionaries to track already attached entities
+                Dim attachedCategories = New Dictionary(Of String, Category)()
+                Dim attachedBatches = New Dictionary(Of String, InventoryBatch)()
+                Dim attachedAdminItems = New Dictionary(Of String, AdminItem)()
+
+                Dim list As New List(Of AdminItemVersion)
+
+                For Each ai In adminItems
+                    ' Handle Category attachment
+                    If ai.Category IsNot Nothing Then
+                        If Not attachedCategories.ContainsKey(ai.CategoryId) Then
+                            context.Categories.Attach(ai.Category)
+                            attachedCategories.Add(ai.CategoryId, ai.Category)
+                        Else
+                            ai.Category = attachedCategories(ai.CategoryId)
+                        End If
+                    End If
+
+                    ' Handle Batch attachment
+                    If ai.Batch IsNot Nothing Then
+                        If Not attachedBatches.ContainsKey(ai.BatchId) Then
+                            context.InventoryBatches.Attach(ai.Batch)
+                            attachedBatches.Add(ai.BatchId, ai.Batch)
+                        Else
+                            ai.Batch = attachedBatches(ai.BatchId)
+                        End If
+                    End If
+
+                    ' Handle AdminItem attachment
+                    If Not attachedAdminItems.ContainsKey(ai.Id) Then
+                        context.AdminItems.Attach(ai)
+                        attachedAdminItems.Add(ai.Id, ai)
+                    Else
+                        ai = attachedAdminItems(ai.Id)
+                    End If
+
+                    ' Create new version
+                    Dim model = New AdminItemVersion With {
+                    .VersionId = "BASEVER_" & Guid.NewGuid().ToString().Substring(0, 5),
+                    .BaseItemId = ai.Id,  ' Set foreign key
+                    .CategoryId = ai.CategoryId,  ' Set foreign key
+                    .BatchID = ai.BatchId,  ' Set foreign key
+                    .Name = ai.Name,
+                    .ImageFilePath = ai.ImageFilePath,
+                    .IsDisplayedAsACustomerItem = ai.IsDisplayedAsCustomerItem,
+                    .IsCurrentVersion = True,
+                    .UnitCost = ai.Batch.UnitCost,
+                    .SellingCost = ai.SellingCost,
+                    .VersionUpdateReason = "Base Item with name: [" & ai.Name & "] and with ID: {" & ai.Id & "} created."
+                }
+
+                    ' Set navigation properties from our tracked entities
+                    model.BaseItem = attachedAdminItems(ai.Id)
+                    If ai.Category IsNot Nothing Then
+                        model.Category = attachedCategories(ai.CategoryId)
+                    End If
+                    If ai.Batch IsNot Nothing Then
+                        model.Batch = attachedBatches(ai.BatchId)
+                    End If
+
+                    list.Add(model)
+                Next
+
+                ' Add all versions
+                UnitOfWork.AdminItemVersions.AddRange(list)
+
+                ' Re-enable change detection
+                context.Configuration.AutoDetectChangesEnabled = True
+                UnitOfWork.SaveChanges()
+            End Using
+        End Using
+    End Sub
+
     Public Sub AddMockCategories()
         Using context As New KioskDbContext()
             Using UnitOfWork As New UnitOfWork(context)

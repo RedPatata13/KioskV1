@@ -9,7 +9,8 @@ Public Class AdminItemsRepository
 
     Public Overrides Function GetAll() As IEnumerable(Of AdminItem)
         Return _dbSet.Include(Function(c) c.Category) _
-                     .AsNoTracking().ToList()
+                      .Include(Function(c) c.Batch) _
+                        .AsNoTracking().ToList()
     End Function
 
 
