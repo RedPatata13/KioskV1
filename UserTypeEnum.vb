@@ -52,6 +52,9 @@
         SupplierLandingPage
         SupplierTestPage
         SupplierItems
+        SupplierPendingRequest
+        SupplierTransaction
+        SupplierMenuSupply
     End Enum
 
     Public Enum ItemStatus

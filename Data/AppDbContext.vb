@@ -43,6 +43,7 @@ Public Class KioskDbContext
     Public Property OrderItems As DbSet(Of OrderItem)
     Public Property OrderPrimals As DbSet(Of OrderPrimal)
     Public Property InventoryBatches As DbSet(Of InventoryBatch)
+    Public Property SupplyRequests As DbSet(Of SupplyRequest)
     Public Sub New()
         MyBase.New(JsonConfigReader.GetConnectionString())
     End Sub
@@ -54,6 +55,7 @@ Public Class KioskDbContext
         'modelBuilder.Configurations.Add(New AdminItemConfiguration())
         modelBuilder.Configurations.Add(New OrderConfiguration())
         modelBuilder.Configurations.Add(New OrderDetailsConfiguration())
+        modelBuilder.Configurations.Add(New SupplyRequestConfiguration())
 
         'modelBuilder.Configurations.Add(New )
         modelBuilder.Entity(Of CustomerItem)() _

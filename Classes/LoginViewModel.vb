@@ -88,8 +88,8 @@ Namespace KioskV0.Classes
                         mediator.SetCurrentUser(acc)
                         mediator.SetupMap(GetSupplierPages(mediator))
                         'Dim supplier_sb = New SupplierSidebarViewModel(New Forms.SupplierSidebar(), mediator)
-                        mediator.SwapPage(SupplierKeys.SupplierLandingPage)
-                        mediator.SwapPage(SupplierKeys.SupplierLandingPage)
+                        mediator.SwapPage(SupplierKeys.SupplierPendingRequest)
+                        mediator.SwapPage(SupplierKeys.SupplierPendingRequest)
                     Case Else
                         MessageBox.Show("User type not null")
                 End Select

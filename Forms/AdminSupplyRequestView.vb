@@ -47,6 +47,16 @@
                 NoteField.Text = value
             End Set
         End Property
+
+        Public Property UnitCost As String
+            Get
+                Return UnitCostField.Text
+            End Get
+            Set(value As String)
+                UnitCostField.Text = value
+            End Set
+        End Property
+
         Private _suppliers As List(Of Supplier)
 
         Public Property Suppliers() As List(Of Supplier)
@@ -74,9 +84,13 @@
 
             ' If there are suppliers, add them to the ComboBox
             If _suppliers IsNot Nothing AndAlso _suppliers.Count > 0 Then
-                For Each supplier As Supplier In _suppliers
-                    SupplierField.Items.Add(supplier.Username) ' Assuming 'Name' is a property of the Supplier model
-                Next
+                'For Each supplier As Supplier In _suppliers
+                '    SupplierField.Items.Add(supplier.Username) ' Assuming 'Name' is a property of the Supplier model
+                'Next
+                SupplierField.DataSource = Nothing ' Clear previous bindings
+                SupplierField.DisplayMember = "Username" ' or .Name if that's the field
+                SupplierField.ValueMember = "UserId"
+                SupplierField.DataSource = _suppliers
             End If
         End Sub
 

@@ -104,6 +104,11 @@ Namespace KioskV0.Classes
         Public Function GetCustomerItemList()
             Return _unitOfWork.CustomerItems.GetAll()
         End Function
+
+        Public Function GetSupplyRequestList() As List(Of SupplyRequest)
+            Return _unitOfWork.SupplyRequests.GetAll()
+        End Function
+
         'test adding user
         Public Sub CreateUser(model As User)
             Try
