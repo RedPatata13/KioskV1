@@ -60,25 +60,32 @@ Namespace KioskV0.Classes
                                    End Sub)
             Loaded = True
         End Sub
+
+        Public Sub ResetView()
+            OnStartOverClicked()
+        End Sub
         Private Sub LoadCategories()
             _view.CategoryPanel.Controls.Clear()
-            Dim locationY = 0
-            Dim allButton = New Guna.UI2.WinForms.Guna2Button
-            allButton.Text = "All"
-            allButton.Location = New Point(0, locationY)
-            locationY += allButton.Height
-            AddHandler allButton.Click, Sub() LoadMenuItems(allButton.Text)
+            Dim locationY = 12
+            Dim image As Image = _view.AllCategButton.Image
+
+            Dim allButton = CategoryButton("All", New Point(12, locationY), Image)
+            'allButton.Text = "All"
+            'allButton.Location = New Point(0, locationY)
+            locationY += allButton.Height + 10
+            AddHandler allButton.Click, Sub() LoadMenuItems("All")
             _view.CategoryPanel.Controls.Add(allButton)
+
+
             For Each ctgr In CategoryList
-                Dim button As New Guna.UI2.WinForms.Guna2Button
-                button.Text = ctgr.Value.CategoryName
+                Dim button = CategoryButton(ctgr.Value.CategoryName, New Point(12, locationY), image)
+                'button.Text = ctgr.Value.CategoryName
                 'button.Click = Sub() LoadMenuItems(button.Text)
-                button.Location = New Point(0, locationY)
-                locationY += button.Height
+                'button.Location = New Point(0, locationY)
+                locationY += button.Height + 10
                 AddHandler button.Click, Sub() LoadMenuItems(button.Text)
                 _view.CategoryPanel.Controls.Add(button)
             Next
-
         End Sub
 
         Private Sub LoadMenuData()
@@ -190,6 +197,38 @@ Namespace KioskV0.Classes
             _mediator.SwapPage(CustomerKeys.CustomerOrderList)
             'End If
         End Sub
+        Public Function CategoryButton(text As String, location As Point, image As Image) As Guna.UI2.WinForms.Guna2Button
+            Dim btn As New Guna.UI2.WinForms.Guna2Button With {
+                .Text = text,
+                .Size = New Size(196, 72),
+                .Font = New Font("Poppins Medium", 12.0!, FontStyle.Bold),
+                .ForeColor = SystemColors.ControlText,
+                .FillColor = Color.White,
+                .BorderColor = SystemColors.ControlText,
+                .BorderRadius = 15,
+                .BorderThickness = 1,
+                .Image = image,
+                .ImageSize = New Size(60, 60),
+                .TextOffset = New Point(0, 5),
+                .Location = location,
+                .Name = $"CategoryButton_{text}"
+            }
+
+            With btn.HoverState
+                .BorderColor = Color.FromArgb(180, 0, 0)
+                .FillColor = Color.FromArgb(180, 0, 0)
+                .ForeColor = Color.White
+            End With
+
+            With btn.DisabledState
+                .BorderColor = Color.DarkGray
+                .CustomBorderColor = Color.DarkGray
+                .FillColor = Color.FromArgb(169, 169, 169)
+                .ForeColor = Color.FromArgb(141, 141, 141)
+            End With
+
+            Return btn
+        End Function
     End Class
 
 End Namespace

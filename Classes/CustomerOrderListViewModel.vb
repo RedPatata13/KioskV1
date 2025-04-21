@@ -100,12 +100,14 @@ Namespace KioskV0.Classes
                                                     order.Value.Quantity += 1
                                                     'Cart(order.Key).Quantity += 1
                                                     orderDetails.SetLabels()
+                                                    SyncCart()
                                                 End Sub
                     orderDetails.DecreaseItemClick = Sub()
                                                          If order.Value.Quantity > 1 Then
                                                              order.Value.Quantity -= 1
                                                              'Cart(order.Key).Quantity -= 1
                                                              orderDetails.SetLabels()
+                                                             SyncCart()
                                                          End If
 
                                                      End Sub
@@ -115,6 +117,7 @@ Namespace KioskV0.Classes
                                                        Cart.Remove(order.Key)
                                                        _view.OrderListFlowLayout.Controls.Remove(orderDetails)
                                                        orderDetails.Dispose()
+                                                       SyncCart()
                                                        If Cart.Count = 0 Then LoadWithEmptyCart()
                                                        'End Sub)
                                                        'LoadOrderDetails()
@@ -122,22 +125,48 @@ Namespace KioskV0.Classes
                                                    End Sub
                     _view.OrderListFlowLayout.Controls.Add(orderDetails)
                 Next
+                PopulateDGV()
                 '_mediator.InvokeAllAction()
             End If
 
         End Sub
 
-        'Private Sub PopulateDGV()
-        '    If _view IsNot Nothing Then
-        '        _view.OrderDetailsDGV.Rows.Clear()
-        '        For Each order In _cart
-        '            Dim totalPrice As Decimal = order.MenuItem.Selling * order.Quantity
-        '            _view.OrderDetailsDGV.Rows.Add(order.MenuItem.Name, order.Quantity, totalPrice.ToString("C"))
-        '        Next
-        '    Else
-        '        'handle when view is nothing
-        '    End If
-        'End Sub
+        Private Sub PopulateDGV()
+            With _view.OrderDetailsDGV
+                .Rows.Clear()
+
+                If .Columns.Count = 0 Then
+                    .Columns.Add("ItemName", "Item")
+                    .Columns.Add("Quantity", "Qty")
+                    .Columns.Add("TotalPrice", "Price")
+
+                    .Columns("ItemName").Width = 220
+                    .Columns("Quantity").Width = 30
+                    .Columns("TotalPrice").Width = 90
+
+                    .AutoSizeColumnsMode = DataGridViewAutoSizeColumnMode.None
+                End If
+
+                For Each order In Cart.Values
+                    Dim itemName As String = order.CustomerItem.Name
+                    Dim quantity As Integer = order.Quantity
+                    Dim unitPrice As Decimal = order.CustomerItem.SellingCost
+                    Dim totalPrice As Decimal = unitPrice * quantity
+
+                    .Rows.Add(itemName, quantity, totalPrice.ToString("C"))
+                Next
+            End With
+        End Sub
+
+        Private Sub UpdateTotalPrice()
+            Dim total As Decimal = Cart.Values.Sum(Function(order) order.Quantity * order.CustomerItem.SellingCost)
+            _view.TotalPriceLabel.Text = $"PHP{total:C}"
+        End Sub
+
+        Private Sub SyncCart()
+            PopulateDGV()
+            UpdateTotalPrice()
+        End Sub
 
         Private Sub OnOrderMoreClicked()
             'MessageBox.Show($"{Cart.Count}")

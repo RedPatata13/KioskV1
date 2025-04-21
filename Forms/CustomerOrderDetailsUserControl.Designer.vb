@@ -172,12 +172,14 @@
             '
             'MenuPictureBox
             '
+            Me.MenuPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
             Me.MenuPictureBox.BorderRadius = 15
             Me.MenuPictureBox.FillColor = System.Drawing.Color.Gainsboro
             Me.MenuPictureBox.ImageRotate = 0!
             Me.MenuPictureBox.Location = New System.Drawing.Point(27, 15)
             Me.MenuPictureBox.Name = "MenuPictureBox"
             Me.MenuPictureBox.Size = New System.Drawing.Size(150, 127)
+            Me.MenuPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
             Me.MenuPictureBox.TabIndex = 0
             Me.MenuPictureBox.TabStop = False
             '

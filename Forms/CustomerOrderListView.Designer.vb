@@ -23,11 +23,11 @@
         'Do not modify it using the code editor.
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
-            Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Me.YourOrderListLbl = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.TopBar = New Guna.UI2.WinForms.Guna2Panel()
             Me.OrderListLogo = New Guna.UI2.WinForms.Guna2PictureBox()
@@ -42,15 +42,10 @@
             Me.Label2 = New System.Windows.Forms.Label()
             Me.Label1 = New System.Windows.Forms.Label()
             Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
-            Me.Label7 = New System.Windows.Forms.Label()
-            Me.Label6 = New System.Windows.Forms.Label()
-            Me.Label5 = New System.Windows.Forms.Label()
+            Me.TotalPriceLabel = New System.Windows.Forms.Label()
             Me.Label4 = New System.Windows.Forms.Label()
             Me.CheckOutButton = New Guna.UI2.WinForms.Guna2Button()
             Me.OrderDetailsDGV = New Guna.UI2.WinForms.Guna2DataGridView()
-            Me.ProductName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.ProductQuantity = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.ProductPrice = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.TopBar.SuspendLayout()
             CType(Me.OrderListLogo, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.OrdersPanel.SuspendLayout()
@@ -199,7 +194,7 @@
             '
             Me.Label3.AutoSize = True
             Me.Label3.Font = New System.Drawing.Font("Poppins Medium", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label3.Location = New System.Drawing.Point(245, 47)
+            Me.Label3.Location = New System.Drawing.Point(204, 47)
             Me.Label3.Name = "Label3"
             Me.Label3.Size = New System.Drawing.Size(43, 28)
             Me.Label3.TabIndex = 2
@@ -209,7 +204,7 @@
             '
             Me.Label2.AutoSize = True
             Me.Label2.Font = New System.Drawing.Font("Poppins Medium", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label2.Location = New System.Drawing.Point(294, 47)
+            Me.Label2.Location = New System.Drawing.Point(276, 47)
             Me.Label2.Name = "Label2"
             Me.Label2.Size = New System.Drawing.Size(57, 28)
             Me.Label2.TabIndex = 1
@@ -228,52 +223,30 @@
             'Guna2Panel2
             '
             Me.Guna2Panel2.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2Panel2.Controls.Add(Me.Label7)
-            Me.Guna2Panel2.Controls.Add(Me.Label6)
-            Me.Guna2Panel2.Controls.Add(Me.Label5)
+            Me.Guna2Panel2.Controls.Add(Me.TotalPriceLabel)
             Me.Guna2Panel2.Controls.Add(Me.Label4)
             Me.Guna2Panel2.Controls.Add(Me.CheckOutButton)
             Me.Guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-            Me.Guna2Panel2.Location = New System.Drawing.Point(0, 506)
+            Me.Guna2Panel2.Location = New System.Drawing.Point(0, 509)
             Me.Guna2Panel2.Name = "Guna2Panel2"
-            Me.Guna2Panel2.Size = New System.Drawing.Size(363, 146)
+            Me.Guna2Panel2.Size = New System.Drawing.Size(363, 143)
             Me.Guna2Panel2.TabIndex = 0
             '
-            'Label7
+            'TotalPriceLabel
             '
-            Me.Label7.AutoSize = True
-            Me.Label7.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label7.Location = New System.Drawing.Point(245, 11)
-            Me.Label7.Name = "Label7"
-            Me.Label7.Size = New System.Drawing.Size(93, 28)
-            Me.Label7.TabIndex = 25
-            Me.Label7.Text = "PHP256.00"
-            '
-            'Label6
-            '
-            Me.Label6.AutoSize = True
-            Me.Label6.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label6.Location = New System.Drawing.Point(28, 11)
-            Me.Label6.Name = "Label6"
-            Me.Label6.Size = New System.Drawing.Size(82, 28)
-            Me.Label6.TabIndex = 24
-            Me.Label6.Text = "SubTotal"
-            '
-            'Label5
-            '
-            Me.Label5.AutoSize = True
-            Me.Label5.Font = New System.Drawing.Font("Poppins Medium", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label5.Location = New System.Drawing.Point(215, 39)
-            Me.Label5.Name = "Label5"
-            Me.Label5.Size = New System.Drawing.Size(123, 34)
-            Me.Label5.TabIndex = 23
-            Me.Label5.Text = "PHP256.00"
+            Me.TotalPriceLabel.AutoSize = True
+            Me.TotalPriceLabel.Font = New System.Drawing.Font("Poppins Medium", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.TotalPriceLabel.Location = New System.Drawing.Point(228, 9)
+            Me.TotalPriceLabel.Name = "TotalPriceLabel"
+            Me.TotalPriceLabel.Size = New System.Drawing.Size(123, 34)
+            Me.TotalPriceLabel.TabIndex = 23
+            Me.TotalPriceLabel.Text = "PHP256.00"
             '
             'Label4
             '
             Me.Label4.AutoSize = True
             Me.Label4.Font = New System.Drawing.Font("Poppins Medium", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Label4.Location = New System.Drawing.Point(27, 39)
+            Me.Label4.Location = New System.Drawing.Point(30, 9)
             Me.Label4.Name = "Label4"
             Me.Label4.Size = New System.Drawing.Size(74, 34)
             Me.Label4.TabIndex = 3
@@ -294,7 +267,7 @@
             Me.CheckOutButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
             Me.CheckOutButton.HoverState.FillColor = System.Drawing.Color.White
             Me.CheckOutButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.CheckOutButton.Location = New System.Drawing.Point(23, 75)
+            Me.CheckOutButton.Location = New System.Drawing.Point(23, 45)
             Me.CheckOutButton.Margin = New System.Windows.Forms.Padding(2)
             Me.CheckOutButton.Name = "CheckOutButton"
             Me.CheckOutButton.Size = New System.Drawing.Size(318, 50)
@@ -303,48 +276,53 @@
             '
             'OrderDetailsDGV
             '
-            DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-            Me.OrderDetailsDGV.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-            DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-            DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-            DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-            DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.OrderDetailsDGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+            Me.OrderDetailsDGV.AllowUserToAddRows = False
+            Me.OrderDetailsDGV.AllowUserToDeleteRows = False
+            Me.OrderDetailsDGV.AllowUserToResizeColumns = False
+            DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+            Me.OrderDetailsDGV.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle6
+            Me.OrderDetailsDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.None
+            DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+            DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
+            DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+            DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+            DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.OrderDetailsDGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
             Me.OrderDetailsDGV.ColumnHeadersHeight = 4
             Me.OrderDetailsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
             Me.OrderDetailsDGV.ColumnHeadersVisible = False
-            Me.OrderDetailsDGV.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductName, Me.ProductQuantity, Me.ProductPrice})
-            DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-            DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-            DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-            DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-            DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.OrderDetailsDGV.DefaultCellStyle = DataGridViewCellStyle3
+            DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle8.BackColor = System.Drawing.Color.White
+            DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+            DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+            DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+            DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+            Me.OrderDetailsDGV.DefaultCellStyle = DataGridViewCellStyle8
             Me.OrderDetailsDGV.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.OrderDetailsDGV.Location = New System.Drawing.Point(3, 88)
             Me.OrderDetailsDGV.Name = "OrderDetailsDGV"
-            DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-            DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-            DataGridViewCellStyle4.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-            DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightGray
-            DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-            Me.OrderDetailsDGV.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+            Me.OrderDetailsDGV.ReadOnly = True
+            DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+            DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
+            DataGridViewCellStyle9.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
+            DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.LightGray
+            DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+            Me.OrderDetailsDGV.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
             Me.OrderDetailsDGV.RowHeadersVisible = False
             Me.OrderDetailsDGV.RowHeadersWidth = 45
             Me.OrderDetailsDGV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-            DataGridViewCellStyle5.BackColor = System.Drawing.Color.White
-            DataGridViewCellStyle5.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
-            DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightGray
-            DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText
-            Me.OrderDetailsDGV.RowsDefaultCellStyle = DataGridViewCellStyle5
+            DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
+            DataGridViewCellStyle10.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText
+            DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.WhiteSmoke
+            DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ControlText
+            Me.OrderDetailsDGV.RowsDefaultCellStyle = DataGridViewCellStyle10
+            Me.OrderDetailsDGV.ScrollBars = System.Windows.Forms.ScrollBars.None
             Me.OrderDetailsDGV.Size = New System.Drawing.Size(357, 413)
             Me.OrderDetailsDGV.TabIndex = 23
             Me.OrderDetailsDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
@@ -360,7 +338,7 @@
             Me.OrderDetailsDGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
             Me.OrderDetailsDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
             Me.OrderDetailsDGV.ThemeStyle.HeaderStyle.Height = 4
-            Me.OrderDetailsDGV.ThemeStyle.ReadOnly = False
+            Me.OrderDetailsDGV.ThemeStyle.ReadOnly = True
             Me.OrderDetailsDGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
             Me.OrderDetailsDGV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
             Me.OrderDetailsDGV.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -368,33 +346,6 @@
             Me.OrderDetailsDGV.ThemeStyle.RowsStyle.Height = 22
             Me.OrderDetailsDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.OrderDetailsDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-            '
-            'ProductName
-            '
-            Me.ProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-            Me.ProductName.FillWeight = 108.3917!
-            Me.ProductName.HeaderText = ""
-            Me.ProductName.Name = "ProductName"
-            Me.ProductName.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.ProductName.Width = 71
-            '
-            'ProductQuantity
-            '
-            Me.ProductQuantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-            Me.ProductQuantity.FillWeight = 69.78087!
-            Me.ProductQuantity.HeaderText = ""
-            Me.ProductQuantity.Name = "ProductQuantity"
-            Me.ProductQuantity.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.ProductQuantity.Width = 46
-            '
-            'ProductPrice
-            '
-            Me.ProductPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-            Me.ProductPrice.FillWeight = 121.8274!
-            Me.ProductPrice.HeaderText = ""
-            Me.ProductPrice.Name = "ProductPrice"
-            Me.ProductPrice.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-            Me.ProductPrice.Width = 80
             '
             'CustomerOrderListView
             '
@@ -435,13 +386,8 @@
         Friend WithEvents Label3 As Label
         Friend WithEvents Label2 As Label
         Friend WithEvents Label1 As Label
-        Friend WithEvents ProductName As DataGridViewTextBoxColumn
-        Friend WithEvents ProductQuantity As DataGridViewTextBoxColumn
-        Friend WithEvents ProductPrice As DataGridViewTextBoxColumn
         Friend WithEvents Label4 As Label
-        Friend WithEvents Label7 As Label
-        Friend WithEvents Label6 As Label
-        Friend WithEvents Label5 As Label
+        Friend WithEvents TotalPriceLabel As Label
         Friend WithEvents StartOverButton As Guna.UI2.WinForms.Guna2Button
     End Class
 
