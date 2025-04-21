@@ -170,7 +170,7 @@ Namespace KioskV0.Classes
                 model.SellingCost = cost
                 'model.Selling = selling
 
-                'model.Validate()
+                model.Validate()
                 Dim vm = DirectCast(_mediator.GetVM(AdminKeys.AdminMenu), AdminMenuViewModel)
                 vm.AddNewMenu(model)
                 _mediator.CreateMenu(model)

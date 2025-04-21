@@ -45,7 +45,8 @@
         Public Function GetSupplierPages(mediator As Mediator(Of SupplierKeys)) As Dictionary(Of SupplierKeys, IProjectable)
             Return New Dictionary(Of SupplierKeys, IProjectable) From
             {
-                {SupplierKeys.SupplierLandingPage, New SupplierLandingPageViewModel(New SupplierLandingPageView(), mediator)}
+                {SupplierKeys.SupplierLandingPage, New SupplierLandingPageViewModel(New SupplierLandingPageView(), mediator)},
+                {SupplierKeys.SupplierItems, New SupplierItemsViewModel(New SupplierItemsView(), mediator)}
             }
         End Function
     End Module

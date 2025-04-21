@@ -20,7 +20,7 @@ Namespace KioskV0.Classes
             End Get
             Set(ByVal value As List(Of User))
                 _staffCache = value
-                UpdateSupplierComboBox() ' Automatically update the ComboBox when suppliers change
+                UpdateSupplierComboBox()
             End Set
         End Property
 

@@ -31,7 +31,7 @@
             _projector.ProjectPanel.ResumeLayout()
         End Sub
         Public Sub ProjectSidebar(sidebar As IProjectable)
-            Clear()
+            _projector.SidebarPanel.Controls.Clear()
             sidebar.Project(_projector.SidebarPanel)
         End Sub
 
@@ -43,6 +43,7 @@
         Public Sub LogoutProject()
             Clear()
             Dim lvl = New LoginViewModel(Me, _unitOfWork)
+            '_projector.SidebarPanel.Controls.Clear()
         End Sub
         Public Sub SpawnSideBar()
             _projector.AddSideBar()

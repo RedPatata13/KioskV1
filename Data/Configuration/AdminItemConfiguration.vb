@@ -39,7 +39,7 @@ Public Class AdminItemConfiguration
             .WillCascadeOnDelete(False)
 
         Me.HasRequired(Function(a) a.Batch) _
-            .WithMany() _
+            .WithMany(Function(b) b.AdminItems) _
             .HasForeignKey(Function(a) a.BatchId) _
             .WillCascadeOnDelete(False)
     End Sub

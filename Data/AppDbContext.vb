@@ -54,7 +54,7 @@ Public Class KioskDbContext
         modelBuilder.Configurations.Add(New MenuConfiguration())
         modelBuilder.Configurations.Add(New SupplierConfiguration())
         modelBuilder.Configurations.Add(New SupplierItemConfiguration())
-        'modelBuilder.Configurations.Add(New AdminItemConfiguration())
+        modelBuilder.Configurations.Add(New AdminItemConfiguration())
         modelBuilder.Configurations.Add(New OrderConfiguration())
         modelBuilder.Configurations.Add(New OrderDetailsConfiguration())
         modelBuilder.Configurations.Add(New TransactedOrderConfiguration())

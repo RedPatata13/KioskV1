@@ -135,7 +135,9 @@
     <Compile Include="Classes\CloneHelper.vb" />
     <Compile Include="Classes\InitialDBSetup.vb" />
     <Compile Include="Classes\StaffOrderListViewModel.vb" />
+    <Compile Include="Classes\SupplierItemsViewModel.vb" />
     <Compile Include="Classes\SupplierLandingPageViewModel.vb" />
+    <Compile Include="Classes\SupplierSidebarViewModel.vb" />
     <Compile Include="ContainerConfiguration.vb" />
     <Compile Include="Classes\ActionManager.vb" />
     <Compile Include="Classes\AdminAccountSettingsViewModel.vb" />
@@ -455,10 +457,22 @@
     <Compile Include="Forms\StaffTotaProductsUserControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Forms\SupplierItemsView.Designer.vb">
+      <DependentUpon>SupplierItemsView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupplierItemsView.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\SupplierLandingPageView.Designer.vb">
       <DependentUpon>SupplierLandingPageView.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\SupplierLandingPageView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SupplierSidebar.Designer.vb">
+      <DependentUpon>SupplierSidebar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupplierSidebar.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Migrations\202504101827107_InitialCreate.Designer.vb">
@@ -525,6 +539,14 @@
       <DependentUpon>202504171028428_MinorCheck.vb</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202504171028428_MinorCheck.vb" />
+    <Compile Include="Migrations\202504190915152_BaseModel.Designer.vb">
+      <DependentUpon>202504190915152_BaseModel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504190915152_BaseModel.vb" />
+    <Compile Include="Migrations\202504191003245_Multiplicity.Designer.vb">
+      <DependentUpon>202504191003245_Multiplicity.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504191003245_Multiplicity.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\AdminItem.vb" />
     <Compile Include="Models\Category.vb" />
@@ -719,8 +741,14 @@
     <EmbeddedResource Include="Forms\StaffTotaProductsUserControl.resx">
       <DependentUpon>StaffTotaProductsUserControl.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SupplierItemsView.resx">
+      <DependentUpon>SupplierItemsView.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SupplierLandingPageView.resx">
       <DependentUpon>SupplierLandingPageView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SupplierSidebar.resx">
+      <DependentUpon>SupplierSidebar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504101827107_InitialCreate.resx">
       <DependentUpon>202504101827107_InitialCreate.vb</DependentUpon>
@@ -769,6 +797,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504171028428_MinorCheck.resx">
       <DependentUpon>202504171028428_MinorCheck.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504190915152_BaseModel.resx">
+      <DependentUpon>202504190915152_BaseModel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504191003245_Multiplicity.resx">
+      <DependentUpon>202504191003245_Multiplicity.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

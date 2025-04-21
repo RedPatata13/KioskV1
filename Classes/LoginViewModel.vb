@@ -84,7 +84,8 @@ Namespace KioskV0.Classes
                     Case "supplier"
                         mediator = New Mediator(Of SupplierKeys)(_projector, Me, _unitOfWork)
                         mediator.SetupMap(GetSupplierPages(mediator))
-                        'Dim supplier_sb = New SupplierSidebarViewModel(New Forms.SupplierSidebar(), mediator)
+                        Dim supplier_sb = New SupplierSidebarViewModel(New SupplierSidebar(), mediator)
+                        _projector.ProjectSidebar(supplier_sb)
                         mediator.SwapPage(SupplierKeys.SupplierLandingPage)
                         mediator.SwapPage(SupplierKeys.SupplierLandingPage)
                         mediator.CurrentUser = acc
