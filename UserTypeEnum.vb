@@ -23,6 +23,10 @@
         AdminEditInventory
         AdminSupplyRequest
         AdminMenuSelectSupplierItem
+        AdminViewDeductions
+        AdminStockDebt
+        AdminStockDebtCRUD
+        AdminResolveStockDebt
     End Enum
 
     Public Enum CustomerKeys

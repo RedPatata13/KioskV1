@@ -19,6 +19,7 @@
     Public ReadOnly Property TransactedOrders As IBaseRepository(Of TransactedOrder) Implements IUnitOfWork.TransactedOrder
     Public ReadOnly Property AdminItemVersions As AdminItemVersionRepository Implements IUnitOfWork.AdminItemVersion
     Public ReadOnly Property Deductions As ItemDeductionRepository Implements IUnitOfWork.Deductions
+    Public ReadOnly Property StockDebts As StockDebtRepository Implements IUnitOfWork.StockDebts
 
     Public Sub New(context As KioskDbContext)
         _context = context
@@ -39,6 +40,7 @@
         TransactedOrders = New TransactedOrdersRepository(_context)
         AdminItemVersions = New AdminItemVersionRepository(_context)
         Deductions = New ItemDeductionRepository(_context)
+        StockDebts = New StockDebtRepository(_context)
     End Sub
 
     Public Sub SaveChanges() Implements IUnitOfWork.SaveChanges

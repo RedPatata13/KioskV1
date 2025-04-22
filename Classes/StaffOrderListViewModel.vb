@@ -147,6 +147,7 @@ Namespace KioskV0.Classes
                 Dim id = Guid.NewGuid().ToString().Substring(0, 10)
                 Dim model = New OrderDetail With {
                 .OrderDetailsId = id,
+                .ReferencedItemId = menu.BaseItemId,
                 .ItemVersion = menu,
                 .VersionId = menu.VersionId,
                 .Quantity = 0

@@ -27,4 +27,12 @@ Public Class ItemDeductionRepository
         .Where(Function(i) i.BaseItemId = item_id AndAlso i.BatchId = batch_id) _
         .ToList()
     End Function
+
+    Public Function GetDeductorOfBatch(batch_id As String) As IEnumerable(Of ItemToBatchDeduction) Implements IItemDeductionRepository.GetDeductorOfBatch
+        Return _dbSet.Include(Function(i) i.BaseItem) _
+            .Include(Function(i) i.Batch) _
+            .Include(Function(i) i.Version) _
+            .Where(Function(i) i.BatchId = batch_id AndAlso i.IsValid) _
+            .ToList()
+    End Function
 End Class

@@ -67,7 +67,7 @@
             Me.InventoryDataGrid.DefaultCellStyle = DataGridViewCellStyle3
             Me.InventoryDataGrid.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.InventoryDataGrid.Location = New System.Drawing.Point(16, 112)
-            Me.InventoryDataGrid.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.InventoryDataGrid.Margin = New System.Windows.Forms.Padding(2)
             Me.InventoryDataGrid.Name = "InventoryDataGrid"
             Me.InventoryDataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -123,7 +123,7 @@
             Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 28.2!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(16, 16)
-            Me.Guna2HtmlLabel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.Guna2HtmlLabel1.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
             Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(466, 52)
             Me.Guna2HtmlLabel1.TabIndex = 9
@@ -139,7 +139,7 @@
             Me.ViewChangesButton.ForeColor = System.Drawing.Color.White
             Me.ViewChangesButton.Location = New System.Drawing.Point(1080, 112)
             Me.ViewChangesButton.Name = "ViewChangesButton"
-            Me.ViewChangesButton.Size = New System.Drawing.Size(180, 45)
+            Me.ViewChangesButton.Size = New System.Drawing.Size(180, 32)
             Me.ViewChangesButton.TabIndex = 10
             Me.ViewChangesButton.Text = "View Deductions"
             '
@@ -177,7 +177,7 @@
             Me.Controls.Add(Me.InventoryDataGrid)
             Me.Controls.Add(Me.RequestSupplyButton)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-            Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.Margin = New System.Windows.Forms.Padding(2)
             Me.Name = "AdminInventoryView"
             Me.Text = "AdminInventory"
             CType(Me.InventoryDataGrid, System.ComponentModel.ISupportInitialize).EndInit()

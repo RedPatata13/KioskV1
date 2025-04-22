@@ -31,5 +31,11 @@ Public Class ItBDeductionConfiguration
             .WithMany() _
             .HasForeignKey(Function(itb) itb.BaseItemId) _
             .WillCascadeOnDelete(False)
+
+        Me.Property(Function(itb) itb.IsValid) _
+            .IsOptional()
+
+        Me.Property(Function(itb) itb.CausedBy) _
+            .IsRequired()
     End Sub
 End Class

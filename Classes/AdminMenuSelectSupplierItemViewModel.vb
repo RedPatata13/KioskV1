@@ -4,6 +4,7 @@ Namespace KioskV0.Classes
     Public Class AdminMenuSelectSupplierItemViewModel
         Inherits ViewModel(Of AdminMenuSelectSupplierItemView, AdminKeys)
         Private Property Loaded As Boolean = False
+
         Private Property SelectedRow As InventoryBatch
 
         Public Sub New(view As Form, mediator As Mediator(Of AdminKeys))
@@ -41,7 +42,7 @@ Namespace KioskV0.Classes
         End Sub
         Private Sub ConfirmClick()
             Dim vm = DirectCast(_mediator.GetVM(AdminKeys.AdminEditMenuDetails), AdminEditMenuDetailsViewModel)
-            'vm.LoadedBatch = _view.SelectedItem
+            vm.LoadedBatch = _view.SelectedItem
             vm.SetLoadedBatch()
         End Sub
         Private Sub CancelClick()

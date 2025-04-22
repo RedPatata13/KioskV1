@@ -7,6 +7,9 @@ Public Class OrdersRepository
     End Sub
 
     Public Overrides Function GetById(id As String) As OrderPrimal
+        If id = "0000_0000" Then
+            Return Nothing
+        End If
         Return _dbSet.Include(Function(o) o.OrderItems) _
                      .Include("OrderItems.ItemVersion") _
                      .Include("OrderItems.Item") _

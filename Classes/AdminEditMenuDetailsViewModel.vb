@@ -19,7 +19,7 @@ Namespace KioskV0.Classes
             SetCache()
             SetComboBoxes()
         End Sub
-        Public Sub LoadAsEdit(model As AdminItem)
+        Public Sub LoadAsEdit(model As AdminItem, Optional loadAsStockResolve As Boolean = False)
             'model.Validate()
             _view.Label = "Edit Menu"
             _view.DeleteButton.Visible = True
@@ -28,10 +28,23 @@ Namespace KioskV0.Classes
                                        _mediator.AddAction(Sub() _mediator.SwapPage(AdminKeys.AdminEditMenuDetails))
                                        _mediator.InvokeAllAction()
                                    End Sub)
-            _view.SaveButtonClick = Sub() UpdateMenu(model)
+            _view.SaveButtonClick = Sub() UpdateMenu(model, loadAsStockResolve)
             _view.IsCustomerItem = model.IsDisplayedAsCustomerItem
             _view.BoundItem.Text = model.Batch.SupplierItem.Name
             LoadedBatch = model.Batch
+
+            If loadAsStockResolve Then
+                _view.Label = "Select new batch"
+                _view.DeleteButton.Visible = False
+                _view.SetAsCustomerItem.Visible = False
+                _view.CategoryComboBox.Enabled = False
+                _view.ProductNameTextBox.Enabled = False
+                _view.SelectImageButton.Enabled = False
+                _view.BoundItem.Enabled = False
+                _view.ProductDescriptionTextBox.Enabled = False
+                _view.CostTextBox.Enabled = False
+                _view.SellingTextBox.Enabled = False
+            End If
             _view.SetClick()
         End Sub
         Public Overrides Sub Project(projector As Form)
@@ -56,6 +69,16 @@ Namespace KioskV0.Classes
             _view.SaveButtonClick = AddressOf SaveButtonClick
             selectedFilePath = ""
             LoadedBatch = Nothing
+
+            _view.DeleteButton.Visible = False
+            _view.SetAsCustomerItem.Visible = True
+            _view.CategoryComboBox.Enabled = True
+            _view.ProductNameTextBox.Enabled = True
+            _view.SelectImageButton.Enabled = True
+            _view.BoundItem.Enabled = True
+            _view.ProductDescriptionTextBox.Enabled = True
+            _view.CostTextBox.Enabled = True
+            _view.SellingTextBox.Enabled = True
         End Sub
         Protected Friend Overrides Sub SetEvents()
             MyBase.SetEvents()
@@ -68,6 +91,7 @@ Namespace KioskV0.Classes
         End Sub
 
         Private Sub SelectSupplierClick()
+            Dim vm = DirectCast(_mediator.GetVM(AdminKeys.AdminMenuSelectSupplierItem), AdminMenuSelectSupplierItemViewModel)
             _mediator.SwapPage(AdminKeys.AdminMenuSelectSupplierItem)
         End Sub
         Private Sub SetCache()
@@ -199,7 +223,7 @@ Namespace KioskV0.Classes
                 MessageBox.Show("Error: " & ex.Message)
             End Try
         End Sub
-        Private Sub UpdateMenu(model As AdminItem)
+        Private Sub UpdateMenu(model As AdminItem, loadAsResolve As Boolean)
             Try
                 ' Validate required fields
                 If String.IsNullOrEmpty(_view.CategoryName) Then
@@ -321,8 +345,10 @@ Namespace KioskV0.Classes
 
                 ' Update UI
                 _mediator.SwapPage(Previous)
-                Dim vm = DirectCast(_mediator.GetVM(AdminKeys.AdminMenu), AdminMenuViewModel)
-                vm.UpdateStaged(model)
+                If Not loadAsResolve Then
+                    Dim vm = DirectCast(_mediator.GetVM(AdminKeys.AdminMenu), AdminMenuViewModel)
+                    vm.UpdateStaged(model)
+                End If
                 RestoreView()
 
             Catch ex As Exception

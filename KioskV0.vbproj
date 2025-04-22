@@ -132,10 +132,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\AdminMenuSelectSupplierItemViewModel.vb" />
+    <Compile Include="Classes\AdminResolveStockDebtViewModel.vb" />
+    <Compile Include="Classes\AdminStockDebtViewModel.vb" />
     <Compile Include="Classes\AdminViewDeductionsViewModel.vb" />
     <Compile Include="Classes\CustomerLandingPageViewModel.vb" />
     <Compile Include="Classes\InitialDBSetup.vb" />
     <Compile Include="Classes\StaffOrderListViewModel.vb" />
+    <Compile Include="Classes\AdminStockDebtCRUDViewModel.vb" />
     <Compile Include="Classes\SupplierItemsViewModel.vb" />
     <Compile Include="Classes\SupplierLandingPageViewModel.vb" />
     <Compile Include="Classes\SupplierSidebarViewModel.vb" />
@@ -197,6 +200,7 @@
     <Compile Include="Data\Configuration\OrderDetailsConfiguration.vb" />
     <Compile Include="Data\Configuration\OrderItemConfiguration.vb" />
     <Compile Include="Data\Configuration\MenuConfiguration.vb" />
+    <Compile Include="Data\Configuration\StockDebtConfiguration.vb" />
     <Compile Include="Data\Configuration\SupplierConfiguration.vb" />
     <Compile Include="Data\Configuration\SupplierItemConfiguration.vb" />
     <Compile Include="Data\Configuration\TransactedOrderConfiguration.vb" />
@@ -262,6 +266,12 @@
     <Compile Include="Forms\AdminOrderHistoryView.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\AdminResolveStockDebtViewModel.Designer.vb">
+      <DependentUpon>AdminResolveStockDebtViewModel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminResolveStockDebtViewModel.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\AdminSidebar.Designer.vb">
       <DependentUpon>AdminSidebar.vb</DependentUpon>
     </Compile>
@@ -272,6 +282,18 @@
       <DependentUpon>AdminStaffTransactionsView.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\AdminStaffTransactionsView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminStockDebtCRUDView.Designer.vb">
+      <DependentUpon>AdminStockDebtCRUDView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminStockDebtCRUDView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminStockDebtView.Designer.vb">
+      <DependentUpon>AdminStockDebtView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminStockDebtView.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\AdminTestPageView.Designer.vb">
@@ -616,6 +638,26 @@
       <DependentUpon>202504220824521_TransactedOrderEatMode.vb</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202504220824521_TransactedOrderEatMode.vb" />
+    <Compile Include="Migrations\202504220949508_StockDebt.Designer.vb">
+      <DependentUpon>202504220949508_StockDebt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504220949508_StockDebt.vb" />
+    <Compile Include="Migrations\202504221301117_DeductionValidity.Designer.vb">
+      <DependentUpon>202504221301117_DeductionValidity.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504221301117_DeductionValidity.vb" />
+    <Compile Include="Migrations\202504221943419_AddedReasonToDeductionts.Designer.vb">
+      <DependentUpon>202504221943419_AddedReasonToDeductionts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504221943419_AddedReasonToDeductionts.vb" />
+    <Compile Include="Migrations\202504221953159_AddedReasonToDeductionPlusVersiodID.Designer.vb">
+      <DependentUpon>202504221953159_AddedReasonToDeductionPlusVersiodID.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504221953159_AddedReasonToDeductionPlusVersiodID.vb" />
+    <Compile Include="Migrations\202504222000556_AddedReasonToDeductionPlusVersiodIDa.Designer.vb">
+      <DependentUpon>202504222000556_AddedReasonToDeductionPlusVersiodIDa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504222000556_AddedReasonToDeductionPlusVersiodIDa.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\AdminItem.vb" />
     <Compile Include="Models\AdminItemVersion.vb" />
@@ -633,6 +675,7 @@
     <Compile Include="Models\OrderDetail.vb" />
     <Compile Include="Models\OrderItem.vb" />
     <Compile Include="Models\OrderModel.vb" />
+    <Compile Include="Models\StockDebt.vb" />
     <Compile Include="Models\Supplier.vb" />
     <Compile Include="Models\SupplierItem.vb" />
     <Compile Include="Models\SupplierProduct.vb" />
@@ -654,6 +697,7 @@
     <Compile Include="Repositories\Contracts\IMenuRepository.vb" />
     <Compile Include="Repositories\Contracts\IOrderDetailsRepository.vb" />
     <Compile Include="Repositories\Contracts\IOrderRepository.vb" />
+    <Compile Include="Repositories\Contracts\IStockDebtRepository.vb" />
     <Compile Include="Repositories\Contracts\ISupplierItemsRepository.vb" />
     <Compile Include="Repositories\Contracts\ITransactedDetailsRepository.vb" />
     <Compile Include="Repositories\Contracts\IUnitOfWork.vb" />
@@ -667,6 +711,7 @@
     <Compile Include="Repositories\OrderItemsRepository.vb" />
     <Compile Include="Repositories\OrdersRepository.vb" />
     <Compile Include="Repositories\MenuRepository.vb" />
+    <Compile Include="Repositories\StockDebtRepository.vb" />
     <Compile Include="Repositories\SupplierItemsRepository.vb" />
     <Compile Include="Repositories\SuppliersRepository.vb" />
     <Compile Include="Repositories\TransactedOrdersRepository.vb" />
@@ -732,11 +777,20 @@
     <EmbeddedResource Include="Forms\AdminOrderHistoryView.resx">
       <DependentUpon>AdminOrderHistoryView.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminResolveStockDebtViewModel.resx">
+      <DependentUpon>AdminResolveStockDebtViewModel.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminSidebar.resx">
       <DependentUpon>AdminSidebar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminStaffTransactionsView.resx">
       <DependentUpon>AdminStaffTransactionsView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminStockDebtCRUDView.resx">
+      <DependentUpon>AdminStockDebtCRUDView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminStockDebtView.resx">
+      <DependentUpon>AdminStockDebtView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminSupplyRequestView.resx">
       <DependentUpon>AdminSupplyRequestView.vb</DependentUpon>
@@ -926,6 +980,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504220824521_TransactedOrderEatMode.resx">
       <DependentUpon>202504220824521_TransactedOrderEatMode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504220949508_StockDebt.resx">
+      <DependentUpon>202504220949508_StockDebt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504221301117_DeductionValidity.resx">
+      <DependentUpon>202504221301117_DeductionValidity.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504221943419_AddedReasonToDeductionts.resx">
+      <DependentUpon>202504221943419_AddedReasonToDeductionts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504221953159_AddedReasonToDeductionPlusVersiodID.resx">
+      <DependentUpon>202504221953159_AddedReasonToDeductionPlusVersiodID.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504222000556_AddedReasonToDeductionPlusVersiodIDa.resx">
+      <DependentUpon>202504222000556_AddedReasonToDeductionPlusVersiodIDa.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

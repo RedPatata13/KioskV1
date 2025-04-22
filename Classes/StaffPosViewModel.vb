@@ -301,14 +301,15 @@ Namespace KioskV0.Classes
                 End If
 
                 'batch is already deducted
-                Dim existing_deduction = _mediator.GetUnitOfWork.Deductions.GetDeductor(item.Value.VersionId, item.Value.Item.BatchId)
+                Dim existing_deduction = _mediator.GetUnitOfWork.Deductions.GetDeductor(item.Value.VersionId, item.Value.ReferencedItemId)
                 Dim deduction As New ItemToBatchDeduction With {
                     .ItB_Id = "DDCT_" & Guid.NewGuid().ToString().Substring(0, 8),
                     .AmountDeducted = item.Value.Quantity,
-                    .BaseItemId = item.Value.Item.Id,
+                    .BaseItemId = item.Value.ReferencedItemId,
                     .OrderId = _currOrd.OrderId,
                     .BatchId = item.Value.Item.BatchId,
-                    .VersionId = item.Value.VersionId
+                    .VersionId = item.Value.VersionId,
+                    .CausedBy = "Regular Transaction"
                 }
 
                 If existing_deduction IsNot Nothing Then

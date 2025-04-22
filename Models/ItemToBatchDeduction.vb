@@ -12,4 +12,7 @@
 
     Public Property Order As OrderPrimal
     Public Property OrderId As String
+
+    Public Property IsValid As Boolean
+    Public Property CausedBy As String
 End Class

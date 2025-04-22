@@ -33,18 +33,6 @@
         Private Sub AccountsDataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles AccountsDataGridView.CellContentClick
 
         End Sub
-        'Private Sub AccountsDataGridView_Enter(sender As Object, e As EventArgs) Handles AccountsDataGridView.Enter
-        '    _editUser.Enabled = (AccountsDataGridView.CurrentRow IsNot Nothing)
-        'End Sub
-
-        'Private Sub AccountsDataGridView_SelectionChanged(sender As Object, e As EventArgs) Handles AccountsDataGridView.SelectionChanged
-        '    _editUser.Enabled = (AccountsDataGridView.CurrentRow IsNot Nothing)
-        'End Sub
-
-        'Private Sub AccountsDataGridView_Leave(sender As Object, e As EventArgs) Handles AccountsDataGridView.Leave
-        '    _editUser.Enabled = False
-        'End Sub
-
         Private Sub _editUser_Click(sender As Object, e As EventArgs) Handles _editUser.Click
             EditUserClick?.Invoke()
         End Sub

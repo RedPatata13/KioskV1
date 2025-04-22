@@ -18,5 +18,6 @@
     ReadOnly Property TransactedOrder As IBaseRepository(Of TransactedOrder)
     ReadOnly Property AdminItemVersion As AdminItemVersionRepository
     ReadOnly Property Deductions As ItemDeductionRepository
+    ReadOnly Property StockDebts As StockDebtRepository
     Sub SaveChanges()
 End Interface

@@ -36,7 +36,7 @@
         End Sub
 
         Private Sub OrderHistoryClick()
-            _mediator.SwapPage(AdminKeys.AdminOrderHistory)
+            _mediator.SwapPage(AdminKeys.AdminStockDebt)
         End Sub
 
         Private Sub StaffTransactions()

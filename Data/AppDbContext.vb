@@ -48,6 +48,7 @@ Public Class KioskDbContext
     Public Property TransactedOrder As DbSet(Of TransactedOrder)
     Public Property AdminItemVersions As DbSet(Of AdminItemVersion)
     Public Property Deductions As DbSet(Of ItemToBatchDeduction)
+    Public Property StockDebts As DbSet(Of StockDebt)
     Public Sub New()
         MyBase.New(JsonConfigReader.GetConnectionString())
     End Sub
@@ -62,6 +63,7 @@ Public Class KioskDbContext
         modelBuilder.Configurations.Add(New TransactedOrderConfiguration())
         modelBuilder.Configurations.Add(New AdminItemVersionConfiguration())
         modelBuilder.Configurations.Add(New ItBDeductionConfiguration())
+        modelBuilder.Configurations.Add(New StockDebtConfiguration())
         'modelBuilder.Configurations.Add(New )
         modelBuilder.Entity(Of CustomerItem)() _
             .HasOptional(Function(c) c.AdminItem) _
