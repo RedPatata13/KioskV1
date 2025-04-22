@@ -28,20 +28,19 @@
             Me.DeclineButton = New Guna.UI2.WinForms.Guna2Button()
             Me.CostLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.Guna2HtmlLabel7 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me.SupplierLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me.Guna2HtmlLabel13 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me.RequestIdLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me.Guna2HtmlLabel11 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.NoteLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me.ProductLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.QuantityLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me.Guna2HtmlLabel9 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me.Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.CancelButton = New Guna.UI2.WinForms.Guna2Button()
             Me.AcceptButton = New Guna.UI2.WinForms.Guna2Button()
-            Me.Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-            Me.Guna2HtmlLabel9 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-            Me.Guna2HtmlLabel10 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-            Me.Guna2HtmlLabel11 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-            Me.Guna2HtmlLabel12 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-            Me.Guna2HtmlLabel13 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-            Me.Guna2HtmlLabel14 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-            Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
             Me.Guna2Panel1.SuspendLayout()
             Me.SuspendLayout()
             '
@@ -51,16 +50,15 @@
             Me.Guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(44, Byte), Integer))
             Me.Guna2Panel1.BorderRadius = 20
             Me.Guna2Panel1.BorderThickness = 3
-            Me.Guna2Panel1.Controls.Add(Me.Guna2TextBox1)
             Me.Guna2Panel1.Controls.Add(Me.DeclineButton)
             Me.Guna2Panel1.Controls.Add(Me.CostLabel)
             Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel7)
-            Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel14)
+            Me.Guna2Panel1.Controls.Add(Me.SupplierLabel)
             Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel13)
-            Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel12)
+            Me.Guna2Panel1.Controls.Add(Me.RequestIdLabel)
             Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel11)
             Me.Guna2Panel1.Controls.Add(Me.NoteLabel)
-            Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel10)
+            Me.Guna2Panel1.Controls.Add(Me.ProductLabel)
             Me.Guna2Panel1.Controls.Add(Me.QuantityLabel)
             Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel9)
             Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel4)
@@ -116,6 +114,46 @@
             Me.Guna2HtmlLabel7.TabIndex = 38
             Me.Guna2HtmlLabel7.Text = "Cost:"
             '
+            'SupplierLabel
+            '
+            Me.SupplierLabel.BackColor = System.Drawing.Color.Transparent
+            Me.SupplierLabel.Font = New System.Drawing.Font("Poppins", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.SupplierLabel.Location = New System.Drawing.Point(289, 195)
+            Me.SupplierLabel.Name = "SupplierLabel"
+            Me.SupplierLabel.Size = New System.Drawing.Size(100, 39)
+            Me.SupplierLabel.TabIndex = 37
+            Me.SupplierLabel.Text = "Supplier 1"
+            '
+            'Guna2HtmlLabel13
+            '
+            Me.Guna2HtmlLabel13.BackColor = System.Drawing.Color.Transparent
+            Me.Guna2HtmlLabel13.Font = New System.Drawing.Font("Poppins", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Guna2HtmlLabel13.Location = New System.Drawing.Point(152, 195)
+            Me.Guna2HtmlLabel13.Name = "Guna2HtmlLabel13"
+            Me.Guna2HtmlLabel13.Size = New System.Drawing.Size(91, 39)
+            Me.Guna2HtmlLabel13.TabIndex = 36
+            Me.Guna2HtmlLabel13.Text = "Supplier:"
+            '
+            'RequestIdLabel
+            '
+            Me.RequestIdLabel.BackColor = System.Drawing.Color.Transparent
+            Me.RequestIdLabel.Font = New System.Drawing.Font("Poppins", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.RequestIdLabel.Location = New System.Drawing.Point(316, 112)
+            Me.RequestIdLabel.Name = "RequestIdLabel"
+            Me.RequestIdLabel.Size = New System.Drawing.Size(36, 39)
+            Me.RequestIdLabel.TabIndex = 35
+            Me.RequestIdLabel.Text = "001"
+            '
+            'Guna2HtmlLabel11
+            '
+            Me.Guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent
+            Me.Guna2HtmlLabel11.Font = New System.Drawing.Font("Poppins", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Guna2HtmlLabel11.Location = New System.Drawing.Point(75, 112)
+            Me.Guna2HtmlLabel11.Name = "Guna2HtmlLabel11"
+            Me.Guna2HtmlLabel11.Size = New System.Drawing.Size(183, 39)
+            Me.Guna2HtmlLabel11.TabIndex = 34
+            Me.Guna2HtmlLabel11.Text = "Request Number: "
+            '
             'NoteLabel
             '
             Me.NoteLabel.BackColor = System.Drawing.Color.Transparent
@@ -124,6 +162,17 @@
             Me.NoteLabel.Name = "NoteLabel"
             Me.NoteLabel.Size = New System.Drawing.Size(3, 2)
             Me.NoteLabel.TabIndex = 33
+            Me.NoteLabel.Text = Nothing
+            '
+            'ProductLabel
+            '
+            Me.ProductLabel.BackColor = System.Drawing.Color.Transparent
+            Me.ProductLabel.Font = New System.Drawing.Font("Poppins", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.ProductLabel.Location = New System.Drawing.Point(316, 292)
+            Me.ProductLabel.Name = "ProductLabel"
+            Me.ProductLabel.Size = New System.Drawing.Size(72, 39)
+            Me.ProductLabel.TabIndex = 31
+            Me.ProductLabel.Text = "Burger"
             '
             'QuantityLabel
             '
@@ -135,6 +184,16 @@
             Me.QuantityLabel.TabIndex = 32
             Me.QuantityLabel.Text = "100"
             '
+            'Guna2HtmlLabel9
+            '
+            Me.Guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent
+            Me.Guna2HtmlLabel9.Font = New System.Drawing.Font("Poppins", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Guna2HtmlLabel9.Location = New System.Drawing.Point(152, 383)
+            Me.Guna2HtmlLabel9.Name = "Guna2HtmlLabel9"
+            Me.Guna2HtmlLabel9.Size = New System.Drawing.Size(97, 39)
+            Me.Guna2HtmlLabel9.TabIndex = 29
+            Me.Guna2HtmlLabel9.Text = "Quantity:"
+            '
             'Guna2HtmlLabel4
             '
             Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent
@@ -144,6 +203,16 @@
             Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(56, 39)
             Me.Guna2HtmlLabel4.TabIndex = 30
             Me.Guna2HtmlLabel4.Text = "Note:"
+            '
+            'Guna2HtmlLabel8
+            '
+            Me.Guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent
+            Me.Guna2HtmlLabel8.Font = New System.Drawing.Font("Poppins", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Guna2HtmlLabel8.Location = New System.Drawing.Point(152, 292)
+            Me.Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
+            Me.Guna2HtmlLabel8.Size = New System.Drawing.Size(123, 39)
+            Me.Guna2HtmlLabel8.TabIndex = 28
+            Me.Guna2HtmlLabel8.Text = "Item name:"
             '
             'Guna2HtmlLabel1
             '
@@ -200,94 +269,6 @@
             Me.AcceptButton.TabIndex = 24
             Me.AcceptButton.Text = "Accept"
             '
-            'Guna2HtmlLabel8
-            '
-            Me.Guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel8.Font = New System.Drawing.Font("Poppins", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2HtmlLabel8.Location = New System.Drawing.Point(152, 292)
-            Me.Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
-            Me.Guna2HtmlLabel8.Size = New System.Drawing.Size(123, 39)
-            Me.Guna2HtmlLabel8.TabIndex = 28
-            Me.Guna2HtmlLabel8.Text = "Item name:"
-            '
-            'Guna2HtmlLabel9
-            '
-            Me.Guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel9.Font = New System.Drawing.Font("Poppins", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2HtmlLabel9.Location = New System.Drawing.Point(152, 383)
-            Me.Guna2HtmlLabel9.Name = "Guna2HtmlLabel9"
-            Me.Guna2HtmlLabel9.Size = New System.Drawing.Size(97, 39)
-            Me.Guna2HtmlLabel9.TabIndex = 29
-            Me.Guna2HtmlLabel9.Text = "Quantity:"
-            '
-            'Guna2HtmlLabel10
-            '
-            Me.Guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel10.Font = New System.Drawing.Font("Poppins", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2HtmlLabel10.Location = New System.Drawing.Point(316, 292)
-            Me.Guna2HtmlLabel10.Name = "Guna2HtmlLabel10"
-            Me.Guna2HtmlLabel10.Size = New System.Drawing.Size(72, 39)
-            Me.Guna2HtmlLabel10.TabIndex = 31
-            Me.Guna2HtmlLabel10.Text = "Burger"
-            '
-            'Guna2HtmlLabel11
-            '
-            Me.Guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel11.Font = New System.Drawing.Font("Poppins", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2HtmlLabel11.Location = New System.Drawing.Point(75, 112)
-            Me.Guna2HtmlLabel11.Name = "Guna2HtmlLabel11"
-            Me.Guna2HtmlLabel11.Size = New System.Drawing.Size(183, 39)
-            Me.Guna2HtmlLabel11.TabIndex = 34
-            Me.Guna2HtmlLabel11.Text = "Request Number: "
-            '
-            'Guna2HtmlLabel12
-            '
-            Me.Guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel12.Font = New System.Drawing.Font("Poppins", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2HtmlLabel12.Location = New System.Drawing.Point(471, 133)
-            Me.Guna2HtmlLabel12.Name = "Guna2HtmlLabel12"
-            Me.Guna2HtmlLabel12.Size = New System.Drawing.Size(36, 39)
-            Me.Guna2HtmlLabel12.TabIndex = 35
-            Me.Guna2HtmlLabel12.Text = "001"
-            '
-            'Guna2HtmlLabel13
-            '
-            Me.Guna2HtmlLabel13.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel13.Font = New System.Drawing.Font("Poppins", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2HtmlLabel13.Location = New System.Drawing.Point(152, 195)
-            Me.Guna2HtmlLabel13.Name = "Guna2HtmlLabel13"
-            Me.Guna2HtmlLabel13.Size = New System.Drawing.Size(91, 39)
-            Me.Guna2HtmlLabel13.TabIndex = 36
-            Me.Guna2HtmlLabel13.Text = "Supplier:"
-            '
-            'Guna2HtmlLabel14
-            '
-            Me.Guna2HtmlLabel14.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel14.Font = New System.Drawing.Font("Poppins", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2HtmlLabel14.Location = New System.Drawing.Point(289, 195)
-            Me.Guna2HtmlLabel14.Name = "Guna2HtmlLabel14"
-            Me.Guna2HtmlLabel14.Size = New System.Drawing.Size(100, 39)
-            Me.Guna2HtmlLabel14.TabIndex = 37
-            Me.Guna2HtmlLabel14.Text = "Supplier 1"
-            '
-            'Guna2TextBox1
-            '
-            Me.Guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
-            Me.Guna2TextBox1.DefaultText = ""
-            Me.Guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-            Me.Guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-            Me.Guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-            Me.Guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-            Me.Guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.Guna2TextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-            Me.Guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.Guna2TextBox1.Location = New System.Drawing.Point(282, 111)
-            Me.Guna2TextBox1.Name = "Guna2TextBox1"
-            Me.Guna2TextBox1.PlaceholderText = ""
-            Me.Guna2TextBox1.SelectedText = ""
-            Me.Guna2TextBox1.Size = New System.Drawing.Size(152, 40)
-            Me.Guna2TextBox1.TabIndex = 42
-            '
             'SupplierRequestDetailsUserControl
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -312,14 +293,13 @@
         Friend WithEvents CostLabel As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents Guna2HtmlLabel7 As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents DeclineButton As Guna.UI2.WinForms.Guna2Button
-        Friend WithEvents Guna2HtmlLabel14 As Guna.UI2.WinForms.Guna2HtmlLabel
+        Friend WithEvents SupplierLabel As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents Guna2HtmlLabel13 As Guna.UI2.WinForms.Guna2HtmlLabel
-        Friend WithEvents Guna2HtmlLabel12 As Guna.UI2.WinForms.Guna2HtmlLabel
+        Friend WithEvents RequestIdLabel As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents Guna2HtmlLabel11 As Guna.UI2.WinForms.Guna2HtmlLabel
-        Friend WithEvents Guna2HtmlLabel10 As Guna.UI2.WinForms.Guna2HtmlLabel
+        Friend WithEvents ProductLabel As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents Guna2HtmlLabel9 As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents Guna2HtmlLabel8 As Guna.UI2.WinForms.Guna2HtmlLabel
-        Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
     End Class
 
 End Namespace

@@ -120,15 +120,15 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="CancelButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAGYSURBVHhe7dw7bhNRFAbgA1VEwyZYAkECKkjLhkhDSRYA
-        q4A0PCKk8NgCWYwbGueMdJCikWM8zAz3SnyfdCRrNKf5f/nahccBAAAAAAAAAAAAO32OeJpzOsyniCd1
-        mbV9iLiXoZ/nbEdz/iPiqG5jDRX+91HwN+dt3crSDgh/m0fRr8uI+7XCUg4J//d8jHhUayxhSvjDfIl4
-        UKvMNTX8nJ+1ylx/Ef4m52GtM8cQfn6gfhsFvG+G8J/XOnMIvyHhNyT8hoTfkPAbEn5Dwm9I+A0JvyHh
-        NyT8hl5F3M3wL0YB75tN3v+s1pkrA30xCnjfCH9pGerZKOTbxrGzhgz19Y2Q983mIuKk1lhKBusIamkb
-        cceHcGP1NfTrjrBvG8fR0pTQASV0QAkdUEIHlNABJXRACR1QQgeU0AEldEAJHRhKyGAn/Tw9SziudZYw
-        tYR811zVKkuZWoJHlFYwpQQP6a3kkBLyCPKY6pr+VEIW8KZuZS1DCRn0+x3hv/NXBf9QFvE4g385zPC6
-        LgMAAAAAAAAAAPB/ibgG4EKEyz+HyAgAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EQAACxEBf2RfkQAAAZhJREFUeF7t3DtuE1EUBuADVUTDJlgCQQIqSMuGSENJFgCrgDQ8IqTw2AJZjBsa
+        54x0kKKRYzzMDPdKfJ90JGs0p/l/+dqFxwEAAAAAAAAAAAA7fY54mnM6zKeIJ3WZtX2IuJehn+dsR3P+
+        I+KobmMNFf73UfA3523dytIOCH+bR9Gvy4j7tcJSDgn/93yMeFRrLGFK+MN8iXhQq8w1Nfycn7XKXH8R
+        /ibnYa0zxxB+fqB+GwW8b4bwn9c6cwi/IeE3JPyGhN+Q8BsSfkPCb0j4DQm/IeE3JPyGXkXczfAvRgHv
+        m03e/6zWmSsDfTEKeN8If2kZ6tko5NvGsbOGDPX1jZD3zeYi4qTWWEoG6whqaRtxx4dwY/U19OuOsG8b
+        x9HSlNABJXRACR1QQgeU0AEldEAJHVBCB5TQASV0QAkdGErIYCf9PD1LOK51ljC1hHzXXNUqS5lagkeU
+        VjClBA/preSQEvII8pjqmv5UQhbwpm5lLUMJGfT7HeG/81cF/1AW8TiDfznM8LouAwAAAAAAAAAA8H+J
+        uAbgQoTLP4fICAAAAABJRU5ErkJggg==
 </value>
   </data>
 </root>

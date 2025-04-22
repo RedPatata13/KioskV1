@@ -72,8 +72,8 @@
     <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.4, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.9.0.4\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -81,30 +81,30 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
-    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    <Reference Include="System.Buffers, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.6.1\lib\net462\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Design" />
-    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=9.0.0.4, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.9.0.4\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
-    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    <Reference Include="System.Memory, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.6.3\lib\net462\System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="System.Numerics" />
-    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    <Reference Include="System.Numerics.Vectors, Version=4.1.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.6.1\lib\net462\System.Numerics.Vectors.dll</HintPath>
     </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.1.2\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
-    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.6.3\lib\net462\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
@@ -139,6 +139,7 @@
     <Compile Include="Classes\SupplierItemsViewModel.vb" />
     <Compile Include="Classes\SupplierLandingPageViewModel.vb" />
     <Compile Include="Classes\SupplierPendingRequestsViewModel.vb" />
+    <Compile Include="Classes\SupplierSidebarViewModel.vb" />
     <Compile Include="Classes\SupplierTransactionHistoryViewModel.vb" />
     <Compile Include="ContainerConfiguration.vb" />
     <Compile Include="Classes\ActionManager.vb" />
@@ -489,6 +490,12 @@
     <Compile Include="Forms\SupplierRequestDetailsUserControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Forms\SupplierSidebar.Designer.vb">
+      <DependentUpon>SupplierSidebar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupplierSidebar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\SupplierTransactionHistoryView.Designer.vb">
       <DependentUpon>SupplierTransactionHistoryView.vb</DependentUpon>
     </Compile>
@@ -501,14 +508,15 @@
     <Compile Include="Forms\SupplyRequestUserControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Migrations\202504160324086_InitialCreate1.Designer.vb">
-      <DependentUpon>202504160324086_InitialCreate1.vb</DependentUpon>
+    <Compile Include="KioskDatabaseV1DataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KioskDatabaseV1DataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202504160324086_InitialCreate1.vb" />
-    <Compile Include="Migrations\202504211545333_AddSupplyRequestConfiguration.Designer.vb">
-      <DependentUpon>202504211545333_AddSupplyRequestConfiguration.vb</DependentUpon>
+    <Compile Include="Migrations\202504221646129_InitialCreate.Designer.vb">
+      <DependentUpon>202504221646129_InitialCreate.vb</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202504211545333_AddSupplyRequestConfiguration.vb" />
+    <Compile Include="Migrations\202504221646129_InitialCreate.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\AdminItem.vb" />
     <Compile Include="Models\Category.vb" />
@@ -726,17 +734,17 @@
     <EmbeddedResource Include="Forms\SupplierRequestDetailsUserControl.resx">
       <DependentUpon>SupplierRequestDetailsUserControl.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SupplierSidebar.resx">
+      <DependentUpon>SupplierSidebar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SupplierTransactionHistoryView.resx">
       <DependentUpon>SupplierTransactionHistoryView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SupplyRequestUserControl.resx">
       <DependentUpon>SupplyRequestUserControl.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504160324086_InitialCreate1.resx">
-      <DependentUpon>202504160324086_InitialCreate1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504211545333_AddSupplyRequestConfiguration.resx">
-      <DependentUpon>202504211545333_AddSupplyRequestConfiguration.vb</DependentUpon>
+    <EmbeddedResource Include="Migrations\202504221646129_InitialCreate.resx">
+      <DependentUpon>202504221646129_InitialCreate.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -748,6 +756,17 @@
   <ItemGroup>
     <None Include="appsettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="KioskDatabaseV1DataSet.xsc">
+      <DependentUpon>KioskDatabaseV1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KioskDatabaseV1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KioskDatabaseV1DataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KioskDatabaseV1DataSet.xss">
+      <DependentUpon>KioskDatabaseV1DataSet.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

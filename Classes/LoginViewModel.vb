@@ -87,13 +87,11 @@ Namespace KioskV0.Classes
                         mediator = New Mediator(Of SupplierKeys)(_projector, Me, _unitOfWork)
                         mediator.SetCurrentUser(acc)
                         mediator.SetupMap(GetSupplierPages(mediator))
-                        'Dim supplier_sb = New SupplierSidebarViewModel(New Forms.SupplierSidebar(), mediator)
-                        mediator.SwapPage(SupplierKeys.SupplierItems)
-                        mediator.SwapPage(SupplierKeys.SupplierItems)
-                        'mediator.SwapPage(SupplierKeys.SupplierTransaction)
-                        'mediator.SwapPage(SupplierKeys.SupplierTransaction)
-                        'mediator.SwapPage(SupplierKeys.SupplierPendingRequest)
-                        'mediator.SwapPage(SupplierKeys.SupplierPendingRequest)
+                        Dim supplier_sb = New SupplierSidebarViewModel(New SupplierSidebar(), mediator)
+                        _projector.ProjectSidebar(supplier_sb)
+                        mediator.SwapPage(SupplierKeys.SupplierPendingRequest)
+                        mediator.SwapPage(SupplierKeys.SupplierPendingRequest)
+                        'mediator.SetCurrentUser(acc)
                     Case Else
                         MessageBox.Show("User type not null")
                 End Select
