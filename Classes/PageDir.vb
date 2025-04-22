@@ -47,9 +47,14 @@ Namespace KioskV0.Classes
             Return New Dictionary(Of SupplierKeys, IProjectable) From
             {
                 {SupplierKeys.SupplierLandingPage, New SupplierLandingPageViewModel(New SupplierLandingPageView(), mediator)},
-                {SupplierKeys.SupplierPendingRequest, New SupplierPendingRequestsViewModel(New SupplierPendingRequestsView(), mediator)}
+                {SupplierKeys.SupplierPendingRequest, New SupplierPendingRequestsViewModel(New SupplierPendingRequestsView(), mediator)},
+                {SupplierKeys.SupplierTransaction, New SupplierTransactionHistoryViewModel(New SupplierTransactionHistoryView(), mediator)},
+                {SupplierKeys.SupplierItems, New SupplierItemsViewModel(New SupplierItemsView(), mediator)},
+                {SupplierKeys.SupplierEditSupplierItem, New SupplierEditSupplierItemViewModel(New SupplierEditSupplierItems(), mediator)}
             }
         End Function
     End Module
 
 End Namespace
+
+'{SupplierKeys.SupplierItems, New SupplierItemsViewModel(New SupplierItemsView(), mediator)}

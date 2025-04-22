@@ -54,6 +54,7 @@ Namespace KioskV0.Classes
                                                     LoadPendingRequests()
                                                 End Sub
             AddHandler detailsUC.Declineclicked, Sub()
+                                                     MessageBox.Show("Decline button clicked!")
                                                      OnDeclineClicked(request)
                                                      LoadPendingRequests()
                                                  End Sub
@@ -88,14 +89,32 @@ Namespace KioskV0.Classes
                 _view.PendingReqsFlowLayout.Controls.Add(uc)
             Next
 
+            _mediator.NotifyRequestStatusChanged()
             _view.PendingReqsFlowLayout.Refresh()
         End Sub
 
         Private Sub OnDeclineClicked(request As SupplyRequest)
             request.Status = "Declined"
             _mediator.GetUnitOfWork().SaveChanges()
+            MessageBox.Show("Request declined successfully!")
             _view.ShowPendingList()
-            LoadPendingRequests()
+
+            ' Refresh the list completely like in OnAcceptClicked
+            _view.PendingReqsFlowLayout.Controls.Clear()
+            Dim currentSupplier = _mediator.GetCurrentUser
+            Dim freshRequestList = _mediator.GetUnitOfWork().SupplyRequests.GetAll().ToList()
+
+            Dim pendingReqs = freshRequestList.Where(
+        Function(req) req.SupplierID = currentSupplier.UserId AndAlso req.Status = "Pending").ToList()
+
+            For Each req In pendingReqs
+                Dim uc As New SupplyRequestUserControl()
+                uc.Bind(req)
+                AddHandler uc.SelfClicked, Sub() ShowRequestDetails(req)
+                _view.PendingReqsFlowLayout.Controls.Add(uc)
+            Next
+            _mediator.NotifyRequestStatusChanged()
+            _view.PendingReqsFlowLayout.Refresh()
         End Sub
 
         Private Sub AddInventoryBatchForRequest(request As SupplyRequest)

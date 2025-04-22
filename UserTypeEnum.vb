@@ -54,7 +54,7 @@
         SupplierItems
         SupplierPendingRequest
         SupplierTransaction
-        SupplierMenuSupply
+        SupplierEditSupplierItem
     End Enum
 
     Public Enum ItemStatus

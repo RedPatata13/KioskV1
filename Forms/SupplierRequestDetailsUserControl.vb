@@ -24,12 +24,12 @@
             RaiseEvent AcceptClicked()
         End Sub
 
-        Private Sub DeclineButton_Click(sender As Object, e As EventArgs)
-            RaiseEvent Declineclicked()
-        End Sub
-
         Private Sub CancelButton_Click(sender As Object, e As EventArgs) Handles CancelButton.Click
             RaiseEvent Cancelclicked()
+        End Sub
+
+        Private Sub DeclineButton_Click_1(sender As Object, e As EventArgs) Handles DeclineButton.Click
+            RaiseEvent Declineclicked()
         End Sub
     End Class
 

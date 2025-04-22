@@ -24,6 +24,7 @@
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
             Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+            Me.DeclineButton = New Guna.UI2.WinForms.Guna2Button()
             Me.CostLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.Guna2HtmlLabel7 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.SupplierLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -39,7 +40,6 @@
             Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.CancelButton = New Guna.UI2.WinForms.Guna2Button()
             Me.AcceptButton = New Guna.UI2.WinForms.Guna2Button()
-            Me.DeclineButton = New Guna.UI2.WinForms.Guna2Button()
             Me.Guna2Panel1.SuspendLayout()
             Me.SuspendLayout()
             '
@@ -70,6 +70,28 @@
             Me.Guna2Panel1.Name = "Guna2Panel1"
             Me.Guna2Panel1.Size = New System.Drawing.Size(1100, 748)
             Me.Guna2Panel1.TabIndex = 0
+            '
+            'DeclineButton
+            '
+            Me.DeclineButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.DeclineButton.BorderRadius = 15
+            Me.DeclineButton.BorderThickness = 1
+            Me.DeclineButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.DeclineButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.DeclineButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.DeclineButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.DeclineButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.DeclineButton.Font = New System.Drawing.Font("Poppins", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.DeclineButton.ForeColor = System.Drawing.Color.White
+            Me.DeclineButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.DeclineButton.HoverState.FillColor = System.Drawing.Color.White
+            Me.DeclineButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.DeclineButton.Location = New System.Drawing.Point(648, 668)
+            Me.DeclineButton.Margin = New System.Windows.Forms.Padding(2)
+            Me.DeclineButton.Name = "DeclineButton"
+            Me.DeclineButton.Size = New System.Drawing.Size(189, 51)
+            Me.DeclineButton.TabIndex = 41
+            Me.DeclineButton.Text = "Decline"
             '
             'CostLabel
             '
@@ -244,28 +266,6 @@
             Me.AcceptButton.Size = New System.Drawing.Size(189, 51)
             Me.AcceptButton.TabIndex = 24
             Me.AcceptButton.Text = "Accept"
-            '
-            'DeclineButton
-            '
-            Me.DeclineButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.DeclineButton.BorderRadius = 15
-            Me.DeclineButton.BorderThickness = 1
-            Me.DeclineButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-            Me.DeclineButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-            Me.DeclineButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-            Me.DeclineButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-            Me.DeclineButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.DeclineButton.Font = New System.Drawing.Font("Poppins", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.DeclineButton.ForeColor = System.Drawing.Color.White
-            Me.DeclineButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.DeclineButton.HoverState.FillColor = System.Drawing.Color.White
-            Me.DeclineButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.DeclineButton.Location = New System.Drawing.Point(634, 668)
-            Me.DeclineButton.Margin = New System.Windows.Forms.Padding(2)
-            Me.DeclineButton.Name = "DeclineButton"
-            Me.DeclineButton.Size = New System.Drawing.Size(189, 51)
-            Me.DeclineButton.TabIndex = 41
-            Me.DeclineButton.Text = "Decline"
             '
             'SupplierRequestDetailsUserControl
             '

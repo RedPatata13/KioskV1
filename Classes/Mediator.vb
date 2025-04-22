@@ -108,6 +108,9 @@ Namespace KioskV0.Classes
         Public Function GetSupplyRequestList() As List(Of SupplyRequest)
             Return _unitOfWork.SupplyRequests.GetAll()
         End Function
+        Public Function GetSupplierItemList() As List(Of SupplierItem)
+            Return _unitOfWork.SupplierItems.GetAll()
+        End Function
 
         'test adding user
         Public Sub CreateUser(model As User)
@@ -293,6 +296,16 @@ Namespace KioskV0.Classes
         Public Function GetCurrentUser() As User
             Return _currentUser
         End Function
+        Public Sub NotifyRequestStatusChanged()
+            ' This will notify any view that needs to update when request statuses change
+            RaiseEvent RequestStatusChanged(Me, EventArgs.Empty)
+        End Sub
+
+        Public Event RequestStatusChanged As EventHandler
+
+        Public Sub UpdateSupplierItem(item As SupplierItem)
+
+        End Sub
 
     End Class
 End Namespace
