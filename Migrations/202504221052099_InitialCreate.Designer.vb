@@ -6,14 +6,14 @@ Imports System.Resources
 
 Namespace Migrations
     <GeneratedCode("EntityFramework.Migrations", "6.5.1")>
-    Public NotInheritable Partial Class RemoveSupplierItemStockCount
+    Public NotInheritable Partial Class InitialCreate
         Implements IMigrationMetadata
     
-        Private ReadOnly Resources As New ResourceManager(GetType(RemoveSupplierItemStockCount))
+        Private ReadOnly Resources As New ResourceManager(GetType(InitialCreate))
         
         Private ReadOnly Property IMigrationMetadata_Id() As String Implements IMigrationMetadata.Id
             Get
-                Return "202504150131132_RemoveSupplierItemStockCount"
+                Return "202504221052099_InitialCreate"
             End Get
         End Property
         
