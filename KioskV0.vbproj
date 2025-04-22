@@ -639,6 +639,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CustomerHomeView.resx">
       <DependentUpon>CustomerHomeView.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CustomerInvoiceUserControl.resx">
       <DependentUpon>CustomerInvoiceUserControl.vb</DependentUpon>
@@ -663,6 +664,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CustomerOrderTypeUserControl.resx">
       <DependentUpon>CustomerOrderTypeUserControl.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CustomerPaymentView.resx">
       <DependentUpon>CustomerPaymentView.vb</DependentUpon>

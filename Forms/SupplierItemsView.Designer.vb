@@ -30,6 +30,7 @@
             Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
             Me.SearchMenu = New Guna.UI2.WinForms.Guna2TextBox()
             Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me.AddSupplyButton = New Guna.UI2.WinForms.Guna2Button()
             Me.EditPanel.SuspendLayout()
             Me.MainPanel.SuspendLayout()
             Me.Guna2Panel1.SuspendLayout()
@@ -64,6 +65,7 @@
             '
             'Guna2Panel1
             '
+            Me.Guna2Panel1.Controls.Add(Me.AddSupplyButton)
             Me.Guna2Panel1.Controls.Add(Me.SearchMenu)
             Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel1)
             Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
@@ -109,6 +111,28 @@
             Me.Guna2HtmlLabel1.TabIndex = 9
             Me.Guna2HtmlLabel1.Text = "Supply  List"
             '
+            'AddSupplyButton
+            '
+            Me.AddSupplyButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.AddSupplyButton.BorderRadius = 15
+            Me.AddSupplyButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.AddSupplyButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.AddSupplyButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.AddSupplyButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.AddSupplyButton.FillColor = System.Drawing.Color.White
+            Me.AddSupplyButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+            Me.AddSupplyButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.AddSupplyButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.AddSupplyButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.AddSupplyButton.HoverState.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
+            Me.AddSupplyButton.Image = CType(resources.GetObject("AddSupplyButton.Image"), System.Drawing.Image)
+            Me.AddSupplyButton.ImageSize = New System.Drawing.Size(30, 30)
+            Me.AddSupplyButton.Location = New System.Drawing.Point(901, 36)
+            Me.AddSupplyButton.Margin = New System.Windows.Forms.Padding(2)
+            Me.AddSupplyButton.Name = "AddSupplyButton"
+            Me.AddSupplyButton.Size = New System.Drawing.Size(41, 45)
+            Me.AddSupplyButton.TabIndex = 11
+            '
             'SupplierItemsView
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -134,6 +158,7 @@
         Friend WithEvents SupplierItemFlowLayout As FlowLayoutPanel
         Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
         Friend WithEvents SearchMenu As Guna.UI2.WinForms.Guna2TextBox
+        Friend WithEvents AddSupplyButton As Guna.UI2.WinForms.Guna2Button
     End Class
 
 End Namespace

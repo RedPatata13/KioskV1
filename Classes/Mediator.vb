@@ -303,9 +303,6 @@ Namespace KioskV0.Classes
 
         Public Event RequestStatusChanged As EventHandler
 
-        Public Sub UpdateSupplierItem(item As SupplierItem)
-
-        End Sub
 
     End Class
 End Namespace

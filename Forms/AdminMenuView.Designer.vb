@@ -33,10 +33,10 @@
             'MenuListFlowLayoutPanel
             '
             Me.MenuListFlowLayoutPanel.AutoScroll = True
-            Me.MenuListFlowLayoutPanel.Location = New System.Drawing.Point(0, 134)
-            Me.MenuListFlowLayoutPanel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+            Me.MenuListFlowLayoutPanel.Location = New System.Drawing.Point(0, 109)
+            Me.MenuListFlowLayoutPanel.Margin = New System.Windows.Forms.Padding(2)
             Me.MenuListFlowLayoutPanel.Name = "MenuListFlowLayoutPanel"
-            Me.MenuListFlowLayoutPanel.Size = New System.Drawing.Size(1761, 946)
+            Me.MenuListFlowLayoutPanel.Size = New System.Drawing.Size(1321, 769)
             Me.MenuListFlowLayoutPanel.TabIndex = 5
             '
             'SearchMenu
@@ -55,20 +55,19 @@
             Me.SearchMenu.IconLeft = CType(resources.GetObject("SearchMenu.IconLeft"), System.Drawing.Image)
             Me.SearchMenu.IconLeftOffset = New System.Drawing.Point(10, 0)
             Me.SearchMenu.IconLeftSize = New System.Drawing.Size(25, 25)
-            Me.SearchMenu.Location = New System.Drawing.Point(1323, 36)
-            Me.SearchMenu.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+            Me.SearchMenu.Location = New System.Drawing.Point(992, 29)
+            Me.SearchMenu.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
             Me.SearchMenu.Name = "SearchMenu"
             Me.SearchMenu.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
             Me.SearchMenu.PlaceholderText = "Search Menu"
             Me.SearchMenu.SelectedText = ""
-            Me.SearchMenu.Size = New System.Drawing.Size(401, 55)
+            Me.SearchMenu.Size = New System.Drawing.Size(301, 45)
             Me.SearchMenu.TabIndex = 3
             '
             'AddMenuButton
             '
             Me.AddMenuButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.AddMenuButton.BorderRadius = 15
-            Me.AddMenuButton.BorderThickness = 1
             Me.AddMenuButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
             Me.AddMenuButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
             Me.AddMenuButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -80,11 +79,11 @@
             Me.AddMenuButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.AddMenuButton.HoverState.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
             Me.AddMenuButton.Image = CType(resources.GetObject("AddMenuButton.Image"), System.Drawing.Image)
-            Me.AddMenuButton.ImageSize = New System.Drawing.Size(40, 40)
-            Me.AddMenuButton.Location = New System.Drawing.Point(1248, 36)
-            Me.AddMenuButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+            Me.AddMenuButton.ImageSize = New System.Drawing.Size(30, 30)
+            Me.AddMenuButton.Location = New System.Drawing.Point(936, 29)
+            Me.AddMenuButton.Margin = New System.Windows.Forms.Padding(2)
             Me.AddMenuButton.Name = "AddMenuButton"
-            Me.AddMenuButton.Size = New System.Drawing.Size(55, 55)
+            Me.AddMenuButton.Size = New System.Drawing.Size(41, 45)
             Me.AddMenuButton.TabIndex = 2
             '
             'Guna2HtmlLabel1
@@ -92,25 +91,25 @@
             Me.Guna2HtmlLabel1.AutoSize = False
             Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 28.2!, System.Drawing.FontStyle.Bold)
-            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(43, 30)
-            Me.Guna2HtmlLabel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(32, 24)
+            Me.Guna2HtmlLabel1.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(263, 74)
+            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(197, 60)
             Me.Guna2HtmlLabel1.TabIndex = 4
             Me.Guna2HtmlLabel1.Text = "Menu List"
             '
             'AdminMenuView
             '
-            Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1761, 1081)
+            Me.ClientSize = New System.Drawing.Size(1321, 878)
             Me.Controls.Add(Me.Guna2HtmlLabel1)
             Me.Controls.Add(Me.MenuListFlowLayoutPanel)
             Me.Controls.Add(Me.AddMenuButton)
             Me.Controls.Add(Me.SearchMenu)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-            Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+            Me.Margin = New System.Windows.Forms.Padding(2)
             Me.Name = "AdminMenuView"
             Me.Text = "AdminMenu"
             Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
