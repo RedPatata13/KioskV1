@@ -134,7 +134,12 @@
     <Compile Include="Classes\AdminMenuSelectSupplierItemViewModel.vb" />
     <Compile Include="Classes\CloneHelper.vb" />
     <Compile Include="Classes\InitialDBSetup.vb" />
+    <Compile Include="Classes\SupplierAcceptRequestViewModel.vb" />
+    <Compile Include="Classes\SupplierEditSupplierItemViewModel.vb" />
+    <Compile Include="Classes\SupplierItemsViewModel.vb" />
     <Compile Include="Classes\SupplierLandingPageViewModel.vb" />
+    <Compile Include="Classes\SupplierPendingRequestsViewModel.vb" />
+    <Compile Include="Classes\SupplierTransactionHistoryViewModel.vb" />
     <Compile Include="ContainerConfiguration.vb" />
     <Compile Include="Classes\ActionManager.vb" />
     <Compile Include="Classes\AdminAccountSettingsViewModel.vb" />
@@ -193,6 +198,7 @@
     <Compile Include="Data\Configuration\MenuConfiguration.vb" />
     <Compile Include="Data\Configuration\SupplierConfiguration.vb" />
     <Compile Include="Data\Configuration\SupplierItemConfiguration.vb" />
+    <Compile Include="Data\Configuration\SupplyRequestConfiguration.vb" />
     <Compile Include="Data\Configuration\TransactionConfiguration.vb" />
     <Compile Include="Data\Configuration\UserConfiguration.vb" />
     <Compile Include="Forms\AdminAccountSettingsView.Designer.vb">
@@ -441,16 +447,68 @@
     <Compile Include="Forms\StaffTotaProductsUserControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Forms\SupplierAcceptRequestView.Designer.vb">
+      <DependentUpon>SupplierAcceptRequestView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupplierAcceptRequestView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SupplierEditSupplierItems.Designer.vb">
+      <DependentUpon>SupplierEditSupplierItems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupplierEditSupplierItems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SupplierItemUserControl.Designer.vb">
+      <DependentUpon>SupplierItemUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupplierItemUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Forms\SupplierLandingPageView.Designer.vb">
       <DependentUpon>SupplierLandingPageView.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\SupplierLandingPageView.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\SupplierItemsView.Designer.vb">
+      <DependentUpon>SupplierItemsView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupplierItemsView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SupplierPendingRequestsView.Designer.vb">
+      <DependentUpon>SupplierPendingRequestsView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupplierPendingRequestsView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SupplierRequestDetailsUserControl.Designer.vb">
+      <DependentUpon>SupplierRequestDetailsUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupplierRequestDetailsUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\SupplierTransactionHistoryView.Designer.vb">
+      <DependentUpon>SupplierTransactionHistoryView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupplierTransactionHistoryView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SupplyRequestUserControl.Designer.vb">
+      <DependentUpon>SupplyRequestUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupplyRequestUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Migrations\202504160324086_InitialCreate1.Designer.vb">
       <DependentUpon>202504160324086_InitialCreate1.vb</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202504160324086_InitialCreate1.vb" />
+    <Compile Include="Migrations\202504211545333_AddSupplyRequestConfiguration.Designer.vb">
+      <DependentUpon>202504211545333_AddSupplyRequestConfiguration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504211545333_AddSupplyRequestConfiguration.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\AdminItem.vb" />
     <Compile Include="Models\Category.vb" />
@@ -469,6 +527,7 @@
     <Compile Include="Models\Supplier.vb" />
     <Compile Include="Models\SupplierItem.vb" />
     <Compile Include="Models\SupplierProduct.vb" />
+    <Compile Include="Models\SupplyRequest.vb" />
     <Compile Include="Models\Transaction.vb" />
     <Compile Include="Models\UserModel_1.vb" />
     <Compile Include="Models\UserModel.vb" />
@@ -484,6 +543,7 @@
     <Compile Include="Repositories\Contracts\IOrderDetailsRepository.vb" />
     <Compile Include="Repositories\Contracts\IOrderRepository.vb" />
     <Compile Include="Repositories\Contracts\ISupplierItemsRepository.vb" />
+    <Compile Include="Repositories\Contracts\ISupplyRequestsRepository.vb" />
     <Compile Include="Repositories\Contracts\IUnitOfWork.vb" />
     <Compile Include="Repositories\Contracts\IUsersRepository.vb" />
     <Compile Include="Repositories\CustomerItemsRepository.vb" />
@@ -496,6 +556,7 @@
     <Compile Include="Repositories\MenuRepository.vb" />
     <Compile Include="Repositories\SupplierItemsRepository.vb" />
     <Compile Include="Repositories\SuppliersRepository.vb" />
+    <Compile Include="Repositories\SupplyRequestsRepository.vb" />
     <Compile Include="Repositories\TransactionsRepository.vb" />
     <Compile Include="Repositories\UnitOfWork.vb" />
     <Compile Include="Repositories\UsersRepository.vb" />
@@ -612,11 +673,20 @@
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffCreditSalesView.resx">
+      <DependentUpon>StaffCreditSalesView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffManagerAuthorizationView.resx">
+      <DependentUpon>StaffManagerAuthorizationView.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\StaffPaymentView.resx">
       <DependentUpon>StaffPaymentView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StaffPosOrderUserControl.resx">
       <DependentUpon>StaffPosOrderUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffPosView.resx">
+      <DependentUpon>StaffPosView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StaffProductCategoryUserControl.resx">
       <DependentUpon>StaffProductCategoryUserControl.vb</DependentUpon>
@@ -633,11 +703,38 @@
     <EmbeddedResource Include="Forms\StaffTotaProductsUserControl.resx">
       <DependentUpon>StaffTotaProductsUserControl.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SupplierAcceptRequestView.resx">
+      <DependentUpon>SupplierAcceptRequestView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SupplierEditSupplierItems.resx">
+      <DependentUpon>SupplierEditSupplierItems.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SupplierItemUserControl.resx">
+      <DependentUpon>SupplierItemUserControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SupplierLandingPageView.resx">
       <DependentUpon>SupplierLandingPageView.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SupplierItemsView.resx">
+      <DependentUpon>SupplierItemsView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SupplierPendingRequestsView.resx">
+      <DependentUpon>SupplierPendingRequestsView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SupplierRequestDetailsUserControl.resx">
+      <DependentUpon>SupplierRequestDetailsUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SupplierTransactionHistoryView.resx">
+      <DependentUpon>SupplierTransactionHistoryView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SupplyRequestUserControl.resx">
+      <DependentUpon>SupplyRequestUserControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504160324086_InitialCreate1.resx">
       <DependentUpon>202504160324086_InitialCreate1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504211545333_AddSupplyRequestConfiguration.resx">
+      <DependentUpon>202504211545333_AddSupplyRequestConfiguration.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
