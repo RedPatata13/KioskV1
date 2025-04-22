@@ -12,7 +12,7 @@ Namespace KioskV0.Classes
         Public Sub New(view As CustomerConfirmOrderView, mediator As Mediator(Of CustomerKeys))
             MyBase.New(view, mediator)
 
-            AddHandler _view.ViewOrderButton.Click, Sub() Confirm()
+            AddHandler _view.ConfirmOrderButton.Click, Sub() Confirm()
             AddHandler _view.BackButton.Click, Sub() _mediator.SwapPage(CustomerKeys.CustomerOrderList)
             AddHandler _view.AddNoteButton.Click, Sub() ShowAddNote()
         End Sub

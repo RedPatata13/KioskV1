@@ -35,12 +35,11 @@
             '
             'OrderNumberLabel
             '
-            Me.OrderNumberLabel.AutoSize = False
             Me.OrderNumberLabel.BackColor = System.Drawing.Color.Transparent
-            Me.OrderNumberLabel.Font = New System.Drawing.Font("Poppins", 140.0!, System.Drawing.FontStyle.Bold)
-            Me.OrderNumberLabel.Location = New System.Drawing.Point(220, 77)
+            Me.OrderNumberLabel.Font = New System.Drawing.Font("Poppins", 120.0!, System.Drawing.FontStyle.Bold)
+            Me.OrderNumberLabel.Location = New System.Drawing.Point(229, 113)
             Me.OrderNumberLabel.Name = "OrderNumberLabel"
-            Me.OrderNumberLabel.Size = New System.Drawing.Size(208, 252)
+            Me.OrderNumberLabel.Size = New System.Drawing.Size(160, 284)
             Me.OrderNumberLabel.TabIndex = 2
             Me.OrderNumberLabel.Text = "31"
             Me.OrderNumberLabel.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft
@@ -51,16 +50,16 @@
             Me.OrderPanel.Controls.Add(Me.YourOrderLbl)
             Me.OrderPanel.Controls.Add(Me.Guna2HtmlLabel1)
             Me.OrderPanel.Controls.Add(Me.OrderNumberLabel)
-            Me.OrderPanel.Location = New System.Drawing.Point(416, 238)
+            Me.OrderPanel.Location = New System.Drawing.Point(257, 221)
             Me.OrderPanel.Name = "OrderPanel"
-            Me.OrderPanel.Size = New System.Drawing.Size(550, 336)
+            Me.OrderPanel.Size = New System.Drawing.Size(907, 379)
             Me.OrderPanel.TabIndex = 5
             '
             'YourOrderLbl
             '
             Me.YourOrderLbl.BackColor = System.Drawing.Color.Transparent
             Me.YourOrderLbl.Font = New System.Drawing.Font("Poppins", 36.0!, System.Drawing.FontStyle.Bold)
-            Me.YourOrderLbl.Location = New System.Drawing.Point(130, 3)
+            Me.YourOrderLbl.Location = New System.Drawing.Point(304, 39)
             Me.YourOrderLbl.Name = "YourOrderLbl"
             Me.YourOrderLbl.Size = New System.Drawing.Size(272, 86)
             Me.YourOrderLbl.TabIndex = 0
@@ -70,7 +69,7 @@
             '
             Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Poppins", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(79, 209)
+            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(79, 213)
             Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
             Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(84, 86)
             Me.Guna2HtmlLabel1.TabIndex = 3
@@ -110,7 +109,7 @@
             Me.PayButton.Font = New System.Drawing.Font("Poppins", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.PayButton.ForeColor = System.Drawing.Color.Black
             Me.PayButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.PayButton.Location = New System.Drawing.Point(416, 623)
+            Me.PayButton.Location = New System.Drawing.Point(416, 626)
             Me.PayButton.Name = "PayButton"
             Me.PayButton.PressedColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
             Me.PayButton.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))

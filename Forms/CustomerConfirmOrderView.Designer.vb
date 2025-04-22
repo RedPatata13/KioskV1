@@ -31,7 +31,7 @@
             Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
             Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
             Me.BackButton = New Guna.UI2.WinForms.Guna2Button()
-            Me.ViewOrderButton = New Guna.UI2.WinForms.Guna2Button()
+            Me.ConfirmOrderButton = New Guna.UI2.WinForms.Guna2Button()
             Me.ConfirmOrderPanel = New Guna.UI2.WinForms.Guna2Panel()
             Me.OrdersPanel.SuspendLayout()
             Me.Guna2Panel1.SuspendLayout()
@@ -104,7 +104,7 @@
             'Guna2Panel2
             '
             Me.Guna2Panel2.Controls.Add(Me.BackButton)
-            Me.Guna2Panel2.Controls.Add(Me.ViewOrderButton)
+            Me.Guna2Panel2.Controls.Add(Me.ConfirmOrderButton)
             Me.Guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
             Me.Guna2Panel2.Location = New System.Drawing.Point(0, 655)
             Me.Guna2Panel2.Name = "Guna2Panel2"
@@ -134,27 +134,27 @@
             Me.BackButton.Text = "Back"
             Me.BackButton.TextOffset = New System.Drawing.Point(0, 2)
             '
-            'ViewOrderButton
+            'ConfirmOrderButton
             '
-            Me.ViewOrderButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.ViewOrderButton.BorderRadius = 15
-            Me.ViewOrderButton.BorderThickness = 1
-            Me.ViewOrderButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-            Me.ViewOrderButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-            Me.ViewOrderButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-            Me.ViewOrderButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-            Me.ViewOrderButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.ViewOrderButton.Font = New System.Drawing.Font("Poppins SemiBold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ViewOrderButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
-            Me.ViewOrderButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.ViewOrderButton.HoverState.FillColor = System.Drawing.Color.White
-            Me.ViewOrderButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.ViewOrderButton.Location = New System.Drawing.Point(1023, 21)
-            Me.ViewOrderButton.Margin = New System.Windows.Forms.Padding(2)
-            Me.ViewOrderButton.Name = "ViewOrderButton"
-            Me.ViewOrderButton.Size = New System.Drawing.Size(318, 50)
-            Me.ViewOrderButton.TabIndex = 23
-            Me.ViewOrderButton.Text = "Confirm Order"
+            Me.ConfirmOrderButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
+            Me.ConfirmOrderButton.BorderRadius = 15
+            Me.ConfirmOrderButton.BorderThickness = 1
+            Me.ConfirmOrderButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.ConfirmOrderButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.ConfirmOrderButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.ConfirmOrderButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.ConfirmOrderButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
+            Me.ConfirmOrderButton.Font = New System.Drawing.Font("Poppins SemiBold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.ConfirmOrderButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+            Me.ConfirmOrderButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
+            Me.ConfirmOrderButton.HoverState.FillColor = System.Drawing.Color.White
+            Me.ConfirmOrderButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(44, Byte), Integer))
+            Me.ConfirmOrderButton.Location = New System.Drawing.Point(1023, 21)
+            Me.ConfirmOrderButton.Margin = New System.Windows.Forms.Padding(2)
+            Me.ConfirmOrderButton.Name = "ConfirmOrderButton"
+            Me.ConfirmOrderButton.Size = New System.Drawing.Size(318, 50)
+            Me.ConfirmOrderButton.TabIndex = 23
+            Me.ConfirmOrderButton.Text = "Confirm Order"
             '
             'ConfirmOrderPanel
             '
@@ -184,7 +184,7 @@
         Friend WithEvents YourOrderListLbl As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents OrdersPanel As Guna.UI2.WinForms.Guna2Panel
         Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
-        Friend WithEvents ViewOrderButton As Guna.UI2.WinForms.Guna2Button
+        Friend WithEvents ConfirmOrderButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents AddNoteButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents OrdersFlowlayoutPanel As FlowLayoutPanel
         Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel

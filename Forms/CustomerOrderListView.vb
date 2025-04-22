@@ -66,5 +66,9 @@ Namespace KioskV0.Forms
         Private Sub OrderListFlowLayout_Paint(sender As Object, e As PaintEventArgs) Handles OrderListFlowLayout.Paint
 
         End Sub
+
+        Private Sub TotalPriceLabel_Click(sender As Object, e As EventArgs) Handles TotalPriceLabel.Click
+
+        End Sub
     End Class
 End Namespace

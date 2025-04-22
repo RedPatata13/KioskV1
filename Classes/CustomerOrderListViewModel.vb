@@ -126,6 +126,7 @@ Namespace KioskV0.Classes
                     _view.OrderListFlowLayout.Controls.Add(orderDetails)
                 Next
                 PopulateDGV()
+                UpdateTotalPrice()
                 '_mediator.InvokeAllAction()
             End If
 
@@ -178,6 +179,7 @@ Namespace KioskV0.Classes
         Private Sub OnStartOverClicked()
             Cart.Clear()
             LoadOrderDetails()
+            UpdateTotalPrice()
             Dim vm = DirectCast(_mediator.GetVM(CustomerKeys.CustomerMenu), CustomerMenuViewModel)
             vm.UpdatedCart = Cart
             _mediator.SwapPage(CustomerKeys.CustomerMenu)

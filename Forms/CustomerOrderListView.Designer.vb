@@ -23,19 +23,20 @@
         'Do not modify it using the code editor.
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CustomerOrderListView))
             Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CustomerOrderListView))
             Me.YourOrderListLbl = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.TopBar = New Guna.UI2.WinForms.Guna2Panel()
+            Me.LogoPctrBx = New Guna.UI2.WinForms.Guna2PictureBox()
+            Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
             Me.OrdersPanel = New Guna.UI2.WinForms.Guna2Panel()
             Me.Buttons = New Guna.UI2.WinForms.Guna2Panel()
             Me.StartOverButton = New Guna.UI2.WinForms.Guna2Button()
             Me.OrderMoreButton = New Guna.UI2.WinForms.Guna2Button()
-            Me.OrderListFlowLayout = New System.Windows.Forms.FlowLayoutPanel()
             Me.OrderListPanel = New Guna.UI2.WinForms.Guna2Panel()
             Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
             Me.Label3 = New System.Windows.Forms.Label()
@@ -46,16 +47,15 @@
             Me.Label4 = New System.Windows.Forms.Label()
             Me.CheckOutButton = New Guna.UI2.WinForms.Guna2Button()
             Me.OrderDetailsDGV = New Guna.UI2.WinForms.Guna2DataGridView()
-            Me.LogoPctrBx = New Guna.UI2.WinForms.Guna2PictureBox()
-            Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+            Me.OrderListFlowLayout = New System.Windows.Forms.FlowLayoutPanel()
             Me.TopBar.SuspendLayout()
+            CType(Me.LogoPctrBx, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.OrdersPanel.SuspendLayout()
             Me.Buttons.SuspendLayout()
             Me.OrderListPanel.SuspendLayout()
             Me.Guna2Panel3.SuspendLayout()
             Me.Guna2Panel2.SuspendLayout()
             CType(Me.OrderDetailsDGV, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.LogoPctrBx, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'YourOrderListLbl
@@ -79,6 +79,24 @@
             Me.TopBar.Name = "TopBar"
             Me.TopBar.Size = New System.Drawing.Size(1370, 97)
             Me.TopBar.TabIndex = 41
+            '
+            'LogoPctrBx
+            '
+            Me.LogoPctrBx.Image = CType(resources.GetObject("LogoPctrBx.Image"), System.Drawing.Image)
+            Me.LogoPctrBx.ImageRotate = 0!
+            Me.LogoPctrBx.Location = New System.Drawing.Point(0, 0)
+            Me.LogoPctrBx.Name = "LogoPctrBx"
+            Me.LogoPctrBx.Size = New System.Drawing.Size(114, 97)
+            Me.LogoPctrBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+            Me.LogoPctrBx.TabIndex = 41
+            Me.LogoPctrBx.TabStop = False
+            '
+            'Guna2Panel1
+            '
+            Me.Guna2Panel1.Location = New System.Drawing.Point(1, 0)
+            Me.Guna2Panel1.Name = "Guna2Panel1"
+            Me.Guna2Panel1.Size = New System.Drawing.Size(1920, 1080)
+            Me.Guna2Panel1.TabIndex = 42
             '
             'OrdersPanel
             '
@@ -147,14 +165,6 @@
             Me.OrderMoreButton.TabIndex = 21
             Me.OrderMoreButton.Text = "Order more"
             Me.OrderMoreButton.TextOffset = New System.Drawing.Point(0, 2)
-            '
-            'OrderListFlowLayout
-            '
-            Me.OrderListFlowLayout.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.OrderListFlowLayout.Location = New System.Drawing.Point(0, 0)
-            Me.OrderListFlowLayout.Name = "OrderListFlowLayout"
-            Me.OrderListFlowLayout.Size = New System.Drawing.Size(1370, 652)
-            Me.OrderListFlowLayout.TabIndex = 1
             '
             'OrderListPanel
             '
@@ -231,9 +241,9 @@
             Me.TotalPriceLabel.Font = New System.Drawing.Font("Poppins Medium", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.TotalPriceLabel.Location = New System.Drawing.Point(228, 9)
             Me.TotalPriceLabel.Name = "TotalPriceLabel"
-            Me.TotalPriceLabel.Size = New System.Drawing.Size(123, 34)
+            Me.TotalPriceLabel.Size = New System.Drawing.Size(111, 34)
             Me.TotalPriceLabel.TabIndex = 23
-            Me.TotalPriceLabel.Text = "PHP256.00"
+            Me.TotalPriceLabel.Text = "PHP00.00"
             '
             'Label4
             '
@@ -341,23 +351,13 @@
             Me.OrderDetailsDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.OrderDetailsDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
             '
-            'LogoPctrBx
+            'OrderListFlowLayout
             '
-            Me.LogoPctrBx.Image = CType(resources.GetObject("LogoPctrBx.Image"), System.Drawing.Image)
-            Me.LogoPctrBx.ImageRotate = 0!
-            Me.LogoPctrBx.Location = New System.Drawing.Point(0, 0)
-            Me.LogoPctrBx.Name = "LogoPctrBx"
-            Me.LogoPctrBx.Size = New System.Drawing.Size(114, 97)
-            Me.LogoPctrBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-            Me.LogoPctrBx.TabIndex = 41
-            Me.LogoPctrBx.TabStop = False
-            '
-            'Guna2Panel1
-            '
-            Me.Guna2Panel1.Location = New System.Drawing.Point(1, 0)
-            Me.Guna2Panel1.Name = "Guna2Panel1"
-            Me.Guna2Panel1.Size = New System.Drawing.Size(1920, 1080)
-            Me.Guna2Panel1.TabIndex = 42
+            Me.OrderListFlowLayout.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.OrderListFlowLayout.Location = New System.Drawing.Point(0, 0)
+            Me.OrderListFlowLayout.Name = "OrderListFlowLayout"
+            Me.OrderListFlowLayout.Size = New System.Drawing.Size(1370, 652)
+            Me.OrderListFlowLayout.TabIndex = 1
             '
             'CustomerOrderListView
             '
@@ -371,6 +371,7 @@
             Me.Name = "CustomerOrderListView"
             Me.Text = "CustomerOrderListPage"
             Me.TopBar.ResumeLayout(False)
+            CType(Me.LogoPctrBx, System.ComponentModel.ISupportInitialize).EndInit()
             Me.OrdersPanel.ResumeLayout(False)
             Me.Buttons.ResumeLayout(False)
             Me.OrderListPanel.ResumeLayout(False)
@@ -379,7 +380,6 @@
             Me.Guna2Panel2.ResumeLayout(False)
             Me.Guna2Panel2.PerformLayout()
             CType(Me.OrderDetailsDGV, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.LogoPctrBx, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
 
         End Sub
