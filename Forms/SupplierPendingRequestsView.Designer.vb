@@ -27,7 +27,6 @@
             Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
             Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
-            Me.Guna2HtmlLabel6 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.Guna2Panel6 = New Guna.UI2.WinForms.Guna2Panel()
             Me.Guna2HtmlLabel7 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
@@ -37,6 +36,7 @@
             Me.PendingReqsFlowLayout = New System.Windows.Forms.FlowLayoutPanel()
             Me.Panel1 = New Guna.UI2.WinForms.Guna2Panel()
             Me.DetailsPanel = New Guna.UI2.WinForms.Guna2Panel()
+            Me.Guna2HtmlLabel6 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.Guna2Panel1.SuspendLayout()
             Me.Guna2Panel2.SuspendLayout()
             Me.Guna2Panel6.SuspendLayout()
@@ -49,7 +49,7 @@
             '
             Me.PendingRequestLabel.BackColor = System.Drawing.Color.Transparent
             Me.PendingRequestLabel.Font = New System.Drawing.Font("Montserrat", 28.2!, System.Drawing.FontStyle.Bold)
-            Me.PendingRequestLabel.Location = New System.Drawing.Point(34, 36)
+            Me.PendingRequestLabel.Location = New System.Drawing.Point(24, 11)
             Me.PendingRequestLabel.Margin = New System.Windows.Forms.Padding(2)
             Me.PendingRequestLabel.Name = "PendingRequestLabel"
             Me.PendingRequestLabel.Size = New System.Drawing.Size(347, 61)
@@ -60,7 +60,7 @@
             '
             Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(78, 5)
+            Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(124, 7)
             Me.Guna2HtmlLabel3.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
             Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(41, 30)
@@ -74,54 +74,43 @@
             Me.Guna2Panel1.BorderThickness = 1
             Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel3)
             Me.Guna2Panel1.FillColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.Guna2Panel1.Location = New System.Drawing.Point(292, 116)
+            Me.Guna2Panel1.Location = New System.Drawing.Point(349, 116)
             Me.Guna2Panel1.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2Panel1.Name = "Guna2Panel1"
-            Me.Guna2Panel1.Size = New System.Drawing.Size(200, 40)
+            Me.Guna2Panel1.Size = New System.Drawing.Size(300, 40)
             Me.Guna2Panel1.TabIndex = 16
             '
             'Guna2Panel2
             '
-            Me.Guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+            Me.Guna2Panel2.BorderColor = System.Drawing.Color.Transparent
             Me.Guna2Panel2.BorderRadius = 20
             Me.Guna2Panel2.BorderThickness = 1
             Me.Guna2Panel2.Controls.Add(Me.Guna2HtmlLabel6)
             Me.Guna2Panel2.FillColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.Guna2Panel2.Location = New System.Drawing.Point(496, 116)
+            Me.Guna2Panel2.Location = New System.Drawing.Point(675, 116)
             Me.Guna2Panel2.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2Panel2.Name = "Guna2Panel2"
-            Me.Guna2Panel2.Size = New System.Drawing.Size(518, 40)
+            Me.Guna2Panel2.Size = New System.Drawing.Size(300, 40)
             Me.Guna2Panel2.TabIndex = 16
-            '
-            'Guna2HtmlLabel6
-            '
-            Me.Guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel6.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(235, 5)
-            Me.Guna2HtmlLabel6.Margin = New System.Windows.Forms.Padding(2)
-            Me.Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
-            Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(65, 30)
-            Me.Guna2HtmlLabel6.TabIndex = 11
-            Me.Guna2HtmlLabel6.Text = "Product"
             '
             'Guna2Panel6
             '
-            Me.Guna2Panel6.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+            Me.Guna2Panel6.BorderColor = System.Drawing.Color.Transparent
             Me.Guna2Panel6.BorderRadius = 20
             Me.Guna2Panel6.BorderThickness = 1
             Me.Guna2Panel6.Controls.Add(Me.Guna2HtmlLabel7)
             Me.Guna2Panel6.FillColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.Guna2Panel6.Location = New System.Drawing.Point(1018, 116)
+            Me.Guna2Panel6.Location = New System.Drawing.Point(997, 116)
             Me.Guna2Panel6.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2Panel6.Name = "Guna2Panel6"
-            Me.Guna2Panel6.Size = New System.Drawing.Size(200, 40)
+            Me.Guna2Panel6.Size = New System.Drawing.Size(300, 40)
             Me.Guna2Panel6.TabIndex = 17
             '
             'Guna2HtmlLabel7
             '
             Me.Guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel7.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2HtmlLabel7.Location = New System.Drawing.Point(67, 5)
+            Me.Guna2HtmlLabel7.Location = New System.Drawing.Point(130, 8)
             Me.Guna2HtmlLabel7.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
             Me.Guna2HtmlLabel7.Size = New System.Drawing.Size(72, 30)
@@ -143,22 +132,22 @@
             '
             'Guna2Panel5
             '
-            Me.Guna2Panel5.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+            Me.Guna2Panel5.BorderColor = System.Drawing.Color.Transparent
             Me.Guna2Panel5.BorderRadius = 20
             Me.Guna2Panel5.BorderThickness = 1
             Me.Guna2Panel5.Controls.Add(Me.Guna2HtmlLabel1)
             Me.Guna2Panel5.FillColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(44, Byte), Integer))
-            Me.Guna2Panel5.Location = New System.Drawing.Point(59, 116)
+            Me.Guna2Panel5.Location = New System.Drawing.Point(24, 116)
             Me.Guna2Panel5.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2Panel5.Name = "Guna2Panel5"
-            Me.Guna2Panel5.Size = New System.Drawing.Size(229, 40)
+            Me.Guna2Panel5.Size = New System.Drawing.Size(300, 40)
             Me.Guna2Panel5.TabIndex = 15
             '
             'Guna2HtmlLabel1
             '
             Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(69, 5)
+            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(96, 8)
             Me.Guna2HtmlLabel1.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
             Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(87, 30)
@@ -181,7 +170,7 @@
             Me.PendingReqsFlowLayout.Dock = System.Windows.Forms.DockStyle.Fill
             Me.PendingReqsFlowLayout.Location = New System.Drawing.Point(0, 176)
             Me.PendingReqsFlowLayout.Name = "PendingReqsFlowLayout"
-            Me.PendingReqsFlowLayout.Size = New System.Drawing.Size(1321, 702)
+            Me.PendingReqsFlowLayout.Size = New System.Drawing.Size(1321, 612)
             Me.PendingReqsFlowLayout.TabIndex = 19
             '
             'Panel1
@@ -191,7 +180,7 @@
             Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
             Me.Panel1.Location = New System.Drawing.Point(0, 0)
             Me.Panel1.Name = "Panel1"
-            Me.Panel1.Size = New System.Drawing.Size(1321, 878)
+            Me.Panel1.Size = New System.Drawing.Size(1321, 788)
             Me.Panel1.TabIndex = 20
             '
             'DetailsPanel
@@ -202,12 +191,23 @@
             Me.DetailsPanel.Size = New System.Drawing.Size(1321, 878)
             Me.DetailsPanel.TabIndex = 21
             '
+            'Guna2HtmlLabel6
+            '
+            Me.Guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent
+            Me.Guna2HtmlLabel6.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(116, 7)
+            Me.Guna2HtmlLabel6.Margin = New System.Windows.Forms.Padding(2)
+            Me.Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
+            Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(65, 30)
+            Me.Guna2HtmlLabel6.TabIndex = 11
+            Me.Guna2HtmlLabel6.Text = "Product"
+            '
             'SupplierPendingRequestsView
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1321, 878)
+            Me.ClientSize = New System.Drawing.Size(1321, 788)
             Me.Controls.Add(Me.Panel1)
             Me.Controls.Add(Me.DetailsPanel)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -232,7 +232,6 @@
         Public WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
         Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
-        Public WithEvents Guna2HtmlLabel6 As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents Guna2Panel6 As Guna.UI2.WinForms.Guna2Panel
         Public WithEvents Guna2HtmlLabel7 As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
@@ -242,6 +241,7 @@
         Friend WithEvents PendingReqsFlowLayout As FlowLayoutPanel
         Friend WithEvents Panel1 As Guna.UI2.WinForms.Guna2Panel
         Friend WithEvents DetailsPanel As Guna.UI2.WinForms.Guna2Panel
+        Public WithEvents Guna2HtmlLabel6 As Guna.UI2.WinForms.Guna2HtmlLabel
     End Class
 
 End Namespace

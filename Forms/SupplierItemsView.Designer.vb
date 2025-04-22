@@ -42,7 +42,7 @@
             Me.EditPanel.Dock = System.Windows.Forms.DockStyle.Fill
             Me.EditPanel.Location = New System.Drawing.Point(0, 0)
             Me.EditPanel.Name = "EditPanel"
-            Me.EditPanel.Size = New System.Drawing.Size(1321, 878)
+            Me.EditPanel.Size = New System.Drawing.Size(1321, 788)
             Me.EditPanel.TabIndex = 10
             '
             'MainPanel
@@ -52,7 +52,7 @@
             Me.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill
             Me.MainPanel.Location = New System.Drawing.Point(0, 0)
             Me.MainPanel.Name = "MainPanel"
-            Me.MainPanel.Size = New System.Drawing.Size(1321, 878)
+            Me.MainPanel.Size = New System.Drawing.Size(1321, 788)
             Me.MainPanel.TabIndex = 11
             '
             'SupplierItemFlowLayout
@@ -60,7 +60,7 @@
             Me.SupplierItemFlowLayout.Dock = System.Windows.Forms.DockStyle.Fill
             Me.SupplierItemFlowLayout.Location = New System.Drawing.Point(0, 100)
             Me.SupplierItemFlowLayout.Name = "SupplierItemFlowLayout"
-            Me.SupplierItemFlowLayout.Size = New System.Drawing.Size(1321, 778)
+            Me.SupplierItemFlowLayout.Size = New System.Drawing.Size(1321, 688)
             Me.SupplierItemFlowLayout.TabIndex = 11
             '
             'Guna2Panel1
@@ -139,7 +139,7 @@
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
             Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-            Me.ClientSize = New System.Drawing.Size(1321, 878)
+            Me.ClientSize = New System.Drawing.Size(1321, 788)
             Me.Controls.Add(Me.EditPanel)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
             Me.Name = "SupplierItemsView"

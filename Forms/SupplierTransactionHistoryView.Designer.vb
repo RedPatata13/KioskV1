@@ -56,7 +56,7 @@
             '
             Me.PendingRequestLabel.BackColor = System.Drawing.Color.Transparent
             Me.PendingRequestLabel.Font = New System.Drawing.Font("Montserrat", 28.2!, System.Drawing.FontStyle.Bold)
-            Me.PendingRequestLabel.Location = New System.Drawing.Point(21, 28)
+            Me.PendingRequestLabel.Location = New System.Drawing.Point(26, 20)
             Me.PendingRequestLabel.Margin = New System.Windows.Forms.Padding(2)
             Me.PendingRequestLabel.Name = "PendingRequestLabel"
             Me.PendingRequestLabel.Size = New System.Drawing.Size(389, 61)
@@ -156,7 +156,7 @@
             '
             'Guna2Panel5
             '
-            Me.Guna2Panel5.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+            Me.Guna2Panel5.BorderColor = System.Drawing.Color.Transparent
             Me.Guna2Panel5.BorderRadius = 20
             Me.Guna2Panel5.BorderThickness = 1
             Me.Guna2Panel5.Controls.Add(Me.Guna2HtmlLabel2)
@@ -180,7 +180,7 @@
             '
             'Guna2Panel1
             '
-            Me.Guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+            Me.Guna2Panel1.BorderColor = System.Drawing.Color.Transparent
             Me.Guna2Panel1.BorderRadius = 20
             Me.Guna2Panel1.BorderThickness = 1
             Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel1)
@@ -204,7 +204,7 @@
             '
             'Guna2Panel2
             '
-            Me.Guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+            Me.Guna2Panel2.BorderColor = System.Drawing.Color.Transparent
             Me.Guna2Panel2.BorderRadius = 20
             Me.Guna2Panel2.BorderThickness = 1
             Me.Guna2Panel2.Controls.Add(Me.Guna2HtmlLabel3)
@@ -228,7 +228,7 @@
             '
             'Guna2Panel3
             '
-            Me.Guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+            Me.Guna2Panel3.BorderColor = System.Drawing.Color.Transparent
             Me.Guna2Panel3.BorderRadius = 20
             Me.Guna2Panel3.BorderThickness = 1
             Me.Guna2Panel3.Controls.Add(Me.Guna2HtmlLabel4)
@@ -252,7 +252,7 @@
             '
             'Guna2Panel4
             '
-            Me.Guna2Panel4.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+            Me.Guna2Panel4.BorderColor = System.Drawing.Color.Transparent
             Me.Guna2Panel4.BorderRadius = 20
             Me.Guna2Panel4.BorderThickness = 1
             Me.Guna2Panel4.Controls.Add(Me.Guna2HtmlLabel5)
@@ -280,7 +280,7 @@
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
             Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-            Me.ClientSize = New System.Drawing.Size(1321, 878)
+            Me.ClientSize = New System.Drawing.Size(1321, 788)
             Me.Controls.Add(Me.Guna2Panel4)
             Me.Controls.Add(Me.Guna2Panel3)
             Me.Controls.Add(Me.Guna2Panel2)
