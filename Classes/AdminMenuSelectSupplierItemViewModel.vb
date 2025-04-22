@@ -41,7 +41,7 @@ Namespace KioskV0.Classes
         End Sub
         Private Sub ConfirmClick()
             Dim vm = DirectCast(_mediator.GetVM(AdminKeys.AdminEditMenuDetails), AdminEditMenuDetailsViewModel)
-            vm.LoadedBatch = _view.SelectedItem
+            'vm.LoadedBatch = _view.SelectedItem
             vm.SetLoadedBatch()
         End Sub
         Private Sub CancelClick()

@@ -12,6 +12,7 @@ Public Class OrderDetailsRepository
         'Return _dbSet.Include(Function(c) c.Or)
         Return _dbSet.Include(Function(od) od.Order) _
             .Include(Function(od) od.ItemVersion) _
+            .Include(Function(od) od.Item) _
             .AsNoTracking() _
             .ToList()
     End Function

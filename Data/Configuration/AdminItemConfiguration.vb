@@ -37,6 +37,10 @@ Public Class AdminItemConfiguration
             .WithMany() _
             .HasForeignKey(Function(a) a.CategoryId) _
             .WillCascadeOnDelete(False)
+        Me.HasRequired(Function(a) a.SupplierItem) _
+            .WithMany() _
+            .HasForeignKey(Function(a) a.SupplierItemId) _
+            .WillCascadeOnDelete(False)
 
         Me.HasRequired(Function(a) a.Batch) _
             .WithMany(Function(b) b.AdminItems) _

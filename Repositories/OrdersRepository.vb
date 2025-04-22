@@ -9,6 +9,7 @@ Public Class OrdersRepository
     Public Overrides Function GetById(id As String) As OrderPrimal
         Return _dbSet.Include(Function(o) o.OrderItems) _
                      .Include("OrderItems.ItemVersion") _
-                 .FirstOrDefault(Function(o) o.OrderId = id)
+                     .Include("OrderItems.Item") _
+        .FirstOrDefault(Function(o) o.OrderId = id)
     End Function
 End Class

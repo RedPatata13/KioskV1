@@ -14,8 +14,8 @@ Public Class AdminItem
     <Required(ErrorMessage:="Category ID is required.")>
     Public Property CategoryId As String
     Public Property Category As Category
-    'Public Property SupplierItemId As String ' FK
-    'Public Property SupplierItem As SupplierItem
+    Public Property SupplierItemId As String ' FK
+    Public Property SupplierItem As SupplierItem
     <Required(ErrorMessage:="Product ID is required.")>
     Public Property SellingCost As Decimal
     Public Property ImageFilePath As String

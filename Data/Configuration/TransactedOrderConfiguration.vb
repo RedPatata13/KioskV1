@@ -28,6 +28,8 @@ Public Class TransactedOrderConfiguration
 
         Me.Property(Function(s) s.CashPaid) _
             .IsRequired()
+        Me.Property(Function(s) s.EatMode) _
+            .IsOptional()
 
         Me.Property(Function(s) s.Change) _
             .IsRequired()

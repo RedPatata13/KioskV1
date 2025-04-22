@@ -17,5 +17,6 @@
     ReadOnly Property InventoryBatches As IBaseRepository(Of InventoryBatch)
     ReadOnly Property TransactedOrder As IBaseRepository(Of TransactedOrder)
     ReadOnly Property AdminItemVersion As AdminItemVersionRepository
+    ReadOnly Property Deductions As ItemDeductionRepository
     Sub SaveChanges()
 End Interface

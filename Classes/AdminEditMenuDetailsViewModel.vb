@@ -8,13 +8,10 @@ Imports KioskV0.KioskV0.Model
 Namespace KioskV0.Classes
     Public Class AdminEditMenuDetailsViewModel
         Inherits ViewModel(Of Forms.AdminEditMenuDetailsView, AdminKeys)
-        Public Property LoadedBatch As InventoryBatch = Nothing
+        Public Property LoadedBatch As InventoryBatch
         Private Property Loaded As Boolean = False
         Private Property CategoryCache As New Dictionary(Of String, Category)
         Private Property selectedFilePath As String = String.Empty
-        Private Property FoundBatches As New Dictionary(Of String, InventoryBatch)
-        Private Property FoundCategories As New Dictionary(Of String, Category)
-        Private Property FoundSupplier As New Dictionary(Of String, User)
 
         Public Sub New(view As Forms.AdminEditMenuDetailsView, mediator As Mediator(Of AdminKeys))
             MyBase.New(view, mediator)
@@ -57,6 +54,7 @@ Namespace KioskV0.Classes
             _view.DeleteButton.Visible = False
             _view.Label = "Add Menu"
             _view.SaveButtonClick = AddressOf SaveButtonClick
+            selectedFilePath = ""
             LoadedBatch = Nothing
         End Sub
         Protected Friend Overrides Sub SetEvents()
@@ -152,7 +150,7 @@ Namespace KioskV0.Classes
                 model.Category = local_cat_cpy
                 model.CategoryId = local_cat_cpy.CategoryId
                 model.Description = _view.ProductDescription
-                model.ImageFilePath = selectedFilePath
+                If selectedFilePath.Length > 0 Then model.ImageFilePath = selectedFilePath
                 model.IsDisplayedAsCustomerItem = _view.IsCustomerItem
                 model.Batch = LoadedBatch
                 model.BatchId = LoadedBatch.BatchId

@@ -35,13 +35,11 @@ Namespace KioskV0.Classes
 
         Public Sub LoadAsEdit(model As User)
             _mediator.LayoutAction(Sub()
-                                       MessageBox.Show("This does indeed happen")
                                        _mediator.AddAction(Sub() LoadWithDetails(model))
                                        _mediator.AddAction(Sub() _mediator.SwapPage(AdminKeys.AdminAddUser))
                                        _mediator.InvokeAllAction()
                                    End Sub)
             _view.Label = "Edit User"
-
             _view.SaveButtonClick = Sub() UpdateUser(model)
         End Sub
         Private Sub LoadWithDetails(model As User)
@@ -68,7 +66,7 @@ Namespace KioskV0.Classes
             newModel.LastName = _view.LastName
             newModel.Email = _view.Email
             newModel.ContactNumber = _view.ContactNo
-            newModel.Address = "Sa gitna ng kawalan street ng mga enkanto"
+            newModel.Address = _view.Address
             'newModel.CreatedAt = Model.CreatedAt
 
             Return newModel
@@ -78,13 +76,7 @@ Namespace KioskV0.Classes
                 Dim newModel As User = GetInput()
                 newModel.UserId = model.UserId
                 newModel.CreatedAt = model.CreatedAt
-                Dim validationResults As New List(Of ValidationResult)()
-                Dim validationContext As New ValidationContext(newModel, Nothing, Nothing)
 
-                If Not Validator.TryValidateObject(newModel, validationContext, validationResults, True) Then
-                    Dim errorMessages As String = String.Join(Environment.NewLine, validationResults.Select(Function(r) r.ErrorMessage))
-                    Throw New Exception(errorMessages)
-                End If
                 If _view.Password <> _view.ConfirmPassword Then Throw New Exception("Please ensure that field: Password and field: Confirm Password have the same input.")
 
                 Dim user = _mediator.GetUnitOfWork().Users.GetUserByID(newModel.UserId)
@@ -92,20 +84,21 @@ Namespace KioskV0.Classes
                     MessageBox.Show("User does not exist")
                 Else
                     user.Username = newModel.Username
-                    user.Role = newModel.Role
                     user.PasswordHash = newModel.PasswordHash
                     user.Address = newModel.Address
                     user.Email = newModel.Email
                     user.ContactNumber = newModel.ContactNumber
                     user.FirstName = newModel.FirstName
                     user.LastName = newModel.LastName
-
-                    _mediator.UpdateUser(user)
+                    user.Role = user.Role
+                    MessageBox.Show($"{user.Role}")
+                    _mediator.GetUnitOfWork.Users.Update(user)
                     _mediator.GetUnitOfWork().SaveChanges()
                     _mediator.SwapPage(AdminKeys.AdminAccountSettings)
                     'MessageBox.Show("User Updated!")
                 End If
             Catch ex As Exception
+                'MessageBox.Show("{}")
                 MessageBox.Show($"{ex.Message}")
             End Try
 

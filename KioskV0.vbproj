@@ -132,6 +132,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\AdminMenuSelectSupplierItemViewModel.vb" />
+    <Compile Include="Classes\AdminViewDeductionsViewModel.vb" />
     <Compile Include="Classes\CustomerLandingPageViewModel.vb" />
     <Compile Include="Classes\InitialDBSetup.vb" />
     <Compile Include="Classes\StaffOrderListViewModel.vb" />
@@ -190,6 +191,7 @@
     <Compile Include="Data\Configuration\CustomerConfiguration.vb" />
     <Compile Include="Data\Configuration\InventoryBatchConfiguration.vb" />
     <Compile Include="Data\Configuration\InventoryConfiguration.vb" />
+    <Compile Include="Data\Configuration\ItBDeductionConfiguration.vb" />
     <Compile Include="Data\Configuration\JsonConfigReader.vb" />
     <Compile Include="Data\Configuration\OrderConfiguration.vb" />
     <Compile Include="Data\Configuration\OrderDetailsConfiguration.vb" />
@@ -276,6 +278,12 @@
       <DependentUpon>AdminTestPageView.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\AdminTestPageView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminViewDeductionsView.Designer.vb">
+      <DependentUpon>AdminViewDeductionsView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminViewDeductionsView.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\CustomerAddNoteUserControl.Designer.vb">
@@ -588,6 +596,26 @@
       <DependentUpon>202504212313320_AddEditorIdRequired.vb</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202504212313320_AddEditorIdRequired.vb" />
+    <Compile Include="Migrations\202504220007164_DeductionTracking.Designer.vb">
+      <DependentUpon>202504220007164_DeductionTracking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504220007164_DeductionTracking.vb" />
+    <Compile Include="Migrations\202504220023220_Nakalimutanisahehe.Designer.vb">
+      <DependentUpon>202504220023220_Nakalimutanisahehe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504220023220_Nakalimutanisahehe.vb" />
+    <Compile Include="Migrations\202504220404514_AttemptRelocateToSupplierItem.Designer.vb">
+      <DependentUpon>202504220404514_AttemptRelocateToSupplierItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504220404514_AttemptRelocateToSupplierItem.vb" />
+    <Compile Include="Migrations\202504220420312_si.Designer.vb">
+      <DependentUpon>202504220420312_si.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504220420312_si.vb" />
+    <Compile Include="Migrations\202504220824521_TransactedOrderEatMode.Designer.vb">
+      <DependentUpon>202504220824521_TransactedOrderEatMode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504220824521_TransactedOrderEatMode.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\AdminItem.vb" />
     <Compile Include="Models\AdminItemVersion.vb" />
@@ -597,6 +625,7 @@
     <Compile Include="Models\Inventory.vb" />
     <Compile Include="Models\InventoryBatch.vb" />
     <Compile Include="Models\ItemModel.vb" />
+    <Compile Include="Models\ItemToBatchDeduction.vb" />
     <Compile Include="Models\Menu.vb" />
     <Compile Include="Models\MenuModel.vb" />
     <Compile Include="Models\BaseModel.vb" />
@@ -621,6 +650,7 @@
     <Compile Include="Repositories\Contracts\IInventoryBatchRepository.vb" />
     <Compile Include="Repositories\Contracts\ICategoryRepository.vb" />
     <Compile Include="Repositories\Contracts\ICustomerItemRepository.vb" />
+    <Compile Include="Repositories\Contracts\IItemDeductionRepository.vb" />
     <Compile Include="Repositories\Contracts\IMenuRepository.vb" />
     <Compile Include="Repositories\Contracts\IOrderDetailsRepository.vb" />
     <Compile Include="Repositories\Contracts\IOrderRepository.vb" />
@@ -632,6 +662,7 @@
     <Compile Include="Repositories\CustomersRepository.vb" />
     <Compile Include="Repositories\InventoriesRepository.vb" />
     <Compile Include="Repositories\InventoryBatchRepository.vb" />
+    <Compile Include="Repositories\ItemDeductionRepository.vb" />
     <Compile Include="Repositories\OrderDetailsRepository.vb" />
     <Compile Include="Repositories\OrderItemsRepository.vb" />
     <Compile Include="Repositories\OrdersRepository.vb" />
@@ -712,6 +743,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminTestPageView.resx">
       <DependentUpon>AdminTestPageView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminViewDeductionsView.resx">
+      <DependentUpon>AdminViewDeductionsView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CustomerAddNoteUserControl.resx">
       <DependentUpon>CustomerAddNoteUserControl.vb</DependentUpon>
@@ -877,6 +911,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504212313320_AddEditorIdRequired.resx">
       <DependentUpon>202504212313320_AddEditorIdRequired.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504220007164_DeductionTracking.resx">
+      <DependentUpon>202504220007164_DeductionTracking.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504220023220_Nakalimutanisahehe.resx">
+      <DependentUpon>202504220023220_Nakalimutanisahehe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504220404514_AttemptRelocateToSupplierItem.resx">
+      <DependentUpon>202504220404514_AttemptRelocateToSupplierItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504220420312_si.resx">
+      <DependentUpon>202504220420312_si.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504220824521_TransactedOrderEatMode.resx">
+      <DependentUpon>202504220824521_TransactedOrderEatMode.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

@@ -6,7 +6,7 @@
 
     Public Property UserId As String
     Public Property User As User
-
+    Public Property EatMode As String
     Public Property OrderId As String
     Public Property Order As OrderPrimal
 

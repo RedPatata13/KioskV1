@@ -31,8 +31,9 @@
             Me.InventoryDataGrid = New Guna.UI2.WinForms.Guna2DataGridView()
             Me.SupplyID = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.ProductName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.RequestSupplyButton = New Guna.UI2.WinForms.Guna2Button()
             Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+            Me.ViewChangesButton = New Guna.UI2.WinForms.Guna2Button()
+            Me.RequestSupplyButton = New Guna.UI2.WinForms.Guna2Button()
             CType(Me.InventoryDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
@@ -65,7 +66,8 @@
             DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
             Me.InventoryDataGrid.DefaultCellStyle = DataGridViewCellStyle3
             Me.InventoryDataGrid.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.InventoryDataGrid.Location = New System.Drawing.Point(109, 147)
+            Me.InventoryDataGrid.Location = New System.Drawing.Point(16, 112)
+            Me.InventoryDataGrid.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
             Me.InventoryDataGrid.Name = "InventoryDataGrid"
             Me.InventoryDataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -79,7 +81,7 @@
             Me.InventoryDataGrid.RowHeadersVisible = False
             Me.InventoryDataGrid.RowHeadersWidth = 51
             Me.InventoryDataGrid.RowTemplate.Height = 24
-            Me.InventoryDataGrid.Size = New System.Drawing.Size(1545, 839)
+            Me.InventoryDataGrid.Size = New System.Drawing.Size(1056, 682)
             Me.InventoryDataGrid.TabIndex = 4
             Me.InventoryDataGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
             Me.InventoryDataGrid.ThemeStyle.AlternatingRowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -115,6 +117,32 @@
             Me.ProductName.MinimumWidth = 6
             Me.ProductName.Name = "ProductName"
             '
+            'Guna2HtmlLabel1
+            '
+            Me.Guna2HtmlLabel1.AutoSize = False
+            Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
+            Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 28.2!, System.Drawing.FontStyle.Bold)
+            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(16, 16)
+            Me.Guna2HtmlLabel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+            Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
+            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(466, 52)
+            Me.Guna2HtmlLabel1.TabIndex = 9
+            Me.Guna2HtmlLabel1.Text = "Inventory Batches"
+            '
+            'ViewChangesButton
+            '
+            Me.ViewChangesButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.ViewChangesButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.ViewChangesButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.ViewChangesButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.ViewChangesButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+            Me.ViewChangesButton.ForeColor = System.Drawing.Color.White
+            Me.ViewChangesButton.Location = New System.Drawing.Point(1080, 112)
+            Me.ViewChangesButton.Name = "ViewChangesButton"
+            Me.ViewChangesButton.Size = New System.Drawing.Size(180, 45)
+            Me.ViewChangesButton.TabIndex = 10
+            Me.ViewChangesButton.Text = "View Deductions"
+            '
             'RequestSupplyButton
             '
             Me.RequestSupplyButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -132,32 +160,24 @@
             Me.RequestSupplyButton.HoverState.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
             Me.RequestSupplyButton.Image = CType(resources.GetObject("RequestSupplyButton.Image"), System.Drawing.Image)
             Me.RequestSupplyButton.ImageSize = New System.Drawing.Size(40, 40)
-            Me.RequestSupplyButton.Location = New System.Drawing.Point(1599, 66)
+            Me.RequestSupplyButton.Location = New System.Drawing.Point(1216, 32)
+            Me.RequestSupplyButton.Margin = New System.Windows.Forms.Padding(2)
             Me.RequestSupplyButton.Name = "RequestSupplyButton"
-            Me.RequestSupplyButton.Size = New System.Drawing.Size(55, 55)
+            Me.RequestSupplyButton.Size = New System.Drawing.Size(41, 45)
             Me.RequestSupplyButton.TabIndex = 3
-            '
-            'Guna2HtmlLabel1
-            '
-            Me.Guna2HtmlLabel1.AutoSize = False
-            Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 28.2!, System.Drawing.FontStyle.Bold)
-            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(28, 35)
-            Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-            Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(622, 64)
-            Me.Guna2HtmlLabel1.TabIndex = 9
-            Me.Guna2HtmlLabel1.Text = "Inventory"
             '
             'AdminInventoryView
             '
-            Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
-            Me.ClientSize = New System.Drawing.Size(1761, 1080)
+            Me.ClientSize = New System.Drawing.Size(1321, 878)
+            Me.Controls.Add(Me.ViewChangesButton)
             Me.Controls.Add(Me.Guna2HtmlLabel1)
             Me.Controls.Add(Me.InventoryDataGrid)
             Me.Controls.Add(Me.RequestSupplyButton)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+            Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
             Me.Name = "AdminInventoryView"
             Me.Text = "AdminInventory"
             CType(Me.InventoryDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
@@ -170,6 +190,7 @@
         Friend WithEvents SupplyID As DataGridViewTextBoxColumn
         Friend WithEvents ProductName As DataGridViewTextBoxColumn
         Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
+        Friend WithEvents ViewChangesButton As Guna.UI2.WinForms.Guna2Button
     End Class
 
 End Namespace

@@ -221,8 +221,11 @@ Namespace KioskV0.Classes
                               ResetFields()
                           End Sub
             vm.LoadWithDetails(total, pending, model)
+            Deduct()
         End Sub
+        Private Sub Deduct()
 
+        End Sub
         Private Function PayButtonClick(total As Decimal) As TransactedOrder
             'ResolveChanges()
             Dim context = DirectCast(_mediator.GetUnitOfWork, UnitOfWork)._context
@@ -276,12 +279,18 @@ Namespace KioskV0.Classes
             For Each item In _currOrd.OrderItems
                 base.Add(item.OrderDetailsId, item)
             Next
+            Dim batch_map As New Dictionary(Of String, InventoryBatch)
+            Dim batchList = _mediator.GetUnitOfWork.InventoryBatches.GetAll()
 
+            For Each bl In batchList
+                batch_map.Add(bl.BatchId, bl)
+            Next
             'Resolve quantity changes
             For Each item In Cart
                 If base.ContainsKey(item.Value.OrderDetailsId) Then
                     base(item.Key).Quantity = item.Value.Quantity ' item is present in the original order which means it's quantity is to be updated
                     context.OrderDetails.Attach(item.Value)
+
                 Else
                     base.Add(item.Key, item.Value) ' item was only added during the session
                     context.Categories.Attach(item.Value.ItemVersion.Category)
@@ -290,6 +299,30 @@ Namespace KioskV0.Classes
                     _mediator.GetUnitOfWork.OrderDetails.Add(item.Value)
 
                 End If
+
+                'batch is already deducted
+                Dim existing_deduction = _mediator.GetUnitOfWork.Deductions.GetDeductor(item.Value.VersionId, item.Value.Item.BatchId)
+                Dim deduction As New ItemToBatchDeduction With {
+                    .ItB_Id = "DDCT_" & Guid.NewGuid().ToString().Substring(0, 8),
+                    .AmountDeducted = item.Value.Quantity,
+                    .BaseItemId = item.Value.Item.Id,
+                    .OrderId = _currOrd.OrderId,
+                    .BatchId = item.Value.Item.BatchId,
+                    .VersionId = item.Value.VersionId
+                }
+
+                If existing_deduction IsNot Nothing Then
+                    existing_deduction.AmountDeducted += item.Value.Quantity
+                    _mediator.GetUnitOfWork.Deductions.Update(existing_deduction)
+
+                Else
+                    _mediator.GetUnitOfWork.Deductions.Add(deduction)
+                End If
+
+                batch_map(item.Value.Item.BatchId).RemainingQuantity -= item.Value.Quantity
+
+                'reduce stock in db
+                _mediator.GetUnitOfWork.InventoryBatches.Update(batch_map(item.Value.Item.BatchId))
             Next
 
             Dim toBeDeleted As New Queue(Of OrderDetail)

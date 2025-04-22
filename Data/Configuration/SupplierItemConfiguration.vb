@@ -24,7 +24,8 @@ Public Class SupplierItemConfiguration
         Me.Property(Function(si) si.SupplierId) _
         .HasMaxLength(50) _
         .IsRequired()
-
+        Me.Property(Function(si) si.UnitCost) _
+            .IsRequired()
         ' Relationships
         ' SupplierItem to Supplier (Many-to-One)
         Me.HasRequired(Function(si) si.Supplier) _
