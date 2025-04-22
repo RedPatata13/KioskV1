@@ -1,4 +1,6 @@
-﻿Namespace KioskV0.Classes
+﻿Imports KioskV0.KioskV0.Forms
+
+Namespace KioskV0.Classes
     Public Module PageDir
         Public Function GetAdminPages(mediator As Mediator(Of AdminKeys)) As Dictionary(Of AdminKeys, IProjectable)
             Return New Dictionary(Of AdminKeys, IProjectable) From
@@ -30,7 +32,8 @@
                 {StaffKeys.StaffPos, New Classes.StaffPosViewModel(New Forms.StaffPosView(), mediator)},
                 {StaffKeys.StaffManagerAuthorization, New Classes.StaffManagerAuthorizationViewModel(New Forms.StaffManagerAuthorizationView(), mediator)},
                 {StaffKeys.StaffCreditSales, New Classes.StaffCreditSalesViewModel(New Forms.StaffCreditSalesView(), mediator)},
-                {StaffKeys.StaffOrderList, New Classes.StaffOrderListViewModel(New Forms.CustomerMenuView(), mediator)}
+                {StaffKeys.StaffOrderList, New Classes.StaffOrderListViewModel(New Forms.CustomerMenuView(), mediator)},
+                {StaffKeys.StaffPendingOrders, New Classes.StaffPendingOrdersViewModel(New Forms.StaffPendingOrdersView(), mediator)}
             }
         End Function
         Public Function GetCustomerPages(mediator As Mediator(Of CustomerKeys)) As Dictionary(Of CustomerKeys, IProjectable)

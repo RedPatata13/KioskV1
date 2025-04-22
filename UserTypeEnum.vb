@@ -46,6 +46,7 @@
         StaffPayment
         StaffSideBar
         StaffOrderList
+        StaffPendingOrders
     End Enum
 
     Public Enum SupplierKeys

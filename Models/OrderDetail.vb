@@ -7,4 +7,5 @@
     Public Property VersionId As String
     Public Property ItemVersion As AdminItemVersion
     Public Property Quantity As Integer
+
 End Class

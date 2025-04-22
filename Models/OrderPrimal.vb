@@ -7,6 +7,8 @@ Public Class OrderPrimal
 
     'Public Property UserId As String
     Public Property CreatedAt As DateTime
+    Public Property IsComplete As Boolean
+    Public Property IsPaid As Boolean
 
     Public Overridable Property OrderItems As ICollection(Of OrderDetail) ' Order has many OrderItems
 
