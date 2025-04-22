@@ -23,6 +23,7 @@
         'Do not modify it using the code editor.
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SupplierItemUserControl))
             Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
             Me.ItemDesc = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.ItemId = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -66,20 +67,20 @@
             'ItemId
             '
             Me.ItemId.BackColor = System.Drawing.Color.Transparent
-            Me.ItemId.Font = New System.Drawing.Font("Poppins", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ItemId.Location = New System.Drawing.Point(65, 63)
+            Me.ItemId.Font = New System.Drawing.Font("Poppins Light", 14.0!)
+            Me.ItemId.Location = New System.Drawing.Point(65, 64)
             Me.ItemId.Name = "ItemId"
-            Me.ItemId.Size = New System.Drawing.Size(23, 39)
+            Me.ItemId.Size = New System.Drawing.Size(20, 36)
             Me.ItemId.TabIndex = 35
             Me.ItemId.Text = "ID"
             '
             'ItemName
             '
             Me.ItemName.BackColor = System.Drawing.Color.Transparent
-            Me.ItemName.Font = New System.Drawing.Font("Poppins", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.ItemName.Location = New System.Drawing.Point(107, 18)
+            Me.ItemName.Font = New System.Drawing.Font("Poppins Light", 14.0!)
+            Me.ItemName.Location = New System.Drawing.Point(107, 20)
             Me.ItemName.Name = "ItemName"
-            Me.ItemName.Size = New System.Drawing.Size(67, 39)
+            Me.ItemName.Size = New System.Drawing.Size(60, 36)
             Me.ItemName.TabIndex = 34
             Me.ItemName.Text = "Name"
             '
@@ -105,25 +106,29 @@
             '
             'EditButton
             '
-            Me.EditButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.EditButton.BorderColor = System.Drawing.Color.Silver
             Me.EditButton.BorderRadius = 15
             Me.EditButton.BorderThickness = 1
             Me.EditButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
             Me.EditButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
             Me.EditButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
             Me.EditButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-            Me.EditButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.EditButton.Font = New System.Drawing.Font("Poppins", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.EditButton.ForeColor = System.Drawing.Color.White
+            Me.EditButton.FillColor = System.Drawing.Color.White
+            Me.EditButton.Font = New System.Drawing.Font("Poppins", 9.0!)
+            Me.EditButton.ForeColor = System.Drawing.Color.DimGray
             Me.EditButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.EditButton.HoverState.FillColor = System.Drawing.Color.White
             Me.EditButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.EditButton.Image = CType(resources.GetObject("EditButton.Image"), System.Drawing.Image)
+            Me.EditButton.ImageOffset = New System.Drawing.Point(-3, 0)
+            Me.EditButton.ImageSize = New System.Drawing.Size(12, 12)
             Me.EditButton.Location = New System.Drawing.Point(253, 224)
             Me.EditButton.Margin = New System.Windows.Forms.Padding(2)
             Me.EditButton.Name = "EditButton"
             Me.EditButton.Size = New System.Drawing.Size(112, 32)
             Me.EditButton.TabIndex = 30
             Me.EditButton.Text = "Edit"
+            Me.EditButton.TextOffset = New System.Drawing.Point(0, 1)
             '
             'RequestIdLabel
             '

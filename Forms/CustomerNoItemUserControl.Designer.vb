@@ -52,10 +52,10 @@
             Me.OrderMoreButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.OrderMoreButton.HoverState.FillColor = System.Drawing.Color.White
             Me.OrderMoreButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.OrderMoreButton.Location = New System.Drawing.Point(333, 268)
+            Me.OrderMoreButton.Location = New System.Drawing.Point(352, 247)
             Me.OrderMoreButton.Margin = New System.Windows.Forms.Padding(2)
             Me.OrderMoreButton.Name = "OrderMoreButton"
-            Me.OrderMoreButton.Size = New System.Drawing.Size(318, 50)
+            Me.OrderMoreButton.Size = New System.Drawing.Size(282, 50)
             Me.OrderMoreButton.TabIndex = 22
             Me.OrderMoreButton.Text = "Order more"
             '
