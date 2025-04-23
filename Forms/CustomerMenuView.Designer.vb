@@ -49,8 +49,8 @@
             'CustomerMainPanel
             '
             Me.CustomerMainPanel.Controls.Add(Me.ViewOrderPanel)
-            Me.CustomerMainPanel.Controls.Add(Me.MenuFlowLayout)
             Me.CustomerMainPanel.Controls.Add(Me.CategoryPanel)
+            Me.CustomerMainPanel.Controls.Add(Me.MenuFlowLayout)
             Me.CustomerMainPanel.Dock = System.Windows.Forms.DockStyle.Fill
             Me.CustomerMainPanel.Location = New System.Drawing.Point(0, 0)
             Me.CustomerMainPanel.Name = "CustomerMainPanel"
@@ -138,11 +138,11 @@
             '
             'MenuFlowLayout
             '
-            Me.MenuFlowLayout.BackColor = System.Drawing.Color.DarkGray
+            Me.MenuFlowLayout.BackColor = System.Drawing.Color.White
             Me.MenuFlowLayout.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.MenuFlowLayout.Location = New System.Drawing.Point(219, 0)
+            Me.MenuFlowLayout.Location = New System.Drawing.Point(0, 0)
             Me.MenuFlowLayout.Name = "MenuFlowLayout"
-            Me.MenuFlowLayout.Size = New System.Drawing.Size(1167, 788)
+            Me.MenuFlowLayout.Size = New System.Drawing.Size(1386, 788)
             Me.MenuFlowLayout.TabIndex = 1
             '
             'CategoryPanel
