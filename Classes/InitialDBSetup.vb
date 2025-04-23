@@ -1,5 +1,6 @@
 ﻿Imports System.Windows.Controls.Primitives
 Imports System.Data.Entity
+Imports KioskV0.KioskV0.Classes
 Module InitialDBSetup
     Public Sub AddMockItemVersions()
         Using context As New KioskDbContext()
@@ -97,55 +98,55 @@ Module InitialDBSetup
             End Using
         End Using
     End Sub
-    Public Sub AddMockAdminItems()
-        Using context As New KioskDbContext()
-            Using UnitOfWork As New UnitOfWork(context)
-                ' Get required references
-                Dim categories = UnitOfWork.Categories.GetAll().ToList()
-                Dim supplierItems = UnitOfWork.SupplierItems.GetAll().ToList()
-                Dim batches = UnitOfWork.InventoryBatches.GetAll().ToList()
+    'Public Sub AddMockAdminItems()
+    '    Using context As New KioskDbContext()
+    '        Using UnitOfWork As New UnitOfWork(context)
+    '            ' Get required references
+    '            Dim categories = UnitOfWork.Categories.GetAll().ToList()
+    '            Dim supplierItems = UnitOfWork.SupplierItems.GetAll().ToList()
+    '            Dim batches = UnitOfWork.InventoryBatches.GetAll().ToList()
 
-                Dim adminItems As New List(Of AdminItem)
-                Dim rnd As New Random()
+    '            Dim adminItems As New List(Of AdminItem)
+    '            Dim rnd As New Random()
 
-                ' Create 2-3 admin items per supplier item
-                For Each si In supplierItems
-                    Dim itemCount = rnd.Next(2, 4)
-                    Dim itemBatches = batches.Where(Function(b) b.SupplierItemId = si.Id).ToList()
-                    context.SupplierItems.Attach(si)
-                    For i = 1 To itemCount
-                        ' Select random category
-                        Dim category = categories(rnd.Next(0, categories.Count))
-                        context.Categories.Attach(category)
-                        ' Create admin item
-                        Dim adminItem = New AdminItem With {
-                        .Id = "ADMIN_" & Guid.NewGuid().ToString().Substring(0, 8),
-                        .Name = $"{si.Name} Product {i}",
-                        .Description = $"Customer-facing version of {si.Name} ({i})",
-                        .CategoryId = category.CategoryId,
-                        .Category = category,
-                        .IsDisplayedAsCustomerItem = (i = 1), ' First item per supplier shown to customers
-                        .SellingCost = Math.Round(si.Batches.Average(Function(b) b.UnitCost) * 1.5, 2) ' 50% markup
-                    }
+    '            ' Create 2-3 admin items per supplier item
+    '            For Each si In supplierItems
+    '                Dim itemCount = rnd.Next(2, 4)
+    '                Dim itemBatches = batches.Where(Function(b) b.SupplierItemId = si.Id).ToList()
+    '                context.SupplierItems.Attach(si)
+    '                For i = 1 To itemCount
+    '                    ' Select random category
+    '                    Dim category = categories(rnd.Next(0, categories.Count))
+    '                    context.Categories.Attach(category)
+    '                    ' Create admin item
+    '                    Dim adminItem = New AdminItem With {
+    '                    .Id = "ADMIN_" & Guid.NewGuid().ToString().Substring(0, 8),
+    '                    .Name = $"{si.Name} Product {i}",
+    '                    .Description = $"Customer-facing version of {si.Name} ({i})",
+    '                    .CategoryId = category.CategoryId,
+    '                    .Category = category,
+    '                    .IsDisplayedAsCustomerItem = (i = 1), ' First item per supplier shown to customers
+    '                    .SellingCost = Math.Round(si.Batches.Average(Function(b) b.UnitCost) * 1.5, 2) ' 50% markup
+    '                }
 
-                        ' Assign newest active batch
-                        Dim availableBatch = itemBatches.Where(Function(b) b.IsActive AndAlso Not b.IsDeprecated) _
-                        .OrderByDescending(Function(b) b.ReceivedDate) _
-                        .FirstOrDefault()
+    '                    ' Assign newest active batch
+    '                    Dim availableBatch = itemBatches.Where(Function(b) b.IsActive AndAlso Not b.IsDeprecated) _
+    '                    .OrderByDescending(Function(b) b.ReceivedDate) _
+    '                    .FirstOrDefault()
 
-                        If availableBatch IsNot Nothing Then
-                            adminItem.BatchId = availableBatch.BatchId
-                        End If
+    '                    If availableBatch IsNot Nothing Then
+    '                        adminItem.BatchId = availableBatch.BatchId
+    '                    End If
 
-                        adminItems.Add(adminItem)
-                    Next
-                Next
+    '                    adminItems.Add(adminItem)
+    '                Next
+    '            Next
 
-                UnitOfWork.AdminItems.AddRange(adminItems)
-                UnitOfWork.SaveChanges()
-            End Using
-        End Using
-    End Sub
+    '            UnitOfWork.AdminItems.AddRange(adminItems)
+    '            UnitOfWork.SaveChanges()
+    '        End Using
+    '    End Using
+    'End Sub
 
     Public Sub AddMockSupplierItems()
         Using context As New KioskDbContext()
@@ -233,6 +234,8 @@ Module InitialDBSetup
             End Using
         End Using
     End Sub
+
+
     Private Function GenerateUsers() As List(Of User)
         Dim users As New List(Of User)
         Dim roles As String() = {"Admin", "Staff", "Supplier"}
@@ -279,4 +282,156 @@ Module InitialDBSetup
 
         Return users
     End Function
+
+
+
+
+
+
+
+
+
+
+
+    Public Sub AddMockInventoryBatches()
+        Using context As New KioskDbContext()
+            Using unitOfWork As New UnitOfWork(context)
+                Dim rnd As New Random()
+                Dim supplierItems = unitOfWork.SupplierItems.GetAll().ToList()
+                Dim inventoryBatches As New List(Of InventoryBatch)()
+
+                For Each item In supplierItems
+                    ' No need to attach item or item.Supplier if fetched from same context
+
+                    For i = 1 To 2
+                        Dim quantityReceived = rnd.Next(20, 100)
+                        Dim unitCost = Math.Round(5 + rnd.NextDouble() * 20, 2)
+                        Dim receivedDate = DateTime.Now.AddDays(-rnd.Next(1, 30))
+                        Dim expiryDate = receivedDate.AddDays(rnd.Next(30, 90))
+
+                        inventoryBatches.Add(New InventoryBatch With {
+                            .BatchId = "BAT_" & Guid.NewGuid().ToString("N").Substring(0, 10),
+                            .SupplierId = item.SupplierId,
+                            .SupplierItemId = item.Id,
+                            .QuantityReceived = quantityReceived,
+                            .RemainingQuantity = quantityReceived,
+                            .UnitCost = unitCost,
+                            .ReceivedDate = receivedDate,
+                            .ExpiryDate = expiryDate,
+                            .BatchNumber = $"BN-{item.Id.Substring(0, 4)}-{i}",
+                            .IsActive = True,
+                            .IsDeprecated = False
+                        })
+
+                    Next
+                Next
+
+                unitOfWork.InventoryBatches.AddRange(inventoryBatches)
+                unitOfWork.SaveChanges()
+            End Using
+        End Using
+    End Sub
+    Public Sub AddMockAdminItems()
+        Using context As New KioskDbContext()
+            Using unitOfWork As New UnitOfWork(context)
+
+                Dim supplierItems = unitOfWork.SupplierItems.GetAll().ToList()
+                Dim categories = unitOfWork.Categories.GetAll().ToList()
+                Dim batches = unitOfWork.InventoryBatches.GetAll().Where(Function(b) b.IsActive).ToList()
+
+                Dim adminItems As New List(Of AdminItem)
+                Dim rand As New Random()
+
+                For Each item In supplierItems
+                    ' Pick a category randomly
+                    Dim category = categories(rand.Next(categories.Count))
+
+                    ' Get latest active batch for this supplier item
+                    Dim relatedBatches = batches.Where(Function(b) b.SupplierItemId = item.Id).OrderByDescending(Function(b) b.ReceivedDate).ToList()
+                    If relatedBatches.Any() Then
+                        Dim batch = relatedBatches.First()
+
+                        ' Create an admin item linked to batch, category, supplier item
+                        adminItems.Add(New AdminItem With {
+                        .Id = "ADM_" & Guid.NewGuid().ToString("N").Substring(0, 10),
+                        .Name = item.Name & " Retail",
+                        .Description = "Retail version of " & item.Name,
+                        .CategoryId = category.CategoryId,
+                        .SupplierItemId = item.Id,
+                        .SellingCost = batch.UnitCost * 1.2D,
+                        .ImageFilePath = "images/default.png", ' adjust if needed
+                        .IsDisplayedAsCustomerItem = rand.Next(2) = 0,
+                        .BatchId = batch.BatchId
+                    })
+                    End If
+                Next
+
+                unitOfWork.AdminItems.AddRange(adminItems)
+                unitOfWork.SaveChanges()
+            End Using
+        End Using
+    End Sub
+    Public Sub AddMockOrderItems()
+        Using context As New KioskDbContext()
+            Using UnitOfWork As New UnitOfWork(context)
+                Dim orderItems As New List(Of OrderItem)
+
+                ' Get an existing order or create one if necessary
+                Dim order As OrderPrimal = UnitOfWork.Orders.GetAll().FirstOrDefault()
+                If order Is Nothing Then
+                    order = New OrderPrimal With {
+                    .OrderId = "O_" & Guid.NewGuid().ToString("N").Substring(0, 10),
+                    .TotalPrice = 100D,
+                    .CreatedAt = DateTime.Now,
+                    .OrderMode = "InStore"
+                }
+                    UnitOfWork.Orders.Add(order)
+                    UnitOfWork.SaveChanges() ' Save to generate the OrderId
+                End If
+
+                ' Get some Menu items to link to the OrderItems
+                Dim menuItems As List(Of Menu) = UnitOfWork.Menus.GetAll().Take(3).ToList()
+
+                For Each menuItem In menuItems
+                    Dim orderItem As New OrderItem With {
+                    .OrderId = order.OrderId,
+                    .MenuId = menuItem.MenuId,
+                    .TotalAmount = menuItem.Selling * 2, ' Assuming two items per order
+                    .Quantity = 2,
+                    .Price = menuItem.Selling,
+                    .Menu = menuItem,
+                    .Order = order
+                }
+
+                    orderItems.Add(orderItem)
+                Next
+
+                ' Add the order items to the UnitOfWork and save changes
+                UnitOfWork.OrderItems.AddRange(orderItems)
+                UnitOfWork.SaveChanges()
+            End Using
+        End Using
+    End Sub
+    Public Function GetOrderDetailInfoList() As List(Of OrderDetailInfo)
+        Using context As New KioskDbContext()
+            Using UnitOfWork As New UnitOfWork(context)
+                ' Filter the OrderDetails to only include those where the Order is paid
+                Dim result = (From detail In UnitOfWork.OrderDetails.GetAll()
+                              Where detail.Item IsNot Nothing AndAlso
+                                    detail.Order IsNot Nothing AndAlso
+                                    detail.Order.IsPaid = True ' Only include paid orders
+                              Select New OrderDetailInfo With {
+                                  .OrderId = detail.OrderId,
+                                  .IsPaid = detail.Order.IsPaid,
+                                  .IsComplete = detail.Order.IsComplete,
+                                  .ItemName = detail.Item.Name
+                              }).ToList()
+
+                Return result
+            End Using
+        End Using
+    End Function
+
+
+
 End Module
