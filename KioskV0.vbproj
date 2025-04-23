@@ -508,26 +508,27 @@
     <Compile Include="Forms\SupplyRequestUserControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="KioskDatabaseV1DataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>KioskDatabaseV1DataSet.xsd</DependentUpon>
+    <Compile Include="Migrations\202504230411046_UpdateDb.Designer.vb">
+      <DependentUpon>202504230411046_UpdateDb.vb</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202504221646129_InitialCreate.Designer.vb">
-      <DependentUpon>202504221646129_InitialCreate.vb</DependentUpon>
+    <Compile Include="Migrations\202504230411046_UpdateDb.vb" />
+    <Compile Include="Migrations\202504230418044_AddNewColumnToOrderPrimals.Designer.vb">
+      <DependentUpon>202504230418044_AddNewColumnToOrderPrimals.vb</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202504221646129_InitialCreate.vb" />
+    <Compile Include="Migrations\202504230418044_AddNewColumnToOrderPrimals.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\AdminItem.vb" />
     <Compile Include="Models\Category.vb" />
     <Compile Include="Models\Customer.vb" />
     <Compile Include="Models\CustomerItem.vb" />
+    <Compile Include="Models\GroupedOrderDetailInfo.vb" />
     <Compile Include="Models\Inventory.vb" />
     <Compile Include="Models\InventoryBatch.vb" />
     <Compile Include="Models\ItemModel.vb" />
     <Compile Include="Models\Menu.vb" />
     <Compile Include="Models\MenuModel.vb" />
     <Compile Include="Models\BaseModel.vb" />
+    <Compile Include="Models\OrderDetailInfo.vb" />
     <Compile Include="Models\OrderPrimal.vb" />
     <Compile Include="Models\OrderDetail.vb" />
     <Compile Include="Models\OrderItem.vb" />
@@ -743,8 +744,11 @@
     <EmbeddedResource Include="Forms\SupplyRequestUserControl.resx">
       <DependentUpon>SupplyRequestUserControl.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504221646129_InitialCreate.resx">
-      <DependentUpon>202504221646129_InitialCreate.vb</DependentUpon>
+    <EmbeddedResource Include="Migrations\202504230411046_UpdateDb.resx">
+      <DependentUpon>202504230411046_UpdateDb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504230418044_AddNewColumnToOrderPrimals.resx">
+      <DependentUpon>202504230418044_AddNewColumnToOrderPrimals.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -756,17 +760,6 @@
   <ItemGroup>
     <None Include="appsettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="KioskDatabaseV1DataSet.xsc">
-      <DependentUpon>KioskDatabaseV1DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="KioskDatabaseV1DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>KioskDatabaseV1DataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="KioskDatabaseV1DataSet.xss">
-      <DependentUpon>KioskDatabaseV1DataSet.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
