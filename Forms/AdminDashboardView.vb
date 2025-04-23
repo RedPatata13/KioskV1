@@ -133,5 +133,7 @@ Namespace KioskV0.Forms
                 .LabelFormatter = Function(value) value.ToString("C", New Globalization.CultureInfo("fil-PH"))
             })
         End Sub
+
+
     End Class
 End Namespace

@@ -13,6 +13,7 @@ Namespace KioskV0.Classes
             _view.POSButtonClick = AddressOf StaffPosButtonClick
             _view.CreditSalesButtonClick = AddressOf CreditSalesButtonClick
             _view.LogoutButtonClick = AddressOf LogoutButton
+            _view.PendingOrdersButtonClick = AddressOf PendingOrdersButtonClick
         End Sub
 
         Private Sub StaffPosButtonClick()
@@ -25,6 +26,9 @@ Namespace KioskV0.Classes
 
         Private Sub LogoutButton()
             _mediator.Logout()
+        End Sub
+        Private Sub PendingOrdersButtonClick()
+            _mediator.SwapPage(StaffKeys.StaffPendingOrders)
         End Sub
     End Class
 

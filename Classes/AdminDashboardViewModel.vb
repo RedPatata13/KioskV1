@@ -27,11 +27,13 @@ Namespace KioskV0.Classes
         End Sub
         Private Sub SetMinAndMaxDateForAllData()
             Dim dateRange = GetSalesDateRange()
-            _view.Order = GetSalesData(dateRange.Item1, dateRange.Item2)
-            _view.TotalSales = GetTotalSales(dateRange.Item1, dateRange.Item2)
-            _view.NetProfit = GetNetProfit(dateRange.Item1, dateRange.Item2)
-            _view.NumberOfCustomers = GetNumberCustomers(dateRange.Item1, dateRange.Item2)
+            Dim startDate = dateRange.Item1.GetValueOrDefault(DateTime.MinValue) ' Default to DateTime.MinValue
+            Dim endDate = dateRange.Item2.GetValueOrDefault(DateTime.MinValue)
 
+            _view.Order = GetSalesData(startDate, endDate)
+            _view.TotalSales = GetTotalSales(startDate, endDate)
+            _view.NetProfit = GetNetProfit(startDate.ToString(), endDate.ToString())
+            _view.NumberOfCustomers = GetNumberCustomers(startDate, endDate)
         End Sub
         '*****************************************************************Services
         'VALIDATION SERVICE
@@ -45,28 +47,28 @@ Namespace KioskV0.Classes
         End Function
         'ADMIN SERVICE
         Public Function GetAllOrders() As List(Of OrderPrimal)
-            Return _mediator.GetUnitOfWork.Orders.GetAll().ToList()
+            Dim orders = _mediator.GetUnitOfWork.Orders.GetAll()
+            Return If(orders?.ToList(), New List(Of OrderPrimal)())
         End Function
         Public Function GetTotalSales(startDate As DateTime, endDate As DateTime) As String
-            Dim totalSales As Decimal = GetAllOrders().
-               Where(Function(order) order.CreatedAt.Date >= DateTime.Parse(startDate).Date And order.CreatedAt.Date <= DateTime.Parse(endDate).Date).
-               Sum(Function(order) order.TotalPrice)
+            Dim orders = GetAllOrders()
+            Dim totalSales As Decimal = If(orders?.
+                                   Where(Function(order) order.CreatedAt.Date >= startDate.Date AndAlso order.CreatedAt.Date <= endDate.Date).
+                                   Sum(Function(order) order.TotalPrice), 0D)
             Return "₱" & totalSales.ToString("F2")
         End Function
 
         Public Function GetNumberCustomers(startDate As DateTime, endDate As DateTime) As Integer
-            Return GetAllOrders().Where(Function(order) order.CreatedAt.Date >= startDate.Date AndAlso order.CreatedAt.Date <= endDate.Date).Count()
+            Dim orders = GetAllOrders()
+            Return If(orders?.
+              Where(Function(order) order.CreatedAt.Date >= startDate.Date AndAlso order.CreatedAt.Date <= endDate.Date).Count(), 0)
         End Function
 
         Public Function GetNetProfit(startDate As String, endDate As String) As String
-            Dim totalSales As String = GetTotalSales(startDate, endDate)
-            Dim totalCost As String = GetTotalCost(startDate, endDate)
+            Dim totalSales As Decimal = If(Decimal.TryParse(GetTotalSales(startDate, endDate).Replace("₱", "").Trim(), totalSales), totalSales, 0D)
+            Dim totalCost As Decimal = If(Decimal.TryParse(GetTotalCost(startDate, endDate).Replace("₱", "").Trim(), totalCost), totalCost, 0D)
 
-            Dim totalSalesValue As Decimal = Decimal.Parse(totalSales.Replace("₱", "").Trim())
-            Dim totalCostValue As Decimal = Decimal.Parse(totalCost.Replace("₱", "").Trim())
-
-            Dim netProfit As Decimal = totalSalesValue - totalCostValue
-
+            Dim netProfit As Decimal = totalSales - totalCost
             Return "₱" & netProfit.ToString("F2")
         End Function
 
@@ -82,19 +84,14 @@ Namespace KioskV0.Classes
 
         Public Function GetSalesData(startDate As DateTime, endDate As DateTime) As List(Of OrderPrimal)
             Dim allSales = GetAllOrders()
-
             endDate = endDate.Date.AddDays(1).AddMilliseconds(-1)
-
-            If allSales IsNot Nothing Then
-                Return allSales.Where(Function(s) s.CreatedAt >= startDate AndAlso s.CreatedAt <= endDate).ToList()
-            Else
-                Return New List(Of OrderPrimal)()
-            End If
+            Return If(allSales?.Where(Function(s) s.CreatedAt >= startDate AndAlso s.CreatedAt <= endDate).ToList(), New List(Of OrderPrimal)())
         End Function
 
         Public Function GetSalesDateRange() As (DateTime?, DateTime?)
-            Dim minDate = GetAllOrders().Min(Function(o) CType(o.CreatedAt, DateTime?))
-            Dim maxDate = GetAllOrders().Max(Function(o) CType(o.CreatedAt, DateTime?))
+            Dim orders = GetAllOrders()
+            Dim minDate = If(orders?.Min(Function(o) CType(o.CreatedAt, DateTime?)), DateTime.MinValue)
+            Dim maxDate = If(orders?.Max(Function(o) CType(o.CreatedAt, DateTime?)), DateTime.MinValue)
             Return (minDate, maxDate)
         End Function
         Public Function PreviousDateRange(_startDate As DateTime, _endDate As DateTime) As (DateTime?, DateTime?)
