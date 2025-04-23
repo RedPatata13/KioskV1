@@ -9,6 +9,7 @@ Namespace KioskV0.Classes
         Private Property AllMenuItems As List(Of AdminItem)
         Private Property CategoryList As New Dictionary(Of String, Category)
         Private _cart As New List(Of OrderModel)
+        Private Property CategoryIcons As New Dictionary(Of String, (Normal As Image, Hover As Image))
         Private Property UserCart As New Dictionary(Of String, OrderDetail)
         'Private Property UserCart As New Dictionary(Of OrderItem,
         Private Property TotalItems As Integer = 0
@@ -65,23 +66,40 @@ Namespace KioskV0.Classes
             OnStartOverClicked()
         End Sub
         Private Sub LoadCategories()
+            CategoryIcons("Pizza") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\pizza_icon.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\pizza_white.png"))
+            CategoryIcons("Rice Meal") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\rice.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\rice_white.png"))
+            CategoryIcons("Veg Salad") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\salad.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\salad_white.png"))
+            CategoryIcons("Sandwich") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\sandwich.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\sandwich_white.png"))
+            CategoryIcons("Beverages") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\soda.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\soda_white.png"))
+            CategoryIcons("Pasta") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\noodles.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\noodles_white.png"))
+            CategoryIcons("All") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\cutlery.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\cutlery_white.png"))
+            CategoryIcons("Desserts") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\dessert.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\dessert_white.png"))
+            CategoryIcons("Sides") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\taco.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\taco_white.png"))
+            CategoryIcons("Burger") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\icons8-hamburger-96.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\icons8-hamburger-100.png"))
+
+
             _view.CategoryPanel.Controls.Clear()
             Dim locationY = 12
-            Dim image As Image = _view.AllCategButton.Image
 
-            Dim allButton = CategoryButton("All", New Point(12, locationY), Image)
-            'allButton.Text = "All"
-            'allButton.Location = New Point(0, locationY)
+            Dim allNormal As Image = CategoryIcons("All").Normal
+            Dim allHover As Image = CategoryIcons("All").Hover
+            Dim allButton = CategoryButton("All", New Point(12, locationY), allNormal, allHover)
             locationY += allButton.Height + 10
             AddHandler allButton.Click, Sub() LoadMenuItems("All")
             _view.CategoryPanel.Controls.Add(allButton)
 
 
             For Each ctgr In CategoryList
-                Dim button = CategoryButton(ctgr.Value.CategoryName, New Point(12, locationY), image)
-                'button.Text = ctgr.Value.CategoryName
-                'button.Click = Sub() LoadMenuItems(button.Text)
-                'button.Location = New Point(0, locationY)
+                Dim categoryName = ctgr.Value.CategoryName
+                Dim imageToUse As Image = allNormal
+                Dim hoverImageToUse As Image = allHover
+
+                If CategoryIcons.ContainsKey(categoryName) Then
+                    imageToUse = CategoryIcons(categoryName).Normal
+                    hoverImageToUse = CategoryIcons(categoryName).Hover
+                End If
+
+                Dim button = CategoryButton(categoryName, New Point(12, locationY), imageToUse, hoverImageToUse)
                 locationY += button.Height + 10
                 AddHandler button.Click, Sub() LoadMenuItems(button.Text)
                 _view.CategoryPanel.Controls.Add(button)
@@ -197,7 +215,8 @@ Namespace KioskV0.Classes
             _mediator.SwapPage(CustomerKeys.CustomerOrderList)
             'End If
         End Sub
-        Public Function CategoryButton(text As String, location As Point, image As Image) As Guna.UI2.WinForms.Guna2Button
+        Public Function CategoryButton(text As String, location As Point, image As Image, hoverImage As Image) As Guna.UI2.WinForms.Guna2Button
+
             Dim btn As New Guna.UI2.WinForms.Guna2Button With {
                 .Text = text,
                 .Size = New Size(196, 72),
@@ -208,8 +227,10 @@ Namespace KioskV0.Classes
                 .BorderRadius = 15,
                 .BorderThickness = 1,
                 .Image = image,
-                .ImageSize = New Size(60, 60),
-                .TextOffset = New Point(0, 5),
+                .ImageSize = New Size(40, 40),
+                .ImageAlign = HorizontalAlignment.Left,
+                .ImageOffset = New Point(0, 0),
+                .TextOffset = New Point(5, 5),
                 .Location = location,
                 .Name = $"CategoryButton_{text}"
             }
@@ -226,6 +247,12 @@ Namespace KioskV0.Classes
                 .FillColor = Color.FromArgb(169, 169, 169)
                 .ForeColor = Color.FromArgb(141, 141, 141)
             End With
+
+            If hoverImage IsNot Nothing Then
+                Dim originalImage = image
+                AddHandler btn.MouseEnter, Sub() btn.Image = hoverImage
+                AddHandler btn.MouseLeave, Sub() btn.Image = originalImage
+            End If
 
             Return btn
         End Function
