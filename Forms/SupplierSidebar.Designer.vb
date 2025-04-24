@@ -27,6 +27,8 @@ Partial Class SupplierSidebar
         Me.LogOutButton = New Guna.UI2.WinForms.Guna2Button()
         Me.InventoryButton = New Guna.UI2.WinForms.Guna2Button()
         Me.DashboardButton = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         Me.SuspendLayout()
         '
         'Guna2HtmlToolTip1
@@ -75,7 +77,7 @@ Partial Class SupplierSidebar
         Me.InventoryButton.HoverState.Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
         Me.InventoryButton.Image = CType(resources.GetObject("InventoryButton.Image"), System.Drawing.Image)
         Me.InventoryButton.ImageSize = New System.Drawing.Size(70, 70)
-        Me.InventoryButton.Location = New System.Drawing.Point(16, 120)
+        Me.InventoryButton.Location = New System.Drawing.Point(16, 112)
         Me.InventoryButton.Margin = New System.Windows.Forms.Padding(2)
         Me.InventoryButton.Name = "InventoryButton"
         Me.InventoryButton.Size = New System.Drawing.Size(88, 81)
@@ -106,12 +108,62 @@ Partial Class SupplierSidebar
         Me.DashboardButton.TabIndex = 11
         Me.Guna2HtmlToolTip1.SetToolTip(Me.DashboardButton, "Dashboard")
         '
+        'Guna2Button1
+        '
+        Me.Guna2Button1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Guna2Button1.BorderRadius = 15
+        Me.Guna2Button1.BorderThickness = 1
+        Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button1.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Guna2Button1.HoverState.BorderColor = System.Drawing.Color.White
+        Me.Guna2Button1.HoverState.FillColor = System.Drawing.Color.White
+        Me.Guna2Button1.HoverState.Image = CType(resources.GetObject("resource.Image2"), System.Drawing.Image)
+        Me.Guna2Button1.Image = CType(resources.GetObject("Guna2Button1.Image"), System.Drawing.Image)
+        Me.Guna2Button1.ImageSize = New System.Drawing.Size(70, 70)
+        Me.Guna2Button1.Location = New System.Drawing.Point(16, 192)
+        Me.Guna2Button1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Guna2Button1.Name = "Guna2Button1"
+        Me.Guna2Button1.Size = New System.Drawing.Size(88, 81)
+        Me.Guna2Button1.TabIndex = 18
+        Me.Guna2HtmlToolTip1.SetToolTip(Me.Guna2Button1, "Inventory")
+        '
+        'Guna2Button2
+        '
+        Me.Guna2Button2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Guna2Button2.BorderRadius = 15
+        Me.Guna2Button2.BorderThickness = 1
+        Me.Guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button2.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2Button2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Guna2Button2.HoverState.BorderColor = System.Drawing.Color.White
+        Me.Guna2Button2.HoverState.FillColor = System.Drawing.Color.White
+        Me.Guna2Button2.HoverState.Image = CType(resources.GetObject("resource.Image3"), System.Drawing.Image)
+        Me.Guna2Button2.Image = CType(resources.GetObject("Guna2Button2.Image"), System.Drawing.Image)
+        Me.Guna2Button2.ImageSize = New System.Drawing.Size(70, 70)
+        Me.Guna2Button2.Location = New System.Drawing.Point(16, 272)
+        Me.Guna2Button2.Margin = New System.Windows.Forms.Padding(2)
+        Me.Guna2Button2.Name = "Guna2Button2"
+        Me.Guna2Button2.Size = New System.Drawing.Size(88, 81)
+        Me.Guna2Button2.TabIndex = 19
+        Me.Guna2HtmlToolTip1.SetToolTip(Me.Guna2Button2, "Inventory")
+        '
         'SupplierSidebar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(119, 878)
+        Me.Controls.Add(Me.Guna2Button2)
+        Me.Controls.Add(Me.Guna2Button1)
         Me.Controls.Add(Me.LogOutButton)
         Me.Controls.Add(Me.InventoryButton)
         Me.Controls.Add(Me.DashboardButton)
@@ -126,4 +178,6 @@ Partial Class SupplierSidebar
     Friend WithEvents Guna2HtmlToolTip1 As Guna.UI2.WinForms.Guna2HtmlToolTip
     Friend WithEvents InventoryButton As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents DashboardButton As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
 End Class

@@ -16,6 +16,7 @@ Public Class SupplierSidebarViewModel
         _view.LogoutClick = Sub() _mediator.Logout()
         _view.DashboardClick = Sub() _mediator.SwapPage(SupplierKeys.SupplierDashboard)
         _view.SupplierItems = Sub() _mediator.SwapPage(SupplierKeys.SupplierItems)
+        _view.BatchRequestsClick = Sub() _mediator.SwapPage(SupplierKeys.SupplierAdminBatchReq)
     End Sub
     Public Overrides Sub Project(projector As Form)
         MyBase.Project(projector)

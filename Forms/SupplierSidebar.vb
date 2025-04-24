@@ -2,6 +2,7 @@
     Public Property DashboardClick As Action
     Public Property SupplierItems As Action
     Public Property LogoutClick As Action
+    Public Property BatchRequestsClick As Action
 
     Private Sub DashboardButton_Click(sender As Object, e As EventArgs) Handles DashboardButton.Click
         DashboardClick?.Invoke()
