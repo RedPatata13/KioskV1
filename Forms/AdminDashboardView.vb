@@ -34,36 +34,6 @@ Namespace KioskV0.Forms
                 NetProfitLabel.Text = value
             End Set
         End Property
-        Private Property _previousSales As String
-        Public Property PreviousSales As String
-            Get
-                Return _previousSales
-            End Get
-            Set(value As String)
-                _previousSales = value
-                PreviousSalesLabel.Text = value
-            End Set
-        End Property
-        Private Property _growth As String
-        Public Property Growth As String
-            Get
-                Return _growth
-            End Get
-            Set(value As String)
-                _growth = value
-                GrowthLabel.Text = value
-            End Set
-        End Property
-        Private Property _growthPercentage As String
-        Public Property GrowthPercentage As String
-            Get
-                Return _growthPercentage
-            End Get
-            Set(value As String)
-                _growthPercentage = value
-                GrowthPercentageLabel.Text = value
-            End Set
-        End Property
         Private Property _numberOfCustomers As String
         Public Property NumberOfCustomers As String
             Get

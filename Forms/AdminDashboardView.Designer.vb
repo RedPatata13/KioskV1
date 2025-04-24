@@ -27,26 +27,12 @@
             Me.Guna2ShadowPanel1 = New Guna.UI2.WinForms.Guna2ShadowPanel()
             Me.TotalSalesLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-            Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
             Me.Guna2ShadowPanel2 = New Guna.UI2.WinForms.Guna2ShadowPanel()
             Me.NumberOfCustomersLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-            Me.Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
             Me.Guna2ShadowPanel3 = New Guna.UI2.WinForms.Guna2ShadowPanel()
             Me.NetProfitLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-            Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
-            Me.Guna2ShadowPanel4 = New Guna.UI2.WinForms.Guna2ShadowPanel()
-            Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
-            Me.Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-            Me.GrowthPercentageLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
-            Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
-            Me.Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-            Me.GrowthLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
-            Me.Guna2HtmlLabel6 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-            Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
-            Me.Guna2HtmlLabel7 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-            Me.PreviousSalesLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.Guna2ShadowPanel5 = New Guna.UI2.WinForms.Guna2ShadowPanel()
             Me.SalesLineGraph = New LiveCharts.WinForms.CartesianChart()
             Me.Guna2HtmlLabel13 = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -57,17 +43,16 @@
             Me.FilterButton = New Guna.UI2.WinForms.Guna2TileButton()
             Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
             Me.StartDateTextBox = New Guna.UI2.WinForms.Guna2TextBox()
+            Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
+            Me.Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
+            Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
             Me.Guna2ShadowPanel1.SuspendLayout()
-            CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.Guna2ShadowPanel2.SuspendLayout()
-            CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.Guna2ShadowPanel3.SuspendLayout()
-            CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.Guna2ShadowPanel4.SuspendLayout()
-            Me.Guna2Panel5.SuspendLayout()
-            Me.Guna2Panel4.SuspendLayout()
-            Me.Guna2Panel3.SuspendLayout()
             Me.Guna2ShadowPanel5.SuspendLayout()
+            CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'Guna2ShadowPanel1
@@ -113,18 +98,6 @@
             Me.Guna2HtmlLabel1.TabIndex = 1
             Me.Guna2HtmlLabel1.Text = "Total Sales"
             '
-            'Guna2PictureBox1
-            '
-            Me.Guna2PictureBox1.Image = Global.KioskV0.My.Resources.Resources.increase
-            Me.Guna2PictureBox1.ImageRotate = 0!
-            Me.Guna2PictureBox1.Location = New System.Drawing.Point(45, 39)
-            Me.Guna2PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-            Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-            Me.Guna2PictureBox1.Size = New System.Drawing.Size(69, 70)
-            Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-            Me.Guna2PictureBox1.TabIndex = 0
-            Me.Guna2PictureBox1.TabStop = False
-            '
             'Guna2ShadowPanel2
             '
             Me.Guna2ShadowPanel2.BackColor = System.Drawing.Color.Transparent
@@ -166,18 +139,6 @@
             Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(535, 58)
             Me.Guna2HtmlLabel3.TabIndex = 3
             Me.Guna2HtmlLabel3.Text = "Total No. of Customer"
-            '
-            'Guna2PictureBox3
-            '
-            Me.Guna2PictureBox3.Image = Global.KioskV0.My.Resources.Resources.customer
-            Me.Guna2PictureBox3.ImageRotate = 0!
-            Me.Guna2PictureBox3.Location = New System.Drawing.Point(45, 39)
-            Me.Guna2PictureBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-            Me.Guna2PictureBox3.Name = "Guna2PictureBox3"
-            Me.Guna2PictureBox3.Size = New System.Drawing.Size(69, 70)
-            Me.Guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-            Me.Guna2PictureBox3.TabIndex = 2
-            Me.Guna2PictureBox3.TabStop = False
             '
             'Guna2ShadowPanel3
             '
@@ -221,186 +182,19 @@
             Me.Guna2HtmlLabel2.TabIndex = 2
             Me.Guna2HtmlLabel2.Text = "Net Profit"
             '
-            'Guna2PictureBox2
-            '
-            Me.Guna2PictureBox2.Image = Global.KioskV0.My.Resources.Resources.money_bag
-            Me.Guna2PictureBox2.ImageRotate = 0!
-            Me.Guna2PictureBox2.Location = New System.Drawing.Point(49, 39)
-            Me.Guna2PictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-            Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
-            Me.Guna2PictureBox2.Size = New System.Drawing.Size(69, 70)
-            Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-            Me.Guna2PictureBox2.TabIndex = 1
-            Me.Guna2PictureBox2.TabStop = False
-            '
-            'Guna2ShadowPanel4
-            '
-            Me.Guna2ShadowPanel4.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2ShadowPanel4.Controls.Add(Me.Guna2Panel5)
-            Me.Guna2ShadowPanel4.Controls.Add(Me.Guna2Panel4)
-            Me.Guna2ShadowPanel4.Controls.Add(Me.Guna2HtmlLabel6)
-            Me.Guna2ShadowPanel4.Controls.Add(Me.Guna2Panel3)
-            Me.Guna2ShadowPanel4.FillColor = System.Drawing.Color.White
-            Me.Guna2ShadowPanel4.Location = New System.Drawing.Point(27, 385)
-            Me.Guna2ShadowPanel4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-            Me.Guna2ShadowPanel4.Name = "Guna2ShadowPanel4"
-            Me.Guna2ShadowPanel4.Radius = 20
-            Me.Guna2ShadowPanel4.ShadowColor = System.Drawing.Color.Black
-            Me.Guna2ShadowPanel4.ShadowShift = 10
-            Me.Guna2ShadowPanel4.Size = New System.Drawing.Size(600, 562)
-            Me.Guna2ShadowPanel4.TabIndex = 1
-            '
-            'Guna2Panel5
-            '
-            Me.Guna2Panel5.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-            Me.Guna2Panel5.BorderRadius = 30
-            Me.Guna2Panel5.BorderThickness = 1
-            Me.Guna2Panel5.Controls.Add(Me.Guna2HtmlLabel8)
-            Me.Guna2Panel5.Controls.Add(Me.GrowthPercentageLabel)
-            Me.Guna2Panel5.Location = New System.Drawing.Point(45, 406)
-            Me.Guna2Panel5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-            Me.Guna2Panel5.Name = "Guna2Panel5"
-            Me.Guna2Panel5.Size = New System.Drawing.Size(500, 114)
-            Me.Guna2Panel5.TabIndex = 6
-            '
-            'Guna2HtmlLabel8
-            '
-            Me.Guna2HtmlLabel8.AutoSize = False
-            Me.Guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel8.Dock = System.Windows.Forms.DockStyle.Top
-            Me.Guna2HtmlLabel8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2HtmlLabel8.ForeColor = System.Drawing.Color.DimGray
-            Me.Guna2HtmlLabel8.Location = New System.Drawing.Point(0, 0)
-            Me.Guna2HtmlLabel8.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-            Me.Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
-            Me.Guna2HtmlLabel8.Size = New System.Drawing.Size(500, 40)
-            Me.Guna2HtmlLabel8.TabIndex = 10
-            Me.Guna2HtmlLabel8.Text = "Growth Percentage"
-            Me.Guna2HtmlLabel8.TextAlignment = System.Drawing.ContentAlignment.TopCenter
-            '
-            'GrowthPercentageLabel
-            '
-            Me.GrowthPercentageLabel.AutoSize = False
-            Me.GrowthPercentageLabel.BackColor = System.Drawing.Color.Transparent
-            Me.GrowthPercentageLabel.Dock = System.Windows.Forms.DockStyle.Bottom
-            Me.GrowthPercentageLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GrowthPercentageLabel.Location = New System.Drawing.Point(0, 45)
-            Me.GrowthPercentageLabel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-            Me.GrowthPercentageLabel.Name = "GrowthPercentageLabel"
-            Me.GrowthPercentageLabel.Size = New System.Drawing.Size(500, 69)
-            Me.GrowthPercentageLabel.TabIndex = 9
-            Me.GrowthPercentageLabel.Text = "% 0.00"
-            Me.GrowthPercentageLabel.TextAlignment = System.Drawing.ContentAlignment.TopCenter
-            '
-            'Guna2Panel4
-            '
-            Me.Guna2Panel4.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-            Me.Guna2Panel4.BorderRadius = 30
-            Me.Guna2Panel4.BorderThickness = 1
-            Me.Guna2Panel4.Controls.Add(Me.Guna2HtmlLabel4)
-            Me.Guna2Panel4.Controls.Add(Me.GrowthLabel)
-            Me.Guna2Panel4.Location = New System.Drawing.Point(45, 272)
-            Me.Guna2Panel4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-            Me.Guna2Panel4.Name = "Guna2Panel4"
-            Me.Guna2Panel4.Size = New System.Drawing.Size(500, 114)
-            Me.Guna2Panel4.TabIndex = 6
-            '
-            'Guna2HtmlLabel4
-            '
-            Me.Guna2HtmlLabel4.AutoSize = False
-            Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel4.Dock = System.Windows.Forms.DockStyle.Top
-            Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2HtmlLabel4.ForeColor = System.Drawing.Color.DimGray
-            Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(0, 0)
-            Me.Guna2HtmlLabel4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-            Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
-            Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(500, 40)
-            Me.Guna2HtmlLabel4.TabIndex = 9
-            Me.Guna2HtmlLabel4.Text = "Growth"
-            Me.Guna2HtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.TopCenter
-            '
-            'GrowthLabel
-            '
-            Me.GrowthLabel.AutoSize = False
-            Me.GrowthLabel.BackColor = System.Drawing.Color.Transparent
-            Me.GrowthLabel.Dock = System.Windows.Forms.DockStyle.Bottom
-            Me.GrowthLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.GrowthLabel.Location = New System.Drawing.Point(0, 45)
-            Me.GrowthLabel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-            Me.GrowthLabel.Name = "GrowthLabel"
-            Me.GrowthLabel.Size = New System.Drawing.Size(500, 69)
-            Me.GrowthLabel.TabIndex = 8
-            Me.GrowthLabel.Text = "₱ 0"
-            Me.GrowthLabel.TextAlignment = System.Drawing.ContentAlignment.TopCenter
-            '
-            'Guna2HtmlLabel6
-            '
-            Me.Guna2HtmlLabel6.AutoSize = False
-            Me.Guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel6.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!)
-            Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(57, 57)
-            Me.Guna2HtmlLabel6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-            Me.Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
-            Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(489, 65)
-            Me.Guna2HtmlLabel6.TabIndex = 5
-            Me.Guna2HtmlLabel6.Text = "Report Graph"
-            '
-            'Guna2Panel3
-            '
-            Me.Guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-            Me.Guna2Panel3.BorderRadius = 30
-            Me.Guna2Panel3.BorderThickness = 1
-            Me.Guna2Panel3.Controls.Add(Me.Guna2HtmlLabel7)
-            Me.Guna2Panel3.Controls.Add(Me.PreviousSalesLabel)
-            Me.Guna2Panel3.Location = New System.Drawing.Point(45, 140)
-            Me.Guna2Panel3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-            Me.Guna2Panel3.Name = "Guna2Panel3"
-            Me.Guna2Panel3.Size = New System.Drawing.Size(500, 114)
-            Me.Guna2Panel3.TabIndex = 5
-            '
-            'Guna2HtmlLabel7
-            '
-            Me.Guna2HtmlLabel7.AutoSize = False
-            Me.Guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel7.Dock = System.Windows.Forms.DockStyle.Top
-            Me.Guna2HtmlLabel7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.Guna2HtmlLabel7.ForeColor = System.Drawing.Color.DimGray
-            Me.Guna2HtmlLabel7.Location = New System.Drawing.Point(0, 0)
-            Me.Guna2HtmlLabel7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-            Me.Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
-            Me.Guna2HtmlLabel7.Size = New System.Drawing.Size(500, 40)
-            Me.Guna2HtmlLabel7.TabIndex = 6
-            Me.Guna2HtmlLabel7.Text = "Amount"
-            Me.Guna2HtmlLabel7.TextAlignment = System.Drawing.ContentAlignment.TopCenter
-            '
-            'PreviousSalesLabel
-            '
-            Me.PreviousSalesLabel.AutoSize = False
-            Me.PreviousSalesLabel.BackColor = System.Drawing.Color.Transparent
-            Me.PreviousSalesLabel.Dock = System.Windows.Forms.DockStyle.Bottom
-            Me.PreviousSalesLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.PreviousSalesLabel.Location = New System.Drawing.Point(0, 45)
-            Me.PreviousSalesLabel.Margin = New System.Windows.Forms.Padding(3, 3, 3, 2)
-            Me.PreviousSalesLabel.Name = "PreviousSalesLabel"
-            Me.PreviousSalesLabel.Size = New System.Drawing.Size(500, 69)
-            Me.PreviousSalesLabel.TabIndex = 7
-            Me.PreviousSalesLabel.Text = "₱ 0.00"
-            Me.PreviousSalesLabel.TextAlignment = System.Drawing.ContentAlignment.TopCenter
-            '
             'Guna2ShadowPanel5
             '
             Me.Guna2ShadowPanel5.BackColor = System.Drawing.Color.Transparent
             Me.Guna2ShadowPanel5.Controls.Add(Me.SalesLineGraph)
             Me.Guna2ShadowPanel5.Controls.Add(Me.Guna2HtmlLabel13)
             Me.Guna2ShadowPanel5.FillColor = System.Drawing.Color.White
-            Me.Guna2ShadowPanel5.Location = New System.Drawing.Point(643, 385)
+            Me.Guna2ShadowPanel5.Location = New System.Drawing.Point(33, 385)
             Me.Guna2ShadowPanel5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.Guna2ShadowPanel5.Name = "Guna2ShadowPanel5"
             Me.Guna2ShadowPanel5.Radius = 20
             Me.Guna2ShadowPanel5.ShadowColor = System.Drawing.Color.Black
             Me.Guna2ShadowPanel5.ShadowShift = 10
-            Me.Guna2ShadowPanel5.Size = New System.Drawing.Size(1215, 562)
+            Me.Guna2ShadowPanel5.Size = New System.Drawing.Size(1825, 562)
             Me.Guna2ShadowPanel5.TabIndex = 2
             '
             'SalesLineGraph
@@ -408,7 +202,7 @@
             Me.SalesLineGraph.Location = New System.Drawing.Point(40, 98)
             Me.SalesLineGraph.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.SalesLineGraph.Name = "SalesLineGraph"
-            Me.SalesLineGraph.Size = New System.Drawing.Size(1141, 418)
+            Me.SalesLineGraph.Size = New System.Drawing.Size(1738, 418)
             Me.SalesLineGraph.TabIndex = 8
             Me.SalesLineGraph.Text = "CartesianChart1"
             '
@@ -421,13 +215,14 @@
             Me.Guna2HtmlLabel13.Location = New System.Drawing.Point(0, 0)
             Me.Guna2HtmlLabel13.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.Guna2HtmlLabel13.Name = "Guna2HtmlLabel13"
-            Me.Guna2HtmlLabel13.Size = New System.Drawing.Size(1215, 94)
+            Me.Guna2HtmlLabel13.Size = New System.Drawing.Size(1825, 94)
             Me.Guna2HtmlLabel13.TabIndex = 7
             Me.Guna2HtmlLabel13.Text = "Sales Trend"
             Me.Guna2HtmlLabel13.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
             '
             'Guna2HtmlLabel16
             '
+            Me.Guna2HtmlLabel16.AutoSize = False
             Me.Guna2HtmlLabel16.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel16.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.Guna2HtmlLabel16.ForeColor = System.Drawing.Color.DimGray
@@ -435,10 +230,10 @@
             Me.Guna2HtmlLabel16.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.Guna2HtmlLabel16.MinimumSize = New System.Drawing.Size(220, 39)
             Me.Guna2HtmlLabel16.Name = "Guna2HtmlLabel16"
-            Me.Guna2HtmlLabel16.Size = New System.Drawing.Size(220, 40)
+            Me.Guna2HtmlLabel16.Size = New System.Drawing.Size(240, 40)
             Me.Guna2HtmlLabel16.TabIndex = 8
             Me.Guna2HtmlLabel16.Text = "Date Period:"
-            Me.Guna2HtmlLabel16.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+            Me.Guna2HtmlLabel16.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft
             '
             'StartingDateDateTimePicker
             '
@@ -559,6 +354,42 @@
             Me.StartDateTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             Me.StartDateTextBox.TextOffset = New System.Drawing.Point(-3, 0)
             '
+            'Guna2PictureBox2
+            '
+            Me.Guna2PictureBox2.Image = Global.KioskV0.My.Resources.Resources.money_bag
+            Me.Guna2PictureBox2.ImageRotate = 0!
+            Me.Guna2PictureBox2.Location = New System.Drawing.Point(49, 39)
+            Me.Guna2PictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+            Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
+            Me.Guna2PictureBox2.Size = New System.Drawing.Size(69, 70)
+            Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+            Me.Guna2PictureBox2.TabIndex = 1
+            Me.Guna2PictureBox2.TabStop = False
+            '
+            'Guna2PictureBox3
+            '
+            Me.Guna2PictureBox3.Image = Global.KioskV0.My.Resources.Resources.customer
+            Me.Guna2PictureBox3.ImageRotate = 0!
+            Me.Guna2PictureBox3.Location = New System.Drawing.Point(45, 39)
+            Me.Guna2PictureBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+            Me.Guna2PictureBox3.Name = "Guna2PictureBox3"
+            Me.Guna2PictureBox3.Size = New System.Drawing.Size(69, 70)
+            Me.Guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+            Me.Guna2PictureBox3.TabIndex = 2
+            Me.Guna2PictureBox3.TabStop = False
+            '
+            'Guna2PictureBox1
+            '
+            Me.Guna2PictureBox1.Image = Global.KioskV0.My.Resources.Resources.increase
+            Me.Guna2PictureBox1.ImageRotate = 0!
+            Me.Guna2PictureBox1.Location = New System.Drawing.Point(45, 39)
+            Me.Guna2PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+            Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+            Me.Guna2PictureBox1.Size = New System.Drawing.Size(69, 70)
+            Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+            Me.Guna2PictureBox1.TabIndex = 0
+            Me.Guna2PictureBox1.TabStop = False
+            '
             'AdminDashboardView
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -574,7 +405,6 @@
             Me.Controls.Add(Me.Guna2HtmlLabel16)
             Me.Controls.Add(Me.StartingDateDateTimePicker)
             Me.Controls.Add(Me.Guna2ShadowPanel5)
-            Me.Controls.Add(Me.Guna2ShadowPanel4)
             Me.Controls.Add(Me.Guna2ShadowPanel3)
             Me.Controls.Add(Me.Guna2ShadowPanel2)
             Me.Controls.Add(Me.Guna2ShadowPanel1)
@@ -585,16 +415,12 @@
             Me.Text = "AdminDashboard"
             Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
             Me.Guna2ShadowPanel1.ResumeLayout(False)
-            CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.Guna2ShadowPanel2.ResumeLayout(False)
-            CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
             Me.Guna2ShadowPanel3.ResumeLayout(False)
-            CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.Guna2ShadowPanel4.ResumeLayout(False)
-            Me.Guna2Panel5.ResumeLayout(False)
-            Me.Guna2Panel4.ResumeLayout(False)
-            Me.Guna2Panel3.ResumeLayout(False)
             Me.Guna2ShadowPanel5.ResumeLayout(False)
+            CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -603,7 +429,6 @@
         Friend WithEvents Guna2ShadowPanel1 As Guna.UI2.WinForms.Guna2ShadowPanel
         Friend WithEvents Guna2ShadowPanel2 As Guna.UI2.WinForms.Guna2ShadowPanel
         Friend WithEvents Guna2ShadowPanel3 As Guna.UI2.WinForms.Guna2ShadowPanel
-        Friend WithEvents Guna2ShadowPanel4 As Guna.UI2.WinForms.Guna2ShadowPanel
         Friend WithEvents Guna2ShadowPanel5 As Guna.UI2.WinForms.Guna2ShadowPanel
         Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
         Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
@@ -612,13 +437,6 @@
         Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents TotalSalesLabel As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
-        Friend WithEvents Guna2HtmlLabel6 As Guna.UI2.WinForms.Guna2HtmlLabel
-        Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
-        Friend WithEvents Guna2Panel5 As Guna.UI2.WinForms.Guna2Panel
-        Friend WithEvents Guna2Panel4 As Guna.UI2.WinForms.Guna2Panel
-        Friend WithEvents GrowthPercentageLabel As Guna.UI2.WinForms.Guna2HtmlLabel
-        Friend WithEvents PreviousSalesLabel As Guna.UI2.WinForms.Guna2HtmlLabel
-        Friend WithEvents Guna2HtmlLabel7 As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents Guna2HtmlLabel13 As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents NumberOfCustomersLabel As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents NetProfitLabel As Guna.UI2.WinForms.Guna2HtmlLabel
@@ -630,8 +448,5 @@
         Friend WithEvents Guna2HtmlLabel17 As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
         Friend WithEvents FilterButton As Guna.UI2.WinForms.Guna2TileButton
-        Friend WithEvents GrowthLabel As Guna.UI2.WinForms.Guna2HtmlLabel
-        Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
-        Friend WithEvents Guna2HtmlLabel8 As Guna.UI2.WinForms.Guna2HtmlLabel
     End Class
 End Namespace
