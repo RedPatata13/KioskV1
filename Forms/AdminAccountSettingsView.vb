@@ -1,4 +1,6 @@
-﻿Namespace KioskV0.Forms
+﻿Imports System.ComponentModel.DataAnnotations
+
+Namespace KioskV0.Forms
     Public Class AdminAccountSettingsView
         Public Property AddAccountClick As Action
         Public Property EditUserClick As Action
@@ -10,6 +12,7 @@
             End Get
             Set(value As BindingSource)
                 _dgvSource = value
+                SetupDataGridViewColumns()
                 AccountsDataGridView.DataSource = _dgvSource
             End Set
         End Property
@@ -24,6 +27,33 @@
             End Get
         End Property
 
+        Private Sub SetupDataGridViewColumns()
+            AccountsDataGridView.AutoGenerateColumns = False
+            AccountsDataGridView.Columns.Clear()
+
+            Dim props = GetType(User).GetProperties()
+            For Each prop In props
+                ' Skip UserId from being added as a column
+                If prop.Name = "UserId" OrElse prop.Name = "CreatedAt" OrElse prop.Name = "PasswordHash" Then
+                    Continue For
+                End If
+
+                Dim displayAttr = prop.GetCustomAttributes(GetType(DisplayAttribute), False).FirstOrDefault()
+                Dim headerText As String = If(displayAttr IsNot Nothing,
+                                              DirectCast(displayAttr, DisplayAttribute).Name,
+                                              prop.Name)
+
+                Dim col As New DataGridViewTextBoxColumn() With {
+                    .DataPropertyName = prop.Name,
+                    .HeaderText = headerText,
+                    .Name = prop.Name,
+                    .AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                }
+
+                AccountsDataGridView.Columns.Add(col)
+            Next
+
+        End Sub
 
         Private Sub AddAccountButton_Click(sender As Object, e As EventArgs) Handles AddAccountButton.Click
             AddAccountClick?.Invoke()

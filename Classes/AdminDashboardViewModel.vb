@@ -74,7 +74,7 @@ Namespace KioskV0.Classes
 
         Public Function GetTotalCost(startDate As String, endDate As String) As String
             Dim totalCost As Decimal = _mediator.GetUnitOfWork.InventoryBatches.GetAll() _
-        .Where(Function(st) st.IsActive = 1 AndAlso
+        .Where(Function(st) st.IsActive = "True" AndAlso
                            st.ReceivedDate.Date >= DateTime.Parse(startDate).Date AndAlso
                            st.ReceivedDate.Date <= DateTime.Parse(endDate).Date) _
         .Sum(Function(st) st.UnitCost)
