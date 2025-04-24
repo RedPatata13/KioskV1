@@ -1,3 +1,5 @@
-﻿Public Class SupplierAdminBatchReqView
+﻿Namespace KioskV0.Forms
+    Public Class SupplierAdminBatchReqView
 
-End Class
+    End Class
+End Namespace
