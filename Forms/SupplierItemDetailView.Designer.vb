@@ -40,7 +40,7 @@ Partial Class SupplierItemDetailView
         '
         Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 28.2!, System.Drawing.FontStyle.Bold)
-        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(8, 8)
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(22, 8)
         Me.Guna2HtmlLabel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(224, 61)
@@ -53,7 +53,7 @@ Partial Class SupplierItemDetailView
         Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
         Me.Guna2HtmlLabel2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(16, 88)
+        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(30, 88)
         Me.Guna2HtmlLabel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
         Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(291, 49)
@@ -73,7 +73,7 @@ Partial Class SupplierItemDetailView
         Me.ItemIDField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ItemIDField.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ItemIDField.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ItemIDField.Location = New System.Drawing.Point(16, 141)
+        Me.ItemIDField.Location = New System.Drawing.Point(30, 141)
         Me.ItemIDField.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.ItemIDField.Name = "ItemIDField"
         Me.ItemIDField.PlaceholderText = "Ex.: ""Hamburger"""
@@ -87,7 +87,7 @@ Partial Class SupplierItemDetailView
         Me.ItemNameLabel.BackColor = System.Drawing.Color.Transparent
         Me.ItemNameLabel.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
         Me.ItemNameLabel.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.ItemNameLabel.Location = New System.Drawing.Point(16, 232)
+        Me.ItemNameLabel.Location = New System.Drawing.Point(30, 232)
         Me.ItemNameLabel.Margin = New System.Windows.Forms.Padding(2)
         Me.ItemNameLabel.Name = "ItemNameLabel"
         Me.ItemNameLabel.Size = New System.Drawing.Size(291, 49)
@@ -107,7 +107,7 @@ Partial Class SupplierItemDetailView
         Me.ItemNameField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ItemNameField.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ItemNameField.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ItemNameField.Location = New System.Drawing.Point(16, 285)
+        Me.ItemNameField.Location = New System.Drawing.Point(30, 285)
         Me.ItemNameField.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.ItemNameField.Name = "ItemNameField"
         Me.ItemNameField.PlaceholderText = "Ex.: ""Hamburger"""
@@ -121,7 +121,7 @@ Partial Class SupplierItemDetailView
         Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
         Me.Guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(16, 368)
+        Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(30, 367)
         Me.Guna2HtmlLabel4.Margin = New System.Windows.Forms.Padding(2)
         Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
         Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(291, 49)
@@ -141,7 +141,7 @@ Partial Class SupplierItemDetailView
         Me.DescriptionField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DescriptionField.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.DescriptionField.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DescriptionField.Location = New System.Drawing.Point(16, 421)
+        Me.DescriptionField.Location = New System.Drawing.Point(30, 421)
         Me.DescriptionField.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.DescriptionField.Name = "DescriptionField"
         Me.DescriptionField.PlaceholderText = "Item supply for ""Medium juicy burger"""
@@ -155,7 +155,7 @@ Partial Class SupplierItemDetailView
         Me.Guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel5.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
         Me.Guna2HtmlLabel5.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(16, 528)
+        Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(30, 528)
         Me.Guna2HtmlLabel5.Margin = New System.Windows.Forms.Padding(2)
         Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
         Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(291, 49)
@@ -175,7 +175,7 @@ Partial Class SupplierItemDetailView
         Me.UnitCostField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.UnitCostField.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.UnitCostField.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.UnitCostField.Location = New System.Drawing.Point(16, 581)
+        Me.UnitCostField.Location = New System.Drawing.Point(30, 581)
         Me.UnitCostField.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.UnitCostField.Name = "UnitCostField"
         Me.UnitCostField.PlaceholderText = "Ex.: 9.99 PHP"
@@ -198,7 +198,7 @@ Partial Class SupplierItemDetailView
         Me.CancelButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
         Me.CancelButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer))
         Me.CancelButton.HoverState.ForeColor = System.Drawing.Color.White
-        Me.CancelButton.Location = New System.Drawing.Point(232, 696)
+        Me.CancelButton.Location = New System.Drawing.Point(246, 696)
         Me.CancelButton.Margin = New System.Windows.Forms.Padding(2)
         Me.CancelButton.Name = "CancelButton"
         Me.CancelButton.Size = New System.Drawing.Size(189, 51)
@@ -220,7 +220,7 @@ Partial Class SupplierItemDetailView
         Me.ConfirmButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.ConfirmButton.HoverState.FillColor = System.Drawing.Color.White
         Me.ConfirmButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ConfirmButton.Location = New System.Drawing.Point(8, 696)
+        Me.ConfirmButton.Location = New System.Drawing.Point(22, 696)
         Me.ConfirmButton.Margin = New System.Windows.Forms.Padding(2)
         Me.ConfirmButton.Name = "ConfirmButton"
         Me.ConfirmButton.Size = New System.Drawing.Size(189, 51)
@@ -229,13 +229,20 @@ Partial Class SupplierItemDetailView
         '
         'CopyIdButton
         '
+        Me.CopyIdButton.BorderColor = System.Drawing.Color.White
+        Me.CopyIdButton.BorderRadius = 15
+        Me.CopyIdButton.BorderThickness = 1
         Me.CopyIdButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.CopyIdButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.CopyIdButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.CopyIdButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.CopyIdButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.CopyIdButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.CopyIdButton.Font = New System.Drawing.Font("Poppins", 10.8!)
         Me.CopyIdButton.ForeColor = System.Drawing.Color.White
-        Me.CopyIdButton.Location = New System.Drawing.Point(540, 143)
+        Me.CopyIdButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.CopyIdButton.HoverState.FillColor = System.Drawing.Color.White
+        Me.CopyIdButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.CopyIdButton.Location = New System.Drawing.Point(554, 143)
         Me.CopyIdButton.Name = "CopyIdButton"
         Me.CopyIdButton.Size = New System.Drawing.Size(180, 45)
         Me.CopyIdButton.TabIndex = 66
@@ -245,6 +252,7 @@ Partial Class SupplierItemDetailView
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1305, 839)
         Me.Controls.Add(Me.CopyIdButton)
         Me.Controls.Add(Me.CancelButton)
@@ -258,6 +266,7 @@ Partial Class SupplierItemDetailView
         Me.Controls.Add(Me.Guna2HtmlLabel2)
         Me.Controls.Add(Me.ItemIDField)
         Me.Controls.Add(Me.Guna2HtmlLabel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "SupplierItemDetailView"
         Me.Text = "SupplierItemDetailView"
         Me.ResumeLayout(False)

@@ -2,9 +2,9 @@
 Imports KioskV0.KioskV0.Classes
 
 Public Class SupplierRequestBatchVM
-    Inherits Classes.ViewModel(Of SupplierRequestDetailsView, AdminKeys)
+    Inherits Classes.ViewModel(Of Forms.SupplierRequestDetailsView, AdminKeys)
     Private Property Loaded As Boolean = False
-    Public Sub New(view As SupplierRequestDetailsView, mediator As Mediator(Of AdminKeys))
+    Public Sub New(view As Forms.SupplierRequestDetailsView, mediator As Mediator(Of AdminKeys))
         MyBase.New(view, mediator)
     End Sub
     Protected Friend Overrides Sub SetEvents()
@@ -38,7 +38,7 @@ Public Class SupplierRequestBatchVM
 
     Private Sub ResetField()
         _view.ItemIDField.Text = ""
-        _view.ItemIDField.Text = ""
+        _view.ItemNameField.Text = ""
         _view.DescriptionField.Text = ""
         _view.UnitCostField.Text = ""
 
@@ -47,4 +47,5 @@ Public Class SupplierRequestBatchVM
         _view.QTY_Field.Text = ""
         _view.DateReq.Text = ""
     End Sub
+
 End Class

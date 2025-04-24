@@ -38,7 +38,7 @@
             '
             Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 28.2!, System.Drawing.FontStyle.Bold)
-            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(8, 8)
+            Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(28, 11)
             Me.Guna2HtmlLabel1.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
             Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(116, 61)
@@ -61,7 +61,7 @@
             Me.SearchUser.IconLeft = CType(resources.GetObject("SearchUser.IconLeft"), System.Drawing.Image)
             Me.SearchUser.IconLeftOffset = New System.Drawing.Point(10, 0)
             Me.SearchUser.IconLeftSize = New System.Drawing.Size(25, 25)
-            Me.SearchUser.Location = New System.Drawing.Point(992, 16)
+            Me.SearchUser.Location = New System.Drawing.Point(992, 22)
             Me.SearchUser.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
             Me.SearchUser.Name = "SearchUser"
             Me.SearchUser.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
@@ -72,13 +72,20 @@
             '
             'Guna2Button1
             '
+            Me.Guna2Button1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.Guna2Button1.BorderRadius = 15
+            Me.Guna2Button1.BorderThickness = 1
             Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
             Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
             Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
             Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-            Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+            Me.Guna2Button1.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.Guna2Button1.Font = New System.Drawing.Font("Poppins", 10.8!)
             Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-            Me.Guna2Button1.Location = New System.Drawing.Point(800, 16)
+            Me.Guna2Button1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.Guna2Button1.HoverState.FillColor = System.Drawing.Color.White
+            Me.Guna2Button1.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+            Me.Guna2Button1.Location = New System.Drawing.Point(800, 22)
             Me.Guna2Button1.Name = "Guna2Button1"
             Me.Guna2Button1.Size = New System.Drawing.Size(180, 45)
             Me.Guna2Button1.TabIndex = 14
@@ -96,7 +103,8 @@
             DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
             DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
             Me.SupplierItemsDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-            Me.SupplierItemsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+            Me.SupplierItemsDataGridView.ColumnHeadersHeight = 4
+            Me.SupplierItemsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
             DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
             DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
             DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -122,7 +130,7 @@
             Me.SupplierItemsDataGridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
             Me.SupplierItemsDataGridView.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.SupplierItemsDataGridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-            Me.SupplierItemsDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+            Me.SupplierItemsDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
             Me.SupplierItemsDataGridView.ThemeStyle.HeaderStyle.Height = 4
             Me.SupplierItemsDataGridView.ThemeStyle.ReadOnly = False
             Me.SupplierItemsDataGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
@@ -137,11 +145,13 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+            Me.BackColor = System.Drawing.Color.White
             Me.ClientSize = New System.Drawing.Size(1305, 839)
             Me.Controls.Add(Me.SupplierItemsDataGridView)
             Me.Controls.Add(Me.Guna2Button1)
             Me.Controls.Add(Me.SearchUser)
             Me.Controls.Add(Me.Guna2HtmlLabel1)
+            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
             Me.Name = "SupplierItemsView"
             Me.Text = "SupplierItemsView"
             CType(Me.SupplierItemsDataGridView, System.ComponentModel.ISupportInitialize).EndInit()

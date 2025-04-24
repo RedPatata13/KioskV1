@@ -824,6 +824,25 @@
   <ItemGroup>
     <Content Include="Assets\calendar %281%29.png" />
     <Content Include="Assets\customer.png" />
+    <None Include="Resources\icons8-hamburger-100.png" />
+    <None Include="Resources\taco_white.png" />
+    <None Include="Resources\taco.png" />
+    <None Include="Resources\soda_white.png" />
+    <None Include="Resources\soda.png" />
+    <None Include="Resources\sandwich_white.png" />
+    <None Include="Resources\sandwich.png" />
+    <None Include="Resources\salad_white.png" />
+    <None Include="Resources\salad.png" />
+    <None Include="Resources\rice_white.png" />
+    <None Include="Resources\rice.png" />
+    <None Include="Resources\pizza_white.png" />
+    <None Include="Resources\pizza_icon.png" />
+    <None Include="Resources\noodles_white.png" />
+    <None Include="Resources\noodles.png" />
+    <None Include="Resources\dessert_white.png" />
+    <None Include="Resources\dessert.png" />
+    <None Include="Resources\cutlery_white.png" />
+    <None Include="Resources\cutlery.png" />
     <None Include="Assets\icons8-delete-100 %28Black%29.png" />
     <None Include="Assets\Delete-itim.png" />
     <Content Include="Assets\icons8-equal-housing-opportunity-96 %281%29.png" />

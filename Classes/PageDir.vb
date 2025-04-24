@@ -1,4 +1,6 @@
-﻿Namespace KioskV0.Classes
+﻿Imports KioskV0.KioskV0.Forms
+
+Namespace KioskV0.Classes
     Public Module PageDir
         Public Function GetAdminPages(mediator As Mediator(Of AdminKeys)) As Dictionary(Of AdminKeys, IProjectable)
             Return New Dictionary(Of AdminKeys, IProjectable) From
@@ -50,8 +52,9 @@
             Return New Dictionary(Of SupplierKeys, IProjectable) From
             {
                 {SupplierKeys.SupplierLandingPage, New SupplierLandingPageViewModel(New SupplierLandingPageView(), mediator)},
-                {SupplierKeys.SupplierItems, New SupplierItemsViewModel(New SupplierItemsView(), mediator)},
-                {SupplierKeys.SupplierItemDetails, New SupplierItemDetailVM(New SupplierItemDetailView(), mediator)}
+                {SupplierKeys.SupplierItems, New SupplierItemsViewModel(New Forms.SupplierItemsView(), mediator)},
+                {SupplierKeys.SupplierItemDetails, New SupplierItemDetailVM(New SupplierItemDetailView(), mediator)},
+                {SupplierKeys.SupplierBatchRequest, New SupplierAdminBatchReqVM(New SupplierAdminBatchReqView(), mediator)}
             }
         End Function
     End Module
