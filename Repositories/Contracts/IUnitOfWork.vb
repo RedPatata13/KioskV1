@@ -19,5 +19,6 @@
     ReadOnly Property AdminItemVersion As AdminItemVersionRepository
     ReadOnly Property Deductions As ItemDeductionRepository
     ReadOnly Property StockDebts As StockDebtRepository
+    ReadOnly Property BatchRequests As BatchRequestRepository
     Sub SaveChanges()
 End Interface
