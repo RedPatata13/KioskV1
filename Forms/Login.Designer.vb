@@ -23,17 +23,24 @@
         'Do not modify it using the code editor.
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
             Me.Panel1 = New System.Windows.Forms.Panel()
+            Me.Show = New Guna.UI2.WinForms.Guna2Button()
+            Me.Hide = New Guna.UI2.WinForms.Guna2Button()
             Me.CustomerLogInButton = New Guna.UI2.WinForms.Guna2Button()
             Me.SubmitButton = New Guna.UI2.WinForms.Guna2Button()
             Me.PasswordField = New Guna.UI2.WinForms.Guna2TextBox()
             Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.UIDField = New Guna.UI2.WinForms.Guna2TextBox()
+            Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
             Me.Panel1.SuspendLayout()
+            CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'Panel1
             '
+            Me.Panel1.Controls.Add(Me.Show)
+            Me.Panel1.Controls.Add(Me.Hide)
             Me.Panel1.Controls.Add(Me.CustomerLogInButton)
             Me.Panel1.Controls.Add(Me.SubmitButton)
             Me.Panel1.Controls.Add(Me.PasswordField)
@@ -45,6 +52,38 @@
             Me.Panel1.Name = "Panel1"
             Me.Panel1.Size = New System.Drawing.Size(1044, 1080)
             Me.Panel1.TabIndex = 0
+            '
+            'Show
+            '
+            Me.Show.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.Show.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.Show.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.Show.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.Show.FillColor = System.Drawing.Color.Transparent
+            Me.Show.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+            Me.Show.ForeColor = System.Drawing.Color.White
+            Me.Show.Image = CType(resources.GetObject("Show.Image"), System.Drawing.Image)
+            Me.Show.ImageSize = New System.Drawing.Size(40, 40)
+            Me.Show.Location = New System.Drawing.Point(644, 479)
+            Me.Show.Name = "Show"
+            Me.Show.Size = New System.Drawing.Size(53, 45)
+            Me.Show.TabIndex = 6
+            '
+            'Hide
+            '
+            Me.Hide.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+            Me.Hide.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+            Me.Hide.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+            Me.Hide.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+            Me.Hide.FillColor = System.Drawing.Color.Transparent
+            Me.Hide.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+            Me.Hide.ForeColor = System.Drawing.Color.White
+            Me.Hide.Image = CType(resources.GetObject("Hide.Image"), System.Drawing.Image)
+            Me.Hide.ImageSize = New System.Drawing.Size(40, 40)
+            Me.Hide.Location = New System.Drawing.Point(644, 479)
+            Me.Hide.Name = "Hide"
+            Me.Hide.Size = New System.Drawing.Size(53, 45)
+            Me.Hide.TabIndex = 7
             '
             'CustomerLogInButton
             '
@@ -149,18 +188,32 @@
             Me.UIDField.Size = New System.Drawing.Size(471, 60)
             Me.UIDField.TabIndex = 0
             '
+            'Guna2PictureBox1
+            '
+            Me.Guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
+            Me.Guna2PictureBox1.ImageRotate = 0!
+            Me.Guna2PictureBox1.Location = New System.Drawing.Point(0, 0)
+            Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+            Me.Guna2PictureBox1.Size = New System.Drawing.Size(876, 1080)
+            Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+            Me.Guna2PictureBox1.TabIndex = 1
+            Me.Guna2PictureBox1.TabStop = False
+            '
             'Login
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.White
             Me.ClientSize = New System.Drawing.Size(1920, 1080)
+            Me.Controls.Add(Me.Guna2PictureBox1)
             Me.Controls.Add(Me.Panel1)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
             Me.Margin = New System.Windows.Forms.Padding(4)
             Me.Name = "Login"
             Me.Text = "Login"
             Me.Panel1.ResumeLayout(False)
+            CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
 
         End Sub
@@ -171,6 +224,9 @@
         Friend WithEvents PasswordField As Guna.UI2.WinForms.Guna2TextBox
         Friend WithEvents SubmitButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents CustomerLogInButton As Guna.UI2.WinForms.Guna2Button
+        Friend WithEvents Hide As Guna.UI2.WinForms.Guna2Button
+        Friend WithEvents Show As Guna.UI2.WinForms.Guna2Button
+        Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     End Class
 
 End Namespace

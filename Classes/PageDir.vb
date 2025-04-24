@@ -53,7 +53,8 @@ Namespace KioskV0.Classes
             {
                 {SupplierKeys.SupplierDashboard, New SupplierDashboardViewModel(New SupplierDashboardView(), mediator)},
                 {SupplierKeys.SupplierItems, New SupplierItemsViewModel(New SupplierItemsView(), mediator)},
-                {SupplierKeys.SupplierItemDetails, New SupplierItemDetailVM(New SupplierItemDetailView(), mediator)}
+                {SupplierKeys.SupplierItemDetails, New SupplierItemDetailVM(New SupplierItemDetailView(), mediator)},
+                {SupplierKeys.SupplierBatchRequest, New SupplierAdminBatchReqVM(New SupplierAdminBatchReqView(), mediator)}
             }
         End Function
     End Module

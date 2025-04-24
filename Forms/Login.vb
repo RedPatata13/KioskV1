@@ -28,5 +28,21 @@
         Private Sub CustomerLogInButton_Click(sender As Object, e As EventArgs) Handles CustomerLogInButton.Click
             CustomerButtonClick?.Invoke()
         End Sub
+        Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+            PasswordField.UseSystemPasswordChar = True
+        End Sub
+        Private Sub Show_Click(sender As Object, e As EventArgs) Handles Show.Click
+            If PasswordField.UseSystemPasswordChar = True Then
+                PasswordField.UseSystemPasswordChar = False
+                Hide.BringToFront()
+            End If
+        End Sub
+
+        Private Sub Hide_Click(sender As Object, e As EventArgs) Handles Hide.Click
+            If PasswordField.UseSystemPasswordChar = False Then
+                PasswordField.UseSystemPasswordChar = True
+                Show.BringToFront()
+            End If
+        End Sub
     End Class
 End Namespace

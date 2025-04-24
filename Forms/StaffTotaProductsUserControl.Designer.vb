@@ -243,6 +243,7 @@ Partial Class StaffTotaProductsUserControl
         '
         'TotalProductsTextBox
         '
+        Me.TotalProductsTextBox.BorderColor = System.Drawing.Color.White
         Me.TotalProductsTextBox.BorderRadius = 10
         Me.TotalProductsTextBox.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.TotalProductsTextBox.DefaultText = ""
@@ -253,10 +254,12 @@ Partial Class StaffTotaProductsUserControl
         Me.TotalProductsTextBox.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.TotalProductsTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TotalProductsTextBox.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.TotalProductsTextBox.ForeColor = System.Drawing.Color.White
         Me.TotalProductsTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.TotalProductsTextBox.Location = New System.Drawing.Point(454, 14)
         Me.TotalProductsTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TotalProductsTextBox.Name = "TotalProductsTextBox"
+        Me.TotalProductsTextBox.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.TotalProductsTextBox.PlaceholderText = "00"
         Me.TotalProductsTextBox.SelectedText = ""
         Me.TotalProductsTextBox.Size = New System.Drawing.Size(150, 38)

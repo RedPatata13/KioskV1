@@ -39,6 +39,10 @@
                 MessageBox.Show("Item ID copied to clipboard!", "Copied", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
         End Sub
+
+        Public Sub LoadItem(item As SupplierItem)
+            LoadAsEdit(item)
+        End Sub
     End Class
 
 End Namespace
