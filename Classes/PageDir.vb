@@ -50,7 +50,8 @@
             Return New Dictionary(Of SupplierKeys, IProjectable) From
             {
                 {SupplierKeys.SupplierLandingPage, New SupplierLandingPageViewModel(New SupplierLandingPageView(), mediator)},
-                {SupplierKeys.SupplierItems, New SupplierItemsViewModel(New SupplierItemsView(), mediator)}
+                {SupplierKeys.SupplierItems, New SupplierItemsViewModel(New SupplierItemsView(), mediator)},
+                {SupplierKeys.SupplierItemDetails, New SupplierItemDetailVM(New SupplierItemDetailView(), mediator)}
             }
         End Function
     End Module
