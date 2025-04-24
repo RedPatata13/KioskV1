@@ -741,6 +741,12 @@
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffCreditSalesView.resx">
+      <DependentUpon>StaffCreditSalesView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffManagerAuthorizationView.resx">
+      <DependentUpon>StaffManagerAuthorizationView.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\StaffPaymentUserControl.resx">
       <DependentUpon>StaffPaymentUserControl.vb</DependentUpon>
     </EmbeddedResource>

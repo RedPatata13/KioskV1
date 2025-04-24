@@ -18,7 +18,7 @@
             End If
         End Sub
 
-        Private Sub ReceivedAmountTextBox_TextChanged(sender As Object, e As EventArgs) Handles ReceivedAmountTextBox.TextChanged
+        Private Sub ReceivedAmountTextBox_TextChanged(sender As Object, e As EventArgs) Handles ReceivedAmountTextBox.TextChanged, ReceivedAmountTextBox.KeyPress
             ReceivedAmountTextChanged?.Invoke()
         End Sub
     End Class
