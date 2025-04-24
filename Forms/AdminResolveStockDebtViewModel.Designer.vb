@@ -72,12 +72,12 @@ Partial Class AdminResolveStockDebtView
         Me.ItemIDField.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.ItemIDField.Enabled = False
         Me.ItemIDField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ItemIDField.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.ItemIDField.Font = New System.Drawing.Font("Poppins", 9.75!)
         Me.ItemIDField.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ItemIDField.Location = New System.Drawing.Point(73, 286)
         Me.ItemIDField.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.ItemIDField.Name = "ItemIDField"
-        Me.ItemIDField.PlaceholderText = "Ex.: ""Hamburger"""
+        Me.ItemIDField.PlaceholderText = "ID"
         Me.ItemIDField.SelectedText = ""
         Me.ItemIDField.Size = New System.Drawing.Size(510, 49)
         Me.ItemIDField.TabIndex = 54
@@ -93,12 +93,12 @@ Partial Class AdminResolveStockDebtView
         Me.UnitField.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.UnitField.Enabled = False
         Me.UnitField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.UnitField.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.UnitField.Font = New System.Drawing.Font("Poppins", 9.75!)
         Me.UnitField.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.UnitField.Location = New System.Drawing.Point(73, 385)
         Me.UnitField.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.UnitField.Name = "UnitField"
-        Me.UnitField.PlaceholderText = "Ex.: ""Hamburger"""
+        Me.UnitField.PlaceholderText = "123"
         Me.UnitField.SelectedText = ""
         Me.UnitField.Size = New System.Drawing.Size(510, 49)
         Me.UnitField.TabIndex = 53
@@ -140,7 +140,7 @@ Partial Class AdminResolveStockDebtView
         Me.ItemNameField.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.ItemNameField.Enabled = False
         Me.ItemNameField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ItemNameField.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.ItemNameField.Font = New System.Drawing.Font("Poppins", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ItemNameField.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ItemNameField.Location = New System.Drawing.Point(73, 166)
         Me.ItemNameField.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
@@ -160,12 +160,12 @@ Partial Class AdminResolveStockDebtView
         Me.BatchIdField.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.BatchIdField.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.BatchIdField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.BatchIdField.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BatchIdField.Font = New System.Drawing.Font("Poppins", 9.75!)
         Me.BatchIdField.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.BatchIdField.Location = New System.Drawing.Point(680, 176)
         Me.BatchIdField.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.BatchIdField.Name = "BatchIdField"
-        Me.BatchIdField.PlaceholderText = "Ex.: ""Hamburger"""
+        Me.BatchIdField.PlaceholderText = "ID "
         Me.BatchIdField.SelectedText = ""
         Me.BatchIdField.Size = New System.Drawing.Size(510, 49)
         Me.BatchIdField.TabIndex = 57
@@ -250,6 +250,7 @@ Partial Class AdminResolveStockDebtView
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1305, 620)
         Me.Controls.Add(Me.CancelButton)
         Me.Controls.Add(Me.ConfirmButton)

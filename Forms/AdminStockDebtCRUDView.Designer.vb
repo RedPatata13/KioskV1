@@ -125,9 +125,9 @@ Partial Class AdminStockDebtCRUDView
         Me.ReasonTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.ReasonTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.ReasonTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ReasonTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.ReasonTextBox.Font = New System.Drawing.Font("Poppins", 9.75!)
         Me.ReasonTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ReasonTextBox.Location = New System.Drawing.Point(56, 368)
+        Me.ReasonTextBox.Location = New System.Drawing.Point(56, 371)
         Me.ReasonTextBox.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.ReasonTextBox.MaxLength = 250
         Me.ReasonTextBox.Name = "ReasonTextBox"
@@ -173,7 +173,7 @@ Partial Class AdminStockDebtCRUDView
         Me.ItemNameField.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.ItemNameField.Enabled = False
         Me.ItemNameField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ItemNameField.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.ItemNameField.Font = New System.Drawing.Font("Poppins", 9.75!)
         Me.ItemNameField.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ItemNameField.Location = New System.Drawing.Point(56, 149)
         Me.ItemNameField.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
@@ -194,9 +194,9 @@ Partial Class AdminStockDebtCRUDView
         Me.UnitField.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.UnitField.Enabled = False
         Me.UnitField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.UnitField.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.UnitField.Font = New System.Drawing.Font("Poppins", 9.75!)
         Me.UnitField.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.UnitField.Location = New System.Drawing.Point(56, 256)
+        Me.UnitField.Location = New System.Drawing.Point(56, 262)
         Me.UnitField.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.UnitField.Name = "UnitField"
         Me.UnitField.PlaceholderText = "Ex.: ""Hamburger"""
@@ -228,7 +228,7 @@ Partial Class AdminStockDebtCRUDView
         Me.ItemIDField.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.ItemIDField.Enabled = False
         Me.ItemIDField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ItemIDField.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.ItemIDField.Font = New System.Drawing.Font("Poppins", 9.75!)
         Me.ItemIDField.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ItemIDField.Location = New System.Drawing.Point(608, 149)
         Me.ItemIDField.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
@@ -242,6 +242,7 @@ Partial Class AdminStockDebtCRUDView
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1321, 691)
         Me.Controls.Add(Me.Guna2HtmlLabel1)
         Me.Controls.Add(Me.ItemIDField)
