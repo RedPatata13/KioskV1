@@ -1,4 +1,5 @@
-﻿Imports System.Data.Entity.ModelConfiguration
+﻿Imports System.Data.Entity.Core.Common.EntitySql
+Imports System.Data.Entity.ModelConfiguration
 
 Public Class AdminItemConfiguration
     Inherits EntityTypeConfiguration(Of AdminItem)
@@ -46,5 +47,8 @@ Public Class AdminItemConfiguration
             .WithMany(Function(b) b.AdminItems) _
             .HasForeignKey(Function(a) a.BatchId) _
             .WillCascadeOnDelete(False)
+
+        Me.Property(Function(a) a.IsValid) _
+            .IsOptional()
     End Sub
 End Class

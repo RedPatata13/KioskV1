@@ -25,4 +25,6 @@ Public Class AdminItem
 
     Public Property BatchId As String
     Public Overridable Property Batch As InventoryBatch
+
+    Public Property IsValid As Boolean
 End Class
