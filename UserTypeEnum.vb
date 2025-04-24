@@ -54,10 +54,10 @@
 
     Public Enum SupplierKeys
         SupplierEntry
-        SupplierLandingPage
         SupplierTestPage
         SupplierItems
         SupplierItemDetails
+        SupplierDashboard
     End Enum
 
     Public Enum ItemStatus
