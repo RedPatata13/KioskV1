@@ -78,7 +78,7 @@ Partial Class SupplierAdminBatchReqView
         Me.SearchUser.IconLeft = CType(resources.GetObject("SearchUser.IconLeft"), System.Drawing.Image)
         Me.SearchUser.IconLeftOffset = New System.Drawing.Point(10, 0)
         Me.SearchUser.IconLeftSize = New System.Drawing.Size(25, 25)
-        Me.SearchUser.Location = New System.Drawing.Point(1000, 40)
+        Me.SearchUser.Location = New System.Drawing.Point(1000, 8)
         Me.SearchUser.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.SearchUser.Name = "SearchUser"
         Me.SearchUser.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))

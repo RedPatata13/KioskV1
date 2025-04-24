@@ -8,5 +8,6 @@
     Public Property ItemID As String
     Public Property DateRequested As DateTime
     Public Property Units As Integer
-    Public Property IsApproved As Boolean
+    Public Property IsPending As Boolean
+    Public Property FinalResult As String
 End Class

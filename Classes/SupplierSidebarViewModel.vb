@@ -14,7 +14,7 @@ Public Class SupplierSidebarViewModel
         MyBase.SetEvents()
 
         _view.LogoutClick = Sub() _mediator.Logout()
-        _view.DashboardClick = Sub() _mediator.SwapPage(SupplierKeys.SupplierLandingPage)
+        _view.DashboardClick = Sub() _mediator.SwapPage(SupplierKeys.SupplierDashboard)
         _view.SupplierItems = Sub() _mediator.SwapPage(SupplierKeys.SupplierItems)
     End Sub
     Public Overrides Sub Project(projector As Form)

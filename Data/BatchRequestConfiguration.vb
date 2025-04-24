@@ -20,8 +20,11 @@ Public Class BatchRequestConfiguration
         Me.Property(Function(b) b.DateRequested) _
             .IsRequired()
 
-        Me.Property(Function(B) B.IsApproved) _
+        Me.Property(Function(B) B.IsPending) _
             .IsRequired()
+
+        Me.Property(Function(b) b.FinalResult) _
+            .IsOptional()
 
         Me.HasRequired(Function(b) b.Requester) _
             .WithMany() _

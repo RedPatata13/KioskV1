@@ -54,7 +54,7 @@
 
     Public Enum SupplierKeys
         SupplierEntry
-        SupplierLandingPage
+        SupplierDashboard
         SupplierTestPage
         SupplierItems
     End Enum
