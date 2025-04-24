@@ -22,9 +22,9 @@ Partial Class SupplierRequestDetailsView
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.CopyIdButton = New Guna.UI2.WinForms.Guna2Button()
+        Me.CopyItemIdButton = New Guna.UI2.WinForms.Guna2Button()
         Me.CancelButton = New Guna.UI2.WinForms.Guna2Button()
-        Me.ConfirmButton = New Guna.UI2.WinForms.Guna2Button()
+        Me.Reject = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.UnitCostField = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -34,7 +34,7 @@ Partial Class SupplierRequestDetailsView
         Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.ItemIDField = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        Me.CopyUserId = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2HtmlLabel6 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.QTY_Field = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2HtmlLabel7 = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -44,21 +44,22 @@ Partial Class SupplierRequestDetailsView
         Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.BatchName_field = New Guna.UI2.WinForms.Guna2TextBox()
         Me.DateReq = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Accept = New Guna.UI2.WinForms.Guna2Button()
         Me.SuspendLayout()
         '
-        'CopyIdButton
+        'CopyItemIdButton
         '
-        Me.CopyIdButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.CopyIdButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.CopyIdButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.CopyIdButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.CopyIdButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.CopyIdButton.ForeColor = System.Drawing.Color.White
-        Me.CopyIdButton.Location = New System.Drawing.Point(432, 144)
-        Me.CopyIdButton.Name = "CopyIdButton"
-        Me.CopyIdButton.Size = New System.Drawing.Size(180, 45)
-        Me.CopyIdButton.TabIndex = 78
-        Me.CopyIdButton.Text = "Copy Item ID"
+        Me.CopyItemIdButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.CopyItemIdButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.CopyItemIdButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.CopyItemIdButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.CopyItemIdButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.CopyItemIdButton.ForeColor = System.Drawing.Color.White
+        Me.CopyItemIdButton.Location = New System.Drawing.Point(432, 144)
+        Me.CopyItemIdButton.Name = "CopyItemIdButton"
+        Me.CopyItemIdButton.Size = New System.Drawing.Size(180, 45)
+        Me.CopyItemIdButton.TabIndex = 78
+        Me.CopyItemIdButton.Text = "Copy Item ID"
         '
         'CancelButton
         '
@@ -75,34 +76,34 @@ Partial Class SupplierRequestDetailsView
         Me.CancelButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
         Me.CancelButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer))
         Me.CancelButton.HoverState.ForeColor = System.Drawing.Color.White
-        Me.CancelButton.Location = New System.Drawing.Point(232, 696)
+        Me.CancelButton.Location = New System.Drawing.Point(432, 656)
         Me.CancelButton.Margin = New System.Windows.Forms.Padding(2)
         Me.CancelButton.Name = "CancelButton"
         Me.CancelButton.Size = New System.Drawing.Size(189, 51)
         Me.CancelButton.TabIndex = 77
         Me.CancelButton.Text = "Cancel"
         '
-        'ConfirmButton
+        'Reject
         '
-        Me.ConfirmButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ConfirmButton.BorderRadius = 15
-        Me.ConfirmButton.BorderThickness = 1
-        Me.ConfirmButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.ConfirmButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.ConfirmButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.ConfirmButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.ConfirmButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ConfirmButton.Font = New System.Drawing.Font("Poppins", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ConfirmButton.ForeColor = System.Drawing.Color.White
-        Me.ConfirmButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ConfirmButton.HoverState.FillColor = System.Drawing.Color.White
-        Me.ConfirmButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ConfirmButton.Location = New System.Drawing.Point(8, 696)
-        Me.ConfirmButton.Margin = New System.Windows.Forms.Padding(2)
-        Me.ConfirmButton.Name = "ConfirmButton"
-        Me.ConfirmButton.Size = New System.Drawing.Size(189, 51)
-        Me.ConfirmButton.TabIndex = 76
-        Me.ConfirmButton.Text = "Confirm"
+        Me.Reject.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Reject.BorderRadius = 15
+        Me.Reject.BorderThickness = 1
+        Me.Reject.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Reject.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Reject.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Reject.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Reject.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Reject.Font = New System.Drawing.Font("Poppins", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Reject.ForeColor = System.Drawing.Color.White
+        Me.Reject.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Reject.HoverState.FillColor = System.Drawing.Color.White
+        Me.Reject.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Reject.Location = New System.Drawing.Point(224, 656)
+        Me.Reject.Margin = New System.Windows.Forms.Padding(2)
+        Me.Reject.Name = "Reject"
+        Me.Reject.Size = New System.Drawing.Size(189, 51)
+        Me.Reject.TabIndex = 76
+        Me.Reject.Text = "Reject"
         '
         'Guna2HtmlLabel5
         '
@@ -251,19 +252,19 @@ Partial Class SupplierRequestDetailsView
         Me.Guna2HtmlLabel1.TabIndex = 67
         Me.Guna2HtmlLabel1.Text = "Item batch request details"
         '
-        'Guna2Button1
+        'CopyUserId
         '
-        Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.Location = New System.Drawing.Point(1072, 144)
-        Me.Guna2Button1.Name = "Guna2Button1"
-        Me.Guna2Button1.Size = New System.Drawing.Size(180, 45)
-        Me.Guna2Button1.TabIndex = 90
-        Me.Guna2Button1.Text = "Copy user ID"
+        Me.CopyUserId.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.CopyUserId.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.CopyUserId.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.CopyUserId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.CopyUserId.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.CopyUserId.ForeColor = System.Drawing.Color.White
+        Me.CopyUserId.Location = New System.Drawing.Point(1072, 144)
+        Me.CopyUserId.Name = "CopyUserId"
+        Me.CopyUserId.Size = New System.Drawing.Size(180, 45)
+        Me.CopyUserId.TabIndex = 90
+        Me.CopyUserId.Text = "Copy user ID"
         '
         'Guna2HtmlLabel6
         '
@@ -409,24 +410,47 @@ Partial Class SupplierRequestDetailsView
         Me.DateReq.TabIndex = 93
         Me.DateReq.Text = "Date Requested: MM-DD-YYYY"
         '
+        'Accept
+        '
+        Me.Accept.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Accept.BorderRadius = 15
+        Me.Accept.BorderThickness = 1
+        Me.Accept.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Accept.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Accept.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Accept.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Accept.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Accept.Font = New System.Drawing.Font("Poppins", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Accept.ForeColor = System.Drawing.Color.White
+        Me.Accept.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Accept.HoverState.FillColor = System.Drawing.Color.White
+        Me.Accept.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Accept.Location = New System.Drawing.Point(16, 656)
+        Me.Accept.Margin = New System.Windows.Forms.Padding(2)
+        Me.Accept.Name = "Accept"
+        Me.Accept.Size = New System.Drawing.Size(189, 51)
+        Me.Accept.TabIndex = 94
+        Me.Accept.Text = "Confirm"
+        '
         'SupplierRequestDetailsView
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1305, 839)
+        Me.Controls.Add(Me.Accept)
         Me.Controls.Add(Me.DateReq)
         Me.Controls.Add(Me.Guna2HtmlLabel3)
         Me.Controls.Add(Me.BatchName_field)
-        Me.Controls.Add(Me.Guna2Button1)
+        Me.Controls.Add(Me.CopyUserId)
         Me.Controls.Add(Me.Guna2HtmlLabel6)
         Me.Controls.Add(Me.QTY_Field)
         Me.Controls.Add(Me.Guna2HtmlLabel7)
         Me.Controls.Add(Me.AdminNameField)
         Me.Controls.Add(Me.Guna2HtmlLabel8)
         Me.Controls.Add(Me.AdminID_field)
-        Me.Controls.Add(Me.CopyIdButton)
+        Me.Controls.Add(Me.CopyItemIdButton)
         Me.Controls.Add(Me.CancelButton)
-        Me.Controls.Add(Me.ConfirmButton)
+        Me.Controls.Add(Me.Reject)
         Me.Controls.Add(Me.Guna2HtmlLabel5)
         Me.Controls.Add(Me.UnitCostField)
         Me.Controls.Add(Me.Guna2HtmlLabel4)
@@ -443,9 +467,9 @@ Partial Class SupplierRequestDetailsView
 
     End Sub
 
-    Friend WithEvents CopyIdButton As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents CopyItemIdButton As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents CancelButton As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents ConfirmButton As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Reject As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2HtmlLabel5 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents UnitCostField As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
@@ -455,7 +479,7 @@ Partial Class SupplierRequestDetailsView
     Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents ItemIDField As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents CopyUserId As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2HtmlLabel6 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents QTY_Field As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2HtmlLabel7 As Guna.UI2.WinForms.Guna2HtmlLabel
@@ -465,4 +489,5 @@ Partial Class SupplierRequestDetailsView
     Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents BatchName_field As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents DateReq As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Accept As Guna.UI2.WinForms.Guna2Button
 End Class

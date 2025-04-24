@@ -3,6 +3,7 @@
 
         Public Property ConfirmButtonClick As Action
         Public Property CancelButtonClick As Action
+        Public Property IDText_Changed As Action
         Public Property IDField As String
             Get
                 Return ID_Field.Text
@@ -12,11 +13,11 @@
             End Set
         End Property
 
-        Public Property Product_Name
+        Public Property Product_Name As String
             Get
                 Return ProductNameField.Text
             End Get
-            Set(value)
+            Set(value As String)
                 ProductNameField.Text = value
             End Set
         End Property
@@ -30,14 +31,6 @@
             End Set
         End Property
 
-        Public Property Supplier As String
-            Get
-                Return SupplierField.Text
-            End Get
-            Set(value As String)
-                SupplierField.Text = value
-            End Set
-        End Property
 
         Public Property Notes As String
             Get
@@ -49,15 +42,6 @@
         End Property
         Private _suppliers As List(Of Supplier)
 
-        Public Property Suppliers() As List(Of Supplier)
-            Get
-                Return _suppliers
-            End Get
-            Set(ByVal value As List(Of Supplier))
-                _suppliers = value
-                UpdateSupplierComboBox() ' Automatically update the ComboBox when suppliers change
-            End Set
-        End Property
 
         Private Sub ConfirmButton_Click(sender As Object, e As EventArgs) Handles ConfirmButton.Click
             ConfirmButtonClick?.Invoke()
@@ -67,18 +51,8 @@
             CancelButtonClick?.Invoke()
         End Sub
 
-        ' Function to update the Supplier ComboBox
-        Private Sub UpdateSupplierComboBox()
-            ' Clear the existing items in the ComboBox
-            SupplierField.Items.Clear()
-
-            ' If there are suppliers, add them to the ComboBox
-            If _suppliers IsNot Nothing AndAlso _suppliers.Count > 0 Then
-                For Each supplier As Supplier In _suppliers
-                    SupplierField.Items.Add(supplier.Username) ' Assuming 'Name' is a property of the Supplier model
-                Next
-            End If
+        Private Sub ID_Field_TextChanged(sender As Object, e As EventArgs) Handles ID_Field.TextChanged
+            IDText_Changed?.Invoke()
         End Sub
-
     End Class
 End Namespace

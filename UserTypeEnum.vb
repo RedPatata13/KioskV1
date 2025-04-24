@@ -57,6 +57,8 @@
         SupplierDashboard
         SupplierTestPage
         SupplierItems
+        SupplierAdminBatchReq
+        SupplierAssessRequest
     End Enum
 
     Public Enum ItemStatus

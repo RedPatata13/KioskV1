@@ -206,7 +206,7 @@ Module InitialDBSetup
                                     If(item.Name.Contains("Standard"), 6.5D, 3.25D)),
                         .ReceivedDate = DateTime.Now.AddDays(-daysOld),
                         .ExpiryDate = DateTime.Now.AddDays(expiryDays - daysOld),
-                        .BatchNumber = $"B-{item.Name.Substring(0, 3)}-{DateTime.Now.Year}-{i}",
+                        .BatchName = $"B-{item.Name.Substring(0, 3)}-{DateTime.Now.Year}-{i}",
                             .IsActive = True,
                             .IsDeprecated = False
                         })

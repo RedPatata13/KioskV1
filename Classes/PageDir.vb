@@ -51,7 +51,8 @@
             {
                 {SupplierKeys.SupplierDashboard, New SupplierLandingPageViewModel(New SupplierDashboard(), mediator)},
                 {SupplierKeys.SupplierItems, New SupplierItemsViewModel(New SupplierItemsView(), mediator)},
-                {SupplierKeys.SupplierAdminBatchReq, New SupplierRequestListVM(New SupplierAdminBatchReqView(), mediator)}
+                {SupplierKeys.SupplierAdminBatchReq, New SupplierRequestListVM(New SupplierAdminBatchReqView(), mediator)},
+                {SupplierKeys.SupplierAssessRequest, New SupplierRequestBatchVM(New SupplierRequestDetailsView(), mediator)}
             }
         End Function
     End Module

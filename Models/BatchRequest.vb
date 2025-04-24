@@ -6,6 +6,8 @@
 
     Public Property Item As SupplierItem
     Public Property ItemID As String
+    Public Property Recipient As User
+    Public Property RecipientID As String
     Public Property DateRequested As DateTime
     Public Property Units As Integer
     Public Property IsPending As Boolean

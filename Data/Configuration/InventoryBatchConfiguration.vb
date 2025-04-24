@@ -34,7 +34,7 @@ Public Class InventoryBatchConfiguration
         Me.Property(Function(b) b.ReceivedDate) _
         .IsRequired()
 
-        Me.Property(Function(b) b.BatchNumber) _
+        Me.Property(Function(b) b.BatchName) _
         .HasMaxLength(100) _
         .IsRequired()
 

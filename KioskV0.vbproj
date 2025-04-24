@@ -190,9 +190,9 @@
     <Compile Include="Classes\TempDB.vb" />
     <Compile Include="Classes\ViewModel.vb" />
     <Compile Include="Data\AppDbContext.vb" />
-    <Compile Include="Data\BatchRequestConfiguration.vb" />
     <Compile Include="Data\Configuration\AdminItemConfiguration.vb" />
     <Compile Include="Data\Configuration\AdminItemVersionConfiguration.vb" />
+    <Compile Include="Data\Configuration\BatchRequestConfiguration.vb" />
     <Compile Include="Data\Configuration\CategoryConfiguration.vb" />
     <Compile Include="Data\Configuration\CustomerConfiguration.vb" />
     <Compile Include="Data\Configuration\InventoryBatchConfiguration.vb" />
@@ -691,6 +691,22 @@
       <DependentUpon>202504222000556_AddedReasonToDeductionPlusVersiodIDa.vb</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202504222000556_AddedReasonToDeductionPlusVersiodIDa.vb" />
+    <Compile Include="Migrations\202504242018153_BatchRequest.Designer.vb">
+      <DependentUpon>202504242018153_BatchRequest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504242018153_BatchRequest.vb" />
+    <Compile Include="Migrations\202504242114211_BatchRequestAddRecipient.Designer.vb">
+      <DependentUpon>202504242114211_BatchRequestAddRecipient.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504242114211_BatchRequestAddRecipient.vb" />
+    <Compile Include="Migrations\202504242119063_BatchRequestAddRecipientSave.Designer.vb">
+      <DependentUpon>202504242119063_BatchRequestAddRecipientSave.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504242119063_BatchRequestAddRecipientSave.vb" />
+    <Compile Include="Migrations\202504242201160_BatchRename.Designer.vb">
+      <DependentUpon>202504242201160_BatchRename.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504242201160_BatchRename.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\AdminItem.vb" />
     <Compile Include="Models\AdminItemVersion.vb" />
@@ -1045,6 +1061,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504222000556_AddedReasonToDeductionPlusVersiodIDa.resx">
       <DependentUpon>202504222000556_AddedReasonToDeductionPlusVersiodIDa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504242018153_BatchRequest.resx">
+      <DependentUpon>202504242018153_BatchRequest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504242114211_BatchRequestAddRecipient.resx">
+      <DependentUpon>202504242114211_BatchRequestAddRecipient.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504242119063_BatchRequestAddRecipientSave.resx">
+      <DependentUpon>202504242119063_BatchRequestAddRecipientSave.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504242201160_BatchRename.resx">
+      <DependentUpon>202504242201160_BatchRename.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

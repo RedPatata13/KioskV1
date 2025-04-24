@@ -20,6 +20,7 @@ Public Class KioskDbContext
     Public Property AdminItemVersions As DbSet(Of AdminItemVersion)
     Public Property Deductions As DbSet(Of ItemToBatchDeduction)
     Public Property StockDebts As DbSet(Of StockDebt)
+    Public Property BatchRequests As DbSet(Of BatchRequest)
     Public Sub New()
         MyBase.New(JsonConfigReader.GetConnectionString())
     End Sub

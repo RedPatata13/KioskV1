@@ -35,5 +35,10 @@ Public Class BatchRequestConfiguration
             .WithMany() _
             .HasForeignKey(Function(b) b.ItemID) _
             .WillCascadeOnDelete(False)
+
+        Me.HasOptional(Function(b) b.Recipient) _
+            .WithMany() _
+            .HasForeignKey(Function(b) b.RecipientID) _
+            .WillCascadeOnDelete(False)
     End Sub
 End Class

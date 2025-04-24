@@ -7,7 +7,7 @@
     Public Property UnitCost As Decimal
     Public Property ReceivedDate As DateTime
     Public Property ExpiryDate As Nullable(Of DateTime)
-    Public Property BatchNumber As String
+    Public Property BatchName As String
 
     ' Navigation properties
     Public Overridable Property Supplier As Supplier

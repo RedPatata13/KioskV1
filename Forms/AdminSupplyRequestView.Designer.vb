@@ -27,14 +27,11 @@
             Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.ID_Field = New Guna.UI2.WinForms.Guna2TextBox()
             Me.ProductNameField = New Guna.UI2.WinForms.Guna2TextBox()
-            Me.SupplierField = New Guna.UI2.WinForms.Guna2ComboBox()
-            Me.DatePicker = New Guna.UI2.WinForms.Guna2DateTimePicker()
             Me.QuantityField = New Guna.UI2.WinForms.Guna2TextBox()
             Me.NoteField = New Guna.UI2.WinForms.Guna2TextBox()
             Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-            Me.Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.Guna2HtmlLabel6 = New Guna.UI2.WinForms.Guna2HtmlLabel()
             Me.ConfirmButton = New Guna.UI2.WinForms.Guna2Button()
             Me.CancelButton = New Guna.UI2.WinForms.Guna2Button()
@@ -75,7 +72,7 @@
             Me.ID_Field.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.ID_Field.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.ID_Field.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.ID_Field.Location = New System.Drawing.Point(56, 354)
+            Me.ID_Field.Location = New System.Drawing.Point(64, 234)
             Me.ID_Field.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
             Me.ID_Field.Name = "ID_Field"
             Me.ID_Field.PlaceholderText = "102PDR"
@@ -92,48 +89,17 @@
             Me.ProductNameField.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
             Me.ProductNameField.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
             Me.ProductNameField.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+            Me.ProductNameField.Enabled = False
             Me.ProductNameField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.ProductNameField.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.ProductNameField.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.ProductNameField.Location = New System.Drawing.Point(56, 483)
+            Me.ProductNameField.Location = New System.Drawing.Point(64, 363)
             Me.ProductNameField.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
             Me.ProductNameField.Name = "ProductNameField"
             Me.ProductNameField.PlaceholderText = "Ex.: ""Hamburger"""
             Me.ProductNameField.SelectedText = ""
             Me.ProductNameField.Size = New System.Drawing.Size(510, 49)
             Me.ProductNameField.TabIndex = 8
-            '
-            'SupplierField
-            '
-            Me.SupplierField.BackColor = System.Drawing.Color.Transparent
-            Me.SupplierField.BorderRadius = 15
-            Me.SupplierField.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-            Me.SupplierField.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.SupplierField.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.SupplierField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.SupplierField.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-            Me.SupplierField.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-            Me.SupplierField.ItemHeight = 30
-            Me.SupplierField.Location = New System.Drawing.Point(62, 242)
-            Me.SupplierField.Margin = New System.Windows.Forms.Padding(2)
-            Me.SupplierField.Name = "SupplierField"
-            Me.SupplierField.Size = New System.Drawing.Size(511, 36)
-            Me.SupplierField.TabIndex = 10
-            '
-            'DatePicker
-            '
-            Me.DatePicker.Checked = True
-            Me.DatePicker.FillColor = System.Drawing.Color.White
-            Me.DatePicker.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.DatePicker.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
-            Me.DatePicker.Location = New System.Drawing.Point(59, 114)
-            Me.DatePicker.Margin = New System.Windows.Forms.Padding(2)
-            Me.DatePicker.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
-            Me.DatePicker.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
-            Me.DatePicker.Name = "DatePicker"
-            Me.DatePicker.Size = New System.Drawing.Size(240, 44)
-            Me.DatePicker.TabIndex = 11
-            Me.DatePicker.Value = New Date(2025, 3, 27, 20, 51, 23, 297)
             '
             'QuantityField
             '
@@ -181,7 +147,7 @@
             Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel3.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(56, 288)
+            Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(64, 168)
             Me.Guna2HtmlLabel3.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
             Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(148, 48)
@@ -194,7 +160,7 @@
             Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel2.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(56, 418)
+            Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(64, 298)
             Me.Guna2HtmlLabel2.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
             Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(205, 48)
@@ -213,19 +179,6 @@
             Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(125, 48)
             Me.Guna2HtmlLabel4.TabIndex = 17
             Me.Guna2HtmlLabel4.Text = "Quantity"
-            '
-            'Guna2HtmlLabel5
-            '
-            Me.Guna2HtmlLabel5.AutoSize = False
-            Me.Guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent
-            Me.Guna2HtmlLabel5.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
-            Me.Guna2HtmlLabel5.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(64, 176)
-            Me.Guna2HtmlLabel5.Margin = New System.Windows.Forms.Padding(2)
-            Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
-            Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(120, 48)
-            Me.Guna2HtmlLabel5.TabIndex = 18
-            Me.Guna2HtmlLabel5.Text = "Supplier"
             '
             'Guna2HtmlLabel6
             '
@@ -293,14 +246,11 @@
             Me.Controls.Add(Me.CancelButton)
             Me.Controls.Add(Me.ConfirmButton)
             Me.Controls.Add(Me.Guna2HtmlLabel6)
-            Me.Controls.Add(Me.Guna2HtmlLabel5)
             Me.Controls.Add(Me.Guna2HtmlLabel4)
             Me.Controls.Add(Me.Guna2HtmlLabel2)
             Me.Controls.Add(Me.Guna2HtmlLabel3)
             Me.Controls.Add(Me.NoteField)
             Me.Controls.Add(Me.QuantityField)
-            Me.Controls.Add(Me.DatePicker)
-            Me.Controls.Add(Me.SupplierField)
             Me.Controls.Add(Me.ProductNameField)
             Me.Controls.Add(Me.ID_Field)
             Me.Controls.Add(Me.Guna2Panel1)
@@ -319,14 +269,11 @@
         Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents ID_Field As Guna.UI2.WinForms.Guna2TextBox
         Friend WithEvents ProductNameField As Guna.UI2.WinForms.Guna2TextBox
-        Friend WithEvents SupplierField As Guna.UI2.WinForms.Guna2ComboBox
-        Friend WithEvents DatePicker As Guna.UI2.WinForms.Guna2DateTimePicker
         Friend WithEvents QuantityField As Guna.UI2.WinForms.Guna2TextBox
         Friend WithEvents NoteField As Guna.UI2.WinForms.Guna2TextBox
         Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
-        Friend WithEvents Guna2HtmlLabel5 As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents Guna2HtmlLabel6 As Guna.UI2.WinForms.Guna2HtmlLabel
         Friend WithEvents ConfirmButton As Guna.UI2.WinForms.Guna2Button
         Friend WithEvents CancelButton As Guna.UI2.WinForms.Guna2Button

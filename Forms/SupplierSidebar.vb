@@ -15,4 +15,8 @@
     Private Sub LogOutButton_Click(sender As Object, e As EventArgs) Handles LogOutButton.Click
         LogoutClick?.Invoke()
     End Sub
+
+    Private Sub BatchRequests_Click(sender As Object, e As EventArgs) Handles BatchRequests.Click
+        BatchRequestsClick?.Invoke()
+    End Sub
 End Class
