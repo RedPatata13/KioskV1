@@ -141,6 +141,8 @@
     <Compile Include="Classes\AdminStockDebtCRUDViewModel.vb" />
     <Compile Include="Classes\SupplierItemsViewModel.vb" />
     <Compile Include="Classes\SupplierLandingPageViewModel.vb" />
+    <Compile Include="Classes\SupplierRequestBatchVM.vb" />
+    <Compile Include="Classes\SupplierRequestListVM.vb" />
     <Compile Include="Classes\SupplierSidebarViewModel.vb" />
     <Compile Include="ContainerConfiguration.vb" />
     <Compile Include="Classes\ActionManager.vb" />
@@ -188,6 +190,7 @@
     <Compile Include="Classes\TempDB.vb" />
     <Compile Include="Classes\ViewModel.vb" />
     <Compile Include="Data\AppDbContext.vb" />
+    <Compile Include="Data\BatchRequestConfiguration.vb" />
     <Compile Include="Data\Configuration\AdminItemConfiguration.vb" />
     <Compile Include="Data\Configuration\AdminItemVersionConfiguration.vb" />
     <Compile Include="Data\Configuration\CategoryConfiguration.vb" />
@@ -386,6 +389,12 @@
     <Compile Include="Forms\CustomerViewOrderUserControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Forms\SupplierAdminBatchReqView.Designer.vb">
+      <DependentUpon>SupplierAdminBatchReqView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupplierAdminBatchReqView.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
@@ -488,6 +497,24 @@
     <Compile Include="Forms\StaffTotaProductsUserControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Forms\SupplierBatchesView.Designer.vb">
+      <DependentUpon>SupplierBatchesView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupplierBatchesView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SupplierItemDetailView.Designer.vb">
+      <DependentUpon>SupplierItemDetailView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupplierItemDetailView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SupplierItemEditView.Designer.vb">
+      <DependentUpon>SupplierItemEditView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupplierItemEditView.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\SupplierItemsView.Designer.vb">
       <DependentUpon>SupplierItemsView.vb</DependentUpon>
     </Compile>
@@ -498,6 +525,12 @@
       <DependentUpon>SupplierLandingPageView.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\SupplierLandingPageView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SupplierRequestDetails.Designer.vb">
+      <DependentUpon>SupplierRequestDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupplierRequestDetails.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\SupplierSidebar.Designer.vb">
@@ -661,6 +694,7 @@
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\AdminItem.vb" />
     <Compile Include="Models\AdminItemVersion.vb" />
+    <Compile Include="Models\BatchRequest.vb" />
     <Compile Include="Models\Category.vb" />
     <Compile Include="Models\Customer.vb" />
     <Compile Include="Models\CustomerItem.vb" />
@@ -686,6 +720,7 @@
     <Compile Include="Repositories\AdminItemsRepository.vb" />
     <Compile Include="Repositories\AdminItemVersionRepository.vb" />
     <Compile Include="Repositories\BaseRepository.vb" />
+    <Compile Include="Repositories\BatchRequestRepository.vb" />
     <Compile Include="Repositories\CategoryRepository.vb" />
     <Compile Include="Repositories\Contracts\IAdminItemVersionRepository.vb" />
     <Compile Include="Repositories\Contracts\IAdminItemsRepository.vb" />
@@ -840,6 +875,9 @@
     <EmbeddedResource Include="Forms\CustomerViewOrderUserControl.resx">
       <DependentUpon>CustomerViewOrderUserControl.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SupplierAdminBatchReqView.resx">
+      <DependentUpon>SupplierAdminBatchReqView.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
@@ -873,11 +911,23 @@
     <EmbeddedResource Include="Forms\StaffTotaProductsUserControl.resx">
       <DependentUpon>StaffTotaProductsUserControl.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SupplierBatchesView.resx">
+      <DependentUpon>SupplierBatchesView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SupplierItemDetailView.resx">
+      <DependentUpon>SupplierItemDetailView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SupplierItemEditView.resx">
+      <DependentUpon>SupplierItemEditView.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SupplierItemsView.resx">
       <DependentUpon>SupplierItemsView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SupplierLandingPageView.resx">
       <DependentUpon>SupplierLandingPageView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SupplierRequestDetails.resx">
+      <DependentUpon>SupplierRequestDetails.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SupplierSidebar.resx">
       <DependentUpon>SupplierSidebar.vb</DependentUpon>
