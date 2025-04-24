@@ -134,6 +134,7 @@
     <Compile Include="Classes\AdminMenuSelectSupplierItemViewModel.vb" />
     <Compile Include="Classes\CloneHelper.vb" />
     <Compile Include="Classes\InitialDBSetup.vb" />
+    <Compile Include="Classes\StaffPendingOrdersViewModel.vb" />
     <Compile Include="Classes\SupplierAcceptRequestViewModel.vb" />
     <Compile Include="Classes\SupplierEditSupplierItemViewModel.vb" />
     <Compile Include="Classes\SupplierItemsViewModel.vb" />
@@ -400,6 +401,18 @@
     <Compile Include="Forms\StaffPaymentView.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\StaffPendingOrderListItemUserControl.Designer.vb">
+      <DependentUpon>StaffPendingOrderListItemUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffPendingOrderListItemUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\StaffPendingOrdersView.Designer.vb">
+      <DependentUpon>StaffPendingOrdersView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaffPendingOrdersView.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\StaffPosOrderUserControl.Designer.vb">
       <DependentUpon>StaffPosOrderUserControl.vb</DependentUpon>
     </Compile>
@@ -508,14 +521,10 @@
     <Compile Include="Forms\SupplyRequestUserControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Migrations\202504230411046_UpdateDb.Designer.vb">
-      <DependentUpon>202504230411046_UpdateDb.vb</DependentUpon>
+    <Compile Include="Migrations\202504240840122_Initialcreate.designer.vb">
+      <DependentUpon>202504240840122_Initialcreate.vb</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202504230411046_UpdateDb.vb" />
-    <Compile Include="Migrations\202504230418044_AddNewColumnToOrderPrimals.Designer.vb">
-      <DependentUpon>202504230418044_AddNewColumnToOrderPrimals.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202504230418044_AddNewColumnToOrderPrimals.vb" />
+    <Compile Include="Migrations\202504240840122_Initialcreate.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\AdminItem.vb" />
     <Compile Include="Models\Category.vb" />
@@ -693,6 +702,12 @@
     <EmbeddedResource Include="Forms\StaffPaymentView.resx">
       <DependentUpon>StaffPaymentView.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffPendingOrderListItemUserControl.resx">
+      <DependentUpon>StaffPendingOrderListItemUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffPendingOrdersView.resx">
+      <DependentUpon>StaffPendingOrdersView.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\StaffPosOrderUserControl.resx">
       <DependentUpon>StaffPosOrderUserControl.vb</DependentUpon>
     </EmbeddedResource>
@@ -744,11 +759,8 @@
     <EmbeddedResource Include="Forms\SupplyRequestUserControl.resx">
       <DependentUpon>SupplyRequestUserControl.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504230411046_UpdateDb.resx">
-      <DependentUpon>202504230411046_UpdateDb.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504230418044_AddNewColumnToOrderPrimals.resx">
-      <DependentUpon>202504230418044_AddNewColumnToOrderPrimals.vb</DependentUpon>
+    <EmbeddedResource Include="Migrations\202504240840122_Initialcreate.resx">
+      <DependentUpon>202504240840122_Initialcreate.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -776,6 +788,8 @@
   <ItemGroup>
     <Content Include="Assets\calendar %281%29.png" />
     <Content Include="Assets\customer.png" />
+    <None Include="Assets\icons8-box-100 %281%29.png" />
+    <None Include="Assets\icons8-box-100.png" />
     <Content Include="Assets\icons8-equal-housing-opportunity-96 %281%29.png" />
     <Content Include="Assets\icons8-equal-housing-opportunity-96.png" />
     <Content Include="Assets\icons8-hamburger-100.png" />
@@ -788,6 +802,26 @@
     <Content Include="Assets\icons8-time-machine-100.png" />
     <Content Include="Assets\increase.png" />
     <Content Include="Assets\money-bag.png" />
+    <Content Include="Resources\cutlery.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\taco_white.png" />
+    <None Include="Resources\taco.png" />
+    <None Include="Resources\soda_white.png" />
+    <None Include="Resources\soda.png" />
+    <None Include="Resources\sandwich_white.png" />
+    <None Include="Resources\sandwich.png" />
+    <None Include="Resources\salad_white.png" />
+    <None Include="Resources\salad.png" />
+    <None Include="Resources\rice_white.png" />
+    <None Include="Resources\rice.png" />
+    <None Include="Resources\pizza_white.png" />
+    <None Include="Resources\pizza_icon.png" />
+    <None Include="Resources\noodles_white.png" />
+    <None Include="Resources\noodles.png" />
+    <None Include="Resources\dessert_white.png" />
+    <None Include="Resources\dessert.png" />
+    <None Include="Resources\cutlery_white.png" />
     <None Include="Resources\magnifying-glass %281%29.png" />
     <None Include="Resources\calendar %281%29.png" />
     <None Include="packages.config" />

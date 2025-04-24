@@ -66,16 +66,30 @@ Namespace KioskV0.Classes
             OnStartOverClicked()
         End Sub
         Private Sub LoadCategories()
-            CategoryIcons("Pizza") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\pizza_icon.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\pizza_white.png"))
-            CategoryIcons("Rice Meal") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\rice.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\rice_white.png"))
-            CategoryIcons("Veg Salad") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\salad.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\salad_white.png"))
-            CategoryIcons("Sandwich") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\sandwich.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\sandwich_white.png"))
-            CategoryIcons("Beverages") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\soda.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\soda_white.png"))
-            CategoryIcons("Pasta") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\noodles.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\noodles_white.png"))
-            CategoryIcons("All") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\cutlery.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\cutlery_white.png"))
-            CategoryIcons("Desserts") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\dessert.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\dessert_white.png"))
-            CategoryIcons("Sides") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\taco.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\taco_white.png"))
-            CategoryIcons("Burger") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\icons8-hamburger-96.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\icons8-hamburger-100.png"))
+            CategoryIcons("Pizza") = (My.Resources.pizza_icon, My.Resources.pizza_white)
+            CategoryIcons("Rice Meal") = (My.Resources.rice, My.Resources.rice_white)
+            CategoryIcons("Veg Salad") = (My.Resources.salad, My.Resources.salad_white)
+            CategoryIcons("Sandwich") = (My.Resources.sandwich, My.Resources.sandwich_white)
+            CategoryIcons("Beverages") = (My.Resources.soda, My.Resources.soda_white)
+            CategoryIcons("Pasta") = (My.Resources.noodles, My.Resources.noodles_white)
+            CategoryIcons("All") = (My.Resources.cutlery, My.Resources.cutlery_white)
+            CategoryIcons("Desserts") = (My.Resources.dessert, My.Resources.dessert_white)
+            CategoryIcons("Sides") = (My.Resources.taco, My.Resources.taco_white)
+            CategoryIcons("Burger") = (My.Resources.icons8_hamburger_96, My.Resources.icons8_hamburger_100)
+
+
+
+
+            'CategoryIcons("Pizza") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\pizza_icon.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\pizza_white.png"))
+            'CategoryIcons("Rice Meal") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\rice.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\rice_white.png"))
+            'CategoryIcons("Veg Salad") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\salad.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\salad_white.png"))
+            'CategoryIcons("Sandwich") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\sandwich.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\sandwich_white.png"))
+            'CategoryIcons("Beverages") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\soda.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\soda_white.png"))
+            'CategoryIcons("Pasta") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\noodles.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\noodles_white.png"))
+            'CategoryIcons("All") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\cutlery.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\cutlery_white.png"))
+            'CategoryIcons("Desserts") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\dessert.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\dessert_white.png"))
+            'CategoryIcons("Sides") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\taco.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\taco_white.png"))
+            'CategoryIcons("Burger") = (Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\icons8-hamburger-96.png"), Image.FromFile("N:\MSvscode\Projects\KioskV1\Assets\icons8-hamburger-100.png"))
 
 
             _view.CategoryPanel.Controls.Clear()
