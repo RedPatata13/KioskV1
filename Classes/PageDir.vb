@@ -51,10 +51,10 @@ Namespace KioskV0.Classes
         Public Function GetSupplierPages(mediator As Mediator(Of SupplierKeys)) As Dictionary(Of SupplierKeys, IProjectable)
             Return New Dictionary(Of SupplierKeys, IProjectable) From
             {
-                {SupplierKeys.SupplierDashboard, New SupplierLandingPageViewModel(New SupplierDashboard(), mediator)},
+                {SupplierKeys.SupplierDashboard, New SupplierDashboardViewModel(New SupplierDashboardView(), mediator)},
                 {SupplierKeys.SupplierItems, New SupplierItemsViewModel(New SupplierItemsView(), mediator)},
                 {SupplierKeys.SupplierAdminBatchReq, New SupplierRequestListVM(New SupplierAdminBatchReqView(), mediator)},
-                {SupplierKeys.SupplierAssessRequest, New SupplierRequestBatchVM(New SupplierRequestDetailsView(), mediator)}
+                {SupplierKeys.SupplierAssessRequest, New Global.KioskV0.SupplierRequestBatchVM(New SupplierRequestDetailsView(), mediator)}
             }
         End Function
     End Module

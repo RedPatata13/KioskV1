@@ -19,6 +19,8 @@
             Else
                 Throw New Exception("No Row is selected")
             End If
+
+            Return New BatchRequest
         End Get
     End Property
     Private Sub ActionButton_Click(sender As Object, e As EventArgs) Handles ActionButton.Click

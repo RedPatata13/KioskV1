@@ -23,7 +23,7 @@ Public Class SupplierDashboardViewModel
         Dim result = _mediator.GetUnitOfWork.InventoryBatches.GetAll().
         Where(Function(b) b.SupplierId = supplierId).
         Select(Function(b) New BatchSoldPercentageDisplay With {
-            .BatchNumber = b.BatchNumber,
+            .BatchNumber = b.BatchName,
             .ItemName = If(b.SupplierItem IsNot Nothing, b.SupplierItem.Name, "Unknown"),
             .QuantityReceived = b.QuantityReceived,
             .RemainingQuantity = b.RemainingQuantity,

@@ -139,7 +139,7 @@
     <Compile Include="Classes\InitialDBSetup.vb" />
     <Compile Include="Classes\StaffOrderListViewModel.vb" />
     <Compile Include="Classes\AdminStockDebtCRUDViewModel.vb" />
-    <Compile Include="Classes\SupplierAdminBatchReqVM.vb" />
+    <Compile Include="Classes\SupplierDashboardViewModel.vb" />
     <Compile Include="Classes\SupplierItemDetailVM.vb" />
     <Compile Include="Classes\SupplierItemsViewModel.vb" />
     <Compile Include="Classes\SupplierLandingPageViewModel.vb" />
@@ -547,9 +547,6 @@
     <Compile Include="Forms\SupplierSidebar.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Migrations\202504241343015_InitialCreate.Designer.vb">
-      <DependentUpon>202504241343015_InitialCreate.vb</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202504101827107_InitialCreate.vb" />
     <Compile Include="Migrations\202504101828417_UpdateOrders.Designer.vb">
       <DependentUpon>202504101828417_UpdateOrders.vb</DependentUpon>
@@ -719,6 +716,7 @@
     <Compile Include="Models\AdminItem.vb" />
     <Compile Include="Models\AdminItemVersion.vb" />
     <Compile Include="Models\BatchRequest.vb" />
+    <Compile Include="Models\BatchRequestDisplay.vb" />
     <Compile Include="Models\Category.vb" />
     <Compile Include="Models\Customer.vb" />
     <Compile Include="Models\CustomerItem.vb" />
@@ -964,9 +962,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SupplierSidebar.resx">
       <DependentUpon>SupplierSidebar.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504241343015_InitialCreate.resx">
-      <DependentUpon>202504241343015_InitialCreate.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504242018153_BatchRequest.resx">
       <DependentUpon>202504242018153_BatchRequest.vb</DependentUpon>

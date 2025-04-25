@@ -60,7 +60,6 @@
         SupplierAdminBatchReq
         SupplierAssessRequest
         SupplierItemDetails
-        SupplierDashboard
     End Enum
 
     Public Enum ItemStatus

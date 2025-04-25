@@ -8,6 +8,7 @@ Public Class SupplierRequestListVM
         MyBase.New(view, mediator)
 
         SetDGV()
+        SetEvents()
     End Sub
 
     Public Overrides Sub Project(projector As Form)
@@ -44,6 +45,7 @@ Public Class SupplierRequestListVM
         _view.ViewAction = Sub() SetDGVFinalized()
         _view.MainAction = Sub() ApproveAction()
         _view.ActionButton.Enabled = True
+        'MessageBox.Show("this works")
     End Sub
 
     Private Sub SetDGVFinalized()
