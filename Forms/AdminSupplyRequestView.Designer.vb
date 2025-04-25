@@ -113,7 +113,7 @@
             Me.QuantityField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.QuantityField.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.QuantityField.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.QuantityField.Location = New System.Drawing.Point(736, 233)
+            Me.QuantityField.Location = New System.Drawing.Point(736, 179)
             Me.QuantityField.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
             Me.QuantityField.Name = "QuantityField"
             Me.QuantityField.PlaceholderText = "100"
@@ -133,7 +133,7 @@
             Me.NoteField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
             Me.NoteField.Font = New System.Drawing.Font("Segoe UI", 9.0!)
             Me.NoteField.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-            Me.NoteField.Location = New System.Drawing.Point(734, 369)
+            Me.NoteField.Location = New System.Drawing.Point(734, 315)
             Me.NoteField.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
             Me.NoteField.Name = "NoteField"
             Me.NoteField.PlaceholderText = """Please divide into two boxes..."""
@@ -173,7 +173,7 @@
             Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(736, 168)
+            Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(736, 118)
             Me.Guna2HtmlLabel4.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
             Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(125, 48)
@@ -186,7 +186,7 @@
             Me.Guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent
             Me.Guna2HtmlLabel6.Font = New System.Drawing.Font("Poppins Medium", 19.8!, System.Drawing.FontStyle.Bold)
             Me.Guna2HtmlLabel6.ForeColor = System.Drawing.SystemColors.ControlText
-            Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(736, 304)
+            Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(736, 234)
             Me.Guna2HtmlLabel6.Margin = New System.Windows.Forms.Padding(2)
             Me.Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
             Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(147, 48)
@@ -208,7 +208,7 @@
             Me.ConfirmButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
             Me.ConfirmButton.HoverState.FillColor = System.Drawing.Color.White
             Me.ConfirmButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-            Me.ConfirmButton.Location = New System.Drawing.Point(1064, 520)
+            Me.ConfirmButton.Location = New System.Drawing.Point(1055, 561)
             Me.ConfirmButton.Margin = New System.Windows.Forms.Padding(2)
             Me.ConfirmButton.Name = "ConfirmButton"
             Me.ConfirmButton.Size = New System.Drawing.Size(189, 51)
@@ -230,7 +230,7 @@
             Me.CancelButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
             Me.CancelButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(196, Byte), Integer))
             Me.CancelButton.HoverState.ForeColor = System.Drawing.Color.White
-            Me.CancelButton.Location = New System.Drawing.Point(864, 520)
+            Me.CancelButton.Location = New System.Drawing.Point(839, 561)
             Me.CancelButton.Margin = New System.Windows.Forms.Padding(2)
             Me.CancelButton.Name = "CancelButton"
             Me.CancelButton.Size = New System.Drawing.Size(189, 51)

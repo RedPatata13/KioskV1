@@ -73,7 +73,7 @@ Public Class SupplierRequestBatchVM
 
     Private Sub ResetField()
         _view.ItemIDField.Text = ""
-        _view.ItemIDField.Text = ""
+        _view.ItemNameField.Text = ""
         _view.DescriptionField.Text = ""
         _view.UnitCostField.Text = ""
 
@@ -159,4 +159,5 @@ Public Class SupplierRequestBatchVM
         _mediator.SwapPage(SupplierKeys.SupplierAdminBatchReq)
 
     End Sub
+
 End Class

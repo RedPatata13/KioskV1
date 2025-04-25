@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class SupplierBatchesView
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class SupplierBatchesView
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -38,7 +38,7 @@ Partial Class SupplierBatchesView
         '
         Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Montserrat", 28.2!, System.Drawing.FontStyle.Bold)
-        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(8, 8)
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(24, 21)
         Me.Guna2HtmlLabel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(268, 61)
@@ -111,7 +111,7 @@ Partial Class SupplierBatchesView
         Me.SearchUser.IconLeft = CType(resources.GetObject("SearchUser.IconLeft"), System.Drawing.Image)
         Me.SearchUser.IconLeftOffset = New System.Drawing.Point(10, 0)
         Me.SearchUser.IconLeftSize = New System.Drawing.Size(25, 25)
-        Me.SearchUser.Location = New System.Drawing.Point(1000, 16)
+        Me.SearchUser.Location = New System.Drawing.Point(964, 37)
         Me.SearchUser.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.SearchUser.Name = "SearchUser"
         Me.SearchUser.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
@@ -122,29 +122,45 @@ Partial Class SupplierBatchesView
         '
         'ViewBatchDetailButton
         '
+        Me.ViewBatchDetailButton.BackColor = System.Drawing.Color.Transparent
+        Me.ViewBatchDetailButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.ViewBatchDetailButton.BorderRadius = 15
+        Me.ViewBatchDetailButton.BorderThickness = 1
         Me.ViewBatchDetailButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.ViewBatchDetailButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.ViewBatchDetailButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.ViewBatchDetailButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.ViewBatchDetailButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.ViewBatchDetailButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.ViewBatchDetailButton.Font = New System.Drawing.Font("Poppins", 10.8!)
         Me.ViewBatchDetailButton.ForeColor = System.Drawing.Color.White
-        Me.ViewBatchDetailButton.Location = New System.Drawing.Point(1176, 96)
+        Me.ViewBatchDetailButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.ViewBatchDetailButton.HoverState.FillColor = System.Drawing.Color.White
+        Me.ViewBatchDetailButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.ViewBatchDetailButton.Location = New System.Drawing.Point(571, 37)
         Me.ViewBatchDetailButton.Name = "ViewBatchDetailButton"
-        Me.ViewBatchDetailButton.Size = New System.Drawing.Size(120, 32)
+        Me.ViewBatchDetailButton.Size = New System.Drawing.Size(180, 45)
         Me.ViewBatchDetailButton.TabIndex = 13
         Me.ViewBatchDetailButton.Text = "View batch detail"
         '
         'ViewModeButton
         '
+        Me.ViewModeButton.BackColor = System.Drawing.Color.Transparent
+        Me.ViewModeButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.ViewModeButton.BorderRadius = 15
+        Me.ViewModeButton.BorderThickness = 1
         Me.ViewModeButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.ViewModeButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.ViewModeButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.ViewModeButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.ViewModeButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.ViewModeButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.ViewModeButton.Font = New System.Drawing.Font("Poppins", 10.8!)
         Me.ViewModeButton.ForeColor = System.Drawing.Color.White
-        Me.ViewModeButton.Location = New System.Drawing.Point(1176, 136)
+        Me.ViewModeButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.ViewModeButton.HoverState.FillColor = System.Drawing.Color.White
+        Me.ViewModeButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.ViewModeButton.Location = New System.Drawing.Point(757, 37)
         Me.ViewModeButton.Name = "ViewModeButton"
-        Me.ViewModeButton.Size = New System.Drawing.Size(120, 32)
+        Me.ViewModeButton.Size = New System.Drawing.Size(187, 45)
         Me.ViewModeButton.TabIndex = 14
         Me.ViewModeButton.Text = "Deprecated batches"
         '
@@ -152,12 +168,14 @@ Partial Class SupplierBatchesView
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1305, 839)
         Me.Controls.Add(Me.ViewModeButton)
         Me.Controls.Add(Me.ViewBatchDetailButton)
         Me.Controls.Add(Me.SearchUser)
         Me.Controls.Add(Me.BR_Grid)
         Me.Controls.Add(Me.Guna2HtmlLabel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "SupplierBatchesView"
         Me.Text = "SupplierBatchesView"
         CType(Me.BR_Grid, System.ComponentModel.ISupportInitialize).EndInit()

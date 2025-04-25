@@ -139,6 +139,8 @@
     <Compile Include="Classes\InitialDBSetup.vb" />
     <Compile Include="Classes\StaffOrderListViewModel.vb" />
     <Compile Include="Classes\AdminStockDebtCRUDViewModel.vb" />
+    <Compile Include="Classes\SupplierAdminBatchReqVM.vb" />
+    <Compile Include="Classes\SupplierItemDetailVM.vb" />
     <Compile Include="Classes\SupplierItemsViewModel.vb" />
     <Compile Include="Classes\SupplierLandingPageViewModel.vb" />
     <Compile Include="Classes\SupplierRequestBatchVM.vb" />
@@ -503,6 +505,12 @@
     <Compile Include="Forms\SupplierBatchesView.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\SupplierDashboardView.Designer.vb">
+      <DependentUpon>SupplierDashboardView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupplierDashboardView.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\SupplierItemDetailView.Designer.vb">
       <DependentUpon>SupplierItemDetailView.vb</DependentUpon>
     </Compile>
@@ -539,8 +547,8 @@
     <Compile Include="Forms\SupplierSidebar.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Migrations\202504101827107_InitialCreate.Designer.vb">
-      <DependentUpon>202504101827107_InitialCreate.vb</DependentUpon>
+    <Compile Include="Migrations\202504241343015_InitialCreate.Designer.vb">
+      <DependentUpon>202504241343015_InitialCreate.vb</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202504101827107_InitialCreate.vb" />
     <Compile Include="Migrations\202504101828417_UpdateOrders.Designer.vb">
@@ -897,6 +905,12 @@
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffCreditSalesView.resx">
+      <DependentUpon>StaffCreditSalesView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaffManagerAuthorizationView.resx">
+      <DependentUpon>StaffManagerAuthorizationView.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\StaffPaymentUserControl.resx">
       <DependentUpon>StaffPaymentUserControl.vb</DependentUpon>
     </EmbeddedResource>
@@ -930,6 +944,9 @@
     <EmbeddedResource Include="Forms\SupplierBatchesView.resx">
       <DependentUpon>SupplierBatchesView.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SupplierDashboardView.resx">
+      <DependentUpon>SupplierDashboardView.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SupplierItemDetailView.resx">
       <DependentUpon>SupplierItemDetailView.vb</DependentUpon>
     </EmbeddedResource>
@@ -948,119 +965,8 @@
     <EmbeddedResource Include="Forms\SupplierSidebar.resx">
       <DependentUpon>SupplierSidebar.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504101827107_InitialCreate.resx">
-      <DependentUpon>202504101827107_InitialCreate.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504101828417_UpdateOrders.resx">
-      <DependentUpon>202504101828417_UpdateOrders.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504101834477_RemovedUserId.resx">
-      <DependentUpon>202504101834477_RemovedUserId.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504102201149_AdminItemChange.resx">
-      <DependentUpon>202504102201149_AdminItemChange.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504142327046_UngKayAteSharks.resx">
-      <DependentUpon>202504142327046_UngKayAteSharks.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504150006145_AddBatches.resx">
-      <DependentUpon>202504150006145_AddBatches.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504150131132_RemoveSupplierItemStockCount.resx">
-      <DependentUpon>202504150131132_RemoveSupplierItemStockCount.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504150148222_AddedQuantityPropertyToBatch.resx">
-      <DependentUpon>202504150148222_AddedQuantityPropertyToBatch.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504150220583_ChangedOrderDetails.resx">
-      <DependentUpon>202504150220583_ChangedOrderDetails.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504150226275_RevertRename.resx">
-      <DependentUpon>202504150226275_RevertRename.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504150231136_TempRemove.resx">
-      <DependentUpon>202504150231136_TempRemove.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504150236244_AddTemp.resx">
-      <DependentUpon>202504150236244_AddTemp.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504151528224_RemovedSupplierItem.resx">
-      <DependentUpon>202504151528224_RemovedSupplierItem.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504160947168_AddedTransactions.resx">
-      <DependentUpon>202504160947168_AddedTransactions.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504171023563_SomeShit.resx">
-      <DependentUpon>202504171023563_SomeShit.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504171028428_MinorCheck.resx">
-      <DependentUpon>202504171028428_MinorCheck.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504190915152_BaseModel.resx">
-      <DependentUpon>202504190915152_BaseModel.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504191003245_Multiplicity.resx">
-      <DependentUpon>202504191003245_Multiplicity.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504211015577_AdminItemVersion.resx">
-      <DependentUpon>202504211015577_AdminItemVersion.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504211032026_AdminItemVersionUpdateReason.resx">
-      <DependentUpon>202504211032026_AdminItemVersionUpdateReason.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504211302139_OrderDetailSwapAdminItemtoItsVersion.resx">
-      <DependentUpon>202504211302139_OrderDetailSwapAdminItemtoItsVersion.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504211314063_Rename.resx">
-      <DependentUpon>202504211314063_Rename.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504211319402_FK.resx">
-      <DependentUpon>202504211319402_FK.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504211320269_FK1.resx">
-      <DependentUpon>202504211320269_FK1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504211324525_FK2.resx">
-      <DependentUpon>202504211324525_FK2.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504211407181_VersionDatePlusOrderMode.resx">
-      <DependentUpon>202504211407181_VersionDatePlusOrderMode.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504212307573_AddEditor.resx">
-      <DependentUpon>202504212307573_AddEditor.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504212313320_AddEditorIdRequired.resx">
-      <DependentUpon>202504212313320_AddEditorIdRequired.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504220007164_DeductionTracking.resx">
-      <DependentUpon>202504220007164_DeductionTracking.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504220023220_Nakalimutanisahehe.resx">
-      <DependentUpon>202504220023220_Nakalimutanisahehe.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504220404514_AttemptRelocateToSupplierItem.resx">
-      <DependentUpon>202504220404514_AttemptRelocateToSupplierItem.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504220420312_si.resx">
-      <DependentUpon>202504220420312_si.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504220824521_TransactedOrderEatMode.resx">
-      <DependentUpon>202504220824521_TransactedOrderEatMode.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504220949508_StockDebt.resx">
-      <DependentUpon>202504220949508_StockDebt.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504221301117_DeductionValidity.resx">
-      <DependentUpon>202504221301117_DeductionValidity.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504221943419_AddedReasonToDeductionts.resx">
-      <DependentUpon>202504221943419_AddedReasonToDeductionts.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504221953159_AddedReasonToDeductionPlusVersiodID.resx">
-      <DependentUpon>202504221953159_AddedReasonToDeductionPlusVersiodID.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202504222000556_AddedReasonToDeductionPlusVersiodIDa.resx">
-      <DependentUpon>202504222000556_AddedReasonToDeductionPlusVersiodIDa.vb</DependentUpon>
+    <EmbeddedResource Include="Migrations\202504241343015_InitialCreate.resx">
+      <DependentUpon>202504241343015_InitialCreate.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504242018153_BatchRequest.resx">
       <DependentUpon>202504242018153_BatchRequest.vb</DependentUpon>
@@ -1100,6 +1006,25 @@
   <ItemGroup>
     <Content Include="Assets\calendar %281%29.png" />
     <Content Include="Assets\customer.png" />
+    <None Include="Resources\icons8-hamburger-100.png" />
+    <None Include="Resources\taco_white.png" />
+    <None Include="Resources\taco.png" />
+    <None Include="Resources\soda_white.png" />
+    <None Include="Resources\soda.png" />
+    <None Include="Resources\sandwich_white.png" />
+    <None Include="Resources\sandwich.png" />
+    <None Include="Resources\salad_white.png" />
+    <None Include="Resources\salad.png" />
+    <None Include="Resources\rice_white.png" />
+    <None Include="Resources\rice.png" />
+    <None Include="Resources\pizza_white.png" />
+    <None Include="Resources\pizza_icon.png" />
+    <None Include="Resources\noodles_white.png" />
+    <None Include="Resources\noodles.png" />
+    <None Include="Resources\dessert_white.png" />
+    <None Include="Resources\dessert.png" />
+    <None Include="Resources\cutlery_white.png" />
+    <None Include="Resources\cutlery.png" />
     <None Include="Assets\icons8-delete-100 %28Black%29.png" />
     <None Include="Assets\Delete-itim.png" />
     <Content Include="Assets\icons8-equal-housing-opportunity-96 %281%29.png" />

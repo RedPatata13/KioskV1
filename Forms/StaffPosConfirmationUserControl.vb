@@ -16,4 +16,8 @@
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles ConfirmClick.Click
         ConfirmButtonClick?.Invoke
     End Sub
+
+    Private Sub Checkbox_CheckedChanged(sender As Object, e As EventArgs) Handles Checkbox.CheckedChanged
+
+    End Sub
 End Class

@@ -1,4 +1,5 @@
 ﻿Imports System.ComponentModel.DataAnnotations
+Imports System.Data.Entity.Core.Mapping
 Imports System.Data.Entity.Infrastructure
 Imports System.Data.Entity.Validation
 Imports System.Data.SqlClient
@@ -281,6 +282,14 @@ Namespace KioskV0.Classes
 
 
         End Sub
+
+        Public Function GetBatchRequestList()
+            Return _unitOfWork.BatchRequests.GetAll
+        End Function
+
+        Public Function GetSupplierItemList()
+            Return _unitOfWork.SupplierItems.GetAll()
+        End Function
 
         Public Sub SetCurrentUser(user As User)
             _currentUser = user

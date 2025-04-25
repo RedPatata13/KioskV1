@@ -10,5 +10,9 @@
                 TransactionsDataGrid.DataSource = _dgvSource
             End Set
         End Property
+
+        Private Sub TransactionsDataGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles TransactionsDataGrid.CellContentClick
+
+        End Sub
     End Class
 End Namespace

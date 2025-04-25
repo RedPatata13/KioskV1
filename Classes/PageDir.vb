@@ -1,4 +1,6 @@
-﻿Namespace KioskV0.Classes
+﻿Imports KioskV0.KioskV0.Forms
+
+Namespace KioskV0.Classes
     Public Module PageDir
         Public Function GetAdminPages(mediator As Mediator(Of AdminKeys)) As Dictionary(Of AdminKeys, IProjectable)
             Return New Dictionary(Of AdminKeys, IProjectable) From

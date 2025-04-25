@@ -12,7 +12,6 @@ Public Class KioskDbContext
     Public Property Suppliers As DbSet(Of Supplier)
     Public Property Categories As DbSet(Of Category)
     Public Property OrderItems As DbSet(Of OrderItem)
-
     Public Property OrderDetails As DbSet(Of OrderDetail)
     Public Property OrderPrimals As DbSet(Of OrderPrimal)
     Public Property InventoryBatches As DbSet(Of InventoryBatch)
